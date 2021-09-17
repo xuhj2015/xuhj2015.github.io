@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="瀑布模型瀑布模型严格遵守软件生命周期各阶段的固定顺序，上一阶段完成后才能进入下一阶段，整个模型就像一个飞流直下的瀑布。 123456789优点：可强迫开发人员采用规范的方法严格规定了各阶段必须提交的文档要求每个阶段结束后，都要进行严格评审缺点：过于理想化缺乏灵活性无法再开发过程中逐步明确用户无法表达准确的需求 瀑布V模型瀑布V模型是瀑布模型的一种变体。在开发过程中任一阶段都可能引入缺陷，最后的测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件开发模型">
+<meta property="og:url" content="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="瀑布模型瀑布模型严格遵守软件生命周期各阶段的固定顺序，上一阶段完成后才能进入下一阶段，整个模型就像一个飞流直下的瀑布。 123456789优点：可强迫开发人员采用规范的方法严格规定了各阶段必须提交的文档要求每个阶段结束后，都要进行严格评审缺点：过于理想化缺乏灵活性无法再开发过程中逐步明确用户无法表达准确的需求 瀑布V模型瀑布V模型是瀑布模型的一种变体。在开发过程中任一阶段都可能引入缺陷，最后的测试">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/ruankao/2-1.png">
+<meta property="og:image" content="http://example.com/images/ruankao/2-2.png">
+<meta property="og:image" content="http://example.com/images/ruankao/2-3.png">
+<meta property="og:image" content="http://example.com/images/ruankao/2-4.png">
+<meta property="article:published_time" content="2021-09-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-17T13:40:02.811Z">
+<meta property="article:author" content="xuhj">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/2-1.png">
+
+<link rel="canonical" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>软件开发模型 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          软件开发模型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-17 21:40:02" itemprop="dateModified" datetime="2021-09-17T21:40:02+08:00">2021-09-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h1><p>瀑布模型严格遵守软件生命周期各阶段的固定顺序，上一阶段完成后才能进入下一阶段，整个模型就像一个飞流直下的瀑布。<br><img src="/images/ruankao/2-1.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">可强迫开发人员采用规范的方法</span><br><span class="line">严格规定了各阶段必须提交的文档</span><br><span class="line">要求每个阶段结束后，都要进行严格评审</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">过于理想化</span><br><span class="line">缺乏灵活性</span><br><span class="line">无法再开发过程中逐步明确用户无法表达准确的需求</span><br></pre></td></tr></table></figure>
+<h1 id="瀑布V模型"><a href="#瀑布V模型" class="headerlink" title="瀑布V模型"></a>瀑布V模型</h1><p>瀑布V模型是瀑布模型的一种变体。在开发过程中任一阶段都可能引入缺陷，最后的测试只能在交付前发现更多的缺陷。瀑布V模型强调了测试。<br><img src="/images/ruankao/2-2.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">瀑布V模型不但保证了瀑布模型的阶段式文档驱动的特点，更强调了软件产品的验证工作</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需求分析集中在项目开始，而一旦需求不准确，存在偏差，之后的设计、实现、验证会放大偏差。</span><br><span class="line">瀑布模型后期维护工作相当繁重，而这些维护工作大都是修正需求阶段引入的缺陷，这个问题是瀑布模型难以克服的。</span><br></pre></td></tr></table></figure>
+<h1 id="快速原型模型"><a href="#快速原型模型" class="headerlink" title="快速原型模型"></a>快速原型模型</h1><p>快速原型是指在计算机上快速建立可以运行的程序或者界面。让用户能尽快了解系统的概貌，一旦用户确认了原型，就可以快速按照原型开发出满足用户真实需求的软件产品。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">引入了迭代的概念</span><br><span class="line">强调用户参与</span><br><span class="line">在用户需求分析、系统功能描述、系统实现方法等方面允许有较大的灵活性，可以逐步完善。</span><br><span class="line">可以用来评价几种不同的设计方案</span><br><span class="line">可以用来建立系统的某个部分</span><br><span class="line">不排斥传统生命周期的有效的方法和工具，与传统方法互为补充。</span><br><span class="line"></span><br><span class="line">动态定义需求，适用于需求不明确的项目。</span><br><span class="line"></span><br><span class="line">不适合使用原型法的情况：</span><br><span class="line">缺乏使用的原型开发工具</span><br><span class="line">用户不参与、不积极配合开发过程</span><br><span class="line">用户的数据资源缺乏组织和管理</span><br><span class="line">用户的软件资源缺乏组织和管理</span><br></pre></td></tr></table></figure>
+
+<h1 id="演化模型"><a href="#演化模型" class="headerlink" title="演化模型"></a>演化模型</h1><p>演化模型也是一种原型化的开发方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">快速原型模型中，原型的用途是获取用户的真实需求，一旦需求确定了，原型就被抛弃，是一种“抛弃式”的原型化方法。</span><br><span class="line">演化模型中，则是从初始模型逐步演化为最终软件产品的渐进过程，是一种“渐进式”的原型化方法。</span><br><span class="line">一个演化模型可以看做若干次瀑布模型的迭代。</span><br></pre></td></tr></table></figure>
+
+<h1 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h1><p>增量模型是第三种原型化开发方法，它既不是“抛弃式”的，也不是“渐进式”的，而是“递增式”的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在系统的技术架构成熟、风险较低的时候，可以采用增量的方式进行系统开发，</span><br><span class="line">这样可以提前进行集成测试和系统测试，缩短初始版本的发布周期，提高用户对系统的可见度，降低系统的风险。</span><br><span class="line">第一版本往往是系统的核心功能，可以满足用户最基本的需求。之后增量版本的功能逐步丰富、完善。</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">每一个版本都是一个完整的、可用的版本</span><br><span class="line">版本间的增量要均匀</span><br></pre></td></tr></table></figure>
+
+<h1 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h1><p>螺旋模型结合了瀑布模型和演化模型的有点，不仅体现了两个模型的优点，而且还强调了其他模型均忽略了的风险分析。<br>螺旋模型在“瀑布模型”的每一个开发阶段前，引入一个非常严格的风险识别、风险分析和风险控制。它把软件项目分解成一个个小项目，每个小项目都标识一个或多个主要风险，直到所有的主要风险因素都被确定。<br>螺旋模型特别适用于庞大而复杂、具有高风险的系统。<br><img src="/images/ruankao/2-3.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">螺旋模型支持需求的动态变化，为用户的关键决策提供了方便，有助于需求准确性；为项目管理决策调整提供了便利，从而降低软件开发风险。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要具有相当丰富的风险评估经验和专业知识，如果未能及时标识风险，势必会造成重大损失。</span><br><span class="line">过多的迭代次数会增加开发成本，延迟提交时间。</span><br></pre></td></tr></table></figure>
+
+<h1 id="构件组装模型"><a href="#构件组装模型" class="headerlink" title="构件组装模型"></a>构件组装模型</h1><p>利用软构件进行搭积木的方式开发。<br><img src="/images/ruankao/2-4.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">让系统扩展更容易</span><br><span class="line">构件更容易被重用，降低软件开发成本</span><br><span class="line">构件粒度较小，开发任务更灵活，可用若干小组并行开发。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要经验丰富的架构师，设计不好的构件难以实现构件的优点，降低构件组装模型的重用度。</span><br><span class="line">在考虑重用度的时候，往往会在其他方面让步，比如性能。</span><br><span class="line">使用构件的时候，要求开发人员熟练掌握构件，增加了开发人员的学习成本。</span><br><span class="line">第三方构件的质量难以掌握，且会最终影响软件的质量。</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/16/%E8%BD%AF%E8%80%83-%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="prev" title="软件生命周期">
+      <i class="fa fa-chevron-left"></i> 软件生命周期
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/16/%E8%BD%AF%E8%80%83-%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8BUP/" rel="next" title="统一过程UP">
+      统一过程UP <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">瀑布模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%80%91%E5%B8%83V%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">瀑布V模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">快速原型模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%BC%94%E5%8C%96%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">演化模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A2%9E%E9%87%8F%E6%A8%A1%E5%9E%8B"><span class="nav-number">5.</span> <span class="nav-text">增量模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9E%BA%E6%97%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">6.</span> <span class="nav-text">螺旋模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E4%BB%B6%E7%BB%84%E8%A3%85%E6%A8%A1%E5%9E%8B"><span class="nav-number">7.</span> <span class="nav-text">构件组装模型</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
