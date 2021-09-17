@@ -1,7 +1,5 @@
 git add .
-echo '请输入代码日志~'
-read commitString
-git commit -m commitString
+git commit -m init
 git push -u origin master
 
 hexo g
