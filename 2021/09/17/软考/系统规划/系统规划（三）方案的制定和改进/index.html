@@ -20,27 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1970年 Boehm定义的软件生命周期模型 《GB 8566-1988计算机软件开发规范》定义的软件生命周期模型    阶段 说明    可行性研究与计划 初步确定软件的目标、范围、风险、成本，从而确定软件是否有开发的必要。输出《可行性研究报告》《软件开发计划》   需求分析 对软件的需求进行详细分析   概要设计 确定软件的技术蓝图，将需求分析结果转为技术设计方案，输出系统架构、子系统之间的关">
+  <meta name="description" content="主要完成的工作是解析“系统如何实现”的问题。主要包括一下几个方面。 确定软件架构1、分析模型的结构。2、对应于系统目标的最基本。最重要的实现要素。3、特性和要点的解释。 确定实现的各种关键性要素1、关键的用例、主要的控制类、功能和服务的首要组织方式2、对象的组织模式3、常用和最关键的实现算法模型。4.选定开发工具和开发环境 归结目标到最适合的计算体系1、表示层：用户的界面部分2、事务逻辑层：负责处">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开发方法（一）软件生命周期">
-<meta property="og:url" content="http://example.com/2021/09/16/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/index.html">
+<meta property="og:title" content="系统规划（三）方案的制定和改进">
+<meta property="og:url" content="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%89%EF%BC%89%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%B6%E5%AE%9A%E5%92%8C%E6%94%B9%E8%BF%9B/index.html">
 <meta property="og:site_name" content="循序渐进">
-<meta property="og:description" content="1970年 Boehm定义的软件生命周期模型 《GB 8566-1988计算机软件开发规范》定义的软件生命周期模型    阶段 说明    可行性研究与计划 初步确定软件的目标、范围、风险、成本，从而确定软件是否有开发的必要。输出《可行性研究报告》《软件开发计划》   需求分析 对软件的需求进行详细分析   概要设计 确定软件的技术蓝图，将需求分析结果转为技术设计方案，输出系统架构、子系统之间的关">
+<meta property="og:description" content="主要完成的工作是解析“系统如何实现”的问题。主要包括一下几个方面。 确定软件架构1、分析模型的结构。2、对应于系统目标的最基本。最重要的实现要素。3、特性和要点的解释。 确定实现的各种关键性要素1、关键的用例、主要的控制类、功能和服务的首要组织方式2、对象的组织模式3、常用和最关键的实现算法模型。4.选定开发工具和开发环境 归结目标到最适合的计算体系1、表示层：用户的界面部分2、事务逻辑层：负责处">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/ruankao/1-6.png">
-<meta property="og:image" content="http://example.com/images/ruankao/1-7.png">
-<meta property="og:image" content="http://example.com/images/ruankao/1-8.png">
-<meta property="og:image" content="http://example.com/images/ruankao/1-9.png">
-<meta property="og:image" content="http://example.com/images/ruankao/1-10.png">
-<meta property="article:published_time" content="2021-09-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-18T01:13:28.291Z">
+<meta property="article:published_time" content="2021-09-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-22T01:37:49.262Z">
 <meta property="article:author" content="xuhj">
 <meta property="article:tag" content="软考">
-<meta property="article:tag" content="开发方法">
+<meta property="article:tag" content="系统规划">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/ruankao/1-6.png">
 
-<link rel="canonical" href="http://example.com/2021/09/16/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+<link rel="canonical" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%89%EF%BC%89%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%B6%E5%AE%9A%E5%92%8C%E6%94%B9%E8%BF%9B/">
 
 
 <script id="page-configurations">
@@ -53,7 +47,7 @@
   };
 </script>
 
-  <title>开发方法（一）软件生命周期 | 循序渐进</title>
+  <title>系统规划（三）方案的制定和改进 | 循序渐进</title>
   
 
 
@@ -177,7 +171,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%89%EF%BC%89%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%B6%E5%AE%9A%E5%92%8C%E6%94%B9%E8%BF%9B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -190,7 +184,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          开发方法（一）软件生命周期
+          系统规划（三）方案的制定和改进
         </h1>
 
         <div class="post-meta">
@@ -200,14 +194,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
+              <time title="创建时间：2021-09-17 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-17T00:00:00+08:00">2021-09-17</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-18 09:13:28" itemprop="dateModified" datetime="2021-09-18T09:13:28+08:00">2021-09-18</time>
+                <time title="修改时间：2021-09-22 09:37:49" itemprop="dateModified" datetime="2021-09-22T09:37:49+08:00">2021-09-22</time>
               </span>
 
           
@@ -221,51 +215,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="1970年-Boehm定义的软件生命周期模型"><a href="#1970年-Boehm定义的软件生命周期模型" class="headerlink" title="1970年 Boehm定义的软件生命周期模型"></a>1970年 Boehm定义的软件生命周期模型</h1><p><img src="/images/ruankao/1-6.png"></p>
-<h1 id="《GB-8566-1988计算机软件开发规范》定义的软件生命周期模型"><a href="#《GB-8566-1988计算机软件开发规范》定义的软件生命周期模型" class="headerlink" title="《GB 8566-1988计算机软件开发规范》定义的软件生命周期模型"></a>《GB 8566-1988计算机软件开发规范》定义的软件生命周期模型</h1><p><img src="/images/ruankao/1-7.png"></p>
-<table>
-<thead>
-<tr>
-<th>阶段</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>可行性研究与计划</td>
-<td>初步确定软件的目标、范围、风险、成本，从而确定软件是否有开发的必要。输出《可行性研究报告》《软件开发计划》</td>
-</tr>
-<tr>
-<td>需求分析</td>
-<td>对软件的需求进行详细分析</td>
-</tr>
-<tr>
-<td>概要设计</td>
-<td>确定软件的技术蓝图，将需求分析结果转为技术设计方案，输出系统架构、子系统之间的关系、数据库模型、接口规范、编码规范</td>
-</tr>
-<tr>
-<td>详细设计</td>
-<td>在概要设计的基础上进行细化，可裁剪，在一些小项目或者结构简单的项目可以没有详设，或者对重要模块进行详设</td>
-</tr>
-<tr>
-<td>实现</td>
-<td>包括编码和单元测试</td>
-</tr>
-<tr>
-<td>集成测试</td>
-<td>-</td>
-</tr>
-<tr>
-<td>确认测试</td>
-<td>验证软件实现与需求是否一致，是否达到了预期目标</td>
-</tr>
-<tr>
-<td>使用和维护</td>
-<td>软件维护的过程会贯穿整个软件的使用过程。当使用和维护阶段结 束后，软件系统也就自然消亡，软件系统的生命周期结束。</td>
-</tr>
-</tbody></table>
-<h1 id="《GB-T-8566-1995-信息技术-软件生存期过程》定义的软件生命周期模型"><a href="#《GB-T-8566-1995-信息技术-软件生存期过程》定义的软件生命周期模型" class="headerlink" title="《GB/T 8566-1995 信息技术-软件生存期过程》定义的软件生命周期模型"></a>《GB/T 8566-1995 信息技术-软件生存期过程》定义的软件生命周期模型</h1><p><img src="/images/ruankao/1-8.png"></p>
-<h1 id="1999年-《统一软件开发过程》"><a href="#1999年-《统一软件开发过程》" class="headerlink" title="1999年 《统一软件开发过程》"></a>1999年 《统一软件开发过程》</h1><p>包括4个阶段和5种工作流<br><img src="/images/ruankao/1-9.png"></p>
-<h3 id="五种工作流"><a href="#五种工作流" class="headerlink" title="五种工作流"></a>五种工作流</h3><p><img src="/images/ruankao/1-10.png"></p>
+        <p>主要完成的工作是解析“系统如何实现”的问题。<br>主要包括一下几个方面。</p>
+<h2 id="确定软件架构"><a href="#确定软件架构" class="headerlink" title="确定软件架构"></a>确定软件架构</h2><p>1、分析模型的结构。<br>2、对应于系统目标的最基本。最重要的实现要素。<br>3、特性和要点的解释。</p>
+<h2 id="确定实现的各种关键性要素"><a href="#确定实现的各种关键性要素" class="headerlink" title="确定实现的各种关键性要素"></a>确定实现的各种关键性要素</h2><p>1、关键的用例、主要的控制类、功能和服务的首要组织方式<br>2、对象的组织模式<br>3、常用和最关键的实现算法模型。<br>4.选定开发工具和开发环境</p>
+<h2 id="归结目标到最适合的计算体系"><a href="#归结目标到最适合的计算体系" class="headerlink" title="归结目标到最适合的计算体系"></a>归结目标到最适合的计算体系</h2><p>1、表示层：用户的界面部分<br>2、事务逻辑层：负责处理表示层的应用请求，完成商务逻辑的计算任务并肩结果返回用户。<br>3、数据服务层：为应用提供数据来源。</p>
 
     </div>
 
@@ -276,7 +229,7 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E8%BD%AF%E8%80%83/" rel="tag"># 软考</a>
-              <a href="/tags/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/" rel="tag"># 开发方法</a>
+              <a href="/tags/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/" rel="tag"># 系统规划</a>
           </div>
 
         
@@ -285,12 +238,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/09/16/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8BUP/" rel="prev" title="开发方法（三）统一过程UP">
-      <i class="fa fa-chevron-left"></i> 开发方法（三）统一过程UP
+    <a href="/2021/09/17/%E8%BD%AF%E8%80%83/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6/" rel="prev" title="系统规划（二）可行性研究">
+      <i class="fa fa-chevron-left"></i> 系统规划（二）可行性研究
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/09/16/start/" rel="next" title="干啊，软考之路">
-      干啊，软考之路 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/09/17/%E8%BD%AF%E8%80%83/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%80%EF%BC%89%E9%A1%B9%E7%9B%AE%E6%8F%90%E5%87%BA%E4%B8%8E%E9%80%89%E6%8B%A9/" rel="next" title="系统规划（一）项目提出与选择">
+      系统规划（一）项目提出与选择 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -350,7 +303,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1970%E5%B9%B4-Boehm%E5%AE%9A%E4%B9%89%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">1970年 Boehm定义的软件生命周期模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%8AGB-8566-1988%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83%E3%80%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A8%A1%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">《GB 8566-1988计算机软件开发规范》定义的软件生命周期模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E3%80%8AGB-T-8566-1995-%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF-%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%AD%98%E6%9C%9F%E8%BF%87%E7%A8%8B%E3%80%8B%E5%AE%9A%E4%B9%89%E7%9A%84%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">《GB&#x2F;T 8566-1995 信息技术-软件生存期过程》定义的软件生命周期模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1999%E5%B9%B4-%E3%80%8A%E7%BB%9F%E4%B8%80%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E3%80%8B"><span class="nav-number">4.</span> <span class="nav-text">1999年 《统一软件开发过程》</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">4.0.1.</span> <span class="nav-text">五种工作流</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">确定软件架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%90%84%E7%A7%8D%E5%85%B3%E9%94%AE%E6%80%A7%E8%A6%81%E7%B4%A0"><span class="nav-number">2.</span> <span class="nav-text">确定实现的各种关键性要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BD%92%E7%BB%93%E7%9B%AE%E6%A0%87%E5%88%B0%E6%9C%80%E9%80%82%E5%90%88%E7%9A%84%E8%AE%A1%E7%AE%97%E4%BD%93%E7%B3%BB"><span class="nav-number">3.</span> <span class="nav-text">归结目标到最适合的计算体系</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -366,14 +319,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
