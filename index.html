@@ -241,6 +241,92 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（二）需求分析与软件设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+08:00">2021-09-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-24 08:49:12" itemprop="dateModified" datetime="2021-09-24T08:49:12+08:00">2021-09-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>需求分析阶段的主要任务是通过开发人员与用户之间的广泛交流，不断澄清模糊的概念，最终形成一个完整的、清晰的、一直的需求说明。（做什么）</p>
+<p>在需求明确之后，下一步就是对软件系统进行设计。（怎么做）</p>
+<h1 id="一、需求分析的任务与过程"><a href="#一、需求分析的任务与过程" class="headerlink" title="一、需求分析的任务与过程"></a>一、需求分析的任务与过程</h1><p>需求分析主要是确定待开发软件的功能、性能、数据、界面等要求。<br>需求分析的步骤包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">获取当前系统的物理模型</span><br><span class="line">抽象出当前系统的逻辑模型</span><br><span class="line">建立目标系统的逻辑模型</span><br></pre></td></tr></table></figure>
+<p>需求分析工作的4个方面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">问题识别：用于发现需求、描述需求</span><br><span class="line">分析与综合：对问题进行分析，并给出解决方案</span><br><span class="line">编制需求分析的文档：输出《需求规格说明书》</span><br><span class="line">需求分析与评审：主要对功能的正确性、完整性和清晰性等给与评价。</span><br></pre></td></tr></table></figure>
+<h2 id="1、需求的分类"><a href="#1、需求的分类" class="headerlink" title="1、需求的分类"></a>1、需求的分类</h2><p>软件需求包括功能需求、非功能需求、设计约束三方面。<br><img src="/images/ruankao/5-5.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">功能需求：系统必须完成的事，为了向用户提供有用的功能，产品必须执行的动作。</span><br><span class="line">非功能需求：产品必须具备的属性或者品质，如性能、响应时间、可靠性、容错性、扩展性等。</span><br><span class="line">设计约束：也叫限制条件、补充规约，比如必须采用国内自主知识版权的数据库等。</span><br></pre></td></tr></table></figure>
+<p>除了上面三种需求之外，在其他维度，还有业务需求、用户需求、系统需求。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">业务需求：客户对系统、产品高层次的目标要求。</span><br><span class="line">用户需求：用户使用产品必须要完成上面任务，通过访谈、调查，从用户角度出发的需求。</span><br><span class="line">系统需求：从系统角度的需求，包括用特性说明的功能需求、质量属性、非功能需求及设计约束。</span><br></pre></td></tr></table></figure>
+<h2 id="2、需求工程"><a href="#2、需求工程" class="headerlink" title="2、需求工程"></a>2、需求工程</h2><p>创建和维护系统需求文档的所有活动，包括需求开发和需求管理两大工作。</p>
+<h3 id="（1）需求开发"><a href="#（1）需求开发" class="headerlink" title="（1）需求开发"></a>（1）需求开发</h3><p>包括需求捕获、需求分析、编写规格说明书和需求验证四个阶段。<br>需求开发是目标，是主线，是努力掌握客户对系统的需求。</p>
+<h3 id="（2）需求管理"><a href="#（2）需求管理" class="headerlink" title="（2）需求管理"></a>（2）需求管理</h3><p>包括需求基线、处理需求变更、需求跟踪等。<br>需求管理是支持，是保障，是对需求的变化进行管理的过程。</p>
+<h2 id="2、需求分析方法"><a href="#2、需求分析方法" class="headerlink" title="2、需求分析方法"></a>2、需求分析方法</h2><p>根据分析方法发展的历史，分为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">结构化分析方法</span><br><span class="line">软系统方法</span><br><span class="line">面向对象分析方法</span><br><span class="line">面向问题域的分析</span><br></pre></td></tr></table></figure>
+<h1 id="二、如何进行系统设计"><a href="#二、如何进行系统设计" class="headerlink" title="二、如何进行系统设计"></a>二、如何进行系统设计</h1><p>系统设计与其说是在设计，不如说是在选择和妥协。<br>妥协，就是在各个系统目标之间找到一个平衡点。系统目标包括但不限于功能、性能、健壮性、开发周期、交付日期等，但这些目标往往都是矛盾的。<br>没有一个设计者会完全重新开始设计一个系统，他们总参考多个与目标系统相类似的系统，再从中进行甄别、取舍和补充来作为新系统的设计。<br>要成为优秀的设计者，了解、掌握、消化、总结前人和自己以前的设计成果是最好的、也是唯一的方法。</p>
+<p>优秀的系统设计一般在以下几个方面都很出色：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">组建的独立性。做到高内聚、低耦合。</span><br><span class="line">例外的识别和处理。</span><br><span class="line">防错和容错。</span><br></pre></td></tr></table></figure>
+<p>也有一些技术能够改进系统设计，这些方法包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">降低复杂性</span><br><span class="line">通过合约进行设计</span><br><span class="line">原型化设计</span><br><span class="line">错误树分析等</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、软件设计的任务与活动"><a href="#三、软件设计的任务与活动" class="headerlink" title="三、软件设计的任务与活动"></a>三、软件设计的任务与活动</h1><p>软件设计时把软件需求变成软件表示的过程。<br>软件表示先是总体框架，然后在进一步细化，并在框架中填入细节。<br>1、从工程管理角度，软件设计可以分为两个步骤：<br>（1）概要设计：也称为高层设计<br>将软件需求转化为数据结构和软件的系统结构。<br>（2）详细设计：也称为底层设计<br>对结构表示进行细化，得到详细的数据结构与算法。<br>2、主要的设计方法比较<br>结构化设计的时代，主要设计方法包括Jackson方法和Parnas方法。结构化方法侧重于“模块相对独立且功能单一，使模块间联系弱、模块内联系强”；<br>Jackson方法是从数据结构导出模块结构。<br>Parnas方法是将可能引起变化的因素隐藏在有关模块内部，是这些因素变化时的影响范围受到限制。<br>近年来，对象技术凭借数据的高效封装和良好的消息机制，实现了高内聚、低耦合，成为现代软件设计的主流方法。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E8%BD%AF%E4%BB%B6%E9%87%8D%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -431,7 +517,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:49" itemprop="dateModified" datetime="2021-09-22T09:37:49+08:00">2021-09-22</time>
+                <time title="修改时间：2021-09-24 08:50:12" itemprop="dateModified" datetime="2021-09-24T08:50:12+08:00">2021-09-24</time>
               </span>
 
           
@@ -446,13 +532,13 @@
 
       
           <p>系统规划主要记录从项目提出、选择到确立的过程。包括系统项目的提出与可行性分析，系统方案的制定、评价和改进，新旧系统的分析和比较，以及现有软件、硬件和数据资源的有效利用等问题。</p>
-<h1 id="项目的提出与选择"><a href="#项目的提出与选择" class="headerlink" title="项目的提出与选择"></a>项目的提出与选择</h1><p>根据项目的动机确定系统的范围及方案选择。</p>
-<h2 id="系统的立项目标和动机"><a href="#系统的立项目标和动机" class="headerlink" title="系统的立项目标和动机"></a>系统的立项目标和动机</h2><p>项目立项的动机包括</p>
+<h1 id="一、项目的提出与选择"><a href="#一、项目的提出与选择" class="headerlink" title="一、项目的提出与选择"></a>一、项目的提出与选择</h1><p>根据项目的动机确定系统的范围及方案选择。</p>
+<h2 id="1、系统的立项目标和动机"><a href="#1、系统的立项目标和动机" class="headerlink" title="1、系统的立项目标和动机"></a>1、系统的立项目标和动机</h2><p>项目立项的动机包括</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">进行基础研究并获取技术：大学、企业、研究所等科研类</span><br><span class="line">进行应用研发并获得产品：产品研发，卖产品获利</span><br><span class="line">提供技术服务：卖服务获利</span><br><span class="line">信息技术产品的使用者：买软件或者产品使用</span><br></pre></td></tr></table></figure>
-<h2 id="项目选择和确定"><a href="#项目选择和确定" class="headerlink" title="项目选择和确定"></a>项目选择和确定</h2><p>项目选择的目的可能有两种。<br>1是软件开发公司在诸多产品方向中选择格式的方向研究和开发。<br>2是客户从诸多的产品中购买适合自己的产品或方案。</p>
-<h3 id="选择有核心价值的产品-项目或开发方向"><a href="#选择有核心价值的产品-项目或开发方向" class="headerlink" title="选择有核心价值的产品/项目或开发方向"></a>选择有核心价值的产品/项目或开发方向</h3><p>关键在于确定什么样的系统项目是有价值的。价值通常与核心业务有关系，立项单位所在的行业或上下游位置不同，价值判断也不同。</p>
-<h3 id="评估项目风险、收益和代价"><a href="#评估项目风险、收益和代价" class="headerlink" title="评估项目风险、收益和代价"></a>评估项目风险、收益和代价</h3><p>1、对于开发产品进行销售<br>主要评估产品期望收益和开发投入的时间、资金、人力等资源。项目的风险主要是技术难度、技术能力、经济能力、开发进度、法律风险、政策风险。<br>2、对于购买产品或技术服务<br>需要评估项目实施后的变更情况，组织机构和人员职责的影响，现有流程和人员能否满足要去，规章制度是否满足要求等。</p>
-<h3 id="评估项目的多种实施方式"><a href="#评估项目的多种实施方式" class="headerlink" title="评估项目的多种实施方式"></a>评估项目的多种实施方式</h3><h3 id="平衡地选择合适的方案"><a href="#平衡地选择合适的方案" class="headerlink" title="平衡地选择合适的方案"></a>平衡地选择合适的方案</h3><p>1、新技术与就技术</p>
+<h2 id="2、项目选择和确定"><a href="#2、项目选择和确定" class="headerlink" title="2、项目选择和确定"></a>2、项目选择和确定</h2><p>项目选择的目的可能有两种。<br>1是软件开发公司在诸多产品方向中选择格式的方向研究和开发。<br>2是客户从诸多的产品中购买适合自己的产品或方案。</p>
+<h3 id="（1）选择有核心价值的产品-项目或开发方向"><a href="#（1）选择有核心价值的产品-项目或开发方向" class="headerlink" title="（1）选择有核心价值的产品/项目或开发方向"></a>（1）选择有核心价值的产品/项目或开发方向</h3><p>关键在于确定什么样的系统项目是有价值的。价值通常与核心业务有关系，立项单位所在的行业或上下游位置不同，价值判断也不同。</p>
+<h3 id="（2）评估项目风险、收益和代价"><a href="#（2）评估项目风险、收益和代价" class="headerlink" title="（2）评估项目风险、收益和代价"></a>（2）评估项目风险、收益和代价</h3><p>1、对于开发产品进行销售<br>主要评估产品期望收益和开发投入的时间、资金、人力等资源。项目的风险主要是技术难度、技术能力、经济能力、开发进度、法律风险、政策风险。<br>2、对于购买产品或技术服务<br>需要评估项目实施后的变更情况，组织机构和人员职责的影响，现有流程和人员能否满足要去，规章制度是否满足要求等。</p>
+<h3 id="（3）评估项目的多种实施方式"><a href="#（3）评估项目的多种实施方式" class="headerlink" title="（3）评估项目的多种实施方式"></a>（3）评估项目的多种实施方式</h3><h3 id="（4）平衡地选择合适的方案"><a href="#（4）平衡地选择合适的方案" class="headerlink" title="（4）平衡地选择合适的方案"></a>（4）平衡地选择合适的方案</h3><p>1、新技术与就技术</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">新技术意味着风险、学习和导入期。</span><br><span class="line">旧技术享受不了新技术的好处。</span><br></pre></td></tr></table></figure>
 <p>2、快速开发平台</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基于某平台的产品会让用户绑定在该平台上，减少未来自主选择性。</span><br><span class="line">不基于某平台可能会延长项目开发时间，从而导致更多开销。</span><br></pre></td></tr></table></figure>
@@ -460,7 +546,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">不考虑系统扩展性很可能在业务变更时受阻。</span><br><span class="line">过多考虑系统扩展性会花费大量时间进行设计。在IT发展迅速的今天，很有可能在有升级的时候，原来的技术体系已被淘汰。</span><br></pre></td></tr></table></figure>
 <p>4、抛弃明显存在问题的“差”项目，选择基本立场“合适”的项目，而不是尽可能的“好”。<br><img src="/images/ruankao/4-1.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">要求质量是客户认为产品应该具备的功能或性能，实现越多客户越满意。</span><br><span class="line">假想质量是客户想当然认为产品应具备的功能或性能，客户不能正确描述自己想当然要得到的这些功能或性能需求。</span><br><span class="line">兴奋质量是客户要求范围外的功能或性能，通常是开发者很愿意增加的技术特性，实现这些客户会更高兴，但是不识闲也不影响其购买。</span><br><span class="line"></span><br><span class="line">系统设计师常犯的错误是用自己对技术产生的兴奋质量，替换客户最基本的要求质量或假想质量。</span><br><span class="line">企业经营者场贩的错误可能是对客户提出的合理要求质量视而不见，或者不加区分的把未经评估的假想质量指派给开发团队。</span><br></pre></td></tr></table></figure>
-<h2 id="项目提出和选择的结果"><a href="#项目提出和选择的结果" class="headerlink" title="项目提出和选择的结果"></a>项目提出和选择的结果</h2><p>项目提出和选择的结果最终会以“产品/项目建议书”的方式体现。典型的应用场景是：</p>
+<h2 id="2、项目提出和选择的结果"><a href="#2、项目提出和选择的结果" class="headerlink" title="2、项目提出和选择的结果"></a>2、项目提出和选择的结果</h2><p>项目提出和选择的结果最终会以“产品/项目建议书”的方式体现。典型的应用场景是：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在投标项目中，建议书通常是乙方提交给甲方竞标方案的一部分。</span><br><span class="line">在企业确立要开发某产品后，对该产品进行多角度评估，最终项目立项人向上级提交建议书进行决策。</span><br></pre></td></tr></table></figure>
 
 <p>产品/项目建议书包括以下几部分：</p>
@@ -518,7 +604,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:49" itemprop="dateModified" datetime="2021-09-22T09:37:49+08:00">2021-09-22</time>
+                <time title="修改时间：2021-09-24 08:50:32" itemprop="dateModified" datetime="2021-09-24T08:50:32+08:00">2021-09-24</time>
               </span>
 
           
@@ -533,9 +619,9 @@
 
       
           <p>主要完成的工作是解析“系统如何实现”的问题。<br>主要包括一下几个方面。</p>
-<h2 id="确定软件架构"><a href="#确定软件架构" class="headerlink" title="确定软件架构"></a>确定软件架构</h2><p>1、分析模型的结构。<br>2、对应于系统目标的最基本。最重要的实现要素。<br>3、特性和要点的解释。</p>
-<h2 id="确定实现的各种关键性要素"><a href="#确定实现的各种关键性要素" class="headerlink" title="确定实现的各种关键性要素"></a>确定实现的各种关键性要素</h2><p>1、关键的用例、主要的控制类、功能和服务的首要组织方式<br>2、对象的组织模式<br>3、常用和最关键的实现算法模型。<br>4.选定开发工具和开发环境</p>
-<h2 id="归结目标到最适合的计算体系"><a href="#归结目标到最适合的计算体系" class="headerlink" title="归结目标到最适合的计算体系"></a>归结目标到最适合的计算体系</h2><p>1、表示层：用户的界面部分<br>2、事务逻辑层：负责处理表示层的应用请求，完成商务逻辑的计算任务并肩结果返回用户。<br>3、数据服务层：为应用提供数据来源。</p>
+<h2 id="1、确定软件架构"><a href="#1、确定软件架构" class="headerlink" title="1、确定软件架构"></a>1、确定软件架构</h2><p>1、分析模型的结构。<br>2、对应于系统目标的最基本。最重要的实现要素。<br>3、特性和要点的解释。</p>
+<h2 id="2、确定实现的各种关键性要素"><a href="#2、确定实现的各种关键性要素" class="headerlink" title="2、确定实现的各种关键性要素"></a>2、确定实现的各种关键性要素</h2><p>1、关键的用例、主要的控制类、功能和服务的首要组织方式<br>2、对象的组织模式<br>3、常用和最关键的实现算法模型。<br>4.选定开发工具和开发环境</p>
+<h2 id="3、归结目标到最适合的计算体系"><a href="#3、归结目标到最适合的计算体系" class="headerlink" title="3、归结目标到最适合的计算体系"></a>3、归结目标到最适合的计算体系</h2><p>1、表示层：用户的界面部分<br>2、事务逻辑层：负责处理表示层的应用请求，完成商务逻辑的计算任务并肩结果返回用户。<br>3、数据服务层：为应用提供数据来源。</p>
 
       
     </div>
@@ -662,7 +748,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:49" itemprop="dateModified" datetime="2021-09-22T09:37:49+08:00">2021-09-22</time>
+                <time title="修改时间：2021-09-24 08:51:03" itemprop="dateModified" datetime="2021-09-24T08:51:03+08:00">2021-09-24</time>
               </span>
 
           
@@ -679,7 +765,7 @@
           <p>遗留系统的特点：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">系统虽然能完成很多重要的业务工作，但是已经不能外圈满足要求。</span><br><span class="line">系统在性能上已经落后，或者采用的技术已经过时。</span><br><span class="line">通常是大型的系统，已经融入业务工作中，维护工作十分困难。</span><br><span class="line">系统没有使用现代系统工程方法进行管理和开发，基本没有文档，很难理解。</span><br></pre></td></tr></table></figure>
 <p>对于遗留系统，可以根据系统的技术条件、商业价值及维护和运行系统的组织特征不同，采取继续维护、重构或替代、或联合使用几种策略。</p>
-<h2 id="遗留系统的评价方法"><a href="#遗留系统的评价方法" class="headerlink" title="遗留系统的评价方法"></a>遗留系统的评价方法</h2><p><img src="/images/ruankao/4-2.png"><br>1、启动评价<br>评价是为了对遗留系统足够的理解。评价前需要了解以下问题：</p>
+<h1 id="一、遗留系统的评价方法"><a href="#一、遗留系统的评价方法" class="headerlink" title="一、遗留系统的评价方法"></a>一、遗留系统的评价方法</h1><p><img src="/images/ruankao/4-2.png"><br>1、启动评价<br>评价是为了对遗留系统足够的理解。评价前需要了解以下问题：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">对企业来说，遗留系统是否至关重要</span><br><span class="line">企业的商业目标是什么</span><br><span class="line">演化需求是什么</span><br><span class="line">所期望的系统寿命多长</span><br><span class="line">系统的使用期限多久</span><br><span class="line">系统的技术状态如何</span><br><span class="line">企业是否愿意改变</span><br><span class="line">企业是否有能力承受演化</span><br></pre></td></tr></table></figure>
 <p>2、商业价值评价<br>判断遗留系统对企业的重要性。可以包括概要和详细两个级别，概要评价包括：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">咨询</span><br><span class="line">评价问卷</span><br><span class="line">进行评价</span><br></pre></td></tr></table></figure>
@@ -689,7 +775,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">系统级，整个系统看作不可分的原子。</span><br><span class="line">部件级，关注系统的每个子系统，考虑子系统的特征，包括复杂性、数据、文档、外部依赖型、合法性、维护记录、大小、安全性等。</span><br><span class="line">评价方式同硬件。</span><br></pre></td></tr></table></figure>
 <p>5、分析评价结果<br>加权平均值。</p>
 <p><img src="/images/ruankao/4-3.png"></p>
-<h2 id="遗留系统的演化策略"><a href="#遗留系统的演化策略" class="headerlink" title="遗留系统的演化策略"></a>遗留系统的演化策略</h2><p>1、淘汰策略<br>第3象限低水平、低价值区，淘汰，全面开发新的系统替代遗留系统。<br>一般在业务发生根本变化，或维护人员、维护资料全部丢失了。经过评价，重新开发比改造旧系统更划算。<br>2、继承策略<br>第4象限低水平、高价值区，遗留，在开发系统时需要完全兼容遗留系统的功能模型和数据模型，新老系统同时运行，逐渐切换到新系统。<br>3、改造策略<br>第1象限高水平、高价值区，改造，这种系统通常建成时间段。其他功能不变，增加新功能。<br>4、集成策略<br>第2象限高水平、低价值区，集成，这种系统可能只完成某部门或子公司的业务，从整体看，他们基于不同的平台，不同的数据模型，无法互联互通，数据还不一致，属于较严重的问题。</p>
+<h1 id="二、遗留系统的演化策略"><a href="#二、遗留系统的演化策略" class="headerlink" title="二、遗留系统的演化策略"></a>二、遗留系统的演化策略</h1><p>1、淘汰策略<br>第3象限低水平、低价值区，淘汰，全面开发新的系统替代遗留系统。<br>一般在业务发生根本变化，或维护人员、维护资料全部丢失了。经过评价，重新开发比改造旧系统更划算。<br>2、继承策略<br>第4象限低水平、高价值区，遗留，在开发系统时需要完全兼容遗留系统的功能模型和数据模型，新老系统同时运行，逐渐切换到新系统。<br>3、改造策略<br>第1象限高水平、高价值区，改造，这种系统通常建成时间段。其他功能不变，增加新功能。<br>4、集成策略<br>第2象限高水平、低价值区，集成，这种系统可能只完成某部门或子公司的业务，从整体看，他们基于不同的平台，不同的数据模型，无法互联互通，数据还不一致，属于较严重的问题。</p>
 
       
     </div>
@@ -879,80 +965,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8BUP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8BUP/" class="post-title-link" itemprop="url">开发方法（三）统一过程UP</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:34" itemprop="dateModified" datetime="2021-09-22T09:37:34+08:00">2021-09-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>UP是一个统一的软件开发过程，可以用于各种类型的项目。UP是基于构件的，使用统一建模语言（UML）。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">用例驱动</span><br><span class="line">以基本架构为中心</span><br><span class="line">迭代和增量</span><br></pre></td></tr></table></figure>
-<p><img src="/images/ruankao/3-1.png"><br><img src="/images/ruankao/3-2.png"></p>
-<p>初始阶段：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">明确项目规模。了解核心需求及约束，以确定验收标准。</span><br><span class="line">计划和准备商业理由。评估风险管理、人员配备、项目计划、成本、进度、收益率折中的备选方案。</span><br><span class="line">综合考虑备选架构。评估设计和自制、外购、复用方面的折中，从而估算成本、进度和资源。</span><br><span class="line">准备项目的环境，评估项目和组织，选择工具，决定流程中要改进的部分。</span><br></pre></td></tr></table></figure>
-<p>细化阶段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">快速确定架构。</span><br><span class="line">进一步明确需求，充分了解对推动架构和计划决策的最关键的用例。</span><br><span class="line">创建详细的迭代计划，并建立基线。</span><br><span class="line">优化开发流程，确定构建和自动化工具。</span><br><span class="line">优化架构，并选择构件。自制、外购或者复用。</span><br></pre></td></tr></table></figure>
-<p>构建阶段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">资源管理、控制和流程优化。</span><br><span class="line">完成构件开发，并根据已定义的评估标准进行测试。</span><br><span class="line">根据验收标准对产品进行评估。</span><br></pre></td></tr></table></figure>
-<p>交付阶段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">执行部署计划</span><br><span class="line">完成用户手册</span><br><span class="line">确认测试</span><br><span class="line">打包发布</span><br><span class="line">获得用户反馈</span><br><span class="line">基于反馈调整产品</span><br><span class="line">最终版上线</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1024,7 +1036,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
