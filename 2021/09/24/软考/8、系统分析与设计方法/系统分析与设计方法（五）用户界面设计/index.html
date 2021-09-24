@@ -20,17 +20,22 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。 一、用户界面设计的原则用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。 1、置用户于控制之下123456以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式提供灵活的交互允许用户交互可以被中断和撤销当技能级别增">
+<meta property="og:type" content="article">
 <meta property="og:title" content="系统分析与设计方法（五）用户界面设计">
 <meta property="og:url" content="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。 一、用户界面设计的原则用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。 1、置用户于控制之下123456以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式提供灵活的交互允许用户交互可以被中断和撤销当技能级别增">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/ruankao/6-18.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-19.png">
 <meta property="article:published_time" content="2021-09-23T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-24T00:54:00.208Z">
+<meta property="article:modified_time" content="2021-09-24T07:21:18.036Z">
 <meta property="article:author" content="xuhj">
 <meta property="article:tag" content="软考">
 <meta property="article:tag" content="系统分析与设计方法">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/6-18.png">
 
 <link rel="canonical" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
 
@@ -193,7 +198,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-09-24 00:00:00 / 修改时间：08:54:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+              <time title="创建时间：2021-09-24 00:00:00 / 修改时间：15:21:18" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
             </span>
 
           
@@ -207,7 +212,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
+<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
+<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
+<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
+<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
+<p>除此之外，还应该考虑表所示的设计原则。</p>
+<p><img src="/images/ruankao/6-18.png"></p>
+<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
+<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
+<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
+<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
+<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
+
     </div>
 
     
@@ -291,6 +308,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%8E%9F%E5%88%99"><span class="nav-number">1.</span> <span class="nav-text">一、用户界面设计的原则</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E7%BD%AE%E7%94%A8%E6%88%B7%E4%BA%8E%E6%8E%A7%E5%88%B6%E4%B9%8B%E4%B8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">1、置用户于控制之下</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%87%8F%E5%B0%91%E7%94%A8%E6%88%B7%E7%9A%84%E8%AE%B0%E5%BF%86%E8%B4%9F%E6%8B%85"><span class="nav-number">1.2.</span> <span class="nav-text">2、减少用户的记忆负担</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E4%BF%9D%E6%8C%81%E7%95%8C%E9%9D%A2%E7%9A%84%E4%B8%80%E8%87%B4"><span class="nav-number">1.3.</span> <span class="nav-text">3、保持界面的一致</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">二、用户界面设计过程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%94%A8%E6%88%B7%E3%80%81%E4%BB%BB%E5%8A%A1%E5%92%8C%E7%8E%AF%E5%A2%83%E5%88%86%E6%9E%90"><span class="nav-number">2.1.</span> <span class="nav-text">(1)用户、任务和环境分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1"><span class="nav-number">2.2.</span> <span class="nav-text">(2)界面设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.3.</span> <span class="nav-text">(3)实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%95%8C%E9%9D%A2%E7%A1%AE%E8%AE%A4"><span class="nav-number">2.4.</span> <span class="nav-text">(4)界面确认</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
