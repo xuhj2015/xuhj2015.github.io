@@ -164,6 +164,561 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（五）用户界面设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-24 00:00:00 / 修改时间：15:21:18" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
+<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
+<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
+<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
+<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
+<p>除此之外，还应该考虑表所示的设计原则。</p>
+<p><img src="/images/ruankao/6-18.png"></p>
+<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
+<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
+<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
+<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
+<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（六）工作流设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-24 00:00:00 / 修改时间：15:46:12" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>现实中的流程存在大量的不确定性。</p>
+<h1 id="一、工作流设计概述"><a href="#一、工作流设计概述" class="headerlink" title="一、工作流设计概述"></a>一、工作流设计概述</h1><p>工作流是一类能够完全或者部分自动执行的经营过程，根据一系列过程规则、文档、信息或任务在不同的执行者之间 传递、执行。</p>
+<h2 id="1-工作流"><a href="#1-工作流" class="headerlink" title="(1)工作流"></a>(1)工作流</h2><p>工作流是现实中的具体工作从开始到结束过程的抽象和概括。这个过程包括了众多因素:任务顺序、路线规则、时间时限约束等。</p>
+<h2 id="2-流程定义"><a href="#2-流程定义" class="headerlink" title="(2)流程定义"></a>(2)流程定义</h2><p>流程定义是指对业务过程的形式化表示，它定义了过程运行中的活动和所涉及的各种信息。这些信息包括</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">过程的开始和完成条件</span><br><span class="line">构成过程的活动及进行活动间导航的规则</span><br><span class="line">用户所需要完成的任务</span><br><span class="line">可能被调用的应用</span><br><span class="line">工作流间的引用关系</span><br><span class="line">工作流数据的定义</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-流程实例"><a href="#3-流程实例" class="headerlink" title="(3)流程实例"></a>(3)流程实例</h2><p>也称为工作，是一个流程定义的运行实例。</p>
+<h2 id="4-工作流管理系统"><a href="#4-工作流管理系统" class="headerlink" title="(4)工作流管理系统"></a>(4)工作流管理系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存储流程的定义</span><br><span class="line">按照所使用的流程定义来触发流程状态的改变</span><br><span class="line">推动流程的运转</span><br></pre></td></tr></table></figure>
+<p>这个推动的依据常常称为工作流引擎。</p>
+<h2 id="5-流程定义工具"><a href="#5-流程定义工具" class="headerlink" title="(5)流程定义工具"></a>(5)流程定义工具</h2><p>使用流程定义工具来完成流程定义的工作</p>
+<h2 id="6-参与者"><a href="#6-参与者" class="headerlink" title="(6)参与者"></a>(6)参与者</h2><p>可以是具体的人或者角色(企业内部有特别共同作用的多个人)，也可以是自动化系统，甚至是其他系统。</p>
+<h2 id="7-活动"><a href="#7-活动" class="headerlink" title="(7)活动"></a>(7)活动</h2><p>活动是流程定义中的一个元素，一次活动可能改变流程处理数据的内容、流程的状态，并可能将流程推动到其他活动中去。活动可以由人来完成，也可以是系统自动的处理过程。</p>
+<h2 id="8-活动所有者"><a href="#8-活动所有者" class="headerlink" title="(8)活动所有者"></a>(8)活动所有者</h2><p>决定该活动是否结束</p>
+<h2 id="9-工作所有者"><a href="#9-工作所有者" class="headerlink" title="(9)工作所有者"></a>(9)工作所有者</h2><p>有权整体控制流程实例执行过程的参与者</p>
+<h2 id="10-工作项"><a href="#10-工作项" class="headerlink" title="(10)工作项"></a>(10)工作项</h2><p>流程实例中活动的参与者将要执行的工作</p>
+<h1 id="二、工作流管理系统"><a href="#二、工作流管理系统" class="headerlink" title="二、工作流管理系统"></a>二、工作流管理系统</h1><p>在工作流形式化表示的驱动下，通过软件的执行而完成工作流定义、管理及执行的系统。<br>主要目标是对业务过程中各活动发生的先后次序及与活动相关的相应人力或信息资源的调用进行管理，而实现业务过程的自动化。</p>
+<p>工作流管理系统的6个最基本组成：</p>
+<h2 id="1-流程定义工具"><a href="#1-流程定义工具" class="headerlink" title="(1)流程定义工具"></a>(1)流程定义工具</h2><p>提供图形化或者其他方式的界面给设计者。由设计者将实际工作流程进行抽象，并将设计者提交的流程定义转换为形式化语言描述，提供给计算机工作流执行服务进行流程实例处理的依据。</p>
+<h2 id="2-工作流执行服务"><a href="#2-工作流执行服务" class="headerlink" title="(2)工作流执行服务"></a>(2)工作流执行服务</h2><p>1、使用一种或者多种数据流引擎，对流程定义进行解释，激活有效的流程实例，推动流程实例在不同的活动中运转。<br>2、和客户应用程序、其他工作流服务执行程序及其他应用程序进行交互，从而完成流程实例的创建、执行和管理工作。<br>3、为每个用户维护一个活动列表，告诉用户当前必须处理的任务。<br>4、通过电子邮件甚至是短消息的形式提醒用户任务的到达。</p>
+<h2 id="3-其他工作流执行服务"><a href="#3-其他工作流执行服务" class="headerlink" title="(3)其他工作流执行服务"></a>(3)其他工作流执行服务</h2><p>大型的企业工作流应用，往往包括多个工作流管理系统。这就需要这些工作流管理系统之间进行有效的交互，避免画地为牢、信息孤岛的现象出现。</p>
+<h2 id="4-客户应用程序"><a href="#4-客户应用程序" class="headerlink" title="(4)客户应用程序"></a>(4)客户应用程序</h2><p>最终用户的界面，用户通过使用这部分软件对工作流的数据进行必要的处理，如果用户是当前活动的拥有者，还可通过客户应用程序改变流程实例的活动，将流程实例推动到另外一个活动中。</p>
+<h2 id="5-被调用应用程序"><a href="#5-被调用应用程序" class="headerlink" title="(5)被调用应用程序"></a>(5)被调用应用程序</h2><p>对工作流所携带数据的处理程序。</p>
+<h2 id="6-管理和监控工具"><a href="#6-管理和监控工具" class="headerlink" title="(6)管理和监控工具"></a>(6)管理和监控工具</h2><p>对流程实例的状态查询、挂起、恢复、销毁等操作，同时提供系统参数、系统运行情况统计等数据。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（八）系统运行环境的集成与设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-24 00:00:00 / 修改时间：16:14:59" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在设计一个新的系统时，设计者必须考虑目标系统的运行环境问题。软件的运行环境是指系统运行的设备、操作系统和网络配置。</p>
+<h1 id="1-集中式系统"><a href="#1-集中式系统" class="headerlink" title="1.集中式系统"></a>1.集中式系统</h1><p>所有的操作都集中于一台主机中。</p>
+<p>集中式系统常见于银行、保险、证券行业，它们含有大规模的处理应用。</p>
+<p>在现代的系统中，集中式系统通常是某个分布式系统的一个环节。</p>
+<p>集中式系统由以下几个部分组成。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1)单计算机结构:这种结构简单、容易维护，但是处理能力受到限制。 </span><br><span class="line">(2)集群结构:由多个计算机组成，这些计算机具有类似的硬件平台、操作系统等。通常采用负载均衡、资源共享等方式实现更大的处理能力和容量。 </span><br><span class="line">(3)多计算机结构:由多个计算机组成，这些计算机之间操作环境可能不同。适用于当系统可以分解成多个不同的子系统时。</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-分布式系统"><a href="#2-分布式系统" class="headerlink" title="2.分布式系统"></a>2.分布式系统</h1><p>分布式系统由于网络的普遍延伸，费用的不断降低而越来越成为大型系统的首选环境。分布式系统必须基于网络，这个网络可以是在一个地域内的局域网，也可以是跨越不同城市乃至国家的广域网。对比集中式的计算机环境，分布式系统有着多种多样的形式。这也给设计者在确定系统运行环境时带来一定的烦恼。</p>
+<h1 id="3-C-S-结构"><a href="#3-C-S-结构" class="headerlink" title="3.C/S 结构"></a>3.C/S 结构</h1><p>由提供服务的服务器和发起请求、接受结果的客户机构成。</p>
+<h1 id="4-多层结构"><a href="#4-多层结构" class="headerlink" title="4.多层结构"></a>4.多层结构</h1><p>C/S 结构的扩展。</p>
+<p>典型的分为由存储数据的数据库服务器作为数据层、实现商业规则的程序作为逻辑层、管理用户输入输出的视图层所组成的三层结构。</p>
+<p>多层结构形式复杂，功能多样。实现多层结构常常需要来实现不同层次间通信的专门程序——管件，也称为中间件。中间件大多数实现远程程序调用、对象请求调度等功能。</p>
+<h1 id="5-Internet、Intranet-和-Extranet"><a href="#5-Internet、Intranet-和-Extranet" class="headerlink" title="5.Internet、Intranet 和 Extranet"></a>5.Internet、Intranet 和 Extranet</h1><p>Internet 是全球的网络集合，使用通用的 TCP/IP 协议来相互连接。Internet 提供电子邮件、文件传输、远程登录等服务。</p>
+<p>Intranet 是私有网络，只限于内部使用，也使用 TCP/IP 协议。</p>
+<p>Extranet 是一个扩展的 Intranet。它包括企业之外的和企业密切相关合作的其他企业。 Extranet 允许分离的组织交换信息并进行合作，这样就形成了一个虚拟组织。</p>
+<p>现在的 VPN 技术允许在公用网络上架构只对组织内部开发服务。</p>
+<p>Web 同样基于 C/S 结构，实际上 Web 接口是一个通用的接口，不是只能使用浏览器 的协议，它同样能够在普通的程序中使用。</p>
+<p>Internet 和 Web 已经给设计者提供了一个非常富有吸引力的选择方案。它的优势在于:它们已经成为网络的事实上的标准，支持它们的软件已经广泛地存在于全世界的计算机中，而且通信费用已经下降到很有竞争力的水平。</p>
+<p>采用 Internet 时，必须考虑其不利的一面。 Internet 的安全性过去、现在、以后都是设计者头痛的问题。其他诸如可靠性、系统吞吐量、不断发展的技术和标准都是影响系统选择它们作为运行环境的不利因素。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（四）面向对象的分析与设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-24 00:00:00 / 修改时间：14:55:53" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>面向对象方法以客观世界中的对象为中心，其分析和设计思想符合人们的思维方式，分析和设计的结构与客观世界的实际比较接近。</p>
+<p>面向对象方法中，分析和设计的界面并不明显，他们采用的相同的符号表示，能方便的从分析阶段平滑过渡到设计阶段。</p>
+<p>在显示生活中，用户的需求经常会发生变化，但是客观世界的对象集对象间的关系比较稳定，因此用面向对象方法分析和设计的结构也相对比较稳定。</p>
+<h1 id="一、面向对象的基本概念"><a href="#一、面向对象的基本概念" class="headerlink" title="一、面向对象的基本概念"></a>一、面向对象的基本概念</h1><h2 id="1、对象和类"><a href="#1、对象和类" class="headerlink" title="1、对象和类"></a>1、对象和类</h2><p>对象是描述客观事物的实体，由对象标识（名称）、属性（状态、数据、成员变量）和服务（操作、行为、方法）是3个要素组成，封装成一个整体，以接口的形式对外提供服务。<br>类是具有相同属性和服务的一个或一组对象的抽象。<br>类与对象是抽象描述和具体实例的关系。一个具体的对象被称为类的一个实例。</p>
+<p>类可以分为实体类、边界类、控制类。</p>
+<h3 id="（1）实体类"><a href="#（1）实体类" class="headerlink" title="（1）实体类"></a>（1）实体类</h3><p>实体类映射需求中的每个实体，实体类保存需要存储在永久存储体重的信息。<br>实体类一定有属性，不一定有操作。</p>
+<h3 id="（2）控制类"><a href="#（2）控制类" class="headerlink" title="（2）控制类"></a>（2）控制类</h3><p>控制类是用于控制用力工作的类，一般由动宾结构的短语转化来的名称，例如身份验证。<br>控制类没有属性，但是有方法。</p>
+<h3 id="（3）边界类"><a href="#（3）边界类" class="headerlink" title="（3）边界类"></a>（3）边界类</h3><p>边界类用于封装在用例内、外流动的信息或数据流。边界类位于系统与外界的交界处，包括所有窗体、报表、打印机和扫描仪等硬件接口，以及与其他系统的接口。<br>边界类通常既有属性也要方法。</p>
+<h2 id="2、继承与泛化"><a href="#2、继承与泛化" class="headerlink" title="2、继承与泛化"></a>2、继承与泛化</h2><p>用来说明特殊类（子类）与一般类（父类）的关系。</p>
+<p><img src="/images/ruankao/6-7.png"></p>
+<h2 id="3、多态与重载"><a href="#3、多态与重载" class="headerlink" title="3、多态与重载"></a>3、多态与重载</h2><p>一般类中定义的属性或服务被特殊类集成后，可以具有不同的数据类型或表现出不同的行为。<br>通常用重载和改写实现。<br>重载是编译时制定的，改写是运行时选择的。</p>
+<h2 id="4、模板类"><a href="#4、模板类" class="headerlink" title="4、模板类"></a>4、模板类</h2><p>也称为类属类，用来实现参数多态机制。<br>一个类属类是一组类的一个特性抽象。</p>
+<h2 id="5、消息和消息通信"><a href="#5、消息和消息通信" class="headerlink" title="5、消息和消息通信"></a>5、消息和消息通信</h2><p>消息是想对象发出的服务请求。 为对象间提供唯一合法的动态联系的途径。</p>
+<h1 id="二、面向对象分析"><a href="#二、面向对象分析" class="headerlink" title="二、面向对象分析"></a>二、面向对象分析</h1><p>对象技术的流行，演化出数十种不同的OOA方法，其中比较流行的包括OMT、OOA、OOSE、Booch等。OMT、OOSE、Booch最后统一成为UML。</p>
+<h2 id="1、OOA-OOD方法"><a href="#1、OOA-OOD方法" class="headerlink" title="1、OOA/OOD方法"></a>1、OOA/OOD方法</h2><p>面向对象分析（OOA），面向对象设计（OOD）。<br>OOA模型包括<em><strong>主题、对象类、结构、属性和服务</strong></em>5个层次。需要经过<em><strong>标识对象类、标识结构与关联、划分主题、定义属性、定义服务</strong></em>5个步骤完成整个分析工作。<br>OOD贯穿OOA的5个层次和5个活动，由<em><strong>人机交互部件、问题域部件、任务管理部件、数据管理部件</strong></em>4个部分组成。</p>
+<h3 id="（1）设计问题域部分"><a href="#（1）设计问题域部分" class="headerlink" title="（1）设计问题域部分"></a>（1）设计问题域部分</h3><p>OOA的结果是OOD的问题域部件，分析的结果在OOD中可以被改动或增补，但基于问题域的总体组织架构是长时间稳定的。</p>
+<h3 id="（2）设计人机交互部件"><a href="#（2）设计人机交互部件" class="headerlink" title="（2）设计人机交互部件"></a>（2）设计人机交互部件</h3><p>在上述结果中加入人机交互的设计和交互细节。</p>
+<h3 id="（3）设计任务管理部分"><a href="#（3）设计任务管理部分" class="headerlink" title="（3）设计任务管理部分"></a>（3）设计任务管理部分</h3><p>识别事件驱动任务、识别时钟驱动任务、识别优先任务和关键任务、识别协调者、审查每个任务并定义每个任务。</p>
+<h3 id="（4）设计数据管理部分"><a href="#（4）设计数据管理部分" class="headerlink" title="（4）设计数据管理部分"></a>（4）设计数据管理部分</h3><p>数据管理部分提供了在数据管理系统中存储和紧缩对象的基本结构，其目的是隔离数据管理方法对其他部分的影响。</p>
+<h2 id="2、Booch方法"><a href="#2、Booch方法" class="headerlink" title="2、Booch方法"></a>2、Booch方法</h2><p>Booch认为软件开发是螺旋上升的过程，每个周期包括 标识类和对象、确定类和对象的含义、标识关系、说明每个类的接口和实现 4个步骤。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>静态模型</th>
+<th>动态模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>逻辑模型</td>
+<td>类图、对象图</td>
+<td>状态转换图、时序图</td>
+</tr>
+<tr>
+<td>物理模型</td>
+<td>模块图、进程图</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>Booch方法的开发过程是一个迭代的渐进式的系统开发过程，分为宏过程和微过程梁两类。<br>宏过程用于控制微过程，5个主要活动包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">建立核心需求的概念化</span><br><span class="line">建立模型的分析</span><br><span class="line">建立架构的设计</span><br><span class="line">形成实现的进化</span><br><span class="line">管理软件交付使用的维护</span><br></pre></td></tr></table></figure>
+<p>微过程基本上代表开发人团的日常活动，4个重要、没有顺序的步骤包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在给定的抽象层次上识别出类和对象</span><br><span class="line">识别出这些类和对象的语义</span><br><span class="line">识别出类间和对象间的关系</span><br><span class="line">实现类和对象</span><br></pre></td></tr></table></figure>
+<h2 id="3、OMT方法"><a href="#3、OMT方法" class="headerlink" title="3、OMT方法"></a>3、OMT方法</h2><p>对象建模技术（OMT）主要用于分析、系统设计和对象设计。<br>包括对象模型、动态模型、功能模型。</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>说明</th>
+<th>主要技术</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对象模型</td>
+<td>描述系统中对象的静态结构、对象之间的关系、属性、操作。他表示静态的、结构上的、系统的“数据”特征。</td>
+<td>对象图</td>
+</tr>
+<tr>
+<td>动态模型</td>
+<td>描述与时间和操作顺序有关的系统特征，如激发时间、时间序列、确定时间先后关系的状态。他表示瞬时、行为上的、系统的“控制”特征</td>
+<td>状态图</td>
+</tr>
+<tr>
+<td>功能模型</td>
+<td>描述与值的变换有关的系统特征：功能、映射、约束和函数依赖</td>
+<td>数据流图</td>
+</tr>
+</tbody></table>
+<h2 id="4、OOSE方法"><a href="#4、OOSE方法" class="headerlink" title="4、OOSE方法"></a>4、OOSE方法</h2><p>面向对象软件工程（OOSE）在OMT的基础上对功能模型进行了补充，提出了“用例”的概念，最终取代数据流图进行需求分析和建立功能模型。</p>
+<h1 id="三、统一建模语言"><a href="#三、统一建模语言" class="headerlink" title="三、统一建模语言"></a>三、统一建模语言</h1><p>统一建模语言（UML）</p>
+<h2 id="1、UML是什么"><a href="#1、UML是什么" class="headerlink" title="1、UML是什么"></a>1、UML是什么</h2><p>是一种用于详细描述的可视化语言。<br>是一种构造语言，虽然不是一种可视化的编程语言，但与编程语言直接相连，有较好的映射关系。允许正向工程、逆向工程。<br>是一种文档化语言。</p>
+<h2 id="2、UML的结构"><a href="#2、UML的结构" class="headerlink" title="2、UML的结构"></a>2、UML的结构</h2><p>UML由构造块、公共机制和架构三部分组成。</p>
+<h3 id="（1）构造块"><a href="#（1）构造块" class="headerlink" title="（1）构造块"></a>（1）构造块</h3><p>构造块也就是基本的UML建模元素、关系和图。<br>建模元素：包括构造事物（类、接口、协作、用例、活动类、组件、节点等）、行为事物（交互、状态机）、分组事物（包）、注释事物。<br>关系：包括关联关系、依赖关系、泛化关系、实现关系。<br>图：UML2.0包括14种不同的图，分为表示系统静态结构的静态模型（包括类图、对象图、包图、构件图、部署图、制品图），以及表示系统动态结构的动态模型（包括对象图、用例图、顺序图、通信图、定时图、状态图、活动图、我交互概览图）。</p>
+<h3 id="（2）公共机制"><a href="#（2）公共机制" class="headerlink" title="（2）公共机制"></a>（2）公共机制</h3><p>指达到特定目标的公共UML方法，包括规格说明、修饰、公共分类和扩展机制4种。<br>规格说明：是元素语义的文本描述。<br>修饰：通过修饰给模型元素表达更多的信息。<br>公共分类：包括类元和实体、接口和实现两组公共分类。<br>扩展机制：包括约束、构造型、标记值。</p>
+<h3 id="（3）架构"><a href="#（3）架构" class="headerlink" title="（3）架构"></a>（3）架构</h3><p>架构是系统的组织结构，包括系统分解的组成部分、他们的关联性、交互、机制和指导原则。</p>
+<p>具体来说，就是5个系统视图。</p>
+<p>逻辑视图：以问题域的语汇组成的类和对象集合。<br>进程视图：可执行线程和进程作为活动类的建模，他是逻辑视图的一次执行实例。<br>实现视图：对组成基于系统的物理代码的文件和组件进行建模。<br>部署视图：把组件物理的部署到一组物理的可计算的节点上。<br>用例视图：最基本的需求分析模型。</p>
+<h2 id="3、用例图基础"><a href="#3、用例图基础" class="headerlink" title="3、用例图基础"></a>3、用例图基础</h2><p>外部参与者所理解的系统功能。</p>
+<p><img src="/images/ruankao/6-8.png"></p>
+<p>包括参与者、用例、包含和扩展。</p>
+<h2 id="4、类图和对象图基础"><a href="#4、类图和对象图基础" class="headerlink" title="4、类图和对象图基础"></a>4、类图和对象图基础</h2><p>类图技术是OO方法的核心。</p>
+<p><img src="/images/ruankao/6-9.png"></p>
+<h3 id="（1）类和对象"><a href="#（1）类和对象" class="headerlink" title="（1）类和对象"></a>（1）类和对象</h3><p>类是对一类具有相同特征的对象的描述。<br>对象是类的实例。<br>类的属性的语法为: “可见性 属性名:类型 = 默认值 {约束特性}”。<br>可见性包括 Public、Private 和 Protected，分别用+、-、#号表示。<br>类的操作的语法为: “可见性:操作名(参数表):返回类型 {约束特性}”。</p>
+<h3 id="（2）类之间的关系"><a href="#（2）类之间的关系" class="headerlink" title="（2）类之间的关系"></a>（2）类之间的关系</h3><p>①依赖关系。使用带箭头的虚线表示依赖关系。<br>②泛化关系。继承关系是泛化关系的反关系，也就是说子类是从父类中继承的，而父类则是子类的泛化。使用带空心箭头的实线表示，箭头指向父类。<br>③关联关系。用一条实线来表示关联关系。<br>聚合关系:聚合是一种特殊形式的关联。聚合表示类之间的关系是整体与部分的关系。例如 一辆轿车包含四个车轮、一个方向盘、一个发动机和一个底盘，就是聚合的一个例子。在 UML 中，用一个带空心菱形的实线表示，空心菱形指向的是代表“整体”的类。<br>组合关系:如果聚合关系中的表示“部分”的类的存在，与表示“整体”的类有着紧密的关系，例如“公司”与“部门”之间的关系，那么就应该使用“组合”关系来表示。在 UML 中， 用带有实心菱形的实线表示，菱形指向的是代表“整体”的类。<br>④实现关系。用一个带空心箭头的虚线表示。</p>
+<h3 id="（3）多重性问题"><a href="#（3）多重性问题" class="headerlink" title="（3）多重性问题"></a>（3）多重性问题</h3><p>多重性是用来说明关联的两个类之间的数量关系的。<br>0…1;0…<em>;1…1;1…</em>;*</p>
+<h3 id="（4）类图"><a href="#（4）类图" class="headerlink" title="（4）类图"></a>（4）类图</h3><p>对于软件系统，其类模型和对象模型类图描述类和类之间的静态关系。与数据模型不同，它不仅显示了信息的结构，同时还描述了系统的行为。类图是定义其他图的基础。</p>
+<h3 id="（5）对象图"><a href="#（5）对象图" class="headerlink" title="（5）对象图"></a>（5）对象图</h3><p>UML 中对象图与类图具有相同的表示形式。对象图可以看作是类图的一个实例。</p>
+<h2 id="5、交互图基础"><a href="#5、交互图基础" class="headerlink" title="5、交互图基础"></a>5、交互图基础</h2><p>交互图是表示各组对象如何按某种行为进行协作的模型。通常可以使用一个交互图来表示和说明一个用例的行为。</p>
+<h3 id="（1）顺序图"><a href="#（1）顺序图" class="headerlink" title="（1）顺序图"></a>（1）顺序图</h3><p>顺序图用来描述对象之间动态的交互关系，着重体现对象间消息传递的时间顺序。顺序图允许直观地表示出对象的生存期，在生存期内，对象可以对输入消息做出响应，并且可以发送信息。<br><img src="/images/ruankao/6-10.png"></p>
+<h3 id="（2）通信图"><a href="#（2）通信图" class="headerlink" title="（2）通信图"></a>（2）通信图</h3><p>通信图用于描述相互合作的对象间的交互关系和链接关系。虽然顺序图和通信图都用来描述对象间的交互关系，但侧重点不一样。顺序图着重体现交互的时间顺序，通信图则着重体现交互对象间的静态链接关系。<br><img src="/images/ruankao/6-11.png"></p>
+<h3 id="（3）定时图"><a href="#（3）定时图" class="headerlink" title="（3）定时图"></a>（3）定时图</h3><p>定时图是一种特殊形式的顺序图。<br><img src="/images/ruankao/6-12.png"></p>
+<h2 id="6、状态图基础"><a href="#6、状态图基础" class="headerlink" title="6、状态图基础"></a>6、状态图基础</h2><p>状态图用来描述一个特定对象的所有可能状态及其引起状态转移的事件。<br><img src="/images/ruankao/6-13.png"></p>
+<h2 id="7、活动图基础"><a href="#7、活动图基础" class="headerlink" title="7、活动图基础"></a>7、活动图基础</h2><p>活动图的应用非常广泛，它既可用来描述操作(类的方法)的行为，也可以描述用例和对象内部的工作过程。<br>活动图是由状态图变化而来的，它们各自用于不同的目的。活动图依据对象状态的变化来捕获动作(将要执行的工作或活动)与动作的结果。活动图中一个活动结束后将立即进入下一个活动(在状态图中状态的变迁可能需要事件的触发)。</p>
+<h3 id="1-基本活动图。"><a href="#1-基本活动图。" class="headerlink" title="(1)基本活动图。"></a>(1)基本活动图。</h3><p><img src="/images/ruankao/6-14.png"><br>判定:用菱形表示。<br>分支与组合:用粗线来表示分支和组合。</p>
+<h3 id="2-带泳道的活动图。"><a href="#2-带泳道的活动图。" class="headerlink" title="(2)带泳道的活动图。"></a>(2)带泳道的活动图。</h3><p><img src="/images/ruankao/6-15.png"></p>
+<h3 id="3-对象流。"><a href="#3-对象流。" class="headerlink" title="(3)对象流。"></a>(3)对象流。</h3><p>在活动图中可以出现对象。对象可以作为活动的输入或输出，对象与活 动间的输入/输出关系由虚线箭头来表示。如果仅表示对象受到某一活动的影响，则可用不带箭头的虚线来连接对象与活动。</p>
+<h3 id="4-信号。"><a href="#4-信号。" class="headerlink" title="(4)信号。"></a>(4)信号。</h3><p>在活动图中可以表示信号的发送与接收，分别用发送和接收标识来表示。 发送和接收标识也可与对象相连，用于表示消息的发送者和接收者。</p>
+<h2 id="8、构件图基础"><a href="#8、构件图基础" class="headerlink" title="8、构件图基础"></a>8、构件图基础</h2><p>构件图是面向对象系统的物理方面进行建模要用的两种图之一。它可以有效地显示一组构件，以及它们之间的关系。构件图中通常包括构件、接口及各种关系。<br><img src="/images/ruankao/6-16.png"><br>通常构件指的是源代码文件、二进制代码文件和可执行文件等。而构件图就是用来显示编译、链接或执行时构件之间的依赖关系的。</p>
+<h3 id="对源代码进行建模"><a href="#对源代码进行建模" class="headerlink" title="对源代码进行建模"></a>对源代码进行建模</h3><p>这样可以清晰地表示出各个不同源程序文件之间的关系。</p>
+<h3 id="对物理数据库建模"><a href="#对物理数据库建模" class="headerlink" title="对物理数据库建模"></a>对物理数据库建模</h3><p>用来表示各种类型的数据库、表之间的关系。</p>
+<h3 id="对可调整的系统建模"><a href="#对可调整的系统建模" class="headerlink" title="对可调整的系统建模"></a>对可调整的系统建模</h3><p>例如对应用了负载均衡、故障恢复等系统的建模。</p>
+<p>在绘制构件图时，应该注意侧重于描述系统的静态实现视图的一个方面，图形不要过于简化，应该为构件图取一个直观的名称，在绘制时避免产生线的交叉。</p>
+<h2 id="9、部署图基础"><a href="#9、部署图基础" class="headerlink" title="9、部署图基础"></a>9、部署图基础</h2><p>部署图，也称为实施图，它和构件图一样，是面向对象系统的物理方面建模的两种图之一。构件图是说明构件之间的逻辑关系，而部署图则是在此基础上更进一步地描述系统硬件的物理拓扑结构及在此结构上执行的软件。部署图可以显示计算结点的拓扑结构和通信路径、结点上运行的软件构件，常用于帮助理解分布式系统。</p>
+<h3 id="1-节点和连接。"><a href="#1-节点和连接。" class="headerlink" title="(1)节点和连接。"></a>(1)节点和连接。</h3><p>节点代表一个物理设备及其上运行的软件系统，如一台 UNIX 主机、一个 PC 终端、一台打印机、一个传感器等。<br>节点之间的连线表示系统之间进行交互的通信路径，在 UML 中被称为连接。<br>通信类型则放在连接旁边的“《》”之间，表示所用的通信协议或网络类型。</p>
+<h3 id="2-构件和接口。"><a href="#2-构件和接口。" class="headerlink" title="(2)构件和接口。"></a>(2)构件和接口。</h3><p>在部署图中，构件代表可执行的物理代码模块，如一个可执行程序。</p>
+<p><img src="/images/ruankao/6-17.png"><br>在面向对象方法中，类和构件等元素并不是所有的属性和操作都对外可见。它们对外提供了可见操作和属性，称之为类和构件的接口。界面可以表示为一头是小圆圈的直线。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">系统分析与设计方法（一）定义问题与归结模型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-09-22 00:00:00 / 修改时间：11:18:26" itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+08:00">2021-09-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>软件系统的目的是为了解决问题。<br>定义问题的过程包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、理解真实世界中的问题和用户的需要。</span><br><span class="line">2、提出满足这些需要的解决方案的过程。</span><br></pre></td></tr></table></figure>
+
+<h1 id="一、问题分析"><a href="#一、问题分析" class="headerlink" title="一、问题分析"></a>一、问题分析</h1><h2 id="1、在问题定义上达成共识"><a href="#1、在问题定义上达成共识" class="headerlink" title="1、在问题定义上达成共识"></a>1、在问题定义上达成共识</h2><p>用标准化的格式将问题写出来。</p>
+<h2 id="2、理解问题的本质"><a href="#2、理解问题的本质" class="headerlink" title="2、理解问题的本质"></a>2、理解问题的本质</h2><p>通常用因果鱼骨图和帕累托图两种方式。</p>
+<h3 id="（1）因果鱼骨图"><a href="#（1）因果鱼骨图" class="headerlink" title="（1）因果鱼骨图"></a>（1）因果鱼骨图</h3><p><img src="/images/ruankao/5-1.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">将问题简明扼要的写在右侧方框中。</span><br><span class="line">确定问题潜在原因的主要类别，将他们连在鱼的脊骨上。</span><br><span class="line">用头脑风暴法寻找原因并归类。</span><br></pre></td></tr></table></figure>
+<h3 id="（2）帕累托图"><a href="#（2）帕累托图" class="headerlink" title="（2）帕累托图"></a>（2）帕累托图</h3><p><img src="/images/ruankao/5-2.png"><br>采用直方图的形式，将问题的相对频率或大小从高到低排列，聚焦重要的问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">明确问题。</span><br><span class="line">找到问题的各种可能原因。</span><br><span class="line">选择评价标准和考察期限，最常用的标准是频率和费用。</span><br><span class="line">收集各种原因发生的频率和费用数据。</span><br><span class="line">将原因按发生的频率或费用从大到小排列。</span><br><span class="line">将原因排在横轴，频率或费用排在纵轴。</span><br></pre></td></tr></table></figure>
+<h2 id="3、确认项目干系人和用户"><a href="#3、确认项目干系人和用户" class="headerlink" title="3、确认项目干系人和用户"></a>3、确认项目干系人和用户</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">系统的用户是谁？</span><br><span class="line">系统的客户是谁？</span><br><span class="line">那些人收到系统输出的影响？</span><br><span class="line">系统完成收入使用后谁对她进行评估？</span><br><span class="line">其他系统内部或外部的客户？</span><br><span class="line">系统将来谁维护？</span><br></pre></td></tr></table></figure>
+<h2 id="4、定义系统的边界"><a href="#4、定义系统的边界" class="headerlink" title="4、定义系统的边界"></a>4、定义系统的边界</h2><p>解决方案系统和现实世界之间的边界。在系统边界中，信息以输入和输出的形式流入系统，并由系统流向系统外的用户。</p>
+<h3 id="（1）上下文范围图"><a href="#（1）上下文范围图" class="headerlink" title="（1）上下文范围图"></a>（1）上下文范围图</h3><p>数据流图中的顶层图，它反映领域信息，能够清晰的显示出系统和相邻系统的职责，能够从宏观层面了解系统。</p>
+<h3 id="（2）用例模型"><a href="#（2）用例模型" class="headerlink" title="（2）用例模型"></a>（2）用例模型</h3><p>以参与者的角度描述“和系统进行交互的事物”。<br><img src="/images/ruankao/5-3.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">谁会对系统提供信息？</span><br><span class="line">谁会在系统中使用信息？</span><br><span class="line">谁会从系统中删除信息？</span><br><span class="line">谁将操作系统？</span><br><span class="line">系统将会在哪里使用？</span><br><span class="line">系统从那里得到信息？</span><br><span class="line">哪些外部系统要和系统进行交互？</span><br></pre></td></tr></table></figure>
+<h2 id="5、确定系统实现的约束"><a href="#5、确定系统实现的约束" class="headerlink" title="5、确定系统实现的约束"></a>5、确定系统实现的约束</h2><p>从约束源开始考虑。<br>进度、投资收益、人员、设备预算、环境、操作系统、数据库、主机和客户机系统、技术问题、行政问题、已有软件、公司总体战略和程序、工具和语言的选择、人员和其他资源限制等。</p>
+<h1 id="二、问题定义"><a href="#二、问题定义" class="headerlink" title="二、问题定义"></a>二、问题定义</h1><h2 id="1、目标"><a href="#1、目标" class="headerlink" title="1、目标"></a>1、目标</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">优势：目标不仅仅是解决问题，还要提供业务上的优势。</span><br><span class="line">度量：度量优势的标准</span><br><span class="line">合理性：获得的业务优势要大于工作量成本，才是合理的解决方案。</span><br><span class="line">可行性：要探寻能够满足度量标准的解决方案。</span><br><span class="line">可达成性：是否具备需要的技能，建设完成后是否能够操作它。</span><br></pre></td></tr></table></figure>
+<p><img src="/images/ruankao/5-4.png"></p>
+<h2 id="2、功能需求"><a href="#2、功能需求" class="headerlink" title="2、功能需求"></a>2、功能需求</h2><p>系统必须做的事，功能需求源于业务需求。</p>
+<h2 id="3、非功能需求"><a href="#3、非功能需求" class="headerlink" title="3、非功能需求"></a>3、非功能需求</h2><p>系统必须具备的属性。<br>功能需求通常以动词为特征，非功能需求以副词为特征。<br>非功能需求主要包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">观感需求</span><br><span class="line">易用性需求</span><br><span class="line">性能需求</span><br><span class="line">可操作性需求</span><br><span class="line">可维护性和可移植性需求</span><br><span class="line">安全性需求</span><br><span class="line">文化和政策需求</span><br><span class="line">法律需求</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（二）需求分析与软件设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+08:00">2021-09-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-09-24 08:49:12" itemprop="dateModified" datetime="2021-09-24T08:49:12+08:00">2021-09-24</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>需求分析阶段的主要任务是通过开发人员与用户之间的广泛交流，不断澄清模糊的概念，最终形成一个完整的、清晰的、一直的需求说明。（做什么）</p>
+<p>在需求明确之后，下一步就是对软件系统进行设计。（怎么做）</p>
+<h1 id="一、需求分析的任务与过程"><a href="#一、需求分析的任务与过程" class="headerlink" title="一、需求分析的任务与过程"></a>一、需求分析的任务与过程</h1><p>需求分析主要是确定待开发软件的功能、性能、数据、界面等要求。<br>需求分析的步骤包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">获取当前系统的物理模型</span><br><span class="line">抽象出当前系统的逻辑模型</span><br><span class="line">建立目标系统的逻辑模型</span><br></pre></td></tr></table></figure>
+<p>需求分析工作的4个方面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">问题识别：用于发现需求、描述需求</span><br><span class="line">分析与综合：对问题进行分析，并给出解决方案</span><br><span class="line">编制需求分析的文档：输出《需求规格说明书》</span><br><span class="line">需求分析与评审：主要对功能的正确性、完整性和清晰性等给与评价。</span><br></pre></td></tr></table></figure>
+<h2 id="1、需求的分类"><a href="#1、需求的分类" class="headerlink" title="1、需求的分类"></a>1、需求的分类</h2><p>软件需求包括功能需求、非功能需求、设计约束三方面。<br><img src="/images/ruankao/5-5.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">功能需求：系统必须完成的事，为了向用户提供有用的功能，产品必须执行的动作。</span><br><span class="line">非功能需求：产品必须具备的属性或者品质，如性能、响应时间、可靠性、容错性、扩展性等。</span><br><span class="line">设计约束：也叫限制条件、补充规约，比如必须采用国内自主知识版权的数据库等。</span><br></pre></td></tr></table></figure>
+<p>除了上面三种需求之外，在其他维度，还有业务需求、用户需求、系统需求。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">业务需求：客户对系统、产品高层次的目标要求。</span><br><span class="line">用户需求：用户使用产品必须要完成上面任务，通过访谈、调查，从用户角度出发的需求。</span><br><span class="line">系统需求：从系统角度的需求，包括用特性说明的功能需求、质量属性、非功能需求及设计约束。</span><br></pre></td></tr></table></figure>
+<h2 id="2、需求工程"><a href="#2、需求工程" class="headerlink" title="2、需求工程"></a>2、需求工程</h2><p>创建和维护系统需求文档的所有活动，包括需求开发和需求管理两大工作。</p>
+<h3 id="（1）需求开发"><a href="#（1）需求开发" class="headerlink" title="（1）需求开发"></a>（1）需求开发</h3><p>包括需求捕获、需求分析、编写规格说明书和需求验证四个阶段。<br>需求开发是目标，是主线，是努力掌握客户对系统的需求。</p>
+<h3 id="（2）需求管理"><a href="#（2）需求管理" class="headerlink" title="（2）需求管理"></a>（2）需求管理</h3><p>包括需求基线、处理需求变更、需求跟踪等。<br>需求管理是支持，是保障，是对需求的变化进行管理的过程。</p>
+<h2 id="2、需求分析方法"><a href="#2、需求分析方法" class="headerlink" title="2、需求分析方法"></a>2、需求分析方法</h2><p>根据分析方法发展的历史，分为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">结构化分析方法</span><br><span class="line">软系统方法</span><br><span class="line">面向对象分析方法</span><br><span class="line">面向问题域的分析</span><br></pre></td></tr></table></figure>
+<h1 id="二、如何进行系统设计"><a href="#二、如何进行系统设计" class="headerlink" title="二、如何进行系统设计"></a>二、如何进行系统设计</h1><p>系统设计与其说是在设计，不如说是在选择和妥协。<br>妥协，就是在各个系统目标之间找到一个平衡点。系统目标包括但不限于功能、性能、健壮性、开发周期、交付日期等，但这些目标往往都是矛盾的。<br>没有一个设计者会完全重新开始设计一个系统，他们总参考多个与目标系统相类似的系统，再从中进行甄别、取舍和补充来作为新系统的设计。<br>要成为优秀的设计者，了解、掌握、消化、总结前人和自己以前的设计成果是最好的、也是唯一的方法。</p>
+<p>优秀的系统设计一般在以下几个方面都很出色：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">组建的独立性。做到高内聚、低耦合。</span><br><span class="line">例外的识别和处理。</span><br><span class="line">防错和容错。</span><br></pre></td></tr></table></figure>
+<p>也有一些技术能够改进系统设计，这些方法包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">降低复杂性</span><br><span class="line">通过合约进行设计</span><br><span class="line">原型化设计</span><br><span class="line">错误树分析等</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、软件设计的任务与活动"><a href="#三、软件设计的任务与活动" class="headerlink" title="三、软件设计的任务与活动"></a>三、软件设计的任务与活动</h1><p>软件设计时把软件需求变成软件表示的过程。<br>软件表示先是总体框架，然后在进一步细化，并在框架中填入细节。<br>1、从工程管理角度，软件设计可以分为两个步骤：<br>（1）概要设计：也称为高层设计<br>将软件需求转化为数据结构和软件的系统结构。<br>（2）详细设计：也称为底层设计<br>对结构表示进行细化，得到详细的数据结构与算法。<br>2、主要的设计方法比较<br>结构化设计的时代，主要设计方法包括Jackson方法和Parnas方法。结构化方法侧重于“模块相对独立且功能单一，使模块间联系弱、模块内联系强”；<br>Jackson方法是从数据结构导出模块结构。<br>Parnas方法是将可能引起变化的因素隐藏在有关模块内部，是这些因素变化时的影响范围受到限制。<br>近年来，对象技术凭借数据的高效封装和良好的消息机制，实现了高内聚、低耦合，成为现代软件设计的主流方法。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E8%BD%AF%E4%BB%B6%E9%87%8D%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -474,491 +1029,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6/" class="post-title-link" itemprop="url">系统规划（二）可行性研究</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-17 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-17T00:00:00+08:00">2021-09-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:49" itemprop="dateModified" datetime="2021-09-22T09:37:49+08:00">2021-09-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>可行性研究的范围包括技术、经济、执行、环境等方面。虽然可行性研究不能给出详细的计划和方向，但是可以以最小的成本识别出错误构思的系统，从而避免更大的损失。</p>
-<h1 id="一、可行性研究的内容"><a href="#一、可行性研究的内容" class="headerlink" title="一、可行性研究的内容"></a>一、可行性研究的内容</h1><p>可行性研究包括经济可行性、技术可行性、法律可行性、执行可行性、方案的选择等5个方面。</p>
-<h2 id="经济可行性"><a href="#经济可行性" class="headerlink" title="经济可行性"></a>经济可行性</h2><p>评估项目的开发成本及项目成功后可能获得的经济收益。</p>
-<h2 id="技术可行性"><a href="#技术可行性" class="headerlink" title="技术可行性"></a>技术可行性</h2><p>评估对于假想的软件系统需要实现的功能和性能，以及技术能力约束。可通过“提问-回答”的方式进行论证。<br>投资不足、时间不足、技术难度过大、没有足够的技术积累、没有熟练的员工、没有足够的合作公司、晚报资源不足等都是技术可行性的约束。</p>
-<h2 id="法律可行性"><a href="#法律可行性" class="headerlink" title="法律可行性"></a>法律可行性</h2><p>评估可能有系统开发引起的侵权或法律责任。<br>可能包括过年政策和法律的限制，合同的订立和条款，职责、侵权情况的设定，违约、争议的解决等。</p>
-<h2 id="执行可行性"><a href="#执行可行性" class="headerlink" title="执行可行性"></a>执行可行性</h2><p>评估与其的软件系统在真实的环境中能够被应用的程度和实施过程中的障碍。</p>
-<h2 id="方案的选择"><a href="#方案的选择" class="headerlink" title="方案的选择"></a>方案的选择</h2><p>评估系统或者产品开发的可选方法，可以采用折中的方法，反复比较各个方案的成本和效益，选择可行的方案。</p>
-<h1 id="二、成本效益分析"><a href="#二、成本效益分析" class="headerlink" title="二、成本效益分析"></a>二、成本效益分析</h1><p>对项目开发目标的成本及可度量的项目现金收入和无形收益进行一次转化的评估。</p>
-<h2 id="项目可能涉及的成本"><a href="#项目可能涉及的成本" class="headerlink" title="项目可能涉及的成本"></a>项目可能涉及的成本</h2><p>基础建设支出<br>一次性支出<br>运行维护费用</p>
-<h2 id="项目可能涉及的利益"><a href="#项目可能涉及的利益" class="headerlink" title="项目可能涉及的利益"></a>项目可能涉及的利益</h2><p>一次性收益<br>非一次性收益<br>不可定量的收益</p>
-<h2 id="效益分析的若干指标和进一步的分析"><a href="#效益分析的若干指标和进一步的分析" class="headerlink" title="效益分析的若干指标和进一步的分析"></a>效益分析的若干指标和进一步的分析</h2><p>收益/投资比<br>投资回收周期<br>敏感性分析</p>
-<h1 id="三、可行性分析报告"><a href="#三、可行性分析报告" class="headerlink" title="三、可行性分析报告"></a>三、可行性分析报告</h1><p>国标 GB 8567-1988 中定义了可行性分析报告的格式和内容。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">项目背景：包括问题描述、实现环境和限制条件</span><br><span class="line">管理概要和建议：包括重要的研究成果、说明、建议和影响</span><br><span class="line">候选方案：包括候选系统的配置和最终方案的选择标准</span><br><span class="line">系统描述：包括系统工作范围的简要说明和被分配系统元素的可行性</span><br><span class="line">经济可行性：包括经费概算和与其的经济效益</span><br><span class="line">技术可行性：包括技术实力、已有工作基础和设备条件</span><br><span class="line">法律可行性：包括系统开发可能导致的侵权，违法和责任等</span><br><span class="line">用户使用可行性：包括用户单位的行政管理，工作制度和使用人员的素质</span><br><span class="line">其他与项目有关的问题：例如其他方案接收和未来可能的变化</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E5%9B%9B%EF%BC%89%E6%96%B0%E6%97%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E6%AF%94%E8%BE%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E5%9B%9B%EF%BC%89%E6%96%B0%E6%97%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E6%AF%94%E8%BE%83/" class="post-title-link" itemprop="url">系统规划（四）新旧系统的分析和比较</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-17 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-17T00:00:00+08:00">2021-09-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-24 08:51:03" itemprop="dateModified" datetime="2021-09-24T08:51:03+08:00">2021-09-24</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>遗留系统的特点：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">系统虽然能完成很多重要的业务工作，但是已经不能外圈满足要求。</span><br><span class="line">系统在性能上已经落后，或者采用的技术已经过时。</span><br><span class="line">通常是大型的系统，已经融入业务工作中，维护工作十分困难。</span><br><span class="line">系统没有使用现代系统工程方法进行管理和开发，基本没有文档，很难理解。</span><br></pre></td></tr></table></figure>
-<p>对于遗留系统，可以根据系统的技术条件、商业价值及维护和运行系统的组织特征不同，采取继续维护、重构或替代、或联合使用几种策略。</p>
-<h1 id="一、遗留系统的评价方法"><a href="#一、遗留系统的评价方法" class="headerlink" title="一、遗留系统的评价方法"></a>一、遗留系统的评价方法</h1><p><img src="/images/ruankao/4-2.png"><br>1、启动评价<br>评价是为了对遗留系统足够的理解。评价前需要了解以下问题：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">对企业来说，遗留系统是否至关重要</span><br><span class="line">企业的商业目标是什么</span><br><span class="line">演化需求是什么</span><br><span class="line">所期望的系统寿命多长</span><br><span class="line">系统的使用期限多久</span><br><span class="line">系统的技术状态如何</span><br><span class="line">企业是否愿意改变</span><br><span class="line">企业是否有能力承受演化</span><br></pre></td></tr></table></figure>
-<p>2、商业价值评价<br>判断遗留系统对企业的重要性。可以包括概要和详细两个级别，概要评价包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">咨询</span><br><span class="line">评价问卷</span><br><span class="line">进行评价</span><br></pre></td></tr></table></figure>
-<p>详细评价包括应用系统不符合业务规范的风险分析，该分析十分费时，最好由业务分析师来完成。<br>3、外部环境评价<br>外部环境评价系统的外部技术环境，是硬件、支撑软件和其他基础设施的统一体。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">硬件</span><br><span class="line">    系统一些常见特征有供应商、维护费用、市销率、年龄、功能、性能等。</span><br><span class="line">    具体评价方法是对每一个部件或整个系统的每个特征打分（1-4），求总分。</span><br><span class="line">支撑软件</span><br><span class="line">    支撑软件可包括操作系统、数据库、事务处理程序、编译器、网络软件、应用软件等。</span><br><span class="line">    评价方式同硬件。</span><br><span class="line">企业基础设施</span><br><span class="line">    需要考虑企业和使用者的类型、开发组织的技术成熟度、企业的培训过程、系统支持人员的技术水平、企业是否愿意改变。</span><br></pre></td></tr></table></figure>
-<p>4、应用软件评价</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">系统级，整个系统看作不可分的原子。</span><br><span class="line">部件级，关注系统的每个子系统，考虑子系统的特征，包括复杂性、数据、文档、外部依赖型、合法性、维护记录、大小、安全性等。</span><br><span class="line">评价方式同硬件。</span><br></pre></td></tr></table></figure>
-<p>5、分析评价结果<br>加权平均值。</p>
-<p><img src="/images/ruankao/4-3.png"></p>
-<h1 id="二、遗留系统的演化策略"><a href="#二、遗留系统的演化策略" class="headerlink" title="二、遗留系统的演化策略"></a>二、遗留系统的演化策略</h1><p>1、淘汰策略<br>第3象限低水平、低价值区，淘汰，全面开发新的系统替代遗留系统。<br>一般在业务发生根本变化，或维护人员、维护资料全部丢失了。经过评价，重新开发比改造旧系统更划算。<br>2、继承策略<br>第4象限低水平、高价值区，遗留，在开发系统时需要完全兼容遗留系统的功能模型和数据模型，新老系统同时运行，逐渐切换到新系统。<br>3、改造策略<br>第1象限高水平、高价值区，改造，这种系统通常建成时间段。其他功能不变，增加新功能。<br>4、集成策略<br>第2象限高水平、低价值区，集成，这种系统可能只完成某部门或子公司的业务，从整体看，他们基于不同的平台，不同的数据模型，无法互联互通，数据还不一致，属于较严重的问题。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/start/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/16/%E8%BD%AF%E8%80%83/start/" class="post-title-link" itemprop="url">干啊，软考之路</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:36:19" itemprop="dateModified" datetime="2021-09-22T09:36:19+08:00">2021-09-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>干啊，软考之路，记录些比较有价值的知识点吧。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="post-title-link" itemprop="url">开发方法（一）软件生命周期</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:34" itemprop="dateModified" datetime="2021-09-22T09:37:34+08:00">2021-09-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1970年-Boehm定义的软件生命周期模型"><a href="#1970年-Boehm定义的软件生命周期模型" class="headerlink" title="1970年 Boehm定义的软件生命周期模型"></a>1970年 Boehm定义的软件生命周期模型</h1><p><img src="/images/ruankao/1-6.png"></p>
-<h1 id="《GB-8566-1988计算机软件开发规范》定义的软件生命周期模型"><a href="#《GB-8566-1988计算机软件开发规范》定义的软件生命周期模型" class="headerlink" title="《GB 8566-1988计算机软件开发规范》定义的软件生命周期模型"></a>《GB 8566-1988计算机软件开发规范》定义的软件生命周期模型</h1><p><img src="/images/ruankao/1-7.png"></p>
-<table>
-<thead>
-<tr>
-<th>阶段</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>可行性研究与计划</td>
-<td>初步确定软件的目标、范围、风险、成本，从而确定软件是否有开发的必要。输出《可行性研究报告》《软件开发计划》</td>
-</tr>
-<tr>
-<td>需求分析</td>
-<td>对软件的需求进行详细分析</td>
-</tr>
-<tr>
-<td>概要设计</td>
-<td>确定软件的技术蓝图，将需求分析结果转为技术设计方案，输出系统架构、子系统之间的关系、数据库模型、接口规范、编码规范</td>
-</tr>
-<tr>
-<td>详细设计</td>
-<td>在概要设计的基础上进行细化，可裁剪，在一些小项目或者结构简单的项目可以没有详设，或者对重要模块进行详设</td>
-</tr>
-<tr>
-<td>实现</td>
-<td>包括编码和单元测试</td>
-</tr>
-<tr>
-<td>集成测试</td>
-<td>-</td>
-</tr>
-<tr>
-<td>确认测试</td>
-<td>验证软件实现与需求是否一致，是否达到了预期目标</td>
-</tr>
-<tr>
-<td>使用和维护</td>
-<td>软件维护的过程会贯穿整个软件的使用过程。当使用和维护阶段结 束后，软件系统也就自然消亡，软件系统的生命周期结束。</td>
-</tr>
-</tbody></table>
-<h1 id="《GB-T-8566-1995-信息技术-软件生存期过程》定义的软件生命周期模型"><a href="#《GB-T-8566-1995-信息技术-软件生存期过程》定义的软件生命周期模型" class="headerlink" title="《GB/T 8566-1995 信息技术-软件生存期过程》定义的软件生命周期模型"></a>《GB/T 8566-1995 信息技术-软件生存期过程》定义的软件生命周期模型</h1><p><img src="/images/ruankao/1-8.png"></p>
-<h1 id="1999年-《统一软件开发过程》"><a href="#1999年-《统一软件开发过程》" class="headerlink" title="1999年 《统一软件开发过程》"></a>1999年 《统一软件开发过程》</h1><p>包括4个阶段和5种工作流<br><img src="/images/ruankao/1-9.png"></p>
-<h3 id="五种工作流"><a href="#五种工作流" class="headerlink" title="五种工作流"></a>五种工作流</h3><p><img src="/images/ruankao/1-10.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8BUP/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89%E7%BB%9F%E4%B8%80%E8%BF%87%E7%A8%8BUP/" class="post-title-link" itemprop="url">开发方法（三）统一过程UP</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:34" itemprop="dateModified" datetime="2021-09-22T09:37:34+08:00">2021-09-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>UP是一个统一的软件开发过程，可以用于各种类型的项目。UP是基于构件的，使用统一建模语言（UML）。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">用例驱动</span><br><span class="line">以基本架构为中心</span><br><span class="line">迭代和增量</span><br></pre></td></tr></table></figure>
-<p><img src="/images/ruankao/3-1.png"><br><img src="/images/ruankao/3-2.png"></p>
-<p>初始阶段：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">明确项目规模。了解核心需求及约束，以确定验收标准。</span><br><span class="line">计划和准备商业理由。评估风险管理、人员配备、项目计划、成本、进度、收益率折中的备选方案。</span><br><span class="line">综合考虑备选架构。评估设计和自制、外购、复用方面的折中，从而估算成本、进度和资源。</span><br><span class="line">准备项目的环境，评估项目和组织，选择工具，决定流程中要改进的部分。</span><br></pre></td></tr></table></figure>
-<p>细化阶段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">快速确定架构。</span><br><span class="line">进一步明确需求，充分了解对推动架构和计划决策的最关键的用例。</span><br><span class="line">创建详细的迭代计划，并建立基线。</span><br><span class="line">优化开发流程，确定构建和自动化工具。</span><br><span class="line">优化架构，并选择构件。自制、外购或者复用。</span><br></pre></td></tr></table></figure>
-<p>构建阶段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">资源管理、控制和流程优化。</span><br><span class="line">完成构件开发，并根据已定义的评估标准进行测试。</span><br><span class="line">根据验收标准对产品进行评估。</span><br></pre></td></tr></table></figure>
-<p>交付阶段</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">执行部署计划</span><br><span class="line">完成用户手册</span><br><span class="line">确认测试</span><br><span class="line">打包发布</span><br><span class="line">获得用户反馈</span><br><span class="line">基于反馈调整产品</span><br><span class="line">最终版上线</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">开发方法（二）软件开发模型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-22 09:37:34" itemprop="dateModified" datetime="2021-09-22T09:37:34+08:00">2021-09-22</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h1><p>瀑布模型严格遵守软件生命周期各阶段的固定顺序，上一阶段完成后才能进入下一阶段，整个模型就像一个飞流直下的瀑布。<br><img src="/images/ruankao/2-1.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">可强迫开发人员采用规范的方法</span><br><span class="line">严格规定了各阶段必须提交的文档</span><br><span class="line">要求每个阶段结束后，都要进行严格评审</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">过于理想化</span><br><span class="line">缺乏灵活性</span><br><span class="line">无法再开发过程中逐步明确用户无法表达准确的需求</span><br></pre></td></tr></table></figure>
-<h1 id="瀑布V模型"><a href="#瀑布V模型" class="headerlink" title="瀑布V模型"></a>瀑布V模型</h1><p>瀑布V模型是瀑布模型的一种变体。在开发过程中任一阶段都可能引入缺陷，最后的测试只能在交付前发现更多的缺陷。瀑布V模型强调了测试。<br><img src="/images/ruankao/2-2.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">瀑布V模型不但保证了瀑布模型的阶段式文档驱动的特点，更强调了软件产品的验证工作</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需求分析集中在项目开始，而一旦需求不准确，存在偏差，之后的设计、实现、验证会放大偏差。</span><br><span class="line">瀑布模型后期维护工作相当繁重，而这些维护工作大都是修正需求阶段引入的缺陷，这个问题是瀑布模型难以克服的。</span><br></pre></td></tr></table></figure>
-<h1 id="快速原型模型"><a href="#快速原型模型" class="headerlink" title="快速原型模型"></a>快速原型模型</h1><p>快速原型是指在计算机上快速建立可以运行的程序或者界面。让用户能尽快了解系统的概貌，一旦用户确认了原型，就可以快速按照原型开发出满足用户真实需求的软件产品。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">引入了迭代的概念</span><br><span class="line">强调用户参与</span><br><span class="line">在用户需求分析、系统功能描述、系统实现方法等方面允许有较大的灵活性，可以逐步完善。</span><br><span class="line">可以用来评价几种不同的设计方案</span><br><span class="line">可以用来建立系统的某个部分</span><br><span class="line">不排斥传统生命周期的有效的方法和工具，与传统方法互为补充。</span><br><span class="line"></span><br><span class="line">动态定义需求，适用于需求不明确的项目。</span><br><span class="line"></span><br><span class="line">不适合使用原型法的情况：</span><br><span class="line">缺乏使用的原型开发工具</span><br><span class="line">用户不参与、不积极配合开发过程</span><br><span class="line">用户的数据资源缺乏组织和管理</span><br><span class="line">用户的软件资源缺乏组织和管理</span><br></pre></td></tr></table></figure>
-
-<h1 id="演化模型"><a href="#演化模型" class="headerlink" title="演化模型"></a>演化模型</h1><p>演化模型也是一种原型化的开发方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">快速原型模型中，原型的用途是获取用户的真实需求，一旦需求确定了，原型就被抛弃，是一种“抛弃式”的原型化方法。</span><br><span class="line">演化模型中，则是从初始模型逐步演化为最终软件产品的渐进过程，是一种“渐进式”的原型化方法。</span><br><span class="line">一个演化模型可以看做若干次瀑布模型的迭代。</span><br></pre></td></tr></table></figure>
-
-<h1 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h1><p>增量模型是第三种原型化开发方法，它既不是“抛弃式”的，也不是“渐进式”的，而是“递增式”的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在系统的技术架构成熟、风险较低的时候，可以采用增量的方式进行系统开发，</span><br><span class="line">这样可以提前进行集成测试和系统测试，缩短初始版本的发布周期，提高用户对系统的可见度，降低系统的风险。</span><br><span class="line">第一版本往往是系统的核心功能，可以满足用户最基本的需求。之后增量版本的功能逐步丰富、完善。</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">每一个版本都是一个完整的、可用的版本</span><br><span class="line">版本间的增量要均匀</span><br></pre></td></tr></table></figure>
-
-<h1 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h1><p>螺旋模型结合了瀑布模型和演化模型的有点，不仅体现了两个模型的优点，而且还强调了其他模型均忽略了的风险分析。<br>螺旋模型在“瀑布模型”的每一个开发阶段前，引入一个非常严格的风险识别、风险分析和风险控制。它把软件项目分解成一个个小项目，每个小项目都标识一个或多个主要风险，直到所有的主要风险因素都被确定。<br>螺旋模型特别适用于庞大而复杂、具有高风险的系统。<br><img src="/images/ruankao/2-3.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">螺旋模型支持需求的动态变化，为用户的关键决策提供了方便，有助于需求准确性；为项目管理决策调整提供了便利，从而降低软件开发风险。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要具有相当丰富的风险评估经验和专业知识，如果未能及时标识风险，势必会造成重大损失。</span><br><span class="line">过多的迭代次数会增加开发成本，延迟提交时间。</span><br></pre></td></tr></table></figure>
-
-<h1 id="构件组装模型"><a href="#构件组装模型" class="headerlink" title="构件组装模型"></a>构件组装模型</h1><p>利用软构件进行搭积木的方式开发。<br><img src="/images/ruankao/2-4.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">让系统扩展更容易</span><br><span class="line">构件更容易被重用，降低软件开发成本</span><br><span class="line">构件粒度较小，开发任务更灵活，可用若干小组并行开发。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要经验丰富的架构师，设计不好的构件难以实现构件的优点，降低构件组装模型的重用度。</span><br><span class="line">在考虑重用度的时候，往往会在其他方面让步，比如性能。</span><br><span class="line">使用构件的时候，要求开发人员熟练掌握构件，增加了开发人员的学习成本。</span><br><span class="line">第三方构件的质量难以掌握，且会最终影响软件的质量。</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1030,14 +1100,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
