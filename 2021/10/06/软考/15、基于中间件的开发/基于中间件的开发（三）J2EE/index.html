@@ -20,19 +20,24 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="J2EE 是针对 Web Service、业务对象、数据访问和消息报传送的一组规范。这组应用编 程接口确定了 Web 应用与驻留它们的服务器之间的通信方式。J2EE 注重两件事，一是建 立标准，使 Web 应用的部署与服务器无关;二是使服务器能控制构件的生命周期和其他资 源，以便能够处理扩展、并发、事务处理管理和安全性问题。 J2EE 规范定义了以下几种构件:应用客户端构件、EJB 构件、Serv">
+<meta property="og:type" content="article">
 <meta property="og:title" content="基于中间件的开发（三）J2EE">
-<meta property="og:url" content="http://example.com/2021/09/30/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/index.html">
+<meta property="og:url" content="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/index.html">
 <meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="J2EE 是针对 Web Service、业务对象、数据访问和消息报传送的一组规范。这组应用编 程接口确定了 Web 应用与驻留它们的服务器之间的通信方式。J2EE 注重两件事，一是建 立标准，使 Web 应用的部署与服务器无关;二是使服务器能控制构件的生命周期和其他资 源，以便能够处理扩展、并发、事务处理管理和安全性问题。 J2EE 规范定义了以下几种构件:应用客户端构件、EJB 构件、Serv">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-30T10:34:02.205Z">
+<meta property="og:image" content="http://example.com/images/ruankao/7-2.png">
+<meta property="og:image" content="http://example.com/images/ruankao/7-3.png">
+<meta property="article:published_time" content="2021-10-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-06T02:07:20.983Z">
 <meta property="article:author" content="xuhj">
 <meta property="article:tag" content="软考">
 <meta property="article:tag" content="基于中间件的开发">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/7-2.png">
 
-<link rel="canonical" href="http://example.com/2021/09/30/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/">
+<link rel="canonical" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/">
 
 
 <script id="page-configurations">
@@ -169,7 +174,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/30/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -193,7 +198,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-09-30 00:00:00 / 修改时间：18:34:02" itemprop="dateCreated datePublished" datetime="2021-09-30T00:00:00+08:00">2021-09-30</time>
+              <time title="创建时间：2021-10-06 00:00:00 / 修改时间：10:07:20" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
             </span>
 
           
@@ -207,7 +212,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>J2EE 是针对 Web Service、业务对象、数据访问和消息报传送的一组规范。这组应用编 程接口确定了 Web 应用与驻留它们的服务器之间的通信方式。J2EE 注重两件事，一是建 立标准，使 Web 应用的部署与服务器无关;二是使服务器能控制构件的生命周期和其他资 源，以便能够处理扩展、并发、事务处理管理和安全性问题。</p>
+<p>J2EE 规范定义了以下几种构件:应用客户端构件、EJB 构件、Servlets 和 JSP、Applet 构 件。</p>
+<p>J2EE 采用的是多层分布式应用模型，意味着应用逻辑将根据功能分成几个部分， 用户 可以在相同或不同的服务器上安装不同应用构件组成的 J2EE 应用。</p>
+<p><img src="/images/ruankao/7-2.png"></p>
+<h1 id="一、表示层"><a href="#一、表示层" class="headerlink" title="一、表示层"></a>一、表示层</h1><p>J2EE 客户端可以基于 Web，也可以基于 Java。</p>
+<p>分布式企业应用可以同时包括多种客户端，并且这些客户端都可以访问相同的业务逻辑。</p>
+<p><img src="/images/ruankao/7-3.png"></p>
+<h1 id="二、应用服务层"><a href="#二、应用服务层" class="headerlink" title="二、应用服务层"></a>二、应用服务层</h1><p>一般情况下，应用服务层包含表示层请求的表示逻辑和业务逻辑。</p>
+<p>表示层由显示 HTML 页面的 JSP 页面和 Servlets 实现。<br>业务逻辑通过 RMI 对象和 EJB 实现。EJB 依靠容器来 实现事务处理、生命周期和状态管理、资源池、安全等问题，容器是 EJB 运行的环境。</p>
+<h2 id="1-Servlet"><a href="#1-Servlet" class="headerlink" title="1.Servlet"></a>1.Servlet</h2><p>Java Servlets 是指可以扩展 Web 服务器功能的程序。Servlet 从客户端接受请求，动态 生成响应，然后将包含 HTML 或 XML 文档的请求发送给客户端。</p>
+<h2 id="2-JSP"><a href="#2-JSP" class="headerlink" title="2.JSP"></a>2.JSP</h2><p>JSP 页面是基于文本的 Servlet 开发方式。JSP 页面具有 Servlet 的所有优点，如果与 JavaBeans 类结合在一起，可以容易地将内容和显示逻辑分开。这使得无须了解 Java 代码 就能更新页面的外观，更新 Java Beans 类的人也无须深入了解 Web 页面的设计。</p>
+<h2 id="3-EJB"><a href="#3-EJB" class="headerlink" title="3.EJB"></a>3.EJB</h2><p>EJB 构件用于封装业务逻辑，使开发人员无须再担心数据访问、事务处理支持、安全性、 高速缓存和迸发等琐碎任务的编程。在 EJB 规范中，它们由 EJB 容器负责。EJB 包含接口 和类。</p>
+<p>EJB 共有三种类型:EntityBean(实体 Bean)、Session Bean(会话 Bean)和 Message Driven Bean(消息驱动 Bean)</p>
+<h2 id="4-JMS"><a href="#4-JMS" class="headerlink" title="4.JMS"></a>4.JMS</h2><p>JMS 是支持 Java 程序之间信息交换的 J2EE 机制。</p>
+<h2 id="5-JNDI"><a href="#5-JNDI" class="headerlink" title="5.JNDI"></a>5.JNDI</h2><p>由于 J2EE 应用的构件可以独立运行，而且是在不同的设备上运行，因此客户端和应用服务器层代码必须以某种方式查找和参考其他代码和资源。客户端和应用代码使用 JNDI (Java Naming and Directory Interface，Java 命名和目录接口)查找用户定义对象(如 EJB) 和环境实体(Environment Entities)。在 JDBC2.0 中，数据源可以绑定到 JNDI 上，并允许 应用程序访问。</p>
+<h2 id="6-事务处理"><a href="#6-事务处理" class="headerlink" title="6.事务处理"></a>6.事务处理</h2><p>J2EE 事务处理模型可以在部署过程中定义组成一个事务处理的方法之间的联系，以便 事务处理中的所有方法可以作为一个整体存在。</p>
+
     </div>
 
     
@@ -226,12 +247,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/09/30/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%94%EF%BC%89%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8%E9%9B%86%E6%88%90/" rel="prev" title="基于中间件的开发（五）企业应用集成">
-      <i class="fa fa-chevron-left"></i> 基于中间件的开发（五）企业应用集成
+    <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/" rel="prev" title="基于中间件的开发（二）应用服务器技术">
+      <i class="fa fa-chevron-left"></i> 基于中间件的开发（二）应用服务器技术
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/" rel="next" title="基于中间件的开发（二）应用服务器技术">
-      基于中间件的开发（二）应用服务器技术 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/" rel="next" title="基于中间件的开发（一）中间件技术">
+      基于中间件的开发（一）中间件技术 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -291,6 +312,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%A1%A8%E7%A4%BA%E5%B1%82"><span class="nav-number">1.</span> <span class="nav-text">一、表示层</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%B1%82"><span class="nav-number">2.</span> <span class="nav-text">二、应用服务层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Servlet"><span class="nav-number">2.1.</span> <span class="nav-text">1.Servlet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-JSP"><span class="nav-number">2.2.</span> <span class="nav-text">2.JSP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-EJB"><span class="nav-number">2.3.</span> <span class="nav-text">3.EJB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-JMS"><span class="nav-number">2.4.</span> <span class="nav-text">4.JMS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-JNDI"><span class="nav-number">2.5.</span> <span class="nav-text">5.JNDI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E4%BA%8B%E5%8A%A1%E5%A4%84%E7%90%86"><span class="nav-number">2.6.</span> <span class="nav-text">6.事务处理</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
