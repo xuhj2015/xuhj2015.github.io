@@ -164,6 +164,556 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/" class="post-title-link" itemprop="url">基于中间件的开发（一）中间件技术</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-06 00:00:00 / 修改时间：08:48:18" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>中间件(middleware)是基础软件的一大类，属于可复用软件的范畴。</p>
+<p>中间件处在操作系统、网络和数据库之上，应用软件的下层(如图 15-1 所示)，也有人认为它应该属于操作系统中的一部分。</p>
+<p><img src="/images/ruankao/7-1.png"></p>
+<h1 id="中间件的概念"><a href="#中间件的概念" class="headerlink" title="中间件的概念"></a>中间件的概念</h1><p>中间件发展迅速，但在技术上还处于成长阶段，没有统一的标准和模型。</p>
+<p>中间件要涉及软件的所有标准、规范和技术，它有更多的内涵，因为它包括平台功能，自身具有自治性、自主性、隔离性、社会化、激发性、主动性、并发性、认识能力等特性，是近似于 Agent(代理)的结构。</p>
+<p>中间件是一种独立的系统软件或服务程序，分布式应用软件借助这种软件 在不同的技术之间共享资源，中间件位于客户机服务器的操作系统之上，管理计算资源和网 络通信。这些服务程序或软件具有标准的程序接口和协议。针对不同的操作系统和硬件平台， 它们可以有符合接口和协议规范的多种实现。中间件为处于其上层的应用软件提供运行与开 发的环境，帮助用户灵活、高效地开发和集成复杂的应用软件。</p>
+<h2 id="中间件应具有如下的一些特-点"><a href="#中间件应具有如下的一些特-点" class="headerlink" title="中间件应具有如下的一些特 点:"></a>中间件应具有如下的一些特 点:</h2><p>满足大量应用的需要;<br>运行于多种硬件和 OS 平台;<br>支持分布计算，提供跨网络、硬件和 OS 平台的透明性的应用或服务的交互;<br>支持标准的协议;<br>支持标准的接口。</p>
+<h2 id="中间件的十大优越性"><a href="#中间件的十大优越性" class="headerlink" title="中间件的十大优越性:"></a>中间件的十大优越性:</h2><p>缩短应用的开发周期;<br>节约应用的开发成本;<br>减少系统初期的建设成本;<br>降低应用开发的失败率;<br>保护已有的投资;<br>简化应用集成;<br>减少维护费用;<br>提高应用的开发质量;<br>保证技术进步的连续性;<br>增强应用的生命力。</p>
+<h1 id="中间件的分类"><a href="#中间件的分类" class="headerlink" title="中间件的分类"></a>中间件的分类</h1><h2 id="1-通信处理-消息-中间件"><a href="#1-通信处理-消息-中间件" class="headerlink" title="(1)通信处理(消息)中间件"></a>(1)通信处理(消息)中间件</h2><p>在分布式系统中，人们要建网和制定出通信协议，以保 证系统能在不同平台之间通信，实现分布式系统中可靠的、高效的、实时的跨平台数据传输， 这类中间件称为消息中间件。</p>
+<h2 id="2-事务处理-交易-中间件"><a href="#2-事务处理-交易-中间件" class="headerlink" title="(2)事务处理(交易)中间件"></a>(2)事务处理(交易)中间件</h2><p>在分布式事务处理系统中， 经常要处理大量事务，特别是 OLTP 中，每项事务常常要多台服务器上的程序按顺序协调完 成，一旦中间发生某种故障，不但要完成恢复工作，而且要自动切换系统，达到系统永不停 机，实现高可靠性运行。要使大量事务在多台应用服务器上能实时并发运行，并进行负载平 衡的调度，实现与昂贵的可靠性机和大型计算机系统同等的功能，为了实现这个目标，要求 中间件系统具有监视和调度整个系统的功能。</p>
+<h2 id="3-数据存取管理中间件"><a href="#3-数据存取管理中间件" class="headerlink" title="(3)数据存取管理中间件"></a>(3)数据存取管理中间件</h2><p>在分布式系统中，重要的数据都集中存放在数据服务器中， 它们可以是关系型的、复合文档型、具有各种存放格式的多媒体型，或者是经过加密或压缩 存放的，该中间件将为在网络上虚拟缓冲存取、格式转换、解压等带来方便。</p>
+<h2 id="4-Web-服务器中间件"><a href="#4-Web-服务器中间件" class="headerlink" title="(4)Web 服务器中间件"></a>(4)Web 服务器中间件</h2><p>浏览器图形用户界面已成为公认规范，然而它的会话能力差、 不擅长做数据写入、受 HTTP 协议的限制等，就必须进行修改和扩充，形成了 Web 服务器 中间件。</p>
+<h2 id="5-安全中间件"><a href="#5-安全中间件" class="headerlink" title="(5)安全中间件"></a>(5)安全中间件</h2><p>如防火墙、加密、认证等。<br>产生不安全因素是由操作系统引起的，但必须要用中间件去解决，以适应灵活多变的要求。</p>
+<h2 id="6-跨平台和架构的中间件"><a href="#6-跨平台和架构的中间件" class="headerlink" title="(6)跨平台和架构的中间件"></a>(6)跨平台和架构的中间件</h2><p>在分布式系统中，还需要集成各节点上的不同系统平台上的构件或新老版本的构件，由此产 生了架构中间件。</p>
+<h2 id="7-专用平台中间件"><a href="#7-专用平台中间件" class="headerlink" title="(7)专用平台中间件"></a>(7)专用平台中间件</h2><p>为特定应用领域设计领域参考模式，建立相应架构，配置相应的构件库和中间件，为应用服务器开发和运行特定领域的关键任务(如电子商务、网站等)。</p>
+<h2 id="8-网络中间件"><a href="#8-网络中间件" class="headerlink" title="(8)网络中间件"></a>(8)网络中间件</h2><p>它包括网管、接入、网络测试、虚拟社区、虚拟缓冲等，也是当前最热门的研发项目。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/" class="post-title-link" itemprop="url">基于中间件的开发（三）J2EE</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-06 00:00:00 / 修改时间：10:07:20" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>J2EE 是针对 Web Service、业务对象、数据访问和消息报传送的一组规范。这组应用编 程接口确定了 Web 应用与驻留它们的服务器之间的通信方式。J2EE 注重两件事，一是建 立标准，使 Web 应用的部署与服务器无关;二是使服务器能控制构件的生命周期和其他资 源，以便能够处理扩展、并发、事务处理管理和安全性问题。</p>
+<p>J2EE 规范定义了以下几种构件:应用客户端构件、EJB 构件、Servlets 和 JSP、Applet 构 件。</p>
+<p>J2EE 采用的是多层分布式应用模型，意味着应用逻辑将根据功能分成几个部分， 用户 可以在相同或不同的服务器上安装不同应用构件组成的 J2EE 应用。</p>
+<p><img src="/images/ruankao/7-2.png"></p>
+<h1 id="一、表示层"><a href="#一、表示层" class="headerlink" title="一、表示层"></a>一、表示层</h1><p>J2EE 客户端可以基于 Web，也可以基于 Java。</p>
+<p>分布式企业应用可以同时包括多种客户端，并且这些客户端都可以访问相同的业务逻辑。</p>
+<p><img src="/images/ruankao/7-3.png"></p>
+<h1 id="二、应用服务层"><a href="#二、应用服务层" class="headerlink" title="二、应用服务层"></a>二、应用服务层</h1><p>一般情况下，应用服务层包含表示层请求的表示逻辑和业务逻辑。</p>
+<p>表示层由显示 HTML 页面的 JSP 页面和 Servlets 实现。<br>业务逻辑通过 RMI 对象和 EJB 实现。EJB 依靠容器来 实现事务处理、生命周期和状态管理、资源池、安全等问题，容器是 EJB 运行的环境。</p>
+<h2 id="1-Servlet"><a href="#1-Servlet" class="headerlink" title="1.Servlet"></a>1.Servlet</h2><p>Java Servlets 是指可以扩展 Web 服务器功能的程序。Servlet 从客户端接受请求，动态 生成响应，然后将包含 HTML 或 XML 文档的请求发送给客户端。</p>
+<h2 id="2-JSP"><a href="#2-JSP" class="headerlink" title="2.JSP"></a>2.JSP</h2><p>JSP 页面是基于文本的 Servlet 开发方式。JSP 页面具有 Servlet 的所有优点，如果与 JavaBeans 类结合在一起，可以容易地将内容和显示逻辑分开。这使得无须了解 Java 代码 就能更新页面的外观，更新 Java Beans 类的人也无须深入了解 Web 页面的设计。</p>
+<h2 id="3-EJB"><a href="#3-EJB" class="headerlink" title="3.EJB"></a>3.EJB</h2><p>EJB 构件用于封装业务逻辑，使开发人员无须再担心数据访问、事务处理支持、安全性、 高速缓存和迸发等琐碎任务的编程。在 EJB 规范中，它们由 EJB 容器负责。EJB 包含接口 和类。</p>
+<p>EJB 共有三种类型:EntityBean(实体 Bean)、Session Bean(会话 Bean)和 Message Driven Bean(消息驱动 Bean)</p>
+<h2 id="4-JMS"><a href="#4-JMS" class="headerlink" title="4.JMS"></a>4.JMS</h2><p>JMS 是支持 Java 程序之间信息交换的 J2EE 机制。</p>
+<h2 id="5-JNDI"><a href="#5-JNDI" class="headerlink" title="5.JNDI"></a>5.JNDI</h2><p>由于 J2EE 应用的构件可以独立运行，而且是在不同的设备上运行，因此客户端和应用服务器层代码必须以某种方式查找和参考其他代码和资源。客户端和应用代码使用 JNDI (Java Naming and Directory Interface，Java 命名和目录接口)查找用户定义对象(如 EJB) 和环境实体(Environment Entities)。在 JDBC2.0 中，数据源可以绑定到 JNDI 上，并允许 应用程序访问。</p>
+<h2 id="6-事务处理"><a href="#6-事务处理" class="headerlink" title="6.事务处理"></a>6.事务处理</h2><p>J2EE 事务处理模型可以在部署过程中定义组成一个事务处理的方法之间的联系，以便 事务处理中的所有方法可以作为一个整体存在。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/" class="post-title-link" itemprop="url">基于中间件的开发（二）应用服务器技术</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-06 00:00:00 / 修改时间：09:47:57" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Web 应用开发大致经历了三个阶段。</p>
+<p>在第一阶段，大家都使用 Web 服务器提供的服 务器扩展接口，使用 C 或者 Perl 等语言进行开发，例如 CGI、API 等。这种方式可以让开 发者自由地处理各种不同的 Web 请求，动态地产生响应页面，实现各种复杂的 Web 系统 要求。但是，这种开发方式的主要问题是对开发者的素质要求很高，往往需要懂得底层的编 程方法，了解 HTTP 协议，此外，这种系统的调试也相当困难。</p>
+<p>在第二阶段，大家开始使用一些服务器端的脚本语言进行开发，主要包括 ASP、PHP、 Livewire 等。其实现方法实质上是在 Web 服务器端放入一个通用的脚本语言解释器，负责 解释各种不同的脚本语言文件。</p>
+<p>第三阶段应用服务器的方式。目前，应用服务器已经成为电子商务应用中一种非常关键的中间件技术。如今，各大主要软件厂商纷纷将应用服务器作为其电子商务平台的基础，如 IBM 的 Websphere，Oracle 的 Internet 应用服务器，Sybase 的 Enterprise 应用服务器等。本节将阐述应用服务器的概念、 相关技术及发展方向，并就目前主流的应用服务器产品进行简单的介绍。</p>
+<h1 id="应用服务器的概念"><a href="#应用服务器的概念" class="headerlink" title="应用服务器的概念"></a>应用服务器的概念</h1><p>在分布式、多层结构及基于构件和服务器端程序设计的企业级应用开发 中，它提供的是一个开发、部署、运行和管理、维护的平台。它可以提供软件“集群” 的 功能，因而可以让多个不同的、异构服务器协同工作、相互备份，以满足企业级应用所需要 的可用性、高性能、可靠性和可伸缩性等。</p>
+<p>应用服务 器可以帮助企业快速架构一个基 Internet 的电子商务系统，而且拥有极高的稳定性、可扩展 性和安全性。</p>
+<p>它能够：<br>(1)更合理地分工企业级应用开发，加快应用的开发速度，减少应用的开发量。<br>(2)应用设计、开发、部署、运行、管理、维护的平台。<br>设计:应用服务器完成底层通信、服务，并屏蔽掉复杂的底层技术细节，向用户提供结 构简单、功能完善的编程接口，让用户可以专心于商务逻辑的设计。<br>开发:应用服务器提供了完全开放的编程语言和应用接口，用户可以用任何自己习惯的 开发工具来工作。另外应用服务器自己也提供快速开发的工具和手段，帮助用户提高开发效 率。<br>部署:应用服务器可以部署在任何硬件平台、任何操作系统上，而且可以分布在异构网 络中，应用服务器帮助用户在复杂的网络环境中配置系统参数，使系统发挥最大的性能，拥 有最好的稳定可靠性。<br>运行:应用服务器采用的是开放技术标准，它提供了一个完整的标准实现，即提供了系 统的运行环境，任何基于同样标准的系统都能很好地运行于这个环境中。在运行中提供应用 系统的名字解析、路由选择、负载平衡、事务控制等服务，并提供系统容错、修复、迁移、 升级扩展等功能。<br>管理:应用服务器让用户通过图形化的界面方便地管理自己的资源，而且在系统运行时 也能动态监控和管理。<br>(3)使得应用与底层平台无关，便于商业逻辑的实现与扩展。<br>(4)为企业应用提供现成的、稳定而强健的、灵活的、成熟的基础架构。</p>
+<p>应用服务器通过分布式体系来保障这一点，表现为:<br>当系统处理能力不够时，可以通过简单地增加硬件来解决;<br>动态调整不同主机间的负载可以最大地利用系统资源，同时提高单机的稳定性;<br>当系统中的某台机器出现故障时，它的工作可由其他机器来承担，不会影响系统整体的运行， 即无单点故障。</p>
+<h1 id="主要的应用服务器"><a href="#主要的应用服务器" class="headerlink" title="主要的应用服务器"></a>主要的应用服务器</h1><h2 id="1-BEA-WebLogic"><a href="#1-BEA-WebLogic" class="headerlink" title="1.BEA WebLogic"></a>1.BEA WebLogic</h2><h2 id="2-IBM-WebSphere"><a href="#2-IBM-WebSphere" class="headerlink" title="2.IBM WebSphere"></a>2.IBM WebSphere</h2><h2 id="3-SUN-iPlanet"><a href="#3-SUN-iPlanet" class="headerlink" title="3.SUN iPlanet"></a>3.SUN iPlanet</h2><h2 id="4-Oracle-Internet-ApplicationServer"><a href="#4-Oracle-Internet-ApplicationServer" class="headerlink" title="4.Oracle Internet ApplicationServer"></a>4.Oracle Internet ApplicationServer</h2><h2 id="5-Sybase-Enterprise-ApplicationServer"><a href="#5-Sybase-Enterprise-ApplicationServer" class="headerlink" title="5.Sybase Enterprise ApplicationServer"></a>5.Sybase Enterprise ApplicationServer</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%94%EF%BC%89%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8%E9%9B%86%E6%88%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%94%EF%BC%89%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8%E9%9B%86%E6%88%90/" class="post-title-link" itemprop="url">基于中间件的开发（五）企业应用集成</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-06 00:00:00 / 修改时间：10:36:09" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>许多企业的信息系统在最初设计时没有考虑多个系统“协同工作”的需要。</p>
+<p>企业信息化建设缺乏一个整体规划。</p>
+<p>企业的信息化往往是从单项业务系统开始的，不同系统的开发方式及对于 开发规范的遵从程度都有所不同，这使得系统间存在很强的孤立性，再加上对企业外部的信 息未予以足够的重视，致使各部门开发出的信息系统最终成为一个个信息孤岛，一个系统很 难与其他系统交换信息。</p>
+<p>EAI(Enterprise ApplicationIntegration，企业应用集成)，可以在一定程度上帮助人们解决这一问题。</p>
+<p>EAI 是指通过将业务流程，应用软件、硬件和各种标准联合起来，对企业中完 成不同业务功能的应用系统进行无缝集成，使它们像一个整体一样进行业务处理和信息共享， 从而提高企业效率，为客户提供灵活的业务服务。</p>
+<p>EAI 可以通过中间件技术来连接企业级各种应用，使异构应用系统之间能够相互“交流” 与“协作”</p>
+<p><img src="/images/ruankao/7-4.png"></p>
+<h1 id="1-应用集成"><a href="#1-应用集成" class="headerlink" title="1.应用集成"></a>1.应用集成</h1><p>应用层次的集成主要为两个以上的应用中的数据和函数提供接近实时的集成。</p>
+<p>应 用层次的集成一般来说是通过处理多个应用系统之间的消息交换，实现系统间的集成</p>
+<h1 id="2-业务过程集成"><a href="#2-业务过程集成" class="headerlink" title="2.业务过程集成"></a>2.业务过程集成</h1><p>业务过程集成需要处理企业范围内的业务过程和把企业存在的应用系统整合到这些业 务过程中。它是一个完全的企业应用集成实现策略，因为它使企业内的一个个分离系统变成 了一个支持业务过程的连续系统，从而满足企业的整个业务过程需求。</p>
+<h1 id="3-数据集成"><a href="#3-数据集成" class="headerlink" title="3.数据集成"></a>3.数据集成</h1><p>要完成应用集成和业务过程集成，必须首先解决数据和数据库的集成问题。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E5%85%AD%EF%BC%89%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%9E%B6%E6%9E%84%E5%92%8C%E9%87%8D%E9%87%8F%E7%BA%A7%E6%9E%B6%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E5%85%AD%EF%BC%89%E8%BD%BB%E9%87%8F%E7%BA%A7%E6%9E%B6%E6%9E%84%E5%92%8C%E9%87%8D%E9%87%8F%E7%BA%A7%E6%9E%B6%E6%9E%84/" class="post-title-link" itemprop="url">基于中间件的开发（六）轻量级架构和重量级架构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-06 00:00:00 / 修改时间：10:55:49" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>MVC 模式是一种目前广泛流行的软件设计模式，随着 J2EE 的成熟，它正成为 J2EE 平 台上推荐的一种设计模型，将业务处理与显示分离，将应用分为模型、视图及控制层，增加 了应用的可扩展性。MVC 模式为搭建具有可伸缩性、灵活性、易维护性的 Web 系统提供 了良好的机制。</p>
+<p>轻量 级 Web 架构不仅保持了 J2EE 的优势， 还简化了 Web 的开发。目前主流的轻量级架构是把 Struts、Spring 和 Hibernate 这三种在 业内比较推崇的开源技术基于 MVC 模式相结合，这样在项目开发中不管是从效率上，费用 上，还是易维护上都能达到很好的效果。</p>
+<h1 id="一、Struts-框架"><a href="#一、Struts-框架" class="headerlink" title="一、Struts 框架"></a>一、Struts 框架</h1><p>Struts 是一个基于 SUN J2EE 平台的 MVC 框架，主要是采用 Servlet 和 JSP 技术来实 现的。在 Struts 框架中，模型由实现业务逻辑的 JavaBean 或 EJB 构件构成，控制器由 ActionServlet 和 Action 来实现，视图由一组 JSP 文件构成</p>
+<p><img src="/images/ruankao/7-5.png"></p>
+<p>Struts 把 Servlet、JSP、自定义标签和信息资源整合到一个统一的框架中，开发人员利 用其进行开发时不用自己再编码实现全套 MVC 模式，极大地节省了时间。</p>
+<p>Struts 的工作流程为:<br>首先，JSPview 发起一个以.do 表示的请求;<br>ActionForm 封装用 户请求数据，同时提供验证数据的功能;<br>ActionServlet 根据 struts-config.xml 文件来得到处 理这个请求的 Action 对象，并将请求发送给这个 Action 对象;<br>Action 对象调用 model 去 处理这个请求，将结果返回给 ActionServlet;<br>ActionServlet 决定将结果返回给对应的 view;<br>view 得到结果，并将它显示给用户。</p>
+<h1 id="二、Spring-框架"><a href="#二、Spring-框架" class="headerlink" title="二、Spring 框架"></a>二、Spring 框架</h1><p>Spring Framework是轻量级的 J2EE 应用程序框架，旨在简化 J2EE 的开发，降低 J2EE 项目实施的难度。</p>
+<p>框架包括声 明性事务管理，通过 RMI 或 web services 远程访问业务逻辑，mail 支持工具，以及对于 数据和数据库之间持久层的各种配置的支持。Spring 允许自由选择和组装各部分功能，还 提供和其他软件集成的接口，如与 Hibernate、Struts 的集成。</p>
+<p>Spring 核心本身是个容器,管理物件的生命周期、物件的组态、相依注入等，并可以控 制物件在创建时是以原型(Pro-totype)或单例子(Singleton)的方式来创立。</p>
+<p>Spring 的核心概念是控制反转(Inversionof Control，IoC)，更具体而易懂的名词是依赖 注入(Depen-dency Injection)，使用 Spring，不必自己在程序码中维护物件的依赖关系，只 需在构件中加以设定，Spring 核心容器会自动根据构件将依赖注入指定的物件。</p>
+<p>Spring 的 目标是实现一个全方位的整合框架，在 Spring 框架下实现多个子框架的组合，这些子框架 之间可以彼此独立，也可以使用其他的框架方案加以替代，Spring 成为企业级应用程序一 站式的解决方案。</p>
+<p><img src="/images/ruankao/7-6.png"></p>
+<p>Spring 的核心要点是支持不绑定到特定 J2EE 服务的可重用业务和数据访问对象。 Spring 的 IoC 控件主要服务于利用类、对象和服务去组成一个企业级应用，通过规范的方 式，将各种不同的控件整合成一个完整的应用。</p>
+<h1 id="三、Hibernate-框架"><a href="#三、Hibernate-框架" class="headerlink" title="三、Hibernate 框架"></a>三、Hibernate 框架</h1><p>Hibernate 是一种对象和关系之间映射的框架，是 Java 应用和关系数据库之间的桥梁。可以将数据库资源映射为一个或者多个 POJO。</p>
+<p><img src="/images/ruankao/7-7.png"></p>
+<p><img src="/images/ruankao/7-8.png"></p>
+<h1 id="四、基于-Struts、Spring-和-Hibernate-的轻量级架构"><a href="#四、基于-Struts、Spring-和-Hibernate-的轻量级架构" class="headerlink" title="四、基于 Struts、Spring 和 Hibernate 的轻量级架构"></a>四、基于 Struts、Spring 和 Hibernate 的轻量级架构</h1><p><img src="/images/ruankao/7-9.png"></p>
+<h2 id="1-表示层。"><a href="#1-表示层。" class="headerlink" title="(1)表示层。"></a>(1)表示层。</h2><p>由 Struts 实现，主要完成如下任务:<br>管理用户请求和响应;<br>提供一个控 制器代理以调用业务逻辑和各层的处理;<br>处理从其他层抛给 StrutsAction 的异常;<br>为显示提 供数据模型;<br>借助 Struts Validator 框架帮助完成 Web 层的验证工作。</p>
+<h2 id="2-持久层。"><a href="#2-持久层。" class="headerlink" title="(2)持久层。"></a>(2)持久层。</h2><p>由 Hibernate 实现。它通过一个面向对象的查询语言(Hibernate Query Language，HQL)或正则表达式的 API 来检索对象的相关信息。HQL 类似于 SQL，只是把 SQL 里的表和列用对象和它的字段代替。Hibernate 还负责存储、更新、删除数据库记录。同时 Hibernate 支持大部分主流数据库，且支持父表/子表关系、事务处理、继承和多态。</p>
+<h2 id="3-业务层。"><a href="#3-业务层。" class="headerlink" title="(3)业务层。"></a>(3)业务层。</h2><p>由 Spring 来实现。使用 Spring 的优点是:<br>利用延时注入思想组装代码， 提高了系统扩展性和灵活性，实现插件式编程。<br>利用 AOP 思想，集中处理业务逻辑，减少 重复代码，构建了较理想的解决方案。<br>利用其对 Hibernate 的会话工厂(Session Factory)、 事务管理的封装，可以更简洁地应用 Hibernate。</p>
+<h1 id="五、轻量级架构和重量级架构的探讨"><a href="#五、轻量级架构和重量级架构的探讨" class="headerlink" title="五、轻量级架构和重量级架构的探讨"></a>五、轻量级架构和重量级架构的探讨</h1><p>重量级的开发倒并不是指 EJB 或者是 JNDI，很大意义上，重量级的开发都是需要依赖 一个非常庞大的容器系统进行开发，在 EJB 的开发中，所有开发的内容基本都需要放置在 一个容器系统中进行运行这些容器，因为基本针对大型企业应用，所以体积庞大，占用资源过 多，在开发的过程中效率很低。因为使用大型容器作为开发环境的话，很大一部分时间都用 在了配置、运行这样的过程上，有时候改动一个小小的部分，需要等很长的时间才能看到结 果。</p>
+<p>轻量级框架的优势很大程度上是因为加速了开发的速度，不用部署一个很庞大的容器系 统就可以实现以前需要容器才能实现的功能，可以使用 Spring 代替 EJB 中的无状态的会话 Bean，可以使用 Hibernate 代替 EJB 中的实体 Bean，而且可以直接写一个应用程序运行已 经完成的系统，马上可以看到结果，做单元测试非常简单，不需要做太多的工作就可以构建 系统，这些特性对于开发人员来说非常有吸引力。</p>
+<p>重 量级框架在大规模运行的时候会表现出非常优异的性能，劣势主要是开发效率较低，轻量级 框架正好相反，开发的时候非常迅速，但是在大规模运行的时候，性能与重量级框架相比还 是有差异的。</p>
+<p>不管是轻量级还是重量级框 架，基本解决的是两个问题，一个是事务控制，另一个是持久化控制。</p>
+<p>持久化的开发可以和任何框架没有关系，直接使用 JPA 的标准注解即可，所以开发持久化部分的时候可以使用 JPA 进行注解，开发时期用 Hibernate 作为 JPA 的实现进行开发测试，需要上线运行的时候就可以直接部署到 EJB 的实体 Bean 上，在 EJB 3.0 之后，已经很好进行移植部署了。关于事务控制，现在所有的实现方式都比 较简单，针对方法进行注解事务类型即可，开发的时候可以用一个转换器将这些注解转化为 Spring 的映射，快速地进行开发，在上线运行的时候，直接使用 EJB 的会话 Bean 进行部 署就可以解决，这些方式实现起来并不困难，可以很好地解决“重量级”和“轻量级”之间 的矛盾。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/" class="post-title-link" itemprop="url">信息系统基础知识（二）信息系统工程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-08 12:45:45" itemprop="dateModified" datetime="2021-10-08T12:45:45+08:00">2021-10-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>系统有下述特性:<br>(1)集合性。<br>(2)相关性。<br>(3)目的性。<br>(4)层次性。<br>(5)环境适应性。</p>
+<h1 id="一、信息系统工程的概念"><a href="#一、信息系统工程的概念" class="headerlink" title="一、信息系统工程的概念"></a>一、信息系统工程的概念</h1><h2 id="系统的分类"><a href="#系统的分类" class="headerlink" title="系统的分类"></a>系统的分类</h2><p>按照系统功能划分:工业控制系统、信息管理系统、军事系统和经济系统等。<br>按照系统与外界的关系划分:封闭系统和开放系统。<br>按照系统的内部结构划分:开环系统和闭环系统等。<br>按照抽象程度将系统分为:概念系统(描述系统的主要特征和大致轮廓)、逻辑系统(脱离实现细节的合理系统)和物理系统 (实际存在的系统)。</p>
+<p>信息系统信息系统一般泛指收集、存储、处理和传播各种信息的具备完整功能的集 合体。</p>
+<p>系统工程是以研究大规模复杂系统为对象的一门交叉学科。它把自然科学和社会科学的 某些思想、理论、方法、策略和手段等根据总体协调的需要，有机地联系起来，应用定量和定性分析相结合的方法和计算机等技术工具，对系统的构成要素、组织结构、信息交换和反 馈控制等功能进行分析、设计、制造和服务，从而达到最优设计、最优控制和最优管理的目的。</p>
+<p>信息系统一般泛指收集、存储、处理和传播各种信息的具备完整功能的集 合体。人们常说的信息系统大多数支持各部门和机构的管理和决策的信息系统，当前信息系 统重要的特征是计算机和互联网技术的应用。</p>
+<p>随着网络的普及，计算机信息系统已经从管理信 息系统发展成为更强调支持企业高层领导决策的决策支持系统，即 DSS 阶段。</p>
+<h1 id="二、信息系统工程的内容"><a href="#二、信息系统工程的内容" class="headerlink" title="二、信息系统工程的内容"></a>二、信息系统工程的内容</h1><h2 id="1-信息系统工程的体系构成"><a href="#1-信息系统工程的体系构成" class="headerlink" title="1.信息系统工程的体系构成"></a>1.信息系统工程的体系构成</h2><h3 id="（1）信息网络系统"><a href="#（1）信息网络系统" class="headerlink" title="（1）信息网络系统"></a>（1）信息网络系统</h3><p>信息网络系统是指以信息技术为主要手段建立的信息处理、传输、交换和分发的计算机网络系统。</p>
+<h3 id="（2）信息资源系统"><a href="#（2）信息资源系统" class="headerlink" title="（2）信息资源系统"></a>（2）信息资源系统</h3><p>信息资源系统是指以信息技术为主要技术手段建立的信息资源采集、存储、处理的资源系统。</p>
+<h3 id="（3）信息应用系统"><a href="#（3）信息应用系统" class="headerlink" title="（3）信息应用系统"></a>（3）信息应用系统</h3><p>信息应用系统是指以信息技术为主要手段建立的各类业务管理的应用系统。</p>
+<h2 id="2-信息系统工程的技术构成"><a href="#2-信息系统工程的技术构成" class="headerlink" title="2.信息系统工程的技术构成"></a>2.信息系统工程的技术构成</h2><p>信息系统工程首要的任务是实施软件工程和信息工程。信息系统工程还应包括组织中的业务流程等内容。</p>
+<p>软件工程是开发、运行、维护和修复软件的系统方法。</p>
+<p>“软件”的定义为:计算机程序、方法、规则、相关的文档资料以及在计算机上运行时所必需的数据的集合。</p>
+<p><img src="/images/ruankao/7-10.png"></p>
+<p>信息工程的主要焦点是用计算机来存储和维护数据，而信息则是从这些数据提炼出来，来满足人们的某种需要的数据。</p>
+<p>信息工程方法的主要特点：<br>一是以数据为中心，进一步的工作是建立主题数据库;<br>二是将工程的实施划分为对业务系统的实施和对技术系统的实施。</p>
+<h2 id="3-组织流程管理"><a href="#3-组织流程管理" class="headerlink" title="3.组织流程管理"></a>3.组织流程管理</h2><p>有效的组织保障包括:<br>(1)建立流程管理机构，这一机构可归入管理流程之中。<br>(2)配备强有力的领导来负责内部的流程管理工作。<br>(3)制定各流程之间的动态关系规则。通过实施流程管理模式，传统组织中的组织图将不复存在，取代它的是流程管理图。</p>
+<h2 id="4-信息系统工程的管理信息"><a href="#4-信息系统工程的管理信息" class="headerlink" title="4.信息系统工程的管理信息"></a>4.信息系统工程的管理信息</h2><p>在具体实施过程中，项目管理一般包含了以下几个方面的内容:<br>(1)任务划分。任务划分是把整个开发工作定义成一组任务的集合，这组任务又可以进一步划分成若干个子任务，进而形成具有层次结构的任务群。<br>(2)计划安排。依据划分完毕的任务即可制定出整个开发及项目管理计划，并产生完成任务的计划表。<br>(3)经费管理。经费管理在整个开发项目管理中处于重要的地位。项目经理可以运用经济杠杆来控制整个开发工作。<br>(4)审计控制。按照所采用的开发方法，应针对每一类开发人员制定出工作过程中的责任、义务、完成任务的质量标准等，按照计划对每项任务进行审计。<br>(5)风险管理。如何有效地管理和控制风险是保证系统实施成功的重要环节之一。特别是信息系统工程项目，风险管理更是重中之重。<br>(6)质量保证。质量管理应贯穿于整个项目始终。在项目规划阶段，就应该建立系统质量的度量模型和相应的机制，对项目质量提出总体的要求;在系统分析和设计阶段应对质量管理不断细化，按自顶向下的方式将总体要求划分成若干易于考核和度量的质量单元。</p>
+<h1 id="三、信息系统工程的总体规划"><a href="#三、信息系统工程的总体规划" class="headerlink" title="三、信息系统工程的总体规划"></a>三、信息系统工程的总体规划</h1><h2 id="已经建成或正在建设的系统仍然存在一系列问题，主要如下"><a href="#已经建成或正在建设的系统仍然存在一系列问题，主要如下" class="headerlink" title="已经建成或正在建设的系统仍然存在一系列问题，主要如下:"></a>已经建成或正在建设的系统仍然存在一系列问题，主要如下:</h2><p>系统建设与组织发展的目标和战略不匹配。<br>已建成的系统解决问题的有效性低，即系统建成后对管理并无显著改善。<br>不能适应环境变化和组织变革的需要。<br>组织结构陈旧，管理落后。<br>系统使用人员的素质较低。<br>系统开发环境落后，技术方案不合理。<br>系统开发及运行维护的标准、规范混乱。<br>资源短缺，投入太少，而对系统的期望又过高。</p>
+<h2 id="总体规划的主要任务："><a href="#总体规划的主要任务：" class="headerlink" title="总体规划的主要任务："></a>总体规划的主要任务：</h2><p>制定信息系统工程的发展战略。主要是使信息系统工程的战略与整个组织的战略和目标协调一致。<br>确定组织的主要信息需求，形成信息系统工程的总体结构方案，安排项目开发计划。<br>制定系统建设的资源分配计划，即制定为实现开发计划而需要的硬软件资源、数据通信设备、人员、技术、服务和资金等计划，提出整个系统的建设概算。</p>
+<h2 id="总体规划的主要步骤："><a href="#总体规划的主要步骤：" class="headerlink" title="总体规划的主要步骤："></a>总体规划的主要步骤：</h2><h3 id="1-对当前系统进行初步的调查。"><a href="#1-对当前系统进行初步的调查。" class="headerlink" title="1 对当前系统进行初步的调查。"></a>1 对当前系统进行初步的调查。</h3><p>初步调查主要由两部分构成:<br>①一般调查。一般调查包括组织的概括，企业的目标，现行系统运行情况，简单历史，企业的 产品，产量，利税，体制及改革情况，人员基本情况，面临的问题，企业的中长期计划及主 要困难等，使系统分析师对企业有一个初步轮廓。<br>②信息需求初步调查。信息需求初步调查是整个初步调查的主要内容。通过调查组织系统的工作职责及活动来了解各职能机构所要处理的数据，估计各机构发生的数据量及频度。信息需求初步调查还应调查环境信息，包括内部环境和外部环境的信息。</p>
+<h3 id="2-分析和确定系统目标。"><a href="#2-分析和确定系统目标。" class="headerlink" title="2 分析和确定系统目标。"></a>2 分析和确定系统目标。</h3><p>这实际上可以由总经理和信息系统工程开发的领导小组确定， 应包括服务的质量和范围、政策、组织及人员等。它不仅包括信息系统工程的目标，而且应 有整个企业的目标。</p>
+<h3 id="3-分析子系统的组成及基本功能。"><a href="#3-分析子系统的组成及基本功能。" class="headerlink" title="3 分析子系统的组成及基本功能。"></a>3 分析子系统的组成及基本功能。</h3><p>从上到下对系统进行划分，并且详细说明各个子系 统应该实现的功能。</p>
+<h3 id="4-拟定系统的实施方案。"><a href="#4-拟定系统的实施方案。" class="headerlink" title="4 拟定系统的实施方案。"></a>4 拟定系统的实施方案。</h3><p>可以对子系统的优先级进行设定，以便确定子系统的开发顺序。</p>
+<h3 id="5-进行系统的可行性研究。"><a href="#5-进行系统的可行性研究。" class="headerlink" title="5 进行系统的可行性研究。"></a>5 进行系统的可行性研究。</h3><h3 id="6-编写可行性报告。"><a href="#6-编写可行性报告。" class="headerlink" title="6 编写可行性报告。"></a>6 编写可行性报告。</h3><h2 id="信息系统工程总体规划的目标信息"><a href="#信息系统工程总体规划的目标信息" class="headerlink" title="信息系统工程总体规划的目标信息"></a>信息系统工程总体规划的目标信息</h2><p>两个原则:<br>一是从组织的战略出发，而不是从系统的需求出发，这样就可以避免脱离组织宗旨和战略目标，走入为建设而建设的困境;<br>二是从业务的变革出发，而不是从技术的变革出发，这样有利于充分利用组织的现有资源来满足关键需求，从而避免信息系统工程无法有效地支持组织决策。</p>
+<p>信息系统工程规划的主要目的是根据企业总体目标规划好统一的、既有集中式又有分布 式、分期逐步实现的数据平台和应用平台的建设。</p>
+<h2 id="总体规划目标的分析过程"><a href="#总体规划目标的分析过程" class="headerlink" title="总体规划目标的分析过程"></a>总体规划目标的分析过程</h2><p>总体规划目标的分析过程包括，<code>确定组织的总体目标</code>和<code>确定信息系统工程规划的总体目标</code>两个步骤。</p>
+<h3 id="1-确定组织的总体目标。"><a href="#1-确定组织的总体目标。" class="headerlink" title="1 确定组织的总体目标。"></a>1 确定组织的总体目标。</h3><p>它的分析的步骤是:<br>根据系统调查的结果，进行分析，归纳出现行系统中的关键问题，做出问题表。<br>根据问题表，构造目标的层次结构，即目标树。在目标树中，最上层是总目标，以下各层是 分目标或子目标，最下层是为实现目标而采取的具体措施，它是用来衡量目标是否切合实际 的标准。<br>对目标树中的各项分目标进行分析。分析各项分目标之间的关系，确定解决目标冲突的方法， 指出各项措施的考核指标。<br>将目标树按各层分目标在系统中所起的作用重新绘制。</p>
+<h3 id="2-确定信息系统工程规划的总体目标。"><a href="#2-确定信息系统工程规划的总体目标。" class="headerlink" title="2 确定信息系统工程规划的总体目标。"></a>2 确定信息系统工程规划的总体目标。</h3><p>信息系统工程应该在下面几个方面发挥作用。<br>1、信息系统工程的辅助决策功能。<br>2、信息系统工程的辅助管理功能。<br>3、企业资源管理。</p>
+<p>信息系统工程的总体规划包括，总体规划的层次、总体规划的任务、信息系统工程的功能范围、确定功能范围的步骤、系统总体结构分解、投资概算和总体规划的成果等内容。</p>
+<p>总体规划的层次分为:信息战略规划、信息资源规划、信息系统工程建设规划和企业资源计划(ERP)。</p>
+<h2 id="总体规划的任务"><a href="#总体规划的任务" class="headerlink" title="总体规划的任务"></a>总体规划的任务</h2><p>明确组织远景和使命。<br>确立组织发展战略和目标。<br>明晰组织业务及管理变革策略。<br>识别组织关键成功因素、分析关键性能指标、抽取信息需求。<br>建立总体信息工程框架。<br>提出可行性报告和总体规划方案。</p>
+<h2 id="确定系统的功能范围的步骤如下"><a href="#确定系统的功能范围的步骤如下" class="headerlink" title="确定系统的功能范围的步骤如下:"></a>确定系统的功能范围的步骤如下:</h2><p>1 绘制出系统的总数据流程图。<br>2 根据系统方案的规定和用户的要求，结合现行系统的环境，确定系统的边界范围，并在总信息流程图上圈出。<br>3 有关人员协商讨论。<br>4 确定系统范围，并做出分析说明。</p>
+<h2 id="信息系统工程总体规划应当包括投资概算，它包括以下-4-个方面内容。"><a href="#信息系统工程总体规划应当包括投资概算，它包括以下-4-个方面内容。" class="headerlink" title="信息系统工程总体规划应当包括投资概算，它包括以下 4 个方面内容。"></a>信息系统工程总体规划应当包括投资概算，它包括以下 4 个方面内容。</h2><p>1 计算机系统软、硬件设备投资。<br>2 系统开发费。<br>3 系统安装和维护费用。<br>4 人员培训费。</p>
+<h1 id="四、总体规划的方法论"><a href="#四、总体规划的方法论" class="headerlink" title="四、总体规划的方法论"></a>四、总体规划的方法论</h1><p>制定信息系统工程总体规划需要有效的方法论支持，其方法多种多样，在此主要介绍较为著名的三种:业务系统规划法、关键成功因素法、战略目标集合转化法。</p>
+<h2 id="1-业务系统规划法-Business-Systems-Planning，BSP"><a href="#1-业务系统规划法-Business-Systems-Planning，BSP" class="headerlink" title="1.业务系统规划法(Business Systems Planning，BSP)"></a>1.业务系统规划法(Business Systems Planning，BSP)</h2><h3 id="BSP的概念"><a href="#BSP的概念" class="headerlink" title="BSP的概念"></a>BSP的概念</h3><p>1 信息系统的战略应当表达出企业的各个管理层次的需求。<br>战略计划层:是决定组织目标、达到这些目标所需用的资源，以及获取、分配这些资源的策略的过程;<br>管理控制层:通过这一过程，管理者确认资源的获取及组织的目标是否有效地使用了这些资源;<br>操作控制层:保证有效率地完成具体的任务。</p>
+<p>2 信息系统应该向整个企业提供一致的信息。<br>3 信息系统应该适应组织机构和管理体制的改变。<br>4 信息系统的战略规划，应当从总体信息系统结构中的子系统开始实现。</p>
+<h3 id="BSP-的目标"><a href="#BSP-的目标" class="headerlink" title="BSP 的目标"></a>BSP 的目标</h3><p>BSP 的目标主要是提供信息系统规划，用以支持企业短期的和长期的信息需要。</p>
+<p>归纳如下:<br>为管理者提供一种形式化的、客观的方法，明确建立信息系统的优先顺序，而不考虑部门的 狭隘利益，并避免主观性。<br>为具有较长生命周期系统的建设和投资提供保障。由于系统是基于业务过程的，因而不因机 构变化而失效。<br>为了以最高效率支持企业目标，BSP 提供数据处理和资源管理。<br>增加负责人的信心，使其坚信高效的信息系统能够被实施。<br>通过提供信息系统对用户需求的快速响应，从而改善信息系统管理部门和用户之间的关系。</p>
+<p>BSP 方法的真正价值在于提供了下面的机会:<br>一是创造一种环境和提出初步行动计划，使企 业能依此对未来的系统和优先次序的改变做出反应，不致造成设计的重大失误。<br>二是定义信息系统的职能，并不断完善。</p>
+<p>BSP 方法实施步骤：<br>1 确立项目。<br>2 工作准备。<br>3 主要活动。<br>开始。<br>定义业务过程。<br>定义数据类。<br>分析现存系统支持能力。<br>确定管理部门对系统的要求。<br>提出判断和结论。<br>定义信息总体结构。<br>确定总体结构中的优先顺序。<br>评价信息资源管理工作。<br>制定建议书和开发计划。<br>工作成果报告。</p>
+<h2 id="2-关键成功因素法-Critical-Success-Factors，CSF"><a href="#2-关键成功因素法-Critical-Success-Factors，CSF" class="headerlink" title="2.关键成功因素法(Critical Success Factors，CSF)"></a>2.关键成功因素法(Critical Success Factors，CSF)</h2><p>该方法能够帮助组织找到影响系统成功的关键因 素，进行分析以确定组织的信息需求，从而为管理部门控制信息技术及其处理过程提供实施 指南。</p>
+<p>CSF 的确定关键成功因素的特征如下。<br>内部 CSF:针对机构的内部活动，如改善产品质量、提高工效等。<br>外部 CSF:与机构的对外活动有关，如，满足客户企业的进入标准、获得对方的信贷。<br>监控型 CSF:对现有业务流程等进行监控，如监测零件缺陷百分比。<br>建设型 CSF:适应组织未来变化的有关活动，如改善产品组合。</p>
+<p>CSF 共分 4 层:行业的 CSF、组织的 CSF、部门的 CSF、管理者的 CSF，它们依次相互影响。</p>
+<p>CSF 实施步骤：<br>第一步:了解组织的战略目标。<br>第二步:识别所有成功因素。<br>第三步:确定关键成功因素。<br>第四步:识别绩效指标和标准，以及测量绩效的数据。</p>
+<p>CSF 的优缺点：</p>
+<p>缺点是:<br>数据的汇总和数据分析过程比较随意，缺乏一种专门严格的方法将众多个人的关键成功因素汇总成一个明确的整个组织的成功因素;<br>由于个人和组织的成功因素往往并不一致，两者之间的界限容易被混淆，从而容易使组织的成功因素具有个人倾向性;<br>由于环境和管理经常迅速变化，信息系统也必须做出相应调整，而用 CSF 法开发的系统可能无法适应变化了的环境;<br>CSF 在应用于较低层的管理时，由于不容易找到相应目标的关键成功因子及其关键指标，效率可能会比较低。</p>
+<h2 id="3-战略目标集合转化法-Strategy-Set-Transformation，SST"><a href="#3-战略目标集合转化法-Strategy-Set-Transformation，SST" class="headerlink" title="3.战略目标集合转化法(Strategy Set Transformation，SST)"></a>3.战略目标集合转化法(Strategy Set Transformation，SST)</h2><p>战略目标集合转化法(Strategy Set Transformation，SST)将组织的战略看成一个“信息 集合”，包括使命、目标、战略和其他战略变量，如管理水平、发展趋势以及重要的环境约 束等。战略性系统规划就是把组织的战略集合转化为信息系统的战略集合，而后者由信息系 统的系统目标、环境约束和战略规划组成。</p>
+<h3 id="该方法的步骤如下。"><a href="#该方法的步骤如下。" class="headerlink" title="该方法的步骤如下。"></a>该方法的步骤如下。</h3><h4 id="第一步-识别和阐明组织的战略集合。"><a href="#第一步-识别和阐明组织的战略集合。" class="headerlink" title="第一步:识别和阐明组织的战略集合。"></a>第一步:识别和阐明组织的战略集合。</h4><p>(1)描绘出组织各类人员结构，如卖主、经理、雇员、供应商、顾客、贷款人、政府代理人、地区社团及竞争者等。<br>(2)识别每类人员的目标。<br>(3)对于每类人员识别其使命及战略。</p>
+<h4 id="第二步-将组织的战略集合转化为信息系统战略集合。"><a href="#第二步-将组织的战略集合转化为信息系统战略集合。" class="headerlink" title="第二步:将组织的战略集合转化为信息系统战略集合。"></a>第二步:将组织的战略集合转化为信息系统战略集合。</h4>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">信息系统基础知识（一）信息系统概述</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-06 00:00:00 / 修改时间：11:25:58" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="信息系统的数据环境"><a href="#信息系统的数据环境" class="headerlink" title="信息系统的数据环境"></a>信息系统的数据环境</h1><p>马丁在《信息工程》和《战略数据规划方法学》中将信息系统的数据环境分为 4 种类型：</p>
+<p>第一类数据环境:数据文件。<br>第二类数据环境:应用数据库。<br>第三类数据环境:主题数据库。<br>第四类数据环境:信息检索系统。</p>
+<h1 id="公司的管理活动"><a href="#公司的管理活动" class="headerlink" title="公司的管理活动"></a>公司的管理活动</h1><p>一个公司的管理活动可以分成 4 级:战略级、战术级、操作级和事务级。</p>
+<p>战略级的信息系统的所有者和使用者都是企业的最高管理层，对于现代公司制企业， 就是企业的董事会和经理班子;</p>
+<p>战术级信息系统的使用者一般是企业的中层经理及其管理的 部门;</p>
+<p>操作级信息系统的使用者一般是服务型企业的业务部门，例如，保险企业的保单处理 部门;</p>
+<p>事务级信息系统的使用者一般是企业的管理业务人员，例如，企业的会计、劳资员等。</p>
+<h1 id="信息系统的生命周期"><a href="#信息系统的生命周期" class="headerlink" title="信息系统的生命周期"></a>信息系统的生命周期</h1><p>信息系统的生命周期分为 4 个阶段，即产生阶段、开发阶段、运行阶段和 消亡阶段。</p>
+<p>1.信息系统的产生阶段又分为 概念产生过程和需求分析过程。</p>
+<p>2.信息系统的开发阶段 可分为 5 个阶段，即，总体规划、系统分析、系统设计、系统实施和系统验收阶段。</p>
+<p>3.信息系统的运行阶段<br>四种类型：排错性维护、适应性维护、完善性维护和预防性维护。</p>
+<p>4.信息系统的消亡阶段</p>
+<h1 id="信息系统建设的原则"><a href="#信息系统建设的原则" class="headerlink" title="信息系统建设的原则"></a>信息系统建设的原则</h1><p>1.高层管理人员介入原则<br>2.用户参与开发原则<br>3.自顶向下规划原则<br>4.工程化原则<br>5.其他原则<br>创新性原则，用来体现信息系统的先进性。<br>整体性原则，用来体现信息系统的完整性。<br>发展性原则，用来体现信息系统的超前性。<br>经济性原则，用来体现信息系统的实用性。</p>
+<h1 id="信息系统开发方法"><a href="#信息系统开发方法" class="headerlink" title="信息系统开发方法"></a>信息系统开发方法</h1><p>1.结构化方法<br>2.原型法<br>3.面向对象方法<br>4.面向服务的方法</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -507,694 +1057,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/" class="post-title-link" itemprop="url">软件架构设计（七）软件架构文档化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-27 00:00:00 / 修改时间：09:23:08" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>记录软件架构的活动就是架构编档过程，也就是架构的文档化。它包含两个方面:一是 过程，编档过程能促使架构设计师进一步思考，使得架构更加完善;二是结果，描述架构的 文档将作为架构开发的成果，供项目关系人使用。</p>
-<h1 id="1-架构文档的使用者"><a href="#1-架构文档的使用者" class="headerlink" title="1.架构文档的使用者"></a>1.架构文档的使用者</h1><p>架构文档的使用者是架构的项目关系人。编写技术文档(尤其是软件架构文档)最基本 的原则之一是要从读者的角度来编写，易于编写但很难阅读的文档是不受欢迎的。</p>
-<p>架构的主要用途是充当项目关系人之间进行交流的工具，文档则促进了这种交流—— 架 构项目关系人希望从架构文档中获得自己所关心的架构信息。</p>
-<h1 id="2-编档规则"><a href="#2-编档规则" class="headerlink" title="2.编档规则"></a>2.编档规则</h1><p>合理的编档规则编写架构文档和编写其他文档一样，必须遵守一些基本规则，这里 将任何软件编档(包括软件架构编档)的规则归纳为 7 条:</p>
-<p>(1)从读者的角度编写文档。<br>(2)避免出现不必要的重复。<br>(3)避免歧义。<br>(4)使用标准结构。<br>(5)记录基本原理。<br>(6)使文档保持更新，但更新频率不要过高。<br>(7)针对目标的适宜性对文档进行评审。</p>
-<h1 id="3-视图编档"><a href="#3-视图编档" class="headerlink" title="3.视图编档"></a>3.视图编档</h1><p>视图的 概念为架构设计师提供了进行软件架构编档的基本原则。架构文档化就是将相关视图编成文 档，并补充多个视图的关联关系。</p>
-<p><img src="/images/ruankao/6-48.png"></p>
-<p>(1)视图概述:对系统进行概括性的描述，包含视图的主要元素和元素间的关系。<br>主要表示可用多个形式:图形、表 格、文本，通常用图形形式，使用 UML 语言来描述。</p>
-<p>(2)元素目录:对主要表示中所描述的元素及其关系进行详细描述，包括:元素及其 属 性、关系及其属性、元素接口、元素行为。<br>对元素及其协同工作的行为进行编档，如用 UML 的顺序图和状态图描述行为;<br>对接口进行编档如题<br><img src="/images/ruankao/6-49.png"></p>
-<p>(3)上下文图:用图形展示系统如何与其环境相关。</p>
-<p>(4)可变性指南:描述架构的可变化点，如在软件产品线中，产品线架构通过变化， 适用于多个系统，因此，文档中应包含这些变化点，如各系统要做出选择的选项、做出选择 的时间。</p>
-<p>(5)架构背景:为架构的合理性提供足够的、令人信服的论据。包括:基本原理、分 析结果及设计中所反映的假定。</p>
-<p>(6)术语表:对文档中每个术语进行简要说明。</p>
-<p>(7)其他信息:描述不属于架构方面的必要信息，如管理信息(创作者、配置控制数 据及变更历史)。</p>
-<h1 id="4-跨视图文档"><a href="#4-跨视图文档" class="headerlink" title="4.跨视图文档"></a>4.跨视图文档</h1><p>软件架构由多个视图文档来反映，按前面所述的要求完成每个视图的文档后，需要对这 些文档进行一个整体的“打包”工作，这就是跨视图文档。它包括如下内容:<br>(1)文档有哪些内容，它们是如何组织的:视图目录(含哪些视图);视图模板(即前 面描述的视图文档，企业可以通过规范化来定义统一的、公共的视图模板)。<br>(2)架构概述:它描述系统的目的、视图之间的关联、元素表及索引、项目词汇。<br>(3)为什么架构是这样的(基本原理):跨视图基本原理解释了整体架构实际上是其需 求的一个解决方案。即解释了做出决策的原因、方案的限制、改变决策时的影响及意义。</p>
-<h1 id="5-使用-UML"><a href="#5-使用-UML" class="headerlink" title="5.使用 UML"></a>5.使用 UML</h1><p>UML 已经成为对软件架构进行文档化的事实上的标准表示法。在视图文档的组织结构 中，UML 主要用于表示元素或元素组的行为。</p>
-<h1 id="6-软件架构重构"><a href="#6-软件架构重构" class="headerlink" title="6.软件架构重构"></a>6.软件架构重构</h1><p>前面已论述了架构编档，即在架构设计时完成编档工作。但是还有另外一种情况:系统<br>已经存在，但不知其架构，即架构没有通过文档很好地保留下来(文档的缺失/失效)。如何 维护这样的系统并管理其演变?其关键就是要找到软件架构，软件架构重构就是研究解决这 一问题的方法，它是反向工程之一。</p>
-<p>软件架构重构由以下活动组成，这些活动以迭代方式进行。</p>
-<p><img src="/images/ruankao/6-50.png"></p>
-<p>(1)信息提取(View Extraction)。可以使用各种工具进行信息提取，如解析器、语法 分析器等;可以利用 build 和 makefile 文件中关于模块的依赖关系;可以从源代码、编译 时制品和设计制品中提取静态信息;可以使用分析工具提取动态信息。</p>
-<p>(2)数据库构造(Database Construction):将提取的信息转化为标准的形式，并置于 数据库中。</p>
-<p>(3)视图融合(View Fusion):将数据库中的信息组合在一起，生成该架构的一个内聚 的视图。</p>
-<p>(4)重构(Reconstruction):构建数据抽象和各种表示以生成架构表示，主要由两个活动组成:可视化和交互、模式定义和识别。最后生成需要的架构文档(Documentation)。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B6%E5%A4%8D%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B6%E5%A4%8D%E7%94%A8/" class="post-title-link" itemprop="url">软件架构设计（九）架构及其复用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-27 00:00:00 / 修改时间：17:22:59" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>常见的构件(component，组件)的定义如下：</p>
-<p>定义 1:构件是指软件系统中可以明确辨识的构成成分。而可复用构件(reusable component)是指具有相对独立的功能和可复用价值的构件。<br>定义 2:构件是一个组装单元，它具有约定式规范的接口及明确的依赖环境。<br>定义 3:构件是软件系统中具有相对独立功能、可以明确辨识、接口由契约指定、和语 境有明显依赖关系、可独立部署的可组装软件实体。</p>
-<h1 id="一、商用构件标准规范"><a href="#一、商用构件标准规范" class="headerlink" title="一、商用构件标准规范"></a>一、商用构件标准规范</h1><h2 id="1-CORBA"><a href="#1-CORBA" class="headerlink" title="1.CORBA"></a>1.CORBA</h2><p>CORBA(Common ObjectRequest Broker Architecture，公共对象请求代理架构)主要分为 3 个层次:对象请求代理、公共对象服务和公共设施。</p>
-<p>CORBA CCM(CORBA ComponentModel，CORBA 构件模型)是 OMG 组织制定的一个用 于开发和配置分布式应用的服务器端构件模型规范，它主要包括如下 3 项内容。<br>(1)抽象构件模型:用以描述服务器端构件结构及构件间互操作的结构。<br>(2)构件容器结构:用以提供通用的构件运行和管理环境，并支持对安全、事务、持 久状态等系统服务的集成。<br>(3)构件的配置和打包规范:CCM 使用打包技术来管理构件的二进制、多语言版本的 可执行代码和配置信息，并制定了构件包的具体内容和文档内容标准。</p>
-<h2 id="2-J2EE"><a href="#2-J2EE" class="headerlink" title="2.J2EE"></a>2.J2EE</h2><p>在分布式互操作协议上，J2EE 同时支持 RMI(Remote Method Invocation，远程方法调用) 和 IIOP(Internet Inter-ORB Protocol，互联网内部对象请求代理协议)，而在服务器端分布式 应用的构造形式，则包括了 Java Servlet、JSP、EJB 等多种形式，以支持不同的业务需求， 而且 Java 应用程序具有跨平台的特性，使得 J2EE 技术在发布计算领域得到了快速发展。</p>
-<h2 id="3-DNA-2000"><a href="#3-DNA-2000" class="headerlink" title="3.DNA 2000"></a>3.DNA 2000</h2><p>Microsoft DNA 2000 是 Microsoft 在推出 Windows 2000 系列操作系统平台的基础上， 在扩展了分布计算模型，以及改造 Back Office 系列服务器端分布计算产品后发布的新的分 布计算架构和规范。在服务器端，DNA 2000 提供了 ASP、COM、Cluster 等的应用支持。</p>
-<h1 id="二、应用系统簇与构件系统"><a href="#二、应用系统簇与构件系统" class="headerlink" title="二、应用系统簇与构件系统"></a>二、应用系统簇与构件系统</h1><p>除专门开发构件的企业外，开发应用系统的企业也会发展自己的构件应用体系:通常是 随着企业的不断成熟，逐步从已开发的应用系统中整理出来一些构件，反过来，将这些构件 复用到优化与整合已有应用系统中或复用于开发新的应用系统。</p>
-<p>应用系统和构件系统都是系统产品(而不是工作产品)。它们都可以采用模型和结构的 类型定义出来。一般情况下，构件系统只在开发单位内部使用，而应用系统提供给外部客户， 与应用系统相比，构件系统具有通用性，可复用性，这就要求构件系统的开发过程应当实施 更为严格的工程规范。</p>
-<p>应用系统可以向构件系统输入构件(构件的需求源于应用系统或应用系统中的模块)，反 过来，构件系统向应用系统输出构件。这就是构件系统如何获得构件和如何提供构件的方式。</p>
-<h1 id="三、基于复用开发的组织结构"><a href="#三、基于复用开发的组织结构" class="headerlink" title="三、基于复用开发的组织结构"></a>三、基于复用开发的组织结构</h1><p>基于复用的开发组织与传统的开发组织结构不同，它需要有一部分用于开发可复用资产 的资源，这部分资源应同具体应用系统的开发资源分开，以确保不被占用。</p>
-<p>一种较平衡的组织结构如图所示，它有三类职能部门:一是构件系统开发部门， 它开发可复用资产;二是应用系统项目开发部(多个)，它复用资产;三是支持部门，这个 部门是可选的，它进一步隔离上述两主体部门，虽然牺牲了一些效率，但保证了构件的规范 性。它的主要职责是对构件开发部门所提供的可复用资产进行确认、对构件库进行分类编目、 向开发应用系统的工程师们发通告和分发可复用资产、提供必要的文档、从复用者处收集反 馈信息和缺陷报告。<br><img src="/images/ruankao/6-51.png"><br>一方面，构件开发者应当尽量接近应用开发者，以使其开发出的构件能尽量符合实际需 要;另一方面，构件开发者与应用开发者分属两个并列的部门，使构件开发者能摆脱应用项 目的日常压力，保证可复用资产的开发和持续改进。复用经理应当在构件开发和应用 项目开发利益之间进行权衡，保证长期目标不受近期项目压力的影响。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/" class="post-title-link" itemprop="url">软件架构设计（八）软件架构评估</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-27 00:00:00 / 修改时间：10:07:23" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件架构评估是在对架构分析、评估的基础上，对架构策略的选取进行决策。它也可以灵活地运用于对软件架构进行评审等工作中。</p>
-<h1 id="一、软件架构评估的方法"><a href="#一、软件架构评估的方法" class="headerlink" title="一、软件架构评估的方法"></a>一、软件架构评估的方法</h1><p>业界已开发出多种软件架构评估的方法，按基于的技术手段来看，可以分为三类:基于调查问卷或检查表的方式、基于场景的方式和基于度量的方式。</p>
-<h2 id="1-基于调查问卷或检查表的方式"><a href="#1-基于调查问卷或检查表的方式" class="headerlink" title="(1)基于调查问卷或检查表的方式"></a>(1)基于调查问卷或检查表的方式</h2><p>该方式的关键是要设计好问卷或检查表，它充分 利用系统相关人员的经验和知识，获得对架构的评估。其缺点是在很大程度上依赖于评估人 员的主观推断。</p>
-<h2 id="2-基于场景的方式"><a href="#2-基于场景的方式" class="headerlink" title="(2)基于场景的方式"></a>(2)基于场景的方式</h2><p>基于场景的方式由 SEI 首先提出并应用在架构权衡分析法 (Architecture Tradeoff Analysis Method，ATAM)和软件架构分析方法(Software Architecture Analysis Method，SAAM)中。它是通过分析软件架构对场景(也就是对系统的使用或修改 活动)的支持程度，从而判断该架构对这一场景所代表的质量需求的满足程度。</p>
-<h2 id="3-基于度量的方式"><a href="#3-基于度量的方式" class="headerlink" title="(3)基于度量的方式"></a>(3)基于度量的方式</h2><p>它是建立在软件架构度量的基础上的，涉及三个基本活动，首 先需要建立质量属性和度量之间的映射原则，即确定怎样从度量结果推出系统具有什么样的 质量属性;然后从软件架构文档中获取度量信息;最后根据映射原则分析推导出系统的质量 属性。它能提供更为客观和量化的质量评估，但它对评估人员及其使用的技术有较高 的要求。ATAM 中也使用了度量的思想(度量效用)。</p>
-<h1 id="二、架构的权衡分析法"><a href="#二、架构的权衡分析法" class="headerlink" title="二、架构的权衡分析法"></a>二、架构的权衡分析法</h1><p>从技术角度对软件架构进行评估，旨在通过分析来预见软件的质量;通过分析来创建、 选择、评估与比较不同的架构。</p>
-<p>ATAM 方法不但能够揭示架构如何满足特定的质量需求(例如，性能和可修改性)，而且还 提供了分析这些质量需求之间交互作用的方法。使用 ATAM 方法评价一个软件架构的目的 是理解架构设计满足系统质量需求的结果。</p>
-<p>ATAM 产生如下结果。<br>(1)一个简洁的架构表述:ATAM 的一个要求是在一小时内表述架构，这样就得到了 一个简洁、可理解的、面向普通项目关系人的架构表述。它是从架构文档中提炼形成的。<br>(2)表述清楚的业务目标。<br>(3)用场景集合捕获质量需求。<br>(4)架构决策到质量需求的映射。<br>(5)所确定的敏感点和权衡点集合。<br>(6)有风险决策和无风险决策。<br>(7)风险主题的集合。<br>(8)产生一些附属结果。<br>(9)还产生一些无形结果，如能够使项目关系人产生“团队感”，提供了一个交流平台和沟通渠道，使大家更好地理解架构(优势及弱点)。</p>
-<p>ATAM 的 9 个步骤如下。<br>(1)ATAM 方法的表述:评估负责人向参加会议的项目代表介绍 ATAM(简要描述 ATAM步骤和评估的结果)。<br>(2)商业动机的表述。<br>(3)架构的表述。<br>(4)对架构方法进行分类。<br>(5)生成质量属性效用树。<br>根——质量属性——属性求精(细分)——场景(叶)。修剪这棵树，保留重要场景(不超过 50 个)，再对场景按重要性给定 优先级(用 H/M/L 的形式)，再按场景实现的难易度来确定优先级(用 H/M/L 的形式)， 这样对所选定的每个场景就有一个优先级对(重要度，难易度)，如(H，L)表示该场景重要且易实现。<br>(6)分析架构方法。<br>评估小组按优先级对上述效用树的场景进行分析(小组成员提问，设计师回答、解释)，探查实现场景的架构方法。<br>(7)集体讨论并确定场景的优先级。<br>(8)分析架构方法。<br>(9)结果的表述。</p>
-<p>结果的表述包括：<br>已编写了文档的架构方法;<br>经过讨论得到的场景集合及其优先级;<br>效用树;<br>所发现的有风险决策;<br>已编成文档的无风险决策;<br>所发现的敏感点和权衡点。</p>
-<h1 id="三、成本效益分析法"><a href="#三、成本效益分析法" class="headerlink" title="三、成本效益分析法"></a>三、成本效益分析法</h1><p>成本效益分析法(the Cost Benefit Analysis Method，CBAM)是在 ATAM 上构建，用来对架构设计决策的成本和收益进行建模，是优 化此类决策的一种手段。CBAM 的思想就是架构策略影响系统的质量属性，反过来这些质量 属性又会为系统的项目关系人带来一些收益(称为“效用”)，CBAM 协助项目关系人根据其 投资回报(ROI)选择架构策略。CBAM 在 ATAM 结束时开始，它实际上使用了 ATAM 评 估的结果。</p>
-<p>CBAM 的步骤如下。</p>
-<h2 id="1-整理场景。"><a href="#1-整理场景。" class="headerlink" title="(1)整理场景。"></a>(1)整理场景。</h2><p>整理 ATAM 中获取的场景，根据商业目标确定这些场景的优先级，并 选取优先级最高的 1/3 的场景进行分析。</p>
-<h2 id="2-对场景进行求精。"><a href="#2-对场景进行求精。" class="headerlink" title="(2)对场景进行求精。"></a>(2)对场景进行求精。</h2><p>为每个场景获取最坏情况、当前情况、期望情况和最好情况的 质量属性响应级别。</p>
-<h2 id="3-确定场景的优先级。"><a href="#3-确定场景的优先级。" class="headerlink" title="(3)确定场景的优先级。"></a>(3)确定场景的优先级。</h2><p>项目关系人对场景进行投票，其投票是基于每个场景“所期 望的”响应值，根据投票结果和票的权值，生成一个分值(场景的权值)。</p>
-<h2 id="4-分配效用。"><a href="#4-分配效用。" class="headerlink" title="(4)分配效用。"></a>(4)分配效用。</h2><p>对场景的响应级别(最坏情况、当前情况、期望情况和最好情况)确 定效用表。</p>
-<h2 id="5-策略—场景—响应级别"><a href="#5-策略—场景—响应级别" class="headerlink" title="(5)策略—场景—响应级别"></a>(5)策略—场景—响应级别</h2><p>架构策略涉及哪些质量属性及响应级别，形成相关的策略—场景—响应级别的对 应关系。</p>
-<h2 id="6-确定“期望的”效用表"><a href="#6-确定“期望的”效用表" class="headerlink" title="(6)确定“期望的”效用表"></a>(6)确定“期望的”效用表</h2><p>使用内插法确定“期望的”质量属性响应级别的效用。即根据第 4 步的效用表以 及第 5 步的对应关系，确定架构策略及其对应场景的效用表。</p>
-<h2 id="7-计算各架构策略的总收益。"><a href="#7-计算各架构策略的总收益。" class="headerlink" title="(7)计算各架构策略的总收益。"></a>(7)计算各架构策略的总收益。</h2><p>根据第 3 步的场景的权值及第 6 步的架构策略效用 表，计算出架构策略的总收益得分。</p>
-<h2 id="8-确定选取策略的优先级"><a href="#8-确定选取策略的优先级" class="headerlink" title="(8)确定选取策略的优先级"></a>(8)确定选取策略的优先级</h2><p>根据受成本限制影响的 ROI(Return On Investment，投资报酬率)选择架构策略。 根据开发经验估算架构策略的成本，结合第 7 步的收益，计算出架构策略的 ROI，按 ROI 排 序，从而确定选取策略的优先级。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/" class="post-title-link" itemprop="url">软件架构设计（十）产品线及系统演化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-29 12:53:57" itemprop="dateModified" datetime="2021-09-29T12:53:57+08:00">2021-09-29</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件企业追求长远的发展，通常采用产品线模型及系统演化策略，它实质上是用架构技 术构建产品线，并在此基础上借助复用技术持续演化，不断地推出新产品，满足市场追求产 品升级换代的需求。</p>
-<h1 id="一、复用与产品线"><a href="#一、复用与产品线" class="headerlink" title="一、复用与产品线"></a>一、复用与产品线</h1><p>软件产品线是指一组软件密集型系统，它们共享一个公共的、可管理的特性集，满足某 个特定市场或任务的具体需要，是以规定的方式用公共的核心资产集成开发出来的。即围绕 核心资产库进行管理、复用、集成新的系统。</p>
-<p>核心资产库包括软件架构及其可剪裁的元素， 更广泛地，它还包括设计方案及其文档、用户手册、项目管理的历史记录(如预算和进度)、 软件测试计划和测试用例。</p>
-<p>可复用的资 产非常广，包括以下几点。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">需求</span><br><span class="line">架构设计</span><br><span class="line">元素:元素复用不只是简单的代码复用，它旨在捕获并复用设计中的可取之处，避免(不要 重复)设计失败的地方。</span><br><span class="line">建模与分析</span><br><span class="line">测试：如测试用例、测试数据、测试工具，甚至 测试计划、过程、沟通渠道都可以得到复用。</span><br><span class="line">项目规划：利用经验对项目的成本、预算、进度及开发小组的安排等进行预测，即不必每次 都建立工作分解结构。</span><br><span class="line">过程、方法和工具</span><br><span class="line">人员</span><br><span class="line">样本系统:将已部署(投产)的产品作为高质量的演示原型和工程设计原型。</span><br><span class="line">缺陷消除:产品线开发中积累的缺陷消除活动，可使新系统受益</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、基于产品线的架构"><a href="#二、基于产品线的架构" class="headerlink" title="二、基于产品线的架构"></a>二、基于产品线的架构</h1><p>软件产品线架构是针对一系列产品而设计的通用架构，并在此基础上，进一步将系列产 品共用的模块事先实现，供直接重用;将架构用框架的形式予以实现，供定制使用。这就是 通常所说的“平台”。</p>
-<p>产品线架构较之单个产品架构，有如下三点特别之处:<br>(1)产品线架构必须考虑一系列明确许可的变化;<br>(2)产品线架构一定要文档化;<br>(3)产品线架构必须提供“产品创建者指南”(开发指南)，描述架构的实例化过程。</p>
-<p>产品线的软件架构应将不变的方面提出来，同时， 识别允许的变化，并提供实现它们的机制。通常应考虑三个方面。<br>(1)确定变化点<br>(2)支持变化点<br>(3)对产品线架构的适宜性进行评估。</p>
-<h1 id="三、产品线的开发模型"><a href="#三、产品线的开发模型" class="headerlink" title="三、产品线的开发模型"></a>三、产品线的开发模型</h1><p>开发(确定)产品线的方法有两种模型:<br>(1)“前瞻性”产品线:利用在应用领域的经验、对市场和技术发展趋势的了解及商业 判断力等进行产品线设计，它反映了企业的战略决策。通常是自上而下地采用产品线方法。<br>(2)“反应性”模型:企业根据以前的产品构建产品家族，并随着新产品的开发，扩展<br>架构和设计方案，它的核心资产库是根据“已经证明”为共有、而非“预先计划”为共有的 元素构建的。通常是自下而上地采用产品线方法。</p>
-<h1 id="四、特定领域软件架构"><a href="#四、特定领域软件架构" class="headerlink" title="四、特定领域软件架构"></a>四、特定领域软件架构</h1><p>架构的本质在于其抽象性。它包括两个方面的抽象:业务抽象和技术抽象。其中业务抽 象面向特定的应用领域。</p>
-<p>特定领域软件架构(Domain Specific Software Architecture，DSSA)可以看做开发产品线 的一个方法(或理论)，它的目标就是支持在一个特定领域中有多个应用的生成。</p>
-<p>DSSA 的 必备特征有:<br>(1)一个严格定义的问题域或解决域;<br>(2)具有普遍性，使其可以用于领域中某个特定应用的开发;<br>(3)对整个领域的合适程度的抽象;<br>(4)具备该领域固定的、典型的在开发过程中的可复用元素。</p>
-<p>从功能覆盖的范围角度理解 DSSA 中领域的含义有两种方法:<br>(1)垂直域。定义了一个特定的系统族，导出在该领域中可作为系统的可行解决方案的一个通用软件架构。<br>(2)水平域。定义了在多个系统和多个系统族中功能区域的共有部分，在子系统级上涵盖多个系统(族)的特定部分功能。</p>
-<p>DSSA 的活动阶段如下。<br>(1)领域分析:主要目标是获得领域模型。即通过分析领域中系统的需求(领域需求)，确定哪些需求是被领域中的系统广泛共享的，从而建立领域模型。<br>(2)领域设计:这个阶段的目标是获得 DSSA，它是一个能够适应领域多个系统的需求的一个高层次的设计。由于领域模型中的领域需求具有一定的变化性，DSSA 也要相应地 具有变化性，它可以通过表示多选一的、可选的解决方案等来做到这一点。<br>(3)领域实现:主要目标是依据领域模型和 DSSA 开发与组织可复用信息。这些复用 信息可以是从现有系统中提取得到的，也可能通过新的开发得到。这个阶段可以看作复用基 础设施的实现阶段。</p>
-<p>领域模型的主要作用如下:<br>(1)领域模型为需求定义了领域知识和领域词汇，这较之单一的项目需求更有较好的 大局观;<br>(2)软件界面的设计往往和领域模型关系密切;<br>(3)领域模型的合理性将严重影响软件系统的可扩展性;<br>(4)在分层架构的指导下，领域模型精化后即成为业务层的骨架;<br>(5)领域模型也是其数据模型的基础;<br>(6)领域模型是团队交流的基础，因为它规定了重要的领域词汇表，并且这些词汇的定义是严格的、大家共同认可的。</p>
-<h1 id="五、架构及系统演化"><a href="#五、架构及系统演化" class="headerlink" title="五、架构及系统演化"></a>五、架构及系统演化</h1><p>架构虽然为系统的变化提供了一定的自由度，但是系统的较大变化必然导致架构的改变。 架构(系统)演化是指向既定的方向、可控地改变。架构(系统)演化可以形成产品线，反 过来，架构(系统)可以在规划的产品线中进行演化。</p>
-<p>架构(系统)演化过程包含 7 个步骤：<br>(1)需求变动归类。首先，必须对用户需求的变化进行归类，使变化的需求与已有构 件对应。对找不到对应构件的变动，也要做好标记，在后续工作中，将创建新的构件，以对 应这部分变化的需求。<br>(2)制订架构演化计划。在改变原有结构之前，开发组织必须制订一个周密的架构演 化计划，作为后续演化开发工作的指南。<br>(3)修改、增加或删除构件。在演化计划的基础上，开发人员可根据在第(1)步得到 的需求变动的归类情况，决定是否修改或删除存在的构件、增加新构件。最后，对修改和增 加的构件进行功能性测试。<br>(4)更新构件的相互作用。随着构件的增加、删除和修改，构件之间的控制流必须得 到更新。<br>(5)构件组装与测试。通过组装支持工具把这些构件的实现体组装起来，完成整个软 件系统的连接与合成，形成新的架构。然后，对组装后的系统整体功能和性能进行测试。<br>(6)技术评审。对以上步骤进行确认，进行技术评审。评审组装后的架构是否反映需 求变动，符合用户需求。如果不符合，则需要在第(2)到第(6)步之间进行迭代。<br>(7)产生演化后的架构。在原来系统上所作的所有修改必须集成到原来的架构中，完 成一次演化过程。</p>
-<p><img src="/images/ruankao/6-52.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%89%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%89%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/" class="post-title-link" itemprop="url">软件架构设计（三）软件架构风格</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-26 00:00:00 / 修改时间：16:23:31" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件架构设计的一个核心问题是能否使用重复的软件架构模式，即能否达到架构级别的 软件重用。</p>
-<p>架构风格反映了领域中众多系统所共有的结构和语义特性，并指导如何将各个模块和子系统有效地组织成一个完整的系统。</p>
-<p>只要系统是使用常用的、规范的方法来组织，就可使别的设计者很容易地理解系统的架构。</p>
-<h1 id="一、软件架构风格分类"><a href="#一、软件架构风格分类" class="headerlink" title="一、软件架构风格分类"></a>一、软件架构风格分类</h1><p>架构风格的最关键的四要素内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">提供一个词汇表</span><br><span class="line">定义一套配置规则</span><br><span class="line">定义一套语义解释原则</span><br><span class="line">定义对基于这种风格的系统所进行的分析</span><br></pre></td></tr></table></figure>
-<h1 id="二、数据流风格"><a href="#二、数据流风格" class="headerlink" title="二、数据流风格"></a>二、数据流风格</h1><p>批处理序列;管道/过滤器。</p>
-<p>这样的架构下，所有的数据按照流的形式在执行过程中前进，不存在结构的反复和重构。</p>
-<p>在流动过程中，数据经过序列间的数据处理组件进行处理，然后将处理结果向后传送，最后进行输出。</p>
-<h2 id="1-批处理序列"><a href="#1-批处理序列" class="headerlink" title="1. 批处理序列"></a>1. 批处理序列</h2><p>批处理风格的每一步处理都是独立的，并且每一步是顺序执行的。只有当前一步处理完，后一步处理才能开始。数据传送在步与步之间作为一个整体。(组件为一系列固定顺序的计 算单元，组件间只通过数据传递交互。每个处理步骤是一个独立的程序，每一步必 须在前一步结束后才能开始，数据必须是完整的，以整体的方式传递)</p>
-<p>批处理的典型应用:<br>(1)经典数据处理;<br>(2)程序开发;<br>(3)Windows 下的 BAT 程序就是这种应用的典型实例。</p>
-<h2 id="2-管道和过滤器"><a href="#2-管道和过滤器" class="headerlink" title="2. 管道和过滤器"></a>2. 管道和过滤器</h2><p>在管道/过滤器风格的软件架构中，每个构件都有一组输入和输出，构件读输入的数据流，经过内部处理，然后产生输出数据流。这个过程通常通过对输入流的变换及增量计算来 完成，所以在输入被完全消费之前，输出便产生了。</p>
-<p>管道/过滤器架构的例子:<br>(1)以 UNIX shell 编写的程序；<br>(2)传统的编译器。</p>
-<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>(1)使得软构件具有良好的隐蔽性和高内聚、低耦合的特点;<br>(2)允许设计者将整个系统的输入/输出行为看成是多个过滤器的行为的简单合成;<br>(3)支持软件重用<br>(4)系统维护和增强系统性能简单<br>(5)允许对一些如吞吐量、死锁等属性的分析;<br>(6)支持并行执行</p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>(1)通常导致进程成为批处理的结构<br>(2)不适合处理交互的应用<br>(3)因为在数据传输上没有通用的标准，每个过滤器都增加了解析和合成数据的工作， 这样就导致了系统性能下降，并增加了编写过滤器的复杂性。</p>
-<h2 id="3-批处理序列风格与管道过滤器风格对比"><a href="#3-批处理序列风格与管道过滤器风格对比" class="headerlink" title="3.批处理序列风格与管道过滤器风格对比"></a>3.批处理序列风格与管道过滤器风格对比</h2><p>共同点:把任务分成一系列固定顺序的计算单元(组件)。组件间只通过数据传递交互。</p>
-<p>区别:批处理是全部的、高潜伏性的，输入时可随机存取，无合作性、无交互性。而管道过滤器是递增的，数据结果延迟小，输入时处理局部化，有反馈、可交互。批处理强调数据传送在步与步之间作为一个整体，而管理过滤器无此要求。</p>
-<h1 id="三、调用-返回风格"><a href="#三、调用-返回风格" class="headerlink" title="三、调用/返回风格"></a>三、调用/返回风格</h1><p>主程序/子程序;面向对象风格;层次结构。</p>
-<p>利用调用-返回实际上是一种分而治之的策略，其主要思想是将一个复杂的大系统分解为一些子系统，以便降低复杂度，并且增加可修改性。</p>
-<h2 id="1-主程序-子程序"><a href="#1-主程序-子程序" class="headerlink" title="1. 主程序/子程序"></a>1. 主程序/子程序</h2><p>主程序/子程序风格是结构化开发时期的经典架构风格。这种风格一般采用单线程控制，把问题划分为若干处理步骤，构件即为主程序和子程序。</p>
-<h2 id="2-面向对象风格"><a href="#2-面向对象风格" class="headerlink" title="2. 面向对象风格"></a>2. 面向对象风格</h2><p>这种风格建立在数据抽象和面向对象的基础上，数据的表示方法和它们的相应操作封装在一个抽象数据类型或对象中。这种风格的构件是对象，或者说是抽象数据类型的实例。</p>
-<p>这种风格的两个重要特征为:<br>(1)对象负责维护其表示的完整性;<br>(2)对象的表示对其他对象而言是隐蔽的。</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>(1)因为对象对其他对象隐藏它的表示，所以可以改变一个对象的表示，而不影响其他的对象;<br>(2)设计者可将一些数据存取操作的问题分解成一些交互的代理程序的集合。</p>
-<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>(1)为了使一个对象和另一个对象通过过程调用等进行交互，必须知道对象的标识。只要一个对象的标识改变了，就必须修改所有其他明确调用它的对象;<br>(2)必须修改所有显式调用它的其他对象，并消除由此带来的一些副作用。例如，如果 A 使用了对象 B，C 也使用了对象 B，那么，C 对 B 的使用所造成的对 A 的影响可能是料想不到的。</p>
-<h3 id="3-层次结构风格"><a href="#3-层次结构风格" class="headerlink" title="3. 层次结构风格"></a>3. 层次结构风格</h3><p>层次系统组织成一个层次结构，每一层为上层服务，并作为下层客户。在一些层次系统中，除了一些精心挑选的输出函数外，内部的层只对相邻的层可见。</p>
-<p>这种风格支持基于可增加抽象层的设计。允许将一个复杂问题分解成一个增量步 骤序列的实现。由于每一层最多只影响两层，同时只要给相邻层提供相同的接口，允许每层 用不同的方法实现，同样为软件重用提供了强大的支持。</p>
-<p>层次系统最广泛的应用是分层通信协议。</p>
-<h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><p>(1)支持基于抽象程度递增的系统设计，使设计者可以把一个复杂系统按递增的步骤进行分解;<br>(2)支持功能增强，因为每一层至多和相邻的上下层交互，因此功能的改变最多影响相邻的上下层;<br>(3)支持重用。只要提供的服务接口定义不变，同一层的不同实现可以交换使用。这样，就可以定义一组标准的接口，而允许各种不同的实现方法。</p>
-<h4 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h4><p>(1)并不是每个系统都可以很容易地划分为分层的模式，甚至即使一个系统的逻辑结构是层次化的，出于对系统性能的考虑，系统设计师不得不把一些低级或高级的功能综合起来;<br>(2)很难找到一个合适的、正确的层次抽象方法。</p>
-<h1 id="四、独立构件风格"><a href="#四、独立构件风格" class="headerlink" title="四、独立构件风格"></a>四、独立构件风格</h1><p>进程通信;事件系统。</p>
-<p>独立构件风格主要强调系统中的每个构件都是相对独立的个体，它们之间不直接通信，以降低耦合度，提升灵活性。</p>
-<h2 id="1-进程通信架构风格"><a href="#1-进程通信架构风格" class="headerlink" title="1. 进程通信架构风格"></a>1. 进程通信架构风格</h2><p>构件是独立的过程，连接件是消息传递。这 种风格的特点是构件通常是命名过程，消息传递的方式可以是点到点、异步和同步方式及远 过程调用等。</p>
-<h2 id="2-事件系统风格"><a href="#2-事件系统风格" class="headerlink" title="2. 事件系统风格"></a>2. 事件系统风格</h2><p>基于事件的隐式调用风格的思想是构件不直接调用一个过程，而是触 发或广播一个或多个事件。系统中的其他构件中的过程在一个或多个事件中注册，当一个事 件被触发，系统自动调用在这个事件中注册的所有过程。</p>
-<p>基于事件的隐式调用风格的主要特点是事件的触发者并不知道哪些构件会被这些事件影响。</p>
-<h3 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h3><p>(1)为软件重用提供了强大的支持。当需要将一个构件加入现存系统中时，只需将它注册到系统的事件中。<br>(2)为改进系统带来了方便。当用一个构件代替另一个构件时，不会影响到其他构件的接口。</p>
-<h3 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h3><p>(1)构件放弃了对系统计算的控制。一个构件触发一个事件时，不能确定其他构件是否会响应它。而且即使它知道事件注册了哪些构件的过程，它也不能保证这些过程被调用的顺序。<br>(2)数据交换的问题。有时数据可被一个事件传递，但另一些情况下，基于事件的系统必须依靠一个共享的仓库进行交互。在这些情况下，全局性能和资源管理便成了问题。<br>(3)既然过程的语义必须依赖于被触发事件的上下文约束，关于正确性的推理存在问题。</p>
-<h1 id="五、虚拟机风格"><a href="#五、虚拟机风格" class="headerlink" title="五、虚拟机风格"></a>五、虚拟机风格</h1><p>解释器;基于规则的系统。</p>
-<p>虚拟机风格的基本思想是人为构建一个运行环境，在这个环境之上，可以解析与运行自定义的一些语言，这样来增加架构的灵活性。</p>
-<h2 id="1-解释器"><a href="#1-解释器" class="headerlink" title="1.解释器"></a>1.解释器</h2><p>一个解释器通常包括完成解释工作的解释引擎，一个包含将被解释的代码的存储区，一 个记录解释引擎当前工作状态的数据结构，以及一个记录源代码被解释执行进度的数据结构。</p>
-<p>解释器通常被用来建立一种虚拟机以弥合程序语义与硬件语义之间的差异。其缺点是执行效率较低。</p>
-<h2 id="2-规则为中心"><a href="#2-规则为中心" class="headerlink" title="2. 规则为中心"></a>2. 规则为中心</h2><p>基于规则的系统包括规则集、规则解释器、规则/数据选择器及工作内存。</p>
-<h1 id="六、仓库风格"><a href="#六、仓库风格" class="headerlink" title="六、仓库风格"></a>六、仓库风格</h1><p>数据库系统;超文本系统;黑板系统。</p>
-<h2 id="1-数据库系统"><a href="#1-数据库系统" class="headerlink" title="1.数据库系统"></a>1.数据库系统</h2><p>数据库架构是库风格最常见的形式。构件主要有两大类，一个是中央共享数据源，保存当前系统的数据状态;另一个是多个独立处理元素，处理元素对数据元素进行操作。</p>
-<h2 id="2-超文本系统"><a href="#2-超文本系统" class="headerlink" title="2.超文本系统"></a>2.超文本系统</h2><p>超文本系统的典型代表，就是早期的静态网页。</p>
-<h2 id="3-黑板系统"><a href="#3-黑板系统" class="headerlink" title="3.黑板系统"></a>3.黑板系统</h2><p>黑板系统是一种问题求解模型，是组织推理的步骤、控制状态数据和问题求解之领域知识的概念框架，它将问题的解空间组织成一个或多个应用相关的分级结构。分级结构的每一层信息由一个唯一的词汇来描述，它代表了问题的部分解。<br><img src="/images/ruankao/6-38.png"></p>
-<p>黑板系统主要由三部分组成:<br>(1)知识源。知识源中包含独立的、与应用程序相关的知识，知识源之间不直接进行 通信，它们之间的交互只通过黑板来完成。<br>(2)黑板数据结构。黑板数据是按照与应用程序相关的层次来组织的解决问题的数据， 知识源通过不断地改变黑板数据来解决问题。<br>(3)控制。控制完全由黑板的状态驱动，黑板状态的改变决定使用的特定知识。</p>
-<hr>
-<p><img src="/images/ruankao/6-39.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84/" class="post-title-link" itemprop="url">软件架构设计（五）面向服务的架构</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-26 00:00:00 / 修改时间：21:52:13" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>迄今为止，对于面向服务的架构(Service-Oriented Architecture，SOA)还没有一个公认 的定义。许多组织从不同的角度和不同的侧面对 SOA 进行了描述，较为典型的有以下三个:</p>
-<p>(1)W3C 的定义:SOA 是一种应用程序架构，在这种架构中，所有功能都定义为独 立的服务，这些服务带有定义明确的可调用接口，能够以定义好的顺序调用这些服务来形成 业务流程。</p>
-<p>(2)Service-architecture.com 的定义:服务是精确定义、封装完善、独立于其他服务 所处环境和状态的函数。SOA 本质上是服务的集合，服务之间彼此通信，这种通信可能是 简单的数据传送，也可能是两个或更多的服务协调进行某些活动。服务之间需要某些方法进 行连接。</p>
-<p>(3)Gartner 的定义:SOA 是一种 C/S 架构的软件设计方法，应用由服务和服务使用 者组成，SOA 与大多数通用的 C/S 架构模型不同之处，在于它着重强调构件的松散耦合， 并使用独立的标准接口。</p>
-<h1 id="一、SOA概述"><a href="#一、SOA概述" class="headerlink" title="一、SOA概述"></a>一、SOA概述</h1><p>SOA 是一种在计算环境中设计、开发、部署和管理离散逻辑单元(服务)模型的方法。 SOA 并不是一个新鲜事物，而只是面向对象模型的一种替代。虽然基于 SOA 的系统并不排 除使用 OOD 来构建单个服务，但是其整体设计却是面向服务的。由于 SOA 考虑到了系统 内的对象，所以虽然 SOA 是基于对象的，但是作为一个整体，它却不是面向对象的。</p>
-<p><img src="/images/ruankao/6-43.png"></p>
-<p>在 SOA 模型中，所有的功能都定义成了独立的服务。服务之间通过交互和协调完成业 务的整体逻辑。所有的服务通过服务总线或流程管理器来连接。这种松散耦合的架构使得各 服务在交互过程中无需考虑双方的内部实现细节，以及部署在什么平台上。</p>
-<h2 id="1-服务的基本结构"><a href="#1-服务的基本结构" class="headerlink" title="1. 服务的基本结构"></a>1. 服务的基本结构</h2><p><img src="/images/ruankao/6-44.png"></p>
-<p>服务模型的表示层从逻辑层分离出来，中间增加了服务对外的接 口层。通过服务接口的标准化描述，使得服务可以提供给在任何异构平台和任何用户接口使 用。这允许并支持基于服务的系统成为松散耦合、面向构件和跨技术实现，服务请求者很可 能根本不知道服务在哪里运行、是由哪种语言编写的，以及消息的传输路径，而是只需要提 出服务请求，然后就会得到答案。</p>
-<h2 id="2-SOA-设计原则"><a href="#2-SOA-设计原则" class="headerlink" title="2.SOA 设计原则"></a>2.SOA 设计原则</h2><p>在 SOA 架构中，继承了来自对象和构件设计的各种原则。</p>
-<p>关于服务，一些常见的设计原则如下:</p>
-<h3 id="1-明确定义的接口。"><a href="#1-明确定义的接口。" class="headerlink" title="(1)明确定义的接口。"></a>(1)明确定义的接口。</h3><p>服务请求者依赖于服务规约来调用服务，因此，服务定义必须 长时间稳定，一旦公布，不能随意更改;服务的定义应尽可能明确，减少请求者的不适当使 用;不要让请求者看到服务内部的私有数据。</p>
-<h3 id="2-自包含和模块化。"><a href="#2-自包含和模块化。" class="headerlink" title="(2)自包含和模块化。"></a>(2)自包含和模块化。</h3><p>服务封装了那些在业务上稳定、重复出现的活动和构件，实现 服务的功能实体是完全独立自主的，独立进行部署、版本控制、自我管理和恢复。</p>
-<h3 id="3-粗粒度。"><a href="#3-粗粒度。" class="headerlink" title="(3)粗粒度。"></a>(3)粗粒度。</h3><p>服务数量不应该太多，依靠消息交互而不是远程过程调用，通常消息量 比较大，但是服务之间的交互频度较低。</p>
-<h3 id="4-松耦合。"><a href="#4-松耦合。" class="headerlink" title="(4)松耦合。"></a>(4)松耦合。</h3><p>服务请求者可见的是服务的接口，其位置、实现技术、当前状态和私有 数据等，对服务请求者而言是不可见的。</p>
-<h3 id="5-互操作性、兼容和策略声明。"><a href="#5-互操作性、兼容和策略声明。" class="headerlink" title="(5)互操作性、兼容和策略声明。"></a>(5)互操作性、兼容和策略声明。</h3><p>为了确保服务规约的全面和明确，策略成为一个越 来越重要的方面。</p>
-<h2 id="3-服务构件与传统构件"><a href="#3-服务构件与传统构件" class="headerlink" title="3. 服务构件与传统构件"></a>3. 服务构件与传统构件</h2><p>服务构件架构(Service Component Architecture，SCA)是基于 SOA 的思想描述服务之间组合和协作的规范，它描述用于使用 SOA 构建应用程序和系统的模型。它可简化使用 SOA 进行的应用程序开发和实现工作。SCA 提供了构建粗粒度构件的机制，这些粗粒度构 件由细粒度构件组装而成。SCA 将传统中间件编程从业务逻辑分离出来，从而使程序员免 受其复杂性的困扰。它允许开发人员集中精力编写业务逻辑，而不必将大量的时间花费在更 为底层的技术实现上。</p>
-<p>SCA 服务构件与传统构件的主要区别在于，服务构件往往是粗粒度的，而传统构件以 细粒度居多;服务构件的接口是标准的，主要是服务描述语言接口，而传统构件常以具体 API 形式出现;服务构件的实现与语言是无关的，而传统构件常绑定某种特定的语言;服务构件 可以通过构件容器提供 QoS 的服务，而传统构件完全由程序代码直接控制。</p>
-<h1 id="二、SOA-的关键技术"><a href="#二、SOA-的关键技术" class="headerlink" title="二、SOA 的关键技术"></a>二、SOA 的关键技术</h1><p>SOA 是一种全新的架构，为了支持其各种特性，相关的技 术规范不断推出。与 SOA 紧密相关的技术主要有 UDDI、WSDL、SOAP 和 REST 等，而这 些技术都是以 XML 为基础而发展起来的。</p>
-<h2 id="1-UDDI"><a href="#1-UDDI" class="headerlink" title="1. UDDI"></a>1. UDDI</h2><p>UDDI(Universal DescriptionDiscovery and Integration，统一描述、发现和集成)提供了 一种服务发布、查找和定位的方法，是服务的信息注册规范，以便被需要该服务的用户发现 和使用它。UDDI 规范描述了服务的概念，同时也定义了一种编程接口。通过 UDDI 提供的 标准接口，企业可以发布自己的服务供其他企业查询和调用，也可以查询特定服务的描述信 息，并动态绑定到该服务上。</p>
-<p>UDDI包括：<br>(1)数据模型。UDDI 数据模型是一个用于描述业务组织和服务的 XML Schema。<br>(2)API。UDDI API 是一组用于查找或发布 UDDI 数据的方法，UDDI API 基于 SOAP。<br>(3)注册服务。UDDI 注册服务是 SOA 中的一种基础设施，对应着服务注册中心的角<br>色。</p>
-<h2 id="2-WSDL"><a href="#2-WSDL" class="headerlink" title="2.WSDL"></a>2.WSDL</h2><p>WSDL(Web ServiceDescription Language，Web 服务描述语言)是对服务进行描述的语言，它有一套基于 XML 的语法定义。WSDL 描述的重点是服务，它包含服务实现定义和服 务接口定义。</p>
-<p><img src="/images/ruankao/6-45.png"><br>服务实现定义描述了给定服务提供者如何实现特定的服务接口。服务实现定义中包含服 务和端口描述。一个服务往往会包含多个服务访问入口，而每个访问入口都会使用一个端口 元素来描述，端口描述的是一个服务访问入口的部署细节，例如，通过哪个地址来访问，应 当使用怎样的消息调用模式来访问等。</p>
-<h2 id="3-SOAP"><a href="#3-SOAP" class="headerlink" title="3.SOAP"></a>3.SOAP</h2><p>SOAP(Simple ObjectAccess Protocol，简单对象访问协议)定义了服务请求者和服务提 供者之间的消息传输规范。SOAP 用 XML 来格式化消息，用 HTTP 来承载消息。通过 SOAP， 应用程序可以在网络中进行数据交换和远程过程调用(Remote Procedure Call， RPC)</p>
-<p>SOAP 主要包括以下四个部分:</p>
-<p>(1)封装。SOAP 封装定义了一个整体框架，用来表示消息中包含什么内容，谁来处 理这些内容，以及这些内容是可选的还是必需的。<br>(2)编码规则。SOAP 编码规则定义了一种序列化的机制，用于交换系统所定义的数 据类型的实例。<br>(3)RPC 表示。SOAP RPC 表示定义了一个用来表示远程过程调用和应答的协议。<br>(4)绑定。SOAP 绑定定义了一个使用底层传输协议来完成在节点之间交换 SOAP 封 装的约定。</p>
-<p>SOAP 消息包括以下三个部分:</p>
-<p>(1)封装(信封)。封装的元素名是 Envelope，在表示消息的 XML 文档中，封装是顶 层元素，在 SOAP 消息中必须出现。<br>(2)SOAP 头。SOAP 头的元素名是 Header，提供了向 SOAP 消息中添加关于这条 SOAP 消息的某些要素的机制。<br>(3)SOAP 体。SOAP 体的元素名是 Body，是包含消息的最终接收者想要的信息的容 器。</p>
-<h2 id="4-REST"><a href="#4-REST" class="headerlink" title="4.REST"></a>4.REST</h2><p>REST(RepresentationalState Transfer，表述性状态转移)是一种只使用 HTTP 和 XML 进 行基于 Web 通信的技术，可以降低开发的复杂性，提高系统的可伸缩性。它的简单性和缺 少严格配置文件的特性，使它与 SOAP 很好地隔离开来，REST 从根本上来说只支持几个操 作(POST、GET、PUT 和 DELETE)，这些操作适用于所有的消息。</p>
-<p>REST 提出了如下一些设 计概念和准则:<br>(1)网络上的所有事物都被抽象为资源。<br>(2)每个资源对应一个唯一的资源标识。<br>(3)通过通用的连接件接口对资源进行操作。<br>(4)对资源的各种操作不会改变资源标识。<br>(5)所有的操作都是无状态的。</p>
-<h1 id="三、SOA-的实现方法"><a href="#三、SOA-的实现方法" class="headerlink" title="三、SOA 的实现方法"></a>三、SOA 的实现方法</h1><p>SOA 只是一种概念和思想，需要借助于具体的技术和方法来实现它。从本质上来看， SOA 是用本地计算模型来实现一个分布式的计算应用，也有人称这种方法为“本地化设计，分布式工作”模型。CORBA、DCOM 和 EJB 等都属于这种解决方式。</p>
-<p>从逻辑上和高层抽象来看，目前，实现 SOA 的方法也比较多，其中主流方式有 Web Service、企业服务总线和服务注册表。</p>
-<h2 id="1-Web-Service"><a href="#1-Web-Service" class="headerlink" title="1.Web Service"></a>1.Web Service</h2><p>在 Web Service(Web 服务)的解决方案中，一共有三种工作角色，其中服务提供者和 服务请求者是必需的，服务注册中心是一个可选的角色。</p>
-<p><img src="/images/ruankao/6-46.png"></p>
-<p>在采用 Web Service 作为 SOA 的实现技术时，应用系统大致可以分为六个层次，分别 是底层传输层、服务通信协议层、服务描述层、 服务层、业务流程层和服务注册层。</p>
-<h3 id="1-底层传输层。"><a href="#1-底层传输层。" class="headerlink" title="(1)底层传输层。"></a>(1)底层传输层。</h3><p>底层传输层主要负责消息的传输机制，HTTP、JMS(Java Messaging Service，Java 消息服务)和 SMTP 都可以作为服务的消息传输协议，其中 HTTP 使用最广。</p>
-<h3 id="2-服务通信协议层。"><a href="#2-服务通信协议层。" class="headerlink" title="(2)服务通信协议层。"></a>(2)服务通信协议层。</h3><p>服务通信协议层的主要功能是描述并定义服务之间进行消息传 递所需的技术标准，常用的标准是 SOAP 和 REST 协议。</p>
-<h3 id="3-服务描述层。"><a href="#3-服务描述层。" class="headerlink" title="(3)服务描述层。"></a>(3)服务描述层。</h3><p>服务描述层主要以一种统一的方式描述服务的接口与消息交换方式， 相关的标准是 WSDL。</p>
-<h3 id="4-服务层。"><a href="#4-服务层。" class="headerlink" title="(4)服务层。"></a>(4)服务层。</h3><p>服务层的主要功能是将遗留系统进行包装，并通过发布的 WSDL 接口描 述被定位和调用。</p>
-<h3 id="5-业务流程层。"><a href="#5-业务流程层。" class="headerlink" title="(5)业务流程层。"></a>(5)业务流程层。</h3><p>业务流程层的主要功能是支持服务发现，服务调用和点到点的服务 调用，并将业务流程从服务的底层调用抽象出来。</p>
-<h3 id="6-服务注册层"><a href="#6-服务注册层" class="headerlink" title="(6)服务注册层"></a>(6)服务注册层</h3><p>服务注册层的主要功能是使服务提供者能够通过 WSDL 发布服务定义，并支持服 务请求者查找所需的服务信息。相关的标准是 UDDI。</p>
-<h2 id="2-服务注册表"><a href="#2-服务注册表" class="headerlink" title="2. 服务注册表"></a>2. 服务注册表</h2><p>服务注册表(service registry)虽然也具有运行时的功能，但主要在 SOA 设计时使用。</p>
-<p>服务注册表可以包括有关服务和相关构件的配置、依从性和 约束文件。</p>
-<p>大多数商用服务注册产品支持服务注册、服务位置和服务绑定功能。</p>
-<h2 id="3-企业服务总线ESB"><a href="#3-企业服务总线ESB" class="headerlink" title="3. 企业服务总线ESB"></a>3. 企业服务总线ESB</h2><p>ESB 是由中间件技术实现并支持 SOA 的一组基础架构，是传统中间件技术与 XML、 Web Service 等技术结合的产物，是在整个企业集成架构下的面向服务的企业应用集成机制。</p>
-<p>ESB 具有以下功能:<br>(1)支持异构环境中的服务、消息和基于事件的交互，并且具有适当的服务级别和可 管理性。<br>(2)通过使用 ESB，可以在几乎不更改代码的情况下，以一种无缝的非侵入方式使现 有系统具有全新的服务接口，并能够在部署环境中支持任何标准。<br>(3)充当缓冲器的 ESB(负责在诸多服务之间转换业务逻辑和数据格式)与服务逻辑 相分离，从而使不同的系统可以同时使用同一个服务，不用在系统或数据发生变化时，改动 服务代码。<br>(4)在更高的层次，ESB 还提供诸如服务代理和协议转换等功能。允许在多种形式下 通过像 HTTP、SOAP 和 JMS 总线的多种传输方式，主要是以网络服务的形式，为发表、注 册、发现和使用企业服务或界面提供基础设施。<br>(5)提供可配置的消息转换翻译机制和基于消息内容的消息路由服务，传输消息到不 同的目的地。<br>(6)提供安全和拥有者机制，以保证消息和服务使用的认证、授权和完整性。</p>
-<p>与现存的、专有的集成解决方案相比，ESB 具有以下优势:</p>
-<p>(1)扩展的、基于标准的连接。ESB 形成一个基于标准的信息骨架，使得在系统内部<br>和整个价值链中可以容易地进行异步或同步数据交换。ESB 通过使用 XML、SOAP 和其他标 准，提供了更强大的系统连接性。<br>(2)灵活的、服务导向的应用组合。基于 SOA，ESB 使复杂的分布式系统(包括跨多 个应用、系统和防火墙的集成方案)能够由以前开发测试过的服务组合而成，使系统具有高 度可扩展性。<br>(3)提高复用率，降低成本。按照 SOA 方法构建应用，提高了复用率，简化了维护 工作，进而减少了系统总体成本。<br>(4)减少市场反应时间，提高生产率。ESB 通过构件和服务复用，按照 SOA 的思想 简化应用组合，基于标准的通信、转换和连接来实现这些优点。</p>
-<h1 id="四、微服务"><a href="#四、微服务" class="headerlink" title="四、微服务"></a>四、微服务</h1><p>它属于面向服务架构的一种。<br>微服务架构是一种架构模式，它提倡将单一应用程序划分成一组小 的服务，服务之间互相协调、互相配合，为用户提供最终价值。每个服务运行在其独立的进 程中，服务与服务间采用轻量级的通信机制互相沟通(通常是基于 HTTP 协议的 RESTful API)。每个服务都围绕着具体业务进行构建，并且能够被独立的部署到生产环境、类生产环 境等。</p>
-<p>另外，应当尽量避免统一的、集中式的服务管理机制，对具体的一个服务而言，应根 据业务上下文，选择合适的语言、工具对其进行构建。</p>
-<p>所以总结起来，微服务的核心特点为:小, 且专注于做一件事情、轻量级的通信机制、松耦合、独立部署。</p>
-<h2 id="1-微服务的优势"><a href="#1-微服务的优势" class="headerlink" title="1.微服务的优势"></a>1.微服务的优势</h2><h3 id="1-技术异构性"><a href="#1-技术异构性" class="headerlink" title="(1)技术异构性"></a>(1)技术异构性</h3><p>在微服务架构中，每个服务都是一个相对独立的个体，每个服务都可以选择适合于自身 的技术来实现。</p>
-<p>同时，在应用新技术时，微服务架构也提供了更好的试验场。</p>
-<h3 id="2-弹性"><a href="#2-弹性" class="headerlink" title="(2)弹性"></a>(2)弹性</h3><p>弹性主要讲的是系统中一部分出现故障会引起多大问题。<br>微服务架构中，每个服务可以内置可用性的解决方 案 与功能降级方案，所以比单块系统强。</p>
-<h3 id="3-扩展"><a href="#3-扩展" class="headerlink" title="(3)扩展"></a>(3)扩展</h3><p>在微服务架构中，可以针对单个服务进行扩展。</p>
-<h3 id="4-简化部署"><a href="#4-简化部署" class="headerlink" title="(4)简化部署"></a>(4)简化部署</h3><p>在大型单块系统中，即使修改一行代码，也需要重新部署整个应用系统。<br>微服务架构中，每个服务的部署都是独立的，这样就可以更快地对特定部分的代码进行部署。</p>
-<h3 id="5-与结织结构相匹配"><a href="#5-与结织结构相匹配" class="headerlink" title="(5)与结织结构相匹配"></a>(5)与结织结构相匹配</h3><p>微服务架构可以将架构与组织结构相匹配，避免出现过大的代码库，从而获得 理想的团队大小及生产力。服务的所有权也可以在团队之 间迁移，从而避免异地团队的出 现。</p>
-<h3 id="6-可组合性"><a href="#6-可组合性" class="headerlink" title="(6)可组合性"></a>(6)可组合性</h3><p>在微服务架构中，系统会开放很多接口供外部使用。当情况发生改变时，可以使用不同的方式构建应用，而整体化应用程序只能提供一个非常粗粒度的接口供外部使用。</p>
-<h3 id="7-对可替代性的优化"><a href="#7-对可替代性的优化" class="headerlink" title="(7)对可替代性的优化"></a>(7)对可替代性的优化</h3><p>在微服务架构中，我们可以在需要时轻易地重写服务， 或者删除不再使用的服务。</p>
-<h2 id="2-微服务面临的挑战"><a href="#2-微服务面临的挑战" class="headerlink" title="2. 微服务面临的挑战"></a>2. 微服务面临的挑战</h2><h3 id="1-分布式系统的复杂度"><a href="#1-分布式系统的复杂度" class="headerlink" title="(1)分布式系统的复杂度"></a>(1)分布式系统的复杂度</h3><p>使用微服务实现分布式系统的复杂度要比单块系统高。</p>
-<h3 id="2-运维成本"><a href="#2-运维成本" class="headerlink" title="(2)运维成本"></a>(2)运维成本</h3><p>在微服务架构下，随着服务数量的增多，每个服务都需要独立的配置、部署、 监控、日志收集等，因此成本呈指数级增长。</p>
-<h3 id="3-部署自动化"><a href="#3-部署自动化" class="headerlink" title="(3)部署自动化"></a>(3)部署自动化</h3><p>传统单块系统手动部署是 可以满足需求的。<br>对于微服务架构而言，如何有效地构建自 动化部署流水线，降低部署成本、提高部署频率，是微服务架构下需要面临的一个挑战。。</p>
-<h3 id="4-DevOps-与组织结构"><a href="#4-DevOps-与组织结构" class="headerlink" title="(4)DevOps 与组织结构"></a>(4)DevOps 与组织结构</h3><p>传统单块架构中，团队通常是按技能划分，并通过项目的 方式协作，完成系统交付。</p>
-<p>在微服务架构的实施过程中，除了如上所述的交付、运维上存 在的挑战，在组织或者团队层面，如何传递 DevOps 文化的价值，让团队理解 DevOps 文化的价值，并构建全功能团队，也是一个不小的挑战。</p>
-<h3 id="5-服务间依赖测试"><a href="#5-服务间依赖测试" class="headerlink" title="(5)服务间依赖测试"></a>(5)服务间依赖测试</h3><p>在服务数量较多的情况下，如何有效地保证服务之间能有效按照接口的约定正常工作， 成为微服务实施过程中必须面临的巨大挑战。</p>
-<h3 id="6-服务间依赖管理"><a href="#6-服务间依赖管理" class="headerlink" title="(6)服务间依赖管理"></a>(6)服务间依赖管理</h3><p>随着微服 务个数的增多，如何清晰有效地展示服务之间的依赖关系，成为了一个挑战。</p>
-<h2 id="3-微服务与-SOA"><a href="#3-微服务与-SOA" class="headerlink" title="3.微服务与 SOA"></a>3.微服务与 SOA</h2><p>微服务可以讲是 SOA 的一种，但他们也有一些差异。</p>
-<table>
-<thead>
-<tr>
-<th>微服务</th>
-<th>SOA</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>能拆分的就拆分</td>
-<td>是整体的，服务能放一起的就放一起</td>
-</tr>
-<tr>
-<td>纵向业务划分</td>
-<td>水平分多层</td>
-</tr>
-<tr>
-<td>单一组织负责</td>
-<td>按层次划分不同部门的组织负责</td>
-</tr>
-<tr>
-<td>细粒度</td>
-<td>粗粒度</td>
-</tr>
-<tr>
-<td>两句话可以解释明白</td>
-<td>几百字是相当于SOA的目录</td>
-</tr>
-<tr>
-<td>独立的子公司</td>
-<td>类似大公司里面划分了一些业务单元</td>
-</tr>
-<tr>
-<td>组件小</td>
-<td>存在较复杂的组件</td>
-</tr>
-<tr>
-<td>业务逻辑存在于每一个服务中</td>
-<td>业务逻辑很卡多个业务领域</td>
-</tr>
-<tr>
-<td>使用轻量级的通信方式</td>
-<td>ESB充当了服务之间通信的角色</td>
-</tr>
-</tbody></table>
-<p>实现方面的差异：</p>
-<table>
-<thead>
-<tr>
-<th>微服务架构实现</th>
-<th>SOA实现</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>团队级，自底向上开展实施</td>
-<td>企业级，自顶向下开展实施</td>
-</tr>
-<tr>
-<td>一个系统被拆分成多个服务，粒度细</td>
-<td>服务由多个子系统组成，粒度大</td>
-</tr>
-<tr>
-<td>无集中式总线，松散的服务架构</td>
-<td>企业服务总线，集中式的服务架构</td>
-</tr>
-<tr>
-<td>集成方式简单</td>
-<td>集成方式复杂</td>
-</tr>
-<tr>
-<td>服务能独立部署</td>
-<td>单块架构系统，互相依赖，部署复杂</td>
-</tr>
-</tbody></table>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AD%EF%BC%89%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AD%EF%BC%89%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">软件架构设计（六）架构设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-09-26 00:00:00 / 修改时间：22:05:21" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>架构模式也称为架构风格，它是适当地选取战术的结果，这些固定的结果(模式)在高 层抽象层次上具有普遍实用性和复用性。</p>
-<p>通过架构模式，架构设计师可以借鉴和复用他人的经验，看看类似的问题别人是如何解 决的。但不要把模式看成是一个硬性的解决方法，它只是一种解决问题的思路。</p>
-<p>“模式和业务构件的区别就在于模式会引发你的思考。”</p>
-<h1 id="1-演变交付生命周期"><a href="#1-演变交付生命周期" class="headerlink" title="1.演变交付生命周期"></a>1.演变交付生命周期</h1><p><img src="/images/ruankao/6-47.png"></p>
-<p>在生命周期模型中，架构设计就是从初步的需求分析开始逐步进行循环迭代。即:一方面在了解系统需求前，不能开始设计架构;另一方 面，刚开始进行设计架构时并不需要等到全部需求都收集到。</p>
-<p>架构由少数关键需 求决定并在循环迭代中处于基本稳定状态，它作为演变的基础设施。</p>
-<h1 id="2-属性驱动设计法"><a href="#2-属性驱动设计法" class="headerlink" title="2.属性驱动设计法"></a>2.属性驱动设计法</h1><p>模型强调先建立软件架构，再把架构作为骨架，在骨架上循环迭代，逐步长出有血 有肉的系统之躯。</p>
-<p>属性驱动设计法(Attribute-Driven Design，ADD)就是一种定义软件架构 的方法，该方法将分解过程建立在软件必须满足的质量属性之上。</p>
-<p>ADD 的输入为:功能需 求(一般表示为用例)、限制条件和质量需求(一组特定于系统的质量场景)。</p>
-<p>ADD 的步骤如下：<br>(1)选择要分解的模块。<br>(2)根据如下步骤对模块进行求精:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">从具体的质量场景和功能需求集合中选择架构驱动因素。</span><br><span class="line">选择满足架构驱动因素的架构模式，根据前面的战术创建(或选择)模式。</span><br><span class="line">实例化模块并根据用例分配功能，使用多个视图进行表示。</span><br><span class="line">定义子模块的接口。</span><br><span class="line">验证用例和质量场景，并对其进行求精，使它们成为子模式的限制。</span><br></pre></td></tr></table></figure>
-<p>(3)对需要进一步分解的每个模块重复上述步骤。</p>
-<h1 id="3-按架构组织开发团队"><a href="#3-按架构组织开发团队" class="headerlink" title="3.按架构组织开发团队"></a>3.按架构组织开发团队</h1><p>像软件系统一样，开发小组也应该努力做到松耦合、高内聚。</p>
-<p>项目计划在架构确定之后可以结合分工进一步明细化，特别要规划好接口提供的 时间点，保证项目开发的整体协调性。</p>
-<h1 id="4-开发骨架系统"><a href="#4-开发骨架系统" class="headerlink" title="4.开发骨架系统"></a>4.开发骨架系统</h1><p>演变交付生命周期模型中有两个循环，第一个循环是通过迭代的方式开发出软件架构， 第二个循环是在架构的基础上通过迭代的方式开发出交付的最终版本。开发骨架系统就是第 二个循环的第一步。</p>
-<h1 id="5-利用商用构件进行开发"><a href="#5-利用商用构件进行开发" class="headerlink" title="5.利用商用构件进行开发"></a>5.利用商用构件进行开发</h1><p>模式本来就是针对特定问题的解，因此，针对需求的特点，也可以选用相应的模式来设 计架构，并利用对应于该模式的商用构件进行软件开发。例如可以使用 J2EE/EJB 进行开发 面向对象的分布式系统。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1266,14 +1128,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">50</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
