@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一、企业信息化概述1.企业信息化的目的企业信息化的目的就是要建立一个整体上相当于人的神经系统的数字神经系统。使得企业具有平稳和有效的运作能力， 对紧急情况和商机做出快速反应，为企业内外部用户提供有价值的信息，以提高企业的核心 竞争力。 2.企业信息化的规划首先，企业战略的层面。在规划中必须对企业目前的业务策略和未来的发展方向作深入 分析。其次，业务运作层面。针对企业所确定的业务战略，通过分析获得实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息系统基础知识（四）企业信息化与电子商务">
+<meta property="og:url" content="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="一、企业信息化概述1.企业信息化的目的企业信息化的目的就是要建立一个整体上相当于人的神经系统的数字神经系统。使得企业具有平稳和有效的运作能力， 对紧急情况和商机做出快速反应，为企业内外部用户提供有价值的信息，以提高企业的核心 竞争力。 2.企业信息化的规划首先，企业战略的层面。在规划中必须对企业目前的业务策略和未来的发展方向作深入 分析。其次，业务运作层面。针对企业所确定的业务战略，通过分析获得实">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/ruankao/7-11.png">
+<meta property="article:published_time" content="2021-10-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-08T06:47:28.338Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="软考">
+<meta property="article:tag" content="信息系统基础知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/7-11.png">
+
+<link rel="canonical" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>信息系统基础知识（四）企业信息化与电子商务 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          信息系统基础知识（四）企业信息化与电子商务
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-08 14:47:28" itemprop="dateModified" datetime="2021-10-08T14:47:28+08:00">2021-10-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一、企业信息化概述"><a href="#一、企业信息化概述" class="headerlink" title="一、企业信息化概述"></a>一、企业信息化概述</h1><h2 id="1-企业信息化的目的"><a href="#1-企业信息化的目的" class="headerlink" title="1.企业信息化的目的"></a>1.企业信息化的目的</h2><p>企业信息化的目的就是要建立一个整体上相当于<br>人的神经系统的数字神经系统。使得企业具有平稳和有效的运作能力， 对紧急情况和商机做出快速反应，为企业内外部用户提供有价值的信息，以提高企业的核心 竞争力。</p>
+<h2 id="2-企业信息化的规划"><a href="#2-企业信息化的规划" class="headerlink" title="2.企业信息化的规划"></a>2.企业信息化的规划</h2><p>首先，企业战略的层面。在规划中必须对企业目前的业务策略和未来的发展方向作深入 分析。<br>其次，业务运作层面。针对企业所确定的业务战略，通过分析获得实现这些目标的关键 业务驱动力和实现这些目标的关键流程。<br>再次，管理运作层面。虽然这一层面从价值链的角度上来说，属于辅助流程，但它对企 业日常管理的科学性、高效性是非常重要的。</p>
+<h2 id="3-企业信息化的方法"><a href="#3-企业信息化的方法" class="headerlink" title="3.企业信息化的方法"></a>3.企业信息化的方法</h2><p>几种常用的企业信息化方法。</p>
+<h3 id="1-业务流程重构方法。"><a href="#1-业务流程重构方法。" class="headerlink" title="(1)业务流程重构方法。"></a>(1)业务流程重构方法。</h3><p>企业业务流程重构的中心思想 是，在信息技术和网络技术迅猛发展的时代，企业必须重新审视企业的生产经营过程，利用 信息技术和网络技术，对企业的组织结构和工作方法进行“彻底的、根本性的”重新设计， 以适应当今市场发展和信息社会的需求。</p>
+<h3 id="2-核心业务应用方法。"><a href="#2-核心业务应用方法。" class="headerlink" title="(2)核心业务应用方法。"></a>(2)核心业务应用方法。</h3><h3 id="3-信息系统建设方法。"><a href="#3-信息系统建设方法。" class="headerlink" title="(3)信息系统建设方法。"></a>(3)信息系统建设方法。</h3><h3 id="4-主题数据库方法。"><a href="#4-主题数据库方法。" class="headerlink" title="(4)主题数据库方法。"></a>(4)主题数据库方法。</h3><p>主题数据库就是面向企业业务主题的数据库，也就是面向企业的核心业务的数据库。</p>
+<h3 id="5-资源管理方法。"><a href="#5-资源管理方法。" class="headerlink" title="(5)资源管理方法。"></a>(5)资源管理方法。</h3><p>资源是企业生存发展的根本保证，一个企业如果离开了资源，那 它是无法生存的。<br>流行的企业信息化的资源管理方法有很多，最常见的有 ERP、 SCM 等。</p>
+<h3 id="6-人力资本投资方法。"><a href="#6-人力资本投资方法。" class="headerlink" title="(6)人力资本投资方法。"></a>(6)人力资本投资方法。</h3><p>人力资本的概念是经济学理论发展的产物。人力资本与人力 资源的主要区别是人力资本理论把一部分企业的优秀员工看作一种资本，能够取得投资收益。 人力资本投资方法特别适用于那些依靠智力和知识而生存的企业，例如，各种咨询服务、软 件开发等企业。</p>
+<h1 id="二、企业资源规划（ERP）"><a href="#二、企业资源规划（ERP）" class="headerlink" title="二、企业资源规划（ERP）"></a>二、企业资源规划（ERP）</h1><p>ERP 是一种融合了企业最佳实践和先进信息技术的新型管理工具。 它扩充了 MIS、MRPII(Manufacturing Resources Planning，制造资源计划)的管理范围， 将供应商和企业内部的采购、生产、销售及客户紧密联系起来，可对供应链上的所有环节进 行有效管理，实现对企业的动态控制和各种资源的集成和优化，提升基础管理水平，追求企 业资源的合理高效利用。</p>
+<p>ERP 被认为是顾客驱动的、基于时间的、面向 整个供应链管理的制造资源计划。</p>
+<p>“企业资源”是指支持企业业务运作和战略运作的事物，既包括人们常说的人、财、物，也包括 人们没有特别关注的信息资源;同时，不仅包括企业的内部资源，还包括企业的各种外部资源。</p>
+<p>ERP 就是一个有效地组织、计划和实施企业的内外部资源的管理系统，它依靠 IT 的技术和手段以保证其信息的集成性、实时性和统一性。</p>
+<h2 id="1-ERP-的结构"><a href="#1-ERP-的结构" class="headerlink" title="1.ERP 的结构"></a>1.ERP 的结构</h2><h3 id="1-ERP-的管理思想"><a href="#1-ERP-的管理思想" class="headerlink" title="(1)ERP 的管理思想"></a>(1)ERP 的管理思想</h3><p>基本思想是将企业的业务流程看作一个紧密连接的供应链， 将企业内部划分成几个相互协同作业的支持子系统，如财务、市场营销、生产制造、质量控 制、服务维护、工程技术等。</p>
+<p>ERP 可以说是 MRPII的一个扩展。<br>第一，它将系统的管理核心从“在正确的时间制造和销售正确的产品” 转移到了“在最佳的时间和地点，获得企业的最大增值”;<br>第二，基于管理核心的转移，其 管理范围和领域也从制造业扩展到了其他行业和企业;<br>第三，在功能和业务集成性方面，都 有了很大加强，特别是商业智能的引入使得以往简单的事务处理系统变成了真正智能化的管 理控制系统。</p>
+<h3 id="2-软件产品"><a href="#2-软件产品" class="headerlink" title="(2)软件产品"></a>(2)软件产品</h3><p>现在，ERP 产品则发展到比较高的阶段。大多 数 ERP 产品供应商都在模块化的基础上，把软件产品和软件服务进行集成，实现软件产品 的技术先进性和个性化设计，为用户提供一体化的解决方案。</p>
+<h3 id="3-管理系统"><a href="#3-管理系统" class="headerlink" title="(3)管理系统"></a>(3)管理系统</h3><p>ERP 是一个集成的信息系统，ERP 承诺建立跨越企业各个部门、各种生产要素和环境的 单一应用原则下处理所有的事务，即意味着集成。这种集成应该包括人力资源、财务、销售、 制造、任务分派和企业供应链等的各项管理业务。</p>
+<p>具体而言，ERP 管理系统主要由六大功能目标组成:<br>一是支持企业整体发展战略经营系统。<br>二是实现全球大市场营销战略与集成化市场营销<br>三是完善企业成本管理机制。<br>四是研究开发管理系统<br>五是建立敏捷的后勤管理系统<br>六是实施准时生产方式</p>
+<h2 id="2-ERP-的主要功能"><a href="#2-ERP-的主要功能" class="headerlink" title="2.ERP 的主要功能"></a>2.ERP 的主要功能</h2><p>一是支持决策的功能<br>二是为处于不同行业的企业提供有针对性的 IT 解决方案<br>三是从企业内部的供应链发展为全行业和跨行业的供应链</p>
+<h2 id="3-ERP-的主要功能模块"><a href="#3-ERP-的主要功能模块" class="headerlink" title="3.ERP 的主要功能模块"></a>3.ERP 的主要功能模块</h2><p>物流、资金流、信息流</p>
+<p><img src="/images/ruankao/7-11.png"></p>
+<h1 id="三、客户关系管理（CRM）"><a href="#三、客户关系管理（CRM）" class="headerlink" title="三、客户关系管理（CRM）"></a>三、客户关系管理（CRM）</h1><h1 id="四、产品数据管理（PDM）"><a href="#四、产品数据管理（PDM）" class="headerlink" title="四、产品数据管理（PDM）"></a>四、产品数据管理（PDM）</h1><h1 id="五、企业门户"><a href="#五、企业门户" class="headerlink" title="五、企业门户"></a>五、企业门户</h1><h1 id="六、企业应用集成（EAI）"><a href="#六、企业应用集成（EAI）" class="headerlink" title="六、企业应用集成（EAI）"></a>六、企业应用集成（EAI）</h1><h1 id="七、供应链管理（EAI）"><a href="#七、供应链管理（EAI）" class="headerlink" title="七、供应链管理（EAI）"></a>七、供应链管理（EAI）</h1><h1 id="八、电子商务概述"><a href="#八、电子商务概述" class="headerlink" title="八、电子商务概述"></a>八、电子商务概述</h1>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E8%80%83/" rel="tag"># 软考</a>
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"># 信息系统基础知识</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/30/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E5%9B%9B%EF%BC%89.NET/" rel="prev" title="基于中间件的开发（四）.NET">
+      <i class="fa fa-chevron-left"></i> 基于中间件的开发（四）.NET
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%94%EF%BC%89%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%B8%8E%E5%95%86%E4%B8%9A%E6%99%BA%E8%83%BD/" rel="next" title="信息系统基础知识（五）知识管理与商业智能">
+      信息系统基础知识（五）知识管理与商业智能 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E6%A6%82%E8%BF%B0"><span class="nav-number">1.</span> <span class="nav-text">一、企业信息化概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-number">1.1.</span> <span class="nav-text">1.企业信息化的目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E7%9A%84%E8%A7%84%E5%88%92"><span class="nav-number">1.2.</span> <span class="nav-text">2.企业信息化的规划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">3.企业信息化的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E9%87%8D%E6%9E%84%E6%96%B9%E6%B3%95%E3%80%82"><span class="nav-number">1.3.1.</span> <span class="nav-text">(1)业务流程重构方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A0%B8%E5%BF%83%E4%B8%9A%E5%8A%A1%E5%BA%94%E7%94%A8%E6%96%B9%E6%B3%95%E3%80%82"><span class="nav-number">1.3.2.</span> <span class="nav-text">(2)核心业务应用方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%BB%BA%E8%AE%BE%E6%96%B9%E6%B3%95%E3%80%82"><span class="nav-number">1.3.3.</span> <span class="nav-text">(3)信息系统建设方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%B8%BB%E9%A2%98%E6%95%B0%E6%8D%AE%E5%BA%93%E6%96%B9%E6%B3%95%E3%80%82"><span class="nav-number">1.3.4.</span> <span class="nav-text">(4)主题数据库方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E3%80%82"><span class="nav-number">1.3.5.</span> <span class="nav-text">(5)资源管理方法。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E4%BA%BA%E5%8A%9B%E8%B5%84%E6%9C%AC%E6%8A%95%E8%B5%84%E6%96%B9%E6%B3%95%E3%80%82"><span class="nav-number">1.3.6.</span> <span class="nav-text">(6)人力资本投资方法。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BC%81%E4%B8%9A%E8%B5%84%E6%BA%90%E8%A7%84%E5%88%92%EF%BC%88ERP%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">二、企业资源规划（ERP）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-ERP-%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">2.1.</span> <span class="nav-text">1.ERP 的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-ERP-%E7%9A%84%E7%AE%A1%E7%90%86%E6%80%9D%E6%83%B3"><span class="nav-number">2.1.1.</span> <span class="nav-text">(1)ERP 的管理思想</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%BD%AF%E4%BB%B6%E4%BA%A7%E5%93%81"><span class="nav-number">2.1.2.</span> <span class="nav-text">(2)软件产品</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.1.3.</span> <span class="nav-text">(3)管理系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-ERP-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="nav-number">2.2.</span> <span class="nav-text">2.ERP 的主要功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ERP-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97"><span class="nav-number">2.3.</span> <span class="nav-text">3.ERP 的主要功能模块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%AE%A2%E6%88%B7%E5%85%B3%E7%B3%BB%E7%AE%A1%E7%90%86%EF%BC%88CRM%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">三、客户关系管理（CRM）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E4%BA%A7%E5%93%81%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%EF%BC%88PDM%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">四、产品数据管理（PDM）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E4%BC%81%E4%B8%9A%E9%97%A8%E6%88%B7"><span class="nav-number">5.</span> <span class="nav-text">五、企业门户</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8%E9%9B%86%E6%88%90%EF%BC%88EAI%EF%BC%89"><span class="nav-number">6.</span> <span class="nav-text">六、企业应用集成（EAI）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E4%BE%9B%E5%BA%94%E9%93%BE%E7%AE%A1%E7%90%86%EF%BC%88EAI%EF%BC%89"><span class="nav-number">7.</span> <span class="nav-text">七、供应链管理（EAI）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1%E6%A6%82%E8%BF%B0"><span class="nav-number">8.</span> <span class="nav-text">八、电子商务概述</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="政府信息化是传统政府向信息化政府的演变过程。具体地说，政府信息化就是应用现代 信息技术、网络技术和通信技术，通过信息资源的开发和利用来集成管理和服务，从而提高 政府的工作效率、决策质量、调控能力，并节约开支，改进政府的组织结构、业务流程和工 作方式，全方位地向社会提供优质、规范、透明的管理和服务。 第一，政府信息化必须借助于信息技术和网络技术，离不开信息基础设施和软件产品; 第二，政府信息化是一个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息系统基础知识（三）政府信息化与电子政务">
+<meta property="og:url" content="http://example.com/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E6%94%BF%E5%BA%9C%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="政府信息化是传统政府向信息化政府的演变过程。具体地说，政府信息化就是应用现代 信息技术、网络技术和通信技术，通过信息资源的开发和利用来集成管理和服务，从而提高 政府的工作效率、决策质量、调控能力，并节约开支，改进政府的组织结构、业务流程和工 作方式，全方位地向社会提供优质、规范、透明的管理和服务。 第一，政府信息化必须借助于信息技术和网络技术，离不开信息基础设施和软件产品; 第二，政府信息化是一个">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-08T06:00:17.879Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="软考">
+<meta property="article:tag" content="信息系统基础知识">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E6%94%BF%E5%BA%9C%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>信息系统基础知识（三）政府信息化与电子政务 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E6%94%BF%E5%BA%9C%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          信息系统基础知识（三）政府信息化与电子政务
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-08 00:00:00 / 修改时间：14:00:17" itemprop="dateCreated datePublished" datetime="2021-10-08T00:00:00+08:00">2021-10-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>政府信息化是传统政府向信息化政府的演变过程。具体地说，政府信息化就是应用现代 信息技术、网络技术和通信技术，通过信息资源的开发和利用来集成管理和服务，从而提高 政府的工作效率、决策质量、调控能力，并节约开支，改进政府的组织结构、业务流程和工 作方式，全方位地向社会提供优质、规范、透明的管理和服务。</p>
+<p>第一，政府信息化必须借助于信息技术和网络技术，离不开信息基础设施和软件产品;</p>
+<p>第二，政府信息化是一个系统工程，它不仅是与行政有关部门的信息化，还包括立法、司法部门及其他一些公共组织的信息化;</p>
+<p>第三，政府信息化并不是简单地将传统的政府管理事务原封不动地搬到互联网上，而是要对已有的组织结构和业务流程进行重组或再造。</p>
+<p>政府信息化的主要内容是电子政务。因此，在大多数情况下，电子 政务可以作为政府信息化的同义语来使用。</p>
+<h1 id="一、我国政府信息化的历程和策略"><a href="#一、我国政府信息化的历程和策略" class="headerlink" title="一、我国政府信息化的历程和策略"></a>一、我国政府信息化的历程和策略</h1><h2 id="20-世纪-80-年代末期“中国国家经济信息系统”的建设和运行。"><a href="#20-世纪-80-年代末期“中国国家经济信息系统”的建设和运行。" class="headerlink" title="20 世纪 80 年代末期“中国国家经济信息系统”的建设和运行。"></a>20 世纪 80 年代末期“中国国家经济信息系统”的建设和运行。</h2><p>国家经济信息系统包括着重为国家宏观经济服务的主系统，以及各部门各行业的专业经济信息系统在内的全国系统。</p>
+<h2 id="20-世纪-90-年代"><a href="#20-世纪-90-年代" class="headerlink" title="20 世纪 90 年代"></a>20 世纪 90 年代</h2><p>一是以“金”字头为代表的多项信息工程项目取得了突破性进展。金桥、金关、金卡“三金”工程。<br>二是政府上网工程初具规模，“十二金”工程。第一类是对加强监管、提高效率和推进 公共服务起到核心作用的办公业务资源系统、宏观经济管理系统建设;第二类是增强政府收 入能力、保证公共支出合理性的金税、金关、金财、金融监管(含金卡)、金审 5 个业务系 统;第三类是保障社会秩序、为国民经济和社会发展打下坚实基础的金盾、金保、金农、金 水、金质 5 个业务系统建设。<br>三是各级政府都加强了电子政务的软件和硬件两方面的基础建设，建成了覆盖广泛的“两网、一站、四库”。“两网”是指政务内网和政务外网，两网之间物理隔离，政务外网与互联网之间逻辑隔离;“一站”，是政府门户网站;“四库”，即建立人口、法人单位、空间地理和自然资源、宏观经济 4 个基础数据库。<br>四是各地在推动政府信息化方面健康发展，并在全国普遍实行了 政府上网工程。</p>
+<p>政府信息化的一个中心任务是实现由传统政务到电子政务的转变。</p>
+<p>(1)做好战略数据规划。<br>(2)面向主导业务流程。<br>(3)重视资源条件。<br>(4)以人为本。<br>(5)设立 CIO。<br>(6)加强规范化和标准化。<br>(7)充分利用社会资源。</p>
+<h1 id="二、电子政务的内容"><a href="#二、电子政务的内容" class="headerlink" title="二、电子政务的内容"></a>二、电子政务的内容</h1><h2 id="1-政府与政府-Government-To-Government"><a href="#1-政府与政府-Government-To-Government" class="headerlink" title="(1)政府与政府(Government To Government)"></a>(1)政府与政府(Government To Government)</h2><h2 id="2-政府对企业-Government-To-Business"><a href="#2-政府对企业-Government-To-Business" class="headerlink" title="(2)政府对企业(Government To Business)"></a>(2)政府对企业(Government To Business)</h2><h2 id="3-政府对公民（G2C）"><a href="#3-政府对公民（G2C）" class="headerlink" title="(3)政府对公民（G2C）"></a>(3)政府对公民（G2C）</h2><h2 id="4-企业对政府"><a href="#4-企业对政府" class="headerlink" title="(4)企业对政府"></a>(4)企业对政府</h2><h2 id="5-公民对政府"><a href="#5-公民对政府" class="headerlink" title="(5)公民对政府"></a>(5)公民对政府</h2><h2 id="6-政府对公务员（G2E）"><a href="#6-政府对公务员（G2E）" class="headerlink" title="(6)政府对公务员（G2E）"></a>(6)政府对公务员（G2E）</h2><h1 id="三、电子政务建设的过程模式和技术模式"><a href="#三、电子政务建设的过程模式和技术模式" class="headerlink" title="三、电子政务建设的过程模式和技术模式"></a>三、电子政务建设的过程模式和技术模式</h1><h2 id="1-电子政务建设的过程模式"><a href="#1-电子政务建设的过程模式" class="headerlink" title="1.电子政务建设的过程模式"></a>1.电子政务建设的过程模式</h2><p>(1)以用户为中心<br>(2)引进“客户关系管理”技术<br>(3)政府门户</p>
+<h2 id="2-电子政务的技术模式"><a href="#2-电子政务的技术模式" class="headerlink" title="2.电子政务的技术模式"></a>2.电子政务的技术模式</h2><p>(1)网络管理模式<br>电子政务在网络管理上分为政府专网和通用网络两部分，包括专用网络、内部网络和外部网络。<br>(2)信息资源管理模式<br>电子政务可以选用的信息资 源管理模式有多种，目前主要有两种，即元数据管理模式和 XML 数据管理模式。<br>(3)应用开发模式<br>(4)电子政务的安全体系<br>电子政务的安全体系包括物理安全、网络安全、信息安全及安全管理等方面。<br>(5)电子政务的标准化<br>《国家电子政务标准化指南》共分为以下六个部分。<br>第一部分:总则。概括描述电子政务标准体系及标准化的机制。<br>第二部分:工程管理。概括描述电子政务工程管理须遵循或参考的技术要求、标准和管理规定。<br>第三部分:网络建设。概括描述网络建设须遵循或参考的技术要求、标准和管理规定。<br>第四部分:信息共享。概括描述信息共享须遵循或参考的技术要求、标准和管理规定。<br>第五部分:支撑技术。概括描述支撑技术须遵循或参考的技术要求、标准和管理规定。<br>第六部分:信息安全。概括描述保障信息安全须遵循或参考的技术要求、标准和管理规定。</p>
+<p>六项电子政务标准分别如下:<br>1 基于 XML 电子公文格式规范第一部分:总则，第二部分:公文体;<br>2 XML 在电子政务中的应用指南;<br>3 电子政务业务流程设计方法通用规范;<br>4 信息化工程监理规范;<br>5 电子政务数据元第一部分:设计和管理规范;<br>6 电子政务主题词表编制规则。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E8%80%83/" rel="tag"># 软考</a>
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"># 信息系统基础知识</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/" rel="prev" title="基于中间件的开发（一）中间件技术">
+      <i class="fa fa-chevron-left"></i> 基于中间件的开发（一）中间件技术
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%88%91%E5%9B%BD%E6%94%BF%E5%BA%9C%E4%BF%A1%E6%81%AF%E5%8C%96%E7%9A%84%E5%8E%86%E7%A8%8B%E5%92%8C%E7%AD%96%E7%95%A5"><span class="nav-number">1.</span> <span class="nav-text">一、我国政府信息化的历程和策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#20-%E4%B8%96%E7%BA%AA-80-%E5%B9%B4%E4%BB%A3%E6%9C%AB%E6%9C%9F%E2%80%9C%E4%B8%AD%E5%9B%BD%E5%9B%BD%E5%AE%B6%E7%BB%8F%E6%B5%8E%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E2%80%9D%E7%9A%84%E5%BB%BA%E8%AE%BE%E5%92%8C%E8%BF%90%E8%A1%8C%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">20 世纪 80 年代末期“中国国家经济信息系统”的建设和运行。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-%E4%B8%96%E7%BA%AA-90-%E5%B9%B4%E4%BB%A3"><span class="nav-number">1.2.</span> <span class="nav-text">20 世纪 90 年代</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-number">2.</span> <span class="nav-text">二、电子政务的内容</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%94%BF%E5%BA%9C%E4%B8%8E%E6%94%BF%E5%BA%9C-Government-To-Government"><span class="nav-number">2.1.</span> <span class="nav-text">(1)政府与政府(Government To Government)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%94%BF%E5%BA%9C%E5%AF%B9%E4%BC%81%E4%B8%9A-Government-To-Business"><span class="nav-number">2.2.</span> <span class="nav-text">(2)政府对企业(Government To Business)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%94%BF%E5%BA%9C%E5%AF%B9%E5%85%AC%E6%B0%91%EF%BC%88G2C%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">(3)政府对公民（G2C）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E4%BC%81%E4%B8%9A%E5%AF%B9%E6%94%BF%E5%BA%9C"><span class="nav-number">2.4.</span> <span class="nav-text">(4)企业对政府</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%85%AC%E6%B0%91%E5%AF%B9%E6%94%BF%E5%BA%9C"><span class="nav-number">2.5.</span> <span class="nav-text">(5)公民对政府</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E6%94%BF%E5%BA%9C%E5%AF%B9%E5%85%AC%E5%8A%A1%E5%91%98%EF%BC%88G2E%EF%BC%89"><span class="nav-number">2.6.</span> <span class="nav-text">(6)政府对公务员（G2E）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E5%BB%BA%E8%AE%BE%E7%9A%84%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%BC%8F%E5%92%8C%E6%8A%80%E6%9C%AF%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">三、电子政务建设的过程模式和技术模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E5%BB%BA%E8%AE%BE%E7%9A%84%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.1.</span> <span class="nav-text">1.电子政务建设的过程模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1%E7%9A%84%E6%8A%80%E6%9C%AF%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">2.电子政务的技术模式</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
