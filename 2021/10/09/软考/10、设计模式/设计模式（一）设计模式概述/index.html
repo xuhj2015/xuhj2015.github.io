@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一、设计模式的概念设计模式解决的是一类问题。工厂模式就是为了解决类创建的问题，适配器模式则是为了解决类接口不匹配的问题。 (1)学习这些模式是一个方面，另一方面更要了解模式中的思想。(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。 二、设计模式的组成在描述一个设计模式时，至少需要包含四个方面:模式名称(Pattern name)、问题(Problem)、解决方案(Solution">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式（一）设计模式概述">
+<meta property="og:url" content="http://example.com/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="一、设计模式的概念设计模式解决的是一类问题。工厂模式就是为了解决类创建的问题，适配器模式则是为了解决类接口不匹配的问题。 (1)学习这些模式是一个方面，另一方面更要了解模式中的思想。(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。 二、设计模式的组成在描述一个设计模式时，至少需要包含四个方面:模式名称(Pattern name)、问题(Problem)、解决方案(Solution">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/ruankao/8-1.png">
+<meta property="article:published_time" content="2021-10-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-09T05:49:57.789Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="软考">
+<meta property="article:tag" content="设计模式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/8-1.png">
+
+<link rel="canonical" href="http://example.com/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>设计模式（一）设计模式概述 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          设计模式（一）设计模式概述
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-09 00:00:00 / 修改时间：13:49:57" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="一、设计模式的概念"><a href="#一、设计模式的概念" class="headerlink" title="一、设计模式的概念"></a>一、设计模式的概念</h1><p>设计模式解决的是一类问题。<br>工厂模式就是为了解决类创建的问题，<br>适配器模式则是为了解决类接口不匹配的问题。</p>
+<p>(1)学习这些模式是一个方面，另一方面更要了解模式中的思想。<br>(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。</p>
+<h1 id="二、设计模式的组成"><a href="#二、设计模式的组成" class="headerlink" title="二、设计模式的组成"></a>二、设计模式的组成</h1><p>在描述一个设计模式时，至少需要包含四个方面:<br>模式名称(Pattern name)、<br>问题(Problem)、<br>解决方案(Solution)、<br>效果(Consequence)。</p>
+<h1 id="三、GoF设计模式"><a href="#三、GoF设计模式" class="headerlink" title="三、GoF设计模式"></a>三、GoF设计模式</h1><h2 id="补充-简单工厂"><a href="#补充-简单工厂" class="headerlink" title="(补充)简单工厂"></a>(补充)简单工厂</h2><p>1、写一个工厂类，使用静态方法，根据传参来new不同的产品对象<br>2、客户端调用这个工厂类的静态方法，就可以获取想要的产品</p>
+<h2 id="1-Factory-Method-模式。工厂模式"><a href="#1-Factory-Method-模式。工厂模式" class="headerlink" title="(1)Factory Method 模式。工厂模式"></a>(1)Factory Method 模式。工厂模式</h2><p>Factory Method 模式提供了一种延迟创建类的方法，使用 这个方法可以在运行期由子类决定创建哪一个类的实例。<br>1、写一个抽象工厂类，每个工厂实现类负责将new不同种类的产品。<br>2、客户端new不同的工厂实现类就可以获得不同的产品。</p>
+<h2 id="2-Abstract-Factory-模式。抽象工厂模式"><a href="#2-Abstract-Factory-模式。抽象工厂模式" class="headerlink" title="(2)Abstract Factory 模式。抽象工厂模式"></a>(2)Abstract Factory 模式。抽象工厂模式</h2><p>Abstract Factory 又称为抽象工厂模式，该模式主要为解决 复杂系统中对象创建的问题。抽象工厂模式提供了一个一致的对象创建接口来创建一系列具 有相似基类或相似接口的对象。<br>1、写一个抽象工厂类，然后每个工厂实现类负责new一组不同的种类的产品。<br>2、客户端new需要某一组的产品，只需要new一个工厂即可。</p>
+<h2 id="3-Builder-模式。建造者模式"><a href="#3-Builder-模式。建造者模式" class="headerlink" title="(3)Builder 模式。建造者模式"></a>(3)Builder 模式。建造者模式</h2><p>Builder 模式与 Abstract Factory 模式非常类似，但 Builder 模式是逐步地构造出一个复杂对象，并在最后返回对象的实例。Builder 模式可以把复杂对象的创建与表示分离，使得同样的创建过程可以创建不同的表示。<br>1、Builder：给出一个抽象接口，以规范产品对象的各个组成成分的建造。这个接口规定要实现复杂对象的哪些部分的创建，并不涉及具体的对象部件的创建。<br>2、ConcreteBuilder：实现Builder接口，针对不同的商业逻辑，具体化复杂对象的各部分的创建。在建造过程完成后，提供产品的实例。<br>3、Director：调用具体建造者来创建复杂对象的各个部分，在指导者中不涉及具体产品的信息，只负责保证对象各部分完整创建或按某种顺序创建，是一个具体的类。<br>4、Product：要创建的复杂对象类。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Director &#123;</span><br><span class="line">    </span><br><span class="line">    public Product constructProduct(ConcreteBuilder concreteBuilder)&#123;</span><br><span class="line">        concreteBuilder.buildBasic();</span><br><span class="line">        concreteBuilder.buildWalls();</span><br><span class="line">        concreteBuilder.roofed();</span><br><span class="line">        return concreteBuilder.buildProduct();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-Prototype-模式。原型模式"><a href="#4-Prototype-模式。原型模式" class="headerlink" title="(4)Prototype 模式。原型模式"></a>(4)Prototype 模式。原型模式</h2><p>Prototype 模式可以根据原型实例制定创建的对象的种类，并通过深复制这个原型来创建新的对象。Prototype 模式有着同 Abstract Factory 模式和 Builder 模式相同的效果，不过当需要实例化的类是在运行期才被指定的而且要避免创建一个与产品 曾是平行的工厂类层次时，可以使用 Prototype 模式。使用 Prototype 模式可以在运行时 增加或减少原型，比 Abstract Factory 和 Builder 模式更加灵活。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Prototype pro = new Prototype();</span><br><span class="line">Prototype pro1 = (Prototype)pro.clone();</span><br></pre></td></tr></table></figure>
+<h2 id="5-Singleton-模式。单例模式"><a href="#5-Singleton-模式。单例模式" class="headerlink" title="(5)Singleton 模式。单例模式"></a>(5)Singleton 模式。单例模式</h2><p>Singleton 模式也是一种很有代表性的模式。使用 Singleton 模式 可以保证一个类仅有一个实例，从而可以提供一个单一的全局访问点。</p>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>在定义类的静态私有变量同时进行实例化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">        return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好处：线程安全；获取实例速度快<br>缺点：类加载即初始化实例，内存浪费</p>
+<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private volatile static Singleton singleton;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static Singleton getSingleton() &#123;</span><br><span class="line">        if (singleton == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：线程安全，进行双重检查，保证只在实例未初始化前进行同步，效率高<br>缺点：实例非空判断，耗费一定资源</p>
+<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private static class SingletonHolder &#123;</span><br><span class="line">        private static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingletonHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方式利用了classloder的机制来保证初始化instance时只有一个线程，但singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。如果实例化instance很消耗资源，我们想让他延迟加载，此外，我们不希望在Singleton类加载时就实例化，因为不能确保Singleton类还可能在其他的地方被主动使用从而被加载。这个时候，这种方式相比饿汉式就显得更合理。</p>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：写法简单，天然线程安全，可防止反射生成实例，是Effective Java作者Josh Bloch提倡的方式。</p>
+<h2 id="6-Adapter-模式。适配者模式"><a href="#6-Adapter-模式。适配者模式" class="headerlink" title="(6)Adapter 模式。适配者模式"></a>(6)Adapter 模式。适配者模式</h2><p>Adapter 模式可以解决系统间接口不相容的问题。通过 Adapter 可以把类的接口转化为客户程序所希望的接口，从而提高复用性。<br>实现原来的接口，方法体却是另一个对象的实现。</p>
+<h3 id="接口适配"><a href="#接口适配" class="headerlink" title="接口适配"></a>接口适配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">interface Mp4&#123;</span><br><span class="line">    void playMp4();</span><br><span class="line">&#125;</span><br><span class="line">interface Avi&#123;</span><br><span class="line">    void playAvi();</span><br><span class="line">&#125;</span><br><span class="line">class VideoPlayer implements Mp4&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void playMp4() &#123;</span><br><span class="line">        System.out.println(&quot;播放Mp4格式的视频文件.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class FormatFactory extends VideoPlayer  implements Avi&#123;    </span><br><span class="line">    @Override</span><br><span class="line">    public void playAvi() &#123;</span><br><span class="line">        //转换成MP4格式的视频</span><br><span class="line">        playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;        </span><br><span class="line">    Mp4 mp4=new VideoPlayer();</span><br><span class="line">    mp4.playMp4();</span><br><span class="line">    Avi avi=new FormatFactory();</span><br><span class="line">    avi.playAvi();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类适配"><a href="#类适配" class="headerlink" title="类适配"></a>类适配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class FormatFactory2 implements Rvmb&#123;</span><br><span class="line">    private Mp4 mp4;</span><br><span class="line">    public FormatFactory2(Mp4 mp4) &#123;</span><br><span class="line">        this.mp4=mp4;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void playRvmb() &#123;</span><br><span class="line">        mp4.playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Rvmb rvmb=new FormatFactory2(new VideoPlayer());</span><br><span class="line">    rvmb.playRvmb();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="7-Bridge-模式。桥接模式"><a href="#7-Bridge-模式。桥接模式" class="headerlink" title="(7)Bridge 模式。桥接模式"></a>(7)Bridge 模式。桥接模式</h2><p>Bridge 模式把类的抽象部分同实现部分相分离，这样类的抽象和实现都可以独立地变化。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">interface Pen&#123;</span><br><span class="line">    void write();</span><br><span class="line">&#125;</span><br><span class="line">class RedPen implements Pen&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class  Paper&#123;</span><br><span class="line">    protected  Pen pen;</span><br><span class="line">    void setPen(Pen pen)&#123;</span><br><span class="line">        this.pen=pen;</span><br><span class="line">    &#125;   </span><br><span class="line">    abstract void writing();</span><br><span class="line">&#125;</span><br><span class="line">class ExaminationPaper extends Paper&#123;</span><br><span class="line">    @Override</span><br><span class="line">    void writing() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Paper paper=new ExaminationPaper();</span><br><span class="line">    paper.setPen(new RedPen());</span><br><span class="line">    paper.writing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-Composite-模式。复合模式"><a href="#8-Composite-模式。复合模式" class="headerlink" title="(8)Composite 模式。复合模式"></a>(8)Composite 模式。复合模式</h2><p>Composite 模式提供了一种以树形结构组合对象的方法，使用Composite 可以使单个对象和组合后的对象具有一致性以提高软件的复用性。</p>
+<h2 id="9-Decorator-模式。装饰模式"><a href="#9-Decorator-模式。装饰模式" class="headerlink" title="(9)Decorator 模式。装饰模式"></a>(9)Decorator 模式。装饰模式</h2><p>Decorator 模式可以动态地为对象的某一个方法增加更多的功能。在很多时候，使用 Decorator 模式可以不必继承出新的子类从而维护简洁的类继承结构。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">    private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">    public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10-Facade-模式。外观模式"><a href="#10-Facade-模式。外观模式" class="headerlink" title="(10)Facade 模式。外观模式"></a>(10)Facade 模式。外观模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class FacadePattern &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Facade f = new Facade();</span><br><span class="line">        f.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Facade &#123; //外观角色</span><br><span class="line">    private SubSystem01 obj1 = new SubSystem01();</span><br><span class="line">    private SubSystem02 obj2 = new SubSystem02();</span><br><span class="line">    private SubSystem03 obj3 = new SubSystem03();</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        obj1.method1();</span><br><span class="line">        obj2.method2();</span><br><span class="line">        obj3.method3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="11-Flyweight-模式。享元模式，共享元素"><a href="#11-Flyweight-模式。享元模式，共享元素" class="headerlink" title="(11)Flyweight 模式。享元模式，共享元素"></a>(11)Flyweight 模式。享元模式，共享元素</h2><p>Flyweight 模式可以共享大量的细粒度对象，从而节省创建对象 所需要分配的空间，不过在时间上的开销会变大。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public Flyweight factory(int state)&#123;</span><br><span class="line">    if(map.containsKey(state))&#123;</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        map.put(state, new ConcreteFlyweight(state));</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="12-Proxy-模式。代理模式"><a href="#12-Proxy-模式。代理模式" class="headerlink" title="(12)Proxy 模式。代理模式"></a>(12)Proxy 模式。代理模式</h2><p>Proxy 模式为对象提供了一种访问代理对象，通过对象 Proxy 可以控制客户程序的访问。例如:访问权限的控制、访问地址的控制、访问方式的控制等， 甚至可以通过 Proxy 将开销较大的访问化整为零，提高访问效率。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Customer customer=new Customer();</span><br><span class="line">customer.setCash(120000);</span><br><span class="line">BuyCarProxy buyCarProxy=new BuyCarProxy(customer);</span><br><span class="line">buyCarProxy.buyCar();</span><br></pre></td></tr></table></figure>
+<h2 id="13-Interpreter-模式。解释器模式"><a href="#13-Interpreter-模式。解释器模式" class="headerlink" title="(13)Interpreter 模式。解释器模式"></a>(13)Interpreter 模式。解释器模式</h2><p>定义了一个解释器，来解释遵循给定语言和文法的句子。<br>只需要向计算机输入一个句子或文件，就能按照预定的文法规则来对句子或文件进行解释。<br>例如输入“1+2+3-4+1”时，将输出计算结果为3。</p>
+<h2 id="14-Template-Method-模式。模板方法模式"><a href="#14-Template-Method-模式。模板方法模式" class="headerlink" title="(14)Template Method 模式。模板方法模式"></a>(14)Template Method 模式。模板方法模式</h2><p>定义一个操作的模板，其中的一些步骤会在子类中实现，以适应不同的情况。<br>在父类中定义处理流程的框架，在子类中实现具体的处理方式。</p>
+<h2 id="15-Chain-of-Responsibility-模式。责任链模式"><a href="#15-Chain-of-Responsibility-模式。责任链模式" class="headerlink" title="(15)Chain of Responsibility 模式。责任链模式"></a>(15)Chain of Responsibility 模式。责任链模式</h2><p>Chain of Responsibility 模式把可以响应请求的对象 组织成一条链，并在这条对象链上传递请求，从而保证多个对象都有机会处理请求而且可以 避免请求方和相应方的耦合。</p>
+<p>一个纯的责任链模式要求一个具体的处理者对象只能在两个行为中选择一个：一个是承担责任，二是把责任推给下家。不允许出现某一个具体处理者对象在承担了一部分责任后又把责任向下传的情况。</p>
+<p>在一个纯的责任链模式里面，一个请求必须被某一个处理者对象所接收；在一个不纯的责任链模式里面，一个请求可以最终不被任何接收端对象所接收。纯的责任链模式的例子是不容易找到的，一般看到的例子均是不纯的责任链模式的实现。</p>
+<h2 id="16-Command-模式。命令模式"><a href="#16-Command-模式。命令模式" class="headerlink" title="(16)Command 模式。命令模式"></a>(16)Command 模式。命令模式</h2><p>将请求封装为对象，从而增强请求的能力，如参数化、排队、 记录日志等。</p>
+<p>Command有时也被称为事件（event）。它与“事件驱动编程”中的“事件”是一样的意思。当发生点击鼠标、按下键盘按键等事件时，我们可以先将这些事件作成实例，然后按照发生顺序放入队列中。接着，再依次去处理它们。在GUI（graphical user interface）编程中，经常需要与“事件”打交道。即为在有多个命令，并且这些命令有一定的逻辑顺序，且可能需要保存的这些命令的数据，那么可以使用Command设计模式。</p>
+<h2 id="17-Iterator-模式。迭代器模式"><a href="#17-Iterator-模式。迭代器模式" class="headerlink" title="(17)Iterator 模式。迭代器模式"></a>(17)Iterator 模式。迭代器模式</h2><p>Iterator 模式提供了顺序访问一个对象集合中的各元素的方法， 使用 Iterator 可以避免暴露集合中对象的耦合关系。</p>
+<h2 id="18-Mediator-模式。仲裁者模式、中介者模式"><a href="#18-Mediator-模式。仲裁者模式、中介者模式" class="headerlink" title="(18)Mediator 模式。仲裁者模式、中介者模式"></a>(18)Mediator 模式。仲裁者模式、中介者模式</h2><p>Mediator 模式可以减少系统中对象间的耦合性。Mediator 模式 使用中介对象封装其他的对象，从而使这些被封装的对象间的关系就成了松散耦合。</p>
+<p>例如：QQ聊天</p>
+<h2 id="19-Memento-模式。备忘录模式"><a href="#19-Memento-模式。备忘录模式" class="headerlink" title="(19)Memento 模式。备忘录模式"></a>(19)Memento 模式。备忘录模式</h2><p>Memento 模式提供了一种捕获对象状态的方法，且不会破坏对 象的封装。并且可以在对象外部保存对象的状态，并在需要的时候恢复对象状态。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    List&lt;Memento&gt; savedTimes = new ArrayList&lt;&gt;();</span><br><span class="line">    Life life = new Life();</span><br><span class="line">    life.set(&quot;3000 A.D.&quot;);</span><br><span class="line">    savedTimes.add(life.saveToMemento());</span><br><span class="line">    life.set(&quot;4000 A.D.&quot;);</span><br><span class="line">    life.restoreFromMemento(savedTimes.get(0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="20-Observer-模式。观察者模式"><a href="#20-Observer-模式。观察者模式" class="headerlink" title="(20)Observer 模式。观察者模式"></a>(20)Observer 模式。观察者模式</h2><p>Observer 模式提供了将对象的状态广播到一组观察者的方式， 从而可以让每个观察者随时可以得到对象更新的通知。</p>
+<h2 id="21-State-模式。状态模式"><a href="#21-State-模式。状态模式" class="headerlink" title="(21)State 模式。状态模式"></a>(21)State 模式。状态模式</h2><p>State 模式允许一个对象在其内部状态改变的时候改变它的行为。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public void setState(State state) &#123;</span><br><span class="line">    System.out.println(&quot;订单信息已更新！&quot;);</span><br><span class="line">    this.state = state;</span><br><span class="line">    this.state.handle();</span><br><span class="line">&#125;</span><br><span class="line">public static  void  main(String [] args) &#123;</span><br><span class="line">    Context context = new Context();</span><br><span class="line">    context.setState(new Booked());</span><br><span class="line">    context.setState(new Payed());</span><br><span class="line">    context.setState(new Sended());</span><br><span class="line">    context.setState(new InWay());</span><br><span class="line">    context.setState(new Recieved());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="22-Strategy-模式。策略模式"><a href="#22-Strategy-模式。策略模式" class="headerlink" title="(22)Strategy 模式。策略模式"></a>(22)Strategy 模式。策略模式</h2><p>使用 Strategy 模式可以让对象中算法的变化独立于客户。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">状态模式和策略模式的不同点：</span><br><span class="line">策略模式中，类的功能是根据当前条件主动更改；</span><br><span class="line">状态模式中，类的功能是被动由当前状态更改；</span><br><span class="line">策略模式中每个行为或算法之间没有关联；</span><br><span class="line">状态模式中的状态之间有关联，并且状态本身控制着状态转移；</span><br></pre></td></tr></table></figure>
+<h2 id="23-Visitor-模式。访问者模式"><a href="#23-Visitor-模式。访问者模式" class="headerlink" title="(23)Visitor 模式。访问者模式"></a>(23)Visitor 模式。访问者模式</h2><p>表示对某对象结构中各元素的操作，使用 Visitor 模式可以在不改<br>变各元素类的前提下定义作用于这些元素的新操作。</p>
+<p>双重分发</p>
+<h1 id="四、其他设计模式"><a href="#四、其他设计模式" class="headerlink" title="四、其他设计模式"></a>四、其他设计模式</h1><h2 id="1-Intercepting-Filter-模式。拦截过滤器模式"><a href="#1-Intercepting-Filter-模式。拦截过滤器模式" class="headerlink" title="(1)Intercepting Filter 模式。拦截过滤器模式"></a>(1)Intercepting Filter 模式。拦截过滤器模式</h2><p>在 J2EE 的 BPS(Basic Programming System，基本编程系 统)应用框架下，在真正响应客户端请求前经常需要进行一些预处理，如客户身份验证、客 户 Session 的合法性验证、字符集转码、客户请求记录等。</p>
+<h2 id="2-Session-Facade-模式。"><a href="#2-Session-Facade-模式。" class="headerlink" title="(2)Session Facade 模式。"></a>(2)Session Facade 模式。</h2><p>在 J2EE 开发领域，人们把Session Bean 和 Facade 模式结合起来， 封装业务逻辑的接口，形成了 Session Facade 模式。</p>
+<h1 id="五、设计模式与软件架构"><a href="#五、设计模式与软件架构" class="headerlink" title="五、设计模式与软件架构"></a>五、设计模式与软件架构</h1><p>软件架构更倾向于从整体和全局上描述软件的组成。<br>设计模式更侧重于类与类、对象与对象之间的关系。<br>设计模式和软件架构是面向不同层次问题的解决方案。</p>
+<h1 id="六、设计模式分类"><a href="#六、设计模式分类" class="headerlink" title="六、设计模式分类"></a>六、设计模式分类</h1><p>设计模式分为三类，分别为创建型、结构型和行为型。</p>
+<p><img src="/images/ruankao/8-1.png"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E8%80%83/" rel="tag"># 软考</a>
+              <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag"># 设计模式</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8F%8A%E5%AE%9E%E7%8E%B0/" rel="prev" title="设计模式（二）设计模式及实现">
+      <i class="fa fa-chevron-left"></i> 设计模式（二）设计模式及实现
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">一、设计模式的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">二、设计模式的组成</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81GoF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">三、GoF设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E5%85%85-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82"><span class="nav-number">3.1.</span> <span class="nav-text">(补充)简单工厂</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Factory-Method-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.2.</span> <span class="nav-text">(1)Factory Method 模式。工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Abstract-Factory-%E6%A8%A1%E5%BC%8F%E3%80%82%E6%8A%BD%E8%B1%A1%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.3.</span> <span class="nav-text">(2)Abstract Factory 模式。抽象工厂模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Builder-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.4.</span> <span class="nav-text">(3)Builder 模式。建造者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Prototype-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.5.</span> <span class="nav-text">(4)Prototype 模式。原型模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Singleton-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.6.</span> <span class="nav-text">(5)Singleton 模式。单例模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A5%BF%E6%B1%89%E5%BC%8F"><span class="nav-number">3.6.1.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%87%92%E6%B1%89%E5%BC%8F"><span class="nav-number">3.6.2.</span> <span class="nav-text">懒汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E5%86%85%E9%83%A8%E7%B1%BB"><span class="nav-number">3.6.3.</span> <span class="nav-text">静态内部类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%9A%E4%B8%BE"><span class="nav-number">3.6.4.</span> <span class="nav-text">枚举</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Adapter-%E6%A8%A1%E5%BC%8F%E3%80%82%E9%80%82%E9%85%8D%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.7.</span> <span class="nav-text">(6)Adapter 模式。适配者模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E9%80%82%E9%85%8D"><span class="nav-number">3.7.1.</span> <span class="nav-text">接口适配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E9%80%82%E9%85%8D"><span class="nav-number">3.7.2.</span> <span class="nav-text">类适配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Bridge-%E6%A8%A1%E5%BC%8F%E3%80%82%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.8.</span> <span class="nav-text">(7)Bridge 模式。桥接模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Composite-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%A4%8D%E5%90%88%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.9.</span> <span class="nav-text">(8)Composite 模式。复合模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Decorator-%E6%A8%A1%E5%BC%8F%E3%80%82%E8%A3%85%E9%A5%B0%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.10.</span> <span class="nav-text">(9)Decorator 模式。装饰模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-Facade-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%A4%96%E8%A7%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.11.</span> <span class="nav-text">(10)Facade 模式。外观模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-Flyweight-%E6%A8%A1%E5%BC%8F%E3%80%82%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F%EF%BC%8C%E5%85%B1%E4%BA%AB%E5%85%83%E7%B4%A0"><span class="nav-number">3.12.</span> <span class="nav-text">(11)Flyweight 模式。享元模式，共享元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-Proxy-%E6%A8%A1%E5%BC%8F%E3%80%82%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.13.</span> <span class="nav-text">(12)Proxy 模式。代理模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13-Interpreter-%E6%A8%A1%E5%BC%8F%E3%80%82%E8%A7%A3%E9%87%8A%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.14.</span> <span class="nav-text">(13)Interpreter 模式。解释器模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14-Template-Method-%E6%A8%A1%E5%BC%8F%E3%80%82%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.15.</span> <span class="nav-text">(14)Template Method 模式。模板方法模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15-Chain-of-Responsibility-%E6%A8%A1%E5%BC%8F%E3%80%82%E8%B4%A3%E4%BB%BB%E9%93%BE%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.16.</span> <span class="nav-text">(15)Chain of Responsibility 模式。责任链模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-Command-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.17.</span> <span class="nav-text">(16)Command 模式。命令模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-Iterator-%E6%A8%A1%E5%BC%8F%E3%80%82%E8%BF%AD%E4%BB%A3%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.18.</span> <span class="nav-text">(17)Iterator 模式。迭代器模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-Mediator-%E6%A8%A1%E5%BC%8F%E3%80%82%E4%BB%B2%E8%A3%81%E8%80%85%E6%A8%A1%E5%BC%8F%E3%80%81%E4%B8%AD%E4%BB%8B%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.19.</span> <span class="nav-text">(18)Mediator 模式。仲裁者模式、中介者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#19-Memento-%E6%A8%A1%E5%BC%8F%E3%80%82%E5%A4%87%E5%BF%98%E5%BD%95%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.20.</span> <span class="nav-text">(19)Memento 模式。备忘录模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#20-Observer-%E6%A8%A1%E5%BC%8F%E3%80%82%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.21.</span> <span class="nav-text">(20)Observer 模式。观察者模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#21-State-%E6%A8%A1%E5%BC%8F%E3%80%82%E7%8A%B6%E6%80%81%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.22.</span> <span class="nav-text">(21)State 模式。状态模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-Strategy-%E6%A8%A1%E5%BC%8F%E3%80%82%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.23.</span> <span class="nav-text">(22)Strategy 模式。策略模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#23-Visitor-%E6%A8%A1%E5%BC%8F%E3%80%82%E8%AE%BF%E9%97%AE%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.24.</span> <span class="nav-text">(23)Visitor 模式。访问者模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%85%B6%E4%BB%96%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">四、其他设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Intercepting-Filter-%E6%A8%A1%E5%BC%8F%E3%80%82%E6%8B%A6%E6%88%AA%E8%BF%87%E6%BB%A4%E5%99%A8%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">(1)Intercepting Filter 模式。拦截过滤器模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Session-Facade-%E6%A8%A1%E5%BC%8F%E3%80%82"><span class="nav-number">4.2.</span> <span class="nav-text">(2)Session Facade 模式。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84"><span class="nav-number">5.</span> <span class="nav-text">五、设计模式与软件架构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%86%E7%B1%BB"><span class="nav-number">6.</span> <span class="nav-text">六、设计模式分类</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
