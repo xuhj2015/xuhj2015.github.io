@@ -189,7 +189,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-10-09 00:00:00 / 修改时间：13:49:57" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
+              <time title="创建时间：2021-10-09 00:00:00 / 修改时间：14:26:20" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
             </span>
 
           
@@ -230,8 +230,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">interface Pen&#123;</span><br><span class="line">    void write();</span><br><span class="line">&#125;</span><br><span class="line">class RedPen implements Pen&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class  Paper&#123;</span><br><span class="line">    protected  Pen pen;</span><br><span class="line">    void setPen(Pen pen)&#123;</span><br><span class="line">        this.pen=pen;</span><br><span class="line">    &#125;   </span><br><span class="line">    abstract void writing();</span><br><span class="line">&#125;</span><br><span class="line">class ExaminationPaper extends Paper&#123;</span><br><span class="line">    @Override</span><br><span class="line">    void writing() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Paper paper=new ExaminationPaper();</span><br><span class="line">    paper.setPen(new RedPen());</span><br><span class="line">    paper.writing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="8-Composite-模式。复合模式"><a href="#8-Composite-模式。复合模式" class="headerlink" title="(8)Composite 模式。复合模式"></a>(8)Composite 模式。复合模式</h2><p>Composite 模式提供了一种以树形结构组合对象的方法，使用Composite 可以使单个对象和组合后的对象具有一致性以提高软件的复用性。</p>
 <h2 id="9-Decorator-模式。装饰模式"><a href="#9-Decorator-模式。装饰模式" class="headerlink" title="(9)Decorator 模式。装饰模式"></a>(9)Decorator 模式。装饰模式</h2><p>Decorator 模式可以动态地为对象的某一个方法增加更多的功能。在很多时候，使用 Decorator 模式可以不必继承出新的子类从而维护简洁的类继承结构。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">    private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">    public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="10-Facade-模式。外观模式"><a href="#10-Facade-模式。外观模式" class="headerlink" title="(10)Facade 模式。外观模式"></a>(10)Facade 模式。外观模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">	private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10-Facade-模式。外观模式，门面模式"><a href="#10-Facade-模式。外观模式，门面模式" class="headerlink" title="(10)Facade 模式。外观模式，门面模式"></a>(10)Facade 模式。外观模式，门面模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class FacadePattern &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Facade f = new Facade();</span><br><span class="line">        f.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Facade &#123; //外观角色</span><br><span class="line">    private SubSystem01 obj1 = new SubSystem01();</span><br><span class="line">    private SubSystem02 obj2 = new SubSystem02();</span><br><span class="line">    private SubSystem03 obj3 = new SubSystem03();</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        obj1.method1();</span><br><span class="line">        obj2.method2();</span><br><span class="line">        obj3.method3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="11-Flyweight-模式。享元模式，共享元素"><a href="#11-Flyweight-模式。享元模式，共享元素" class="headerlink" title="(11)Flyweight 模式。享元模式，共享元素"></a>(11)Flyweight 模式。享元模式，共享元素</h2><p>Flyweight 模式可以共享大量的细粒度对象，从而节省创建对象 所需要分配的空间，不过在时间上的开销会变大。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public Flyweight factory(int state)&#123;</span><br><span class="line">    if(map.containsKey(state))&#123;</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        map.put(state, new ConcreteFlyweight(state));</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -305,7 +305,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-10-09 00:00:00 / 修改时间：09:29:19" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
+              <time title="创建时间：2021-10-09 00:00:00 / 修改时间：14:32:59" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
             </span>
 
           
@@ -319,7 +319,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <p><img src="/images/ruankao/8-2.png"></p>
+<p><img src="/images/ruankao/8-3.png"></p>
+<p><img src="/images/ruankao/8-4.png"></p>
+<p><img src="/images/ruankao/8-5.png"></p>
+<p><img src="/images/ruankao/8-6.png"></p>
+<p><img src="/images/ruankao/8-7.png"></p>
+<p><img src="/images/ruankao/8-8.png"></p>
+
       
     </div>
 
@@ -363,7 +370,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-10-09 00:00:00 / 修改时间：09:29:19" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
+              <time title="创建时间：2021-10-09 00:00:00 / 修改时间：14:33:49" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
             </span>
 
           
@@ -377,7 +384,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <p>学习设计模式最重要的是理解，而不是生搬硬套。</p>
+<p>不能滥用设计模式</p>
+
       
     </div>
 
