@@ -105,3 +105,10 @@ deploy:
   type: git
   repo: git@github.com:xuhj2015/xuhj2015.github.io.git
   branch: main
+
+# Search 
+search:
+  path: ./public/search.xml
+  field: post
+  format: html
+  limit: 10000
