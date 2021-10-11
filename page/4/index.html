@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"./public/search.xml"};
   </script>
 
   <meta property="og:type" content="website">
@@ -108,6 +108,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -142,11 +143,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -165,6 +193,308 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84/" class="post-title-link" itemprop="url">软件架构设计（五）面向服务的架构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-26 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:06:28" itemprop="dateModified" datetime="2021-10-11T10:06:28+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">软件架构设计</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>迄今为止，对于面向服务的架构(Service-Oriented Architecture，SOA)还没有一个公认 的定义。许多组织从不同的角度和不同的侧面对 SOA 进行了描述，较为典型的有以下三个:</p>
+<p>(1)W3C 的定义:SOA 是一种应用程序架构，在这种架构中，所有功能都定义为独 立的服务，这些服务带有定义明确的可调用接口，能够以定义好的顺序调用这些服务来形成 业务流程。</p>
+<p>(2)Service-architecture.com 的定义:服务是精确定义、封装完善、独立于其他服务 所处环境和状态的函数。SOA 本质上是服务的集合，服务之间彼此通信，这种通信可能是 简单的数据传送，也可能是两个或更多的服务协调进行某些活动。服务之间需要某些方法进 行连接。</p>
+<p>(3)Gartner 的定义:SOA 是一种 C/S 架构的软件设计方法，应用由服务和服务使用 者组成，SOA 与大多数通用的 C/S 架构模型不同之处，在于它着重强调构件的松散耦合， 并使用独立的标准接口。</p>
+<h1 id="一、SOA概述"><a href="#一、SOA概述" class="headerlink" title="一、SOA概述"></a>一、SOA概述</h1><p>SOA 是一种在计算环境中设计、开发、部署和管理离散逻辑单元(服务)模型的方法。 SOA 并不是一个新鲜事物，而只是面向对象模型的一种替代。虽然基于 SOA 的系统并不排 除使用 OOD 来构建单个服务，但是其整体设计却是面向服务的。由于 SOA 考虑到了系统 内的对象，所以虽然 SOA 是基于对象的，但是作为一个整体，它却不是面向对象的。</p>
+<p><img src="/images/ruankao/6-43.png"></p>
+<p>在 SOA 模型中，所有的功能都定义成了独立的服务。服务之间通过交互和协调完成业 务的整体逻辑。所有的服务通过服务总线或流程管理器来连接。这种松散耦合的架构使得各 服务在交互过程中无需考虑双方的内部实现细节，以及部署在什么平台上。</p>
+<h2 id="1-服务的基本结构"><a href="#1-服务的基本结构" class="headerlink" title="1. 服务的基本结构"></a>1. 服务的基本结构</h2><p><img src="/images/ruankao/6-44.png"></p>
+<p>服务模型的表示层从逻辑层分离出来，中间增加了服务对外的接 口层。通过服务接口的标准化描述，使得服务可以提供给在任何异构平台和任何用户接口使 用。这允许并支持基于服务的系统成为松散耦合、面向构件和跨技术实现，服务请求者很可 能根本不知道服务在哪里运行、是由哪种语言编写的，以及消息的传输路径，而是只需要提 出服务请求，然后就会得到答案。</p>
+<h2 id="2-SOA-设计原则"><a href="#2-SOA-设计原则" class="headerlink" title="2.SOA 设计原则"></a>2.SOA 设计原则</h2><p>在 SOA 架构中，继承了来自对象和构件设计的各种原则。</p>
+<p>关于服务，一些常见的设计原则如下:</p>
+<h3 id="1-明确定义的接口。"><a href="#1-明确定义的接口。" class="headerlink" title="(1)明确定义的接口。"></a>(1)明确定义的接口。</h3><p>服务请求者依赖于服务规约来调用服务，因此，服务定义必须 长时间稳定，一旦公布，不能随意更改;服务的定义应尽可能明确，减少请求者的不适当使 用;不要让请求者看到服务内部的私有数据。</p>
+<h3 id="2-自包含和模块化。"><a href="#2-自包含和模块化。" class="headerlink" title="(2)自包含和模块化。"></a>(2)自包含和模块化。</h3><p>服务封装了那些在业务上稳定、重复出现的活动和构件，实现 服务的功能实体是完全独立自主的，独立进行部署、版本控制、自我管理和恢复。</p>
+<h3 id="3-粗粒度。"><a href="#3-粗粒度。" class="headerlink" title="(3)粗粒度。"></a>(3)粗粒度。</h3><p>服务数量不应该太多，依靠消息交互而不是远程过程调用，通常消息量 比较大，但是服务之间的交互频度较低。</p>
+<h3 id="4-松耦合。"><a href="#4-松耦合。" class="headerlink" title="(4)松耦合。"></a>(4)松耦合。</h3><p>服务请求者可见的是服务的接口，其位置、实现技术、当前状态和私有 数据等，对服务请求者而言是不可见的。</p>
+<h3 id="5-互操作性、兼容和策略声明。"><a href="#5-互操作性、兼容和策略声明。" class="headerlink" title="(5)互操作性、兼容和策略声明。"></a>(5)互操作性、兼容和策略声明。</h3><p>为了确保服务规约的全面和明确，策略成为一个越 来越重要的方面。</p>
+<h2 id="3-服务构件与传统构件"><a href="#3-服务构件与传统构件" class="headerlink" title="3. 服务构件与传统构件"></a>3. 服务构件与传统构件</h2><p>服务构件架构(Service Component Architecture，SCA)是基于 SOA 的思想描述服务之间组合和协作的规范，它描述用于使用 SOA 构建应用程序和系统的模型。它可简化使用 SOA 进行的应用程序开发和实现工作。SCA 提供了构建粗粒度构件的机制，这些粗粒度构 件由细粒度构件组装而成。SCA 将传统中间件编程从业务逻辑分离出来，从而使程序员免 受其复杂性的困扰。它允许开发人员集中精力编写业务逻辑，而不必将大量的时间花费在更 为底层的技术实现上。</p>
+<p>SCA 服务构件与传统构件的主要区别在于，服务构件往往是粗粒度的，而传统构件以 细粒度居多;服务构件的接口是标准的，主要是服务描述语言接口，而传统构件常以具体 API 形式出现;服务构件的实现与语言是无关的，而传统构件常绑定某种特定的语言;服务构件 可以通过构件容器提供 QoS 的服务，而传统构件完全由程序代码直接控制。</p>
+<h1 id="二、SOA-的关键技术"><a href="#二、SOA-的关键技术" class="headerlink" title="二、SOA 的关键技术"></a>二、SOA 的关键技术</h1><p>SOA 是一种全新的架构，为了支持其各种特性，相关的技 术规范不断推出。与 SOA 紧密相关的技术主要有 UDDI、WSDL、SOAP 和 REST 等，而这 些技术都是以 XML 为基础而发展起来的。</p>
+<h2 id="1-UDDI"><a href="#1-UDDI" class="headerlink" title="1. UDDI"></a>1. UDDI</h2><p>UDDI(Universal DescriptionDiscovery and Integration，统一描述、发现和集成)提供了 一种服务发布、查找和定位的方法，是服务的信息注册规范，以便被需要该服务的用户发现 和使用它。UDDI 规范描述了服务的概念，同时也定义了一种编程接口。通过 UDDI 提供的 标准接口，企业可以发布自己的服务供其他企业查询和调用，也可以查询特定服务的描述信 息，并动态绑定到该服务上。</p>
+<p>UDDI包括：<br>(1)数据模型。UDDI 数据模型是一个用于描述业务组织和服务的 XML Schema。<br>(2)API。UDDI API 是一组用于查找或发布 UDDI 数据的方法，UDDI API 基于 SOAP。<br>(3)注册服务。UDDI 注册服务是 SOA 中的一种基础设施，对应着服务注册中心的角<br>色。</p>
+<h2 id="2-WSDL"><a href="#2-WSDL" class="headerlink" title="2.WSDL"></a>2.WSDL</h2><p>WSDL(Web ServiceDescription Language，Web 服务描述语言)是对服务进行描述的语言，它有一套基于 XML 的语法定义。WSDL 描述的重点是服务，它包含服务实现定义和服 务接口定义。</p>
+<p><img src="/images/ruankao/6-45.png"><br>服务实现定义描述了给定服务提供者如何实现特定的服务接口。服务实现定义中包含服 务和端口描述。一个服务往往会包含多个服务访问入口，而每个访问入口都会使用一个端口 元素来描述，端口描述的是一个服务访问入口的部署细节，例如，通过哪个地址来访问，应 当使用怎样的消息调用模式来访问等。</p>
+<h2 id="3-SOAP"><a href="#3-SOAP" class="headerlink" title="3.SOAP"></a>3.SOAP</h2><p>SOAP(Simple ObjectAccess Protocol，简单对象访问协议)定义了服务请求者和服务提 供者之间的消息传输规范。SOAP 用 XML 来格式化消息，用 HTTP 来承载消息。通过 SOAP， 应用程序可以在网络中进行数据交换和远程过程调用(Remote Procedure Call， RPC)</p>
+<p>SOAP 主要包括以下四个部分:</p>
+<p>(1)封装。SOAP 封装定义了一个整体框架，用来表示消息中包含什么内容，谁来处 理这些内容，以及这些内容是可选的还是必需的。<br>(2)编码规则。SOAP 编码规则定义了一种序列化的机制，用于交换系统所定义的数 据类型的实例。<br>(3)RPC 表示。SOAP RPC 表示定义了一个用来表示远程过程调用和应答的协议。<br>(4)绑定。SOAP 绑定定义了一个使用底层传输协议来完成在节点之间交换 SOAP 封 装的约定。</p>
+<p>SOAP 消息包括以下三个部分:</p>
+<p>(1)封装(信封)。封装的元素名是 Envelope，在表示消息的 XML 文档中，封装是顶 层元素，在 SOAP 消息中必须出现。<br>(2)SOAP 头。SOAP 头的元素名是 Header，提供了向 SOAP 消息中添加关于这条 SOAP 消息的某些要素的机制。<br>(3)SOAP 体。SOAP 体的元素名是 Body，是包含消息的最终接收者想要的信息的容 器。</p>
+<h2 id="4-REST"><a href="#4-REST" class="headerlink" title="4.REST"></a>4.REST</h2><p>REST(RepresentationalState Transfer，表述性状态转移)是一种只使用 HTTP 和 XML 进 行基于 Web 通信的技术，可以降低开发的复杂性，提高系统的可伸缩性。它的简单性和缺 少严格配置文件的特性，使它与 SOAP 很好地隔离开来，REST 从根本上来说只支持几个操 作(POST、GET、PUT 和 DELETE)，这些操作适用于所有的消息。</p>
+<p>REST 提出了如下一些设 计概念和准则:<br>(1)网络上的所有事物都被抽象为资源。<br>(2)每个资源对应一个唯一的资源标识。<br>(3)通过通用的连接件接口对资源进行操作。<br>(4)对资源的各种操作不会改变资源标识。<br>(5)所有的操作都是无状态的。</p>
+<h1 id="三、SOA-的实现方法"><a href="#三、SOA-的实现方法" class="headerlink" title="三、SOA 的实现方法"></a>三、SOA 的实现方法</h1><p>SOA 只是一种概念和思想，需要借助于具体的技术和方法来实现它。从本质上来看， SOA 是用本地计算模型来实现一个分布式的计算应用，也有人称这种方法为“本地化设计，分布式工作”模型。CORBA、DCOM 和 EJB 等都属于这种解决方式。</p>
+<p>从逻辑上和高层抽象来看，目前，实现 SOA 的方法也比较多，其中主流方式有 Web Service、企业服务总线和服务注册表。</p>
+<h2 id="1-Web-Service"><a href="#1-Web-Service" class="headerlink" title="1.Web Service"></a>1.Web Service</h2><p>在 Web Service(Web 服务)的解决方案中，一共有三种工作角色，其中服务提供者和 服务请求者是必需的，服务注册中心是一个可选的角色。</p>
+<p><img src="/images/ruankao/6-46.png"></p>
+<p>在采用 Web Service 作为 SOA 的实现技术时，应用系统大致可以分为六个层次，分别 是底层传输层、服务通信协议层、服务描述层、 服务层、业务流程层和服务注册层。</p>
+<h3 id="1-底层传输层。"><a href="#1-底层传输层。" class="headerlink" title="(1)底层传输层。"></a>(1)底层传输层。</h3><p>底层传输层主要负责消息的传输机制，HTTP、JMS(Java Messaging Service，Java 消息服务)和 SMTP 都可以作为服务的消息传输协议，其中 HTTP 使用最广。</p>
+<h3 id="2-服务通信协议层。"><a href="#2-服务通信协议层。" class="headerlink" title="(2)服务通信协议层。"></a>(2)服务通信协议层。</h3><p>服务通信协议层的主要功能是描述并定义服务之间进行消息传 递所需的技术标准，常用的标准是 SOAP 和 REST 协议。</p>
+<h3 id="3-服务描述层。"><a href="#3-服务描述层。" class="headerlink" title="(3)服务描述层。"></a>(3)服务描述层。</h3><p>服务描述层主要以一种统一的方式描述服务的接口与消息交换方式， 相关的标准是 WSDL。</p>
+<h3 id="4-服务层。"><a href="#4-服务层。" class="headerlink" title="(4)服务层。"></a>(4)服务层。</h3><p>服务层的主要功能是将遗留系统进行包装，并通过发布的 WSDL 接口描 述被定位和调用。</p>
+<h3 id="5-业务流程层。"><a href="#5-业务流程层。" class="headerlink" title="(5)业务流程层。"></a>(5)业务流程层。</h3><p>业务流程层的主要功能是支持服务发现，服务调用和点到点的服务 调用，并将业务流程从服务的底层调用抽象出来。</p>
+<h3 id="6-服务注册层"><a href="#6-服务注册层" class="headerlink" title="(6)服务注册层"></a>(6)服务注册层</h3><p>服务注册层的主要功能是使服务提供者能够通过 WSDL 发布服务定义，并支持服 务请求者查找所需的服务信息。相关的标准是 UDDI。</p>
+<h2 id="2-服务注册表"><a href="#2-服务注册表" class="headerlink" title="2. 服务注册表"></a>2. 服务注册表</h2><p>服务注册表(service registry)虽然也具有运行时的功能，但主要在 SOA 设计时使用。</p>
+<p>服务注册表可以包括有关服务和相关构件的配置、依从性和 约束文件。</p>
+<p>大多数商用服务注册产品支持服务注册、服务位置和服务绑定功能。</p>
+<h2 id="3-企业服务总线ESB"><a href="#3-企业服务总线ESB" class="headerlink" title="3. 企业服务总线ESB"></a>3. 企业服务总线ESB</h2><p>ESB 是由中间件技术实现并支持 SOA 的一组基础架构，是传统中间件技术与 XML、 Web Service 等技术结合的产物，是在整个企业集成架构下的面向服务的企业应用集成机制。</p>
+<p>ESB 具有以下功能:<br>(1)支持异构环境中的服务、消息和基于事件的交互，并且具有适当的服务级别和可 管理性。<br>(2)通过使用 ESB，可以在几乎不更改代码的情况下，以一种无缝的非侵入方式使现 有系统具有全新的服务接口，并能够在部署环境中支持任何标准。<br>(3)充当缓冲器的 ESB(负责在诸多服务之间转换业务逻辑和数据格式)与服务逻辑 相分离，从而使不同的系统可以同时使用同一个服务，不用在系统或数据发生变化时，改动 服务代码。<br>(4)在更高的层次，ESB 还提供诸如服务代理和协议转换等功能。允许在多种形式下 通过像 HTTP、SOAP 和 JMS 总线的多种传输方式，主要是以网络服务的形式，为发表、注 册、发现和使用企业服务或界面提供基础设施。<br>(5)提供可配置的消息转换翻译机制和基于消息内容的消息路由服务，传输消息到不 同的目的地。<br>(6)提供安全和拥有者机制，以保证消息和服务使用的认证、授权和完整性。</p>
+<p>与现存的、专有的集成解决方案相比，ESB 具有以下优势:</p>
+<p>(1)扩展的、基于标准的连接。ESB 形成一个基于标准的信息骨架，使得在系统内部<br>和整个价值链中可以容易地进行异步或同步数据交换。ESB 通过使用 XML、SOAP 和其他标 准，提供了更强大的系统连接性。<br>(2)灵活的、服务导向的应用组合。基于 SOA，ESB 使复杂的分布式系统(包括跨多 个应用、系统和防火墙的集成方案)能够由以前开发测试过的服务组合而成，使系统具有高 度可扩展性。<br>(3)提高复用率，降低成本。按照 SOA 方法构建应用，提高了复用率，简化了维护 工作，进而减少了系统总体成本。<br>(4)减少市场反应时间，提高生产率。ESB 通过构件和服务复用，按照 SOA 的思想 简化应用组合，基于标准的通信、转换和连接来实现这些优点。</p>
+<h1 id="四、微服务"><a href="#四、微服务" class="headerlink" title="四、微服务"></a>四、微服务</h1><p>它属于面向服务架构的一种。<br>微服务架构是一种架构模式，它提倡将单一应用程序划分成一组小 的服务，服务之间互相协调、互相配合，为用户提供最终价值。每个服务运行在其独立的进 程中，服务与服务间采用轻量级的通信机制互相沟通(通常是基于 HTTP 协议的 RESTful API)。每个服务都围绕着具体业务进行构建，并且能够被独立的部署到生产环境、类生产环 境等。</p>
+<p>另外，应当尽量避免统一的、集中式的服务管理机制，对具体的一个服务而言，应根 据业务上下文，选择合适的语言、工具对其进行构建。</p>
+<p>所以总结起来，微服务的核心特点为:小, 且专注于做一件事情、轻量级的通信机制、松耦合、独立部署。</p>
+<h2 id="1-微服务的优势"><a href="#1-微服务的优势" class="headerlink" title="1.微服务的优势"></a>1.微服务的优势</h2><h3 id="1-技术异构性"><a href="#1-技术异构性" class="headerlink" title="(1)技术异构性"></a>(1)技术异构性</h3><p>在微服务架构中，每个服务都是一个相对独立的个体，每个服务都可以选择适合于自身 的技术来实现。</p>
+<p>同时，在应用新技术时，微服务架构也提供了更好的试验场。</p>
+<h3 id="2-弹性"><a href="#2-弹性" class="headerlink" title="(2)弹性"></a>(2)弹性</h3><p>弹性主要讲的是系统中一部分出现故障会引起多大问题。<br>微服务架构中，每个服务可以内置可用性的解决方 案 与功能降级方案，所以比单块系统强。</p>
+<h3 id="3-扩展"><a href="#3-扩展" class="headerlink" title="(3)扩展"></a>(3)扩展</h3><p>在微服务架构中，可以针对单个服务进行扩展。</p>
+<h3 id="4-简化部署"><a href="#4-简化部署" class="headerlink" title="(4)简化部署"></a>(4)简化部署</h3><p>在大型单块系统中，即使修改一行代码，也需要重新部署整个应用系统。<br>微服务架构中，每个服务的部署都是独立的，这样就可以更快地对特定部分的代码进行部署。</p>
+<h3 id="5-与结织结构相匹配"><a href="#5-与结织结构相匹配" class="headerlink" title="(5)与结织结构相匹配"></a>(5)与结织结构相匹配</h3><p>微服务架构可以将架构与组织结构相匹配，避免出现过大的代码库，从而获得 理想的团队大小及生产力。服务的所有权也可以在团队之 间迁移，从而避免异地团队的出 现。</p>
+<h3 id="6-可组合性"><a href="#6-可组合性" class="headerlink" title="(6)可组合性"></a>(6)可组合性</h3><p>在微服务架构中，系统会开放很多接口供外部使用。当情况发生改变时，可以使用不同的方式构建应用，而整体化应用程序只能提供一个非常粗粒度的接口供外部使用。</p>
+<h3 id="7-对可替代性的优化"><a href="#7-对可替代性的优化" class="headerlink" title="(7)对可替代性的优化"></a>(7)对可替代性的优化</h3><p>在微服务架构中，我们可以在需要时轻易地重写服务， 或者删除不再使用的服务。</p>
+<h2 id="2-微服务面临的挑战"><a href="#2-微服务面临的挑战" class="headerlink" title="2. 微服务面临的挑战"></a>2. 微服务面临的挑战</h2><h3 id="1-分布式系统的复杂度"><a href="#1-分布式系统的复杂度" class="headerlink" title="(1)分布式系统的复杂度"></a>(1)分布式系统的复杂度</h3><p>使用微服务实现分布式系统的复杂度要比单块系统高。</p>
+<h3 id="2-运维成本"><a href="#2-运维成本" class="headerlink" title="(2)运维成本"></a>(2)运维成本</h3><p>在微服务架构下，随着服务数量的增多，每个服务都需要独立的配置、部署、 监控、日志收集等，因此成本呈指数级增长。</p>
+<h3 id="3-部署自动化"><a href="#3-部署自动化" class="headerlink" title="(3)部署自动化"></a>(3)部署自动化</h3><p>传统单块系统手动部署是 可以满足需求的。<br>对于微服务架构而言，如何有效地构建自 动化部署流水线，降低部署成本、提高部署频率，是微服务架构下需要面临的一个挑战。。</p>
+<h3 id="4-DevOps-与组织结构"><a href="#4-DevOps-与组织结构" class="headerlink" title="(4)DevOps 与组织结构"></a>(4)DevOps 与组织结构</h3><p>传统单块架构中，团队通常是按技能划分，并通过项目的 方式协作，完成系统交付。</p>
+<p>在微服务架构的实施过程中，除了如上所述的交付、运维上存 在的挑战，在组织或者团队层面，如何传递 DevOps 文化的价值，让团队理解 DevOps 文化的价值，并构建全功能团队，也是一个不小的挑战。</p>
+<h3 id="5-服务间依赖测试"><a href="#5-服务间依赖测试" class="headerlink" title="(5)服务间依赖测试"></a>(5)服务间依赖测试</h3><p>在服务数量较多的情况下，如何有效地保证服务之间能有效按照接口的约定正常工作， 成为微服务实施过程中必须面临的巨大挑战。</p>
+<h3 id="6-服务间依赖管理"><a href="#6-服务间依赖管理" class="headerlink" title="(6)服务间依赖管理"></a>(6)服务间依赖管理</h3><p>随着微服 务个数的增多，如何清晰有效地展示服务之间的依赖关系，成为了一个挑战。</p>
+<h2 id="3-微服务与-SOA"><a href="#3-微服务与-SOA" class="headerlink" title="3.微服务与 SOA"></a>3.微服务与 SOA</h2><p>微服务可以讲是 SOA 的一种，但他们也有一些差异。</p>
+<table>
+<thead>
+<tr>
+<th>微服务</th>
+<th>SOA</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能拆分的就拆分</td>
+<td>是整体的，服务能放一起的就放一起</td>
+</tr>
+<tr>
+<td>纵向业务划分</td>
+<td>水平分多层</td>
+</tr>
+<tr>
+<td>单一组织负责</td>
+<td>按层次划分不同部门的组织负责</td>
+</tr>
+<tr>
+<td>细粒度</td>
+<td>粗粒度</td>
+</tr>
+<tr>
+<td>两句话可以解释明白</td>
+<td>几百字是相当于SOA的目录</td>
+</tr>
+<tr>
+<td>独立的子公司</td>
+<td>类似大公司里面划分了一些业务单元</td>
+</tr>
+<tr>
+<td>组件小</td>
+<td>存在较复杂的组件</td>
+</tr>
+<tr>
+<td>业务逻辑存在于每一个服务中</td>
+<td>业务逻辑很卡多个业务领域</td>
+</tr>
+<tr>
+<td>使用轻量级的通信方式</td>
+<td>ESB充当了服务之间通信的角色</td>
+</tr>
+</tbody></table>
+<p>实现方面的差异：</p>
+<table>
+<thead>
+<tr>
+<th>微服务架构实现</th>
+<th>SOA实现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>团队级，自底向上开展实施</td>
+<td>企业级，自顶向下开展实施</td>
+</tr>
+<tr>
+<td>一个系统被拆分成多个服务，粒度细</td>
+<td>服务由多个子系统组成，粒度大</td>
+</tr>
+<tr>
+<td>无集中式总线，松散的服务架构</td>
+<td>企业服务总线，集中式的服务架构</td>
+</tr>
+<tr>
+<td>集成方式简单</td>
+<td>集成方式复杂</td>
+</tr>
+<tr>
+<td>服务能独立部署</td>
+<td>单块架构系统，互相依赖，部署复杂</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AD%EF%BC%89%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AD%EF%BC%89%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">软件架构设计（六）架构设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-26 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:06:28" itemprop="dateModified" datetime="2021-10-11T10:06:28+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" itemprop="url" rel="index"><span itemprop="name">软件架构设计</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>架构模式也称为架构风格，它是适当地选取战术的结果，这些固定的结果(模式)在高 层抽象层次上具有普遍实用性和复用性。</p>
+<p>通过架构模式，架构设计师可以借鉴和复用他人的经验，看看类似的问题别人是如何解 决的。但不要把模式看成是一个硬性的解决方法，它只是一种解决问题的思路。</p>
+<p>“模式和业务构件的区别就在于模式会引发你的思考。”</p>
+<h1 id="1-演变交付生命周期"><a href="#1-演变交付生命周期" class="headerlink" title="1.演变交付生命周期"></a>1.演变交付生命周期</h1><p><img src="/images/ruankao/6-47.png"></p>
+<p>在生命周期模型中，架构设计就是从初步的需求分析开始逐步进行循环迭代。即:一方面在了解系统需求前，不能开始设计架构;另一方 面，刚开始进行设计架构时并不需要等到全部需求都收集到。</p>
+<p>架构由少数关键需 求决定并在循环迭代中处于基本稳定状态，它作为演变的基础设施。</p>
+<h1 id="2-属性驱动设计法"><a href="#2-属性驱动设计法" class="headerlink" title="2.属性驱动设计法"></a>2.属性驱动设计法</h1><p>模型强调先建立软件架构，再把架构作为骨架，在骨架上循环迭代，逐步长出有血 有肉的系统之躯。</p>
+<p>属性驱动设计法(Attribute-Driven Design，ADD)就是一种定义软件架构 的方法，该方法将分解过程建立在软件必须满足的质量属性之上。</p>
+<p>ADD 的输入为:功能需 求(一般表示为用例)、限制条件和质量需求(一组特定于系统的质量场景)。</p>
+<p>ADD 的步骤如下：<br>(1)选择要分解的模块。<br>(2)根据如下步骤对模块进行求精:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">从具体的质量场景和功能需求集合中选择架构驱动因素。</span><br><span class="line">选择满足架构驱动因素的架构模式，根据前面的战术创建(或选择)模式。</span><br><span class="line">实例化模块并根据用例分配功能，使用多个视图进行表示。</span><br><span class="line">定义子模块的接口。</span><br><span class="line">验证用例和质量场景，并对其进行求精，使它们成为子模式的限制。</span><br></pre></td></tr></table></figure>
+<p>(3)对需要进一步分解的每个模块重复上述步骤。</p>
+<h1 id="3-按架构组织开发团队"><a href="#3-按架构组织开发团队" class="headerlink" title="3.按架构组织开发团队"></a>3.按架构组织开发团队</h1><p>像软件系统一样，开发小组也应该努力做到松耦合、高内聚。</p>
+<p>项目计划在架构确定之后可以结合分工进一步明细化，特别要规划好接口提供的 时间点，保证项目开发的整体协调性。</p>
+<h1 id="4-开发骨架系统"><a href="#4-开发骨架系统" class="headerlink" title="4.开发骨架系统"></a>4.开发骨架系统</h1><p>演变交付生命周期模型中有两个循环，第一个循环是通过迭代的方式开发出软件架构， 第二个循环是在架构的基础上通过迭代的方式开发出交付的最终版本。开发骨架系统就是第 二个循环的第一步。</p>
+<h1 id="5-利用商用构件进行开发"><a href="#5-利用商用构件进行开发" class="headerlink" title="5.利用商用构件进行开发"></a>5.利用商用构件进行开发</h1><p>模式本来就是针对特定问题的解，因此，针对需求的特点，也可以选用相应的模式来设 计架构，并利用对应于该模式的商用构件进行软件开发。例如可以使用 J2EE/EJB 进行开发 面向对象的分布式系统。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -1136,277 +1466,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（八）系统运行环境的集成与设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:06:29" itemprop="dateModified" datetime="2021-10-11T10:06:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">系统分析与设计方法</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在设计一个新的系统时，设计者必须考虑目标系统的运行环境问题。软件的运行环境是指系统运行的设备、操作系统和网络配置。</p>
-<h1 id="1-集中式系统"><a href="#1-集中式系统" class="headerlink" title="1.集中式系统"></a>1.集中式系统</h1><p>所有的操作都集中于一台主机中。</p>
-<p>集中式系统常见于银行、保险、证券行业，它们含有大规模的处理应用。</p>
-<p>在现代的系统中，集中式系统通常是某个分布式系统的一个环节。</p>
-<p>集中式系统由以下几个部分组成。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1)单计算机结构:这种结构简单、容易维护，但是处理能力受到限制。 </span><br><span class="line">(2)集群结构:由多个计算机组成，这些计算机具有类似的硬件平台、操作系统等。通常采用负载均衡、资源共享等方式实现更大的处理能力和容量。 </span><br><span class="line">(3)多计算机结构:由多个计算机组成，这些计算机之间操作环境可能不同。适用于当系统可以分解成多个不同的子系统时。</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-分布式系统"><a href="#2-分布式系统" class="headerlink" title="2.分布式系统"></a>2.分布式系统</h1><p>分布式系统由于网络的普遍延伸，费用的不断降低而越来越成为大型系统的首选环境。分布式系统必须基于网络，这个网络可以是在一个地域内的局域网，也可以是跨越不同城市乃至国家的广域网。对比集中式的计算机环境，分布式系统有着多种多样的形式。这也给设计者在确定系统运行环境时带来一定的烦恼。</p>
-<h1 id="3-C-S-结构"><a href="#3-C-S-结构" class="headerlink" title="3.C/S 结构"></a>3.C/S 结构</h1><p>由提供服务的服务器和发起请求、接受结果的客户机构成。</p>
-<h1 id="4-多层结构"><a href="#4-多层结构" class="headerlink" title="4.多层结构"></a>4.多层结构</h1><p>C/S 结构的扩展。</p>
-<p>典型的分为由存储数据的数据库服务器作为数据层、实现商业规则的程序作为逻辑层、管理用户输入输出的视图层所组成的三层结构。</p>
-<p>多层结构形式复杂，功能多样。实现多层结构常常需要来实现不同层次间通信的专门程序——管件，也称为中间件。中间件大多数实现远程程序调用、对象请求调度等功能。</p>
-<h1 id="5-Internet、Intranet-和-Extranet"><a href="#5-Internet、Intranet-和-Extranet" class="headerlink" title="5.Internet、Intranet 和 Extranet"></a>5.Internet、Intranet 和 Extranet</h1><p>Internet 是全球的网络集合，使用通用的 TCP/IP 协议来相互连接。Internet 提供电子邮件、文件传输、远程登录等服务。</p>
-<p>Intranet 是私有网络，只限于内部使用，也使用 TCP/IP 协议。</p>
-<p>Extranet 是一个扩展的 Intranet。它包括企业之外的和企业密切相关合作的其他企业。 Extranet 允许分离的组织交换信息并进行合作，这样就形成了一个虚拟组织。</p>
-<p>现在的 VPN 技术允许在公用网络上架构只对组织内部开发服务。</p>
-<p>Web 同样基于 C/S 结构，实际上 Web 接口是一个通用的接口，不是只能使用浏览器 的协议，它同样能够在普通的程序中使用。</p>
-<p>Internet 和 Web 已经给设计者提供了一个非常富有吸引力的选择方案。它的优势在于:它们已经成为网络的事实上的标准，支持它们的软件已经广泛地存在于全世界的计算机中，而且通信费用已经下降到很有竞争力的水平。</p>
-<p>采用 Internet 时，必须考虑其不利的一面。 Internet 的安全性过去、现在、以后都是设计者头痛的问题。其他诸如可靠性、系统吞吐量、不断发展的技术和标准都是影响系统选择它们作为运行环境的不利因素。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（四）面向对象的分析与设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:06:29" itemprop="dateModified" datetime="2021-10-11T10:06:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">系统分析与设计方法</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>面向对象方法以客观世界中的对象为中心，其分析和设计思想符合人们的思维方式，分析和设计的结构与客观世界的实际比较接近。</p>
-<p>面向对象方法中，分析和设计的界面并不明显，他们采用的相同的符号表示，能方便的从分析阶段平滑过渡到设计阶段。</p>
-<p>在显示生活中，用户的需求经常会发生变化，但是客观世界的对象集对象间的关系比较稳定，因此用面向对象方法分析和设计的结构也相对比较稳定。</p>
-<h1 id="一、面向对象的基本概念"><a href="#一、面向对象的基本概念" class="headerlink" title="一、面向对象的基本概念"></a>一、面向对象的基本概念</h1><h2 id="1、对象和类"><a href="#1、对象和类" class="headerlink" title="1、对象和类"></a>1、对象和类</h2><p>对象是描述客观事物的实体，由对象标识（名称）、属性（状态、数据、成员变量）和服务（操作、行为、方法）是3个要素组成，封装成一个整体，以接口的形式对外提供服务。<br>类是具有相同属性和服务的一个或一组对象的抽象。<br>类与对象是抽象描述和具体实例的关系。一个具体的对象被称为类的一个实例。</p>
-<p>类可以分为实体类、边界类、控制类。</p>
-<h3 id="（1）实体类"><a href="#（1）实体类" class="headerlink" title="（1）实体类"></a>（1）实体类</h3><p>实体类映射需求中的每个实体，实体类保存需要存储在永久存储体重的信息。<br>实体类一定有属性，不一定有操作。</p>
-<h3 id="（2）控制类"><a href="#（2）控制类" class="headerlink" title="（2）控制类"></a>（2）控制类</h3><p>控制类是用于控制用力工作的类，一般由动宾结构的短语转化来的名称，例如身份验证。<br>控制类没有属性，但是有方法。</p>
-<h3 id="（3）边界类"><a href="#（3）边界类" class="headerlink" title="（3）边界类"></a>（3）边界类</h3><p>边界类用于封装在用例内、外流动的信息或数据流。边界类位于系统与外界的交界处，包括所有窗体、报表、打印机和扫描仪等硬件接口，以及与其他系统的接口。<br>边界类通常既有属性也要方法。</p>
-<h2 id="2、继承与泛化"><a href="#2、继承与泛化" class="headerlink" title="2、继承与泛化"></a>2、继承与泛化</h2><p>用来说明特殊类（子类）与一般类（父类）的关系。</p>
-<p><img src="/images/ruankao/6-7.png"></p>
-<h2 id="3、多态与重载"><a href="#3、多态与重载" class="headerlink" title="3、多态与重载"></a>3、多态与重载</h2><p>一般类中定义的属性或服务被特殊类集成后，可以具有不同的数据类型或表现出不同的行为。<br>通常用重载和改写实现。<br>重载是编译时制定的，改写是运行时选择的。</p>
-<h2 id="4、模板类"><a href="#4、模板类" class="headerlink" title="4、模板类"></a>4、模板类</h2><p>也称为类属类，用来实现参数多态机制。<br>一个类属类是一组类的一个特性抽象。</p>
-<h2 id="5、消息和消息通信"><a href="#5、消息和消息通信" class="headerlink" title="5、消息和消息通信"></a>5、消息和消息通信</h2><p>消息是想对象发出的服务请求。 为对象间提供唯一合法的动态联系的途径。</p>
-<h1 id="二、面向对象分析"><a href="#二、面向对象分析" class="headerlink" title="二、面向对象分析"></a>二、面向对象分析</h1><p>对象技术的流行，演化出数十种不同的OOA方法，其中比较流行的包括OMT、OOA、OOSE、Booch等。OMT、OOSE、Booch最后统一成为UML。</p>
-<h2 id="1、OOA-OOD方法"><a href="#1、OOA-OOD方法" class="headerlink" title="1、OOA/OOD方法"></a>1、OOA/OOD方法</h2><p>面向对象分析（OOA），面向对象设计（OOD）。<br>OOA模型包括<em><strong>主题、对象类、结构、属性和服务</strong></em>5个层次。需要经过<em><strong>标识对象类、标识结构与关联、划分主题、定义属性、定义服务</strong></em>5个步骤完成整个分析工作。<br>OOD贯穿OOA的5个层次和5个活动，由<em><strong>人机交互部件、问题域部件、任务管理部件、数据管理部件</strong></em>4个部分组成。</p>
-<h3 id="（1）设计问题域部分"><a href="#（1）设计问题域部分" class="headerlink" title="（1）设计问题域部分"></a>（1）设计问题域部分</h3><p>OOA的结果是OOD的问题域部件，分析的结果在OOD中可以被改动或增补，但基于问题域的总体组织架构是长时间稳定的。</p>
-<h3 id="（2）设计人机交互部件"><a href="#（2）设计人机交互部件" class="headerlink" title="（2）设计人机交互部件"></a>（2）设计人机交互部件</h3><p>在上述结果中加入人机交互的设计和交互细节。</p>
-<h3 id="（3）设计任务管理部分"><a href="#（3）设计任务管理部分" class="headerlink" title="（3）设计任务管理部分"></a>（3）设计任务管理部分</h3><p>识别事件驱动任务、识别时钟驱动任务、识别优先任务和关键任务、识别协调者、审查每个任务并定义每个任务。</p>
-<h3 id="（4）设计数据管理部分"><a href="#（4）设计数据管理部分" class="headerlink" title="（4）设计数据管理部分"></a>（4）设计数据管理部分</h3><p>数据管理部分提供了在数据管理系统中存储和紧缩对象的基本结构，其目的是隔离数据管理方法对其他部分的影响。</p>
-<h2 id="2、Booch方法"><a href="#2、Booch方法" class="headerlink" title="2、Booch方法"></a>2、Booch方法</h2><p>Booch认为软件开发是螺旋上升的过程，每个周期包括 标识类和对象、确定类和对象的含义、标识关系、说明每个类的接口和实现 4个步骤。</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>静态模型</th>
-<th>动态模型</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>逻辑模型</td>
-<td>类图、对象图</td>
-<td>状态转换图、时序图</td>
-</tr>
-<tr>
-<td>物理模型</td>
-<td>模块图、进程图</td>
-<td>-</td>
-</tr>
-</tbody></table>
-<p>Booch方法的开发过程是一个迭代的渐进式的系统开发过程，分为宏过程和微过程梁两类。<br>宏过程用于控制微过程，5个主要活动包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">建立核心需求的概念化</span><br><span class="line">建立模型的分析</span><br><span class="line">建立架构的设计</span><br><span class="line">形成实现的进化</span><br><span class="line">管理软件交付使用的维护</span><br></pre></td></tr></table></figure>
-<p>微过程基本上代表开发人团的日常活动，4个重要、没有顺序的步骤包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在给定的抽象层次上识别出类和对象</span><br><span class="line">识别出这些类和对象的语义</span><br><span class="line">识别出类间和对象间的关系</span><br><span class="line">实现类和对象</span><br></pre></td></tr></table></figure>
-<h2 id="3、OMT方法"><a href="#3、OMT方法" class="headerlink" title="3、OMT方法"></a>3、OMT方法</h2><p>对象建模技术（OMT）主要用于分析、系统设计和对象设计。<br>包括对象模型、动态模型、功能模型。</p>
-<table>
-<thead>
-<tr>
-<th>模型</th>
-<th>说明</th>
-<th>主要技术</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>对象模型</td>
-<td>描述系统中对象的静态结构、对象之间的关系、属性、操作。他表示静态的、结构上的、系统的“数据”特征。</td>
-<td>对象图</td>
-</tr>
-<tr>
-<td>动态模型</td>
-<td>描述与时间和操作顺序有关的系统特征，如激发时间、时间序列、确定时间先后关系的状态。他表示瞬时、行为上的、系统的“控制”特征</td>
-<td>状态图</td>
-</tr>
-<tr>
-<td>功能模型</td>
-<td>描述与值的变换有关的系统特征：功能、映射、约束和函数依赖</td>
-<td>数据流图</td>
-</tr>
-</tbody></table>
-<h2 id="4、OOSE方法"><a href="#4、OOSE方法" class="headerlink" title="4、OOSE方法"></a>4、OOSE方法</h2><p>面向对象软件工程（OOSE）在OMT的基础上对功能模型进行了补充，提出了“用例”的概念，最终取代数据流图进行需求分析和建立功能模型。</p>
-<h1 id="三、统一建模语言"><a href="#三、统一建模语言" class="headerlink" title="三、统一建模语言"></a>三、统一建模语言</h1><p>统一建模语言（UML）</p>
-<h2 id="1、UML是什么"><a href="#1、UML是什么" class="headerlink" title="1、UML是什么"></a>1、UML是什么</h2><p>是一种用于详细描述的可视化语言。<br>是一种构造语言，虽然不是一种可视化的编程语言，但与编程语言直接相连，有较好的映射关系。允许正向工程、逆向工程。<br>是一种文档化语言。</p>
-<h2 id="2、UML的结构"><a href="#2、UML的结构" class="headerlink" title="2、UML的结构"></a>2、UML的结构</h2><p>UML由构造块、公共机制和架构三部分组成。</p>
-<h3 id="（1）构造块"><a href="#（1）构造块" class="headerlink" title="（1）构造块"></a>（1）构造块</h3><p>构造块也就是基本的UML建模元素、关系和图。<br>建模元素：包括构造事物（类、接口、协作、用例、活动类、组件、节点等）、行为事物（交互、状态机）、分组事物（包）、注释事物。<br>关系：包括关联关系、依赖关系、泛化关系、实现关系。<br>图：UML2.0包括14种不同的图，分为表示系统静态结构的静态模型（包括类图、对象图、包图、构件图、部署图、制品图），以及表示系统动态结构的动态模型（包括对象图、用例图、顺序图、通信图、定时图、状态图、活动图、我交互概览图）。</p>
-<h3 id="（2）公共机制"><a href="#（2）公共机制" class="headerlink" title="（2）公共机制"></a>（2）公共机制</h3><p>指达到特定目标的公共UML方法，包括规格说明、修饰、公共分类和扩展机制4种。<br>规格说明：是元素语义的文本描述。<br>修饰：通过修饰给模型元素表达更多的信息。<br>公共分类：包括类元和实体、接口和实现两组公共分类。<br>扩展机制：包括约束、构造型、标记值。</p>
-<h3 id="（3）架构"><a href="#（3）架构" class="headerlink" title="（3）架构"></a>（3）架构</h3><p>架构是系统的组织结构，包括系统分解的组成部分、他们的关联性、交互、机制和指导原则。</p>
-<p>具体来说，就是5个系统视图。</p>
-<p>逻辑视图：以问题域的语汇组成的类和对象集合。<br>进程视图：可执行线程和进程作为活动类的建模，他是逻辑视图的一次执行实例。<br>实现视图：对组成基于系统的物理代码的文件和组件进行建模。<br>部署视图：把组件物理的部署到一组物理的可计算的节点上。<br>用例视图：最基本的需求分析模型。</p>
-<h2 id="3、用例图基础"><a href="#3、用例图基础" class="headerlink" title="3、用例图基础"></a>3、用例图基础</h2><p>外部参与者所理解的系统功能。</p>
-<p><img src="/images/ruankao/6-8.png"></p>
-<p>包括参与者、用例、包含和扩展。</p>
-<h2 id="4、类图和对象图基础"><a href="#4、类图和对象图基础" class="headerlink" title="4、类图和对象图基础"></a>4、类图和对象图基础</h2><p>类图技术是OO方法的核心。</p>
-<p><img src="/images/ruankao/6-9.png"></p>
-<h3 id="（1）类和对象"><a href="#（1）类和对象" class="headerlink" title="（1）类和对象"></a>（1）类和对象</h3><p>类是对一类具有相同特征的对象的描述。<br>对象是类的实例。<br>类的属性的语法为: “可见性 属性名:类型 = 默认值 {约束特性}”。<br>可见性包括 Public、Private 和 Protected，分别用+、-、#号表示。<br>类的操作的语法为: “可见性:操作名(参数表):返回类型 {约束特性}”。</p>
-<h3 id="（2）类之间的关系"><a href="#（2）类之间的关系" class="headerlink" title="（2）类之间的关系"></a>（2）类之间的关系</h3><p>①依赖关系。使用带箭头的虚线表示依赖关系。<br>②泛化关系。继承关系是泛化关系的反关系，也就是说子类是从父类中继承的，而父类则是子类的泛化。使用带空心箭头的实线表示，箭头指向父类。<br>③关联关系。用一条实线来表示关联关系。<br>聚合关系:聚合是一种特殊形式的关联。聚合表示类之间的关系是整体与部分的关系。例如 一辆轿车包含四个车轮、一个方向盘、一个发动机和一个底盘，就是聚合的一个例子。在 UML 中，用一个带空心菱形的实线表示，空心菱形指向的是代表“整体”的类。<br>组合关系:如果聚合关系中的表示“部分”的类的存在，与表示“整体”的类有着紧密的关系，例如“公司”与“部门”之间的关系，那么就应该使用“组合”关系来表示。在 UML 中， 用带有实心菱形的实线表示，菱形指向的是代表“整体”的类。<br>④实现关系。用一个带空心箭头的虚线表示。<br><img src="/images/ruankao/6-9-1.png"></p>
-<h3 id="（3）多重性问题"><a href="#（3）多重性问题" class="headerlink" title="（3）多重性问题"></a>（3）多重性问题</h3><p>多重性是用来说明关联的两个类之间的数量关系的。<br>0…1;0…<em>;1…1;1…</em>;*</p>
-<h3 id="（4）类图"><a href="#（4）类图" class="headerlink" title="（4）类图"></a>（4）类图</h3><p>对于软件系统，其类模型和对象模型类图描述类和类之间的静态关系。与数据模型不同，它不仅显示了信息的结构，同时还描述了系统的行为。类图是定义其他图的基础。</p>
-<h3 id="（5）对象图"><a href="#（5）对象图" class="headerlink" title="（5）对象图"></a>（5）对象图</h3><p>UML 中对象图与类图具有相同的表示形式。对象图可以看作是类图的一个实例。</p>
-<h2 id="5、交互图基础"><a href="#5、交互图基础" class="headerlink" title="5、交互图基础"></a>5、交互图基础</h2><p>交互图是表示各组对象如何按某种行为进行协作的模型。通常可以使用一个交互图来表示和说明一个用例的行为。</p>
-<h3 id="（1）顺序图"><a href="#（1）顺序图" class="headerlink" title="（1）顺序图"></a>（1）顺序图</h3><p>顺序图用来描述对象之间动态的交互关系，着重体现对象间消息传递的时间顺序。顺序图允许直观地表示出对象的生存期，在生存期内，对象可以对输入消息做出响应，并且可以发送信息。<br><img src="/images/ruankao/6-10.png"></p>
-<h3 id="（2）通信图"><a href="#（2）通信图" class="headerlink" title="（2）通信图"></a>（2）通信图</h3><p>通信图用于描述相互合作的对象间的交互关系和链接关系。虽然顺序图和通信图都用来描述对象间的交互关系，但侧重点不一样。顺序图着重体现交互的时间顺序，通信图则着重体现交互对象间的静态链接关系。<br><img src="/images/ruankao/6-11.png"></p>
-<h3 id="（3）定时图"><a href="#（3）定时图" class="headerlink" title="（3）定时图"></a>（3）定时图</h3><p>定时图是一种特殊形式的顺序图。<br><img src="/images/ruankao/6-12.png"></p>
-<h2 id="6、状态图基础"><a href="#6、状态图基础" class="headerlink" title="6、状态图基础"></a>6、状态图基础</h2><p>状态图用来描述一个特定对象的所有可能状态及其引起状态转移的事件。<br><img src="/images/ruankao/6-13.png"></p>
-<h2 id="7、活动图基础"><a href="#7、活动图基础" class="headerlink" title="7、活动图基础"></a>7、活动图基础</h2><p>活动图的应用非常广泛，它既可用来描述操作(类的方法)的行为，也可以描述用例和对象内部的工作过程。<br>活动图是由状态图变化而来的，它们各自用于不同的目的。活动图依据对象状态的变化来捕获动作(将要执行的工作或活动)与动作的结果。活动图中一个活动结束后将立即进入下一个活动(在状态图中状态的变迁可能需要事件的触发)。</p>
-<h3 id="1-基本活动图。"><a href="#1-基本活动图。" class="headerlink" title="(1)基本活动图。"></a>(1)基本活动图。</h3><p><img src="/images/ruankao/6-14.png"><br>判定:用菱形表示。<br>分支与组合:用粗线来表示分支和组合。</p>
-<h3 id="2-带泳道的活动图。"><a href="#2-带泳道的活动图。" class="headerlink" title="(2)带泳道的活动图。"></a>(2)带泳道的活动图。</h3><p><img src="/images/ruankao/6-15.png"></p>
-<h3 id="3-对象流。"><a href="#3-对象流。" class="headerlink" title="(3)对象流。"></a>(3)对象流。</h3><p>在活动图中可以出现对象。对象可以作为活动的输入或输出，对象与活 动间的输入/输出关系由虚线箭头来表示。如果仅表示对象受到某一活动的影响，则可用不带箭头的虚线来连接对象与活动。</p>
-<h3 id="4-信号。"><a href="#4-信号。" class="headerlink" title="(4)信号。"></a>(4)信号。</h3><p>在活动图中可以表示信号的发送与接收，分别用发送和接收标识来表示。 发送和接收标识也可与对象相连，用于表示消息的发送者和接收者。</p>
-<h2 id="8、构件图基础"><a href="#8、构件图基础" class="headerlink" title="8、构件图基础"></a>8、构件图基础</h2><p>构件图是面向对象系统的物理方面进行建模要用的两种图之一。它可以有效地显示一组构件，以及它们之间的关系。构件图中通常包括构件、接口及各种关系。<br><img src="/images/ruankao/6-16.png"><br>通常构件指的是源代码文件、二进制代码文件和可执行文件等。而构件图就是用来显示编译、链接或执行时构件之间的依赖关系的。</p>
-<h3 id="对源代码进行建模"><a href="#对源代码进行建模" class="headerlink" title="对源代码进行建模"></a>对源代码进行建模</h3><p>这样可以清晰地表示出各个不同源程序文件之间的关系。</p>
-<h3 id="对物理数据库建模"><a href="#对物理数据库建模" class="headerlink" title="对物理数据库建模"></a>对物理数据库建模</h3><p>用来表示各种类型的数据库、表之间的关系。</p>
-<h3 id="对可调整的系统建模"><a href="#对可调整的系统建模" class="headerlink" title="对可调整的系统建模"></a>对可调整的系统建模</h3><p>例如对应用了负载均衡、故障恢复等系统的建模。</p>
-<p>在绘制构件图时，应该注意侧重于描述系统的静态实现视图的一个方面，图形不要过于简化，应该为构件图取一个直观的名称，在绘制时避免产生线的交叉。</p>
-<h2 id="9、部署图基础"><a href="#9、部署图基础" class="headerlink" title="9、部署图基础"></a>9、部署图基础</h2><p>部署图，也称为实施图，它和构件图一样，是面向对象系统的物理方面建模的两种图之一。构件图是说明构件之间的逻辑关系，而部署图则是在此基础上更进一步地描述系统硬件的物理拓扑结构及在此结构上执行的软件。部署图可以显示计算结点的拓扑结构和通信路径、结点上运行的软件构件，常用于帮助理解分布式系统。</p>
-<h3 id="1-节点和连接。"><a href="#1-节点和连接。" class="headerlink" title="(1)节点和连接。"></a>(1)节点和连接。</h3><p>节点代表一个物理设备及其上运行的软件系统，如一台 UNIX 主机、一个 PC 终端、一台打印机、一个传感器等。<br>节点之间的连线表示系统之间进行交互的通信路径，在 UML 中被称为连接。<br>通信类型则放在连接旁边的“《》”之间，表示所用的通信协议或网络类型。</p>
-<h3 id="2-构件和接口。"><a href="#2-构件和接口。" class="headerlink" title="(2)构件和接口。"></a>(2)构件和接口。</h3><p>在部署图中，构件代表可执行的物理代码模块，如一个可执行程序。</p>
-<p><img src="/images/ruankao/6-17.png"><br>在面向对象方法中，类和构件等元素并不是所有的属性和操作都对外可见。它们对外提供了可见操作和属性，称之为类和构件的接口。界面可以表示为一头是小圆圈的直线。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1478,20 +1537,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1561,6 +1620,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 
