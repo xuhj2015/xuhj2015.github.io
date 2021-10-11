@@ -1,6 +1,7 @@
 ---
 title: 干啊，软考之路
 date: 2021-09-16
+categories: [软考]
 tags: [软考]
 ---
 
