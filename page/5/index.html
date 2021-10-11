@@ -197,6 +197,187 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（五）用户界面设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
+<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
+<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
+<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
+<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
+<p>除此之外，还应该考虑表所示的设计原则。</p>
+<p><img src="/images/ruankao/6-18.png"></p>
+<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
+<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
+<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
+<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
+<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（六）工作流设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>现实中的流程存在大量的不确定性。</p>
+<h1 id="一、工作流设计概述"><a href="#一、工作流设计概述" class="headerlink" title="一、工作流设计概述"></a>一、工作流设计概述</h1><p>工作流是一类能够完全或者部分自动执行的经营过程，根据一系列过程规则、文档、信息或任务在不同的执行者之间 传递、执行。</p>
+<h2 id="1-工作流"><a href="#1-工作流" class="headerlink" title="(1)工作流"></a>(1)工作流</h2><p>工作流是现实中的具体工作从开始到结束过程的抽象和概括。这个过程包括了众多因素:任务顺序、路线规则、时间时限约束等。</p>
+<h2 id="2-流程定义"><a href="#2-流程定义" class="headerlink" title="(2)流程定义"></a>(2)流程定义</h2><p>流程定义是指对业务过程的形式化表示，它定义了过程运行中的活动和所涉及的各种信息。这些信息包括</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">过程的开始和完成条件</span><br><span class="line">构成过程的活动及进行活动间导航的规则</span><br><span class="line">用户所需要完成的任务</span><br><span class="line">可能被调用的应用</span><br><span class="line">工作流间的引用关系</span><br><span class="line">工作流数据的定义</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-流程实例"><a href="#3-流程实例" class="headerlink" title="(3)流程实例"></a>(3)流程实例</h2><p>也称为工作，是一个流程定义的运行实例。</p>
+<h2 id="4-工作流管理系统"><a href="#4-工作流管理系统" class="headerlink" title="(4)工作流管理系统"></a>(4)工作流管理系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存储流程的定义</span><br><span class="line">按照所使用的流程定义来触发流程状态的改变</span><br><span class="line">推动流程的运转</span><br></pre></td></tr></table></figure>
+<p>这个推动的依据常常称为工作流引擎。</p>
+<h2 id="5-流程定义工具"><a href="#5-流程定义工具" class="headerlink" title="(5)流程定义工具"></a>(5)流程定义工具</h2><p>使用流程定义工具来完成流程定义的工作</p>
+<h2 id="6-参与者"><a href="#6-参与者" class="headerlink" title="(6)参与者"></a>(6)参与者</h2><p>可以是具体的人或者角色(企业内部有特别共同作用的多个人)，也可以是自动化系统，甚至是其他系统。</p>
+<h2 id="7-活动"><a href="#7-活动" class="headerlink" title="(7)活动"></a>(7)活动</h2><p>活动是流程定义中的一个元素，一次活动可能改变流程处理数据的内容、流程的状态，并可能将流程推动到其他活动中去。活动可以由人来完成，也可以是系统自动的处理过程。</p>
+<h2 id="8-活动所有者"><a href="#8-活动所有者" class="headerlink" title="(8)活动所有者"></a>(8)活动所有者</h2><p>决定该活动是否结束</p>
+<h2 id="9-工作所有者"><a href="#9-工作所有者" class="headerlink" title="(9)工作所有者"></a>(9)工作所有者</h2><p>有权整体控制流程实例执行过程的参与者</p>
+<h2 id="10-工作项"><a href="#10-工作项" class="headerlink" title="(10)工作项"></a>(10)工作项</h2><p>流程实例中活动的参与者将要执行的工作</p>
+<h1 id="二、工作流管理系统"><a href="#二、工作流管理系统" class="headerlink" title="二、工作流管理系统"></a>二、工作流管理系统</h1><p>在工作流形式化表示的驱动下，通过软件的执行而完成工作流定义、管理及执行的系统。<br>主要目标是对业务过程中各活动发生的先后次序及与活动相关的相应人力或信息资源的调用进行管理，而实现业务过程的自动化。</p>
+<p>工作流管理系统的6个最基本组成：</p>
+<h2 id="1-流程定义工具"><a href="#1-流程定义工具" class="headerlink" title="(1)流程定义工具"></a>(1)流程定义工具</h2><p>提供图形化或者其他方式的界面给设计者。由设计者将实际工作流程进行抽象，并将设计者提交的流程定义转换为形式化语言描述，提供给计算机工作流执行服务进行流程实例处理的依据。</p>
+<h2 id="2-工作流执行服务"><a href="#2-工作流执行服务" class="headerlink" title="(2)工作流执行服务"></a>(2)工作流执行服务</h2><p>1、使用一种或者多种数据流引擎，对流程定义进行解释，激活有效的流程实例，推动流程实例在不同的活动中运转。<br>2、和客户应用程序、其他工作流服务执行程序及其他应用程序进行交互，从而完成流程实例的创建、执行和管理工作。<br>3、为每个用户维护一个活动列表，告诉用户当前必须处理的任务。<br>4、通过电子邮件甚至是短消息的形式提醒用户任务的到达。</p>
+<h2 id="3-其他工作流执行服务"><a href="#3-其他工作流执行服务" class="headerlink" title="(3)其他工作流执行服务"></a>(3)其他工作流执行服务</h2><p>大型的企业工作流应用，往往包括多个工作流管理系统。这就需要这些工作流管理系统之间进行有效的交互，避免画地为牢、信息孤岛的现象出现。</p>
+<h2 id="4-客户应用程序"><a href="#4-客户应用程序" class="headerlink" title="(4)客户应用程序"></a>(4)客户应用程序</h2><p>最终用户的界面，用户通过使用这部分软件对工作流的数据进行必要的处理，如果用户是当前活动的拥有者，还可通过客户应用程序改变流程实例的活动，将流程实例推动到另外一个活动中。</p>
+<h2 id="5-被调用应用程序"><a href="#5-被调用应用程序" class="headerlink" title="(5)被调用应用程序"></a>(5)被调用应用程序</h2><p>对工作流所携带数据的处理程序。</p>
+<h2 id="6-管理和监控工具"><a href="#6-管理和监控工具" class="headerlink" title="(6)管理和监控工具"></a>(6)管理和监控工具</h2><p>对流程实例的状态查询、挂起、恢复、销毁等操作，同时提供系统参数、系统运行情况统计等数据。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1001,178 +1182,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%BA%8C%EF%BC%89%E5%8F%AF%E8%A1%8C%E6%80%A7%E7%A0%94%E7%A9%B6/" class="post-title-link" itemprop="url">系统规划（二）可行性研究</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-17 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-17T00:00:00+08:00">2021-09-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:42" itemprop="dateModified" datetime="2021-10-11T10:38:42+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>可行性研究的范围包括技术、经济、执行、环境等方面。虽然可行性研究不能给出详细的计划和方向，但是可以以最小的成本识别出错误构思的系统，从而避免更大的损失。</p>
-<h1 id="一、可行性研究的内容"><a href="#一、可行性研究的内容" class="headerlink" title="一、可行性研究的内容"></a>一、可行性研究的内容</h1><p>可行性研究包括经济可行性、技术可行性、法律可行性、执行可行性、方案的选择等5个方面。</p>
-<h2 id="经济可行性"><a href="#经济可行性" class="headerlink" title="经济可行性"></a>经济可行性</h2><p>评估项目的开发成本及项目成功后可能获得的经济收益。</p>
-<h2 id="技术可行性"><a href="#技术可行性" class="headerlink" title="技术可行性"></a>技术可行性</h2><p>评估对于假想的软件系统需要实现的功能和性能，以及技术能力约束。可通过“提问-回答”的方式进行论证。<br>投资不足、时间不足、技术难度过大、没有足够的技术积累、没有熟练的员工、没有足够的合作公司、晚报资源不足等都是技术可行性的约束。</p>
-<h2 id="法律可行性"><a href="#法律可行性" class="headerlink" title="法律可行性"></a>法律可行性</h2><p>评估可能有系统开发引起的侵权或法律责任。<br>可能包括过年政策和法律的限制，合同的订立和条款，职责、侵权情况的设定，违约、争议的解决等。</p>
-<h2 id="执行可行性"><a href="#执行可行性" class="headerlink" title="执行可行性"></a>执行可行性</h2><p>评估与其的软件系统在真实的环境中能够被应用的程度和实施过程中的障碍。</p>
-<h2 id="方案的选择"><a href="#方案的选择" class="headerlink" title="方案的选择"></a>方案的选择</h2><p>评估系统或者产品开发的可选方法，可以采用折中的方法，反复比较各个方案的成本和效益，选择可行的方案。</p>
-<h1 id="二、成本效益分析"><a href="#二、成本效益分析" class="headerlink" title="二、成本效益分析"></a>二、成本效益分析</h1><p>对项目开发目标的成本及可度量的项目现金收入和无形收益进行一次转化的评估。</p>
-<h2 id="项目可能涉及的成本"><a href="#项目可能涉及的成本" class="headerlink" title="项目可能涉及的成本"></a>项目可能涉及的成本</h2><p>基础建设支出<br>一次性支出<br>运行维护费用</p>
-<h2 id="项目可能涉及的利益"><a href="#项目可能涉及的利益" class="headerlink" title="项目可能涉及的利益"></a>项目可能涉及的利益</h2><p>一次性收益<br>非一次性收益<br>不可定量的收益</p>
-<h2 id="效益分析的若干指标和进一步的分析"><a href="#效益分析的若干指标和进一步的分析" class="headerlink" title="效益分析的若干指标和进一步的分析"></a>效益分析的若干指标和进一步的分析</h2><p>收益/投资比<br>投资回收周期<br>敏感性分析</p>
-<h1 id="三、可行性分析报告"><a href="#三、可行性分析报告" class="headerlink" title="三、可行性分析报告"></a>三、可行性分析报告</h1><p>国标 GB 8567-1988 中定义了可行性分析报告的格式和内容。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">项目背景：包括问题描述、实现环境和限制条件</span><br><span class="line">管理概要和建议：包括重要的研究成果、说明、建议和影响</span><br><span class="line">候选方案：包括候选系统的配置和最终方案的选择标准</span><br><span class="line">系统描述：包括系统工作范围的简要说明和被分配系统元素的可行性</span><br><span class="line">经济可行性：包括经费概算和与其的经济效益</span><br><span class="line">技术可行性：包括技术实力、已有工作基础和设备条件</span><br><span class="line">法律可行性：包括系统开发可能导致的侵权，违法和责任等</span><br><span class="line">用户使用可行性：包括用户单位的行政管理，工作制度和使用人员的素质</span><br><span class="line">其他与项目有关的问题：例如其他方案接收和未来可能的变化</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E5%9B%9B%EF%BC%89%E6%96%B0%E6%97%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E6%AF%94%E8%BE%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E5%9B%9B%EF%BC%89%E6%96%B0%E6%97%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E6%AF%94%E8%BE%83/" class="post-title-link" itemprop="url">系统规划（四）新旧系统的分析和比较</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-17 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-17T00:00:00+08:00">2021-09-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:42" itemprop="dateModified" datetime="2021-10-11T10:38:42+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>遗留系统的特点：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">系统虽然能完成很多重要的业务工作，但是已经不能外圈满足要求。</span><br><span class="line">系统在性能上已经落后，或者采用的技术已经过时。</span><br><span class="line">通常是大型的系统，已经融入业务工作中，维护工作十分困难。</span><br><span class="line">系统没有使用现代系统工程方法进行管理和开发，基本没有文档，很难理解。</span><br></pre></td></tr></table></figure>
-<p>对于遗留系统，可以根据系统的技术条件、商业价值及维护和运行系统的组织特征不同，采取继续维护、重构或替代、或联合使用几种策略。</p>
-<h1 id="一、遗留系统的评价方法"><a href="#一、遗留系统的评价方法" class="headerlink" title="一、遗留系统的评价方法"></a>一、遗留系统的评价方法</h1><p><img src="/images/ruankao/4-2.png"><br>1、启动评价<br>评价是为了对遗留系统足够的理解。评价前需要了解以下问题：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">对企业来说，遗留系统是否至关重要</span><br><span class="line">企业的商业目标是什么</span><br><span class="line">演化需求是什么</span><br><span class="line">所期望的系统寿命多长</span><br><span class="line">系统的使用期限多久</span><br><span class="line">系统的技术状态如何</span><br><span class="line">企业是否愿意改变</span><br><span class="line">企业是否有能力承受演化</span><br></pre></td></tr></table></figure>
-<p>2、商业价值评价<br>判断遗留系统对企业的重要性。可以包括概要和详细两个级别，概要评价包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">咨询</span><br><span class="line">评价问卷</span><br><span class="line">进行评价</span><br></pre></td></tr></table></figure>
-<p>详细评价包括应用系统不符合业务规范的风险分析，该分析十分费时，最好由业务分析师来完成。<br>3、外部环境评价<br>外部环境评价系统的外部技术环境，是硬件、支撑软件和其他基础设施的统一体。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">硬件</span><br><span class="line">    系统一些常见特征有供应商、维护费用、市销率、年龄、功能、性能等。</span><br><span class="line">    具体评价方法是对每一个部件或整个系统的每个特征打分（1-4），求总分。</span><br><span class="line">支撑软件</span><br><span class="line">    支撑软件可包括操作系统、数据库、事务处理程序、编译器、网络软件、应用软件等。</span><br><span class="line">    评价方式同硬件。</span><br><span class="line">企业基础设施</span><br><span class="line">    需要考虑企业和使用者的类型、开发组织的技术成熟度、企业的培训过程、系统支持人员的技术水平、企业是否愿意改变。</span><br></pre></td></tr></table></figure>
-<p>4、应用软件评价</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">系统级，整个系统看作不可分的原子。</span><br><span class="line">部件级，关注系统的每个子系统，考虑子系统的特征，包括复杂性、数据、文档、外部依赖型、合法性、维护记录、大小、安全性等。</span><br><span class="line">评价方式同硬件。</span><br></pre></td></tr></table></figure>
-<p>5、分析评价结果<br>加权平均值。</p>
-<p><img src="/images/ruankao/4-3.png"></p>
-<h1 id="二、遗留系统的演化策略"><a href="#二、遗留系统的演化策略" class="headerlink" title="二、遗留系统的演化策略"></a>二、遗留系统的演化策略</h1><p>1、淘汰策略<br>第3象限低水平、低价值区，淘汰，全面开发新的系统替代遗留系统。<br>一般在业务发生根本变化，或维护人员、维护资料全部丢失了。经过评价，重新开发比改造旧系统更划算。<br>2、继承策略<br>第4象限低水平、高价值区，遗留，在开发系统时需要完全兼容遗留系统的功能模型和数据模型，新老系统同时运行，逐渐切换到新系统。<br>3、改造策略<br>第1象限高水平、高价值区，改造，这种系统通常建成时间段。其他功能不变，增加新功能。<br>4、集成策略<br>第2象限高水平、低价值区，集成，这种系统可能只完成某部门或子公司的业务，从整体看，他们基于不同的平台，不同的数据模型，无法互联互通，数据还不一致，属于较严重的问题。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1244,7 +1253,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">55</span>
+          <span class="site-state-item-count">57</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1257,7 +1266,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -1340,6 +1349,26 @@
 
 
 
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
 
 
 
