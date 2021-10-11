@@ -360,6 +360,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（八）系统运行环境的集成与设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在设计一个新的系统时，设计者必须考虑目标系统的运行环境问题。软件的运行环境是指系统运行的设备、操作系统和网络配置。</p>
+<h1 id="1-集中式系统"><a href="#1-集中式系统" class="headerlink" title="1.集中式系统"></a>1.集中式系统</h1><p>所有的操作都集中于一台主机中。</p>
+<p>集中式系统常见于银行、保险、证券行业，它们含有大规模的处理应用。</p>
+<p>在现代的系统中，集中式系统通常是某个分布式系统的一个环节。</p>
+<p>集中式系统由以下几个部分组成。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1)单计算机结构:这种结构简单、容易维护，但是处理能力受到限制。 </span><br><span class="line">(2)集群结构:由多个计算机组成，这些计算机具有类似的硬件平台、操作系统等。通常采用负载均衡、资源共享等方式实现更大的处理能力和容量。 </span><br><span class="line">(3)多计算机结构:由多个计算机组成，这些计算机之间操作环境可能不同。适用于当系统可以分解成多个不同的子系统时。</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-分布式系统"><a href="#2-分布式系统" class="headerlink" title="2.分布式系统"></a>2.分布式系统</h1><p>分布式系统由于网络的普遍延伸，费用的不断降低而越来越成为大型系统的首选环境。分布式系统必须基于网络，这个网络可以是在一个地域内的局域网，也可以是跨越不同城市乃至国家的广域网。对比集中式的计算机环境，分布式系统有着多种多样的形式。这也给设计者在确定系统运行环境时带来一定的烦恼。</p>
+<h1 id="3-C-S-结构"><a href="#3-C-S-结构" class="headerlink" title="3.C/S 结构"></a>3.C/S 结构</h1><p>由提供服务的服务器和发起请求、接受结果的客户机构成。</p>
+<h1 id="4-多层结构"><a href="#4-多层结构" class="headerlink" title="4.多层结构"></a>4.多层结构</h1><p>C/S 结构的扩展。</p>
+<p>典型的分为由存储数据的数据库服务器作为数据层、实现商业规则的程序作为逻辑层、管理用户输入输出的视图层所组成的三层结构。</p>
+<p>多层结构形式复杂，功能多样。实现多层结构常常需要来实现不同层次间通信的专门程序——管件，也称为中间件。中间件大多数实现远程程序调用、对象请求调度等功能。</p>
+<h1 id="5-Internet、Intranet-和-Extranet"><a href="#5-Internet、Intranet-和-Extranet" class="headerlink" title="5.Internet、Intranet 和 Extranet"></a>5.Internet、Intranet 和 Extranet</h1><p>Internet 是全球的网络集合，使用通用的 TCP/IP 协议来相互连接。Internet 提供电子邮件、文件传输、远程登录等服务。</p>
+<p>Intranet 是私有网络，只限于内部使用，也使用 TCP/IP 协议。</p>
+<p>Extranet 是一个扩展的 Intranet。它包括企业之外的和企业密切相关合作的其他企业。 Extranet 允许分离的组织交换信息并进行合作，这样就形成了一个虚拟组织。</p>
+<p>现在的 VPN 技术允许在公用网络上架构只对组织内部开发服务。</p>
+<p>Web 同样基于 C/S 结构，实际上 Web 接口是一个通用的接口，不是只能使用浏览器 的协议，它同样能够在普通的程序中使用。</p>
+<p>Internet 和 Web 已经给设计者提供了一个非常富有吸引力的选择方案。它的优势在于:它们已经成为网络的事实上的标准，支持它们的软件已经广泛地存在于全世界的计算机中，而且通信费用已经下降到很有竞争力的水平。</p>
+<p>采用 Internet 时，必须考虑其不利的一面。 Internet 的安全性过去、现在、以后都是设计者头痛的问题。其他诸如可靠性、系统吞吐量、不断发展的技术和标准都是影响系统选择它们作为运行环境的不利因素。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -437,98 +529,6 @@
 <h2 id="4-客户应用程序"><a href="#4-客户应用程序" class="headerlink" title="(4)客户应用程序"></a>(4)客户应用程序</h2><p>最终用户的界面，用户通过使用这部分软件对工作流的数据进行必要的处理，如果用户是当前活动的拥有者，还可通过客户应用程序改变流程实例的活动，将流程实例推动到另外一个活动中。</p>
 <h2 id="5-被调用应用程序"><a href="#5-被调用应用程序" class="headerlink" title="(5)被调用应用程序"></a>(5)被调用应用程序</h2><p>对工作流所携带数据的处理程序。</p>
 <h2 id="6-管理和监控工具"><a href="#6-管理和监控工具" class="headerlink" title="(6)管理和监控工具"></a>(6)管理和监控工具</h2><p>对流程实例的状态查询、挂起、恢复、销毁等操作，同时提供系统参数、系统运行情况统计等数据。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（八）系统运行环境的集成与设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>在设计一个新的系统时，设计者必须考虑目标系统的运行环境问题。软件的运行环境是指系统运行的设备、操作系统和网络配置。</p>
-<h1 id="1-集中式系统"><a href="#1-集中式系统" class="headerlink" title="1.集中式系统"></a>1.集中式系统</h1><p>所有的操作都集中于一台主机中。</p>
-<p>集中式系统常见于银行、保险、证券行业，它们含有大规模的处理应用。</p>
-<p>在现代的系统中，集中式系统通常是某个分布式系统的一个环节。</p>
-<p>集中式系统由以下几个部分组成。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1)单计算机结构:这种结构简单、容易维护，但是处理能力受到限制。 </span><br><span class="line">(2)集群结构:由多个计算机组成，这些计算机具有类似的硬件平台、操作系统等。通常采用负载均衡、资源共享等方式实现更大的处理能力和容量。 </span><br><span class="line">(3)多计算机结构:由多个计算机组成，这些计算机之间操作环境可能不同。适用于当系统可以分解成多个不同的子系统时。</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-分布式系统"><a href="#2-分布式系统" class="headerlink" title="2.分布式系统"></a>2.分布式系统</h1><p>分布式系统由于网络的普遍延伸，费用的不断降低而越来越成为大型系统的首选环境。分布式系统必须基于网络，这个网络可以是在一个地域内的局域网，也可以是跨越不同城市乃至国家的广域网。对比集中式的计算机环境，分布式系统有着多种多样的形式。这也给设计者在确定系统运行环境时带来一定的烦恼。</p>
-<h1 id="3-C-S-结构"><a href="#3-C-S-结构" class="headerlink" title="3.C/S 结构"></a>3.C/S 结构</h1><p>由提供服务的服务器和发起请求、接受结果的客户机构成。</p>
-<h1 id="4-多层结构"><a href="#4-多层结构" class="headerlink" title="4.多层结构"></a>4.多层结构</h1><p>C/S 结构的扩展。</p>
-<p>典型的分为由存储数据的数据库服务器作为数据层、实现商业规则的程序作为逻辑层、管理用户输入输出的视图层所组成的三层结构。</p>
-<p>多层结构形式复杂，功能多样。实现多层结构常常需要来实现不同层次间通信的专门程序——管件，也称为中间件。中间件大多数实现远程程序调用、对象请求调度等功能。</p>
-<h1 id="5-Internet、Intranet-和-Extranet"><a href="#5-Internet、Intranet-和-Extranet" class="headerlink" title="5.Internet、Intranet 和 Extranet"></a>5.Internet、Intranet 和 Extranet</h1><p>Internet 是全球的网络集合，使用通用的 TCP/IP 协议来相互连接。Internet 提供电子邮件、文件传输、远程登录等服务。</p>
-<p>Intranet 是私有网络，只限于内部使用，也使用 TCP/IP 协议。</p>
-<p>Extranet 是一个扩展的 Intranet。它包括企业之外的和企业密切相关合作的其他企业。 Extranet 允许分离的组织交换信息并进行合作，这样就形成了一个虚拟组织。</p>
-<p>现在的 VPN 技术允许在公用网络上架构只对组织内部开发服务。</p>
-<p>Web 同样基于 C/S 结构，实际上 Web 接口是一个通用的接口，不是只能使用浏览器 的协议，它同样能够在普通的程序中使用。</p>
-<p>Internet 和 Web 已经给设计者提供了一个非常富有吸引力的选择方案。它的优势在于:它们已经成为网络的事实上的标准，支持它们的软件已经广泛地存在于全世界的计算机中，而且通信费用已经下降到很有竞争力的水平。</p>
-<p>采用 Internet 时，必须考虑其不利的一面。 Internet 的安全性过去、现在、以后都是设计者头痛的问题。其他诸如可靠性、系统吞吐量、不断发展的技术和标准都是影响系统选择它们作为运行环境的不利因素。</p>
 
       
     </div>
@@ -1091,7 +1091,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%80%EF%BC%89%E9%A1%B9%E7%9B%AE%E6%8F%90%E5%87%BA%E4%B8%8E%E9%80%89%E6%8B%A9/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%89%EF%BC%89%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%B6%E5%AE%9A%E5%92%8C%E6%94%B9%E8%BF%9B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -1105,7 +1105,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%80%EF%BC%89%E9%A1%B9%E7%9B%AE%E6%8F%90%E5%87%BA%E4%B8%8E%E9%80%89%E6%8B%A9/" class="post-title-link" itemprop="url">系统规划（一）项目提出与选择</a>
+            <a href="/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%89%EF%BC%89%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%B6%E5%AE%9A%E5%92%8C%E6%94%B9%E8%BF%9B/" class="post-title-link" itemprop="url">系统规划（三）方案的制定和改进</a>
         </h2>
 
         <div class="post-meta">
@@ -1145,29 +1145,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>系统规划主要记录从项目提出、选择到确立的过程。包括系统项目的提出与可行性分析，系统方案的制定、评价和改进，新旧系统的分析和比较，以及现有软件、硬件和数据资源的有效利用等问题。</p>
-<h1 id="一、项目的提出与选择"><a href="#一、项目的提出与选择" class="headerlink" title="一、项目的提出与选择"></a>一、项目的提出与选择</h1><p>根据项目的动机确定系统的范围及方案选择。</p>
-<h2 id="1、系统的立项目标和动机"><a href="#1、系统的立项目标和动机" class="headerlink" title="1、系统的立项目标和动机"></a>1、系统的立项目标和动机</h2><p>项目立项的动机包括</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">进行基础研究并获取技术：大学、企业、研究所等科研类</span><br><span class="line">进行应用研发并获得产品：产品研发，卖产品获利</span><br><span class="line">提供技术服务：卖服务获利</span><br><span class="line">信息技术产品的使用者：买软件或者产品使用</span><br></pre></td></tr></table></figure>
-<h2 id="2、项目选择和确定"><a href="#2、项目选择和确定" class="headerlink" title="2、项目选择和确定"></a>2、项目选择和确定</h2><p>项目选择的目的可能有两种。<br>1是软件开发公司在诸多产品方向中选择格式的方向研究和开发。<br>2是客户从诸多的产品中购买适合自己的产品或方案。</p>
-<h3 id="（1）选择有核心价值的产品-项目或开发方向"><a href="#（1）选择有核心价值的产品-项目或开发方向" class="headerlink" title="（1）选择有核心价值的产品/项目或开发方向"></a>（1）选择有核心价值的产品/项目或开发方向</h3><p>关键在于确定什么样的系统项目是有价值的。价值通常与核心业务有关系，立项单位所在的行业或上下游位置不同，价值判断也不同。</p>
-<h3 id="（2）评估项目风险、收益和代价"><a href="#（2）评估项目风险、收益和代价" class="headerlink" title="（2）评估项目风险、收益和代价"></a>（2）评估项目风险、收益和代价</h3><p>1、对于开发产品进行销售<br>主要评估产品期望收益和开发投入的时间、资金、人力等资源。项目的风险主要是技术难度、技术能力、经济能力、开发进度、法律风险、政策风险。<br>2、对于购买产品或技术服务<br>需要评估项目实施后的变更情况，组织机构和人员职责的影响，现有流程和人员能否满足要去，规章制度是否满足要求等。</p>
-<h3 id="（3）评估项目的多种实施方式"><a href="#（3）评估项目的多种实施方式" class="headerlink" title="（3）评估项目的多种实施方式"></a>（3）评估项目的多种实施方式</h3><h3 id="（4）平衡地选择合适的方案"><a href="#（4）平衡地选择合适的方案" class="headerlink" title="（4）平衡地选择合适的方案"></a>（4）平衡地选择合适的方案</h3><p>1、新技术与就技术</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">新技术意味着风险、学习和导入期。</span><br><span class="line">旧技术享受不了新技术的好处。</span><br></pre></td></tr></table></figure>
-<p>2、快速开发平台</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">基于某平台的产品会让用户绑定在该平台上，减少未来自主选择性。</span><br><span class="line">不基于某平台可能会延长项目开发时间，从而导致更多开销。</span><br></pre></td></tr></table></figure>
-<p>3、系统扩展性</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">不考虑系统扩展性很可能在业务变更时受阻。</span><br><span class="line">过多考虑系统扩展性会花费大量时间进行设计。在IT发展迅速的今天，很有可能在有升级的时候，原来的技术体系已被淘汰。</span><br></pre></td></tr></table></figure>
-<p>4、抛弃明显存在问题的“差”项目，选择基本立场“合适”的项目，而不是尽可能的“好”。<br><img src="/images/ruankao/4-1.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">要求质量是客户认为产品应该具备的功能或性能，实现越多客户越满意。</span><br><span class="line">假想质量是客户想当然认为产品应具备的功能或性能，客户不能正确描述自己想当然要得到的这些功能或性能需求。</span><br><span class="line">兴奋质量是客户要求范围外的功能或性能，通常是开发者很愿意增加的技术特性，实现这些客户会更高兴，但是不识闲也不影响其购买。</span><br><span class="line"></span><br><span class="line">系统设计师常犯的错误是用自己对技术产生的兴奋质量，替换客户最基本的要求质量或假想质量。</span><br><span class="line">企业经营者场贩的错误可能是对客户提出的合理要求质量视而不见，或者不加区分的把未经评估的假想质量指派给开发团队。</span><br></pre></td></tr></table></figure>
-<h2 id="2、项目提出和选择的结果"><a href="#2、项目提出和选择的结果" class="headerlink" title="2、项目提出和选择的结果"></a>2、项目提出和选择的结果</h2><p>项目提出和选择的结果最终会以“产品/项目建议书”的方式体现。典型的应用场景是：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在投标项目中，建议书通常是乙方提交给甲方竞标方案的一部分。</span><br><span class="line">在企业确立要开发某产品后，对该产品进行多角度评估，最终项目立项人向上级提交建议书进行决策。</span><br></pre></td></tr></table></figure>
-
-<p>产品/项目建议书包括以下几部分：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">用户单位、项目或产品的立项背景、需求来源和目标性的介绍；</span><br><span class="line">用户的内外部环境、组织机构、现有的IT设施情况等；</span><br><span class="line">用户的业务模型和业务规划；</span><br><span class="line">预期要建设的技术系统在用户业务中的位置和作用；</span><br><span class="line">信息化后的用户业务模型、软件应用方式、相关的部署环境、运行规划、管理规范等；</span><br><span class="line">为实现信息化业务模型，技术系统的产品需求鼎业（功能、性能、约束）和部署方式等；</span><br><span class="line">产品或项目的技术框架；</span><br><span class="line">项目的要点、技术难点、主要实施障碍等。</span><br><span class="line">项目或产品的可行性研究结果；</span><br><span class="line">项目可选择的试试方式、组织方式、沟通和协调机制等；</span><br><span class="line">项目的资源范围和规划，人、财、物、时间等；</span><br><span class="line">项目的成本、收益分析；</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-<p>其他项目建议书可能包含的内容或已单独文档列举的内容包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">项目风险及影响评估</span><br><span class="line">项目进度计划</span><br><span class="line">项目质量计划</span><br><span class="line">项目过渡期资金的获得方式、财务计划</span><br><span class="line">产品或项目的商务模式、盈利模式论述</span><br><span class="line">同类产品或公司的市场调查结果，以及竞争性比较</span><br><span class="line">企业成功案例、资质等</span><br><span class="line">商务条款或供应商、客户合同。</span><br></pre></td></tr></table></figure>
-<p>项目建议书标志着项目立项和选择阶段性工作的完成，一旦项目建议书被批准通过，项目可进入正式的开发准备和实施阶段。</p>
+          <p>主要完成的工作是解析“系统如何实现”的问题。<br>主要包括一下几个方面。</p>
+<h2 id="1、确定软件架构"><a href="#1、确定软件架构" class="headerlink" title="1、确定软件架构"></a>1、确定软件架构</h2><p>1、分析模型的结构。<br>2、对应于系统目标的最基本。最重要的实现要素。<br>3、特性和要点的解释。</p>
+<h2 id="2、确定实现的各种关键性要素"><a href="#2、确定实现的各种关键性要素" class="headerlink" title="2、确定实现的各种关键性要素"></a>2、确定实现的各种关键性要素</h2><p>1、关键的用例、主要的控制类、功能和服务的首要组织方式<br>2、对象的组织模式<br>3、常用和最关键的实现算法模型。<br>4.选定开发工具和开发环境</p>
+<h2 id="3、归结目标到最适合的计算体系"><a href="#3、归结目标到最适合的计算体系" class="headerlink" title="3、归结目标到最适合的计算体系"></a>3、归结目标到最适合的计算体系</h2><p>1、表示层：用户的界面部分<br>2、事务逻辑层：负责处理表示层的应用请求，完成商务逻辑的计算任务并肩结果返回用户。<br>3、数据服务层：为应用提供数据来源。</p>
 
       
     </div>
