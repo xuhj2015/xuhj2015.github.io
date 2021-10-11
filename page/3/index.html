@@ -197,95 +197,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/" class="post-title-link" itemprop="url">基于中间件的开发（三）J2EE</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:36:56" itemprop="dateModified" datetime="2021-10-11T10:36:56+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>J2EE 是针对 Web Service、业务对象、数据访问和消息报传送的一组规范。这组应用编 程接口确定了 Web 应用与驻留它们的服务器之间的通信方式。J2EE 注重两件事，一是建 立标准，使 Web 应用的部署与服务器无关;二是使服务器能控制构件的生命周期和其他资 源，以便能够处理扩展、并发、事务处理管理和安全性问题。</p>
-<p>J2EE 规范定义了以下几种构件:应用客户端构件、EJB 构件、Servlets 和 JSP、Applet 构 件。</p>
-<p>J2EE 采用的是多层分布式应用模型，意味着应用逻辑将根据功能分成几个部分， 用户 可以在相同或不同的服务器上安装不同应用构件组成的 J2EE 应用。</p>
-<p><img src="/images/ruankao/7-2.png"></p>
-<h1 id="一、表示层"><a href="#一、表示层" class="headerlink" title="一、表示层"></a>一、表示层</h1><p>J2EE 客户端可以基于 Web，也可以基于 Java。</p>
-<p>分布式企业应用可以同时包括多种客户端，并且这些客户端都可以访问相同的业务逻辑。</p>
-<p><img src="/images/ruankao/7-3.png"></p>
-<h1 id="二、应用服务层"><a href="#二、应用服务层" class="headerlink" title="二、应用服务层"></a>二、应用服务层</h1><p>一般情况下，应用服务层包含表示层请求的表示逻辑和业务逻辑。</p>
-<p>表示层由显示 HTML 页面的 JSP 页面和 Servlets 实现。<br>业务逻辑通过 RMI 对象和 EJB 实现。EJB 依靠容器来 实现事务处理、生命周期和状态管理、资源池、安全等问题，容器是 EJB 运行的环境。</p>
-<h2 id="1-Servlet"><a href="#1-Servlet" class="headerlink" title="1.Servlet"></a>1.Servlet</h2><p>Java Servlets 是指可以扩展 Web 服务器功能的程序。Servlet 从客户端接受请求，动态 生成响应，然后将包含 HTML 或 XML 文档的请求发送给客户端。</p>
-<h2 id="2-JSP"><a href="#2-JSP" class="headerlink" title="2.JSP"></a>2.JSP</h2><p>JSP 页面是基于文本的 Servlet 开发方式。JSP 页面具有 Servlet 的所有优点，如果与 JavaBeans 类结合在一起，可以容易地将内容和显示逻辑分开。这使得无须了解 Java 代码 就能更新页面的外观，更新 Java Beans 类的人也无须深入了解 Web 页面的设计。</p>
-<h2 id="3-EJB"><a href="#3-EJB" class="headerlink" title="3.EJB"></a>3.EJB</h2><p>EJB 构件用于封装业务逻辑，使开发人员无须再担心数据访问、事务处理支持、安全性、 高速缓存和迸发等琐碎任务的编程。在 EJB 规范中，它们由 EJB 容器负责。EJB 包含接口 和类。</p>
-<p>EJB 共有三种类型:EntityBean(实体 Bean)、Session Bean(会话 Bean)和 Message Driven Bean(消息驱动 Bean)</p>
-<h2 id="4-JMS"><a href="#4-JMS" class="headerlink" title="4.JMS"></a>4.JMS</h2><p>JMS 是支持 Java 程序之间信息交换的 J2EE 机制。</p>
-<h2 id="5-JNDI"><a href="#5-JNDI" class="headerlink" title="5.JNDI"></a>5.JNDI</h2><p>由于 J2EE 应用的构件可以独立运行，而且是在不同的设备上运行，因此客户端和应用服务器层代码必须以某种方式查找和参考其他代码和资源。客户端和应用代码使用 JNDI (Java Naming and Directory Interface，Java 命名和目录接口)查找用户定义对象(如 EJB) 和环境实体(Environment Entities)。在 JDBC2.0 中，数据源可以绑定到 JNDI 上，并允许 应用程序访问。</p>
-<h2 id="6-事务处理"><a href="#6-事务处理" class="headerlink" title="6.事务处理"></a>6.事务处理</h2><p>J2EE 事务处理模型可以在部署过程中定义组成一个事务处理的方法之间的联系，以便 事务处理中的所有方法可以作为一个整体存在。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -356,6 +267,95 @@
 <h2 id="6-跨平台和架构的中间件"><a href="#6-跨平台和架构的中间件" class="headerlink" title="(6)跨平台和架构的中间件"></a>(6)跨平台和架构的中间件</h2><p>在分布式系统中，还需要集成各节点上的不同系统平台上的构件或新老版本的构件，由此产 生了架构中间件。</p>
 <h2 id="7-专用平台中间件"><a href="#7-专用平台中间件" class="headerlink" title="(7)专用平台中间件"></a>(7)专用平台中间件</h2><p>为特定应用领域设计领域参考模式，建立相应架构，配置相应的构件库和中间件，为应用服务器开发和运行特定领域的关键任务(如电子商务、网站等)。</p>
 <h2 id="8-网络中间件"><a href="#8-网络中间件" class="headerlink" title="(8)网络中间件"></a>(8)网络中间件</h2><p>它包括网管、接入、网络测试、虚拟社区、虚拟缓冲等，也是当前最热门的研发项目。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%89%EF%BC%89J2EE/" class="post-title-link" itemprop="url">基于中间件的开发（三）J2EE</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:36:56" itemprop="dateModified" datetime="2021-10-11T10:36:56+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>J2EE 是针对 Web Service、业务对象、数据访问和消息报传送的一组规范。这组应用编 程接口确定了 Web 应用与驻留它们的服务器之间的通信方式。J2EE 注重两件事，一是建 立标准，使 Web 应用的部署与服务器无关;二是使服务器能控制构件的生命周期和其他资 源，以便能够处理扩展、并发、事务处理管理和安全性问题。</p>
+<p>J2EE 规范定义了以下几种构件:应用客户端构件、EJB 构件、Servlets 和 JSP、Applet 构 件。</p>
+<p>J2EE 采用的是多层分布式应用模型，意味着应用逻辑将根据功能分成几个部分， 用户 可以在相同或不同的服务器上安装不同应用构件组成的 J2EE 应用。</p>
+<p><img src="/images/ruankao/7-2.png"></p>
+<h1 id="一、表示层"><a href="#一、表示层" class="headerlink" title="一、表示层"></a>一、表示层</h1><p>J2EE 客户端可以基于 Web，也可以基于 Java。</p>
+<p>分布式企业应用可以同时包括多种客户端，并且这些客户端都可以访问相同的业务逻辑。</p>
+<p><img src="/images/ruankao/7-3.png"></p>
+<h1 id="二、应用服务层"><a href="#二、应用服务层" class="headerlink" title="二、应用服务层"></a>二、应用服务层</h1><p>一般情况下，应用服务层包含表示层请求的表示逻辑和业务逻辑。</p>
+<p>表示层由显示 HTML 页面的 JSP 页面和 Servlets 实现。<br>业务逻辑通过 RMI 对象和 EJB 实现。EJB 依靠容器来 实现事务处理、生命周期和状态管理、资源池、安全等问题，容器是 EJB 运行的环境。</p>
+<h2 id="1-Servlet"><a href="#1-Servlet" class="headerlink" title="1.Servlet"></a>1.Servlet</h2><p>Java Servlets 是指可以扩展 Web 服务器功能的程序。Servlet 从客户端接受请求，动态 生成响应，然后将包含 HTML 或 XML 文档的请求发送给客户端。</p>
+<h2 id="2-JSP"><a href="#2-JSP" class="headerlink" title="2.JSP"></a>2.JSP</h2><p>JSP 页面是基于文本的 Servlet 开发方式。JSP 页面具有 Servlet 的所有优点，如果与 JavaBeans 类结合在一起，可以容易地将内容和显示逻辑分开。这使得无须了解 Java 代码 就能更新页面的外观，更新 Java Beans 类的人也无须深入了解 Web 页面的设计。</p>
+<h2 id="3-EJB"><a href="#3-EJB" class="headerlink" title="3.EJB"></a>3.EJB</h2><p>EJB 构件用于封装业务逻辑，使开发人员无须再担心数据访问、事务处理支持、安全性、 高速缓存和迸发等琐碎任务的编程。在 EJB 规范中，它们由 EJB 容器负责。EJB 包含接口 和类。</p>
+<p>EJB 共有三种类型:EntityBean(实体 Bean)、Session Bean(会话 Bean)和 Message Driven Bean(消息驱动 Bean)</p>
+<h2 id="4-JMS"><a href="#4-JMS" class="headerlink" title="4.JMS"></a>4.JMS</h2><p>JMS 是支持 Java 程序之间信息交换的 J2EE 机制。</p>
+<h2 id="5-JNDI"><a href="#5-JNDI" class="headerlink" title="5.JNDI"></a>5.JNDI</h2><p>由于 J2EE 应用的构件可以独立运行，而且是在不同的设备上运行，因此客户端和应用服务器层代码必须以某种方式查找和参考其他代码和资源。客户端和应用代码使用 JNDI (Java Naming and Directory Interface，Java 命名和目录接口)查找用户定义对象(如 EJB) 和环境实体(Environment Entities)。在 JDBC2.0 中，数据源可以绑定到 JNDI 上，并允许 应用程序访问。</p>
+<h2 id="6-事务处理"><a href="#6-事务处理" class="headerlink" title="6.事务处理"></a>6.事务处理</h2><p>J2EE 事务处理模型可以在部署过程中定义组成一个事务处理的方法之间的联系，以便 事务处理中的所有方法可以作为一个整体存在。</p>
 
       
     </div>
