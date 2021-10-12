@@ -197,6 +197,204 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9E%B6%E6%9E%84%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9E%B6%E6%9E%84%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7/" class="post-title-link" itemprop="url">软件架构设计（二）架构需求与软件质量属性</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-25T00:00:00+08:00">2021-09-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>架构的基本需求主要是在满足功能属性的前提下，关注软件质量属性，架构设计则是为满足架构需求(质量属性)寻找适当的“战术”。</p>
+<p>软件属性包括功能属性和质量属性，但是，软件架构(及软件架构设计师)重点关注的是质量属性。</p>
+<p>在大量的可能结构中，可以使用不同的结构来实现同样的功能性，即功 能性在很大程度上是独立于结构的，架构设计师面临着决策(对结构的选择)，而功能性所 关心的是它如何与其他质量属性进行交互，以及它如何限制其他质量属性。</p>
+<h1 id="一、软件质量属性"><a href="#一、软件质量属性" class="headerlink" title="一、软件质量属性"></a>一、软件质量属性</h1><p>《GB/T16260-1996(idt ISO/IEC9126:1991)信息技术软件产品评价质量特性及其使用指南》中描述的软件质量特性包括功能性、可靠性、易用性、效率、可维护性、可移植性等 6 个方面，每个方面都包含若干个子特性。 </p>
+<table>
+<thead>
+<tr>
+<th>软件质量特性</th>
+<th>子特性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>功能性</td>
+<td>适合性、准确性、互操作性、依从性、安全性</td>
+</tr>
+<tr>
+<td>可靠性</td>
+<td>成熟性、容错性、易恢复性</td>
+</tr>
+<tr>
+<td>易用性</td>
+<td>易理解性、易学性、易操作性</td>
+</tr>
+<tr>
+<td>效率</td>
+<td>时间特性、资源特性</td>
+</tr>
+<tr>
+<td>可维护性</td>
+<td>易分析性、易改变性、稳定性、易测试性</td>
+</tr>
+<tr>
+<td>可移植性</td>
+<td>适应性、易安装性、遵循性、易替换性</td>
+</tr>
+</tbody></table>
+<h2 id="1-运行期质量属性"><a href="#1-运行期质量属性" class="headerlink" title="1.运行期质量属性"></a>1.运行期质量属性</h2><h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>性能是指软件系统及时提供相应服务的能力。包括速度、吞吐量和持续高速性三方面的要求。</p>
+<h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><p>指软件系统同时兼顾向合法用户提供服务，以及阻止非授权使用的能力。</p>
+<h3 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h3><p>指软件系统易于被使用的程度。</p>
+<h3 id="可伸缩性"><a href="#可伸缩性" class="headerlink" title="可伸缩性"></a>可伸缩性</h3><p>指当用户数和数据量增加时，软件系统维持高服务质量的能力。例如，通过增加服务器来提高能力。</p>
+<h3 id="互操作性"><a href="#互操作性" class="headerlink" title="互操作性"></a>互操作性</h3><p>指本软件系统与其他系统交换数据和相互调用服务的难易程度。</p>
+<h3 id="持续可用性"><a href="#持续可用性" class="headerlink" title="持续可用性"></a>持续可用性</h3><p>指系统长时间无故障运行的能力。与可靠性相关联，常将其纳入可靠性中。</p>
+<h3 id="鲁棒性"><a href="#鲁棒性" class="headerlink" title="鲁棒性"></a>鲁棒性</h3><p>是指软件系统在一些非正常情况(如用户进行了非法操作、相关的软硬件系统发生了故障等)下仍能够正常运行的能力。也称健壮性或容错性。</p>
+<h2 id="2-开发期质量属性"><a href="#2-开发期质量属性" class="headerlink" title="2.开发期质量属性"></a>2.开发期质量属性</h2><h3 id="易理解性"><a href="#易理解性" class="headerlink" title="易理解性"></a>易理解性</h3><p>指设计被开发人员理解的难易程度。</p>
+<h3 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h3><p>软件因适应新需求或需求变化而增加新功能的能力。也称为灵活性。</p>
+<h3 id="可重用性"><a href="#可重用性" class="headerlink" title="可重用性"></a>可重用性</h3><p>指重用软件系统或某一部分的难易程度。</p>
+<h3 id="可测试性"><a href="#可测试性" class="headerlink" title="可测试性"></a>可测试性</h3><p>对软件测试以证明其满足需求规范的难易程度。</p>
+<h3 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h3><p>当需要修改缺陷、增加功能、提高质量属性时，定位修改点并实施修改的难易程度;</p>
+<h3 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h3><p>将软件系统从一个运行环境转移到另一个不同的运行环境的难易程度。</p>
+<p><img src="/images/ruankao/6-23.png"></p>
+<h1 id="二、6-个质量属性及实现"><a href="#二、6-个质量属性及实现" class="headerlink" title="二、6 个质量属性及实现"></a>二、6 个质量属性及实现</h1><p>如何描述质量属性需求呢?<br><img src="/images/ruankao/6-24.png"></p>
+<h2 id="1-可用性及其实现战术"><a href="#1-可用性及其实现战术" class="headerlink" title="1.可用性及其实现战术"></a>1.可用性及其实现战术</h2><h3 id="1-可用性的描述。"><a href="#1-可用性的描述。" class="headerlink" title="(1)可用性的描述。"></a>(1)可用性的描述。</h3><p><img src="/images/ruankao/6-25.png"></p>
+<h3 id="2-可用性战术。"><a href="#2-可用性战术。" class="headerlink" title="(2)可用性战术。"></a>(2)可用性战术。</h3><p>可用性战术的目标是阻止错误发展成故障，至少能够把错误的影响 限制在一定范围内，从而使修复成为可能。战术分为:错误检测、错误恢复、错误预防。</p>
+<h4 id="①错误检测"><a href="#①错误检测" class="headerlink" title="①错误检测"></a>①错误检测</h4><p>命令/响应:一个构件发出一个命令，并希望在预定义的时间内收到一个来自审查构件的响 应，例如远程错误的检测。<br>心跳(计时器):一个构件定期发出一个心跳消息，另一个构件收听到消息，如果未收到心 跳消息，则假定构件失败，并通知错误纠正构件。<br>异常:当出现异常时，异常处理程序开发执行。</p>
+<h4 id="②错误恢复"><a href="#②错误恢复" class="headerlink" title="②错误恢复"></a>②错误恢复</h4><p>表决:通过冗余构件(或处理器)与表决器连接，构件按相同的输入及算法计算输出值交给 表决器，由表决器按表决算法(如多数规则)确定是否有构件出错，表决通常用在控制系统中。</p>
+<p>主动冗余(热重启、热备份):所有的冗余构件都以并行的方式对事件做出响应。它们都处 在相同的状态，但仅使用一个构件的响应，丢弃其余构件的响应。错误发生时通过切换的方 式使用另一个构件的响应。</p>
+<p>被动冗余(暧重启/双冗余/三冗余):一个构件(主构件)对事件做出响应，并通知其他构 件(备用的)必须进行的状态更新(同步)。当错误发生时，备用构件从最新同步点接替主 构件的工作。</p>
+<p>备件:备件是计算平台配置用于更换各种不同的故障构件。</p>
+<p>状态再同步:主动和被动冗余战术要求所恢复的构件在重新提供服务前更新其状态。更新方 法取决于可以承受的停机时间、更新的规模及更新的内容多少。</p>
+<p>检查点/回滚:检查点就是使状态一致的同步点，它或者是定期进行，或者是对具体事件做 出响应。当在两检查点之间发生故障时，则以这个一致状态的检查点(有快照)和之后发生 的事务日志来恢复系统(数据库中常使用)。</p>
+<h4 id="③错误预防"><a href="#③错误预防" class="headerlink" title="③错误预防"></a>③错误预防</h4><p>从服务中删除:如删除进程再重新启动，以防止内存泄露导致故障的发生。</p>
+<p>事务:使用事务来保证数据的一致性，即几个相关密切的步骤，要么全成功，要么都不成功。</p>
+<p>进程监视器:通过监视进程来处理进程的错误。</p>
+<p><img src="/images/ruankao/6-26.png"></p>
+<h2 id="2-可修改性及其实现战术"><a href="#2-可修改性及其实现战术" class="headerlink" title="2.可修改性及其实现战术"></a>2.可修改性及其实现战术</h2><h3 id="1-可修改性的描述"><a href="#1-可修改性的描述" class="headerlink" title="(1)可修改性的描述"></a>(1)可修改性的描述</h3><p><img src="/images/ruankao/6-27.png"></p>
+<h3 id="2-可修改性战术。"><a href="#2-可修改性战术。" class="headerlink" title="(2)可修改性战术。"></a>(2)可修改性战术。</h3><p>包括局部化修改、防止连锁反应、推迟绑定时间。</p>
+<h4 id="①局部化修改"><a href="#①局部化修改" class="headerlink" title="①局部化修改"></a>①局部化修改</h4><p>在设计期间为模块分配责任，以便把预期的变更限制在一定的范围内，从而降低修改的成本。</p>
+<p>维持语义的一致性:语义的一致性指的是模块中责任之间的关系，使这些责任能够协同工作， 不需要过多地依赖其他模块。耦合和内聚指标反映一致性，应该根据一组预期的变更来度量 语义一致性。使用“抽象通用服务”(如应用框架的使用和其他中间软件的使用)来支持可 修改性是其子战术。</p>
+<p>预期期望的变更:通过对变更的预估，进行预设、准备，从而使变更的影响最小。</p>
+<p>泛化该模块:使一个模块更通用、更广泛的功能。</p>
+<p>限制可能的选择:如在更换某一模块(如处理器)时，限制为相同家族的成员。</p>
+<h4 id="②防止连锁反应。"><a href="#②防止连锁反应。" class="headerlink" title="②防止连锁反应。"></a>②防止连锁反应。</h4><p>由于模块之间有各种依赖性，因此，修改会产生连锁反应。防止连锁反应的战术如下。</p>
+<p>信息隐藏:就是把某个实体的责任分解为更小的部分，并选择哪些信息成为公有的，哪些成 为私有的，通过接口获得公有责任。</p>
+<p>维持现有的接口:尽可能维持现有接口的稳定性。例如通过添加接口(通过新的接口提供新 的服务)可以达到这一目的。</p>
+<p>限制通信路径:限制与一个给定的模块共享数据的模块。这样可以减少由于数据产生/使用引入的连锁反应。</p>
+<p>仲裁者的使用:在具有依赖关系的两个模块之间插入一个仲裁者，以管理与该依赖相关的活 动。仲裁者有很多种类型，例如:桥、调停者、代理等就是可以提供把服务的语法从一种形 式转换为另一种形式的仲裁者。</p>
+<h4 id="③推迟绑定时间。"><a href="#③推迟绑定时间。" class="headerlink" title="③推迟绑定时间。"></a>③推迟绑定时间。</h4><p>系统具备在运行时进行绑定并允许非开发人员进行修改(配置)。</p>
+<p>运行时注册:支持即插即用。</p>
+<p>配置文件:在启动时设置参数。</p>
+<p>多态:在方法调用的后期绑定。</p>
+<p>构件更换:允许载入时绑定。<br><img src="/images/ruankao/6-29.png"></p>
+<h2 id="3-性能及其实现战术"><a href="#3-性能及其实现战术" class="headerlink" title="3.性能及其实现战术"></a>3.性能及其实现战术</h2><h3 id="1-性能的描述。"><a href="#1-性能的描述。" class="headerlink" title="(1)性能的描述。"></a>(1)性能的描述。</h3><p><img src="/images/ruankao/6-28.png"></p>
+<h3 id="2-性能战术。"><a href="#2-性能战术。" class="headerlink" title="(2)性能战术。"></a>(2)性能战术。</h3><p>性能与时间相关，影响事件的响应时间有两个基本因素。</p>
+<p>资源消耗:事件到达后进入一系列的处理程序，每一步处理都要占用资源，而且在处理过程 中消息在各构件之间转换，这些转换也需要占用资源。</p>
+<p>闭锁时间:指对事件处理时碰到了资源争用、资源不可用或对其他计算的依赖等情况，就产 生了等待时间。</p>
+<h4 id="①资源需求"><a href="#①资源需求" class="headerlink" title="①资源需求"></a>①资源需求</h4><p>减少处理事件流所需的资源:提高计算效率(如改进算法)、减少计算开销(如在可修改性与性能之间权衡，减少不必要的代理构件)。</p>
+<p>减少所处理事件的数量:管理事件率、控制采样频率。</p>
+<p>控制资源的使用:限制执行时间(如减少迭代次数)、限制队列大小。</p>
+<h4 id="②资源管理"><a href="#②资源管理" class="headerlink" title="②资源管理"></a>②资源管理</h4><p>引入并发:引入并发对负载平衡很重要。</p>
+<p>维持数据或计算的多个副本:C/S 结构中客户机 C 就是计算的副本，它能减少服务器计算的压力;高速缓存可以存放数据副本(在不同速度的存储库之间的缓冲)。</p>
+<p>增加可用资源:在成本允许时，尽量使用速度更快的处理器、内存和网络。</p>
+<h4 id="③资源仲裁"><a href="#③资源仲裁" class="headerlink" title="③资源仲裁"></a>③资源仲裁</h4><p>通过如下调度策略来实现：</p>
+<p>先进/先出(FIFO);</p>
+<p>固定优先级调度:先给事件分配特定的优先级，再按优先级高低顺序分配资源;</p>
+<p>动态优先级调度:轮转调度、时限时间最早优先;</p>
+<p>静态调度:可以离线确定调度。</p>
+<p><img src="/images/ruankao/6-30.png"></p>
+<h2 id="4-安全性及其实现战术"><a href="#4-安全性及其实现战术" class="headerlink" title="4.安全性及其实现战术"></a>4.安全性及其实现战术</h2><h3 id="1-安全性的描述。"><a href="#1-安全性的描述。" class="headerlink" title="(1)安全性的描述。"></a>(1)安全性的描述。</h3><p><img src="/images/ruankao/6-31.png"></p>
+<h3 id="2-安全性战术"><a href="#2-安全性战术" class="headerlink" title="(2)安全性战术"></a>(2)安全性战术</h3><p>包括抵抗攻击、检测攻击和从攻击中恢复。</p>
+<h4 id="①抵抗攻击"><a href="#①抵抗攻击" class="headerlink" title="①抵抗攻击"></a>①抵抗攻击</h4><p>对用户进行身份验证:包括动态密码、一次性密码、数字证书及生物识别等;</p>
+<p>对用户进行授权:即对用户的访问进行控制管理;</p>
+<p>维护数据的机密性:一般通过对数据和通信链路进行加密来实现;</p>
+<p>维护完整性:对数据添加校验或哈希值;</p>
+<p>限制暴露的信息;</p>
+<p>限制访问:如用防火墙、DMZ 策略。</p>
+<h4 id="②检测攻击"><a href="#②检测攻击" class="headerlink" title="②检测攻击"></a>②检测攻击</h4><p>一般通过“入侵检测”系统进行过滤、比较通信模式与历史基线等方法。</p>
+<h4 id="③从攻击中恢复"><a href="#③从攻击中恢复" class="headerlink" title="③从攻击中恢复"></a>③从攻击中恢复</h4><p>恢复:与可用性中的战术相同;</p>
+<p>识别攻击者:作为审计追踪，用于预防性或惩罚性目的。</p>
+<p><img src="/images/ruankao/6-32.png"></p>
+<h2 id="5-可测试性及其实现战术"><a href="#5-可测试性及其实现战术" class="headerlink" title="5.可测试性及其实现战术"></a>5.可测试性及其实现战术</h2><h3 id="1-可测试性的描述"><a href="#1-可测试性的描述" class="headerlink" title="(1)可测试性的描述"></a>(1)可测试性的描述</h3><p><img src="/images/ruankao/6-33.png"></p>
+<h3 id="2-可测试性战术"><a href="#2-可测试性战术" class="headerlink" title="(2)可测试性战术"></a>(2)可测试性战术</h3><p>包括输入/输出和内部监控。</p>
+<h4 id="①输入-输出"><a href="#①输入-输出" class="headerlink" title="①输入/输出"></a>①输入/输出</h4><p>记录/回放:指捕获跨接口的信息，并将其作为测试专用软件的输入;</p>
+<p>将接口与实现分离:允许使用实现的替代(模拟器)来支持各种测试目的;</p>
+<p>优化访问线路/接口:用测试工具来捕获或赋予构件的变量值。</p>
+<h4 id="②内部监控"><a href="#②内部监控" class="headerlink" title="②内部监控"></a>②内部监控</h4><p>当监视器处于激活状态时，记录事件(如通过接口的信息)。<br><img src="/images/ruankao/6-34.png"></p>
+<h2 id="6-易用性及其实现战术"><a href="#6-易用性及其实现战术" class="headerlink" title="6.易用性及其实现战术"></a>6.易用性及其实现战术</h2><h3 id="1-易用性的描述"><a href="#1-易用性的描述" class="headerlink" title="(1)易用性的描述"></a>(1)易用性的描述</h3><p><img src="/images/ruankao/6-35.png"></p>
+<h3 id="2-易用性战术"><a href="#2-易用性战术" class="headerlink" title="(2)易用性战术"></a>(2)易用性战术</h3><p>包括运行时战术、设计时战术和支持用户主动操作。</p>
+<h4 id="①运行时战术"><a href="#①运行时战术" class="headerlink" title="①运行时战术"></a>①运行时战术</h4><p>任务的模型:维护任务的信息，使系统了解用户试图做什么，并提供各种协助;</p>
+<p>用户的模型:维护用户的信息，例如使系统以用户可以阅读页面的速度滚动页面;</p>
+<p>系统的模型:维护系统的信息，它确定了期望的系统行为，并向用户提供反馈。</p>
+<h4 id="②设计时战术"><a href="#②设计时战术" class="headerlink" title="②设计时战术"></a>②设计时战术</h4><p>将用户接口与应用的其余部分分离开来，预计用户接口会频繁发生变化，因此，单独维护用户接口代码将实现变更局部化。这与可修改性相关。</p>
+<h4 id="③支持用户主动操作"><a href="#③支持用户主动操作" class="headerlink" title="③支持用户主动操作"></a>③支持用户主动操作</h4><p>支持用户的主动操作，如支持“取消”、“撤销”、“聚合”和 “显<br>示多个视图”。</p>
+<p><img src="/images/ruankao/6-36.png"></p>
+<hr>
+<p><img src="/images/ruankao/6-37.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%83%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -728,102 +926,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（六）工作流设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>现实中的流程存在大量的不确定性。</p>
-<h1 id="一、工作流设计概述"><a href="#一、工作流设计概述" class="headerlink" title="一、工作流设计概述"></a>一、工作流设计概述</h1><p>工作流是一类能够完全或者部分自动执行的经营过程，根据一系列过程规则、文档、信息或任务在不同的执行者之间 传递、执行。</p>
-<h2 id="1-工作流"><a href="#1-工作流" class="headerlink" title="(1)工作流"></a>(1)工作流</h2><p>工作流是现实中的具体工作从开始到结束过程的抽象和概括。这个过程包括了众多因素:任务顺序、路线规则、时间时限约束等。</p>
-<h2 id="2-流程定义"><a href="#2-流程定义" class="headerlink" title="(2)流程定义"></a>(2)流程定义</h2><p>流程定义是指对业务过程的形式化表示，它定义了过程运行中的活动和所涉及的各种信息。这些信息包括</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">过程的开始和完成条件</span><br><span class="line">构成过程的活动及进行活动间导航的规则</span><br><span class="line">用户所需要完成的任务</span><br><span class="line">可能被调用的应用</span><br><span class="line">工作流间的引用关系</span><br><span class="line">工作流数据的定义</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-流程实例"><a href="#3-流程实例" class="headerlink" title="(3)流程实例"></a>(3)流程实例</h2><p>也称为工作，是一个流程定义的运行实例。</p>
-<h2 id="4-工作流管理系统"><a href="#4-工作流管理系统" class="headerlink" title="(4)工作流管理系统"></a>(4)工作流管理系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存储流程的定义</span><br><span class="line">按照所使用的流程定义来触发流程状态的改变</span><br><span class="line">推动流程的运转</span><br></pre></td></tr></table></figure>
-<p>这个推动的依据常常称为工作流引擎。</p>
-<h2 id="5-流程定义工具"><a href="#5-流程定义工具" class="headerlink" title="(5)流程定义工具"></a>(5)流程定义工具</h2><p>使用流程定义工具来完成流程定义的工作</p>
-<h2 id="6-参与者"><a href="#6-参与者" class="headerlink" title="(6)参与者"></a>(6)参与者</h2><p>可以是具体的人或者角色(企业内部有特别共同作用的多个人)，也可以是自动化系统，甚至是其他系统。</p>
-<h2 id="7-活动"><a href="#7-活动" class="headerlink" title="(7)活动"></a>(7)活动</h2><p>活动是流程定义中的一个元素，一次活动可能改变流程处理数据的内容、流程的状态，并可能将流程推动到其他活动中去。活动可以由人来完成，也可以是系统自动的处理过程。</p>
-<h2 id="8-活动所有者"><a href="#8-活动所有者" class="headerlink" title="(8)活动所有者"></a>(8)活动所有者</h2><p>决定该活动是否结束</p>
-<h2 id="9-工作所有者"><a href="#9-工作所有者" class="headerlink" title="(9)工作所有者"></a>(9)工作所有者</h2><p>有权整体控制流程实例执行过程的参与者</p>
-<h2 id="10-工作项"><a href="#10-工作项" class="headerlink" title="(10)工作项"></a>(10)工作项</h2><p>流程实例中活动的参与者将要执行的工作</p>
-<h1 id="二、工作流管理系统"><a href="#二、工作流管理系统" class="headerlink" title="二、工作流管理系统"></a>二、工作流管理系统</h1><p>在工作流形式化表示的驱动下，通过软件的执行而完成工作流定义、管理及执行的系统。<br>主要目标是对业务过程中各活动发生的先后次序及与活动相关的相应人力或信息资源的调用进行管理，而实现业务过程的自动化。</p>
-<p>工作流管理系统的6个最基本组成：</p>
-<h2 id="1-流程定义工具"><a href="#1-流程定义工具" class="headerlink" title="(1)流程定义工具"></a>(1)流程定义工具</h2><p>提供图形化或者其他方式的界面给设计者。由设计者将实际工作流程进行抽象，并将设计者提交的流程定义转换为形式化语言描述，提供给计算机工作流执行服务进行流程实例处理的依据。</p>
-<h2 id="2-工作流执行服务"><a href="#2-工作流执行服务" class="headerlink" title="(2)工作流执行服务"></a>(2)工作流执行服务</h2><p>1、使用一种或者多种数据流引擎，对流程定义进行解释，激活有效的流程实例，推动流程实例在不同的活动中运转。<br>2、和客户应用程序、其他工作流服务执行程序及其他应用程序进行交互，从而完成流程实例的创建、执行和管理工作。<br>3、为每个用户维护一个活动列表，告诉用户当前必须处理的任务。<br>4、通过电子邮件甚至是短消息的形式提醒用户任务的到达。</p>
-<h2 id="3-其他工作流执行服务"><a href="#3-其他工作流执行服务" class="headerlink" title="(3)其他工作流执行服务"></a>(3)其他工作流执行服务</h2><p>大型的企业工作流应用，往往包括多个工作流管理系统。这就需要这些工作流管理系统之间进行有效的交互，避免画地为牢、信息孤岛的现象出现。</p>
-<h2 id="4-客户应用程序"><a href="#4-客户应用程序" class="headerlink" title="(4)客户应用程序"></a>(4)客户应用程序</h2><p>最终用户的界面，用户通过使用这部分软件对工作流的数据进行必要的处理，如果用户是当前活动的拥有者，还可通过客户应用程序改变流程实例的活动，将流程实例推动到另外一个活动中。</p>
-<h2 id="5-被调用应用程序"><a href="#5-被调用应用程序" class="headerlink" title="(5)被调用应用程序"></a>(5)被调用应用程序</h2><p>对工作流所携带数据的处理程序。</p>
-<h2 id="6-管理和监控工具"><a href="#6-管理和监控工具" class="headerlink" title="(6)管理和监控工具"></a>(6)管理和监控工具</h2><p>对流程实例的状态查询、挂起、恢复、销毁等操作，同时提供系统参数、系统运行情况统计等数据。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -984,6 +1086,102 @@
 <h3 id="1-节点和连接。"><a href="#1-节点和连接。" class="headerlink" title="(1)节点和连接。"></a>(1)节点和连接。</h3><p>节点代表一个物理设备及其上运行的软件系统，如一台 UNIX 主机、一个 PC 终端、一台打印机、一个传感器等。<br>节点之间的连线表示系统之间进行交互的通信路径，在 UML 中被称为连接。<br>通信类型则放在连接旁边的“《》”之间，表示所用的通信协议或网络类型。</p>
 <h3 id="2-构件和接口。"><a href="#2-构件和接口。" class="headerlink" title="(2)构件和接口。"></a>(2)构件和接口。</h3><p>在部署图中，构件代表可执行的物理代码模块，如一个可执行程序。</p>
 <p><img src="/images/ruankao/6-17.png"><br>在面向对象方法中，类和构件等元素并不是所有的属性和操作都对外可见。它们对外提供了可见操作和属性，称之为类和构件的接口。界面可以表示为一头是小圆圈的直线。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（六）工作流设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>现实中的流程存在大量的不确定性。</p>
+<h1 id="一、工作流设计概述"><a href="#一、工作流设计概述" class="headerlink" title="一、工作流设计概述"></a>一、工作流设计概述</h1><p>工作流是一类能够完全或者部分自动执行的经营过程，根据一系列过程规则、文档、信息或任务在不同的执行者之间 传递、执行。</p>
+<h2 id="1-工作流"><a href="#1-工作流" class="headerlink" title="(1)工作流"></a>(1)工作流</h2><p>工作流是现实中的具体工作从开始到结束过程的抽象和概括。这个过程包括了众多因素:任务顺序、路线规则、时间时限约束等。</p>
+<h2 id="2-流程定义"><a href="#2-流程定义" class="headerlink" title="(2)流程定义"></a>(2)流程定义</h2><p>流程定义是指对业务过程的形式化表示，它定义了过程运行中的活动和所涉及的各种信息。这些信息包括</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">过程的开始和完成条件</span><br><span class="line">构成过程的活动及进行活动间导航的规则</span><br><span class="line">用户所需要完成的任务</span><br><span class="line">可能被调用的应用</span><br><span class="line">工作流间的引用关系</span><br><span class="line">工作流数据的定义</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-流程实例"><a href="#3-流程实例" class="headerlink" title="(3)流程实例"></a>(3)流程实例</h2><p>也称为工作，是一个流程定义的运行实例。</p>
+<h2 id="4-工作流管理系统"><a href="#4-工作流管理系统" class="headerlink" title="(4)工作流管理系统"></a>(4)工作流管理系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存储流程的定义</span><br><span class="line">按照所使用的流程定义来触发流程状态的改变</span><br><span class="line">推动流程的运转</span><br></pre></td></tr></table></figure>
+<p>这个推动的依据常常称为工作流引擎。</p>
+<h2 id="5-流程定义工具"><a href="#5-流程定义工具" class="headerlink" title="(5)流程定义工具"></a>(5)流程定义工具</h2><p>使用流程定义工具来完成流程定义的工作</p>
+<h2 id="6-参与者"><a href="#6-参与者" class="headerlink" title="(6)参与者"></a>(6)参与者</h2><p>可以是具体的人或者角色(企业内部有特别共同作用的多个人)，也可以是自动化系统，甚至是其他系统。</p>
+<h2 id="7-活动"><a href="#7-活动" class="headerlink" title="(7)活动"></a>(7)活动</h2><p>活动是流程定义中的一个元素，一次活动可能改变流程处理数据的内容、流程的状态，并可能将流程推动到其他活动中去。活动可以由人来完成，也可以是系统自动的处理过程。</p>
+<h2 id="8-活动所有者"><a href="#8-活动所有者" class="headerlink" title="(8)活动所有者"></a>(8)活动所有者</h2><p>决定该活动是否结束</p>
+<h2 id="9-工作所有者"><a href="#9-工作所有者" class="headerlink" title="(9)工作所有者"></a>(9)工作所有者</h2><p>有权整体控制流程实例执行过程的参与者</p>
+<h2 id="10-工作项"><a href="#10-工作项" class="headerlink" title="(10)工作项"></a>(10)工作项</h2><p>流程实例中活动的参与者将要执行的工作</p>
+<h1 id="二、工作流管理系统"><a href="#二、工作流管理系统" class="headerlink" title="二、工作流管理系统"></a>二、工作流管理系统</h1><p>在工作流形式化表示的驱动下，通过软件的执行而完成工作流定义、管理及执行的系统。<br>主要目标是对业务过程中各活动发生的先后次序及与活动相关的相应人力或信息资源的调用进行管理，而实现业务过程的自动化。</p>
+<p>工作流管理系统的6个最基本组成：</p>
+<h2 id="1-流程定义工具"><a href="#1-流程定义工具" class="headerlink" title="(1)流程定义工具"></a>(1)流程定义工具</h2><p>提供图形化或者其他方式的界面给设计者。由设计者将实际工作流程进行抽象，并将设计者提交的流程定义转换为形式化语言描述，提供给计算机工作流执行服务进行流程实例处理的依据。</p>
+<h2 id="2-工作流执行服务"><a href="#2-工作流执行服务" class="headerlink" title="(2)工作流执行服务"></a>(2)工作流执行服务</h2><p>1、使用一种或者多种数据流引擎，对流程定义进行解释，激活有效的流程实例，推动流程实例在不同的活动中运转。<br>2、和客户应用程序、其他工作流服务执行程序及其他应用程序进行交互，从而完成流程实例的创建、执行和管理工作。<br>3、为每个用户维护一个活动列表，告诉用户当前必须处理的任务。<br>4、通过电子邮件甚至是短消息的形式提醒用户任务的到达。</p>
+<h2 id="3-其他工作流执行服务"><a href="#3-其他工作流执行服务" class="headerlink" title="(3)其他工作流执行服务"></a>(3)其他工作流执行服务</h2><p>大型的企业工作流应用，往往包括多个工作流管理系统。这就需要这些工作流管理系统之间进行有效的交互，避免画地为牢、信息孤岛的现象出现。</p>
+<h2 id="4-客户应用程序"><a href="#4-客户应用程序" class="headerlink" title="(4)客户应用程序"></a>(4)客户应用程序</h2><p>最终用户的界面，用户通过使用这部分软件对工作流的数据进行必要的处理，如果用户是当前活动的拥有者，还可通过客户应用程序改变流程实例的活动，将流程实例推动到另外一个活动中。</p>
+<h2 id="5-被调用应用程序"><a href="#5-被调用应用程序" class="headerlink" title="(5)被调用应用程序"></a>(5)被调用应用程序</h2><p>对工作流所携带数据的处理程序。</p>
+<h2 id="6-管理和监控工具"><a href="#6-管理和监控工具" class="headerlink" title="(6)管理和监控工具"></a>(6)管理和监控工具</h2><p>对流程实例的状态查询、挂起、恢复、销毁等操作，同时提供系统参数、系统运行情况统计等数据。</p>
 
       
     </div>
@@ -1186,90 +1384,10 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E8%BD%AF%E4%BB%B6%E9%87%8D%E7%94%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/17/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E8%BD%AF%E4%BB%B6%E9%87%8D%E7%94%A8/" class="post-title-link" itemprop="url">开发方法（五）软件重用</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-17 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-17T00:00:00+08:00">2021-09-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:54" itemprop="dateModified" datetime="2021-10-11T10:38:54+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件重用是一种重要的开发方法，虽然还不成熟，但现在已经有一些重用技术（中间件、应用服务器）改变了开发过程。</p>
-<h1 id="软件重用"><a href="#软件重用" class="headerlink" title="软件重用"></a>软件重用</h1><p>软件产品是抽象的，可以无限复制的，因此重复利用可以节约人力物力，提高开发效率、降低成本、缩短开发周期、提高软件质量。<br>软件重用可以是软件产品、源程序、文档、设计思想甚至是领域知识。</p>
-<p>常见的软件重用形式包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">源代码重用</span><br><span class="line">架构重用</span><br><span class="line">应用框架重用</span><br><span class="line">业务建模重用</span><br><span class="line">文件及过程重用</span><br><span class="line">软构件重用</span><br><span class="line">软件服务重用</span><br></pre></td></tr></table></figure>
-
-<h1 id="构件技术"><a href="#构件技术" class="headerlink" title="构件技术"></a>构件技术</h1><p>构件又称为组件，是自包容、可复用的程序集。构件整体向外提供统一的访问接口，外部只能访问接口，不能直接操作构件内部。</p>
-<p>自包容是指构件本身是一个功能完整地独立体，构建内部与外部界限明确，可独立配置和使用。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1337,7 +1455,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-count">61</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
