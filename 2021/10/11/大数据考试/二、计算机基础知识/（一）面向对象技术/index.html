@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="（一）面向对象技术1、了解面向对象的发展历史，为什么引入面向对象。面向对象的发展历史1.雏形阶段20世纪60年代挪威计算中心发布的simula语言，首次引入了类的概念和继承机制，该语言的诞生是面向对象发展历史上的第一个里程碑。70年代CLU、并发Pascal、Ada和Modula-2等语言对抽象数据类型理论的发展起到重要作用（支持数据和操作封装）。1972年Palo Alno研究中心（PARC）发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="（一）面向对象技术">
+<meta property="og:url" content="http://example.com/2021/10/11/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%EF%BC%88%E4%B8%80%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="（一）面向对象技术1、了解面向对象的发展历史，为什么引入面向对象。面向对象的发展历史1.雏形阶段20世纪60年代挪威计算中心发布的simula语言，首次引入了类的概念和继承机制，该语言的诞生是面向对象发展历史上的第一个里程碑。70年代CLU、并发Pascal、Ada和Modula-2等语言对抽象数据类型理论的发展起到重要作用（支持数据和操作封装）。1972年Palo Alno研究中心（PARC）发">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-12T06:08:56.443Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="计算机基础知识">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/10/11/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%EF%BC%88%E4%B8%80%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>（一）面向对象技术 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/11/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%EF%BC%88%E4%B8%80%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          （一）面向对象技术
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-11 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-11T00:00:00+08:00">2021-10-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-12 14:08:56" itemprop="dateModified" datetime="2021-10-12T14:08:56+08:00">2021-10-12</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="（一）面向对象技术"><a href="#（一）面向对象技术" class="headerlink" title="（一）面向对象技术"></a>（一）面向对象技术</h1><h2 id="1、了解面向对象的发展历史，为什么引入面向对象。"><a href="#1、了解面向对象的发展历史，为什么引入面向对象。" class="headerlink" title="1、了解面向对象的发展历史，为什么引入面向对象。"></a>1、了解面向对象的发展历史，为什么引入面向对象。</h2><h3 id="面向对象的发展历史"><a href="#面向对象的发展历史" class="headerlink" title="面向对象的发展历史"></a>面向对象的发展历史</h3><p>1.雏形阶段<br>20世纪60年代挪威计算中心发布的simula语言，首次引入了类的概念和继承机制，该语言的诞生是面向对象发展历史上的第一个里程碑。<br>70年代CLU、并发Pascal、Ada和Modula-2等语言对抽象数据类型理论的发展起到重要作用（支持数据和操作封装）。<br>1972年Palo Alno研究中心（PARC）发布了Smalltalk 72,其中正式使用了面向对象这个术语。Smalltalk的问世标志着面向对象程序设计方法的正式形成，但是这个时期的Smalltalk语言还不够完善。</p>
+<p>2.完善阶段<br>PARC先后发布了Smalltalk 72，76和78等版本，直至1981年推出该语言完善的版本Smalltalk 80。Small talk 80的问世被认为是面向对象语言发展史上最重要的里程碑。迄今绝大多数面向的基本概念及其支持机制在Small talk 80中都已具备。他是第一个完善的、能够实际应用的面向对象语言。Small talk 80的问世被认为是面向对象语言发展史上最重要的里程碑。迄今绝大多数面向的基本概念及其支持机制在Small talk 80中都已具备。他是第一个完善的、能够实际应用的面向对象语言。</p>
+<p>3.繁荣阶段<br>从20世纪80年代中期到90年代，是面向对象语言走向繁荣的阶段。其主要表现是大批比较实用的面向对象编程语言的涌现，例如 C++、Objective C 、Object Pascal、CLOS（Common Lisp Object System）、Eiffel和Actor等。这些面向对象的编程语言分为纯OO型语言和混合型OO语言。混合型语言是在传统的过程式语言基础上增加了OO语言成分形成的，在实用性方面具有更大的优势。此时的纯OO型语言也比较重视实用性。现在，在面向对象编程方面，普遍采用语言、类库和可视化编程环境相结合的方式，如Visual C++、JBuilder和Delphi等。面向对象方法也从编程发展到设计、分析，进而发展到整个软件生命周期。</p>
+<p>4.面向对象的当前状况<br>当前，面向对象方法几乎覆盖了计算机软件领域的所有分支。例如，已经出现了面向对象的编程语言、面向对象的分析、面向对象的设计、面向对象的测试、面向对象的维护、面向对象的图形用户界面、面向对象的数据库、面向对象的数据结构、面向对象的智能程序设计、面向对象的软件开发环境和面向对象的体系结构等。此外，许多新领域都以面向对象理论为基础或作为主要技术，如面向对象的软件体系结构、领域工程、智能代理（Agent）、基于构件的软件工程和面向服务的软件开发等。</p>
+<h3 id="为什么引入面向对象"><a href="#为什么引入面向对象" class="headerlink" title="为什么引入面向对象"></a>为什么引入面向对象</h3><p>1、面向对象符合人类看待事物的一般规律。</p>
+<p>2、对象的方法的实现细节是屏蔽的，只有对象方法的实现者了解细节。</p>
+<h2 id="2、掌握面向对象编程与非面向对象编程的优缺点。"><a href="#2、掌握面向对象编程与非面向对象编程的优缺点。" class="headerlink" title="2、掌握面向对象编程与非面向对象编程的优缺点。"></a>2、掌握面向对象编程与非面向对象编程的优缺点。</h2><p>面向过程是一种以过程为中心的编程思想，它首先分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，在使用时依次调用，是一种基础的顺序的思维方式。面向过程开发方式是对计算机底层结构的一层抽象，它将程序分为数据和操纵数据的操作两部分，其核心问题是数据结构和算法的开发和优化。常见的支持面向过程的编程语言有 C语言、COBOL 语言等。</p>
+<p>面向对象是按人们认识客观世界的系统思维方式，采用基于对象（实体）的概念建立模型，模拟客观世界分析、设计、实现软件的编程思想，通过面向对象的理念使计算机软件系统能与现实世界中的系统一一对应。</p>
+<p>面向对象方法直接把所有事物都当作独立的对象，处理问题过程中所思考的不再主要是怎样用数据结构来描述问题，而是直接考虑重现问题中各个对象之间的关系。面向对象方法的基础实现中也包含面向过程的思想。常见的支持面向对象的编程语言有 C++ 语言、C＃ 语言、Java 语言等。</p>
+<p>具体来说，面向对象与面向过程有以下四个方面的不同：</p>
+<ol>
+<li>出发点不同</li>
+</ol>
+<p>面向对象使用符合常规思维的方式来处理客观世界的问题，强调把解决问题领域的“动作”直接映射到对象之间的接口上。而面向过程则强调的是过程的抽象化与模块化，是以过程为中心构造或处理客观世界问题。</p>
+<ol start="2">
+<li>层次逻辑关系不同</li>
+</ol>
+<p>面向对象使用计算机逻辑来模拟客观世界中的物理存在，以对象的集合类作为处理问题的单位，尽可能地使计算机世界向客观世界靠拢，以使处理问题的方式更清晰直接，面向对象使用类的层次结构来体现类之间的继承与发展。面向过程处理问题的基本单位是能清晰准确地表达过程的模块，用模块的层次结构概括模块或模块间的关系与功能，把客观世界的问题抽象成计算机可以处理的过程。</p>
+<ol start="3">
+<li>数据处理方式与控制程序方式不同</li>
+</ol>
+<p>面向对象将数据与对应的代码封装成一个整体，原则上其他对象不能直接修改其数据，即对象的修改只能由自身的成员函数完成，控制程序方式上是通过“事件驱动”来激活和运行程序的。而面向过程是直接通过程序来处理数据，处理完毕后即可显示处理的结果，在控制方式上是按照设计调用或返回程序，不能自由导航，各模块之间存在着控制与被控制，调动与被调用的关系。</p>
+<ol start="4">
+<li>分析设计与编码转换方式不同</li>
+</ol>
+<p>面向对象贯穿于软件生命周期的分析、设计及编码中，是一种平滑的过程，从分析到设计再到编码是采用一致性的模型表示，实现的是一种无缝连接。而面向过程强调分析、设计及编码之间按规则进行转换贯穿于软件生命周期的分析、设计及编码中，实现的是一种有缝的连接。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>面向对象</th>
+<th>面向过程</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>特性</td>
+<td>抽象、继承、封装、多态</td>
+<td>功能模块化，代码流程化</td>
+</tr>
+<tr>
+<td>优点</td>
+<td>易维护、易复用、易扩展、低耦合</td>
+<td>性能高，适合资源紧张、实时性强的场合</td>
+</tr>
+<tr>
+<td>缺点</td>
+<td>性能比面向过程低</td>
+<td>没有面向对象易维护、易复用、易扩展</td>
+</tr>
+</tbody></table>
+<h2 id="3、掌握抽象的5个层次，抽象形式。"><a href="#3、掌握抽象的5个层次，抽象形式。" class="headerlink" title="3、掌握抽象的5个层次，抽象形式。"></a>3、掌握抽象的5个层次，抽象形式。</h2><h3 id="抽象的5个层次"><a href="#抽象的5个层次" class="headerlink" title="抽象的5个层次"></a>抽象的5个层次</h3><p>1.变量和函数<br>2.接口<br>3.消息传递<br>4.对象集单元<br>5.设计模式</p>
+<h3 id="抽象形式"><a href="#抽象形式" class="headerlink" title="抽象形式"></a>抽象形式</h3><p>1.概念<br>2.推理<br>3.判断</p>
+<h2 id="4、掌握类和方法。"><a href="#4、掌握类和方法。" class="headerlink" title="4、掌握类和方法。"></a>4、掌握类和方法。</h2><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><p>1.概念<br>java中没有结构体类型,类就是高度封装的结构体类型。还有c是面向过程的编程语言,而java是面向对象的,所以对数据的处理方式会有些不同,java中的类更适用于对数据的高度封装,适合调用。</p>
+<p>类是具有相同特性（数据元素）和行为（功能）的对象的抽象。因此，对象的抽象是类，类的具体化就是对象，也可以说类的实例是对象，类实际上就是一种数据类型。</p>
+<p>类具有属性，它是对象的状态的抽象，用数据结构来描述类的属性。</p>
+<p>类具有操作，它是对象的行为的抽象，用操作名和实现该操作的方法来描述。</p>
+<p>2.类与类之间最常见的关系主要有以下3种。<br>依赖（或uses–a）。</p>
+<p>聚合（或has–a）。</p>
+<p>继承（或is–a）。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>1.概念<br>方法是指对象能够进行的操作，方法同时还有另外一个名称，叫做函数。方法是类中的定义函数，其具体的作用就是对对象进行描述操作。</p>
+<p>方法用于定义该类或该类实例的行为特征和功能实现。方法是类和对象行为特征的抽象。方法很类似于面向过程中的函数。</p>
+<p>面向过程中，函数是最基本单位，整个程序由一个个 函数调用组成。面向对象中，整个程序的基本单位是类，方法是从属于类和对象的。</p>
+<h2 id="5、掌握消息、实例和初始化。"><a href="#5、掌握消息、实例和初始化。" class="headerlink" title="5、掌握消息、实例和初始化。"></a>5、掌握消息、实例和初始化。</h2><h2 id="6、了解继承和替换。"><a href="#6、了解继承和替换。" class="headerlink" title="6、了解继承和替换。"></a>6、了解继承和替换。</h2><h2 id="7、了解静态行为和动态行为。"><a href="#7、了解静态行为和动态行为。" class="headerlink" title="7、了解静态行为和动态行为。"></a>7、了解静态行为和动态行为。</h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"># 计算机基础知识</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/11/%E8%BD%AF%E8%80%83/13%E3%80%81%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86/%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%83%EF%BC%89%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%94%B9%E8%BF%9B/" rel="prev" title="开发管理（七）软件过程改进">
+      <i class="fa fa-chevron-left"></i> 开发管理（七）软件过程改进
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/11/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%80%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84%E3%80%81%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86/%EF%BC%88%E5%9B%9B%EF%BC%89%E8%81%8C%E4%B8%9A%E9%81%93%E5%BE%B7/" rel="next" title="（四）职业道德">
+      （四）职业道德 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%EF%BC%88%E4%B8%80%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">（一）面向对象技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E4%BA%86%E8%A7%A3%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%95%E5%85%A5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E3%80%82"><span class="nav-number">1.1.</span> <span class="nav-text">1、了解面向对象的发展历史，为什么引入面向对象。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8F%91%E5%B1%95%E5%8E%86%E5%8F%B2"><span class="nav-number">1.1.1.</span> <span class="nav-text">面向对象的发展历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BC%95%E5%85%A5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.1.2.</span> <span class="nav-text">为什么引入面向对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E6%8E%8C%E6%8F%A1%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%8E%E9%9D%9E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%E3%80%82"><span class="nav-number">1.2.</span> <span class="nav-text">2、掌握面向对象编程与非面向对象编程的优缺点。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E6%8E%8C%E6%8F%A1%E6%8A%BD%E8%B1%A1%E7%9A%845%E4%B8%AA%E5%B1%82%E6%AC%A1%EF%BC%8C%E6%8A%BD%E8%B1%A1%E5%BD%A2%E5%BC%8F%E3%80%82"><span class="nav-number">1.3.</span> <span class="nav-text">3、掌握抽象的5个层次，抽象形式。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E7%9A%845%E4%B8%AA%E5%B1%82%E6%AC%A1"><span class="nav-number">1.3.1.</span> <span class="nav-text">抽象的5个层次</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%BD%E8%B1%A1%E5%BD%A2%E5%BC%8F"><span class="nav-number">1.3.2.</span> <span class="nav-text">抽象形式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E6%8E%8C%E6%8F%A1%E7%B1%BB%E5%92%8C%E6%96%B9%E6%B3%95%E3%80%82"><span class="nav-number">1.4.</span> <span class="nav-text">4、掌握类和方法。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB"><span class="nav-number">1.4.1.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95"><span class="nav-number">1.4.2.</span> <span class="nav-text">方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%8E%8C%E6%8F%A1%E6%B6%88%E6%81%AF%E3%80%81%E5%AE%9E%E4%BE%8B%E5%92%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E3%80%82"><span class="nav-number">1.5.</span> <span class="nav-text">5、掌握消息、实例和初始化。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E4%BA%86%E8%A7%A3%E7%BB%A7%E6%89%BF%E5%92%8C%E6%9B%BF%E6%8D%A2%E3%80%82"><span class="nav-number">1.6.</span> <span class="nav-text">6、了解继承和替换。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81%E4%BA%86%E8%A7%A3%E9%9D%99%E6%80%81%E8%A1%8C%E4%B8%BA%E5%92%8C%E5%8A%A8%E6%80%81%E8%A1%8C%E4%B8%BA%E3%80%82"><span class="nav-number">1.7.</span> <span class="nav-text">7、了解静态行为和动态行为。</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">59</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+</body>
+</html>
