@@ -749,6 +749,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（八）系统运行环境的集成与设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在设计一个新的系统时，设计者必须考虑目标系统的运行环境问题。软件的运行环境是指系统运行的设备、操作系统和网络配置。</p>
+<h1 id="1-集中式系统"><a href="#1-集中式系统" class="headerlink" title="1.集中式系统"></a>1.集中式系统</h1><p>所有的操作都集中于一台主机中。</p>
+<p>集中式系统常见于银行、保险、证券行业，它们含有大规模的处理应用。</p>
+<p>在现代的系统中，集中式系统通常是某个分布式系统的一个环节。</p>
+<p>集中式系统由以下几个部分组成。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1)单计算机结构:这种结构简单、容易维护，但是处理能力受到限制。 </span><br><span class="line">(2)集群结构:由多个计算机组成，这些计算机具有类似的硬件平台、操作系统等。通常采用负载均衡、资源共享等方式实现更大的处理能力和容量。 </span><br><span class="line">(3)多计算机结构:由多个计算机组成，这些计算机之间操作环境可能不同。适用于当系统可以分解成多个不同的子系统时。</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-分布式系统"><a href="#2-分布式系统" class="headerlink" title="2.分布式系统"></a>2.分布式系统</h1><p>分布式系统由于网络的普遍延伸，费用的不断降低而越来越成为大型系统的首选环境。分布式系统必须基于网络，这个网络可以是在一个地域内的局域网，也可以是跨越不同城市乃至国家的广域网。对比集中式的计算机环境，分布式系统有着多种多样的形式。这也给设计者在确定系统运行环境时带来一定的烦恼。</p>
+<h1 id="3-C-S-结构"><a href="#3-C-S-结构" class="headerlink" title="3.C/S 结构"></a>3.C/S 结构</h1><p>由提供服务的服务器和发起请求、接受结果的客户机构成。</p>
+<h1 id="4-多层结构"><a href="#4-多层结构" class="headerlink" title="4.多层结构"></a>4.多层结构</h1><p>C/S 结构的扩展。</p>
+<p>典型的分为由存储数据的数据库服务器作为数据层、实现商业规则的程序作为逻辑层、管理用户输入输出的视图层所组成的三层结构。</p>
+<p>多层结构形式复杂，功能多样。实现多层结构常常需要来实现不同层次间通信的专门程序——管件，也称为中间件。中间件大多数实现远程程序调用、对象请求调度等功能。</p>
+<h1 id="5-Internet、Intranet-和-Extranet"><a href="#5-Internet、Intranet-和-Extranet" class="headerlink" title="5.Internet、Intranet 和 Extranet"></a>5.Internet、Intranet 和 Extranet</h1><p>Internet 是全球的网络集合，使用通用的 TCP/IP 协议来相互连接。Internet 提供电子邮件、文件传输、远程登录等服务。</p>
+<p>Intranet 是私有网络，只限于内部使用，也使用 TCP/IP 协议。</p>
+<p>Extranet 是一个扩展的 Intranet。它包括企业之外的和企业密切相关合作的其他企业。 Extranet 允许分离的组织交换信息并进行合作，这样就形成了一个虚拟组织。</p>
+<p>现在的 VPN 技术允许在公用网络上架构只对组织内部开发服务。</p>
+<p>Web 同样基于 C/S 结构，实际上 Web 接口是一个通用的接口，不是只能使用浏览器 的协议，它同样能够在普通的程序中使用。</p>
+<p>Internet 和 Web 已经给设计者提供了一个非常富有吸引力的选择方案。它的优势在于:它们已经成为网络的事实上的标准，支持它们的软件已经广泛地存在于全世界的计算机中，而且通信费用已经下降到很有竞争力的水平。</p>
+<p>采用 Internet 时，必须考虑其不利的一面。 Internet 的安全性过去、现在、以后都是设计者头痛的问题。其他诸如可靠性、系统吞吐量、不断发展的技术和标准都是影响系统选择它们作为运行环境的不利因素。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -834,7 +926,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -848,7 +940,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（八）系统运行环境的集成与设计</a>
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（六）工作流设计</a>
         </h2>
 
         <div class="post-meta">
@@ -888,25 +980,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>在设计一个新的系统时，设计者必须考虑目标系统的运行环境问题。软件的运行环境是指系统运行的设备、操作系统和网络配置。</p>
-<h1 id="1-集中式系统"><a href="#1-集中式系统" class="headerlink" title="1.集中式系统"></a>1.集中式系统</h1><p>所有的操作都集中于一台主机中。</p>
-<p>集中式系统常见于银行、保险、证券行业，它们含有大规模的处理应用。</p>
-<p>在现代的系统中，集中式系统通常是某个分布式系统的一个环节。</p>
-<p>集中式系统由以下几个部分组成。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(1)单计算机结构:这种结构简单、容易维护，但是处理能力受到限制。 </span><br><span class="line">(2)集群结构:由多个计算机组成，这些计算机具有类似的硬件平台、操作系统等。通常采用负载均衡、资源共享等方式实现更大的处理能力和容量。 </span><br><span class="line">(3)多计算机结构:由多个计算机组成，这些计算机之间操作环境可能不同。适用于当系统可以分解成多个不同的子系统时。</span><br></pre></td></tr></table></figure>
+          <p>现实中的流程存在大量的不确定性。</p>
+<h1 id="一、工作流设计概述"><a href="#一、工作流设计概述" class="headerlink" title="一、工作流设计概述"></a>一、工作流设计概述</h1><p>工作流是一类能够完全或者部分自动执行的经营过程，根据一系列过程规则、文档、信息或任务在不同的执行者之间 传递、执行。</p>
+<h2 id="1-工作流"><a href="#1-工作流" class="headerlink" title="(1)工作流"></a>(1)工作流</h2><p>工作流是现实中的具体工作从开始到结束过程的抽象和概括。这个过程包括了众多因素:任务顺序、路线规则、时间时限约束等。</p>
+<h2 id="2-流程定义"><a href="#2-流程定义" class="headerlink" title="(2)流程定义"></a>(2)流程定义</h2><p>流程定义是指对业务过程的形式化表示，它定义了过程运行中的活动和所涉及的各种信息。这些信息包括</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">过程的开始和完成条件</span><br><span class="line">构成过程的活动及进行活动间导航的规则</span><br><span class="line">用户所需要完成的任务</span><br><span class="line">可能被调用的应用</span><br><span class="line">工作流间的引用关系</span><br><span class="line">工作流数据的定义</span><br></pre></td></tr></table></figure>
 
-<h1 id="2-分布式系统"><a href="#2-分布式系统" class="headerlink" title="2.分布式系统"></a>2.分布式系统</h1><p>分布式系统由于网络的普遍延伸，费用的不断降低而越来越成为大型系统的首选环境。分布式系统必须基于网络，这个网络可以是在一个地域内的局域网，也可以是跨越不同城市乃至国家的广域网。对比集中式的计算机环境，分布式系统有着多种多样的形式。这也给设计者在确定系统运行环境时带来一定的烦恼。</p>
-<h1 id="3-C-S-结构"><a href="#3-C-S-结构" class="headerlink" title="3.C/S 结构"></a>3.C/S 结构</h1><p>由提供服务的服务器和发起请求、接受结果的客户机构成。</p>
-<h1 id="4-多层结构"><a href="#4-多层结构" class="headerlink" title="4.多层结构"></a>4.多层结构</h1><p>C/S 结构的扩展。</p>
-<p>典型的分为由存储数据的数据库服务器作为数据层、实现商业规则的程序作为逻辑层、管理用户输入输出的视图层所组成的三层结构。</p>
-<p>多层结构形式复杂，功能多样。实现多层结构常常需要来实现不同层次间通信的专门程序——管件，也称为中间件。中间件大多数实现远程程序调用、对象请求调度等功能。</p>
-<h1 id="5-Internet、Intranet-和-Extranet"><a href="#5-Internet、Intranet-和-Extranet" class="headerlink" title="5.Internet、Intranet 和 Extranet"></a>5.Internet、Intranet 和 Extranet</h1><p>Internet 是全球的网络集合，使用通用的 TCP/IP 协议来相互连接。Internet 提供电子邮件、文件传输、远程登录等服务。</p>
-<p>Intranet 是私有网络，只限于内部使用，也使用 TCP/IP 协议。</p>
-<p>Extranet 是一个扩展的 Intranet。它包括企业之外的和企业密切相关合作的其他企业。 Extranet 允许分离的组织交换信息并进行合作，这样就形成了一个虚拟组织。</p>
-<p>现在的 VPN 技术允许在公用网络上架构只对组织内部开发服务。</p>
-<p>Web 同样基于 C/S 结构，实际上 Web 接口是一个通用的接口，不是只能使用浏览器 的协议，它同样能够在普通的程序中使用。</p>
-<p>Internet 和 Web 已经给设计者提供了一个非常富有吸引力的选择方案。它的优势在于:它们已经成为网络的事实上的标准，支持它们的软件已经广泛地存在于全世界的计算机中，而且通信费用已经下降到很有竞争力的水平。</p>
-<p>采用 Internet 时，必须考虑其不利的一面。 Internet 的安全性过去、现在、以后都是设计者头痛的问题。其他诸如可靠性、系统吞吐量、不断发展的技术和标准都是影响系统选择它们作为运行环境的不利因素。</p>
+<h2 id="3-流程实例"><a href="#3-流程实例" class="headerlink" title="(3)流程实例"></a>(3)流程实例</h2><p>也称为工作，是一个流程定义的运行实例。</p>
+<h2 id="4-工作流管理系统"><a href="#4-工作流管理系统" class="headerlink" title="(4)工作流管理系统"></a>(4)工作流管理系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存储流程的定义</span><br><span class="line">按照所使用的流程定义来触发流程状态的改变</span><br><span class="line">推动流程的运转</span><br></pre></td></tr></table></figure>
+<p>这个推动的依据常常称为工作流引擎。</p>
+<h2 id="5-流程定义工具"><a href="#5-流程定义工具" class="headerlink" title="(5)流程定义工具"></a>(5)流程定义工具</h2><p>使用流程定义工具来完成流程定义的工作</p>
+<h2 id="6-参与者"><a href="#6-参与者" class="headerlink" title="(6)参与者"></a>(6)参与者</h2><p>可以是具体的人或者角色(企业内部有特别共同作用的多个人)，也可以是自动化系统，甚至是其他系统。</p>
+<h2 id="7-活动"><a href="#7-活动" class="headerlink" title="(7)活动"></a>(7)活动</h2><p>活动是流程定义中的一个元素，一次活动可能改变流程处理数据的内容、流程的状态，并可能将流程推动到其他活动中去。活动可以由人来完成，也可以是系统自动的处理过程。</p>
+<h2 id="8-活动所有者"><a href="#8-活动所有者" class="headerlink" title="(8)活动所有者"></a>(8)活动所有者</h2><p>决定该活动是否结束</p>
+<h2 id="9-工作所有者"><a href="#9-工作所有者" class="headerlink" title="(9)工作所有者"></a>(9)工作所有者</h2><p>有权整体控制流程实例执行过程的参与者</p>
+<h2 id="10-工作项"><a href="#10-工作项" class="headerlink" title="(10)工作项"></a>(10)工作项</h2><p>流程实例中活动的参与者将要执行的工作</p>
+<h1 id="二、工作流管理系统"><a href="#二、工作流管理系统" class="headerlink" title="二、工作流管理系统"></a>二、工作流管理系统</h1><p>在工作流形式化表示的驱动下，通过软件的执行而完成工作流定义、管理及执行的系统。<br>主要目标是对业务过程中各活动发生的先后次序及与活动相关的相应人力或信息资源的调用进行管理，而实现业务过程的自动化。</p>
+<p>工作流管理系统的6个最基本组成：</p>
+<h2 id="1-流程定义工具"><a href="#1-流程定义工具" class="headerlink" title="(1)流程定义工具"></a>(1)流程定义工具</h2><p>提供图形化或者其他方式的界面给设计者。由设计者将实际工作流程进行抽象，并将设计者提交的流程定义转换为形式化语言描述，提供给计算机工作流执行服务进行流程实例处理的依据。</p>
+<h2 id="2-工作流执行服务"><a href="#2-工作流执行服务" class="headerlink" title="(2)工作流执行服务"></a>(2)工作流执行服务</h2><p>1、使用一种或者多种数据流引擎，对流程定义进行解释，激活有效的流程实例，推动流程实例在不同的活动中运转。<br>2、和客户应用程序、其他工作流服务执行程序及其他应用程序进行交互，从而完成流程实例的创建、执行和管理工作。<br>3、为每个用户维护一个活动列表，告诉用户当前必须处理的任务。<br>4、通过电子邮件甚至是短消息的形式提醒用户任务的到达。</p>
+<h2 id="3-其他工作流执行服务"><a href="#3-其他工作流执行服务" class="headerlink" title="(3)其他工作流执行服务"></a>(3)其他工作流执行服务</h2><p>大型的企业工作流应用，往往包括多个工作流管理系统。这就需要这些工作流管理系统之间进行有效的交互，避免画地为牢、信息孤岛的现象出现。</p>
+<h2 id="4-客户应用程序"><a href="#4-客户应用程序" class="headerlink" title="(4)客户应用程序"></a>(4)客户应用程序</h2><p>最终用户的界面，用户通过使用这部分软件对工作流的数据进行必要的处理，如果用户是当前活动的拥有者，还可通过客户应用程序改变流程实例的活动，将流程实例推动到另外一个活动中。</p>
+<h2 id="5-被调用应用程序"><a href="#5-被调用应用程序" class="headerlink" title="(5)被调用应用程序"></a>(5)被调用应用程序</h2><p>对工作流所携带数据的处理程序。</p>
+<h2 id="6-管理和监控工具"><a href="#6-管理和监控工具" class="headerlink" title="(6)管理和监控工具"></a>(6)管理和监控工具</h2><p>对流程实例的状态查询、挂起、恢复、销毁等操作，同时提供系统参数、系统运行情况统计等数据。</p>
 
       
     </div>
@@ -1086,102 +1182,6 @@
 <h3 id="1-节点和连接。"><a href="#1-节点和连接。" class="headerlink" title="(1)节点和连接。"></a>(1)节点和连接。</h3><p>节点代表一个物理设备及其上运行的软件系统，如一台 UNIX 主机、一个 PC 终端、一台打印机、一个传感器等。<br>节点之间的连线表示系统之间进行交互的通信路径，在 UML 中被称为连接。<br>通信类型则放在连接旁边的“《》”之间，表示所用的通信协议或网络类型。</p>
 <h3 id="2-构件和接口。"><a href="#2-构件和接口。" class="headerlink" title="(2)构件和接口。"></a>(2)构件和接口。</h3><p>在部署图中，构件代表可执行的物理代码模块，如一个可执行程序。</p>
 <p><img src="/images/ruankao/6-17.png"><br>在面向对象方法中，类和构件等元素并不是所有的属性和操作都对外可见。它们对外提供了可见操作和属性，称之为类和构件的接口。界面可以表示为一头是小圆圈的直线。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AD%EF%BC%89%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（六）工作流设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>现实中的流程存在大量的不确定性。</p>
-<h1 id="一、工作流设计概述"><a href="#一、工作流设计概述" class="headerlink" title="一、工作流设计概述"></a>一、工作流设计概述</h1><p>工作流是一类能够完全或者部分自动执行的经营过程，根据一系列过程规则、文档、信息或任务在不同的执行者之间 传递、执行。</p>
-<h2 id="1-工作流"><a href="#1-工作流" class="headerlink" title="(1)工作流"></a>(1)工作流</h2><p>工作流是现实中的具体工作从开始到结束过程的抽象和概括。这个过程包括了众多因素:任务顺序、路线规则、时间时限约束等。</p>
-<h2 id="2-流程定义"><a href="#2-流程定义" class="headerlink" title="(2)流程定义"></a>(2)流程定义</h2><p>流程定义是指对业务过程的形式化表示，它定义了过程运行中的活动和所涉及的各种信息。这些信息包括</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">过程的开始和完成条件</span><br><span class="line">构成过程的活动及进行活动间导航的规则</span><br><span class="line">用户所需要完成的任务</span><br><span class="line">可能被调用的应用</span><br><span class="line">工作流间的引用关系</span><br><span class="line">工作流数据的定义</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-流程实例"><a href="#3-流程实例" class="headerlink" title="(3)流程实例"></a>(3)流程实例</h2><p>也称为工作，是一个流程定义的运行实例。</p>
-<h2 id="4-工作流管理系统"><a href="#4-工作流管理系统" class="headerlink" title="(4)工作流管理系统"></a>(4)工作流管理系统</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">存储流程的定义</span><br><span class="line">按照所使用的流程定义来触发流程状态的改变</span><br><span class="line">推动流程的运转</span><br></pre></td></tr></table></figure>
-<p>这个推动的依据常常称为工作流引擎。</p>
-<h2 id="5-流程定义工具"><a href="#5-流程定义工具" class="headerlink" title="(5)流程定义工具"></a>(5)流程定义工具</h2><p>使用流程定义工具来完成流程定义的工作</p>
-<h2 id="6-参与者"><a href="#6-参与者" class="headerlink" title="(6)参与者"></a>(6)参与者</h2><p>可以是具体的人或者角色(企业内部有特别共同作用的多个人)，也可以是自动化系统，甚至是其他系统。</p>
-<h2 id="7-活动"><a href="#7-活动" class="headerlink" title="(7)活动"></a>(7)活动</h2><p>活动是流程定义中的一个元素，一次活动可能改变流程处理数据的内容、流程的状态，并可能将流程推动到其他活动中去。活动可以由人来完成，也可以是系统自动的处理过程。</p>
-<h2 id="8-活动所有者"><a href="#8-活动所有者" class="headerlink" title="(8)活动所有者"></a>(8)活动所有者</h2><p>决定该活动是否结束</p>
-<h2 id="9-工作所有者"><a href="#9-工作所有者" class="headerlink" title="(9)工作所有者"></a>(9)工作所有者</h2><p>有权整体控制流程实例执行过程的参与者</p>
-<h2 id="10-工作项"><a href="#10-工作项" class="headerlink" title="(10)工作项"></a>(10)工作项</h2><p>流程实例中活动的参与者将要执行的工作</p>
-<h1 id="二、工作流管理系统"><a href="#二、工作流管理系统" class="headerlink" title="二、工作流管理系统"></a>二、工作流管理系统</h1><p>在工作流形式化表示的驱动下，通过软件的执行而完成工作流定义、管理及执行的系统。<br>主要目标是对业务过程中各活动发生的先后次序及与活动相关的相应人力或信息资源的调用进行管理，而实现业务过程的自动化。</p>
-<p>工作流管理系统的6个最基本组成：</p>
-<h2 id="1-流程定义工具"><a href="#1-流程定义工具" class="headerlink" title="(1)流程定义工具"></a>(1)流程定义工具</h2><p>提供图形化或者其他方式的界面给设计者。由设计者将实际工作流程进行抽象，并将设计者提交的流程定义转换为形式化语言描述，提供给计算机工作流执行服务进行流程实例处理的依据。</p>
-<h2 id="2-工作流执行服务"><a href="#2-工作流执行服务" class="headerlink" title="(2)工作流执行服务"></a>(2)工作流执行服务</h2><p>1、使用一种或者多种数据流引擎，对流程定义进行解释，激活有效的流程实例，推动流程实例在不同的活动中运转。<br>2、和客户应用程序、其他工作流服务执行程序及其他应用程序进行交互，从而完成流程实例的创建、执行和管理工作。<br>3、为每个用户维护一个活动列表，告诉用户当前必须处理的任务。<br>4、通过电子邮件甚至是短消息的形式提醒用户任务的到达。</p>
-<h2 id="3-其他工作流执行服务"><a href="#3-其他工作流执行服务" class="headerlink" title="(3)其他工作流执行服务"></a>(3)其他工作流执行服务</h2><p>大型的企业工作流应用，往往包括多个工作流管理系统。这就需要这些工作流管理系统之间进行有效的交互，避免画地为牢、信息孤岛的现象出现。</p>
-<h2 id="4-客户应用程序"><a href="#4-客户应用程序" class="headerlink" title="(4)客户应用程序"></a>(4)客户应用程序</h2><p>最终用户的界面，用户通过使用这部分软件对工作流的数据进行必要的处理，如果用户是当前活动的拥有者，还可通过客户应用程序改变流程实例的活动，将流程实例推动到另外一个活动中。</p>
-<h2 id="5-被调用应用程序"><a href="#5-被调用应用程序" class="headerlink" title="(5)被调用应用程序"></a>(5)被调用应用程序</h2><p>对工作流所携带数据的处理程序。</p>
-<h2 id="6-管理和监控工具"><a href="#6-管理和监控工具" class="headerlink" title="(6)管理和监控工具"></a>(6)管理和监控工具</h2><p>对流程实例的状态查询、挂起、恢复、销毁等操作，同时提供系统参数、系统运行情况统计等数据。</p>
 
       
     </div>

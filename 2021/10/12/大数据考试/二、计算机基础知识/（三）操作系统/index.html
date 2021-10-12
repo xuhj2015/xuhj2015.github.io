@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1、掌握操作系统的概念和操作系统结构。操作系统（Operating System, OS）是计算机系统中的核心系统软件，负责管理和控制计算机系统中的硬件和软件资源，合理地组织计算机工作流程和有效地利用资源，在计算机与用户之间起接口的作用。操作系统为用户提供的接口表现形式一般为：命令、菜单、窗口之类的,而操作系统为应用程序提供的接口为API。  2、掌握操作系统的进程管理，包括进程概念、进程调度、同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="（三）操作系统">
+<meta property="og:url" content="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%EF%BC%88%E4%B8%89%EF%BC%89%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="1、掌握操作系统的概念和操作系统结构。操作系统（Operating System, OS）是计算机系统中的核心系统软件，负责管理和控制计算机系统中的硬件和软件资源，合理地组织计算机工作流程和有效地利用资源，在计算机与用户之间起接口的作用。操作系统为用户提供的接口表现形式一般为：命令、菜单、窗口之类的,而操作系统为应用程序提供的接口为API。  2、掌握操作系统的进程管理，包括进程概念、进程调度、同">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/bigdata/2-1.png">
+<meta property="og:image" content="http://example.com/images/bigdata/2-2.png">
+<meta property="og:image" content="http://example.com/images/bigdata/2-3.png">
+<meta property="article:published_time" content="2021-10-11T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-12T09:30:46.553Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="计算机基础知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/bigdata/2-1.png">
+
+<link rel="canonical" href="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%EF%BC%88%E4%B8%89%EF%BC%89%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>（三）操作系统 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%EF%BC%88%E4%B8%89%EF%BC%89%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          （三）操作系统
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-12 00:00:00 / 修改时间：17:30:46" itemprop="dateCreated datePublished" datetime="2021-10-12T00:00:00+08:00">2021-10-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1、掌握操作系统的概念和操作系统结构。"><a href="#1、掌握操作系统的概念和操作系统结构。" class="headerlink" title="1、掌握操作系统的概念和操作系统结构。"></a>1、掌握操作系统的概念和操作系统结构。</h1><p>操作系统（Operating System, OS）是计算机系统中的核心系统软件，负责管理和控制计算机系统中的硬件和软件资源，合理地组织计算机工作流程和有效地利用资源，在计算机与用户之间起接口的作用。操作系统为用户提供的接口表现形式一般为：命令、菜单、窗口之类的,而操作系统为应用程序提供的接口为API。</p>
+<p><img src="/images/bigdata/2-1.png"></p>
+<h1 id="2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。"><a href="#2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。" class="headerlink" title="2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。"></a>2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。</h1><h2 id="进程概念"><a href="#进程概念" class="headerlink" title="进程概念"></a>进程概念</h2><p>处理机是计算机系统的核心资源。操作系统的功能之一就是处理机管理。随着计算机的迅速发展，处理机管理显得更为重要，这主要由于计算机的速度越来越快，处理机的充分利用有利于系统效率的大大提高；处理机管理是整个操作系统的重心所在，其管理的好坏直接影响到整个系统的运行效率；而且操作系统中并发活动的管理和控制是在处理机管理下实现的，处理机管理集中了操作系统中最复杂的部分，它设计的好坏关系到整个系统的成败。</p>
+<p>进程是处理机管理中最基本的、最重要的概念。进程是系统并发执行的体现。由于在多道程序系统中，众多的计算机用户都以各种各样的任务，随时随地争夺使用处理机。为了动态地看待操作系统，则以进程作为独立运行的基本单位，以进程作为分配资源的基本单位，从进程的角度来究操作系统。因此，处理机管理也被称为进程管理。处理机管理的功能就是组织和协调用户对处理机的争夺使用，把处理机分配给进程，对进程进行管理和控制，最大限度也发挥处理机的作用。</p>
+<p>由进程运行的间断性，决定了进程至少具有以下三种状态：<br>(1) 就绪状态。当进程分配了除 CPU 以外的所有必要的资源后，只要能再获得处理机，便能立即执行，把这时的进程状态称为就绪状态。在一个系统中，可以有多个进程同时处于就绪状态，通常把它们排成一个队列，称为就绪队列。<br>(2) 执行状态指进程已获得处理机，其程序正在执行。在单处理机系统中，只能有个进程处于执行状态。<br>(3)阻塞状态指进程因发生某事件(如请求、I/O、申请缓冲空间等）而暂停执行时的状态，亦即进程的执行受到阻塞，故称这种暂停状态为阻塞状态，有时也称为“等待”状态，或“睡眠”状态。通常将处于阻塞状态的进程排成一个队列，称为阻塞队列。</p>
+<p><img src="/images/bigdata/2-2.png"></p>
+<p>具有挂起操作的进程状态的演变情况如下。</p>
+<p><img src="/images/bigdata/2-3.png"></p>
+<h2 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h2><p>进程同步定义为：把异步环境下的一组并发进程因直接制约而互相发送消息而进行互相合作、互相等待，使得各进程按一定的速度执行的过程称为进程同步。也就是说进程之间是异步执行的，同步即是使各进程按一定的制约顺序和速度执行。</p>
+<h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><p>进程调度即处理器调度（又称上下文转换），它的主要功能是确定在什么时候分配处理器，并确定分给哪一个进程，即让正在执行的进程改变状态并转入就绪队列的队尾，再由调度原语将就绪队列的队首进程取出，投入执行。</p>
+<p>引起进程调度的原因有以下几类：<br> (1) 正在执行的进程执行完毕。<br> (2) 执行中的进程自己调用阻塞原语将自己阻塞起来进入睡眠状态。<br> (3) 执行中的进程调用了 P 原语操作，从而因资源不足而阻塞；或调用 V 原语操作激活了等待资源的进程队列。<br> (4) 在分时系统中，当一进程用完一个时间片。<br> (5) 就绪队列中某进程的优先级变得高于当前执行进程的优先级，也将引起进程调度。</p>
+<p>进程调度的方式有两类：剥夺方式与非剥夺方式。所谓非剥夺方式是指，一旦某个作业或进程占用了处理器，别的进程就不能把处理器从这个进程手中夺走，直到该进程自己因调用原语操作而进入阻塞状态，或时间片用完而让出处理机；剥夺方式是指，当就绪队列中有进程的优先级高于当前执行进程的优先级时，便立即发生进程调度，转让处理机。</p>
+<p>进程调度的算法是服务于系统目标的策略，对于不同的系统与系统目标，常采用不同的调度算法：<br>(1) 先来先服务（First Come and First Serverd, FCFS）调度算法，又称先进先出（First In  and First Out, FIFO）。就绪队列按先来后到原则排队。<br>(2) 优先数调度。优先数反映了进程优先级，就绪队列按优先数排队。有两种确定优先级的方法，即静态优先级和动态优先级。静态优先级是指进程的优先级在进程开始执行前确定，执行过程中不变，而动态优先级则可以在进程执行过程中改变。<br>(3) 轮转法（Round Robin）。就绪队列按 FCFS 方式排队。每个进程执行一次占有处理器时间都不超过规定的时间单位（时间片）若超过，则自行释放自己所占有的 CPU 而排到就绪队列的末尾，等待下一次调度。同时，进程调度程序又去调度当前就绪队列中的第个进程。</p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p>进程管理是操作系统的核心，在进程管理的实现中，如果设计不当，会出现一种尴尬的局面一一死锁。</p>
+<p>当若干个进程互相竟争对方已占有的资源，无限期地等待，不能向前推进时会造成“死锁”。例如，P1 进程占有资源 R1, P2 进程占有资源 R2, 这时，P1 又需要资源 R2, P2 也需要资源 R1, 它们在等待对方占有的资源时，又不会释放自己占有的资源，因而使双方都进入了无限等待状态。</p>
+<p>死锁是系统的一种出错状态，它不仅会浪费大量的系统资源，甚至还会导致整个系统的崩溃，所以死锁是应该尽量预防和避免的。<br>(1) 死锁条件。产生死锁的主要原因是供共享的系统资源不足，资源分配策略和进程的推进顺序不当。系统资源既可能是可重复使用的永久性资源，也可能是消耗性的临时资源。产生死锁的必要条件是：互斥条件、保持和等待条件、不剥夺条件和环路等待条件。<br>(2) 解决死锁的策略。处于死锁状态的进程不能继续执行但又占用了系统资源，从而阻碍其他作业的执行。</p>
+<p>解决死锁有两种策略：一种是在死锁发生前采用的预防和避免策略；另一种是在死锁发生后采用的检测与恢复策略。<br>死锁的预防主要是通过打破死锁产生的 4 个必要条件之一来保证不会产生死锁。采用的死锁预防策略通常有资源的静态分配法或有序分配法，它们分别打破了资源动态分配条件和循环等待条件，因此不会发生死锁。但这样做会大大降低系统资源的利用率和进程之间的并行程度。<br>死锁避免策略，则是在系统进行资源分配时，先执行一个死锁避免算法（典型的如银行家算法），以保证本次分配不会导致死锁发生。由于资源分配很频繁，因此死锁避免策略要耗费大量的 CPU 和时间。</p>
+<h1 id="3、掌握内存管理，包括内存管理策略和虚拟内存管理。"><a href="#3、掌握内存管理，包括内存管理策略和虚拟内存管理。" class="headerlink" title="3、掌握内存管理，包括内存管理策略和虚拟内存管理。"></a>3、掌握内存管理，包括内存管理策略和虚拟内存管理。</h1><p>存储管理主要是指对内存储器的管理，负责对内存的分配和回收、内存的保护和内存的扩充。存储管理的目的是尽量提高内存的使用效率。存储管理的机制经历了多次变迁，由以前的单一连续区管理到分区存储管理再发展为段页式管理。目前前两种技术已逐步被淘汰，下面我们将详细解读段页式存储管理。</p>
+<h2 id="段页式存储管理"><a href="#段页式存储管理" class="headerlink" title="段页式存储管理"></a>段页式存储管理</h2><h3 id="1．页式存储管理"><a href="#1．页式存储管理" class="headerlink" title="1．页式存储管理"></a>1．页式存储管理</h3><p>分页的基本思想是把程序的逻辑空间和内存的物理空间按照同样的大小划分成若干页面，并以页面为单位进行分配。在页式存储管理中，系统中虚地址是一个有序对（页号，位移）。系统为每一个进程建立一个页表，其内容包括进程的逻辑页号与物理页号的对应关系、状态等。<br>为此，在装入作业时，就应在该作业的页表中指出哪些页已在内存储器中，哪些页还没有装入内存。可用一个标志位指示对应页是否在内存储器，可假设标志位为 1 表示该页在内存，而标志位为 0 表示该页尚未装入内存。为了能方便地从磁盘上找到作业信息的副本，故在页表中还可指出每一页副本在磁盘上的位置。<br>当要装入一个当前需要的页面时，如果内存储器中无空闲块，则可选择一个已在内存储器中的页面，把它暂时调出内存。若在执行中该页面被修改过，则把该页信息重新写回到磁盘上，否则不必重新写回磁盘。当一页被暂时调出内存后，让出的内存空间用来存放当前需要使用的页面。以后再使用被调出的页面时，可用同样的方法调出另一个页面而将其再装入内存。页面被调出或装入之后都要对页表中的相应表目做修改。<br>当内存中无空闲块时，为了装入一个页面而必须按某种算法从已在内存的页中选择一页，将它暂时调出内存，让出内存空间以存放所需装入的页面，这个工作称为“页面调度”。如何选择调出的页面是很重要的，如果采用了一个不合适的算法，就会出现这样的现象：刚被调出的页面又立即要用，因而又要把它装入，而装入不久又被选中调出，调出不久又被装入，如此反复，使调度非常频繁。这种现象称为“抖动”。一个好的调度算法应减少或避免抖动现象。常用的页面调度算法有：<br>(1) 最优（OPT）算法。选择不再使用或最远的将来才被使用的页，这是理想的算法，但是难以实现，常用于淘汰算法的比较。<br>(2) 随机（RAND）算法。随机地选择被淘的页，开销小，但是可能选中立即就要访问的页。<br>(3) 先进先出算法。选择在内存驻留时间最长的页似乎合理，但可能淘汰掉频繁使用的页。另外，使用 FIFO 算法时，在未给予进程分配足够的页面数时，有时会出现给予进程的页面数增多，缺页次数反而增加的异常现象。FIFO 算法简单，易实现。可以把装入内存储器的那些页的页号按进入的先后顺序排成队列，每次总是调出队首的页，当装入一个新页后，把新页的页号排到队尾。<br>(4) 最近最少使用（Least Recently Used, LRU）算法。选择离当前时间最近的一段时间内使用得最少的页。这个算法的主要出发点是，如果某个页被访问了，则它可能马上就要被访问；反之，如果某个页长时间未被访问，则它在最近一段时间也不会被访问。</p>
+<h3 id="2．段式存储管理"><a href="#2．段式存储管理" class="headerlink" title="2．段式存储管理"></a>2．段式存储管理</h3><p>段式存储管理与页式存储管理相似。分段的基本思想是把用户作业按逻辑意义上有完整意义的段来划分，并以段为单位作为内外存交换的空间尺度。<br>个作业是由若干个具有逻辑意义的段（如主程序、子程序、数据段等）组成。分段系统中，容许程序（作业）占据内存中许多分离的分区。每个分区存储一个程序分段。这样，每个作业需要几对界限地址寄存器，判定访问地址是否越界也就更困难了。在分段存储系统中常常利用存储保护键实现存储保护。分段系统中虚地址是一个有序对（段号，位移）。系统为每个作业建立一个段表，其内容包括段号、段长、内存起始地址和状态等。状态指出这个段是否已调入内存，即内存起始地址指出这个段，状态指出这个段的访问权限。<br>分段系统的动态地址转换是这样进行的：进程执行时，其段表的首地址已在基本地址寄存器中，执行的指令访问虚存（s, d)（取指令或取操作数）时，首先根据段号 s 査段表，若段已经调入内存，则得到该段的内存起始地址，然后与段内相对地址（段内偏移量 d 相加，得到实地址。如果该段尚未调入内存，则产生缺段中断，以装入所需要的段。<br>段式虚拟存储管理仍然以段式存储管理为基础，为用户提供比内存实际容量大的虚拟空间。段式虚拟存储管理把作业中的各个分段信息都保留在磁盘上，当作业可以投入执行时，做如下操作：<br>(1) 首先把当前需要的一段或几段装入内存。<br>(2) 作业执行时，如果要访问的段已经在内存，则按照“段式存储管理”中的方式进行地址转换；如果要访问的段不在内存中，则产生一“缺段中断”，由操作系统把当前需要的段装入内存。<br>因此，在段表中应增设段是否在内存的标志以及各段在磁盘上的位置，已在内存中的段仍要指出该段在内存中的起始地址和占用内存区长度。<br>作业执行要访问的段时，由硬件的地址转换机构査段表。若该段在内存中，则立即把逻辑地址转换成绝对地址；若该段不在内存中，则形成“缺段中断”，由操作系统处理这个中断。<br>处理的办法是，査内存分配表，找出一个足够大的连续区以容纳该分段，如果找不到足够大的连续区则检査空闲区的总和，若空闲区总和能满足该段要求，那么进行适当移动将分散的空闲区集中；若空闲区总和不能满足该段要求，可把内存中的一段或几段调出，然后把当前要访问的段装入内存中。段被移动、调出和装入后都要对段表中的相应表目做修改。新的段被装入后应让作业重新执行被中断的指令，这时就能找到要访问的段，也可以继续执行下去。</p>
+<h3 id="3．段页式存储管理"><a href="#3．段页式存储管理" class="headerlink" title="3．段页式存储管理"></a>3．段页式存储管理</h3><p>段页式管理是段式和页式两种管理方法结合的产物，综合了段式组织与页式组织的特点，根据程序模块分段，段内再分页，内存被分划成定长的页。段页式系统中虚地址形式是（段号、页号、页内偏移）。系统为每个进程建立一个段表，为每个段建立一个页表。段页式管理采用段式分配、页式使用的方法，便于动态连接和存储的动态分配。这种存储管理能提高内存空间的利用率。<br>段式虚拟管理还是以段为单位分配内存空间，整段的调出、装入，有时还要移动，这些都增加了系统的开销。如果按段页式存储管理的方式，把每一段再分成若干页面，那么，每段不必占用连续的存储空间；甚至当内存块不够时，可只将一段中的部分页面装入内存这种管理方式称为“段页式虚拟存储管理”。<br>段页式虚拟存储管理为每一个装入内存的作业建立一张段表，还要为每一段建立页表。段表中指出该段的页表存放位置及长度，页表中应指出该段的各页在磁盘上的位置以及页是否在内存中，若在内存中则填上占用的内存块号。作业执行时按段号查段表，找到相应的页表再根据页号查页表，由标志位判定该页是否已在内存，若是，则进行地址转换；否则进行页面调度。<br>段页式虚拟存储管理结合了段式和页式的优点，但增加了设置表格（段表、页表）和査表等开销，段页式虚拟存储器一般只在大型计算机系统中使用。</p>
+<h1 id="4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和-I-O-系统。"><a href="#4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和-I-O-系统。" class="headerlink" title="4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和 I/O 系统。"></a>4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和 I/O 系统。</h1><h1 id="5、了解系统保护与安全。"><a href="#5、了解系统保护与安全。" class="headerlink" title="5、了解系统保护与安全。"></a>5、了解系统保护与安全。</h1>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"># 计算机基础知识</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/11/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/start/" rel="prev" title="干啊，大数据考试之路">
+      <i class="fa fa-chevron-left"></i> 干啊，大数据考试之路
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" rel="next" title="（二）数据结构与算法">
+      （二）数据结构与算法 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81%E6%8E%8C%E6%8F%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%E3%80%82"><span class="nav-number">1.</span> <span class="nav-text">1、掌握操作系统的概念和操作系统结构。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81%E6%8E%8C%E6%8F%A1%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86%EF%BC%8C%E5%8C%85%E6%8B%AC%E8%BF%9B%E7%A8%8B%E6%A6%82%E5%BF%B5%E3%80%81%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6%E3%80%81%E5%90%8C%E6%AD%A5%E5%8F%8A%E6%AD%BB%E9%94%81%E5%A4%84%E7%90%86%E3%80%82"><span class="nav-number">2.</span> <span class="nav-text">2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">进程概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5"><span class="nav-number">2.2.</span> <span class="nav-text">同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="nav-number">2.3.</span> <span class="nav-text">进程调度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E9%94%81"><span class="nav-number">2.4.</span> <span class="nav-text">死锁</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3%E3%80%81%E6%8E%8C%E6%8F%A1%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%EF%BC%8C%E5%8C%85%E6%8B%AC%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5%E5%92%8C%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E3%80%82"><span class="nav-number">3.</span> <span class="nav-text">3、掌握内存管理，包括内存管理策略和虚拟内存管理。</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AE%B5%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">3.1.</span> <span class="nav-text">段页式存储管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%EF%BC%8E%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">3.1.1.</span> <span class="nav-text">1．页式存储管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%EF%BC%8E%E6%AE%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">3.1.2.</span> <span class="nav-text">2．段式存储管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%EF%BC%8E%E6%AE%B5%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86"><span class="nav-number">3.1.3.</span> <span class="nav-text">3．段页式存储管理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E3%80%81%E4%BA%86%E8%A7%A3%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86%EF%BC%8C%E5%8C%85%E6%8B%AC%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E3%80%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0%E3%80%81%E5%A4%A7%E5%AE%B9%E9%87%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%E5%92%8C-I-O-%E7%B3%BB%E7%BB%9F%E3%80%82"><span class="nav-number">4.</span> <span class="nav-text">4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和 I&#x2F;O 系统。</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5%E3%80%81%E4%BA%86%E8%A7%A3%E7%B3%BB%E7%BB%9F%E4%BF%9D%E6%8A%A4%E4%B8%8E%E5%AE%89%E5%85%A8%E3%80%82"><span class="nav-number">5.</span> <span class="nav-text">5、了解系统保护与安全。</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+</body>
+</html>
