@@ -197,6 +197,219 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84/" class="post-title-link" itemprop="url">软件架构设计（五）面向服务的架构</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-26 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>迄今为止，对于面向服务的架构(Service-Oriented Architecture，SOA)还没有一个公认 的定义。许多组织从不同的角度和不同的侧面对 SOA 进行了描述，较为典型的有以下三个:</p>
+<p>(1)W3C 的定义:SOA 是一种应用程序架构，在这种架构中，所有功能都定义为独 立的服务，这些服务带有定义明确的可调用接口，能够以定义好的顺序调用这些服务来形成 业务流程。</p>
+<p>(2)Service-architecture.com 的定义:服务是精确定义、封装完善、独立于其他服务 所处环境和状态的函数。SOA 本质上是服务的集合，服务之间彼此通信，这种通信可能是 简单的数据传送，也可能是两个或更多的服务协调进行某些活动。服务之间需要某些方法进 行连接。</p>
+<p>(3)Gartner 的定义:SOA 是一种 C/S 架构的软件设计方法，应用由服务和服务使用 者组成，SOA 与大多数通用的 C/S 架构模型不同之处，在于它着重强调构件的松散耦合， 并使用独立的标准接口。</p>
+<h1 id="一、SOA概述"><a href="#一、SOA概述" class="headerlink" title="一、SOA概述"></a>一、SOA概述</h1><p>SOA 是一种在计算环境中设计、开发、部署和管理离散逻辑单元(服务)模型的方法。 SOA 并不是一个新鲜事物，而只是面向对象模型的一种替代。虽然基于 SOA 的系统并不排 除使用 OOD 来构建单个服务，但是其整体设计却是面向服务的。由于 SOA 考虑到了系统 内的对象，所以虽然 SOA 是基于对象的，但是作为一个整体，它却不是面向对象的。</p>
+<p><img src="/images/ruankao/6-43.png"></p>
+<p>在 SOA 模型中，所有的功能都定义成了独立的服务。服务之间通过交互和协调完成业 务的整体逻辑。所有的服务通过服务总线或流程管理器来连接。这种松散耦合的架构使得各 服务在交互过程中无需考虑双方的内部实现细节，以及部署在什么平台上。</p>
+<h2 id="1-服务的基本结构"><a href="#1-服务的基本结构" class="headerlink" title="1. 服务的基本结构"></a>1. 服务的基本结构</h2><p><img src="/images/ruankao/6-44.png"></p>
+<p>服务模型的表示层从逻辑层分离出来，中间增加了服务对外的接 口层。通过服务接口的标准化描述，使得服务可以提供给在任何异构平台和任何用户接口使 用。这允许并支持基于服务的系统成为松散耦合、面向构件和跨技术实现，服务请求者很可 能根本不知道服务在哪里运行、是由哪种语言编写的，以及消息的传输路径，而是只需要提 出服务请求，然后就会得到答案。</p>
+<h2 id="2-SOA-设计原则"><a href="#2-SOA-设计原则" class="headerlink" title="2.SOA 设计原则"></a>2.SOA 设计原则</h2><p>在 SOA 架构中，继承了来自对象和构件设计的各种原则。</p>
+<p>关于服务，一些常见的设计原则如下:</p>
+<h3 id="1-明确定义的接口。"><a href="#1-明确定义的接口。" class="headerlink" title="(1)明确定义的接口。"></a>(1)明确定义的接口。</h3><p>服务请求者依赖于服务规约来调用服务，因此，服务定义必须 长时间稳定，一旦公布，不能随意更改;服务的定义应尽可能明确，减少请求者的不适当使 用;不要让请求者看到服务内部的私有数据。</p>
+<h3 id="2-自包含和模块化。"><a href="#2-自包含和模块化。" class="headerlink" title="(2)自包含和模块化。"></a>(2)自包含和模块化。</h3><p>服务封装了那些在业务上稳定、重复出现的活动和构件，实现 服务的功能实体是完全独立自主的，独立进行部署、版本控制、自我管理和恢复。</p>
+<h3 id="3-粗粒度。"><a href="#3-粗粒度。" class="headerlink" title="(3)粗粒度。"></a>(3)粗粒度。</h3><p>服务数量不应该太多，依靠消息交互而不是远程过程调用，通常消息量 比较大，但是服务之间的交互频度较低。</p>
+<h3 id="4-松耦合。"><a href="#4-松耦合。" class="headerlink" title="(4)松耦合。"></a>(4)松耦合。</h3><p>服务请求者可见的是服务的接口，其位置、实现技术、当前状态和私有 数据等，对服务请求者而言是不可见的。</p>
+<h3 id="5-互操作性、兼容和策略声明。"><a href="#5-互操作性、兼容和策略声明。" class="headerlink" title="(5)互操作性、兼容和策略声明。"></a>(5)互操作性、兼容和策略声明。</h3><p>为了确保服务规约的全面和明确，策略成为一个越 来越重要的方面。</p>
+<h2 id="3-服务构件与传统构件"><a href="#3-服务构件与传统构件" class="headerlink" title="3. 服务构件与传统构件"></a>3. 服务构件与传统构件</h2><p>服务构件架构(Service Component Architecture，SCA)是基于 SOA 的思想描述服务之间组合和协作的规范，它描述用于使用 SOA 构建应用程序和系统的模型。它可简化使用 SOA 进行的应用程序开发和实现工作。SCA 提供了构建粗粒度构件的机制，这些粗粒度构 件由细粒度构件组装而成。SCA 将传统中间件编程从业务逻辑分离出来，从而使程序员免 受其复杂性的困扰。它允许开发人员集中精力编写业务逻辑，而不必将大量的时间花费在更 为底层的技术实现上。</p>
+<p>SCA 服务构件与传统构件的主要区别在于，服务构件往往是粗粒度的，而传统构件以 细粒度居多;服务构件的接口是标准的，主要是服务描述语言接口，而传统构件常以具体 API 形式出现;服务构件的实现与语言是无关的，而传统构件常绑定某种特定的语言;服务构件 可以通过构件容器提供 QoS 的服务，而传统构件完全由程序代码直接控制。</p>
+<h1 id="二、SOA-的关键技术"><a href="#二、SOA-的关键技术" class="headerlink" title="二、SOA 的关键技术"></a>二、SOA 的关键技术</h1><p>SOA 是一种全新的架构，为了支持其各种特性，相关的技 术规范不断推出。与 SOA 紧密相关的技术主要有 UDDI、WSDL、SOAP 和 REST 等，而这 些技术都是以 XML 为基础而发展起来的。</p>
+<h2 id="1-UDDI"><a href="#1-UDDI" class="headerlink" title="1. UDDI"></a>1. UDDI</h2><p>UDDI(Universal DescriptionDiscovery and Integration，统一描述、发现和集成)提供了 一种服务发布、查找和定位的方法，是服务的信息注册规范，以便被需要该服务的用户发现 和使用它。UDDI 规范描述了服务的概念，同时也定义了一种编程接口。通过 UDDI 提供的 标准接口，企业可以发布自己的服务供其他企业查询和调用，也可以查询特定服务的描述信 息，并动态绑定到该服务上。</p>
+<p>UDDI包括：<br>(1)数据模型。UDDI 数据模型是一个用于描述业务组织和服务的 XML Schema。<br>(2)API。UDDI API 是一组用于查找或发布 UDDI 数据的方法，UDDI API 基于 SOAP。<br>(3)注册服务。UDDI 注册服务是 SOA 中的一种基础设施，对应着服务注册中心的角<br>色。</p>
+<h2 id="2-WSDL"><a href="#2-WSDL" class="headerlink" title="2.WSDL"></a>2.WSDL</h2><p>WSDL(Web ServiceDescription Language，Web 服务描述语言)是对服务进行描述的语言，它有一套基于 XML 的语法定义。WSDL 描述的重点是服务，它包含服务实现定义和服 务接口定义。</p>
+<p><img src="/images/ruankao/6-45.png"><br>服务实现定义描述了给定服务提供者如何实现特定的服务接口。服务实现定义中包含服 务和端口描述。一个服务往往会包含多个服务访问入口，而每个访问入口都会使用一个端口 元素来描述，端口描述的是一个服务访问入口的部署细节，例如，通过哪个地址来访问，应 当使用怎样的消息调用模式来访问等。</p>
+<h2 id="3-SOAP"><a href="#3-SOAP" class="headerlink" title="3.SOAP"></a>3.SOAP</h2><p>SOAP(Simple ObjectAccess Protocol，简单对象访问协议)定义了服务请求者和服务提 供者之间的消息传输规范。SOAP 用 XML 来格式化消息，用 HTTP 来承载消息。通过 SOAP， 应用程序可以在网络中进行数据交换和远程过程调用(Remote Procedure Call， RPC)</p>
+<p>SOAP 主要包括以下四个部分:</p>
+<p>(1)封装。SOAP 封装定义了一个整体框架，用来表示消息中包含什么内容，谁来处 理这些内容，以及这些内容是可选的还是必需的。<br>(2)编码规则。SOAP 编码规则定义了一种序列化的机制，用于交换系统所定义的数 据类型的实例。<br>(3)RPC 表示。SOAP RPC 表示定义了一个用来表示远程过程调用和应答的协议。<br>(4)绑定。SOAP 绑定定义了一个使用底层传输协议来完成在节点之间交换 SOAP 封 装的约定。</p>
+<p>SOAP 消息包括以下三个部分:</p>
+<p>(1)封装(信封)。封装的元素名是 Envelope，在表示消息的 XML 文档中，封装是顶 层元素，在 SOAP 消息中必须出现。<br>(2)SOAP 头。SOAP 头的元素名是 Header，提供了向 SOAP 消息中添加关于这条 SOAP 消息的某些要素的机制。<br>(3)SOAP 体。SOAP 体的元素名是 Body，是包含消息的最终接收者想要的信息的容 器。</p>
+<h2 id="4-REST"><a href="#4-REST" class="headerlink" title="4.REST"></a>4.REST</h2><p>REST(RepresentationalState Transfer，表述性状态转移)是一种只使用 HTTP 和 XML 进 行基于 Web 通信的技术，可以降低开发的复杂性，提高系统的可伸缩性。它的简单性和缺 少严格配置文件的特性，使它与 SOAP 很好地隔离开来，REST 从根本上来说只支持几个操 作(POST、GET、PUT 和 DELETE)，这些操作适用于所有的消息。</p>
+<p>REST 提出了如下一些设 计概念和准则:<br>(1)网络上的所有事物都被抽象为资源。<br>(2)每个资源对应一个唯一的资源标识。<br>(3)通过通用的连接件接口对资源进行操作。<br>(4)对资源的各种操作不会改变资源标识。<br>(5)所有的操作都是无状态的。</p>
+<h1 id="三、SOA-的实现方法"><a href="#三、SOA-的实现方法" class="headerlink" title="三、SOA 的实现方法"></a>三、SOA 的实现方法</h1><p>SOA 只是一种概念和思想，需要借助于具体的技术和方法来实现它。从本质上来看， SOA 是用本地计算模型来实现一个分布式的计算应用，也有人称这种方法为“本地化设计，分布式工作”模型。CORBA、DCOM 和 EJB 等都属于这种解决方式。</p>
+<p>从逻辑上和高层抽象来看，目前，实现 SOA 的方法也比较多，其中主流方式有 Web Service、企业服务总线和服务注册表。</p>
+<h2 id="1-Web-Service"><a href="#1-Web-Service" class="headerlink" title="1.Web Service"></a>1.Web Service</h2><p>在 Web Service(Web 服务)的解决方案中，一共有三种工作角色，其中服务提供者和 服务请求者是必需的，服务注册中心是一个可选的角色。</p>
+<p><img src="/images/ruankao/6-46.png"></p>
+<p>在采用 Web Service 作为 SOA 的实现技术时，应用系统大致可以分为六个层次，分别 是底层传输层、服务通信协议层、服务描述层、 服务层、业务流程层和服务注册层。</p>
+<h3 id="1-底层传输层。"><a href="#1-底层传输层。" class="headerlink" title="(1)底层传输层。"></a>(1)底层传输层。</h3><p>底层传输层主要负责消息的传输机制，HTTP、JMS(Java Messaging Service，Java 消息服务)和 SMTP 都可以作为服务的消息传输协议，其中 HTTP 使用最广。</p>
+<h3 id="2-服务通信协议层。"><a href="#2-服务通信协议层。" class="headerlink" title="(2)服务通信协议层。"></a>(2)服务通信协议层。</h3><p>服务通信协议层的主要功能是描述并定义服务之间进行消息传 递所需的技术标准，常用的标准是 SOAP 和 REST 协议。</p>
+<h3 id="3-服务描述层。"><a href="#3-服务描述层。" class="headerlink" title="(3)服务描述层。"></a>(3)服务描述层。</h3><p>服务描述层主要以一种统一的方式描述服务的接口与消息交换方式， 相关的标准是 WSDL。</p>
+<h3 id="4-服务层。"><a href="#4-服务层。" class="headerlink" title="(4)服务层。"></a>(4)服务层。</h3><p>服务层的主要功能是将遗留系统进行包装，并通过发布的 WSDL 接口描 述被定位和调用。</p>
+<h3 id="5-业务流程层。"><a href="#5-业务流程层。" class="headerlink" title="(5)业务流程层。"></a>(5)业务流程层。</h3><p>业务流程层的主要功能是支持服务发现，服务调用和点到点的服务 调用，并将业务流程从服务的底层调用抽象出来。</p>
+<h3 id="6-服务注册层"><a href="#6-服务注册层" class="headerlink" title="(6)服务注册层"></a>(6)服务注册层</h3><p>服务注册层的主要功能是使服务提供者能够通过 WSDL 发布服务定义，并支持服 务请求者查找所需的服务信息。相关的标准是 UDDI。</p>
+<h2 id="2-服务注册表"><a href="#2-服务注册表" class="headerlink" title="2. 服务注册表"></a>2. 服务注册表</h2><p>服务注册表(service registry)虽然也具有运行时的功能，但主要在 SOA 设计时使用。</p>
+<p>服务注册表可以包括有关服务和相关构件的配置、依从性和 约束文件。</p>
+<p>大多数商用服务注册产品支持服务注册、服务位置和服务绑定功能。</p>
+<h2 id="3-企业服务总线ESB"><a href="#3-企业服务总线ESB" class="headerlink" title="3. 企业服务总线ESB"></a>3. 企业服务总线ESB</h2><p>ESB 是由中间件技术实现并支持 SOA 的一组基础架构，是传统中间件技术与 XML、 Web Service 等技术结合的产物，是在整个企业集成架构下的面向服务的企业应用集成机制。</p>
+<p>ESB 具有以下功能:<br>(1)支持异构环境中的服务、消息和基于事件的交互，并且具有适当的服务级别和可 管理性。<br>(2)通过使用 ESB，可以在几乎不更改代码的情况下，以一种无缝的非侵入方式使现 有系统具有全新的服务接口，并能够在部署环境中支持任何标准。<br>(3)充当缓冲器的 ESB(负责在诸多服务之间转换业务逻辑和数据格式)与服务逻辑 相分离，从而使不同的系统可以同时使用同一个服务，不用在系统或数据发生变化时，改动 服务代码。<br>(4)在更高的层次，ESB 还提供诸如服务代理和协议转换等功能。允许在多种形式下 通过像 HTTP、SOAP 和 JMS 总线的多种传输方式，主要是以网络服务的形式，为发表、注 册、发现和使用企业服务或界面提供基础设施。<br>(5)提供可配置的消息转换翻译机制和基于消息内容的消息路由服务，传输消息到不 同的目的地。<br>(6)提供安全和拥有者机制，以保证消息和服务使用的认证、授权和完整性。</p>
+<p>与现存的、专有的集成解决方案相比，ESB 具有以下优势:</p>
+<p>(1)扩展的、基于标准的连接。ESB 形成一个基于标准的信息骨架，使得在系统内部<br>和整个价值链中可以容易地进行异步或同步数据交换。ESB 通过使用 XML、SOAP 和其他标 准，提供了更强大的系统连接性。<br>(2)灵活的、服务导向的应用组合。基于 SOA，ESB 使复杂的分布式系统(包括跨多 个应用、系统和防火墙的集成方案)能够由以前开发测试过的服务组合而成，使系统具有高 度可扩展性。<br>(3)提高复用率，降低成本。按照 SOA 方法构建应用，提高了复用率，简化了维护 工作，进而减少了系统总体成本。<br>(4)减少市场反应时间，提高生产率。ESB 通过构件和服务复用，按照 SOA 的思想 简化应用组合，基于标准的通信、转换和连接来实现这些优点。</p>
+<h1 id="四、微服务"><a href="#四、微服务" class="headerlink" title="四、微服务"></a>四、微服务</h1><p>它属于面向服务架构的一种。<br>微服务架构是一种架构模式，它提倡将单一应用程序划分成一组小 的服务，服务之间互相协调、互相配合，为用户提供最终价值。每个服务运行在其独立的进 程中，服务与服务间采用轻量级的通信机制互相沟通(通常是基于 HTTP 协议的 RESTful API)。每个服务都围绕着具体业务进行构建，并且能够被独立的部署到生产环境、类生产环 境等。</p>
+<p>另外，应当尽量避免统一的、集中式的服务管理机制，对具体的一个服务而言，应根 据业务上下文，选择合适的语言、工具对其进行构建。</p>
+<p>所以总结起来，微服务的核心特点为:小, 且专注于做一件事情、轻量级的通信机制、松耦合、独立部署。</p>
+<h2 id="1-微服务的优势"><a href="#1-微服务的优势" class="headerlink" title="1.微服务的优势"></a>1.微服务的优势</h2><h3 id="1-技术异构性"><a href="#1-技术异构性" class="headerlink" title="(1)技术异构性"></a>(1)技术异构性</h3><p>在微服务架构中，每个服务都是一个相对独立的个体，每个服务都可以选择适合于自身 的技术来实现。</p>
+<p>同时，在应用新技术时，微服务架构也提供了更好的试验场。</p>
+<h3 id="2-弹性"><a href="#2-弹性" class="headerlink" title="(2)弹性"></a>(2)弹性</h3><p>弹性主要讲的是系统中一部分出现故障会引起多大问题。<br>微服务架构中，每个服务可以内置可用性的解决方 案 与功能降级方案，所以比单块系统强。</p>
+<h3 id="3-扩展"><a href="#3-扩展" class="headerlink" title="(3)扩展"></a>(3)扩展</h3><p>在微服务架构中，可以针对单个服务进行扩展。</p>
+<h3 id="4-简化部署"><a href="#4-简化部署" class="headerlink" title="(4)简化部署"></a>(4)简化部署</h3><p>在大型单块系统中，即使修改一行代码，也需要重新部署整个应用系统。<br>微服务架构中，每个服务的部署都是独立的，这样就可以更快地对特定部分的代码进行部署。</p>
+<h3 id="5-与结织结构相匹配"><a href="#5-与结织结构相匹配" class="headerlink" title="(5)与结织结构相匹配"></a>(5)与结织结构相匹配</h3><p>微服务架构可以将架构与组织结构相匹配，避免出现过大的代码库，从而获得 理想的团队大小及生产力。服务的所有权也可以在团队之 间迁移，从而避免异地团队的出 现。</p>
+<h3 id="6-可组合性"><a href="#6-可组合性" class="headerlink" title="(6)可组合性"></a>(6)可组合性</h3><p>在微服务架构中，系统会开放很多接口供外部使用。当情况发生改变时，可以使用不同的方式构建应用，而整体化应用程序只能提供一个非常粗粒度的接口供外部使用。</p>
+<h3 id="7-对可替代性的优化"><a href="#7-对可替代性的优化" class="headerlink" title="(7)对可替代性的优化"></a>(7)对可替代性的优化</h3><p>在微服务架构中，我们可以在需要时轻易地重写服务， 或者删除不再使用的服务。</p>
+<h2 id="2-微服务面临的挑战"><a href="#2-微服务面临的挑战" class="headerlink" title="2. 微服务面临的挑战"></a>2. 微服务面临的挑战</h2><h3 id="1-分布式系统的复杂度"><a href="#1-分布式系统的复杂度" class="headerlink" title="(1)分布式系统的复杂度"></a>(1)分布式系统的复杂度</h3><p>使用微服务实现分布式系统的复杂度要比单块系统高。</p>
+<h3 id="2-运维成本"><a href="#2-运维成本" class="headerlink" title="(2)运维成本"></a>(2)运维成本</h3><p>在微服务架构下，随着服务数量的增多，每个服务都需要独立的配置、部署、 监控、日志收集等，因此成本呈指数级增长。</p>
+<h3 id="3-部署自动化"><a href="#3-部署自动化" class="headerlink" title="(3)部署自动化"></a>(3)部署自动化</h3><p>传统单块系统手动部署是 可以满足需求的。<br>对于微服务架构而言，如何有效地构建自 动化部署流水线，降低部署成本、提高部署频率，是微服务架构下需要面临的一个挑战。。</p>
+<h3 id="4-DevOps-与组织结构"><a href="#4-DevOps-与组织结构" class="headerlink" title="(4)DevOps 与组织结构"></a>(4)DevOps 与组织结构</h3><p>传统单块架构中，团队通常是按技能划分，并通过项目的 方式协作，完成系统交付。</p>
+<p>在微服务架构的实施过程中，除了如上所述的交付、运维上存 在的挑战，在组织或者团队层面，如何传递 DevOps 文化的价值，让团队理解 DevOps 文化的价值，并构建全功能团队，也是一个不小的挑战。</p>
+<h3 id="5-服务间依赖测试"><a href="#5-服务间依赖测试" class="headerlink" title="(5)服务间依赖测试"></a>(5)服务间依赖测试</h3><p>在服务数量较多的情况下，如何有效地保证服务之间能有效按照接口的约定正常工作， 成为微服务实施过程中必须面临的巨大挑战。</p>
+<h3 id="6-服务间依赖管理"><a href="#6-服务间依赖管理" class="headerlink" title="(6)服务间依赖管理"></a>(6)服务间依赖管理</h3><p>随着微服 务个数的增多，如何清晰有效地展示服务之间的依赖关系，成为了一个挑战。</p>
+<h2 id="3-微服务与-SOA"><a href="#3-微服务与-SOA" class="headerlink" title="3.微服务与 SOA"></a>3.微服务与 SOA</h2><p>微服务可以讲是 SOA 的一种，但他们也有一些差异。</p>
+<table>
+<thead>
+<tr>
+<th>微服务</th>
+<th>SOA</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>能拆分的就拆分</td>
+<td>是整体的，服务能放一起的就放一起</td>
+</tr>
+<tr>
+<td>纵向业务划分</td>
+<td>水平分多层</td>
+</tr>
+<tr>
+<td>单一组织负责</td>
+<td>按层次划分不同部门的组织负责</td>
+</tr>
+<tr>
+<td>细粒度</td>
+<td>粗粒度</td>
+</tr>
+<tr>
+<td>两句话可以解释明白</td>
+<td>几百字是相当于SOA的目录</td>
+</tr>
+<tr>
+<td>独立的子公司</td>
+<td>类似大公司里面划分了一些业务单元</td>
+</tr>
+<tr>
+<td>组件小</td>
+<td>存在较复杂的组件</td>
+</tr>
+<tr>
+<td>业务逻辑存在于每一个服务中</td>
+<td>业务逻辑很卡多个业务领域</td>
+</tr>
+<tr>
+<td>使用轻量级的通信方式</td>
+<td>ESB充当了服务之间通信的角色</td>
+</tr>
+</tbody></table>
+<p>实现方面的差异：</p>
+<table>
+<thead>
+<tr>
+<th>微服务架构实现</th>
+<th>SOA实现</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>团队级，自底向上开展实施</td>
+<td>企业级，自顶向下开展实施</td>
+</tr>
+<tr>
+<td>一个系统被拆分成多个服务，粒度细</td>
+<td>服务由多个子系统组成，粒度大</td>
+</tr>
+<tr>
+<td>无集中式总线，松散的服务架构</td>
+<td>企业服务总线，集中式的服务架构</td>
+</tr>
+<tr>
+<td>集成方式简单</td>
+<td>集成方式复杂</td>
+</tr>
+<tr>
+<td>服务能独立部署</td>
+<td>单块架构系统，互相依赖，部署复杂</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -622,6 +835,84 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B9%9D%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B9%9D%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">系统分析与设计方法（九）系统过渡计划</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如果同时运行两个系统，会给客户造成多大的开销;<br>如果直接运行新系统，客户面对的风险有多大;<br>对新系统试运行时的查错和纠错，以及出现严重错误而导致停止运行时的应急措施;<br>客户运行新系统将面临的不利因素有哪些;<br>人员的培训。</p>
+<h1 id="1-直接过渡"><a href="#1-直接过渡" class="headerlink" title="1.直接过渡"></a>1.直接过渡</h1><p>这是一种快速的系统过渡方式，当新系统运行时，立即关闭原来的系统。这种过渡方式非常简单，没有后勤保障的问题，也不要消耗很多资源。同时，它也意味着大风险，目标系统的特性决定了风险的大小。设计者主要要权衡当新系统失败时，系统停止运行或者勉强运行给客户带来的损失有多大。由于这种过渡方式简单而费用低廉，对于可以容忍停机一段时间的系统的实践者，可以采用这种方式。</p>
+<h1 id="2-并行过渡"><a href="#2-并行过渡" class="headerlink" title="2.并行过渡"></a>2.并行过渡</h1><p>设计者采用并行过渡方式，让新系统和旧系统在一段时间里同时运行，通过这样的旧系统作为新系统的备份，可以大大降低系统过渡的风险。可是并行过渡显然比直接过渡要消耗更多的资源:现有的硬件资源必须保证能同时跑两套系统，这常常意味着增加服务器和额外的存储空间，需要增加人员来同时使用两套系统，或者增加现有员工的工作量，让他们同时操作两套系统。这种方式同时也增加了管理和后勤保障的复杂度。</p>
+<p>有些系统无法使用并行过渡的方式，主要是客户没有足够的资源来维持两个系统同时运行，另外一种情况是新、旧系统差别太大，旧系统的数据无法为新系统采用。当客户无法使用并行过渡，又想尽可能地减少风险，设计者可以使用部分并行过渡的策略，使并行的开销减少到客户能够接受的范围内。</p>
+<h1 id="3-阶段过渡"><a href="#3-阶段过渡" class="headerlink" title="3.阶段过渡"></a>3.阶段过渡</h1><p>通常在系统非常复杂、过于庞大以至于无法一次性进行过渡时采用，也适用于分阶段开发的系统。设计者需要设计一系列步骤和过程来完成整个系统的过渡，这种过渡方式和系统的复杂程度相关，随着系统的不同往往有很大的不同。和并行过渡一样，阶段过渡也能够减少风险，显然局部的失败要比全体的失败更容易接受，带来的损失更小。阶段过渡也带来了复杂性，有时候比并行过渡更加复杂。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -798,84 +1089,6 @@
 </tbody></table>
 <p>系统设计时，除了保持信息隐蔽和模块独立性之外，还需要考虑：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">保持模块大小适中</span><br><span class="line">尽可能减少调用深度</span><br><span class="line">直接调用该模块的个数应该尽量大</span><br><span class="line">调用其他模块的个数不宜过大</span><br><span class="line">保证模块是单入口、单出口</span><br><span class="line">模块的作用于应该在控制域之内</span><br><span class="line">功能应该是可预测的</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B9%9D%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B9%9D%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">系统分析与设计方法（九）系统过渡计划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>如果同时运行两个系统，会给客户造成多大的开销;<br>如果直接运行新系统，客户面对的风险有多大;<br>对新系统试运行时的查错和纠错，以及出现严重错误而导致停止运行时的应急措施;<br>客户运行新系统将面临的不利因素有哪些;<br>人员的培训。</p>
-<h1 id="1-直接过渡"><a href="#1-直接过渡" class="headerlink" title="1.直接过渡"></a>1.直接过渡</h1><p>这是一种快速的系统过渡方式，当新系统运行时，立即关闭原来的系统。这种过渡方式非常简单，没有后勤保障的问题，也不要消耗很多资源。同时，它也意味着大风险，目标系统的特性决定了风险的大小。设计者主要要权衡当新系统失败时，系统停止运行或者勉强运行给客户带来的损失有多大。由于这种过渡方式简单而费用低廉，对于可以容忍停机一段时间的系统的实践者，可以采用这种方式。</p>
-<h1 id="2-并行过渡"><a href="#2-并行过渡" class="headerlink" title="2.并行过渡"></a>2.并行过渡</h1><p>设计者采用并行过渡方式，让新系统和旧系统在一段时间里同时运行，通过这样的旧系统作为新系统的备份，可以大大降低系统过渡的风险。可是并行过渡显然比直接过渡要消耗更多的资源:现有的硬件资源必须保证能同时跑两套系统，这常常意味着增加服务器和额外的存储空间，需要增加人员来同时使用两套系统，或者增加现有员工的工作量，让他们同时操作两套系统。这种方式同时也增加了管理和后勤保障的复杂度。</p>
-<p>有些系统无法使用并行过渡的方式，主要是客户没有足够的资源来维持两个系统同时运行，另外一种情况是新、旧系统差别太大，旧系统的数据无法为新系统采用。当客户无法使用并行过渡，又想尽可能地减少风险，设计者可以使用部分并行过渡的策略，使并行的开销减少到客户能够接受的范围内。</p>
-<h1 id="3-阶段过渡"><a href="#3-阶段过渡" class="headerlink" title="3.阶段过渡"></a>3.阶段过渡</h1><p>通常在系统非常复杂、过于庞大以至于无法一次性进行过渡时采用，也适用于分阶段开发的系统。设计者需要设计一系列步骤和过程来完成整个系统的过渡，这种过渡方式和系统的复杂程度相关，随着系统的不同往往有很大的不同。和并行过渡一样，阶段过渡也能够减少风险，显然局部的失败要比全体的失败更容易接受，带来的损失更小。阶段过渡也带来了复杂性，有时候比并行过渡更加复杂。</p>
-
       
     </div>
 
@@ -1342,98 +1555,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%80%EF%BC%89%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">系统分析与设计方法（一）定义问题与归结模型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+08:00">2021-09-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件系统的目的是为了解决问题。<br>定义问题的过程包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、理解真实世界中的问题和用户的需要。</span><br><span class="line">2、提出满足这些需要的解决方案的过程。</span><br></pre></td></tr></table></figure>
-
-<h1 id="一、问题分析"><a href="#一、问题分析" class="headerlink" title="一、问题分析"></a>一、问题分析</h1><h2 id="1、在问题定义上达成共识"><a href="#1、在问题定义上达成共识" class="headerlink" title="1、在问题定义上达成共识"></a>1、在问题定义上达成共识</h2><p>用标准化的格式将问题写出来。</p>
-<h2 id="2、理解问题的本质"><a href="#2、理解问题的本质" class="headerlink" title="2、理解问题的本质"></a>2、理解问题的本质</h2><p>通常用因果鱼骨图和帕累托图两种方式。</p>
-<h3 id="（1）因果鱼骨图"><a href="#（1）因果鱼骨图" class="headerlink" title="（1）因果鱼骨图"></a>（1）因果鱼骨图</h3><p><img src="/images/ruankao/5-1.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">将问题简明扼要的写在右侧方框中。</span><br><span class="line">确定问题潜在原因的主要类别，将他们连在鱼的脊骨上。</span><br><span class="line">用头脑风暴法寻找原因并归类。</span><br></pre></td></tr></table></figure>
-<h3 id="（2）帕累托图"><a href="#（2）帕累托图" class="headerlink" title="（2）帕累托图"></a>（2）帕累托图</h3><p><img src="/images/ruankao/5-2.png"><br>采用直方图的形式，将问题的相对频率或大小从高到低排列，聚焦重要的问题。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">明确问题。</span><br><span class="line">找到问题的各种可能原因。</span><br><span class="line">选择评价标准和考察期限，最常用的标准是频率和费用。</span><br><span class="line">收集各种原因发生的频率和费用数据。</span><br><span class="line">将原因按发生的频率或费用从大到小排列。</span><br><span class="line">将原因排在横轴，频率或费用排在纵轴。</span><br></pre></td></tr></table></figure>
-<h2 id="3、确认项目干系人和用户"><a href="#3、确认项目干系人和用户" class="headerlink" title="3、确认项目干系人和用户"></a>3、确认项目干系人和用户</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">系统的用户是谁？</span><br><span class="line">系统的客户是谁？</span><br><span class="line">那些人收到系统输出的影响？</span><br><span class="line">系统完成收入使用后谁对她进行评估？</span><br><span class="line">其他系统内部或外部的客户？</span><br><span class="line">系统将来谁维护？</span><br></pre></td></tr></table></figure>
-<h2 id="4、定义系统的边界"><a href="#4、定义系统的边界" class="headerlink" title="4、定义系统的边界"></a>4、定义系统的边界</h2><p>解决方案系统和现实世界之间的边界。在系统边界中，信息以输入和输出的形式流入系统，并由系统流向系统外的用户。</p>
-<h3 id="（1）上下文范围图"><a href="#（1）上下文范围图" class="headerlink" title="（1）上下文范围图"></a>（1）上下文范围图</h3><p>数据流图中的顶层图，它反映领域信息，能够清晰的显示出系统和相邻系统的职责，能够从宏观层面了解系统。</p>
-<h3 id="（2）用例模型"><a href="#（2）用例模型" class="headerlink" title="（2）用例模型"></a>（2）用例模型</h3><p>以参与者的角度描述“和系统进行交互的事物”。<br><img src="/images/ruankao/5-3.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">谁会对系统提供信息？</span><br><span class="line">谁会在系统中使用信息？</span><br><span class="line">谁会从系统中删除信息？</span><br><span class="line">谁将操作系统？</span><br><span class="line">系统将会在哪里使用？</span><br><span class="line">系统从那里得到信息？</span><br><span class="line">哪些外部系统要和系统进行交互？</span><br></pre></td></tr></table></figure>
-<h2 id="5、确定系统实现的约束"><a href="#5、确定系统实现的约束" class="headerlink" title="5、确定系统实现的约束"></a>5、确定系统实现的约束</h2><p>从约束源开始考虑。<br>进度、投资收益、人员、设备预算、环境、操作系统、数据库、主机和客户机系统、技术问题、行政问题、已有软件、公司总体战略和程序、工具和语言的选择、人员和其他资源限制等。</p>
-<h1 id="二、问题定义"><a href="#二、问题定义" class="headerlink" title="二、问题定义"></a>二、问题定义</h1><h2 id="1、目标"><a href="#1、目标" class="headerlink" title="1、目标"></a>1、目标</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">优势：目标不仅仅是解决问题，还要提供业务上的优势。</span><br><span class="line">度量：度量优势的标准</span><br><span class="line">合理性：获得的业务优势要大于工作量成本，才是合理的解决方案。</span><br><span class="line">可行性：要探寻能够满足度量标准的解决方案。</span><br><span class="line">可达成性：是否具备需要的技能，建设完成后是否能够操作它。</span><br></pre></td></tr></table></figure>
-<p><img src="/images/ruankao/5-4.png"></p>
-<h2 id="2、功能需求"><a href="#2、功能需求" class="headerlink" title="2、功能需求"></a>2、功能需求</h2><p>系统必须做的事，功能需求源于业务需求。</p>
-<h2 id="3、非功能需求"><a href="#3、非功能需求" class="headerlink" title="3、非功能需求"></a>3、非功能需求</h2><p>系统必须具备的属性。<br>功能需求通常以动词为特征，非功能需求以副词为特征。<br>非功能需求主要包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">观感需求</span><br><span class="line">易用性需求</span><br><span class="line">性能需求</span><br><span class="line">可操作性需求</span><br><span class="line">可维护性和可移植性需求</span><br><span class="line">安全性需求</span><br><span class="line">文化和政策需求</span><br><span class="line">法律需求</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1505,7 +1626,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-count">63</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1518,7 +1639,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
