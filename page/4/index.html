@@ -286,6 +286,176 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%B8%80%EF%BC%89%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/" class="post-title-link" itemprop="url">基于中间件的开发（一）中间件技术</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:36:56" itemprop="dateModified" datetime="2021-10-11T10:36:56+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>中间件(middleware)是基础软件的一大类，属于可复用软件的范畴。</p>
+<p>中间件处在操作系统、网络和数据库之上，应用软件的下层(如图 15-1 所示)，也有人认为它应该属于操作系统中的一部分。</p>
+<p><img src="/images/ruankao/7-1.png"></p>
+<h1 id="中间件的概念"><a href="#中间件的概念" class="headerlink" title="中间件的概念"></a>中间件的概念</h1><p>中间件发展迅速，但在技术上还处于成长阶段，没有统一的标准和模型。</p>
+<p>中间件要涉及软件的所有标准、规范和技术，它有更多的内涵，因为它包括平台功能，自身具有自治性、自主性、隔离性、社会化、激发性、主动性、并发性、认识能力等特性，是近似于 Agent(代理)的结构。</p>
+<p>中间件是一种独立的系统软件或服务程序，分布式应用软件借助这种软件 在不同的技术之间共享资源，中间件位于客户机服务器的操作系统之上，管理计算资源和网 络通信。这些服务程序或软件具有标准的程序接口和协议。针对不同的操作系统和硬件平台， 它们可以有符合接口和协议规范的多种实现。中间件为处于其上层的应用软件提供运行与开 发的环境，帮助用户灵活、高效地开发和集成复杂的应用软件。</p>
+<h2 id="中间件应具有如下的一些特-点"><a href="#中间件应具有如下的一些特-点" class="headerlink" title="中间件应具有如下的一些特 点:"></a>中间件应具有如下的一些特 点:</h2><p>满足大量应用的需要;<br>运行于多种硬件和 OS 平台;<br>支持分布计算，提供跨网络、硬件和 OS 平台的透明性的应用或服务的交互;<br>支持标准的协议;<br>支持标准的接口。</p>
+<h2 id="中间件的十大优越性"><a href="#中间件的十大优越性" class="headerlink" title="中间件的十大优越性:"></a>中间件的十大优越性:</h2><p>缩短应用的开发周期;<br>节约应用的开发成本;<br>减少系统初期的建设成本;<br>降低应用开发的失败率;<br>保护已有的投资;<br>简化应用集成;<br>减少维护费用;<br>提高应用的开发质量;<br>保证技术进步的连续性;<br>增强应用的生命力。</p>
+<h1 id="中间件的分类"><a href="#中间件的分类" class="headerlink" title="中间件的分类"></a>中间件的分类</h1><h2 id="1-通信处理-消息-中间件"><a href="#1-通信处理-消息-中间件" class="headerlink" title="(1)通信处理(消息)中间件"></a>(1)通信处理(消息)中间件</h2><p>在分布式系统中，人们要建网和制定出通信协议，以保 证系统能在不同平台之间通信，实现分布式系统中可靠的、高效的、实时的跨平台数据传输， 这类中间件称为消息中间件。</p>
+<h2 id="2-事务处理-交易-中间件"><a href="#2-事务处理-交易-中间件" class="headerlink" title="(2)事务处理(交易)中间件"></a>(2)事务处理(交易)中间件</h2><p>在分布式事务处理系统中， 经常要处理大量事务，特别是 OLTP 中，每项事务常常要多台服务器上的程序按顺序协调完 成，一旦中间发生某种故障，不但要完成恢复工作，而且要自动切换系统，达到系统永不停 机，实现高可靠性运行。要使大量事务在多台应用服务器上能实时并发运行，并进行负载平 衡的调度，实现与昂贵的可靠性机和大型计算机系统同等的功能，为了实现这个目标，要求 中间件系统具有监视和调度整个系统的功能。</p>
+<h2 id="3-数据存取管理中间件"><a href="#3-数据存取管理中间件" class="headerlink" title="(3)数据存取管理中间件"></a>(3)数据存取管理中间件</h2><p>在分布式系统中，重要的数据都集中存放在数据服务器中， 它们可以是关系型的、复合文档型、具有各种存放格式的多媒体型，或者是经过加密或压缩 存放的，该中间件将为在网络上虚拟缓冲存取、格式转换、解压等带来方便。</p>
+<h2 id="4-Web-服务器中间件"><a href="#4-Web-服务器中间件" class="headerlink" title="(4)Web 服务器中间件"></a>(4)Web 服务器中间件</h2><p>浏览器图形用户界面已成为公认规范，然而它的会话能力差、 不擅长做数据写入、受 HTTP 协议的限制等，就必须进行修改和扩充，形成了 Web 服务器 中间件。</p>
+<h2 id="5-安全中间件"><a href="#5-安全中间件" class="headerlink" title="(5)安全中间件"></a>(5)安全中间件</h2><p>如防火墙、加密、认证等。<br>产生不安全因素是由操作系统引起的，但必须要用中间件去解决，以适应灵活多变的要求。</p>
+<h2 id="6-跨平台和架构的中间件"><a href="#6-跨平台和架构的中间件" class="headerlink" title="(6)跨平台和架构的中间件"></a>(6)跨平台和架构的中间件</h2><p>在分布式系统中，还需要集成各节点上的不同系统平台上的构件或新老版本的构件，由此产 生了架构中间件。</p>
+<h2 id="7-专用平台中间件"><a href="#7-专用平台中间件" class="headerlink" title="(7)专用平台中间件"></a>(7)专用平台中间件</h2><p>为特定应用领域设计领域参考模式，建立相应架构，配置相应的构件库和中间件，为应用服务器开发和运行特定领域的关键任务(如电子商务、网站等)。</p>
+<h2 id="8-网络中间件"><a href="#8-网络中间件" class="headerlink" title="(8)网络中间件"></a>(8)网络中间件</h2><p>它包括网管、接入、网络测试、虚拟社区、虚拟缓冲等，也是当前最热门的研发项目。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/" class="post-title-link" itemprop="url">基于中间件的开发（二）应用服务器技术</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:36:56" itemprop="dateModified" datetime="2021-10-11T10:36:56+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Web 应用开发大致经历了三个阶段。</p>
+<p>在第一阶段，大家都使用 Web 服务器提供的服 务器扩展接口，使用 C 或者 Perl 等语言进行开发，例如 CGI、API 等。这种方式可以让开 发者自由地处理各种不同的 Web 请求，动态地产生响应页面，实现各种复杂的 Web 系统 要求。但是，这种开发方式的主要问题是对开发者的素质要求很高，往往需要懂得底层的编 程方法，了解 HTTP 协议，此外，这种系统的调试也相当困难。</p>
+<p>在第二阶段，大家开始使用一些服务器端的脚本语言进行开发，主要包括 ASP、PHP、 Livewire 等。其实现方法实质上是在 Web 服务器端放入一个通用的脚本语言解释器，负责 解释各种不同的脚本语言文件。</p>
+<p>第三阶段应用服务器的方式。目前，应用服务器已经成为电子商务应用中一种非常关键的中间件技术。如今，各大主要软件厂商纷纷将应用服务器作为其电子商务平台的基础，如 IBM 的 Websphere，Oracle 的 Internet 应用服务器，Sybase 的 Enterprise 应用服务器等。本节将阐述应用服务器的概念、 相关技术及发展方向，并就目前主流的应用服务器产品进行简单的介绍。</p>
+<h1 id="应用服务器的概念"><a href="#应用服务器的概念" class="headerlink" title="应用服务器的概念"></a>应用服务器的概念</h1><p>在分布式、多层结构及基于构件和服务器端程序设计的企业级应用开发 中，它提供的是一个开发、部署、运行和管理、维护的平台。它可以提供软件“集群” 的 功能，因而可以让多个不同的、异构服务器协同工作、相互备份，以满足企业级应用所需要 的可用性、高性能、可靠性和可伸缩性等。</p>
+<p>应用服务 器可以帮助企业快速架构一个基 Internet 的电子商务系统，而且拥有极高的稳定性、可扩展 性和安全性。</p>
+<p>它能够：<br>(1)更合理地分工企业级应用开发，加快应用的开发速度，减少应用的开发量。<br>(2)应用设计、开发、部署、运行、管理、维护的平台。<br>设计:应用服务器完成底层通信、服务，并屏蔽掉复杂的底层技术细节，向用户提供结 构简单、功能完善的编程接口，让用户可以专心于商务逻辑的设计。<br>开发:应用服务器提供了完全开放的编程语言和应用接口，用户可以用任何自己习惯的 开发工具来工作。另外应用服务器自己也提供快速开发的工具和手段，帮助用户提高开发效 率。<br>部署:应用服务器可以部署在任何硬件平台、任何操作系统上，而且可以分布在异构网 络中，应用服务器帮助用户在复杂的网络环境中配置系统参数，使系统发挥最大的性能，拥 有最好的稳定可靠性。<br>运行:应用服务器采用的是开放技术标准，它提供了一个完整的标准实现，即提供了系 统的运行环境，任何基于同样标准的系统都能很好地运行于这个环境中。在运行中提供应用 系统的名字解析、路由选择、负载平衡、事务控制等服务，并提供系统容错、修复、迁移、 升级扩展等功能。<br>管理:应用服务器让用户通过图形化的界面方便地管理自己的资源，而且在系统运行时 也能动态监控和管理。<br>(3)使得应用与底层平台无关，便于商业逻辑的实现与扩展。<br>(4)为企业应用提供现成的、稳定而强健的、灵活的、成熟的基础架构。</p>
+<p>应用服务器通过分布式体系来保障这一点，表现为:<br>当系统处理能力不够时，可以通过简单地增加硬件来解决;<br>动态调整不同主机间的负载可以最大地利用系统资源，同时提高单机的稳定性;<br>当系统中的某台机器出现故障时，它的工作可由其他机器来承担，不会影响系统整体的运行， 即无单点故障。</p>
+<h1 id="主要的应用服务器"><a href="#主要的应用服务器" class="headerlink" title="主要的应用服务器"></a>主要的应用服务器</h1><h2 id="1-BEA-WebLogic"><a href="#1-BEA-WebLogic" class="headerlink" title="1.BEA WebLogic"></a>1.BEA WebLogic</h2><h2 id="2-IBM-WebSphere"><a href="#2-IBM-WebSphere" class="headerlink" title="2.IBM WebSphere"></a>2.IBM WebSphere</h2><h2 id="3-SUN-iPlanet"><a href="#3-SUN-iPlanet" class="headerlink" title="3.SUN iPlanet"></a>3.SUN iPlanet</h2><h2 id="4-Oracle-Internet-ApplicationServer"><a href="#4-Oracle-Internet-ApplicationServer" class="headerlink" title="4.Oracle Internet ApplicationServer"></a>4.Oracle Internet ApplicationServer</h2><h2 id="5-Sybase-Enterprise-ApplicationServer"><a href="#5-Sybase-Enterprise-ApplicationServer" class="headerlink" title="5.Sybase Enterprise ApplicationServer"></a>5.Sybase Enterprise ApplicationServer</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%94%EF%BC%89%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8%E9%9B%86%E6%88%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1030,191 +1200,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/" class="post-title-link" itemprop="url">软件架构设计（八）软件架构评估</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件架构评估是在对架构分析、评估的基础上，对架构策略的选取进行决策。它也可以灵活地运用于对软件架构进行评审等工作中。</p>
-<h1 id="一、软件架构评估的方法"><a href="#一、软件架构评估的方法" class="headerlink" title="一、软件架构评估的方法"></a>一、软件架构评估的方法</h1><p>业界已开发出多种软件架构评估的方法，按基于的技术手段来看，可以分为三类:基于调查问卷或检查表的方式、基于场景的方式和基于度量的方式。</p>
-<h2 id="1-基于调查问卷或检查表的方式"><a href="#1-基于调查问卷或检查表的方式" class="headerlink" title="(1)基于调查问卷或检查表的方式"></a>(1)基于调查问卷或检查表的方式</h2><p>该方式的关键是要设计好问卷或检查表，它充分 利用系统相关人员的经验和知识，获得对架构的评估。其缺点是在很大程度上依赖于评估人 员的主观推断。</p>
-<h2 id="2-基于场景的方式"><a href="#2-基于场景的方式" class="headerlink" title="(2)基于场景的方式"></a>(2)基于场景的方式</h2><p>基于场景的方式由 SEI 首先提出并应用在架构权衡分析法 (Architecture Tradeoff Analysis Method，ATAM)和软件架构分析方法(Software Architecture Analysis Method，SAAM)中。它是通过分析软件架构对场景(也就是对系统的使用或修改 活动)的支持程度，从而判断该架构对这一场景所代表的质量需求的满足程度。</p>
-<h2 id="3-基于度量的方式"><a href="#3-基于度量的方式" class="headerlink" title="(3)基于度量的方式"></a>(3)基于度量的方式</h2><p>它是建立在软件架构度量的基础上的，涉及三个基本活动，首 先需要建立质量属性和度量之间的映射原则，即确定怎样从度量结果推出系统具有什么样的 质量属性;然后从软件架构文档中获取度量信息;最后根据映射原则分析推导出系统的质量 属性。它能提供更为客观和量化的质量评估，但它对评估人员及其使用的技术有较高 的要求。ATAM 中也使用了度量的思想(度量效用)。</p>
-<h1 id="二、架构的权衡分析法"><a href="#二、架构的权衡分析法" class="headerlink" title="二、架构的权衡分析法"></a>二、架构的权衡分析法</h1><p>从技术角度对软件架构进行评估，旨在通过分析来预见软件的质量;通过分析来创建、 选择、评估与比较不同的架构。</p>
-<p>ATAM 方法不但能够揭示架构如何满足特定的质量需求(例如，性能和可修改性)，而且还 提供了分析这些质量需求之间交互作用的方法。使用 ATAM 方法评价一个软件架构的目的 是理解架构设计满足系统质量需求的结果。</p>
-<p>ATAM 产生如下结果。<br>(1)一个简洁的架构表述:ATAM 的一个要求是在一小时内表述架构，这样就得到了 一个简洁、可理解的、面向普通项目关系人的架构表述。它是从架构文档中提炼形成的。<br>(2)表述清楚的业务目标。<br>(3)用场景集合捕获质量需求。<br>(4)架构决策到质量需求的映射。<br>(5)所确定的敏感点和权衡点集合。<br>(6)有风险决策和无风险决策。<br>(7)风险主题的集合。<br>(8)产生一些附属结果。<br>(9)还产生一些无形结果，如能够使项目关系人产生“团队感”，提供了一个交流平台和沟通渠道，使大家更好地理解架构(优势及弱点)。</p>
-<p>ATAM 的 9 个步骤如下。<br>(1)ATAM 方法的表述:评估负责人向参加会议的项目代表介绍 ATAM(简要描述 ATAM步骤和评估的结果)。<br>(2)商业动机的表述。<br>(3)架构的表述。<br>(4)对架构方法进行分类。<br>(5)生成质量属性效用树。<br>根——质量属性——属性求精(细分)——场景(叶)。修剪这棵树，保留重要场景(不超过 50 个)，再对场景按重要性给定 优先级(用 H/M/L 的形式)，再按场景实现的难易度来确定优先级(用 H/M/L 的形式)， 这样对所选定的每个场景就有一个优先级对(重要度，难易度)，如(H，L)表示该场景重要且易实现。<br>(6)分析架构方法。<br>评估小组按优先级对上述效用树的场景进行分析(小组成员提问，设计师回答、解释)，探查实现场景的架构方法。<br>(7)集体讨论并确定场景的优先级。<br>(8)分析架构方法。<br>(9)结果的表述。</p>
-<p>结果的表述包括：<br>已编写了文档的架构方法;<br>经过讨论得到的场景集合及其优先级;<br>效用树;<br>所发现的有风险决策;<br>已编成文档的无风险决策;<br>所发现的敏感点和权衡点。</p>
-<h1 id="三、成本效益分析法"><a href="#三、成本效益分析法" class="headerlink" title="三、成本效益分析法"></a>三、成本效益分析法</h1><p>成本效益分析法(the Cost Benefit Analysis Method，CBAM)是在 ATAM 上构建，用来对架构设计决策的成本和收益进行建模，是优 化此类决策的一种手段。CBAM 的思想就是架构策略影响系统的质量属性，反过来这些质量 属性又会为系统的项目关系人带来一些收益(称为“效用”)，CBAM 协助项目关系人根据其 投资回报(ROI)选择架构策略。CBAM 在 ATAM 结束时开始，它实际上使用了 ATAM 评 估的结果。</p>
-<p>CBAM 的步骤如下。</p>
-<h2 id="1-整理场景。"><a href="#1-整理场景。" class="headerlink" title="(1)整理场景。"></a>(1)整理场景。</h2><p>整理 ATAM 中获取的场景，根据商业目标确定这些场景的优先级，并 选取优先级最高的 1/3 的场景进行分析。</p>
-<h2 id="2-对场景进行求精。"><a href="#2-对场景进行求精。" class="headerlink" title="(2)对场景进行求精。"></a>(2)对场景进行求精。</h2><p>为每个场景获取最坏情况、当前情况、期望情况和最好情况的 质量属性响应级别。</p>
-<h2 id="3-确定场景的优先级。"><a href="#3-确定场景的优先级。" class="headerlink" title="(3)确定场景的优先级。"></a>(3)确定场景的优先级。</h2><p>项目关系人对场景进行投票，其投票是基于每个场景“所期 望的”响应值，根据投票结果和票的权值，生成一个分值(场景的权值)。</p>
-<h2 id="4-分配效用。"><a href="#4-分配效用。" class="headerlink" title="(4)分配效用。"></a>(4)分配效用。</h2><p>对场景的响应级别(最坏情况、当前情况、期望情况和最好情况)确 定效用表。</p>
-<h2 id="5-策略—场景—响应级别"><a href="#5-策略—场景—响应级别" class="headerlink" title="(5)策略—场景—响应级别"></a>(5)策略—场景—响应级别</h2><p>架构策略涉及哪些质量属性及响应级别，形成相关的策略—场景—响应级别的对 应关系。</p>
-<h2 id="6-确定“期望的”效用表"><a href="#6-确定“期望的”效用表" class="headerlink" title="(6)确定“期望的”效用表"></a>(6)确定“期望的”效用表</h2><p>使用内插法确定“期望的”质量属性响应级别的效用。即根据第 4 步的效用表以 及第 5 步的对应关系，确定架构策略及其对应场景的效用表。</p>
-<h2 id="7-计算各架构策略的总收益。"><a href="#7-计算各架构策略的总收益。" class="headerlink" title="(7)计算各架构策略的总收益。"></a>(7)计算各架构策略的总收益。</h2><p>根据第 3 步的场景的权值及第 6 步的架构策略效用 表，计算出架构策略的总收益得分。</p>
-<h2 id="8-确定选取策略的优先级"><a href="#8-确定选取策略的优先级" class="headerlink" title="(8)确定选取策略的优先级"></a>(8)确定选取策略的优先级</h2><p>根据受成本限制影响的 ROI(Return On Investment，投资报酬率)选择架构策略。 根据开发经验估算架构策略的成本，结合第 7 步的收益，计算出架构策略的 ROI，按 ROI 排 序，从而确定选取策略的优先级。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/" class="post-title-link" itemprop="url">软件架构设计（十）产品线及系统演化</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件企业追求长远的发展，通常采用产品线模型及系统演化策略，它实质上是用架构技 术构建产品线，并在此基础上借助复用技术持续演化，不断地推出新产品，满足市场追求产 品升级换代的需求。</p>
-<h1 id="一、复用与产品线"><a href="#一、复用与产品线" class="headerlink" title="一、复用与产品线"></a>一、复用与产品线</h1><p>软件产品线是指一组软件密集型系统，它们共享一个公共的、可管理的特性集，满足某 个特定市场或任务的具体需要，是以规定的方式用公共的核心资产集成开发出来的。即围绕 核心资产库进行管理、复用、集成新的系统。</p>
-<p>核心资产库包括软件架构及其可剪裁的元素， 更广泛地，它还包括设计方案及其文档、用户手册、项目管理的历史记录(如预算和进度)、 软件测试计划和测试用例。</p>
-<p>可复用的资 产非常广，包括以下几点。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">需求</span><br><span class="line">架构设计</span><br><span class="line">元素:元素复用不只是简单的代码复用，它旨在捕获并复用设计中的可取之处，避免(不要 重复)设计失败的地方。</span><br><span class="line">建模与分析</span><br><span class="line">测试：如测试用例、测试数据、测试工具，甚至 测试计划、过程、沟通渠道都可以得到复用。</span><br><span class="line">项目规划：利用经验对项目的成本、预算、进度及开发小组的安排等进行预测，即不必每次 都建立工作分解结构。</span><br><span class="line">过程、方法和工具</span><br><span class="line">人员</span><br><span class="line">样本系统:将已部署(投产)的产品作为高质量的演示原型和工程设计原型。</span><br><span class="line">缺陷消除:产品线开发中积累的缺陷消除活动，可使新系统受益</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、基于产品线的架构"><a href="#二、基于产品线的架构" class="headerlink" title="二、基于产品线的架构"></a>二、基于产品线的架构</h1><p>软件产品线架构是针对一系列产品而设计的通用架构，并在此基础上，进一步将系列产 品共用的模块事先实现，供直接重用;将架构用框架的形式予以实现，供定制使用。这就是 通常所说的“平台”。</p>
-<p>产品线架构较之单个产品架构，有如下三点特别之处:<br>(1)产品线架构必须考虑一系列明确许可的变化;<br>(2)产品线架构一定要文档化;<br>(3)产品线架构必须提供“产品创建者指南”(开发指南)，描述架构的实例化过程。</p>
-<p>产品线的软件架构应将不变的方面提出来，同时， 识别允许的变化，并提供实现它们的机制。通常应考虑三个方面。<br>(1)确定变化点<br>(2)支持变化点<br>(3)对产品线架构的适宜性进行评估。</p>
-<h1 id="三、产品线的开发模型"><a href="#三、产品线的开发模型" class="headerlink" title="三、产品线的开发模型"></a>三、产品线的开发模型</h1><p>开发(确定)产品线的方法有两种模型:<br>(1)“前瞻性”产品线:利用在应用领域的经验、对市场和技术发展趋势的了解及商业 判断力等进行产品线设计，它反映了企业的战略决策。通常是自上而下地采用产品线方法。<br>(2)“反应性”模型:企业根据以前的产品构建产品家族，并随着新产品的开发，扩展<br>架构和设计方案，它的核心资产库是根据“已经证明”为共有、而非“预先计划”为共有的 元素构建的。通常是自下而上地采用产品线方法。</p>
-<h1 id="四、特定领域软件架构"><a href="#四、特定领域软件架构" class="headerlink" title="四、特定领域软件架构"></a>四、特定领域软件架构</h1><p>架构的本质在于其抽象性。它包括两个方面的抽象:业务抽象和技术抽象。其中业务抽 象面向特定的应用领域。</p>
-<p>特定领域软件架构(Domain Specific Software Architecture，DSSA)可以看做开发产品线 的一个方法(或理论)，它的目标就是支持在一个特定领域中有多个应用的生成。</p>
-<p>DSSA 的 必备特征有:<br>(1)一个严格定义的问题域或解决域;<br>(2)具有普遍性，使其可以用于领域中某个特定应用的开发;<br>(3)对整个领域的合适程度的抽象;<br>(4)具备该领域固定的、典型的在开发过程中的可复用元素。</p>
-<p>从功能覆盖的范围角度理解 DSSA 中领域的含义有两种方法:<br>(1)垂直域。定义了一个特定的系统族，导出在该领域中可作为系统的可行解决方案的一个通用软件架构。<br>(2)水平域。定义了在多个系统和多个系统族中功能区域的共有部分，在子系统级上涵盖多个系统(族)的特定部分功能。</p>
-<p>DSSA 的活动阶段如下。<br>(1)领域分析:主要目标是获得领域模型。即通过分析领域中系统的需求(领域需求)，确定哪些需求是被领域中的系统广泛共享的，从而建立领域模型。<br>(2)领域设计:这个阶段的目标是获得 DSSA，它是一个能够适应领域多个系统的需求的一个高层次的设计。由于领域模型中的领域需求具有一定的变化性，DSSA 也要相应地 具有变化性，它可以通过表示多选一的、可选的解决方案等来做到这一点。<br>(3)领域实现:主要目标是依据领域模型和 DSSA 开发与组织可复用信息。这些复用 信息可以是从现有系统中提取得到的，也可能通过新的开发得到。这个阶段可以看作复用基 础设施的实现阶段。</p>
-<p>领域模型的主要作用如下:<br>(1)领域模型为需求定义了领域知识和领域词汇，这较之单一的项目需求更有较好的 大局观;<br>(2)软件界面的设计往往和领域模型关系密切;<br>(3)领域模型的合理性将严重影响软件系统的可扩展性;<br>(4)在分层架构的指导下，领域模型精化后即成为业务层的骨架;<br>(5)领域模型也是其数据模型的基础;<br>(6)领域模型是团队交流的基础，因为它规定了重要的领域词汇表，并且这些词汇的定义是严格的、大家共同认可的。</p>
-<h1 id="五、架构及系统演化"><a href="#五、架构及系统演化" class="headerlink" title="五、架构及系统演化"></a>五、架构及系统演化</h1><p>架构虽然为系统的变化提供了一定的自由度，但是系统的较大变化必然导致架构的改变。 架构(系统)演化是指向既定的方向、可控地改变。架构(系统)演化可以形成产品线，反 过来，架构(系统)可以在规划的产品线中进行演化。</p>
-<p>架构(系统)演化过程包含 7 个步骤：<br>(1)需求变动归类。首先，必须对用户需求的变化进行归类，使变化的需求与已有构 件对应。对找不到对应构件的变动，也要做好标记，在后续工作中，将创建新的构件，以对 应这部分变化的需求。<br>(2)制订架构演化计划。在改变原有结构之前，开发组织必须制订一个周密的架构演 化计划，作为后续演化开发工作的指南。<br>(3)修改、增加或删除构件。在演化计划的基础上，开发人员可根据在第(1)步得到 的需求变动的归类情况，决定是否修改或删除存在的构件、增加新构件。最后，对修改和增 加的构件进行功能性测试。<br>(4)更新构件的相互作用。随着构件的增加、删除和修改，构件之间的控制流必须得 到更新。<br>(5)构件组装与测试。通过组装支持工具把这些构件的实现体组装起来，完成整个软 件系统的连接与合成，形成新的架构。然后，对组装后的系统整体功能和性能进行测试。<br>(6)技术评审。对以上步骤进行确认，进行技术评审。评审组装后的架构是否反映需 求变动，符合用户需求。如果不符合，则需要在第(2)到第(6)步之间进行迭代。<br>(7)产生演化后的架构。在原来系统上所作的所有修改必须集成到原来的架构中，完 成一次演化过程。</p>
-<p><img src="/images/ruankao/6-52.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1286,7 +1271,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-count">68</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1299,7 +1284,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

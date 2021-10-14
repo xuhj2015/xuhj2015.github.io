@@ -197,6 +197,191 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/" class="post-title-link" itemprop="url">软件架构设计（八）软件架构评估</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>软件架构评估是在对架构分析、评估的基础上，对架构策略的选取进行决策。它也可以灵活地运用于对软件架构进行评审等工作中。</p>
+<h1 id="一、软件架构评估的方法"><a href="#一、软件架构评估的方法" class="headerlink" title="一、软件架构评估的方法"></a>一、软件架构评估的方法</h1><p>业界已开发出多种软件架构评估的方法，按基于的技术手段来看，可以分为三类:基于调查问卷或检查表的方式、基于场景的方式和基于度量的方式。</p>
+<h2 id="1-基于调查问卷或检查表的方式"><a href="#1-基于调查问卷或检查表的方式" class="headerlink" title="(1)基于调查问卷或检查表的方式"></a>(1)基于调查问卷或检查表的方式</h2><p>该方式的关键是要设计好问卷或检查表，它充分 利用系统相关人员的经验和知识，获得对架构的评估。其缺点是在很大程度上依赖于评估人 员的主观推断。</p>
+<h2 id="2-基于场景的方式"><a href="#2-基于场景的方式" class="headerlink" title="(2)基于场景的方式"></a>(2)基于场景的方式</h2><p>基于场景的方式由 SEI 首先提出并应用在架构权衡分析法 (Architecture Tradeoff Analysis Method，ATAM)和软件架构分析方法(Software Architecture Analysis Method，SAAM)中。它是通过分析软件架构对场景(也就是对系统的使用或修改 活动)的支持程度，从而判断该架构对这一场景所代表的质量需求的满足程度。</p>
+<h2 id="3-基于度量的方式"><a href="#3-基于度量的方式" class="headerlink" title="(3)基于度量的方式"></a>(3)基于度量的方式</h2><p>它是建立在软件架构度量的基础上的，涉及三个基本活动，首 先需要建立质量属性和度量之间的映射原则，即确定怎样从度量结果推出系统具有什么样的 质量属性;然后从软件架构文档中获取度量信息;最后根据映射原则分析推导出系统的质量 属性。它能提供更为客观和量化的质量评估，但它对评估人员及其使用的技术有较高 的要求。ATAM 中也使用了度量的思想(度量效用)。</p>
+<h1 id="二、架构的权衡分析法"><a href="#二、架构的权衡分析法" class="headerlink" title="二、架构的权衡分析法"></a>二、架构的权衡分析法</h1><p>从技术角度对软件架构进行评估，旨在通过分析来预见软件的质量;通过分析来创建、 选择、评估与比较不同的架构。</p>
+<p>ATAM 方法不但能够揭示架构如何满足特定的质量需求(例如，性能和可修改性)，而且还 提供了分析这些质量需求之间交互作用的方法。使用 ATAM 方法评价一个软件架构的目的 是理解架构设计满足系统质量需求的结果。</p>
+<p>ATAM 产生如下结果。<br>(1)一个简洁的架构表述:ATAM 的一个要求是在一小时内表述架构，这样就得到了 一个简洁、可理解的、面向普通项目关系人的架构表述。它是从架构文档中提炼形成的。<br>(2)表述清楚的业务目标。<br>(3)用场景集合捕获质量需求。<br>(4)架构决策到质量需求的映射。<br>(5)所确定的敏感点和权衡点集合。<br>(6)有风险决策和无风险决策。<br>(7)风险主题的集合。<br>(8)产生一些附属结果。<br>(9)还产生一些无形结果，如能够使项目关系人产生“团队感”，提供了一个交流平台和沟通渠道，使大家更好地理解架构(优势及弱点)。</p>
+<p>ATAM 的 9 个步骤如下。<br>(1)ATAM 方法的表述:评估负责人向参加会议的项目代表介绍 ATAM(简要描述 ATAM步骤和评估的结果)。<br>(2)商业动机的表述。<br>(3)架构的表述。<br>(4)对架构方法进行分类。<br>(5)生成质量属性效用树。<br>根——质量属性——属性求精(细分)——场景(叶)。修剪这棵树，保留重要场景(不超过 50 个)，再对场景按重要性给定 优先级(用 H/M/L 的形式)，再按场景实现的难易度来确定优先级(用 H/M/L 的形式)， 这样对所选定的每个场景就有一个优先级对(重要度，难易度)，如(H，L)表示该场景重要且易实现。<br>(6)分析架构方法。<br>评估小组按优先级对上述效用树的场景进行分析(小组成员提问，设计师回答、解释)，探查实现场景的架构方法。<br>(7)集体讨论并确定场景的优先级。<br>(8)分析架构方法。<br>(9)结果的表述。</p>
+<p>结果的表述包括：<br>已编写了文档的架构方法;<br>经过讨论得到的场景集合及其优先级;<br>效用树;<br>所发现的有风险决策;<br>已编成文档的无风险决策;<br>所发现的敏感点和权衡点。</p>
+<h1 id="三、成本效益分析法"><a href="#三、成本效益分析法" class="headerlink" title="三、成本效益分析法"></a>三、成本效益分析法</h1><p>成本效益分析法(the Cost Benefit Analysis Method，CBAM)是在 ATAM 上构建，用来对架构设计决策的成本和收益进行建模，是优 化此类决策的一种手段。CBAM 的思想就是架构策略影响系统的质量属性，反过来这些质量 属性又会为系统的项目关系人带来一些收益(称为“效用”)，CBAM 协助项目关系人根据其 投资回报(ROI)选择架构策略。CBAM 在 ATAM 结束时开始，它实际上使用了 ATAM 评 估的结果。</p>
+<p>CBAM 的步骤如下。</p>
+<h2 id="1-整理场景。"><a href="#1-整理场景。" class="headerlink" title="(1)整理场景。"></a>(1)整理场景。</h2><p>整理 ATAM 中获取的场景，根据商业目标确定这些场景的优先级，并 选取优先级最高的 1/3 的场景进行分析。</p>
+<h2 id="2-对场景进行求精。"><a href="#2-对场景进行求精。" class="headerlink" title="(2)对场景进行求精。"></a>(2)对场景进行求精。</h2><p>为每个场景获取最坏情况、当前情况、期望情况和最好情况的 质量属性响应级别。</p>
+<h2 id="3-确定场景的优先级。"><a href="#3-确定场景的优先级。" class="headerlink" title="(3)确定场景的优先级。"></a>(3)确定场景的优先级。</h2><p>项目关系人对场景进行投票，其投票是基于每个场景“所期 望的”响应值，根据投票结果和票的权值，生成一个分值(场景的权值)。</p>
+<h2 id="4-分配效用。"><a href="#4-分配效用。" class="headerlink" title="(4)分配效用。"></a>(4)分配效用。</h2><p>对场景的响应级别(最坏情况、当前情况、期望情况和最好情况)确 定效用表。</p>
+<h2 id="5-策略—场景—响应级别"><a href="#5-策略—场景—响应级别" class="headerlink" title="(5)策略—场景—响应级别"></a>(5)策略—场景—响应级别</h2><p>架构策略涉及哪些质量属性及响应级别，形成相关的策略—场景—响应级别的对 应关系。</p>
+<h2 id="6-确定“期望的”效用表"><a href="#6-确定“期望的”效用表" class="headerlink" title="(6)确定“期望的”效用表"></a>(6)确定“期望的”效用表</h2><p>使用内插法确定“期望的”质量属性响应级别的效用。即根据第 4 步的效用表以 及第 5 步的对应关系，确定架构策略及其对应场景的效用表。</p>
+<h2 id="7-计算各架构策略的总收益。"><a href="#7-计算各架构策略的总收益。" class="headerlink" title="(7)计算各架构策略的总收益。"></a>(7)计算各架构策略的总收益。</h2><p>根据第 3 步的场景的权值及第 6 步的架构策略效用 表，计算出架构策略的总收益得分。</p>
+<h2 id="8-确定选取策略的优先级"><a href="#8-确定选取策略的优先级" class="headerlink" title="(8)确定选取策略的优先级"></a>(8)确定选取策略的优先级</h2><p>根据受成本限制影响的 ROI(Return On Investment，投资报酬率)选择架构策略。 根据开发经验估算架构策略的成本，结合第 7 步的收益，计算出架构策略的 ROI，按 ROI 排 序，从而确定选取策略的优先级。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/" class="post-title-link" itemprop="url">软件架构设计（十）产品线及系统演化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>软件企业追求长远的发展，通常采用产品线模型及系统演化策略，它实质上是用架构技 术构建产品线，并在此基础上借助复用技术持续演化，不断地推出新产品，满足市场追求产 品升级换代的需求。</p>
+<h1 id="一、复用与产品线"><a href="#一、复用与产品线" class="headerlink" title="一、复用与产品线"></a>一、复用与产品线</h1><p>软件产品线是指一组软件密集型系统，它们共享一个公共的、可管理的特性集，满足某 个特定市场或任务的具体需要，是以规定的方式用公共的核心资产集成开发出来的。即围绕 核心资产库进行管理、复用、集成新的系统。</p>
+<p>核心资产库包括软件架构及其可剪裁的元素， 更广泛地，它还包括设计方案及其文档、用户手册、项目管理的历史记录(如预算和进度)、 软件测试计划和测试用例。</p>
+<p>可复用的资 产非常广，包括以下几点。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">需求</span><br><span class="line">架构设计</span><br><span class="line">元素:元素复用不只是简单的代码复用，它旨在捕获并复用设计中的可取之处，避免(不要 重复)设计失败的地方。</span><br><span class="line">建模与分析</span><br><span class="line">测试：如测试用例、测试数据、测试工具，甚至 测试计划、过程、沟通渠道都可以得到复用。</span><br><span class="line">项目规划：利用经验对项目的成本、预算、进度及开发小组的安排等进行预测，即不必每次 都建立工作分解结构。</span><br><span class="line">过程、方法和工具</span><br><span class="line">人员</span><br><span class="line">样本系统:将已部署(投产)的产品作为高质量的演示原型和工程设计原型。</span><br><span class="line">缺陷消除:产品线开发中积累的缺陷消除活动，可使新系统受益</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、基于产品线的架构"><a href="#二、基于产品线的架构" class="headerlink" title="二、基于产品线的架构"></a>二、基于产品线的架构</h1><p>软件产品线架构是针对一系列产品而设计的通用架构，并在此基础上，进一步将系列产 品共用的模块事先实现，供直接重用;将架构用框架的形式予以实现，供定制使用。这就是 通常所说的“平台”。</p>
+<p>产品线架构较之单个产品架构，有如下三点特别之处:<br>(1)产品线架构必须考虑一系列明确许可的变化;<br>(2)产品线架构一定要文档化;<br>(3)产品线架构必须提供“产品创建者指南”(开发指南)，描述架构的实例化过程。</p>
+<p>产品线的软件架构应将不变的方面提出来，同时， 识别允许的变化，并提供实现它们的机制。通常应考虑三个方面。<br>(1)确定变化点<br>(2)支持变化点<br>(3)对产品线架构的适宜性进行评估。</p>
+<h1 id="三、产品线的开发模型"><a href="#三、产品线的开发模型" class="headerlink" title="三、产品线的开发模型"></a>三、产品线的开发模型</h1><p>开发(确定)产品线的方法有两种模型:<br>(1)“前瞻性”产品线:利用在应用领域的经验、对市场和技术发展趋势的了解及商业 判断力等进行产品线设计，它反映了企业的战略决策。通常是自上而下地采用产品线方法。<br>(2)“反应性”模型:企业根据以前的产品构建产品家族，并随着新产品的开发，扩展<br>架构和设计方案，它的核心资产库是根据“已经证明”为共有、而非“预先计划”为共有的 元素构建的。通常是自下而上地采用产品线方法。</p>
+<h1 id="四、特定领域软件架构"><a href="#四、特定领域软件架构" class="headerlink" title="四、特定领域软件架构"></a>四、特定领域软件架构</h1><p>架构的本质在于其抽象性。它包括两个方面的抽象:业务抽象和技术抽象。其中业务抽 象面向特定的应用领域。</p>
+<p>特定领域软件架构(Domain Specific Software Architecture，DSSA)可以看做开发产品线 的一个方法(或理论)，它的目标就是支持在一个特定领域中有多个应用的生成。</p>
+<p>DSSA 的 必备特征有:<br>(1)一个严格定义的问题域或解决域;<br>(2)具有普遍性，使其可以用于领域中某个特定应用的开发;<br>(3)对整个领域的合适程度的抽象;<br>(4)具备该领域固定的、典型的在开发过程中的可复用元素。</p>
+<p>从功能覆盖的范围角度理解 DSSA 中领域的含义有两种方法:<br>(1)垂直域。定义了一个特定的系统族，导出在该领域中可作为系统的可行解决方案的一个通用软件架构。<br>(2)水平域。定义了在多个系统和多个系统族中功能区域的共有部分，在子系统级上涵盖多个系统(族)的特定部分功能。</p>
+<p>DSSA 的活动阶段如下。<br>(1)领域分析:主要目标是获得领域模型。即通过分析领域中系统的需求(领域需求)，确定哪些需求是被领域中的系统广泛共享的，从而建立领域模型。<br>(2)领域设计:这个阶段的目标是获得 DSSA，它是一个能够适应领域多个系统的需求的一个高层次的设计。由于领域模型中的领域需求具有一定的变化性，DSSA 也要相应地 具有变化性，它可以通过表示多选一的、可选的解决方案等来做到这一点。<br>(3)领域实现:主要目标是依据领域模型和 DSSA 开发与组织可复用信息。这些复用 信息可以是从现有系统中提取得到的，也可能通过新的开发得到。这个阶段可以看作复用基 础设施的实现阶段。</p>
+<p>领域模型的主要作用如下:<br>(1)领域模型为需求定义了领域知识和领域词汇，这较之单一的项目需求更有较好的 大局观;<br>(2)软件界面的设计往往和领域模型关系密切;<br>(3)领域模型的合理性将严重影响软件系统的可扩展性;<br>(4)在分层架构的指导下，领域模型精化后即成为业务层的骨架;<br>(5)领域模型也是其数据模型的基础;<br>(6)领域模型是团队交流的基础，因为它规定了重要的领域词汇表，并且这些词汇的定义是严格的、大家共同认可的。</p>
+<h1 id="五、架构及系统演化"><a href="#五、架构及系统演化" class="headerlink" title="五、架构及系统演化"></a>五、架构及系统演化</h1><p>架构虽然为系统的变化提供了一定的自由度，但是系统的较大变化必然导致架构的改变。 架构(系统)演化是指向既定的方向、可控地改变。架构(系统)演化可以形成产品线，反 过来，架构(系统)可以在规划的产品线中进行演化。</p>
+<p>架构(系统)演化过程包含 7 个步骤：<br>(1)需求变动归类。首先，必须对用户需求的变化进行归类，使变化的需求与已有构 件对应。对找不到对应构件的变动，也要做好标记，在后续工作中，将创建新的构件，以对 应这部分变化的需求。<br>(2)制订架构演化计划。在改变原有结构之前，开发组织必须制订一个周密的架构演 化计划，作为后续演化开发工作的指南。<br>(3)修改、增加或删除构件。在演化计划的基础上，开发人员可根据在第(1)步得到 的需求变动的归类情况，决定是否修改或删除存在的构件、增加新构件。最后，对修改和增 加的构件进行功能性测试。<br>(4)更新构件的相互作用。随着构件的增加、删除和修改，构件之间的控制流必须得 到更新。<br>(5)构件组装与测试。通过组装支持工具把这些构件的实现体组装起来，完成整个软 件系统的连接与合成，形成新的架构。然后，对组装后的系统整体功能和性能进行测试。<br>(6)技术评审。对以上步骤进行确认，进行技术评审。评审组装后的架构是否反映需 求变动，符合用户需求。如果不符合，则需要在第(2)到第(6)步之间进行迭代。<br>(7)产生演化后的架构。在原来系统上所作的所有修改必须集成到原来的架构中，完 成一次演化过程。</p>
+<p><img src="/images/ruankao/6-52.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%89%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1327,169 +1512,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B9%9D%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B9%9D%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">系统分析与设计方法（九）系统过渡计划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>如果同时运行两个系统，会给客户造成多大的开销;<br>如果直接运行新系统，客户面对的风险有多大;<br>对新系统试运行时的查错和纠错，以及出现严重错误而导致停止运行时的应急措施;<br>客户运行新系统将面临的不利因素有哪些;<br>人员的培训。</p>
-<h1 id="1-直接过渡"><a href="#1-直接过渡" class="headerlink" title="1.直接过渡"></a>1.直接过渡</h1><p>这是一种快速的系统过渡方式，当新系统运行时，立即关闭原来的系统。这种过渡方式非常简单，没有后勤保障的问题，也不要消耗很多资源。同时，它也意味着大风险，目标系统的特性决定了风险的大小。设计者主要要权衡当新系统失败时，系统停止运行或者勉强运行给客户带来的损失有多大。由于这种过渡方式简单而费用低廉，对于可以容忍停机一段时间的系统的实践者，可以采用这种方式。</p>
-<h1 id="2-并行过渡"><a href="#2-并行过渡" class="headerlink" title="2.并行过渡"></a>2.并行过渡</h1><p>设计者采用并行过渡方式，让新系统和旧系统在一段时间里同时运行，通过这样的旧系统作为新系统的备份，可以大大降低系统过渡的风险。可是并行过渡显然比直接过渡要消耗更多的资源:现有的硬件资源必须保证能同时跑两套系统，这常常意味着增加服务器和额外的存储空间，需要增加人员来同时使用两套系统，或者增加现有员工的工作量，让他们同时操作两套系统。这种方式同时也增加了管理和后勤保障的复杂度。</p>
-<p>有些系统无法使用并行过渡的方式，主要是客户没有足够的资源来维持两个系统同时运行，另外一种情况是新、旧系统差别太大，旧系统的数据无法为新系统采用。当客户无法使用并行过渡，又想尽可能地减少风险，设计者可以使用部分并行过渡的策略，使并行的开销减少到客户能够接受的范围内。</p>
-<h1 id="3-阶段过渡"><a href="#3-阶段过渡" class="headerlink" title="3.阶段过渡"></a>3.阶段过渡</h1><p>通常在系统非常复杂、过于庞大以至于无法一次性进行过渡时采用，也适用于分阶段开发的系统。设计者需要设计一系列步骤和过程来完成整个系统的过渡，这种过渡方式和系统的复杂程度相关，随着系统的不同往往有很大的不同。和并行过渡一样，阶段过渡也能够减少风险，显然局部的失败要比全体的失败更容易接受，带来的损失更小。阶段过渡也带来了复杂性，有时候比并行过渡更加复杂。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（五）用户界面设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
-<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
-<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
-<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
-<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
-<p>除此之外，还应该考虑表所示的设计原则。</p>
-<p><img src="/images/ruankao/6-18.png"></p>
-<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
-<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
-<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
-<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
-<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1561,7 +1583,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">66</span>
+          <span class="site-state-item-count">68</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1574,7 +1596,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
