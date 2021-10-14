@@ -197,6 +197,87 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%8C%EF%BC%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/" class="post-title-link" itemprop="url">基于中间件的开发（二）应用服务器技术</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-06 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-06T00:00:00+08:00">2021-10-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:36:56" itemprop="dateModified" datetime="2021-10-11T10:36:56+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Web 应用开发大致经历了三个阶段。</p>
+<p>在第一阶段，大家都使用 Web 服务器提供的服 务器扩展接口，使用 C 或者 Perl 等语言进行开发，例如 CGI、API 等。这种方式可以让开 发者自由地处理各种不同的 Web 请求，动态地产生响应页面，实现各种复杂的 Web 系统 要求。但是，这种开发方式的主要问题是对开发者的素质要求很高，往往需要懂得底层的编 程方法，了解 HTTP 协议，此外，这种系统的调试也相当困难。</p>
+<p>在第二阶段，大家开始使用一些服务器端的脚本语言进行开发，主要包括 ASP、PHP、 Livewire 等。其实现方法实质上是在 Web 服务器端放入一个通用的脚本语言解释器，负责 解释各种不同的脚本语言文件。</p>
+<p>第三阶段应用服务器的方式。目前，应用服务器已经成为电子商务应用中一种非常关键的中间件技术。如今，各大主要软件厂商纷纷将应用服务器作为其电子商务平台的基础，如 IBM 的 Websphere，Oracle 的 Internet 应用服务器，Sybase 的 Enterprise 应用服务器等。本节将阐述应用服务器的概念、 相关技术及发展方向，并就目前主流的应用服务器产品进行简单的介绍。</p>
+<h1 id="应用服务器的概念"><a href="#应用服务器的概念" class="headerlink" title="应用服务器的概念"></a>应用服务器的概念</h1><p>在分布式、多层结构及基于构件和服务器端程序设计的企业级应用开发 中，它提供的是一个开发、部署、运行和管理、维护的平台。它可以提供软件“集群” 的 功能，因而可以让多个不同的、异构服务器协同工作、相互备份，以满足企业级应用所需要 的可用性、高性能、可靠性和可伸缩性等。</p>
+<p>应用服务 器可以帮助企业快速架构一个基 Internet 的电子商务系统，而且拥有极高的稳定性、可扩展 性和安全性。</p>
+<p>它能够：<br>(1)更合理地分工企业级应用开发，加快应用的开发速度，减少应用的开发量。<br>(2)应用设计、开发、部署、运行、管理、维护的平台。<br>设计:应用服务器完成底层通信、服务，并屏蔽掉复杂的底层技术细节，向用户提供结 构简单、功能完善的编程接口，让用户可以专心于商务逻辑的设计。<br>开发:应用服务器提供了完全开放的编程语言和应用接口，用户可以用任何自己习惯的 开发工具来工作。另外应用服务器自己也提供快速开发的工具和手段，帮助用户提高开发效 率。<br>部署:应用服务器可以部署在任何硬件平台、任何操作系统上，而且可以分布在异构网 络中，应用服务器帮助用户在复杂的网络环境中配置系统参数，使系统发挥最大的性能，拥 有最好的稳定可靠性。<br>运行:应用服务器采用的是开放技术标准，它提供了一个完整的标准实现，即提供了系 统的运行环境，任何基于同样标准的系统都能很好地运行于这个环境中。在运行中提供应用 系统的名字解析、路由选择、负载平衡、事务控制等服务，并提供系统容错、修复、迁移、 升级扩展等功能。<br>管理:应用服务器让用户通过图形化的界面方便地管理自己的资源，而且在系统运行时 也能动态监控和管理。<br>(3)使得应用与底层平台无关，便于商业逻辑的实现与扩展。<br>(4)为企业应用提供现成的、稳定而强健的、灵活的、成熟的基础架构。</p>
+<p>应用服务器通过分布式体系来保障这一点，表现为:<br>当系统处理能力不够时，可以通过简单地增加硬件来解决;<br>动态调整不同主机间的负载可以最大地利用系统资源，同时提高单机的稳定性;<br>当系统中的某台机器出现故障时，它的工作可由其他机器来承担，不会影响系统整体的运行， 即无单点故障。</p>
+<h1 id="主要的应用服务器"><a href="#主要的应用服务器" class="headerlink" title="主要的应用服务器"></a>主要的应用服务器</h1><h2 id="1-BEA-WebLogic"><a href="#1-BEA-WebLogic" class="headerlink" title="1.BEA WebLogic"></a>1.BEA WebLogic</h2><h2 id="2-IBM-WebSphere"><a href="#2-IBM-WebSphere" class="headerlink" title="2.IBM WebSphere"></a>2.IBM WebSphere</h2><h2 id="3-SUN-iPlanet"><a href="#3-SUN-iPlanet" class="headerlink" title="3.SUN iPlanet"></a>3.SUN iPlanet</h2><h2 id="4-Oracle-Internet-ApplicationServer"><a href="#4-Oracle-Internet-ApplicationServer" class="headerlink" title="4.Oracle Internet ApplicationServer"></a>4.Oracle Internet ApplicationServer</h2><h2 id="5-Sybase-Enterprise-ApplicationServer"><a href="#5-Sybase-Enterprise-ApplicationServer" class="headerlink" title="5.Sybase Enterprise ApplicationServer"></a>5.Sybase Enterprise ApplicationServer</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E4%BA%94%EF%BC%89%E4%BC%81%E4%B8%9A%E5%BA%94%E7%94%A8%E9%9B%86%E6%88%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1126,126 +1207,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%89%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%89%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/" class="post-title-link" itemprop="url">软件架构设计（三）软件架构风格</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-26 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>软件架构设计的一个核心问题是能否使用重复的软件架构模式，即能否达到架构级别的 软件重用。</p>
-<p>架构风格反映了领域中众多系统所共有的结构和语义特性，并指导如何将各个模块和子系统有效地组织成一个完整的系统。</p>
-<p>只要系统是使用常用的、规范的方法来组织，就可使别的设计者很容易地理解系统的架构。</p>
-<h1 id="一、软件架构风格分类"><a href="#一、软件架构风格分类" class="headerlink" title="一、软件架构风格分类"></a>一、软件架构风格分类</h1><p>架构风格的最关键的四要素内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">提供一个词汇表</span><br><span class="line">定义一套配置规则</span><br><span class="line">定义一套语义解释原则</span><br><span class="line">定义对基于这种风格的系统所进行的分析</span><br></pre></td></tr></table></figure>
-<h1 id="二、数据流风格"><a href="#二、数据流风格" class="headerlink" title="二、数据流风格"></a>二、数据流风格</h1><p>批处理序列;管道/过滤器。</p>
-<p>这样的架构下，所有的数据按照流的形式在执行过程中前进，不存在结构的反复和重构。</p>
-<p>在流动过程中，数据经过序列间的数据处理组件进行处理，然后将处理结果向后传送，最后进行输出。</p>
-<h2 id="1-批处理序列"><a href="#1-批处理序列" class="headerlink" title="1. 批处理序列"></a>1. 批处理序列</h2><p>批处理风格的每一步处理都是独立的，并且每一步是顺序执行的。只有当前一步处理完，后一步处理才能开始。数据传送在步与步之间作为一个整体。(组件为一系列固定顺序的计 算单元，组件间只通过数据传递交互。每个处理步骤是一个独立的程序，每一步必 须在前一步结束后才能开始，数据必须是完整的，以整体的方式传递)</p>
-<p>批处理的典型应用:<br>(1)经典数据处理;<br>(2)程序开发;<br>(3)Windows 下的 BAT 程序就是这种应用的典型实例。</p>
-<h2 id="2-管道和过滤器"><a href="#2-管道和过滤器" class="headerlink" title="2. 管道和过滤器"></a>2. 管道和过滤器</h2><p>在管道/过滤器风格的软件架构中，每个构件都有一组输入和输出，构件读输入的数据流，经过内部处理，然后产生输出数据流。这个过程通常通过对输入流的变换及增量计算来 完成，所以在输入被完全消费之前，输出便产生了。</p>
-<p>管道/过滤器架构的例子:<br>(1)以 UNIX shell 编写的程序；<br>(2)传统的编译器。</p>
-<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>(1)使得软构件具有良好的隐蔽性和高内聚、低耦合的特点;<br>(2)允许设计者将整个系统的输入/输出行为看成是多个过滤器的行为的简单合成;<br>(3)支持软件重用<br>(4)系统维护和增强系统性能简单<br>(5)允许对一些如吞吐量、死锁等属性的分析;<br>(6)支持并行执行</p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>(1)通常导致进程成为批处理的结构<br>(2)不适合处理交互的应用<br>(3)因为在数据传输上没有通用的标准，每个过滤器都增加了解析和合成数据的工作， 这样就导致了系统性能下降，并增加了编写过滤器的复杂性。</p>
-<h2 id="3-批处理序列风格与管道过滤器风格对比"><a href="#3-批处理序列风格与管道过滤器风格对比" class="headerlink" title="3.批处理序列风格与管道过滤器风格对比"></a>3.批处理序列风格与管道过滤器风格对比</h2><p>共同点:把任务分成一系列固定顺序的计算单元(组件)。组件间只通过数据传递交互。</p>
-<p>区别:批处理是全部的、高潜伏性的，输入时可随机存取，无合作性、无交互性。而管道过滤器是递增的，数据结果延迟小，输入时处理局部化，有反馈、可交互。批处理强调数据传送在步与步之间作为一个整体，而管理过滤器无此要求。</p>
-<h1 id="三、调用-返回风格"><a href="#三、调用-返回风格" class="headerlink" title="三、调用/返回风格"></a>三、调用/返回风格</h1><p>主程序/子程序;面向对象风格;层次结构。</p>
-<p>利用调用-返回实际上是一种分而治之的策略，其主要思想是将一个复杂的大系统分解为一些子系统，以便降低复杂度，并且增加可修改性。</p>
-<h2 id="1-主程序-子程序"><a href="#1-主程序-子程序" class="headerlink" title="1. 主程序/子程序"></a>1. 主程序/子程序</h2><p>主程序/子程序风格是结构化开发时期的经典架构风格。这种风格一般采用单线程控制，把问题划分为若干处理步骤，构件即为主程序和子程序。</p>
-<h2 id="2-面向对象风格"><a href="#2-面向对象风格" class="headerlink" title="2. 面向对象风格"></a>2. 面向对象风格</h2><p>这种风格建立在数据抽象和面向对象的基础上，数据的表示方法和它们的相应操作封装在一个抽象数据类型或对象中。这种风格的构件是对象，或者说是抽象数据类型的实例。</p>
-<p>这种风格的两个重要特征为:<br>(1)对象负责维护其表示的完整性;<br>(2)对象的表示对其他对象而言是隐蔽的。</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>(1)因为对象对其他对象隐藏它的表示，所以可以改变一个对象的表示，而不影响其他的对象;<br>(2)设计者可将一些数据存取操作的问题分解成一些交互的代理程序的集合。</p>
-<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>(1)为了使一个对象和另一个对象通过过程调用等进行交互，必须知道对象的标识。只要一个对象的标识改变了，就必须修改所有其他明确调用它的对象;<br>(2)必须修改所有显式调用它的其他对象，并消除由此带来的一些副作用。例如，如果 A 使用了对象 B，C 也使用了对象 B，那么，C 对 B 的使用所造成的对 A 的影响可能是料想不到的。</p>
-<h3 id="3-层次结构风格"><a href="#3-层次结构风格" class="headerlink" title="3. 层次结构风格"></a>3. 层次结构风格</h3><p>层次系统组织成一个层次结构，每一层为上层服务，并作为下层客户。在一些层次系统中，除了一些精心挑选的输出函数外，内部的层只对相邻的层可见。</p>
-<p>这种风格支持基于可增加抽象层的设计。允许将一个复杂问题分解成一个增量步 骤序列的实现。由于每一层最多只影响两层，同时只要给相邻层提供相同的接口，允许每层 用不同的方法实现，同样为软件重用提供了强大的支持。</p>
-<p>层次系统最广泛的应用是分层通信协议。</p>
-<h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><p>(1)支持基于抽象程度递增的系统设计，使设计者可以把一个复杂系统按递增的步骤进行分解;<br>(2)支持功能增强，因为每一层至多和相邻的上下层交互，因此功能的改变最多影响相邻的上下层;<br>(3)支持重用。只要提供的服务接口定义不变，同一层的不同实现可以交换使用。这样，就可以定义一组标准的接口，而允许各种不同的实现方法。</p>
-<h4 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h4><p>(1)并不是每个系统都可以很容易地划分为分层的模式，甚至即使一个系统的逻辑结构是层次化的，出于对系统性能的考虑，系统设计师不得不把一些低级或高级的功能综合起来;<br>(2)很难找到一个合适的、正确的层次抽象方法。</p>
-<h1 id="四、独立构件风格"><a href="#四、独立构件风格" class="headerlink" title="四、独立构件风格"></a>四、独立构件风格</h1><p>进程通信;事件系统。</p>
-<p>独立构件风格主要强调系统中的每个构件都是相对独立的个体，它们之间不直接通信，以降低耦合度，提升灵活性。</p>
-<h2 id="1-进程通信架构风格"><a href="#1-进程通信架构风格" class="headerlink" title="1. 进程通信架构风格"></a>1. 进程通信架构风格</h2><p>构件是独立的过程，连接件是消息传递。这 种风格的特点是构件通常是命名过程，消息传递的方式可以是点到点、异步和同步方式及远 过程调用等。</p>
-<h2 id="2-事件系统风格"><a href="#2-事件系统风格" class="headerlink" title="2. 事件系统风格"></a>2. 事件系统风格</h2><p>基于事件的隐式调用风格的思想是构件不直接调用一个过程，而是触 发或广播一个或多个事件。系统中的其他构件中的过程在一个或多个事件中注册，当一个事 件被触发，系统自动调用在这个事件中注册的所有过程。</p>
-<p>基于事件的隐式调用风格的主要特点是事件的触发者并不知道哪些构件会被这些事件影响。</p>
-<h3 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h3><p>(1)为软件重用提供了强大的支持。当需要将一个构件加入现存系统中时，只需将它注册到系统的事件中。<br>(2)为改进系统带来了方便。当用一个构件代替另一个构件时，不会影响到其他构件的接口。</p>
-<h3 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h3><p>(1)构件放弃了对系统计算的控制。一个构件触发一个事件时，不能确定其他构件是否会响应它。而且即使它知道事件注册了哪些构件的过程，它也不能保证这些过程被调用的顺序。<br>(2)数据交换的问题。有时数据可被一个事件传递，但另一些情况下，基于事件的系统必须依靠一个共享的仓库进行交互。在这些情况下，全局性能和资源管理便成了问题。<br>(3)既然过程的语义必须依赖于被触发事件的上下文约束，关于正确性的推理存在问题。</p>
-<h1 id="五、虚拟机风格"><a href="#五、虚拟机风格" class="headerlink" title="五、虚拟机风格"></a>五、虚拟机风格</h1><p>解释器;基于规则的系统。</p>
-<p>虚拟机风格的基本思想是人为构建一个运行环境，在这个环境之上，可以解析与运行自定义的一些语言，这样来增加架构的灵活性。</p>
-<h2 id="1-解释器"><a href="#1-解释器" class="headerlink" title="1.解释器"></a>1.解释器</h2><p>一个解释器通常包括完成解释工作的解释引擎，一个包含将被解释的代码的存储区，一 个记录解释引擎当前工作状态的数据结构，以及一个记录源代码被解释执行进度的数据结构。</p>
-<p>解释器通常被用来建立一种虚拟机以弥合程序语义与硬件语义之间的差异。其缺点是执行效率较低。</p>
-<h2 id="2-规则为中心"><a href="#2-规则为中心" class="headerlink" title="2. 规则为中心"></a>2. 规则为中心</h2><p>基于规则的系统包括规则集、规则解释器、规则/数据选择器及工作内存。</p>
-<h1 id="六、仓库风格"><a href="#六、仓库风格" class="headerlink" title="六、仓库风格"></a>六、仓库风格</h1><p>数据库系统;超文本系统;黑板系统。</p>
-<h2 id="1-数据库系统"><a href="#1-数据库系统" class="headerlink" title="1.数据库系统"></a>1.数据库系统</h2><p>数据库架构是库风格最常见的形式。构件主要有两大类，一个是中央共享数据源，保存当前系统的数据状态;另一个是多个独立处理元素，处理元素对数据元素进行操作。</p>
-<h2 id="2-超文本系统"><a href="#2-超文本系统" class="headerlink" title="2.超文本系统"></a>2.超文本系统</h2><p>超文本系统的典型代表，就是早期的静态网页。</p>
-<h2 id="3-黑板系统"><a href="#3-黑板系统" class="headerlink" title="3.黑板系统"></a>3.黑板系统</h2><p>黑板系统是一种问题求解模型，是组织推理的步骤、控制状态数据和问题求解之领域知识的概念框架，它将问题的解空间组织成一个或多个应用相关的分级结构。分级结构的每一层信息由一个唯一的词汇来描述，它代表了问题的部分解。<br><img src="/images/ruankao/6-38.png"></p>
-<p>黑板系统主要由三部分组成:<br>(1)知识源。知识源中包含独立的、与应用程序相关的知识，知识源之间不直接进行 通信，它们之间的交互只通过黑板来完成。<br>(2)黑板数据结构。黑板数据是按照与应用程序相关的层次来组织的解决问题的数据， 知识源通过不断地改变黑板数据来解决问题。<br>(3)控制。控制完全由黑板的状态驱动，黑板状态的改变决定使用的特定知识。</p>
-<hr>
-<p><img src="/images/ruankao/6-39.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1317,7 +1278,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">65</span>
+          <span class="site-state-item-count">66</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
