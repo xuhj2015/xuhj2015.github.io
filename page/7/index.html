@@ -197,6 +197,98 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">开发方法（二）软件开发模型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:54" itemprop="dateModified" datetime="2021-10-11T10:38:54+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h1><p>瀑布模型严格遵守软件生命周期各阶段的固定顺序，上一阶段完成后才能进入下一阶段，整个模型就像一个飞流直下的瀑布。<br><img src="/images/ruankao/2-1.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">可强迫开发人员采用规范的方法</span><br><span class="line">严格规定了各阶段必须提交的文档</span><br><span class="line">要求每个阶段结束后，都要进行严格评审</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">过于理想化</span><br><span class="line">缺乏灵活性</span><br><span class="line">无法再开发过程中逐步明确用户无法表达准确的需求</span><br></pre></td></tr></table></figure>
+<h1 id="瀑布V模型"><a href="#瀑布V模型" class="headerlink" title="瀑布V模型"></a>瀑布V模型</h1><p>瀑布V模型是瀑布模型的一种变体。在开发过程中任一阶段都可能引入缺陷，最后的测试只能在交付前发现更多的缺陷。瀑布V模型强调了测试。<br><img src="/images/ruankao/2-2.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">瀑布V模型不但保证了瀑布模型的阶段式文档驱动的特点，更强调了软件产品的验证工作</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需求分析集中在项目开始，而一旦需求不准确，存在偏差，之后的设计、实现、验证会放大偏差。</span><br><span class="line">瀑布模型后期维护工作相当繁重，而这些维护工作大都是修正需求阶段引入的缺陷，这个问题是瀑布模型难以克服的。</span><br></pre></td></tr></table></figure>
+<h1 id="快速原型模型"><a href="#快速原型模型" class="headerlink" title="快速原型模型"></a>快速原型模型</h1><p>快速原型是指在计算机上快速建立可以运行的程序或者界面。让用户能尽快了解系统的概貌，一旦用户确认了原型，就可以快速按照原型开发出满足用户真实需求的软件产品。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">引入了迭代的概念</span><br><span class="line">强调用户参与</span><br><span class="line">在用户需求分析、系统功能描述、系统实现方法等方面允许有较大的灵活性，可以逐步完善。</span><br><span class="line">可以用来评价几种不同的设计方案</span><br><span class="line">可以用来建立系统的某个部分</span><br><span class="line">不排斥传统生命周期的有效的方法和工具，与传统方法互为补充。</span><br><span class="line"></span><br><span class="line">动态定义需求，适用于需求不明确的项目。</span><br><span class="line"></span><br><span class="line">不适合使用原型法的情况：</span><br><span class="line">缺乏使用的原型开发工具</span><br><span class="line">用户不参与、不积极配合开发过程</span><br><span class="line">用户的数据资源缺乏组织和管理</span><br><span class="line">用户的软件资源缺乏组织和管理</span><br></pre></td></tr></table></figure>
+
+<h1 id="演化模型"><a href="#演化模型" class="headerlink" title="演化模型"></a>演化模型</h1><p>演化模型也是一种原型化的开发方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">快速原型模型中，原型的用途是获取用户的真实需求，一旦需求确定了，原型就被抛弃，是一种“抛弃式”的原型化方法。</span><br><span class="line">演化模型中，则是从初始模型逐步演化为最终软件产品的渐进过程，是一种“渐进式”的原型化方法。</span><br><span class="line">一个演化模型可以看做若干次瀑布模型的迭代。</span><br></pre></td></tr></table></figure>
+
+<h1 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h1><p>增量模型是第三种原型化开发方法，它既不是“抛弃式”的，也不是“渐进式”的，而是“递增式”的。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在系统的技术架构成熟、风险较低的时候，可以采用增量的方式进行系统开发，</span><br><span class="line">这样可以提前进行集成测试和系统测试，缩短初始版本的发布周期，提高用户对系统的可见度，降低系统的风险。</span><br><span class="line">第一版本往往是系统的核心功能，可以满足用户最基本的需求。之后增量版本的功能逐步丰富、完善。</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">每一个版本都是一个完整的、可用的版本</span><br><span class="line">版本间的增量要均匀</span><br></pre></td></tr></table></figure>
+
+<h1 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h1><p>螺旋模型结合了瀑布模型和演化模型的有点，不仅体现了两个模型的优点，而且还强调了其他模型均忽略了的风险分析。<br>螺旋模型在“瀑布模型”的每一个开发阶段前，引入一个非常严格的风险识别、风险分析和风险控制。它把软件项目分解成一个个小项目，每个小项目都标识一个或多个主要风险，直到所有的主要风险因素都被确定。<br>螺旋模型特别适用于庞大而复杂、具有高风险的系统。<br><img src="/images/ruankao/2-3.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">螺旋模型支持需求的动态变化，为用户的关键决策提供了方便，有助于需求准确性；为项目管理决策调整提供了便利，从而降低软件开发风险。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要具有相当丰富的风险评估经验和专业知识，如果未能及时标识风险，势必会造成重大损失。</span><br><span class="line">过多的迭代次数会增加开发成本，延迟提交时间。</span><br></pre></td></tr></table></figure>
+
+<h1 id="构件组装模型"><a href="#构件组装模型" class="headerlink" title="构件组装模型"></a>构件组装模型</h1><p>利用软构件进行搭积木的方式开发。<br><img src="/images/ruankao/2-4.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">让系统扩展更容易</span><br><span class="line">构件更容易被重用，降低软件开发成本</span><br><span class="line">构件粒度较小，开发任务更灵活，可用若干小组并行开发。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要经验丰富的架构师，设计不好的构件难以实现构件的优点，降低构件组装模型的重用度。</span><br><span class="line">在考虑重用度的时候，往往会在其他方面让步，比如性能。</span><br><span class="line">使用构件的时候，要求开发人员熟练掌握构件，增加了开发人员的学习成本。</span><br><span class="line">第三方构件的质量难以掌握，且会最终影响软件的质量。</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89%E6%95%8F%E6%8D%B7%E6%96%B9%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -381,7 +473,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>

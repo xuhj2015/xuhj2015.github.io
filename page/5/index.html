@@ -197,6 +197,151 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%80%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">软件架构设计（一）软件架构概述</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-25T00:00:00+08:00">2021-09-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>通俗地讲，软件架构设计就是软件系统的“布局谋篇”。</p>
+<p>软件架构的研究内容主要涉及软件架构描述、软件架构设计、软件架构风格、软件架构评价和软件架构的形成方法等。</p>
+<p>软件设计人员学习软件架构知识旨在站在较高的层面上整体地解决好软件的设计、复用、质量和维护等方面的实际问题。</p>
+<hr>
+<p>软件架构是软件抽象发展到一定阶段的产物，从编程的角度，可以清晰地看到软件抽象 层次和表达工具的发展历史。</p>
+<p>20 世纪 60 年代是子程序的年代:出现了原始的软件架构，即子程序，并以程序间的调用为连接关系。</p>
+<p>20 世纪 70 年代是模块化的年代:出现了数据流分析、实体—关系图(E-R 图)、信息隐藏等工具和方法，软件的抽象层次发展到了模块级。</p>
+<p>20 世纪 80 年代是面向对象的年代:基于模块化的编程语言进一步发展成面向对象的语言，继承性地增加了一种新元素之间的连接关系。</p>
+<p>20 世纪 90 年代是框架的年代:标准的基于对象的架构以框架的形式出现了。如电子数据表、文档、图形图像、音频剪辑等可互换的黑箱对象，可以相互嵌入。</p>
+<p>当前(最近 10 年来):中间件和 IT 架构作为标准平台出现，用可购买可复用的元素来构建系统，同时，基于架构的开发方法和理论不断成熟。</p>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>60</th>
+<th>70</th>
+<th>80</th>
+<th>90</th>
+<th>当前</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>发展状况</td>
+<td>子程序</td>
+<td>模块化</td>
+<td>面向对象</td>
+<td>框架</td>
+<td>中间件和IT架构</td>
+</tr>
+</tbody></table>
+<h1 id="一、软件架构的定义"><a href="#一、软件架构的定义" class="headerlink" title="一、软件架构的定义"></a>一、软件架构的定义</h1><p>软件架构仍在不断发展中，还没有形成一个统一的、公认的定义，这里仅举出几个较权威的定义。</p>
+<p>定义 1:软件或计算机系统的软件架构是该系统的一个(或多个)结构，而结构由软件元素、元素的外部可见属性及它们之间的关系组成。</p>
+<p>定义 2:软件架构为软件系统提供了一个结构、行为和属性的高级抽象，由构成系统的元素的描述、这些元素的相互作用、指导元素集成的模式及这些模式的约束组成。</p>
+<p>定义 3:软件架构是指一个系统的基础组织，它具体体现在:系统的构件，构件之间、构件与环境之间的关系，以及指导其设计和演化的原则上。(IEEE1471- 2000)</p>
+<p>(1)架构是对系统的抽象，它通过描述元素、元素的外部可见属性及元素之间的关系来反映这种抽象。因此，仅与内部具体实现有关的细节是不属于架构的，即定义强调元素的 “外部可见”属性。</p>
+<p>(2)架构由多个结构组成，结构是从功能角度来描述元素之间的关系的，具体的结构传达了架构某方面的信息，但是个别结构一般不能代表大型软件架构。</p>
+<p>(3)任何软件都存在架构，但不一定有对该架构的具体表述文档。即架构可以独立于架构的描述而存在。如文档已过时，则该文档不能反映架构。</p>
+<p>(4)元素及其行为的集合构成架构的内容。体现系统由哪些元素组成，这些元素各有哪些功能(外部可见)，以及这些元素间如何连接与互动。即在两个方面进行抽象:在静态方面，关注系统的大粒度(宏观)总体结构(如分层);在动态方面，关注系统内关键行为的共同特征。</p>
+<p>(5)架构具有“基础”性:它通常涉及解决各类关键的重复问题的通用方案(复用性)，以及系统设计中影响深远(架构敏感)的各项重要决策(一旦贯彻，更改的代价昂贵)。</p>
+<p>(6)架构隐含有“决策”，即架构是由架构设计师根据关键的功能和非功能性需求(质量属性及项目相关的约束)进行设计与决策的结果。不同的架构设计师设计出来的架构是不一样的，为避免架构设计师考虑不周，重大决策应经过评审。特别是架构设计师自身的水平是一种约束，不断学习和积累经验才是摆脱这种约束走向自由王国的必经之路。</p>
+<p>在设计软件架构时也必须考虑硬件特性和网络特性，因此，软件架构与系统架构二者间的区别其实不大。但是，在大多情况下，架构设计师在软件方面的选择性较之硬件方面，其自由度大得多。因此，使用“软件架构”这一术语，也表明了一个观点:架构设计师通常将架构的重点放在软件部分。</p>
+<p>(1)影响架构的因素。软件系统的项目干系人(客户、用户、项目经理、程序员、测试人员、市场人员等)对软件系统有不同的要求、开发组织(项目组)有不同的人员知识结构、架构设计师的素质与经验、当前的技术环境等方面都是影响架构的因素。这些因素通过功能性需求、非功能性需求、约束条件及相互冲突的要求，影响架构设计师的决策，从而影响架构。</p>
+<p>(2)架构对上述诸因素具有反作用，例如，影响开发组织的结构。架构描述了系统的大粒度(宏观)总体结构，因此可以按架构进行分工，将项目组为几个工作组，从而使开发有序;影响开发组织的目标，即成功的架构为开发组织提供了新的商机，这归功于:系统的示范性、架构的可复用性及团队开发经验的提升，同时，成功的系统将影响客户对下一个系统的要求等。这种反馈机制构成了架构的商业周期。</p>
+<h1 id="二、软件架构的重要性"><a href="#二、软件架构的重要性" class="headerlink" title="二、软件架构的重要性"></a>二、软件架构的重要性</h1><h2 id="1-项目关系人之间交流的平台。"><a href="#1-项目关系人之间交流的平台。" class="headerlink" title="(1)项目关系人之间交流的平台。"></a>(1)项目关系人之间交流的平台。</h2><p>软件系统的项目关系人分别关注系统的不同特性， 而这些特性都由架构所决定，因此，架构提供了一个共同语言(公共的参考点)，项目关系 人以此作为彼此理解、协商、达成共识或相互沟通的基础。架构分析既依赖于又促进了这个 层次上的交流。</p>
+<h2 id="2-早期设计决策。"><a href="#2-早期设计决策。" class="headerlink" title="(2)早期设计决策。"></a>(2)早期设计决策。</h2><p>从软件生命周期来看，软件架构是所开发系统的最早设计决策的体现。</p>
+<p>架构明确了对系统实现的约束条件:架构是架构设计师对系统实现的各方面进行权衡的结果， 是总体设计的体现，因此，在具体实现时必须按架构的设计进行。</p>
+<p>架构影响着系统的质量属性:要保证系统的高质量，具有完美的架构是必要的(虽然不充分)。 架构可以用来预测系统的质量，例如，可以根据经验对该架构的质量(如性能)作定性的判 断。</p>
+<p>架构为维护的决策提供根据。在架构层次上能为日后的更改决策提供推理、判断的依据。一个富有生命力的架构，应该是在最有可能更改的地方有所考虑(架构的柔性)，使其在此点 最容易进行更改。</p>
+<p>架构有助于原型开发。可以按架构构造一个骨架系统(原型)，例如，在早期实现一个可执 行的特例，确定潜在的性能问题。</p>
+<p>借助于架构进行成本与进度的估计。</p>
+<h2 id="3-在较高层面上实现软件复用。"><a href="#3-在较高层面上实现软件复用。" class="headerlink" title="(3)在较高层面上实现软件复用。"></a>(3)在较高层面上实现软件复用。</h2><p>软件架构作为系统的抽象模型，可以在多个系统间传递(复用)，特别是比较容易地应用到具有相似质量属性和功能需求的系统中。产品线通 常共享一个架构。产品线的架构是开发组织的核心资产之一，利用架构及其范例进行多系统 的开发，在开发时间、成本、生产率和产品质量方面具有极大的回报。基于架构的开发强调 对各元素的组合或装配。系统开发还可以使用其他组织开发的元素，例如购买商业构件。</p>
+<h2 id="4-架构对开发的指导与规范意义不容忽略。"><a href="#4-架构对开发的指导与规范意义不容忽略。" class="headerlink" title="(4)架构对开发的指导与规范意义不容忽略。"></a>(4)架构对开发的指导与规范意义不容忽略。</h2><p>架构作为系统的总体设计，它指导后续 的详细设计和编码。架构使基于模板的开发成为可能，有利于开发的规范化和一致性，减少 开发与维护成本。架构可以作为培训的基础，有利于培养开发团队和培训相关人员。</p>
+<p><img src="/images/ruankao/6-20.png"></p>
+<h1 id="三、架构的模型"><a href="#三、架构的模型" class="headerlink" title="三、架构的模型"></a>三、架构的模型</h1><p>软件架构作为一个有机的整体，可以分解成多个侧面来认识，每个侧面强调它的不同方 面的特征，从而使架构设计师能整体地把握它的重点。我们可以将软件架构归纳成 5 种模 型:结构模型、框架模型、动态模型、过程模型和功能模型。最常用的是结构模型和动态模 型。</p>
+<h2 id="1-结构模型。"><a href="#1-结构模型。" class="headerlink" title="(1)结构模型。"></a>(1)结构模型。</h2><p>这是一个最直观、最普遍的建模方法。这种方法以架构的构件、连接 件和其他概念来刻画结构，并力图通过结构来反映系统的重要语义内容，包括系统的配置、 约束、隐含的假设条件、风格、性质。研究结构模型的核心是架构描述语言。</p>
+<h2 id="2-框架模型。"><a href="#2-框架模型。" class="headerlink" title="(2)框架模型。"></a>(2)框架模型。</h2><p>框架模型与结构模型类似，但它不太侧重描述结构的细节而更侧重于 整体的结构。框架模型主要以一些特殊的问题为目标建立只针对和适应该问题的结构。</p>
+<h2 id="3-动态模型。"><a href="#3-动态模型。" class="headerlink" title="(3)动态模型。"></a>(3)动态模型。</h2><p>动态模型是对结构或框架模型的补充，研究系统“大颗粒”的行为性质。例如，描述系统的重新配置或演化。动态可能指系统总体结构的配置、建立或拆除通信 通道或计算的过程。</p>
+<h2 id="4-过程模型。"><a href="#4-过程模型。" class="headerlink" title="(4)过程模型。"></a>(4)过程模型。</h2><p>过程模型研究构造系统的步骤和过程。因而结构是遵循某些过程脚本的结果。</p>
+<h2 id="5-功能模型。"><a href="#5-功能模型。" class="headerlink" title="(5)功能模型。"></a>(5)功能模型。</h2><p>该模型认为架构由一组功能构件按层次组成，且下层向上层提供服务。 它可以看作是一种特殊的框架模型。</p>
+<h2 id="“4-1”的视图模型"><a href="#“4-1”的视图模型" class="headerlink" title="“4+1”的视图模型"></a>“4+1”的视图模型</h2><p>4+1” 视 图模型从 5 个不同的视角包括逻辑视图、进程视图、物理视图、开发视图和场景视图来描 述软件架构。每一个视图只关心系统的一个侧面，5 个视图结合在一起才能反映系统的软件 架构的全部内容。</p>
+<p><img src="/images/ruankao/6-21.png"></p>
+<h3 id="1-逻辑视图"><a href="#1-逻辑视图" class="headerlink" title="(1)逻辑视图"></a>(1)逻辑视图</h3><p>主要支持系统的功能需求，即系统提供给最终用户的服务。</p>
+<p>在面向对象技术中，通过抽象、封装和继承，可以用对象模型来代表逻辑视图，用类图来描述逻辑视图。逻辑视图中使用的风格为面向对象的风格。</p>
+<h3 id="2-开发视图"><a href="#2-开发视图" class="headerlink" title="(2)开发视图"></a>(2)开发视图</h3><p>也称为模块视图，主要侧重于软件模块的组织和管理。</p>
+<p>开发视图要考虑软件内部的需求，如软件开发的容易性、软件的重用和软件的通用性，要充分考虑由于具体开发工具的不同而带来的局限性。开发视图通过系统输入输出关系的模型图和子系统图来描述。</p>
+<h3 id="3-进程视图"><a href="#3-进程视图" class="headerlink" title="(3)进程视图"></a>(3)进程视图</h3><p>侧重于系统的运行特性，主要关注一些非功能性的需求，例如系统的性能和可用性。</p>
+<p>进程视图强调并发性、分布性、系统集成性和容错能力，以及逻辑视图中的 主要抽象的进程结构。它也定义逻辑视图中的各个类的操作具体是在哪一个线程中被执行的。 进程视图可以描述成多层抽象，每个级别分别关注不同的方面。</p>
+<h3 id="4-物理视图"><a href="#4-物理视图" class="headerlink" title="(4)物理视图"></a>(4)物理视图</h3><p>主要考虑如何把软件映射到硬件上，它通常要考虑到解决系统拓扑结 构、系统安装、通信等问题。</p>
+<p>当软件运行于不同的节点上时，各视图中的构件都直接或间接 地对应于系统的不同节点上。因此，从软件到节点的映射要有较高的灵活性，当环境改变时， 对系统其他视图的影响最小。</p>
+<h3 id="5-场景"><a href="#5-场景" class="headerlink" title="(5)场景"></a>(5)场景</h3><p>可以看作是那些重要系统活动的抽象，它使四个视图有机地联系起来，从某种意义上说，场景是最重要的需求抽象。</p>
+<p>在开发架构时，它可以帮助设计者找到架构的构件和它们之间的作用关系。同时，也可以用场景来分析一个特定的视图，或描述不同视图构件间是如何相互作用的。场景可以用文本表示，也可以用图形表示。</p>
+<p><img src="/images/ruankao/6-22.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9E%B6%E6%9E%84%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -749,6 +894,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（五）用户界面设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
+<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
+<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
+<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
+<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
+<p>除此之外，还应该考虑表所示的设计原则。</p>
+<p><img src="/images/ruankao/6-18.png"></p>
+<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
+<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
+<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
+<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
+<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -822,91 +1052,6 @@
 <p>Web 同样基于 C/S 结构，实际上 Web 接口是一个通用的接口，不是只能使用浏览器 的协议，它同样能够在普通的程序中使用。</p>
 <p>Internet 和 Web 已经给设计者提供了一个非常富有吸引力的选择方案。它的优势在于:它们已经成为网络的事实上的标准，支持它们的软件已经广泛地存在于全世界的计算机中，而且通信费用已经下降到很有竞争力的水平。</p>
 <p>采用 Internet 时，必须考虑其不利的一面。 Internet 的安全性过去、现在、以后都是设计者头痛的问题。其他诸如可靠性、系统吞吐量、不断发展的技术和标准都是影响系统选择它们作为运行环境的不利因素。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（五）用户界面设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
-<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
-<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
-<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
-<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
-<p>除此之外，还应该考虑表所示的设计原则。</p>
-<p><img src="/images/ruankao/6-18.png"></p>
-<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
-<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
-<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
-<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
-<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
 
       
     </div>
@@ -1289,101 +1434,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（二）需求分析与软件设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+08:00">2021-09-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>需求分析阶段的主要任务是通过开发人员与用户之间的广泛交流，不断澄清模糊的概念，最终形成一个完整的、清晰的、一直的需求说明。（做什么）</p>
-<p>在需求明确之后，下一步就是对软件系统进行设计。（怎么做）</p>
-<h1 id="一、需求分析的任务与过程"><a href="#一、需求分析的任务与过程" class="headerlink" title="一、需求分析的任务与过程"></a>一、需求分析的任务与过程</h1><p>需求分析主要是确定待开发软件的功能、性能、数据、界面等要求。<br>需求分析的步骤包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">获取当前系统的物理模型</span><br><span class="line">抽象出当前系统的逻辑模型</span><br><span class="line">建立目标系统的逻辑模型</span><br></pre></td></tr></table></figure>
-<p>需求分析工作的4个方面</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">问题识别：用于发现需求、描述需求</span><br><span class="line">分析与综合：对问题进行分析，并给出解决方案</span><br><span class="line">编制需求分析的文档：输出《需求规格说明书》</span><br><span class="line">需求分析与评审：主要对功能的正确性、完整性和清晰性等给与评价。</span><br></pre></td></tr></table></figure>
-<h2 id="1、需求的分类"><a href="#1、需求的分类" class="headerlink" title="1、需求的分类"></a>1、需求的分类</h2><p>软件需求包括功能需求、非功能需求、设计约束三方面。<br><img src="/images/ruankao/5-5.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">功能需求：系统必须完成的事，为了向用户提供有用的功能，产品必须执行的动作。</span><br><span class="line">非功能需求：产品必须具备的属性或者品质，如性能、响应时间、可靠性、容错性、扩展性等。</span><br><span class="line">设计约束：也叫限制条件、补充规约，比如必须采用国内自主知识版权的数据库等。</span><br></pre></td></tr></table></figure>
-<p>除了上面三种需求之外，在其他维度，还有业务需求、用户需求、系统需求。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">业务需求：客户对系统、产品高层次的目标要求。</span><br><span class="line">用户需求：用户使用产品必须要完成上面任务，通过访谈、调查，从用户角度出发的需求。</span><br><span class="line">系统需求：从系统角度的需求，包括用特性说明的功能需求、质量属性、非功能需求及设计约束。</span><br></pre></td></tr></table></figure>
-<h2 id="2、需求工程"><a href="#2、需求工程" class="headerlink" title="2、需求工程"></a>2、需求工程</h2><p>创建和维护系统需求文档的所有活动，包括需求开发和需求管理两大工作。</p>
-<h3 id="（1）需求开发"><a href="#（1）需求开发" class="headerlink" title="（1）需求开发"></a>（1）需求开发</h3><p>包括需求捕获、需求分析、编写规格说明书和需求验证四个阶段。<br>需求开发是目标，是主线，是努力掌握客户对系统的需求。</p>
-<h3 id="（2）需求管理"><a href="#（2）需求管理" class="headerlink" title="（2）需求管理"></a>（2）需求管理</h3><p>包括需求基线、处理需求变更、需求跟踪等。<br>需求管理是支持，是保障，是对需求的变化进行管理的过程。</p>
-<h2 id="2、需求分析方法"><a href="#2、需求分析方法" class="headerlink" title="2、需求分析方法"></a>2、需求分析方法</h2><p>根据分析方法发展的历史，分为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">结构化分析方法</span><br><span class="line">软系统方法</span><br><span class="line">面向对象分析方法</span><br><span class="line">面向问题域的分析</span><br></pre></td></tr></table></figure>
-<h1 id="二、如何进行系统设计"><a href="#二、如何进行系统设计" class="headerlink" title="二、如何进行系统设计"></a>二、如何进行系统设计</h1><p>系统设计与其说是在设计，不如说是在选择和妥协。<br>妥协，就是在各个系统目标之间找到一个平衡点。系统目标包括但不限于功能、性能、健壮性、开发周期、交付日期等，但这些目标往往都是矛盾的。<br>没有一个设计者会完全重新开始设计一个系统，他们总参考多个与目标系统相类似的系统，再从中进行甄别、取舍和补充来作为新系统的设计。<br>要成为优秀的设计者，了解、掌握、消化、总结前人和自己以前的设计成果是最好的、也是唯一的方法。</p>
-<p>优秀的系统设计一般在以下几个方面都很出色：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">组建的独立性。做到高内聚、低耦合。</span><br><span class="line">例外的识别和处理。</span><br><span class="line">防错和容错。</span><br></pre></td></tr></table></figure>
-<p>也有一些技术能够改进系统设计，这些方法包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">降低复杂性</span><br><span class="line">通过合约进行设计</span><br><span class="line">原型化设计</span><br><span class="line">错误树分析等</span><br></pre></td></tr></table></figure>
-
-<h1 id="三、软件设计的任务与活动"><a href="#三、软件设计的任务与活动" class="headerlink" title="三、软件设计的任务与活动"></a>三、软件设计的任务与活动</h1><p>软件设计时把软件需求变成软件表示的过程。<br>软件表示先是总体框架，然后在进一步细化，并在框架中填入细节。<br>1、从工程管理角度，软件设计可以分为两个步骤：<br>（1）概要设计：也称为高层设计<br>将软件需求转化为数据结构和软件的系统结构。<br>（2）详细设计：也称为底层设计<br>对结构表示进行细化，得到详细的数据结构与算法。<br>2、主要的设计方法比较<br>结构化设计的时代，主要设计方法包括Jackson方法和Parnas方法。结构化方法侧重于“模块相对独立且功能单一，使模块间联系弱、模块内联系强”；<br>Jackson方法是从数据结构导出模块结构。<br>Parnas方法是将可能引起变化的因素隐藏在有关模块内部，是这些因素变化时的影响范围受到限制。<br>近年来，对象技术凭借数据的高效封装和良好的消息机制，实现了高内聚、低耦合，成为现代软件设计的主流方法。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1455,7 +1505,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">61</span>
+          <span class="site-state-item-count">62</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
