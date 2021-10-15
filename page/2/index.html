@@ -197,6 +197,129 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">计算机基础知识（三）操作系统</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-12 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-12T00:00:00+08:00">2021-10-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-14 14:29:53" itemprop="dateModified" datetime="2021-10-14T14:29:53+08:00">2021-10-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、掌握操作系统的概念和操作系统结构。"><a href="#1、掌握操作系统的概念和操作系统结构。" class="headerlink" title="1、掌握操作系统的概念和操作系统结构。"></a>1、掌握操作系统的概念和操作系统结构。</h1><p>操作系统（Operating System, OS）是计算机系统中的核心系统软件，负责管理和控制计算机系统中的硬件和软件资源，合理地组织计算机工作流程和有效地利用资源，在计算机与用户之间起接口的作用。操作系统为用户提供的接口表现形式一般为：命令、菜单、窗口之类的,而操作系统为应用程序提供的接口为API。</p>
+<p><img src="/images/bigdata/2-1.png"></p>
+<h1 id="2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。"><a href="#2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。" class="headerlink" title="2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。"></a>2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。</h1><h2 id="进程概念"><a href="#进程概念" class="headerlink" title="进程概念"></a>进程概念</h2><p>处理机是计算机系统的核心资源。操作系统的功能之一就是处理机管理。随着计算机的迅速发展，处理机管理显得更为重要，这主要由于计算机的速度越来越快，处理机的充分利用有利于系统效率的大大提高；处理机管理是整个操作系统的重心所在，其管理的好坏直接影响到整个系统的运行效率；而且操作系统中并发活动的管理和控制是在处理机管理下实现的，处理机管理集中了操作系统中最复杂的部分，它设计的好坏关系到整个系统的成败。</p>
+<p>进程是处理机管理中最基本的、最重要的概念。进程是系统并发执行的体现。由于在多道程序系统中，众多的计算机用户都以各种各样的任务，随时随地争夺使用处理机。为了动态地看待操作系统，则以进程作为独立运行的基本单位，以进程作为分配资源的基本单位，从进程的角度来究操作系统。因此，处理机管理也被称为进程管理。处理机管理的功能就是组织和协调用户对处理机的争夺使用，把处理机分配给进程，对进程进行管理和控制，最大限度也发挥处理机的作用。</p>
+<p>由进程运行的间断性，决定了进程至少具有以下三种状态：<br>(1) 就绪状态。当进程分配了除 CPU 以外的所有必要的资源后，只要能再获得处理机，便能立即执行，把这时的进程状态称为就绪状态。在一个系统中，可以有多个进程同时处于就绪状态，通常把它们排成一个队列，称为就绪队列。<br>(2) 执行状态指进程已获得处理机，其程序正在执行。在单处理机系统中，只能有个进程处于执行状态。<br>(3)阻塞状态指进程因发生某事件(如请求、I/O、申请缓冲空间等）而暂停执行时的状态，亦即进程的执行受到阻塞，故称这种暂停状态为阻塞状态，有时也称为“等待”状态，或“睡眠”状态。通常将处于阻塞状态的进程排成一个队列，称为阻塞队列。</p>
+<p><img src="/images/bigdata/2-2.png"></p>
+<p>具有挂起操作的进程状态的演变情况如下。</p>
+<p><img src="/images/bigdata/2-3.png"></p>
+<h2 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h2><p>进程同步定义为：把异步环境下的一组并发进程因直接制约而互相发送消息而进行互相合作、互相等待，使得各进程按一定的速度执行的过程称为进程同步。也就是说进程之间是异步执行的，同步即是使各进程按一定的制约顺序和速度执行。</p>
+<h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><p>进程调度即处理器调度（又称上下文转换），它的主要功能是确定在什么时候分配处理器，并确定分给哪一个进程，即让正在执行的进程改变状态并转入就绪队列的队尾，再由调度原语将就绪队列的队首进程取出，投入执行。</p>
+<p>引起进程调度的原因有以下几类：<br> (1) 正在执行的进程执行完毕。<br> (2) 执行中的进程自己调用阻塞原语将自己阻塞起来进入睡眠状态。<br> (3) 执行中的进程调用了 P 原语操作，从而因资源不足而阻塞；或调用 V 原语操作激活了等待资源的进程队列。<br> (4) 在分时系统中，当一进程用完一个时间片。<br> (5) 就绪队列中某进程的优先级变得高于当前执行进程的优先级，也将引起进程调度。</p>
+<p>进程调度的方式有两类：剥夺方式与非剥夺方式。所谓非剥夺方式是指，一旦某个作业或进程占用了处理器，别的进程就不能把处理器从这个进程手中夺走，直到该进程自己因调用原语操作而进入阻塞状态，或时间片用完而让出处理机；剥夺方式是指，当就绪队列中有进程的优先级高于当前执行进程的优先级时，便立即发生进程调度，转让处理机。</p>
+<p>进程调度的算法是服务于系统目标的策略，对于不同的系统与系统目标，常采用不同的调度算法：<br>(1) 先来先服务（First Come and First Serverd, FCFS）调度算法，又称先进先出（First In  and First Out, FIFO）。就绪队列按先来后到原则排队。<br>(2) 优先数调度。优先数反映了进程优先级，就绪队列按优先数排队。有两种确定优先级的方法，即静态优先级和动态优先级。静态优先级是指进程的优先级在进程开始执行前确定，执行过程中不变，而动态优先级则可以在进程执行过程中改变。<br>(3) 轮转法（Round Robin）。就绪队列按 FCFS 方式排队。每个进程执行一次占有处理器时间都不超过规定的时间单位（时间片）若超过，则自行释放自己所占有的 CPU 而排到就绪队列的末尾，等待下一次调度。同时，进程调度程序又去调度当前就绪队列中的第个进程。</p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p>进程管理是操作系统的核心，在进程管理的实现中，如果设计不当，会出现一种尴尬的局面一一死锁。</p>
+<p>当若干个进程互相竟争对方已占有的资源，无限期地等待，不能向前推进时会造成“死锁”。例如，P1 进程占有资源 R1, P2 进程占有资源 R2, 这时，P1 又需要资源 R2, P2 也需要资源 R1, 它们在等待对方占有的资源时，又不会释放自己占有的资源，因而使双方都进入了无限等待状态。</p>
+<p>死锁是系统的一种出错状态，它不仅会浪费大量的系统资源，甚至还会导致整个系统的崩溃，所以死锁是应该尽量预防和避免的。<br>(1) 死锁条件。产生死锁的主要原因是供共享的系统资源不足，资源分配策略和进程的推进顺序不当。系统资源既可能是可重复使用的永久性资源，也可能是消耗性的临时资源。产生死锁的必要条件是：互斥条件、保持和等待条件、不剥夺条件和环路等待条件。<br>(2) 解决死锁的策略。处于死锁状态的进程不能继续执行但又占用了系统资源，从而阻碍其他作业的执行。</p>
+<p>解决死锁有两种策略：一种是在死锁发生前采用的预防和避免策略；另一种是在死锁发生后采用的检测与恢复策略。<br>死锁的预防主要是通过打破死锁产生的 4 个必要条件之一来保证不会产生死锁。采用的死锁预防策略通常有资源的静态分配法或有序分配法，它们分别打破了资源动态分配条件和循环等待条件，因此不会发生死锁。但这样做会大大降低系统资源的利用率和进程之间的并行程度。<br>死锁避免策略，则是在系统进行资源分配时，先执行一个死锁避免算法（典型的如银行家算法），以保证本次分配不会导致死锁发生。由于资源分配很频繁，因此死锁避免策略要耗费大量的 CPU 和时间。</p>
+<h1 id="3、掌握内存管理，包括内存管理策略和虚拟内存管理。"><a href="#3、掌握内存管理，包括内存管理策略和虚拟内存管理。" class="headerlink" title="3、掌握内存管理，包括内存管理策略和虚拟内存管理。"></a>3、掌握内存管理，包括内存管理策略和虚拟内存管理。</h1><p>存储管理主要是指对内存储器的管理，负责对内存的分配和回收、内存的保护和内存的扩充。存储管理的目的是尽量提高内存的使用效率。存储管理的机制经历了多次变迁，由以前的单一连续区管理到分区存储管理再发展为段页式管理。目前前两种技术已逐步被淘汰，下面我们将详细解读段页式存储管理。</p>
+<h2 id="段页式存储管理"><a href="#段页式存储管理" class="headerlink" title="段页式存储管理"></a>段页式存储管理</h2><h3 id="1．页式存储管理"><a href="#1．页式存储管理" class="headerlink" title="1．页式存储管理"></a>1．页式存储管理</h3><p>分页的基本思想是把程序的逻辑空间和内存的物理空间按照同样的大小划分成若干页面，并以页面为单位进行分配。在页式存储管理中，系统中虚地址是一个有序对（页号，位移）。系统为每一个进程建立一个页表，其内容包括进程的逻辑页号与物理页号的对应关系、状态等。<br>为此，在装入作业时，就应在该作业的页表中指出哪些页已在内存储器中，哪些页还没有装入内存。可用一个标志位指示对应页是否在内存储器，可假设标志位为 1 表示该页在内存，而标志位为 0 表示该页尚未装入内存。为了能方便地从磁盘上找到作业信息的副本，故在页表中还可指出每一页副本在磁盘上的位置。<br>当要装入一个当前需要的页面时，如果内存储器中无空闲块，则可选择一个已在内存储器中的页面，把它暂时调出内存。若在执行中该页面被修改过，则把该页信息重新写回到磁盘上，否则不必重新写回磁盘。当一页被暂时调出内存后，让出的内存空间用来存放当前需要使用的页面。以后再使用被调出的页面时，可用同样的方法调出另一个页面而将其再装入内存。页面被调出或装入之后都要对页表中的相应表目做修改。<br>当内存中无空闲块时，为了装入一个页面而必须按某种算法从已在内存的页中选择一页，将它暂时调出内存，让出内存空间以存放所需装入的页面，这个工作称为“页面调度”。如何选择调出的页面是很重要的，如果采用了一个不合适的算法，就会出现这样的现象：刚被调出的页面又立即要用，因而又要把它装入，而装入不久又被选中调出，调出不久又被装入，如此反复，使调度非常频繁。这种现象称为“抖动”。一个好的调度算法应减少或避免抖动现象。常用的页面调度算法有：<br>(1) 最优（OPT）算法。选择不再使用或最远的将来才被使用的页，这是理想的算法，但是难以实现，常用于淘汰算法的比较。<br>(2) 随机（RAND）算法。随机地选择被淘的页，开销小，但是可能选中立即就要访问的页。<br>(3) 先进先出算法。选择在内存驻留时间最长的页似乎合理，但可能淘汰掉频繁使用的页。另外，使用 FIFO 算法时，在未给予进程分配足够的页面数时，有时会出现给予进程的页面数增多，缺页次数反而增加的异常现象。FIFO 算法简单，易实现。可以把装入内存储器的那些页的页号按进入的先后顺序排成队列，每次总是调出队首的页，当装入一个新页后，把新页的页号排到队尾。<br>(4) 最近最少使用（Least Recently Used, LRU）算法。选择离当前时间最近的一段时间内使用得最少的页。这个算法的主要出发点是，如果某个页被访问了，则它可能马上就要被访问；反之，如果某个页长时间未被访问，则它在最近一段时间也不会被访问。</p>
+<h3 id="2．段式存储管理"><a href="#2．段式存储管理" class="headerlink" title="2．段式存储管理"></a>2．段式存储管理</h3><p>段式存储管理与页式存储管理相似。分段的基本思想是把用户作业按逻辑意义上有完整意义的段来划分，并以段为单位作为内外存交换的空间尺度。<br>个作业是由若干个具有逻辑意义的段（如主程序、子程序、数据段等）组成。分段系统中，容许程序（作业）占据内存中许多分离的分区。每个分区存储一个程序分段。这样，每个作业需要几对界限地址寄存器，判定访问地址是否越界也就更困难了。在分段存储系统中常常利用存储保护键实现存储保护。分段系统中虚地址是一个有序对（段号，位移）。系统为每个作业建立一个段表，其内容包括段号、段长、内存起始地址和状态等。状态指出这个段是否已调入内存，即内存起始地址指出这个段，状态指出这个段的访问权限。<br>分段系统的动态地址转换是这样进行的：进程执行时，其段表的首地址已在基本地址寄存器中，执行的指令访问虚存（s, d)（取指令或取操作数）时，首先根据段号 s 査段表，若段已经调入内存，则得到该段的内存起始地址，然后与段内相对地址（段内偏移量 d 相加，得到实地址。如果该段尚未调入内存，则产生缺段中断，以装入所需要的段。<br>段式虚拟存储管理仍然以段式存储管理为基础，为用户提供比内存实际容量大的虚拟空间。段式虚拟存储管理把作业中的各个分段信息都保留在磁盘上，当作业可以投入执行时，做如下操作：<br>(1) 首先把当前需要的一段或几段装入内存。<br>(2) 作业执行时，如果要访问的段已经在内存，则按照“段式存储管理”中的方式进行地址转换；如果要访问的段不在内存中，则产生一“缺段中断”，由操作系统把当前需要的段装入内存。<br>因此，在段表中应增设段是否在内存的标志以及各段在磁盘上的位置，已在内存中的段仍要指出该段在内存中的起始地址和占用内存区长度。<br>作业执行要访问的段时，由硬件的地址转换机构査段表。若该段在内存中，则立即把逻辑地址转换成绝对地址；若该段不在内存中，则形成“缺段中断”，由操作系统处理这个中断。<br>处理的办法是，査内存分配表，找出一个足够大的连续区以容纳该分段，如果找不到足够大的连续区则检査空闲区的总和，若空闲区总和能满足该段要求，那么进行适当移动将分散的空闲区集中；若空闲区总和不能满足该段要求，可把内存中的一段或几段调出，然后把当前要访问的段装入内存中。段被移动、调出和装入后都要对段表中的相应表目做修改。新的段被装入后应让作业重新执行被中断的指令，这时就能找到要访问的段，也可以继续执行下去。</p>
+<h3 id="3．段页式存储管理"><a href="#3．段页式存储管理" class="headerlink" title="3．段页式存储管理"></a>3．段页式存储管理</h3><p>段页式管理是段式和页式两种管理方法结合的产物，综合了段式组织与页式组织的特点，根据程序模块分段，段内再分页，内存被分划成定长的页。段页式系统中虚地址形式是（段号、页号、页内偏移）。系统为每个进程建立一个段表，为每个段建立一个页表。段页式管理采用段式分配、页式使用的方法，便于动态连接和存储的动态分配。这种存储管理能提高内存空间的利用率。<br>段式虚拟管理还是以段为单位分配内存空间，整段的调出、装入，有时还要移动，这些都增加了系统的开销。如果按段页式存储管理的方式，把每一段再分成若干页面，那么，每段不必占用连续的存储空间；甚至当内存块不够时，可只将一段中的部分页面装入内存这种管理方式称为“段页式虚拟存储管理”。<br>段页式虚拟存储管理为每一个装入内存的作业建立一张段表，还要为每一段建立页表。段表中指出该段的页表存放位置及长度，页表中应指出该段的各页在磁盘上的位置以及页是否在内存中，若在内存中则填上占用的内存块号。作业执行时按段号查段表，找到相应的页表再根据页号查页表，由标志位判定该页是否已在内存，若是，则进行地址转换；否则进行页面调度。<br>段页式虚拟存储管理结合了段式和页式的优点，但增加了设置表格（段表、页表）和査表等开销，段页式虚拟存储器一般只在大型计算机系统中使用。</p>
+<h1 id="4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和-I-O-系统。"><a href="#4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和-I-O-系统。" class="headerlink" title="4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和 I/O 系统。"></a>4、了解存储管理，包括文件系统、文件系统实现、大容量存储结构和 I/O 系统。</h1><h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><p>文件系统是操作系统用于明确存储设备（常见的是磁盘，也有基于NAND Flash的固态硬盘）或分区上的文件的方法和数据结构；即在存储设备上组织文件的方法。操作系统中负责管理和存储文件信息的软件机构称为文件管理系统，简称文件系统。</p>
+<h2 id="文件系统实现"><a href="#文件系统实现" class="headerlink" title="文件系统实现"></a>文件系统实现</h2><p>文件系统由三部分组成：文件系统的接口，对对象操纵和管理的软件集合，对象及属性。</p>
+<p>从系统角度来看，文件系统是对文件存储设备的空间进行组织和分配，负责文件存储并对存入的文件进行保护和检索的系统。具体地说，它负责为用户建立文件，存入、读出、修改、转储文件，控制文件的存取，当用户不再使用时撤销文件等。</p>
+<h2 id="大容量存储结构"><a href="#大容量存储结构" class="headerlink" title="大容量存储结构"></a>大容量存储结构</h2><p><img src="/images/bigdata/2-4.png"></p>
+<h2 id="I-O-系统"><a href="#I-O-系统" class="headerlink" title="I/O 系统"></a>I/O 系统</h2><p>概念I/O系统,英文全称为“Input output system”，中文全称为“输入输出系统”，由输入输出控制系统和外围设备两部分组成，是计算机系统的重要组成部分。在计算机系统中，通常把处理器和主存储器之外的部分称为输入输出系统。<br>作用：对指定外设进行I/O操作，同时完成许多其他的控制。包括外设编址，数据通路的建立，向主机提供外设的状态信息等。<br>结构输入输出控制系统：在计算机中对外围设备实施控制的系统。主要功能是：向外围设备发送动作命令、控制输入输出数据的传送、检测外围设备的状态。输入输出设备必须通过该系统同中央处理器和主存储器交换数据。<br>输入输出控制系统按控制方式分为中央处理器程序控制、直接存储器存取控制、输入输出处理机控制三种。输入输出处理机控制又由通道控制方式和外围处理机控制方式组成。<br>应用：现代计算机系统中配置了大量的外围设备，即I/O设备。依据它们的工作方式的不同，通常进行如下分类。<br>（1）字符设备（character device），又叫做人机交互设备。用户通过这些设备实现与计算机系统的通信。它们大多是以字符为单位发送和接受数据的，数据通信的速度比较慢。例如，键盘和显示器为一体的字符终端、打印机、扫描仪、包括鼠标等，还有早期的卡片和纸带输入和输出机。含有显卡的图形显示器的速度相对较快，可以用来进行图像处理中的复杂图形的显示。<br>（2）块设备（block device），又叫外部存储器，用户通过这些设备实现程序和数据的长期保存。与字符设备相比，它们是以块为单位进行传输的，如磁盘、磁带和光盘等。块的常见尺寸为512~32768B之间。<br>（3）网络通信设备。这类设备主要有网卡、调制解调器等，主要用于与远程设备的通信。这类设备的传输速度比字符设备高，但比外部存储器低。这种分类的方法并不完备，有些设备并没有包括。例如，时钟既不是按块访问，也不是按字符访问，它所做的是按照预先规定好的时间间隔产生中断。但是这种分类足以使操作系统构造出处理I/O设备的软件，使它们独立于具体的设备。</p>
+<h1 id="5、了解系统保护与安全。"><a href="#5、了解系统保护与安全。" class="headerlink" title="5、了解系统保护与安全。"></a>5、了解系统保护与安全。</h1><p>保护和安全性要求保护计算机资源，例如CPU，软件，内存等。这扩展到操作系统以及系统中的数据。这可以通过确保操作系统中的完整性，机密性和可用性来完成。该系统必须防止未经授权的访问，病毒，蠕虫等。</p>
+<h2 id="保护与安全威胁"><a href="#保护与安全威胁" class="headerlink" title="保护与安全威胁"></a>保护与安全威胁</h2><p>威胁是一种本质上是恶意的程序，会对系统造成有害影响。系统中发生的一些常见威胁是-</p>
+<h2 id="病毒"><a href="#病毒" class="headerlink" title="病毒"></a>病毒</h2><p>病毒通常是嵌入在系统中的一小段代码。它们非常危险，会损坏文件，破坏数据，崩溃系统等。它们还可以通过根据需要进行自我复制而进一步传播。</p>
+<h2 id="特洛伊木马"><a href="#特洛伊木马" class="headerlink" title="特洛伊木马"></a>特洛伊木马</h2><p>特洛伊木马可以秘密访问系统的登录详细信息。然后，恶意用户可以使用它们以无害的方式进入系统并造成严重破坏。</p>
+<h2 id="活板门"><a href="#活板门" class="headerlink" title="活板门"></a>活板门</h2><p>活板门是一种安全漏洞，可能会在用户不知情的情况下出现在系统中。恶意人员可以利用它来损坏系统中的数据或文件。</p>
+<h2 id="虫"><a href="#虫" class="headerlink" title="虫"></a>虫</h2><p>蠕虫可以通过极端利用其资源来破坏系统。它可以生成多个副本，这些副本要求所有资源，并且不允许任何其他进程访问它们。蠕虫可以通过这种方式关闭整个网络。</p>
+<h2 id="拒绝服务"><a href="#拒绝服务" class="headerlink" title="拒绝服务"></a>拒绝服务</h2><p>这些类型的攻击不允许合法用户访问系统。它使请求不堪重负，使系统不堪重负，无法为其他用户正常使用。</p>
+<h2 id="保护和安全方法"><a href="#保护和安全方法" class="headerlink" title="保护和安全方法"></a>保护和安全方法</h2><p>可以为不同的计算机系统提供保护和安全性的不同方法是-</p>
+<h2 id="认证方式"><a href="#认证方式" class="headerlink" title="认证方式"></a>认证方式</h2><p>这涉及识别系统中的每个用户并确保他们是他们声称的身份。操作系统确保所有用户在访问系统之前均已通过身份验证。确保用户真实性的不同方法是：</p>
+<ol>
+<li><p>用户名密码<br>每个用户都有不同的用户名和密码组合，他们需要正确输入用户名才能访问系统。</p>
+</li>
+<li><p>用户键/用户卡<br>用户需要将卡打孔到卡槽中，或者使用键盘上的单个键来访问系统。</p>
+</li>
+<li><p>用户属性识别<br>可以使用的不同用户属性标识包括指纹，视网膜眼等。这些属性标识对于每个用户都是唯一的，并与数据库中的现有样本进行比较。如果存在匹配项，则用户只能访问系统。</p>
+</li>
+</ol>
+<h2 id="一次性密码"><a href="#一次性密码" class="headerlink" title="一次性密码"></a>一次性密码</h2><p>这些密码为身份验证提供了很大的安全性。每次用户想要进入系统时，都可以专门为登录生成一次密码。不能多次使用。一次性密码的实现方式有以下几种：</p>
+<ol>
+<li><p>随机数<br>系统可以要求与预先排列的字母相对应的数字。每次需要登录时，都可以更改此组合。</p>
+</li>
+<li><p>键<br>硬件设备可以创建与用于登录的用户ID相关的键。该键可以每次更改。</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1259,137 +1382,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/" class="post-title-link" itemprop="url">设计模式（一）设计模式概述</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-09 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-09T00:00:00+08:00">2021-10-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:37:58" itemprop="dateModified" datetime="2021-10-11T10:37:58+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="一、设计模式的概念"><a href="#一、设计模式的概念" class="headerlink" title="一、设计模式的概念"></a>一、设计模式的概念</h1><p>设计模式解决的是一类问题。<br>工厂模式就是为了解决类创建的问题，<br>适配器模式则是为了解决类接口不匹配的问题。</p>
-<p>(1)学习这些模式是一个方面，另一方面更要了解模式中的思想。<br>(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。</p>
-<h1 id="二、设计模式的组成"><a href="#二、设计模式的组成" class="headerlink" title="二、设计模式的组成"></a>二、设计模式的组成</h1><p>在描述一个设计模式时，至少需要包含四个方面:<br>模式名称(Pattern name)、<br>问题(Problem)、<br>解决方案(Solution)、<br>效果(Consequence)。</p>
-<h1 id="三、GoF设计模式"><a href="#三、GoF设计模式" class="headerlink" title="三、GoF设计模式"></a>三、GoF设计模式</h1><h2 id="补充-简单工厂"><a href="#补充-简单工厂" class="headerlink" title="(补充)简单工厂"></a>(补充)简单工厂</h2><p>1、写一个工厂类，使用静态方法，根据传参来new不同的产品对象<br>2、客户端调用这个工厂类的静态方法，就可以获取想要的产品</p>
-<h2 id="1-Factory-Method-模式。工厂模式"><a href="#1-Factory-Method-模式。工厂模式" class="headerlink" title="(1)Factory Method 模式。工厂模式"></a>(1)Factory Method 模式。工厂模式</h2><p>Factory Method 模式提供了一种延迟创建类的方法，使用 这个方法可以在运行期由子类决定创建哪一个类的实例。<br>1、写一个抽象工厂类，每个工厂实现类负责将new不同种类的产品。<br>2、客户端new不同的工厂实现类就可以获得不同的产品。</p>
-<h2 id="2-Abstract-Factory-模式。抽象工厂模式"><a href="#2-Abstract-Factory-模式。抽象工厂模式" class="headerlink" title="(2)Abstract Factory 模式。抽象工厂模式"></a>(2)Abstract Factory 模式。抽象工厂模式</h2><p>Abstract Factory 又称为抽象工厂模式，该模式主要为解决 复杂系统中对象创建的问题。抽象工厂模式提供了一个一致的对象创建接口来创建一系列具 有相似基类或相似接口的对象。<br>1、写一个抽象工厂类，然后每个工厂实现类负责new一组不同的种类的产品。<br>2、客户端new需要某一组的产品，只需要new一个工厂即可。</p>
-<h2 id="3-Builder-模式。建造者模式"><a href="#3-Builder-模式。建造者模式" class="headerlink" title="(3)Builder 模式。建造者模式"></a>(3)Builder 模式。建造者模式</h2><p>Builder 模式与 Abstract Factory 模式非常类似，但 Builder 模式是逐步地构造出一个复杂对象，并在最后返回对象的实例。Builder 模式可以把复杂对象的创建与表示分离，使得同样的创建过程可以创建不同的表示。<br>1、Builder：给出一个抽象接口，以规范产品对象的各个组成成分的建造。这个接口规定要实现复杂对象的哪些部分的创建，并不涉及具体的对象部件的创建。<br>2、ConcreteBuilder：实现Builder接口，针对不同的商业逻辑，具体化复杂对象的各部分的创建。在建造过程完成后，提供产品的实例。<br>3、Director：调用具体建造者来创建复杂对象的各个部分，在指导者中不涉及具体产品的信息，只负责保证对象各部分完整创建或按某种顺序创建，是一个具体的类。<br>4、Product：要创建的复杂对象类。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Director &#123;</span><br><span class="line">    </span><br><span class="line">    public Product constructProduct(ConcreteBuilder concreteBuilder)&#123;</span><br><span class="line">        concreteBuilder.buildBasic();</span><br><span class="line">        concreteBuilder.buildWalls();</span><br><span class="line">        concreteBuilder.roofed();</span><br><span class="line">        return concreteBuilder.buildProduct();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-Prototype-模式。原型模式"><a href="#4-Prototype-模式。原型模式" class="headerlink" title="(4)Prototype 模式。原型模式"></a>(4)Prototype 模式。原型模式</h2><p>Prototype 模式可以根据原型实例制定创建的对象的种类，并通过深复制这个原型来创建新的对象。Prototype 模式有着同 Abstract Factory 模式和 Builder 模式相同的效果，不过当需要实例化的类是在运行期才被指定的而且要避免创建一个与产品 曾是平行的工厂类层次时，可以使用 Prototype 模式。使用 Prototype 模式可以在运行时 增加或减少原型，比 Abstract Factory 和 Builder 模式更加灵活。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Prototype pro = new Prototype();</span><br><span class="line">Prototype pro1 = (Prototype)pro.clone();</span><br></pre></td></tr></table></figure>
-<h2 id="5-Singleton-模式。单例模式"><a href="#5-Singleton-模式。单例模式" class="headerlink" title="(5)Singleton 模式。单例模式"></a>(5)Singleton 模式。单例模式</h2><p>Singleton 模式也是一种很有代表性的模式。使用 Singleton 模式 可以保证一个类仅有一个实例，从而可以提供一个单一的全局访问点。</p>
-<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>在定义类的静态私有变量同时进行实例化。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">        return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>好处：线程安全；获取实例速度快<br>缺点：类加载即初始化实例，内存浪费</p>
-<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private volatile static Singleton singleton;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static Singleton getSingleton() &#123;</span><br><span class="line">        if (singleton == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>优点：线程安全，进行双重检查，保证只在实例未初始化前进行同步，效率高<br>缺点：实例非空判断，耗费一定资源</p>
-<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private static class SingletonHolder &#123;</span><br><span class="line">        private static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingletonHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种方式利用了classloder的机制来保证初始化instance时只有一个线程，但singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。如果实例化instance很消耗资源，我们想让他延迟加载，此外，我们不希望在Singleton类加载时就实例化，因为不能确保Singleton类还可能在其他的地方被主动使用从而被加载。这个时候，这种方式相比饿汉式就显得更合理。</p>
-<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>优点：写法简单，天然线程安全，可防止反射生成实例，是Effective Java作者Josh Bloch提倡的方式。</p>
-<h2 id="6-Adapter-模式。适配者模式"><a href="#6-Adapter-模式。适配者模式" class="headerlink" title="(6)Adapter 模式。适配者模式"></a>(6)Adapter 模式。适配者模式</h2><p>Adapter 模式可以解决系统间接口不相容的问题。通过 Adapter 可以把类的接口转化为客户程序所希望的接口，从而提高复用性。<br>实现原来的接口，方法体却是另一个对象的实现。</p>
-<h3 id="接口适配"><a href="#接口适配" class="headerlink" title="接口适配"></a>接口适配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">interface Mp4&#123;</span><br><span class="line">    void playMp4();</span><br><span class="line">&#125;</span><br><span class="line">interface Avi&#123;</span><br><span class="line">    void playAvi();</span><br><span class="line">&#125;</span><br><span class="line">class VideoPlayer implements Mp4&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void playMp4() &#123;</span><br><span class="line">        System.out.println(&quot;播放Mp4格式的视频文件.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class FormatFactory extends VideoPlayer  implements Avi&#123;    </span><br><span class="line">    @Override</span><br><span class="line">    public void playAvi() &#123;</span><br><span class="line">        //转换成MP4格式的视频</span><br><span class="line">        playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;        </span><br><span class="line">    Mp4 mp4=new VideoPlayer();</span><br><span class="line">    mp4.playMp4();</span><br><span class="line">    Avi avi=new FormatFactory();</span><br><span class="line">    avi.playAvi();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="类适配"><a href="#类适配" class="headerlink" title="类适配"></a>类适配</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class FormatFactory2 implements Rvmb&#123;</span><br><span class="line">    private Mp4 mp4;</span><br><span class="line">    public FormatFactory2(Mp4 mp4) &#123;</span><br><span class="line">        this.mp4=mp4;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void playRvmb() &#123;</span><br><span class="line">        mp4.playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Rvmb rvmb=new FormatFactory2(new VideoPlayer());</span><br><span class="line">    rvmb.playRvmb();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="7-Bridge-模式。桥接模式"><a href="#7-Bridge-模式。桥接模式" class="headerlink" title="(7)Bridge 模式。桥接模式"></a>(7)Bridge 模式。桥接模式</h2><p>Bridge 模式把类的抽象部分同实现部分相分离，这样类的抽象和实现都可以独立地变化。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">interface Pen&#123;</span><br><span class="line">    void write();</span><br><span class="line">&#125;</span><br><span class="line">class RedPen implements Pen&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class  Paper&#123;</span><br><span class="line">    protected  Pen pen;</span><br><span class="line">    void setPen(Pen pen)&#123;</span><br><span class="line">        this.pen=pen;</span><br><span class="line">    &#125;   </span><br><span class="line">    abstract void writing();</span><br><span class="line">&#125;</span><br><span class="line">class ExaminationPaper extends Paper&#123;</span><br><span class="line">    @Override</span><br><span class="line">    void writing() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Paper paper=new ExaminationPaper();</span><br><span class="line">    paper.setPen(new RedPen());</span><br><span class="line">    paper.writing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="8-Composite-模式。复合模式"><a href="#8-Composite-模式。复合模式" class="headerlink" title="(8)Composite 模式。复合模式"></a>(8)Composite 模式。复合模式</h2><p>Composite 模式提供了一种以树形结构组合对象的方法，使用Composite 可以使单个对象和组合后的对象具有一致性以提高软件的复用性。</p>
-<h2 id="9-Decorator-模式。装饰模式"><a href="#9-Decorator-模式。装饰模式" class="headerlink" title="(9)Decorator 模式。装饰模式"></a>(9)Decorator 模式。装饰模式</h2><p>Decorator 模式可以动态地为对象的某一个方法增加更多的功能。在很多时候，使用 Decorator 模式可以不必继承出新的子类从而维护简洁的类继承结构。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">	private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="10-Facade-模式。外观模式，门面模式"><a href="#10-Facade-模式。外观模式，门面模式" class="headerlink" title="(10)Facade 模式。外观模式，门面模式"></a>(10)Facade 模式。外观模式，门面模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">public class FacadePattern &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Facade f = new Facade();</span><br><span class="line">        f.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Facade &#123; //外观角色</span><br><span class="line">    private SubSystem01 obj1 = new SubSystem01();</span><br><span class="line">    private SubSystem02 obj2 = new SubSystem02();</span><br><span class="line">    private SubSystem03 obj3 = new SubSystem03();</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        obj1.method1();</span><br><span class="line">        obj2.method2();</span><br><span class="line">        obj3.method3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="11-Flyweight-模式。享元模式，共享元素"><a href="#11-Flyweight-模式。享元模式，共享元素" class="headerlink" title="(11)Flyweight 模式。享元模式，共享元素"></a>(11)Flyweight 模式。享元模式，共享元素</h2><p>Flyweight 模式可以共享大量的细粒度对象，从而节省创建对象 所需要分配的空间，不过在时间上的开销会变大。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public Flyweight factory(int state)&#123;</span><br><span class="line">    if(map.containsKey(state))&#123;</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        map.put(state, new ConcreteFlyweight(state));</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="12-Proxy-模式。代理模式"><a href="#12-Proxy-模式。代理模式" class="headerlink" title="(12)Proxy 模式。代理模式"></a>(12)Proxy 模式。代理模式</h2><p>Proxy 模式为对象提供了一种访问代理对象，通过对象 Proxy 可以控制客户程序的访问。例如:访问权限的控制、访问地址的控制、访问方式的控制等， 甚至可以通过 Proxy 将开销较大的访问化整为零，提高访问效率。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Customer customer=new Customer();</span><br><span class="line">customer.setCash(120000);</span><br><span class="line">BuyCarProxy buyCarProxy=new BuyCarProxy(customer);</span><br><span class="line">buyCarProxy.buyCar();</span><br></pre></td></tr></table></figure>
-<h2 id="13-Interpreter-模式。解释器模式"><a href="#13-Interpreter-模式。解释器模式" class="headerlink" title="(13)Interpreter 模式。解释器模式"></a>(13)Interpreter 模式。解释器模式</h2><p>定义了一个解释器，来解释遵循给定语言和文法的句子。<br>只需要向计算机输入一个句子或文件，就能按照预定的文法规则来对句子或文件进行解释。<br>例如输入“1+2+3-4+1”时，将输出计算结果为3。</p>
-<h2 id="14-Template-Method-模式。模板方法模式"><a href="#14-Template-Method-模式。模板方法模式" class="headerlink" title="(14)Template Method 模式。模板方法模式"></a>(14)Template Method 模式。模板方法模式</h2><p>定义一个操作的模板，其中的一些步骤会在子类中实现，以适应不同的情况。<br>在父类中定义处理流程的框架，在子类中实现具体的处理方式。</p>
-<h2 id="15-Chain-of-Responsibility-模式。责任链模式"><a href="#15-Chain-of-Responsibility-模式。责任链模式" class="headerlink" title="(15)Chain of Responsibility 模式。责任链模式"></a>(15)Chain of Responsibility 模式。责任链模式</h2><p>Chain of Responsibility 模式把可以响应请求的对象 组织成一条链，并在这条对象链上传递请求，从而保证多个对象都有机会处理请求而且可以 避免请求方和相应方的耦合。</p>
-<p>一个纯的责任链模式要求一个具体的处理者对象只能在两个行为中选择一个：一个是承担责任，二是把责任推给下家。不允许出现某一个具体处理者对象在承担了一部分责任后又把责任向下传的情况。</p>
-<p>在一个纯的责任链模式里面，一个请求必须被某一个处理者对象所接收；在一个不纯的责任链模式里面，一个请求可以最终不被任何接收端对象所接收。纯的责任链模式的例子是不容易找到的，一般看到的例子均是不纯的责任链模式的实现。</p>
-<h2 id="16-Command-模式。命令模式"><a href="#16-Command-模式。命令模式" class="headerlink" title="(16)Command 模式。命令模式"></a>(16)Command 模式。命令模式</h2><p>将请求封装为对象，从而增强请求的能力，如参数化、排队、 记录日志等。</p>
-<p>Command有时也被称为事件（event）。它与“事件驱动编程”中的“事件”是一样的意思。当发生点击鼠标、按下键盘按键等事件时，我们可以先将这些事件作成实例，然后按照发生顺序放入队列中。接着，再依次去处理它们。在GUI（graphical user interface）编程中，经常需要与“事件”打交道。即为在有多个命令，并且这些命令有一定的逻辑顺序，且可能需要保存的这些命令的数据，那么可以使用Command设计模式。</p>
-<h2 id="17-Iterator-模式。迭代器模式"><a href="#17-Iterator-模式。迭代器模式" class="headerlink" title="(17)Iterator 模式。迭代器模式"></a>(17)Iterator 模式。迭代器模式</h2><p>Iterator 模式提供了顺序访问一个对象集合中的各元素的方法， 使用 Iterator 可以避免暴露集合中对象的耦合关系。</p>
-<h2 id="18-Mediator-模式。仲裁者模式、中介者模式"><a href="#18-Mediator-模式。仲裁者模式、中介者模式" class="headerlink" title="(18)Mediator 模式。仲裁者模式、中介者模式"></a>(18)Mediator 模式。仲裁者模式、中介者模式</h2><p>Mediator 模式可以减少系统中对象间的耦合性。Mediator 模式 使用中介对象封装其他的对象，从而使这些被封装的对象间的关系就成了松散耦合。</p>
-<p>例如：QQ聊天</p>
-<h2 id="19-Memento-模式。备忘录模式"><a href="#19-Memento-模式。备忘录模式" class="headerlink" title="(19)Memento 模式。备忘录模式"></a>(19)Memento 模式。备忘录模式</h2><p>Memento 模式提供了一种捕获对象状态的方法，且不会破坏对 象的封装。并且可以在对象外部保存对象的状态，并在需要的时候恢复对象状态。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    List&lt;Memento&gt; savedTimes = new ArrayList&lt;&gt;();</span><br><span class="line">    Life life = new Life();</span><br><span class="line">    life.set(&quot;3000 A.D.&quot;);</span><br><span class="line">    savedTimes.add(life.saveToMemento());</span><br><span class="line">    life.set(&quot;4000 A.D.&quot;);</span><br><span class="line">    life.restoreFromMemento(savedTimes.get(0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="20-Observer-模式。观察者模式"><a href="#20-Observer-模式。观察者模式" class="headerlink" title="(20)Observer 模式。观察者模式"></a>(20)Observer 模式。观察者模式</h2><p>Observer 模式提供了将对象的状态广播到一组观察者的方式， 从而可以让每个观察者随时可以得到对象更新的通知。</p>
-<h2 id="21-State-模式。状态模式"><a href="#21-State-模式。状态模式" class="headerlink" title="(21)State 模式。状态模式"></a>(21)State 模式。状态模式</h2><p>State 模式允许一个对象在其内部状态改变的时候改变它的行为。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public void setState(State state) &#123;</span><br><span class="line">    System.out.println(&quot;订单信息已更新！&quot;);</span><br><span class="line">    this.state = state;</span><br><span class="line">    this.state.handle();</span><br><span class="line">&#125;</span><br><span class="line">public static  void  main(String [] args) &#123;</span><br><span class="line">    Context context = new Context();</span><br><span class="line">    context.setState(new Booked());</span><br><span class="line">    context.setState(new Payed());</span><br><span class="line">    context.setState(new Sended());</span><br><span class="line">    context.setState(new InWay());</span><br><span class="line">    context.setState(new Recieved());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="22-Strategy-模式。策略模式"><a href="#22-Strategy-模式。策略模式" class="headerlink" title="(22)Strategy 模式。策略模式"></a>(22)Strategy 模式。策略模式</h2><p>使用 Strategy 模式可以让对象中算法的变化独立于客户。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">状态模式和策略模式的不同点：</span><br><span class="line">策略模式中，类的功能是根据当前条件主动更改；</span><br><span class="line">状态模式中，类的功能是被动由当前状态更改；</span><br><span class="line">策略模式中每个行为或算法之间没有关联；</span><br><span class="line">状态模式中的状态之间有关联，并且状态本身控制着状态转移；</span><br></pre></td></tr></table></figure>
-<h2 id="23-Visitor-模式。访问者模式"><a href="#23-Visitor-模式。访问者模式" class="headerlink" title="(23)Visitor 模式。访问者模式"></a>(23)Visitor 模式。访问者模式</h2><p>表示对某对象结构中各元素的操作，使用 Visitor 模式可以在不改<br>变各元素类的前提下定义作用于这些元素的新操作。</p>
-<p>双重分发</p>
-<h1 id="四、其他设计模式"><a href="#四、其他设计模式" class="headerlink" title="四、其他设计模式"></a>四、其他设计模式</h1><h2 id="1-Intercepting-Filter-模式。拦截过滤器模式"><a href="#1-Intercepting-Filter-模式。拦截过滤器模式" class="headerlink" title="(1)Intercepting Filter 模式。拦截过滤器模式"></a>(1)Intercepting Filter 模式。拦截过滤器模式</h2><p>在 J2EE 的 BPS(Basic Programming System，基本编程系 统)应用框架下，在真正响应客户端请求前经常需要进行一些预处理，如客户身份验证、客 户 Session 的合法性验证、字符集转码、客户请求记录等。</p>
-<h2 id="2-Session-Facade-模式。"><a href="#2-Session-Facade-模式。" class="headerlink" title="(2)Session Facade 模式。"></a>(2)Session Facade 模式。</h2><p>在 J2EE 开发领域，人们把Session Bean 和 Facade 模式结合起来， 封装业务逻辑的接口，形成了 Session Facade 模式。</p>
-<h1 id="五、设计模式与软件架构"><a href="#五、设计模式与软件架构" class="headerlink" title="五、设计模式与软件架构"></a>五、设计模式与软件架构</h1><p>软件架构更倾向于从整体和全局上描述软件的组成。<br>设计模式更侧重于类与类、对象与对象之间的关系。<br>设计模式和软件架构是面向不同层次问题的解决方案。</p>
-<h1 id="六、设计模式分类"><a href="#六、设计模式分类" class="headerlink" title="六、设计模式分类"></a>六、设计模式分类</h1><p>设计模式分为三类，分别为创建型、结构型和行为型。</p>
-<p><img src="/images/ruankao/8-1.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1461,7 +1453,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">69</span>
+          <span class="site-state-item-count">70</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1474,7 +1466,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
