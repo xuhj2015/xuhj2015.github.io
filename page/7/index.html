@@ -197,6 +197,101 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（二）需求分析与软件设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+08:00">2021-09-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>需求分析阶段的主要任务是通过开发人员与用户之间的广泛交流，不断澄清模糊的概念，最终形成一个完整的、清晰的、一直的需求说明。（做什么）</p>
+<p>在需求明确之后，下一步就是对软件系统进行设计。（怎么做）</p>
+<h1 id="一、需求分析的任务与过程"><a href="#一、需求分析的任务与过程" class="headerlink" title="一、需求分析的任务与过程"></a>一、需求分析的任务与过程</h1><p>需求分析主要是确定待开发软件的功能、性能、数据、界面等要求。<br>需求分析的步骤包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">获取当前系统的物理模型</span><br><span class="line">抽象出当前系统的逻辑模型</span><br><span class="line">建立目标系统的逻辑模型</span><br></pre></td></tr></table></figure>
+<p>需求分析工作的4个方面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">问题识别：用于发现需求、描述需求</span><br><span class="line">分析与综合：对问题进行分析，并给出解决方案</span><br><span class="line">编制需求分析的文档：输出《需求规格说明书》</span><br><span class="line">需求分析与评审：主要对功能的正确性、完整性和清晰性等给与评价。</span><br></pre></td></tr></table></figure>
+<h2 id="1、需求的分类"><a href="#1、需求的分类" class="headerlink" title="1、需求的分类"></a>1、需求的分类</h2><p>软件需求包括功能需求、非功能需求、设计约束三方面。<br><img src="/images/ruankao/5-5.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">功能需求：系统必须完成的事，为了向用户提供有用的功能，产品必须执行的动作。</span><br><span class="line">非功能需求：产品必须具备的属性或者品质，如性能、响应时间、可靠性、容错性、扩展性等。</span><br><span class="line">设计约束：也叫限制条件、补充规约，比如必须采用国内自主知识版权的数据库等。</span><br></pre></td></tr></table></figure>
+<p>除了上面三种需求之外，在其他维度，还有业务需求、用户需求、系统需求。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">业务需求：客户对系统、产品高层次的目标要求。</span><br><span class="line">用户需求：用户使用产品必须要完成上面任务，通过访谈、调查，从用户角度出发的需求。</span><br><span class="line">系统需求：从系统角度的需求，包括用特性说明的功能需求、质量属性、非功能需求及设计约束。</span><br></pre></td></tr></table></figure>
+<h2 id="2、需求工程"><a href="#2、需求工程" class="headerlink" title="2、需求工程"></a>2、需求工程</h2><p>创建和维护系统需求文档的所有活动，包括需求开发和需求管理两大工作。</p>
+<h3 id="（1）需求开发"><a href="#（1）需求开发" class="headerlink" title="（1）需求开发"></a>（1）需求开发</h3><p>包括需求捕获、需求分析、编写规格说明书和需求验证四个阶段。<br>需求开发是目标，是主线，是努力掌握客户对系统的需求。</p>
+<h3 id="（2）需求管理"><a href="#（2）需求管理" class="headerlink" title="（2）需求管理"></a>（2）需求管理</h3><p>包括需求基线、处理需求变更、需求跟踪等。<br>需求管理是支持，是保障，是对需求的变化进行管理的过程。</p>
+<h2 id="2、需求分析方法"><a href="#2、需求分析方法" class="headerlink" title="2、需求分析方法"></a>2、需求分析方法</h2><p>根据分析方法发展的历史，分为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">结构化分析方法</span><br><span class="line">软系统方法</span><br><span class="line">面向对象分析方法</span><br><span class="line">面向问题域的分析</span><br></pre></td></tr></table></figure>
+<h1 id="二、如何进行系统设计"><a href="#二、如何进行系统设计" class="headerlink" title="二、如何进行系统设计"></a>二、如何进行系统设计</h1><p>系统设计与其说是在设计，不如说是在选择和妥协。<br>妥协，就是在各个系统目标之间找到一个平衡点。系统目标包括但不限于功能、性能、健壮性、开发周期、交付日期等，但这些目标往往都是矛盾的。<br>没有一个设计者会完全重新开始设计一个系统，他们总参考多个与目标系统相类似的系统，再从中进行甄别、取舍和补充来作为新系统的设计。<br>要成为优秀的设计者，了解、掌握、消化、总结前人和自己以前的设计成果是最好的、也是唯一的方法。</p>
+<p>优秀的系统设计一般在以下几个方面都很出色：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">组建的独立性。做到高内聚、低耦合。</span><br><span class="line">例外的识别和处理。</span><br><span class="line">防错和容错。</span><br></pre></td></tr></table></figure>
+<p>也有一些技术能够改进系统设计，这些方法包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">降低复杂性</span><br><span class="line">通过合约进行设计</span><br><span class="line">原型化设计</span><br><span class="line">错误树分析等</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、软件设计的任务与活动"><a href="#三、软件设计的任务与活动" class="headerlink" title="三、软件设计的任务与活动"></a>三、软件设计的任务与活动</h1><p>软件设计时把软件需求变成软件表示的过程。<br>软件表示先是总体框架，然后在进一步细化，并在框架中填入细节。<br>1、从工程管理角度，软件设计可以分为两个步骤：<br>（1）概要设计：也称为高层设计<br>将软件需求转化为数据结构和软件的系统结构。<br>（2）详细设计：也称为底层设计<br>对结构表示进行细化，得到详细的数据结构与算法。<br>2、主要的设计方法比较<br>结构化设计的时代，主要设计方法包括Jackson方法和Parnas方法。结构化方法侧重于“模块相对独立且功能单一，使模块间联系弱、模块内联系强”；<br>Jackson方法是从数据结构导出模块结构。<br>Parnas方法是将可能引起变化的因素隐藏在有关模块内部，是这些因素变化时的影响范围受到限制。<br>近年来，对象技术凭借数据的高效封装和良好的消息机制，实现了高内聚、低耦合，成为现代软件设计的主流方法。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/17/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E8%BD%AF%E4%BB%B6%E9%87%8D%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -990,98 +1085,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/" class="post-title-link" itemprop="url">开发方法（二）软件开发模型</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-16 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-16T00:00:00+08:00">2021-09-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:54" itemprop="dateModified" datetime="2021-10-11T10:38:54+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="瀑布模型"><a href="#瀑布模型" class="headerlink" title="瀑布模型"></a>瀑布模型</h1><p>瀑布模型严格遵守软件生命周期各阶段的固定顺序，上一阶段完成后才能进入下一阶段，整个模型就像一个飞流直下的瀑布。<br><img src="/images/ruankao/2-1.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">可强迫开发人员采用规范的方法</span><br><span class="line">严格规定了各阶段必须提交的文档</span><br><span class="line">要求每个阶段结束后，都要进行严格评审</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">过于理想化</span><br><span class="line">缺乏灵活性</span><br><span class="line">无法再开发过程中逐步明确用户无法表达准确的需求</span><br></pre></td></tr></table></figure>
-<h1 id="瀑布V模型"><a href="#瀑布V模型" class="headerlink" title="瀑布V模型"></a>瀑布V模型</h1><p>瀑布V模型是瀑布模型的一种变体。在开发过程中任一阶段都可能引入缺陷，最后的测试只能在交付前发现更多的缺陷。瀑布V模型强调了测试。<br><img src="/images/ruankao/2-2.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">瀑布V模型不但保证了瀑布模型的阶段式文档驱动的特点，更强调了软件产品的验证工作</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需求分析集中在项目开始，而一旦需求不准确，存在偏差，之后的设计、实现、验证会放大偏差。</span><br><span class="line">瀑布模型后期维护工作相当繁重，而这些维护工作大都是修正需求阶段引入的缺陷，这个问题是瀑布模型难以克服的。</span><br></pre></td></tr></table></figure>
-<h1 id="快速原型模型"><a href="#快速原型模型" class="headerlink" title="快速原型模型"></a>快速原型模型</h1><p>快速原型是指在计算机上快速建立可以运行的程序或者界面。让用户能尽快了解系统的概貌，一旦用户确认了原型，就可以快速按照原型开发出满足用户真实需求的软件产品。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">特点：</span><br><span class="line">引入了迭代的概念</span><br><span class="line">强调用户参与</span><br><span class="line">在用户需求分析、系统功能描述、系统实现方法等方面允许有较大的灵活性，可以逐步完善。</span><br><span class="line">可以用来评价几种不同的设计方案</span><br><span class="line">可以用来建立系统的某个部分</span><br><span class="line">不排斥传统生命周期的有效的方法和工具，与传统方法互为补充。</span><br><span class="line"></span><br><span class="line">动态定义需求，适用于需求不明确的项目。</span><br><span class="line"></span><br><span class="line">不适合使用原型法的情况：</span><br><span class="line">缺乏使用的原型开发工具</span><br><span class="line">用户不参与、不积极配合开发过程</span><br><span class="line">用户的数据资源缺乏组织和管理</span><br><span class="line">用户的软件资源缺乏组织和管理</span><br></pre></td></tr></table></figure>
-
-<h1 id="演化模型"><a href="#演化模型" class="headerlink" title="演化模型"></a>演化模型</h1><p>演化模型也是一种原型化的开发方法。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">快速原型模型中，原型的用途是获取用户的真实需求，一旦需求确定了，原型就被抛弃，是一种“抛弃式”的原型化方法。</span><br><span class="line">演化模型中，则是从初始模型逐步演化为最终软件产品的渐进过程，是一种“渐进式”的原型化方法。</span><br><span class="line">一个演化模型可以看做若干次瀑布模型的迭代。</span><br></pre></td></tr></table></figure>
-
-<h1 id="增量模型"><a href="#增量模型" class="headerlink" title="增量模型"></a>增量模型</h1><p>增量模型是第三种原型化开发方法，它既不是“抛弃式”的，也不是“渐进式”的，而是“递增式”的。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在系统的技术架构成熟、风险较低的时候，可以采用增量的方式进行系统开发，</span><br><span class="line">这样可以提前进行集成测试和系统测试，缩短初始版本的发布周期，提高用户对系统的可见度，降低系统的风险。</span><br><span class="line">第一版本往往是系统的核心功能，可以满足用户最基本的需求。之后增量版本的功能逐步丰富、完善。</span><br><span class="line"></span><br><span class="line">注意：</span><br><span class="line">每一个版本都是一个完整的、可用的版本</span><br><span class="line">版本间的增量要均匀</span><br></pre></td></tr></table></figure>
-
-<h1 id="螺旋模型"><a href="#螺旋模型" class="headerlink" title="螺旋模型"></a>螺旋模型</h1><p>螺旋模型结合了瀑布模型和演化模型的有点，不仅体现了两个模型的优点，而且还强调了其他模型均忽略了的风险分析。<br>螺旋模型在“瀑布模型”的每一个开发阶段前，引入一个非常严格的风险识别、风险分析和风险控制。它把软件项目分解成一个个小项目，每个小项目都标识一个或多个主要风险，直到所有的主要风险因素都被确定。<br>螺旋模型特别适用于庞大而复杂、具有高风险的系统。<br><img src="/images/ruankao/2-3.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">螺旋模型支持需求的动态变化，为用户的关键决策提供了方便，有助于需求准确性；为项目管理决策调整提供了便利，从而降低软件开发风险。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要具有相当丰富的风险评估经验和专业知识，如果未能及时标识风险，势必会造成重大损失。</span><br><span class="line">过多的迭代次数会增加开发成本，延迟提交时间。</span><br></pre></td></tr></table></figure>
-
-<h1 id="构件组装模型"><a href="#构件组装模型" class="headerlink" title="构件组装模型"></a>构件组装模型</h1><p>利用软构件进行搭积木的方式开发。<br><img src="/images/ruankao/2-4.png"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">优点：</span><br><span class="line">让系统扩展更容易</span><br><span class="line">构件更容易被重用，降低软件开发成本</span><br><span class="line">构件粒度较小，开发任务更灵活，可用若干小组并行开发。</span><br><span class="line"></span><br><span class="line">缺点：</span><br><span class="line">需要经验丰富的架构师，设计不好的构件难以实现构件的优点，降低构件组装模型的重用度。</span><br><span class="line">在考虑重用度的时候，往往会在其他方面让步，比如性能。</span><br><span class="line">使用构件的时候，要求开发人员熟练掌握构件，增加了开发人员的学习成本。</span><br><span class="line">第三方构件的质量难以掌握，且会最终影响软件的质量。</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1153,7 +1156,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">71</span>
+          <span class="site-state-item-count">72</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
