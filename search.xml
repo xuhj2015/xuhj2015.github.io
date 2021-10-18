@@ -90,6 +90,108 @@
       </tags>
   </entry>
   <entry>
+    <title>信息化基础知识（一）电子政务</title>
+    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1/</url>
+    <content><![CDATA[<h1 id="1、电子政务的概念、内容和技术形式"><a href="#1、电子政务的概念、内容和技术形式" class="headerlink" title="1、电子政务的概念、内容和技术形式"></a>1、电子政务的概念、内容和技术形式</h1><h2 id="（1）掌握电子政务的概念"><a href="#（1）掌握电子政务的概念" class="headerlink" title="（1）掌握电子政务的概念"></a>（1）掌握电子政务的概念</h2><p>电子政务实质上是对现有的、工业时代形成的政府形态的一种改造，即利用信息技术和 其他相关技术，来构造更适合信息时代的政府组织结构和运行方式。因此，电子政务在概念、 内容和技术形式上都区别于现有政务。</p>
+<p>电子政务实质上是对现有的、工业时代形成的政府形态的一种改造，即利用信息技术和 其他相关技术，来构造更适合信息时代的政府组织结构和运行方式。现有的政府组织形态是 工业革命的产物，与工业化的行政管理的需求和技术经济环境相适应，已经存在了两百年以 上。随着网络时代和网络经济的来临，管理正由传统的金字塔模式走向网络模式。政府的组 织形态也必然由金字塔式的垂直结构向网状结构转变，从而减少管理的层次，以各种形式通 过网络与企业和公民建立直接的联系。因此，电子政务的发展过程实质上是对原有的政府形 态进行信息化改造的过程，通过不断的摸索和实践，最终构造出一个与信息时代相适应的政 府形态。</p>
+<h2 id="（2）熟悉电子政务的内容"><a href="#（2）熟悉电子政务的内容" class="headerlink" title="（2）熟悉电子政务的内容"></a>（2）熟悉电子政务的内容</h2><p>在社会中，与电子政务相关的行为主体主要有三个，即：政府、企（事）业单位及公民。 因此，政府的业务活动也主要围绕着这三个行为主体展开，即包括政府与政府之间的互动； 政府与企（事）业单位，尤其是与企业的互动；政府与公民的互动。在信息化的社会中，这 三个行为主体在数字世界的映射，构成了电子政务、电子商务和电子社区三个信息化的主要 领域。电子商务在经历了一个发展热潮之后，目前正在向一个新的、更扎实的阶段发展；电 子政务则是当前全球关注的热点，正在形成一个发展的热潮。</p>
+<h2 id="（3）熟悉电子政务的技术形式"><a href="#（3）熟悉电子政务的技术形式" class="headerlink" title="（3）熟悉电子政务的技术形式"></a>（3）熟悉电子政务的技术形式</h2><p>电子政务的技术模式由网络管理模式、信息资源管理模式和应用开发模式，以及网络安全、 标准化等构成。电子政务通过一定的技术模式将现有的和即将建设的各个政府网络和应用系 统联结起来，统一标准和规范，做到互联互通，成为一个统一的政府信息化平台。</p>
+<p>网络管理模式<br>电子政务在网络管理上分为政府专网和通用网络两部分，包括专用网络、内部网络和外部网络。</p>
+<p>信息资源管理模式<br>信息资源是电子政务的处理对象，也是电子政务的基础。采用何种模式进行信息资源管理，关系到电子政务的成败。政府部门的信息从内容上大致可以分成两类：一类是来自公文系统的文档型信息，另一类是来自数据处理系统的结构化信息。电子政务可以选用的信息资源管理模式有多种，目前主要有两种，即元数据管理模式和XML数据管理模式。</p>
+<p>应用开发模式<br>应用开发是电子政务最关键的一环，也是体现电子政务价值的所在。电子政务的应用开发模式主要有：G2E/G2B/G2G/G2C。</p>
+<p>电子政务的安全体系<br>电子政务系统中的重要组成部分就是安全体系。电子政务的安全体系包括物理安全、网络安全、信息安全及安全管理等方面。</p>
+<p>电子政务的标准化<br>电子政务是一项系统工程，是国家信息化建设的重要领域，而标准化是电子政务重要的支撑手段。国家信息化领导小组发布的《关于我国电子政务建设指导意见》规定了电子政务建设的指导思想和原则：统一规划，加强领导；需求主导，突出重点；整合资源，拉动产业；统一标准，保障安全。在阐释“统一标准，保障安全”原则时指出，“加快制定统一的电子政务标准规范，大力推进统一标准的贯彻落实。要正确处理发展与安全的关系，综合平衡成本和效益，一手抓电子政务建设，一手抓网络与信息安全，制定并完善电子政务网络与信息安全保障体系”。</p>
+<h1 id="2、中国政府信息化的策略和历程"><a href="#2、中国政府信息化的策略和历程" class="headerlink" title="2、中国政府信息化的策略和历程"></a>2、中国政府信息化的策略和历程</h1><p>1.我国政府信息化最早起始于 20 世纪 80 年代末期“中国国家经济信息系统”的建设和 运行。<br>2.到了 20 世纪 90 年代，随着信息技术的飞速发展和广泛应用，我国政府信息化也得到 了长足的发展，其中最主要的成果有：<br>一是以“金”字头为代表的多项信息工程项目取得了突破性进展。<br>二是政府上网工程初具规模。在“金”字系统工程取得重大进展的同时，从 1999 年起， 又及时地推出包含“三金”在内的“十二金”工程。<br>三是在“十二金”工程的带动下，各级政府都加强了电子政务的软件和硬件两方面的基 础建设，建成了覆盖广泛的“两网、一站、四库”：“两网”是指政务内网和政务外网；“一站”，是政府门户网站；“四库”，即建立人口、法人单位、空间地理和自然资源、宏观经济 4 个基础数据库。<br>四是在中央的大力倡导下，各地在推动政府信息化方面健康发展，并在全国普遍实行了 政府上网工程。到目前为止，全国绝大多数县级以上的政府都实现了电子政务。一些地区、 部门在政府信息化方面已取得了显著成效。</p>
+<h1 id="3、电子政务应用模式"><a href="#3、电子政务应用模式" class="headerlink" title="3、电子政务应用模式"></a>3、电子政务应用模式</h1><h2 id="（1）熟悉政府对政府（G2G）模式"><a href="#（1）熟悉政府对政府（G2G）模式" class="headerlink" title="（1）熟悉政府对政府（G2G）模式"></a>（1）熟悉政府对政府（G2G）模式</h2><p>政府间的信息交换有助于不同部 门间的协同办公，可以解决信息孤岛的问题，使目前很难实现的信息共享、交换、协同工作 等问题得以较好的解决。</p>
+<h2 id="（2）熟悉政府对企业（G2B）模式"><a href="#（2）熟悉政府对企业（G2B）模式" class="headerlink" title="（2）熟悉政府对企业（G2B）模式"></a>（2）熟悉政府对企业（G2B）模式</h2><p>利用互联网等网络手段为经济活动提供信 息化支持，包括：电子商务、电子税务、电子金融、电子海关等基础设施服务。</p>
+<h2 id="（3）熟悉政府对公众（G2C）模式"><a href="#（3）熟悉政府对公众（G2C）模式" class="headerlink" title="（3）熟悉政府对公众（G2C）模式"></a>（3）熟悉政府对公众（G2C）模式</h2><p>利用公共网络为公众提供广泛的信息服务， 包括卫生、教育、法律、税务、金融等一系列的信息服务。</p>
+<h2 id="（4）熟悉政府对公务员（G2E）模式"><a href="#（4）熟悉政府对公务员（G2E）模式" class="headerlink" title="（4）熟悉政府对公务员（G2E）模式"></a>（4）熟悉政府对公务员（G2E）模式</h2><p>利用 Intranet 建立有效的行政办公体系， 为提高政府工作效率服务。内容包括：电子公文、电子邮寄、电子规划管理、电子人事管理 等。</p>
+]]></content>
+      <categories>
+        <category>大数据分析应用-中级</category>
+      </categories>
+      <tags>
+        <tag>大数据考试-信息化基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息化基础知识（二）电子商务</title>
+    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/</url>
+    <content><![CDATA[<h1 id="1、电子商务的概念及基本特征"><a href="#1、电子商务的概念及基本特征" class="headerlink" title="1、电子商务的概念及基本特征"></a>1、电子商务的概念及基本特征</h1><h2 id="（1）熟悉电子商务的概念"><a href="#（1）熟悉电子商务的概念" class="headerlink" title="（1）熟悉电子商务的概念"></a>（1）熟悉电子商务的概念</h2><p>电子商务（Electronic Commerce，EC）是指买卖双方利用现代开放的 Internet，按照一 定的标准所进行的各类商业活动。主要包括网上购物、企业之间的网上交易和在线电子支付 等新型的商业运营模式。产品可以是实体化的，如计算机、汽车、电视，也可以是数字化的， 如新闻、影像、软件；也可以直接提供服务，如安排旅游、远程教育等。</p>
+<h2 id="（2）熟悉电子商务的基本特征"><a href="#（2）熟悉电子商务的基本特征" class="headerlink" title="（2）熟悉电子商务的基本特征"></a>（2）熟悉电子商务的基本特征</h2><p>电子商务分三个方面：即电子商情广告、电子选购和交易及电子交易凭证的交换、电子支付与结算以及网上售后服务等。<br>参与电子商务的实体有四类：顾客（个人消费者或集团购买）、商户（包括销售商、制造商、储运商）、银行（包括发卡行、收单行）及认证中心。</p>
+<h1 id="2、电子商务的类型"><a href="#2、电子商务的类型" class="headerlink" title="2、电子商务的类型"></a>2、电子商务的类型</h1><h2 id="（1）熟悉企业与企业之间的电子商务（B2B）模式"><a href="#（1）熟悉企业与企业之间的电子商务（B2B）模式" class="headerlink" title="（1）熟悉企业与企业之间的电子商务（B2B）模式"></a>（1）熟悉企业与企业之间的电子商务（B2B）模式</h2><p>两个或若干个有业务联 系的公司通过 B2B 模式彼此连接起来，形成网上的虚拟企业圈。例如，企业利用计算机网 络向它的供应商进行采购，或利用计算机网络进行付款等。B2B 具有很强的实时商务处理 能力，使企业能以一种安全、可靠、简便、快捷的方式进行企业间的商务联系活动。</p>
+<h2 id="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"><a href="#（2）熟悉商业企业与消费者之间的电子商务（B2C）模式" class="headerlink" title="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"></a>（2）熟悉商业企业与消费者之间的电子商务（B2C）模式</h2><p>企业与消费者之间的电子商务是人们最熟悉的一种电子商务类型。网上商店利用 Internet 提供的双向交互通信，完成网上购物的过程。这类电子商务主要是借助于 Internet 所开展的在线式销售活动。最近几年随着 Internet 的发展，这类电子商务的发展异军突起。例如，在 Internet 上目前 已出现许多大型超级市场，所出售的产品一应俱全，从食品、饮料到电脑、汽车等，几乎包 括了所有的消费品。由于这种模式节省了客户和企业双方的时间和空间，大大提高了交易效率，节省了各类不必要的开支，因而这类模式得到了人们的认同，获得了迅速的发展。</p>
+<h2 id="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"><a href="#（3）熟悉消费者与消费者之间的电子商务（C2C）模式" class="headerlink" title="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"></a>（3）熟悉消费者与消费者之间的电子商务（C2C）模式</h2><p>C2C 电子商务平 台就是通过为买卖双方提供一个在线交易平台，使卖方可以主动提供商品上网拍卖，而买方 可以自行选择商品进行竞价。</p>
+<h2 id="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式"><a href="#（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式" class="headerlink" title="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式"></a>（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式</h2><p>O2O是指将线下的商务机会与互联 网结合，让互联网成为线下交易的平台，这个概念最早来源于美国。O2O 的概念非常广泛， 既可涉及到线上，又可涉及到线下,可以称为 O2O。如团购就属于一种典型的 O2O。</p>
+]]></content>
+      <categories>
+        <category>大数据分析应用-中级</category>
+      </categories>
+      <tags>
+        <tag>大数据考试-信息化基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息化基础知识（四）项目管理</title>
+    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
+    <content><![CDATA[<h1 id="1、项目管理的理论与体系"><a href="#1、项目管理的理论与体系" class="headerlink" title="1、项目管理的理论与体系"></a>1、项目管理的理论与体系</h1><h2 id="（1）了解项目管理基础知识"><a href="#（1）了解项目管理基础知识" class="headerlink" title="（1）了解项目管理基础知识"></a>（1）了解项目管理基础知识</h2><p>项目管理是项目的管理者，在有限的资源约束下，运用系统的观点、方法和理论，对项目涉及的全部工作进行有效地管理。即从项目的投资决策开始到项目结束的全过程进行计划、组织、指挥、协调、控制和评价，以实现项目的目标。</p>
+<h2 id="（2）掌握项目管理知识体系的构成"><a href="#（2）掌握项目管理知识体系的构成" class="headerlink" title="（2）掌握项目管理知识体系的构成"></a>（2）掌握项目管理知识体系的构成</h2><p>1、项目范围管理<br>是为了实现项目的目标，对项目的工作内容进行控制的管理过程。它包括范围的界定，范围的规划，范围的调整等。</p>
+<p>2、项目时间管理<br>是为了确保项目最终的按时完成的一系列管理过程。它包括具体活动的界定，如：活动排序、时间估计、进度安排及时间控制等项工作。</p>
+<p>3、项目成本管理<br>是为了保证完成项目的实际成本、费用不超过预算成本、费用的管理过程。它包括资源的配置，成本、费用的预算以及费用的控制等项工作。</p>
+<p>4、项目质量管理<br>是为了确保项目达到客户所规定的质量要求所实施的一系列管理过程。它包括质量规划，质量控制和质量保证等。</p>
+<p>5、项目人力资源管理<br>是为了保证所有项目关系人的能力和积极性都得到最有效地发挥和利用所做的一系列管理措施。它包括组织的规划、团队的建设、人员的选聘和项目的班子建设等一系列工作。</p>
+<p>6、项目沟通管理<br>是为了确保项目的信息的合理收集和传输所需要实施的一系列措施，它包括沟通规划，信息传输和进度报告等。</p>
+<p>7、项目风险管理<br>涉及项目可能遇到各种不确定因素。它包括风险识别，风险量化，制订对策和风险控制等。</p>
+<p>8、项目采购管理<br>是为了从项目实施组织之外获得所需资源或服务所采取的一系列管理措施。它包括采购计划，采购与征购，资源的选择以及合同的管理等项目工作。</p>
+<p>9、项目集成管理<br>是指为确保项目各项工作能够有机地协调和配合所展开的综合性和全局性的项目管理工作和过程。它包括项目集成计划的制定，项目集成计划的实施，项目变动的总体控制等。</p>
+<h2 id="（3）了解-IPMP-PMP、PRINCE2-等项目管理认证体系"><a href="#（3）了解-IPMP-PMP、PRINCE2-等项目管理认证体系" class="headerlink" title="（3）了解 IPMP/PMP、PRINCE2 等项目管理认证体系"></a>（3）了解 IPMP/PMP、PRINCE2 等项目管理认证体系</h2><p><img src="/images/bigdata/2-12.jpg"> </p>
+<h2 id="（4）掌握项目管理成熟度模型"><a href="#（4）掌握项目管理成熟度模型" class="headerlink" title="（4）掌握项目管理成熟度模型"></a>（4）掌握项目管理成熟度模型</h2><p>参考<a href="/2021/10/11/%E8%BD%AF%E8%80%83/13%E3%80%81%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86/%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%83%EF%BC%89%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%94%B9%E8%BF%9B/">[开发管理（七）软件过程改进]</a></p>
+<h2 id="（5）了解项目管理的量化方法"><a href="#（5）了解项目管理的量化方法" class="headerlink" title="（5）了解项目管理的量化方法"></a>（5）了解项目管理的量化方法</h2><p>???</p>
+<h1 id="2、组织结构对项目的影响"><a href="#2、组织结构对项目的影响" class="headerlink" title="2、组织结构对项目的影响"></a>2、组织结构对项目的影响</h1><h2 id="（1）了解组织结构对项目的影响。"><a href="#（1）了解组织结构对项目的影响。" class="headerlink" title="（1）了解组织结构对项目的影响。"></a>（1）了解组织结构对项目的影响。</h2><h3 id="01、职能式组织结构"><a href="#01、职能式组织结构" class="headerlink" title="01、职能式组织结构"></a>01、职能式组织结构</h3><p>职能式组织结构就是在组织目前的职能型等级结构下加以管理，一旦项目开始运行，项目的各个组成部分就由各职能单位承担，各单位负责完成其分管的项目内容。如果项目的性质既定，某一职能领域对项目的完成发挥着主导性的作用，职能领域的高级经理将负责项目的协调工作。</p>
+<p>职能式组织结构的优点：</p>
+<p>1、人员的使用上有较大的灵活性，只要选择了一个合适的职能部门作为项目的上级，该部门就能为项目提供它所需要的专业技术人员，而且技术专家可以同时被不同的项目所使用，并在工作完成后又可以回去做他原来的工作;</p>
+<p>2、在人员离开项目组甚至离开公司时，职能部门可作为保持项目连续性的基础;</p>
+<p>3、职能部门可以为本部门的专业人员提供一条正常的晋升途径。　</p>
+<p>职能式组织结构的缺点：</p>
+<p>1、项目经常缺少重点，每个职能单位都有自己的核心常规业务，有时为了满足自己的基本需要，对项目的责任就被忽视，尤其是项目给单位带来的利益不同时;</p>
+<p>2、这种组织结构在跨部门之间的合作与交流方面存在一定困难;</p>
+<p>3、项目参与者的动机不够强，他们认为项目是一项额外的负担，与他们的职业发展和提升无直接关系;</p>
+<h3 id="02、项目式组织结构"><a href="#02、项目式组织结构" class="headerlink" title="02、项目式组织结构"></a>02、项目式组织结构</h3><p>项目式组织结构就是指创建独立项目团队，这些团队的经营与母体组织的其他单位分离，有自己的技术人员与管理人员，企业分配给项目团队一定的资源，然后授予项目经理执行项目的最大自由。</p>
+<p>项目式组织结构的优点：</p>
+<p>1、这种项目团队重点集中，项目经理对项目全权负责，项目团队工作者的唯一任务就是完成项目，并只对项目经理负责，避免了多重领导;</p>
+<p>2、项目团队的决策是在项目内制定，反应时间比较短;</p>
+<p>3、在这种项目团队中，成员动力强、凝聚力高，参与者分享项目及小组的共同目标与个人责任比较明确。</p>
+<p>项目式组织结构的缺点：</p>
+<p>1、当一个公司有多个项目时，每个项目有自己一套独立的班子，这将导致不同项目的重复努力和规模经济的丧失;</p>
+<p>2、项目团队自身是一个独立的实体，容易产生一种被称为“项目炎症”的疾病，即项目团队与母体组织之间出现一条明显的分界线，削弱项目团队与母体组织之间的有效融合;</p>
+<p>3、创建自我控制的项目团队限制了用最好的技术来解决问题;</p>
+<p>4、对项目组成员来说，缺乏一种事业的连续性和保障，项目一旦结束，返回原来的职能部门可能会比较困难。</p>
+<h3 id="03、矩阵式组织结构"><a href="#03、矩阵式组织结构" class="headerlink" title="03、矩阵式组织结构"></a>03、矩阵式组织结构</h3><p>矩阵式组织结构是一种混合形式，它在常规的职能层级结构之上“加载”了一种水平的项目管理结构。根据项目与职能经理相对权力的不同，实践中存在不同种类的矩阵体系，分别有权力明显倾向于职能经理的职能矩阵，权力明显倾向于项目经理的项目矩阵和传统矩阵安排的平衡矩阵。</p>
+<p>矩阵式组织结构的优点：</p>
+<p>1、和职能式组织结构一样，资源可以在多个项目中共享，可大大减少项目式组织中人员冗余的问题;</p>
+<p>2、项目是工作的焦点，具有一个正式指定的项目经理会使他对项目给予更强的关注，负责协调和整合不同单位的工作;</p>
+<p>3、当有多个项目同时进行时，公司可以平衡资源以保证各个项目都能完成其各自的进度、费用及质量要求;</p>
+<p>4、项目组成员对项目结束后的忧虑减少，他们一方面与项目有很强的联系，另一方面他们对职能部门也有一种“家”的感觉。</p>
+<p>矩阵式组织结构的缺点：</p>
+<p>1、矩阵结构加剧了职能经理和拥有关键技能与看法的项目经理之间的紧张局面;</p>
+<p>2、任何情况下的跨项目分享设备、资源和人员都会导致冲突和对稀缺资源的竞争;</p>
+<p>3、在项目执行过程中，项目经理必须就各种问题与部门经理进行谈判和协商，从而导致决策的制定被耽误;</p>
+<p>4、矩阵管理与命令统一的管理原则相违背，项目组成员有两个上司，即项目经理和部门经理，当他们的命令有分歧时，会令成员感到左右为难，无所适从。</p>
+<h1 id="3、信息系统项目典型生命周期模型"><a href="#3、信息系统项目典型生命周期模型" class="headerlink" title="3、信息系统项目典型生命周期模型"></a>3、信息系统项目典型生命周期模型</h1><p>（1）掌握瀑布模型及其瀑布模型基础上改进的模型<br>（2）了解原型化模型<br>（3）了解敏捷开发模型<br>（4）了解软件生命周期其它模型</p>
+<p>该章节统一参考<a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">[开发方法（二）软件开发模型]</a></p>
+<h1 id="4、单个项目的管理过程"><a href="#4、单个项目的管理过程" class="headerlink" title="4、单个项目的管理过程"></a>4、单个项目的管理过程</h1><p>（1）掌握项目整体管理的含义、作用<br>（2）了解项目整体管理过程<br>（3）掌握项目进度管理<br>（4）了解项目成本管理<br>（5）了解项目质量管理<br>（6）了解项目人力资源管理<br>（7）了解项目沟通管理和干系人管理<br>（8）了解项目风险管理<br>（9）了解项目单个项目管理的其它方法</p>
+<p>该章节统一参考<a href="/tags/%E8%BD%AF%E8%80%83-%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86/">[软考-开发管理]</a></p>
+<h1 id="5、信息系统安全管理"><a href="#5、信息系统安全管理" class="headerlink" title="5、信息系统安全管理"></a>5、信息系统安全管理</h1><p>（1）掌握信息系统安全策略<br>（2）了解信息安全系统工程<br>（3）了解 PKI 公开密钥基础设施<br>（4）了解 PMI 权限（授权）管理基础<br>（5）了解信息安全审计<br>（6）了解信息系统安全管理其它方法</p>
+<p>该章节统一参考<a href="/tags/%E8%BD%AF%E8%80%83-%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/">[软考-安全性和保密性设计]</a></p>
+]]></content>
+      <categories>
+        <category>大数据分析应用-中级</category>
+      </categories>
+      <tags>
+        <tag>大数据考试-信息化基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机基础知识（一）面向对象技术</title>
     <url>/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF/</url>
     <content><![CDATA[<h1 id="1、了解面向对象的发展历史，为什么引入面向对象。"><a href="#1、了解面向对象的发展历史，为什么引入面向对象。" class="headerlink" title="1、了解面向对象的发展历史，为什么引入面向对象。"></a>1、了解面向对象的发展历史，为什么引入面向对象。</h1><h2 id="面向对象的发展历史"><a href="#面向对象的发展历史" class="headerlink" title="面向对象的发展历史"></a>面向对象的发展历史</h2><p>1.雏形阶段<br>20世纪60年代挪威计算中心发布的simula语言，首次引入了类的概念和继承机制，该语言的诞生是面向对象发展历史上的第一个里程碑。<br>70年代CLU、并发Pascal、Ada和Modula-2等语言对抽象数据类型理论的发展起到重要作用（支持数据和操作封装）。<br>1972年Palo Alno研究中心（PARC）发布了Smalltalk 72,其中正式使用了面向对象这个术语。Smalltalk的问世标志着面向对象程序设计方法的正式形成，但是这个时期的Smalltalk语言还不够完善。</p>
@@ -193,108 +295,6 @@
       </tags>
   </entry>
   <entry>
-    <title>信息化基础知识（一）电子政务</title>
-    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1/</url>
-    <content><![CDATA[<h1 id="1、电子政务的概念、内容和技术形式"><a href="#1、电子政务的概念、内容和技术形式" class="headerlink" title="1、电子政务的概念、内容和技术形式"></a>1、电子政务的概念、内容和技术形式</h1><h2 id="（1）掌握电子政务的概念"><a href="#（1）掌握电子政务的概念" class="headerlink" title="（1）掌握电子政务的概念"></a>（1）掌握电子政务的概念</h2><p>电子政务实质上是对现有的、工业时代形成的政府形态的一种改造，即利用信息技术和 其他相关技术，来构造更适合信息时代的政府组织结构和运行方式。因此，电子政务在概念、 内容和技术形式上都区别于现有政务。</p>
-<p>电子政务实质上是对现有的、工业时代形成的政府形态的一种改造，即利用信息技术和 其他相关技术，来构造更适合信息时代的政府组织结构和运行方式。现有的政府组织形态是 工业革命的产物，与工业化的行政管理的需求和技术经济环境相适应，已经存在了两百年以 上。随着网络时代和网络经济的来临，管理正由传统的金字塔模式走向网络模式。政府的组 织形态也必然由金字塔式的垂直结构向网状结构转变，从而减少管理的层次，以各种形式通 过网络与企业和公民建立直接的联系。因此，电子政务的发展过程实质上是对原有的政府形 态进行信息化改造的过程，通过不断的摸索和实践，最终构造出一个与信息时代相适应的政 府形态。</p>
-<h2 id="（2）熟悉电子政务的内容"><a href="#（2）熟悉电子政务的内容" class="headerlink" title="（2）熟悉电子政务的内容"></a>（2）熟悉电子政务的内容</h2><p>在社会中，与电子政务相关的行为主体主要有三个，即：政府、企（事）业单位及公民。 因此，政府的业务活动也主要围绕着这三个行为主体展开，即包括政府与政府之间的互动； 政府与企（事）业单位，尤其是与企业的互动；政府与公民的互动。在信息化的社会中，这 三个行为主体在数字世界的映射，构成了电子政务、电子商务和电子社区三个信息化的主要 领域。电子商务在经历了一个发展热潮之后，目前正在向一个新的、更扎实的阶段发展；电 子政务则是当前全球关注的热点，正在形成一个发展的热潮。</p>
-<h2 id="（3）熟悉电子政务的技术形式"><a href="#（3）熟悉电子政务的技术形式" class="headerlink" title="（3）熟悉电子政务的技术形式"></a>（3）熟悉电子政务的技术形式</h2><p>电子政务的技术模式由网络管理模式、信息资源管理模式和应用开发模式，以及网络安全、 标准化等构成。电子政务通过一定的技术模式将现有的和即将建设的各个政府网络和应用系 统联结起来，统一标准和规范，做到互联互通，成为一个统一的政府信息化平台。</p>
-<p>网络管理模式<br>电子政务在网络管理上分为政府专网和通用网络两部分，包括专用网络、内部网络和外部网络。</p>
-<p>信息资源管理模式<br>信息资源是电子政务的处理对象，也是电子政务的基础。采用何种模式进行信息资源管理，关系到电子政务的成败。政府部门的信息从内容上大致可以分成两类：一类是来自公文系统的文档型信息，另一类是来自数据处理系统的结构化信息。电子政务可以选用的信息资源管理模式有多种，目前主要有两种，即元数据管理模式和XML数据管理模式。</p>
-<p>应用开发模式<br>应用开发是电子政务最关键的一环，也是体现电子政务价值的所在。电子政务的应用开发模式主要有：G2E/G2B/G2G/G2C。</p>
-<p>电子政务的安全体系<br>电子政务系统中的重要组成部分就是安全体系。电子政务的安全体系包括物理安全、网络安全、信息安全及安全管理等方面。</p>
-<p>电子政务的标准化<br>电子政务是一项系统工程，是国家信息化建设的重要领域，而标准化是电子政务重要的支撑手段。国家信息化领导小组发布的《关于我国电子政务建设指导意见》规定了电子政务建设的指导思想和原则：统一规划，加强领导；需求主导，突出重点；整合资源，拉动产业；统一标准，保障安全。在阐释“统一标准，保障安全”原则时指出，“加快制定统一的电子政务标准规范，大力推进统一标准的贯彻落实。要正确处理发展与安全的关系，综合平衡成本和效益，一手抓电子政务建设，一手抓网络与信息安全，制定并完善电子政务网络与信息安全保障体系”。</p>
-<h1 id="2、中国政府信息化的策略和历程"><a href="#2、中国政府信息化的策略和历程" class="headerlink" title="2、中国政府信息化的策略和历程"></a>2、中国政府信息化的策略和历程</h1><p>1.我国政府信息化最早起始于 20 世纪 80 年代末期“中国国家经济信息系统”的建设和 运行。<br>2.到了 20 世纪 90 年代，随着信息技术的飞速发展和广泛应用，我国政府信息化也得到 了长足的发展，其中最主要的成果有：<br>一是以“金”字头为代表的多项信息工程项目取得了突破性进展。<br>二是政府上网工程初具规模。在“金”字系统工程取得重大进展的同时，从 1999 年起， 又及时地推出包含“三金”在内的“十二金”工程。<br>三是在“十二金”工程的带动下，各级政府都加强了电子政务的软件和硬件两方面的基 础建设，建成了覆盖广泛的“两网、一站、四库”：“两网”是指政务内网和政务外网；“一站”，是政府门户网站；“四库”，即建立人口、法人单位、空间地理和自然资源、宏观经济 4 个基础数据库。<br>四是在中央的大力倡导下，各地在推动政府信息化方面健康发展，并在全国普遍实行了 政府上网工程。到目前为止，全国绝大多数县级以上的政府都实现了电子政务。一些地区、 部门在政府信息化方面已取得了显著成效。</p>
-<h1 id="3、电子政务应用模式"><a href="#3、电子政务应用模式" class="headerlink" title="3、电子政务应用模式"></a>3、电子政务应用模式</h1><h2 id="（1）熟悉政府对政府（G2G）模式"><a href="#（1）熟悉政府对政府（G2G）模式" class="headerlink" title="（1）熟悉政府对政府（G2G）模式"></a>（1）熟悉政府对政府（G2G）模式</h2><p>政府间的信息交换有助于不同部 门间的协同办公，可以解决信息孤岛的问题，使目前很难实现的信息共享、交换、协同工作 等问题得以较好的解决。</p>
-<h2 id="（2）熟悉政府对企业（G2B）模式"><a href="#（2）熟悉政府对企业（G2B）模式" class="headerlink" title="（2）熟悉政府对企业（G2B）模式"></a>（2）熟悉政府对企业（G2B）模式</h2><p>利用互联网等网络手段为经济活动提供信 息化支持，包括：电子商务、电子税务、电子金融、电子海关等基础设施服务。</p>
-<h2 id="（3）熟悉政府对公众（G2C）模式"><a href="#（3）熟悉政府对公众（G2C）模式" class="headerlink" title="（3）熟悉政府对公众（G2C）模式"></a>（3）熟悉政府对公众（G2C）模式</h2><p>利用公共网络为公众提供广泛的信息服务， 包括卫生、教育、法律、税务、金融等一系列的信息服务。</p>
-<h2 id="（4）熟悉政府对公务员（G2E）模式"><a href="#（4）熟悉政府对公务员（G2E）模式" class="headerlink" title="（4）熟悉政府对公务员（G2E）模式"></a>（4）熟悉政府对公务员（G2E）模式</h2><p>利用 Intranet 建立有效的行政办公体系， 为提高政府工作效率服务。内容包括：电子公文、电子邮寄、电子规划管理、电子人事管理 等。</p>
-]]></content>
-      <categories>
-        <category>大数据分析应用-中级</category>
-      </categories>
-      <tags>
-        <tag>大数据考试-信息化基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息化基础知识（二）电子商务</title>
-    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/</url>
-    <content><![CDATA[<h1 id="1、电子商务的概念及基本特征"><a href="#1、电子商务的概念及基本特征" class="headerlink" title="1、电子商务的概念及基本特征"></a>1、电子商务的概念及基本特征</h1><h2 id="（1）熟悉电子商务的概念"><a href="#（1）熟悉电子商务的概念" class="headerlink" title="（1）熟悉电子商务的概念"></a>（1）熟悉电子商务的概念</h2><p>电子商务（Electronic Commerce，EC）是指买卖双方利用现代开放的 Internet，按照一 定的标准所进行的各类商业活动。主要包括网上购物、企业之间的网上交易和在线电子支付 等新型的商业运营模式。产品可以是实体化的，如计算机、汽车、电视，也可以是数字化的， 如新闻、影像、软件；也可以直接提供服务，如安排旅游、远程教育等。</p>
-<h2 id="（2）熟悉电子商务的基本特征"><a href="#（2）熟悉电子商务的基本特征" class="headerlink" title="（2）熟悉电子商务的基本特征"></a>（2）熟悉电子商务的基本特征</h2><p>电子商务分三个方面：即电子商情广告、电子选购和交易及电子交易凭证的交换、电子支付与结算以及网上售后服务等。<br>参与电子商务的实体有四类：顾客（个人消费者或集团购买）、商户（包括销售商、制造商、储运商）、银行（包括发卡行、收单行）及认证中心。</p>
-<h1 id="2、电子商务的类型"><a href="#2、电子商务的类型" class="headerlink" title="2、电子商务的类型"></a>2、电子商务的类型</h1><h2 id="（1）熟悉企业与企业之间的电子商务（B2B）模式"><a href="#（1）熟悉企业与企业之间的电子商务（B2B）模式" class="headerlink" title="（1）熟悉企业与企业之间的电子商务（B2B）模式"></a>（1）熟悉企业与企业之间的电子商务（B2B）模式</h2><p>两个或若干个有业务联 系的公司通过 B2B 模式彼此连接起来，形成网上的虚拟企业圈。例如，企业利用计算机网 络向它的供应商进行采购，或利用计算机网络进行付款等。B2B 具有很强的实时商务处理 能力，使企业能以一种安全、可靠、简便、快捷的方式进行企业间的商务联系活动。</p>
-<h2 id="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"><a href="#（2）熟悉商业企业与消费者之间的电子商务（B2C）模式" class="headerlink" title="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"></a>（2）熟悉商业企业与消费者之间的电子商务（B2C）模式</h2><p>企业与消费者之间的电子商务是人们最熟悉的一种电子商务类型。网上商店利用 Internet 提供的双向交互通信，完成网上购物的过程。这类电子商务主要是借助于 Internet 所开展的在线式销售活动。最近几年随着 Internet 的发展，这类电子商务的发展异军突起。例如，在 Internet 上目前 已出现许多大型超级市场，所出售的产品一应俱全，从食品、饮料到电脑、汽车等，几乎包 括了所有的消费品。由于这种模式节省了客户和企业双方的时间和空间，大大提高了交易效率，节省了各类不必要的开支，因而这类模式得到了人们的认同，获得了迅速的发展。</p>
-<h2 id="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"><a href="#（3）熟悉消费者与消费者之间的电子商务（C2C）模式" class="headerlink" title="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"></a>（3）熟悉消费者与消费者之间的电子商务（C2C）模式</h2><p>C2C 电子商务平 台就是通过为买卖双方提供一个在线交易平台，使卖方可以主动提供商品上网拍卖，而买方 可以自行选择商品进行竞价。</p>
-<h2 id="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式"><a href="#（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式" class="headerlink" title="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式"></a>（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式</h2><p>O2O是指将线下的商务机会与互联 网结合，让互联网成为线下交易的平台，这个概念最早来源于美国。O2O 的概念非常广泛， 既可涉及到线上，又可涉及到线下,可以称为 O2O。如团购就属于一种典型的 O2O。</p>
-]]></content>
-      <categories>
-        <category>大数据分析应用-中级</category>
-      </categories>
-      <tags>
-        <tag>大数据考试-信息化基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息化基础知识（四）项目管理</title>
-    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</url>
-    <content><![CDATA[<h1 id="1、项目管理的理论与体系"><a href="#1、项目管理的理论与体系" class="headerlink" title="1、项目管理的理论与体系"></a>1、项目管理的理论与体系</h1><h2 id="（1）了解项目管理基础知识"><a href="#（1）了解项目管理基础知识" class="headerlink" title="（1）了解项目管理基础知识"></a>（1）了解项目管理基础知识</h2><p>项目管理是项目的管理者，在有限的资源约束下，运用系统的观点、方法和理论，对项目涉及的全部工作进行有效地管理。即从项目的投资决策开始到项目结束的全过程进行计划、组织、指挥、协调、控制和评价，以实现项目的目标。</p>
-<h2 id="（2）掌握项目管理知识体系的构成"><a href="#（2）掌握项目管理知识体系的构成" class="headerlink" title="（2）掌握项目管理知识体系的构成"></a>（2）掌握项目管理知识体系的构成</h2><p>1、项目范围管理<br>是为了实现项目的目标，对项目的工作内容进行控制的管理过程。它包括范围的界定，范围的规划，范围的调整等。</p>
-<p>2、项目时间管理<br>是为了确保项目最终的按时完成的一系列管理过程。它包括具体活动的界定，如：活动排序、时间估计、进度安排及时间控制等项工作。</p>
-<p>3、项目成本管理<br>是为了保证完成项目的实际成本、费用不超过预算成本、费用的管理过程。它包括资源的配置，成本、费用的预算以及费用的控制等项工作。</p>
-<p>4、项目质量管理<br>是为了确保项目达到客户所规定的质量要求所实施的一系列管理过程。它包括质量规划，质量控制和质量保证等。</p>
-<p>5、项目人力资源管理<br>是为了保证所有项目关系人的能力和积极性都得到最有效地发挥和利用所做的一系列管理措施。它包括组织的规划、团队的建设、人员的选聘和项目的班子建设等一系列工作。</p>
-<p>6、项目沟通管理<br>是为了确保项目的信息的合理收集和传输所需要实施的一系列措施，它包括沟通规划，信息传输和进度报告等。</p>
-<p>7、项目风险管理<br>涉及项目可能遇到各种不确定因素。它包括风险识别，风险量化，制订对策和风险控制等。</p>
-<p>8、项目采购管理<br>是为了从项目实施组织之外获得所需资源或服务所采取的一系列管理措施。它包括采购计划，采购与征购，资源的选择以及合同的管理等项目工作。</p>
-<p>9、项目集成管理<br>是指为确保项目各项工作能够有机地协调和配合所展开的综合性和全局性的项目管理工作和过程。它包括项目集成计划的制定，项目集成计划的实施，项目变动的总体控制等。</p>
-<h2 id="（3）了解-IPMP-PMP、PRINCE2-等项目管理认证体系"><a href="#（3）了解-IPMP-PMP、PRINCE2-等项目管理认证体系" class="headerlink" title="（3）了解 IPMP/PMP、PRINCE2 等项目管理认证体系"></a>（3）了解 IPMP/PMP、PRINCE2 等项目管理认证体系</h2><p><img src="/images/bigdata/2-12.jpg"> </p>
-<h2 id="（4）掌握项目管理成熟度模型"><a href="#（4）掌握项目管理成熟度模型" class="headerlink" title="（4）掌握项目管理成熟度模型"></a>（4）掌握项目管理成熟度模型</h2><p>参考<a href="/2021/10/11/%E8%BD%AF%E8%80%83/13%E3%80%81%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86/%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86%EF%BC%88%E4%B8%83%EF%BC%89%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%94%B9%E8%BF%9B/">[开发管理（七）软件过程改进]</a></p>
-<h2 id="（5）了解项目管理的量化方法"><a href="#（5）了解项目管理的量化方法" class="headerlink" title="（5）了解项目管理的量化方法"></a>（5）了解项目管理的量化方法</h2><p>???</p>
-<h1 id="2、组织结构对项目的影响"><a href="#2、组织结构对项目的影响" class="headerlink" title="2、组织结构对项目的影响"></a>2、组织结构对项目的影响</h1><h2 id="（1）了解组织结构对项目的影响。"><a href="#（1）了解组织结构对项目的影响。" class="headerlink" title="（1）了解组织结构对项目的影响。"></a>（1）了解组织结构对项目的影响。</h2><h3 id="01、职能式组织结构"><a href="#01、职能式组织结构" class="headerlink" title="01、职能式组织结构"></a>01、职能式组织结构</h3><p>职能式组织结构就是在组织目前的职能型等级结构下加以管理，一旦项目开始运行，项目的各个组成部分就由各职能单位承担，各单位负责完成其分管的项目内容。如果项目的性质既定，某一职能领域对项目的完成发挥着主导性的作用，职能领域的高级经理将负责项目的协调工作。</p>
-<p>职能式组织结构的优点：</p>
-<p>1、人员的使用上有较大的灵活性，只要选择了一个合适的职能部门作为项目的上级，该部门就能为项目提供它所需要的专业技术人员，而且技术专家可以同时被不同的项目所使用，并在工作完成后又可以回去做他原来的工作;</p>
-<p>2、在人员离开项目组甚至离开公司时，职能部门可作为保持项目连续性的基础;</p>
-<p>3、职能部门可以为本部门的专业人员提供一条正常的晋升途径。　</p>
-<p>职能式组织结构的缺点：</p>
-<p>1、项目经常缺少重点，每个职能单位都有自己的核心常规业务，有时为了满足自己的基本需要，对项目的责任就被忽视，尤其是项目给单位带来的利益不同时;</p>
-<p>2、这种组织结构在跨部门之间的合作与交流方面存在一定困难;</p>
-<p>3、项目参与者的动机不够强，他们认为项目是一项额外的负担，与他们的职业发展和提升无直接关系;</p>
-<h3 id="02、项目式组织结构"><a href="#02、项目式组织结构" class="headerlink" title="02、项目式组织结构"></a>02、项目式组织结构</h3><p>项目式组织结构就是指创建独立项目团队，这些团队的经营与母体组织的其他单位分离，有自己的技术人员与管理人员，企业分配给项目团队一定的资源，然后授予项目经理执行项目的最大自由。</p>
-<p>项目式组织结构的优点：</p>
-<p>1、这种项目团队重点集中，项目经理对项目全权负责，项目团队工作者的唯一任务就是完成项目，并只对项目经理负责，避免了多重领导;</p>
-<p>2、项目团队的决策是在项目内制定，反应时间比较短;</p>
-<p>3、在这种项目团队中，成员动力强、凝聚力高，参与者分享项目及小组的共同目标与个人责任比较明确。</p>
-<p>项目式组织结构的缺点：</p>
-<p>1、当一个公司有多个项目时，每个项目有自己一套独立的班子，这将导致不同项目的重复努力和规模经济的丧失;</p>
-<p>2、项目团队自身是一个独立的实体，容易产生一种被称为“项目炎症”的疾病，即项目团队与母体组织之间出现一条明显的分界线，削弱项目团队与母体组织之间的有效融合;</p>
-<p>3、创建自我控制的项目团队限制了用最好的技术来解决问题;</p>
-<p>4、对项目组成员来说，缺乏一种事业的连续性和保障，项目一旦结束，返回原来的职能部门可能会比较困难。</p>
-<h3 id="03、矩阵式组织结构"><a href="#03、矩阵式组织结构" class="headerlink" title="03、矩阵式组织结构"></a>03、矩阵式组织结构</h3><p>矩阵式组织结构是一种混合形式，它在常规的职能层级结构之上“加载”了一种水平的项目管理结构。根据项目与职能经理相对权力的不同，实践中存在不同种类的矩阵体系，分别有权力明显倾向于职能经理的职能矩阵，权力明显倾向于项目经理的项目矩阵和传统矩阵安排的平衡矩阵。</p>
-<p>矩阵式组织结构的优点：</p>
-<p>1、和职能式组织结构一样，资源可以在多个项目中共享，可大大减少项目式组织中人员冗余的问题;</p>
-<p>2、项目是工作的焦点，具有一个正式指定的项目经理会使他对项目给予更强的关注，负责协调和整合不同单位的工作;</p>
-<p>3、当有多个项目同时进行时，公司可以平衡资源以保证各个项目都能完成其各自的进度、费用及质量要求;</p>
-<p>4、项目组成员对项目结束后的忧虑减少，他们一方面与项目有很强的联系，另一方面他们对职能部门也有一种“家”的感觉。</p>
-<p>矩阵式组织结构的缺点：</p>
-<p>1、矩阵结构加剧了职能经理和拥有关键技能与看法的项目经理之间的紧张局面;</p>
-<p>2、任何情况下的跨项目分享设备、资源和人员都会导致冲突和对稀缺资源的竞争;</p>
-<p>3、在项目执行过程中，项目经理必须就各种问题与部门经理进行谈判和协商，从而导致决策的制定被耽误;</p>
-<p>4、矩阵管理与命令统一的管理原则相违背，项目组成员有两个上司，即项目经理和部门经理，当他们的命令有分歧时，会令成员感到左右为难，无所适从。</p>
-<h1 id="3、信息系统项目典型生命周期模型"><a href="#3、信息系统项目典型生命周期模型" class="headerlink" title="3、信息系统项目典型生命周期模型"></a>3、信息系统项目典型生命周期模型</h1><p>（1）掌握瀑布模型及其瀑布模型基础上改进的模型<br>（2）了解原型化模型<br>（3）了解敏捷开发模型<br>（4）了解软件生命周期其它模型</p>
-<p>该章节统一参考<a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">[开发方法（二）软件开发模型]</a></p>
-<h1 id="4、单个项目的管理过程"><a href="#4、单个项目的管理过程" class="headerlink" title="4、单个项目的管理过程"></a>4、单个项目的管理过程</h1><p>（1）掌握项目整体管理的含义、作用<br>（2）了解项目整体管理过程<br>（3）掌握项目进度管理<br>（4）了解项目成本管理<br>（5）了解项目质量管理<br>（6）了解项目人力资源管理<br>（7）了解项目沟通管理和干系人管理<br>（8）了解项目风险管理<br>（9）了解项目单个项目管理的其它方法</p>
-<p>该章节统一参考<a href="/tags/%E8%BD%AF%E8%80%83-%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86/">[软考-开发管理]</a></p>
-<h1 id="5、信息系统安全管理"><a href="#5、信息系统安全管理" class="headerlink" title="5、信息系统安全管理"></a>5、信息系统安全管理</h1><p>（1）掌握信息系统安全策略<br>（2）了解信息安全系统工程<br>（3）了解 PKI 公开密钥基础设施<br>（4）了解 PMI 权限（授权）管理基础<br>（5）了解信息安全审计<br>（6）了解信息系统安全管理其它方法</p>
-<p>该章节统一参考<a href="/tags/%E8%BD%AF%E8%80%83-%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/">[软考-安全性和保密性设计]</a></p>
-]]></content>
-      <categories>
-        <category>大数据分析应用-中级</category>
-      </categories>
-      <tags>
-        <tag>大数据考试-信息化基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>大数据安全（一）网络安全</title>
     <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%9B%9B%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%EF%BC%88%E4%B8%80%EF%BC%89%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</url>
     <content><![CDATA[<h1 id="1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。"><a href="#1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。" class="headerlink" title="1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。"></a>1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。</h1><h1 id="2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握-TCP-IP-协议安全体系。"><a href="#2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握-TCP-IP-协议安全体系。" class="headerlink" title="2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握 TCP/IP 协议安全体系。"></a>2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握 TCP/IP 协议安全体系。</h1><h1 id="3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。"><a href="#3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。" class="headerlink" title="3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。"></a>3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。</h1><h1 id="4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。"><a href="#4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。" class="headerlink" title="4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。"></a>4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。</h1>]]></content>
@@ -320,6 +320,106 @@
       </categories>
       <tags>
         <tag>大数据考试-大数据安全</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式（一）设计模式概述</title>
+    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="一、设计模式的概念"><a href="#一、设计模式的概念" class="headerlink" title="一、设计模式的概念"></a>一、设计模式的概念</h1><p>设计模式解决的是一类问题。<br>工厂模式就是为了解决类创建的问题，<br>适配器模式则是为了解决类接口不匹配的问题。</p>
+<p>(1)学习这些模式是一个方面，另一方面更要了解模式中的思想。<br>(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。</p>
+<h1 id="二、设计模式的组成"><a href="#二、设计模式的组成" class="headerlink" title="二、设计模式的组成"></a>二、设计模式的组成</h1><p>在描述一个设计模式时，至少需要包含四个方面:<br>模式名称(Pattern name)、<br>问题(Problem)、<br>解决方案(Solution)、<br>效果(Consequence)。</p>
+<h1 id="三、GoF设计模式"><a href="#三、GoF设计模式" class="headerlink" title="三、GoF设计模式"></a>三、GoF设计模式</h1><h2 id="补充-简单工厂"><a href="#补充-简单工厂" class="headerlink" title="(补充)简单工厂"></a>(补充)简单工厂</h2><p>1、写一个工厂类，使用静态方法，根据传参来new不同的产品对象<br>2、客户端调用这个工厂类的静态方法，就可以获取想要的产品</p>
+<h2 id="1-Factory-Method-模式。工厂模式"><a href="#1-Factory-Method-模式。工厂模式" class="headerlink" title="(1)Factory Method 模式。工厂模式"></a>(1)Factory Method 模式。工厂模式</h2><p>Factory Method 模式提供了一种延迟创建类的方法，使用 这个方法可以在运行期由子类决定创建哪一个类的实例。<br>1、写一个抽象工厂类，每个工厂实现类负责将new不同种类的产品。<br>2、客户端new不同的工厂实现类就可以获得不同的产品。</p>
+<h2 id="2-Abstract-Factory-模式。抽象工厂模式"><a href="#2-Abstract-Factory-模式。抽象工厂模式" class="headerlink" title="(2)Abstract Factory 模式。抽象工厂模式"></a>(2)Abstract Factory 模式。抽象工厂模式</h2><p>Abstract Factory 又称为抽象工厂模式，该模式主要为解决 复杂系统中对象创建的问题。抽象工厂模式提供了一个一致的对象创建接口来创建一系列具 有相似基类或相似接口的对象。<br>1、写一个抽象工厂类，然后每个工厂实现类负责new一组不同的种类的产品。<br>2、客户端new需要某一组的产品，只需要new一个工厂即可。</p>
+<h2 id="3-Builder-模式。建造者模式"><a href="#3-Builder-模式。建造者模式" class="headerlink" title="(3)Builder 模式。建造者模式"></a>(3)Builder 模式。建造者模式</h2><p>Builder 模式与 Abstract Factory 模式非常类似，但 Builder 模式是逐步地构造出一个复杂对象，并在最后返回对象的实例。Builder 模式可以把复杂对象的创建与表示分离，使得同样的创建过程可以创建不同的表示。<br>1、Builder：给出一个抽象接口，以规范产品对象的各个组成成分的建造。这个接口规定要实现复杂对象的哪些部分的创建，并不涉及具体的对象部件的创建。<br>2、ConcreteBuilder：实现Builder接口，针对不同的商业逻辑，具体化复杂对象的各部分的创建。在建造过程完成后，提供产品的实例。<br>3、Director：调用具体建造者来创建复杂对象的各个部分，在指导者中不涉及具体产品的信息，只负责保证对象各部分完整创建或按某种顺序创建，是一个具体的类。<br>4、Product：要创建的复杂对象类。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Director &#123;</span><br><span class="line">    </span><br><span class="line">    public Product constructProduct(ConcreteBuilder concreteBuilder)&#123;</span><br><span class="line">        concreteBuilder.buildBasic();</span><br><span class="line">        concreteBuilder.buildWalls();</span><br><span class="line">        concreteBuilder.roofed();</span><br><span class="line">        return concreteBuilder.buildProduct();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-Prototype-模式。原型模式"><a href="#4-Prototype-模式。原型模式" class="headerlink" title="(4)Prototype 模式。原型模式"></a>(4)Prototype 模式。原型模式</h2><p>Prototype 模式可以根据原型实例制定创建的对象的种类，并通过深复制这个原型来创建新的对象。Prototype 模式有着同 Abstract Factory 模式和 Builder 模式相同的效果，不过当需要实例化的类是在运行期才被指定的而且要避免创建一个与产品 曾是平行的工厂类层次时，可以使用 Prototype 模式。使用 Prototype 模式可以在运行时 增加或减少原型，比 Abstract Factory 和 Builder 模式更加灵活。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Prototype pro = new Prototype();</span><br><span class="line">Prototype pro1 = (Prototype)pro.clone();</span><br></pre></td></tr></table></figure>
+<h2 id="5-Singleton-模式。单例模式"><a href="#5-Singleton-模式。单例模式" class="headerlink" title="(5)Singleton 模式。单例模式"></a>(5)Singleton 模式。单例模式</h2><p>Singleton 模式也是一种很有代表性的模式。使用 Singleton 模式 可以保证一个类仅有一个实例，从而可以提供一个单一的全局访问点。</p>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>在定义类的静态私有变量同时进行实例化。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">        return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好处：线程安全；获取实例速度快<br>缺点：类加载即初始化实例，内存浪费</p>
+<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private volatile static Singleton singleton;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static Singleton getSingleton() &#123;</span><br><span class="line">        if (singleton == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：线程安全，进行双重检查，保证只在实例未初始化前进行同步，效率高<br>缺点：实例非空判断，耗费一定资源</p>
+<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private static class SingletonHolder &#123;</span><br><span class="line">        private static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingletonHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方式利用了classloder的机制来保证初始化instance时只有一个线程，但singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。如果实例化instance很消耗资源，我们想让他延迟加载，此外，我们不希望在Singleton类加载时就实例化，因为不能确保Singleton类还可能在其他的地方被主动使用从而被加载。这个时候，这种方式相比饿汉式就显得更合理。</p>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：写法简单，天然线程安全，可防止反射生成实例，是Effective Java作者Josh Bloch提倡的方式。</p>
+<h2 id="6-Adapter-模式。适配者模式"><a href="#6-Adapter-模式。适配者模式" class="headerlink" title="(6)Adapter 模式。适配者模式"></a>(6)Adapter 模式。适配者模式</h2><p>Adapter 模式可以解决系统间接口不相容的问题。通过 Adapter 可以把类的接口转化为客户程序所希望的接口，从而提高复用性。<br>实现原来的接口，方法体却是另一个对象的实现。</p>
+<h3 id="接口适配"><a href="#接口适配" class="headerlink" title="接口适配"></a>接口适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Mp4&#123;</span><br><span class="line">    void playMp4();</span><br><span class="line">&#125;</span><br><span class="line">interface Avi&#123;</span><br><span class="line">    void playAvi();</span><br><span class="line">&#125;</span><br><span class="line">class VideoPlayer implements Mp4&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void playMp4() &#123;</span><br><span class="line">        System.out.println(&quot;播放Mp4格式的视频文件.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class FormatFactory extends VideoPlayer  implements Avi&#123;    </span><br><span class="line">    @Override</span><br><span class="line">    public void playAvi() &#123;</span><br><span class="line">        //转换成MP4格式的视频</span><br><span class="line">        playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;        </span><br><span class="line">    Mp4 mp4=new VideoPlayer();</span><br><span class="line">    mp4.playMp4();</span><br><span class="line">    Avi avi=new FormatFactory();</span><br><span class="line">    avi.playAvi();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类适配"><a href="#类适配" class="headerlink" title="类适配"></a>类适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class FormatFactory2 implements Rvmb&#123;</span><br><span class="line">    private Mp4 mp4;</span><br><span class="line">    public FormatFactory2(Mp4 mp4) &#123;</span><br><span class="line">        this.mp4=mp4;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void playRvmb() &#123;</span><br><span class="line">        mp4.playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Rvmb rvmb=new FormatFactory2(new VideoPlayer());</span><br><span class="line">    rvmb.playRvmb();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="7-Bridge-模式。桥接模式"><a href="#7-Bridge-模式。桥接模式" class="headerlink" title="(7)Bridge 模式。桥接模式"></a>(7)Bridge 模式。桥接模式</h2><p>Bridge 模式把类的抽象部分同实现部分相分离，这样类的抽象和实现都可以独立地变化。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Pen&#123;</span><br><span class="line">    void write();</span><br><span class="line">&#125;</span><br><span class="line">class RedPen implements Pen&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class  Paper&#123;</span><br><span class="line">    protected  Pen pen;</span><br><span class="line">    void setPen(Pen pen)&#123;</span><br><span class="line">        this.pen=pen;</span><br><span class="line">    &#125;   </span><br><span class="line">    abstract void writing();</span><br><span class="line">&#125;</span><br><span class="line">class ExaminationPaper extends Paper&#123;</span><br><span class="line">    @Override</span><br><span class="line">    void writing() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Paper paper=new ExaminationPaper();</span><br><span class="line">    paper.setPen(new RedPen());</span><br><span class="line">    paper.writing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-Composite-模式。复合模式"><a href="#8-Composite-模式。复合模式" class="headerlink" title="(8)Composite 模式。复合模式"></a>(8)Composite 模式。复合模式</h2><p>Composite 模式提供了一种以树形结构组合对象的方法，使用Composite 可以使单个对象和组合后的对象具有一致性以提高软件的复用性。</p>
+<h2 id="9-Decorator-模式。装饰模式"><a href="#9-Decorator-模式。装饰模式" class="headerlink" title="(9)Decorator 模式。装饰模式"></a>(9)Decorator 模式。装饰模式</h2><p>Decorator 模式可以动态地为对象的某一个方法增加更多的功能。在很多时候，使用 Decorator 模式可以不必继承出新的子类从而维护简洁的类继承结构。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">	private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10-Facade-模式。外观模式，门面模式"><a href="#10-Facade-模式。外观模式，门面模式" class="headerlink" title="(10)Facade 模式。外观模式，门面模式"></a>(10)Facade 模式。外观模式，门面模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class FacadePattern &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Facade f = new Facade();</span><br><span class="line">        f.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Facade &#123; //外观角色</span><br><span class="line">    private SubSystem01 obj1 = new SubSystem01();</span><br><span class="line">    private SubSystem02 obj2 = new SubSystem02();</span><br><span class="line">    private SubSystem03 obj3 = new SubSystem03();</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        obj1.method1();</span><br><span class="line">        obj2.method2();</span><br><span class="line">        obj3.method3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="11-Flyweight-模式。享元模式，共享元素"><a href="#11-Flyweight-模式。享元模式，共享元素" class="headerlink" title="(11)Flyweight 模式。享元模式，共享元素"></a>(11)Flyweight 模式。享元模式，共享元素</h2><p>Flyweight 模式可以共享大量的细粒度对象，从而节省创建对象 所需要分配的空间，不过在时间上的开销会变大。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public Flyweight factory(int state)&#123;</span><br><span class="line">    if(map.containsKey(state))&#123;</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        map.put(state, new ConcreteFlyweight(state));</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="12-Proxy-模式。代理模式"><a href="#12-Proxy-模式。代理模式" class="headerlink" title="(12)Proxy 模式。代理模式"></a>(12)Proxy 模式。代理模式</h2><p>Proxy 模式为对象提供了一种访问代理对象，通过对象 Proxy 可以控制客户程序的访问。例如:访问权限的控制、访问地址的控制、访问方式的控制等， 甚至可以通过 Proxy 将开销较大的访问化整为零，提高访问效率。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Customer customer=new Customer();</span><br><span class="line">customer.setCash(120000);</span><br><span class="line">BuyCarProxy buyCarProxy=new BuyCarProxy(customer);</span><br><span class="line">buyCarProxy.buyCar();</span><br></pre></td></tr></table></figure>
+<h2 id="13-Interpreter-模式。解释器模式"><a href="#13-Interpreter-模式。解释器模式" class="headerlink" title="(13)Interpreter 模式。解释器模式"></a>(13)Interpreter 模式。解释器模式</h2><p>定义了一个解释器，来解释遵循给定语言和文法的句子。<br>只需要向计算机输入一个句子或文件，就能按照预定的文法规则来对句子或文件进行解释。<br>例如输入“1+2+3-4+1”时，将输出计算结果为3。</p>
+<h2 id="14-Template-Method-模式。模板方法模式"><a href="#14-Template-Method-模式。模板方法模式" class="headerlink" title="(14)Template Method 模式。模板方法模式"></a>(14)Template Method 模式。模板方法模式</h2><p>定义一个操作的模板，其中的一些步骤会在子类中实现，以适应不同的情况。<br>在父类中定义处理流程的框架，在子类中实现具体的处理方式。</p>
+<h2 id="15-Chain-of-Responsibility-模式。责任链模式"><a href="#15-Chain-of-Responsibility-模式。责任链模式" class="headerlink" title="(15)Chain of Responsibility 模式。责任链模式"></a>(15)Chain of Responsibility 模式。责任链模式</h2><p>Chain of Responsibility 模式把可以响应请求的对象 组织成一条链，并在这条对象链上传递请求，从而保证多个对象都有机会处理请求而且可以 避免请求方和相应方的耦合。</p>
+<p>一个纯的责任链模式要求一个具体的处理者对象只能在两个行为中选择一个：一个是承担责任，二是把责任推给下家。不允许出现某一个具体处理者对象在承担了一部分责任后又把责任向下传的情况。</p>
+<p>在一个纯的责任链模式里面，一个请求必须被某一个处理者对象所接收；在一个不纯的责任链模式里面，一个请求可以最终不被任何接收端对象所接收。纯的责任链模式的例子是不容易找到的，一般看到的例子均是不纯的责任链模式的实现。</p>
+<h2 id="16-Command-模式。命令模式"><a href="#16-Command-模式。命令模式" class="headerlink" title="(16)Command 模式。命令模式"></a>(16)Command 模式。命令模式</h2><p>将请求封装为对象，从而增强请求的能力，如参数化、排队、 记录日志等。</p>
+<p>Command有时也被称为事件（event）。它与“事件驱动编程”中的“事件”是一样的意思。当发生点击鼠标、按下键盘按键等事件时，我们可以先将这些事件作成实例，然后按照发生顺序放入队列中。接着，再依次去处理它们。在GUI（graphical user interface）编程中，经常需要与“事件”打交道。即为在有多个命令，并且这些命令有一定的逻辑顺序，且可能需要保存的这些命令的数据，那么可以使用Command设计模式。</p>
+<h2 id="17-Iterator-模式。迭代器模式"><a href="#17-Iterator-模式。迭代器模式" class="headerlink" title="(17)Iterator 模式。迭代器模式"></a>(17)Iterator 模式。迭代器模式</h2><p>Iterator 模式提供了顺序访问一个对象集合中的各元素的方法， 使用 Iterator 可以避免暴露集合中对象的耦合关系。</p>
+<h2 id="18-Mediator-模式。仲裁者模式、中介者模式"><a href="#18-Mediator-模式。仲裁者模式、中介者模式" class="headerlink" title="(18)Mediator 模式。仲裁者模式、中介者模式"></a>(18)Mediator 模式。仲裁者模式、中介者模式</h2><p>Mediator 模式可以减少系统中对象间的耦合性。Mediator 模式 使用中介对象封装其他的对象，从而使这些被封装的对象间的关系就成了松散耦合。</p>
+<p>例如：QQ聊天</p>
+<h2 id="19-Memento-模式。备忘录模式"><a href="#19-Memento-模式。备忘录模式" class="headerlink" title="(19)Memento 模式。备忘录模式"></a>(19)Memento 模式。备忘录模式</h2><p>Memento 模式提供了一种捕获对象状态的方法，且不会破坏对 象的封装。并且可以在对象外部保存对象的状态，并在需要的时候恢复对象状态。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    List&lt;Memento&gt; savedTimes = new ArrayList&lt;&gt;();</span><br><span class="line">    Life life = new Life();</span><br><span class="line">    life.set(&quot;3000 A.D.&quot;);</span><br><span class="line">    savedTimes.add(life.saveToMemento());</span><br><span class="line">    life.set(&quot;4000 A.D.&quot;);</span><br><span class="line">    life.restoreFromMemento(savedTimes.get(0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="20-Observer-模式。观察者模式"><a href="#20-Observer-模式。观察者模式" class="headerlink" title="(20)Observer 模式。观察者模式"></a>(20)Observer 模式。观察者模式</h2><p>Observer 模式提供了将对象的状态广播到一组观察者的方式， 从而可以让每个观察者随时可以得到对象更新的通知。</p>
+<h2 id="21-State-模式。状态模式"><a href="#21-State-模式。状态模式" class="headerlink" title="(21)State 模式。状态模式"></a>(21)State 模式。状态模式</h2><p>State 模式允许一个对象在其内部状态改变的时候改变它的行为。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void setState(State state) &#123;</span><br><span class="line">    System.out.println(&quot;订单信息已更新！&quot;);</span><br><span class="line">    this.state = state;</span><br><span class="line">    this.state.handle();</span><br><span class="line">&#125;</span><br><span class="line">public static  void  main(String [] args) &#123;</span><br><span class="line">    Context context = new Context();</span><br><span class="line">    context.setState(new Booked());</span><br><span class="line">    context.setState(new Payed());</span><br><span class="line">    context.setState(new Sended());</span><br><span class="line">    context.setState(new InWay());</span><br><span class="line">    context.setState(new Recieved());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="22-Strategy-模式。策略模式"><a href="#22-Strategy-模式。策略模式" class="headerlink" title="(22)Strategy 模式。策略模式"></a>(22)Strategy 模式。策略模式</h2><p>使用 Strategy 模式可以让对象中算法的变化独立于客户。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">状态模式和策略模式的不同点：</span><br><span class="line">策略模式中，类的功能是根据当前条件主动更改；</span><br><span class="line">状态模式中，类的功能是被动由当前状态更改；</span><br><span class="line">策略模式中每个行为或算法之间没有关联；</span><br><span class="line">状态模式中的状态之间有关联，并且状态本身控制着状态转移；</span><br></pre></td></tr></table></figure>
+<h2 id="23-Visitor-模式。访问者模式"><a href="#23-Visitor-模式。访问者模式" class="headerlink" title="(23)Visitor 模式。访问者模式"></a>(23)Visitor 模式。访问者模式</h2><p>表示对某对象结构中各元素的操作，使用 Visitor 模式可以在不改<br>变各元素类的前提下定义作用于这些元素的新操作。</p>
+<p>双重分发</p>
+<h1 id="四、其他设计模式"><a href="#四、其他设计模式" class="headerlink" title="四、其他设计模式"></a>四、其他设计模式</h1><h2 id="1-Intercepting-Filter-模式。拦截过滤器模式"><a href="#1-Intercepting-Filter-模式。拦截过滤器模式" class="headerlink" title="(1)Intercepting Filter 模式。拦截过滤器模式"></a>(1)Intercepting Filter 模式。拦截过滤器模式</h2><p>在 J2EE 的 BPS(Basic Programming System，基本编程系 统)应用框架下，在真正响应客户端请求前经常需要进行一些预处理，如客户身份验证、客 户 Session 的合法性验证、字符集转码、客户请求记录等。</p>
+<h2 id="2-Session-Facade-模式。"><a href="#2-Session-Facade-模式。" class="headerlink" title="(2)Session Facade 模式。"></a>(2)Session Facade 模式。</h2><p>在 J2EE 开发领域，人们把Session Bean 和 Facade 模式结合起来， 封装业务逻辑的接口，形成了 Session Facade 模式。</p>
+<h1 id="五、设计模式与软件架构"><a href="#五、设计模式与软件架构" class="headerlink" title="五、设计模式与软件架构"></a>五、设计模式与软件架构</h1><p>软件架构更倾向于从整体和全局上描述软件的组成。<br>设计模式更侧重于类与类、对象与对象之间的关系。<br>设计模式和软件架构是面向不同层次问题的解决方案。</p>
+<h1 id="六、设计模式分类"><a href="#六、设计模式分类" class="headerlink" title="六、设计模式分类"></a>六、设计模式分类</h1><p>设计模式分为三类，分别为创建型、结构型和行为型。</p>
+<p><img src="/images/ruankao/8-1.png"></p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式（三）设计模式总结</title>
+    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%89%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>学习设计模式最重要的是理解，而不是生搬硬套。</p>
+<p>不能滥用设计模式</p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式（二）设计模式及实现</title>
+    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p><img src="/images/ruankao/8-2.png"></p>
+<p><img src="/images/ruankao/8-3.png"></p>
+<p><img src="/images/ruankao/8-4.png"></p>
+<p><img src="/images/ruankao/8-5.png"></p>
+<p><img src="/images/ruankao/8-6.png"></p>
+<p><img src="/images/ruankao/8-7.png"></p>
+<p><img src="/images/ruankao/8-8.png"></p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-设计模式</tag>
       </tags>
   </entry>
   <entry>
@@ -502,103 +602,28 @@
       </tags>
   </entry>
   <entry>
-    <title>设计模式（三）设计模式总结</title>
-    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%89%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>学习设计模式最重要的是理解，而不是生搬硬套。</p>
-<p>不能滥用设计模式</p>
+    <title>信息系统基础知识（一）信息系统概述</title>
+    <url>/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="信息系统的数据环境"><a href="#信息系统的数据环境" class="headerlink" title="信息系统的数据环境"></a>信息系统的数据环境</h1><p>马丁在《信息工程》和《战略数据规划方法学》中将信息系统的数据环境分为 4 种类型：</p>
+<p>第一类数据环境:数据文件。<br>第二类数据环境:应用数据库。<br>第三类数据环境:主题数据库。<br>第四类数据环境:信息检索系统。</p>
+<h1 id="公司的管理活动"><a href="#公司的管理活动" class="headerlink" title="公司的管理活动"></a>公司的管理活动</h1><p>一个公司的管理活动可以分成 4 级:战略级、战术级、操作级和事务级。</p>
+<p>战略级的信息系统的所有者和使用者都是企业的最高管理层，对于现代公司制企业， 就是企业的董事会和经理班子;</p>
+<p>战术级信息系统的使用者一般是企业的中层经理及其管理的 部门;</p>
+<p>操作级信息系统的使用者一般是服务型企业的业务部门，例如，保险企业的保单处理 部门;</p>
+<p>事务级信息系统的使用者一般是企业的管理业务人员，例如，企业的会计、劳资员等。</p>
+<h1 id="信息系统的生命周期"><a href="#信息系统的生命周期" class="headerlink" title="信息系统的生命周期"></a>信息系统的生命周期</h1><p>信息系统的生命周期分为 4 个阶段，即产生阶段、开发阶段、运行阶段和 消亡阶段。</p>
+<p>1.信息系统的产生阶段又分为 概念产生过程和需求分析过程。</p>
+<p>2.信息系统的开发阶段 可分为 5 个阶段，即，总体规划、系统分析、系统设计、系统实施和系统验收阶段。</p>
+<p>3.信息系统的运行阶段<br>四种类型：排错性维护、适应性维护、完善性维护和预防性维护。</p>
+<p>4.信息系统的消亡阶段</p>
+<h1 id="信息系统建设的原则"><a href="#信息系统建设的原则" class="headerlink" title="信息系统建设的原则"></a>信息系统建设的原则</h1><p>1.高层管理人员介入原则<br>2.用户参与开发原则<br>3.自顶向下规划原则<br>4.工程化原则<br>5.其他原则<br>创新性原则，用来体现信息系统的先进性。<br>整体性原则，用来体现信息系统的完整性。<br>发展性原则，用来体现信息系统的超前性。<br>经济性原则，用来体现信息系统的实用性。</p>
+<h1 id="信息系统开发方法"><a href="#信息系统开发方法" class="headerlink" title="信息系统开发方法"></a>信息系统开发方法</h1><p>1.结构化方法<br>2.原型法<br>3.面向对象方法<br>4.面向服务的方法</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
       </categories>
       <tags>
-        <tag>软考-设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计模式（一）设计模式概述</title>
-    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%B8%80%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="一、设计模式的概念"><a href="#一、设计模式的概念" class="headerlink" title="一、设计模式的概念"></a>一、设计模式的概念</h1><p>设计模式解决的是一类问题。<br>工厂模式就是为了解决类创建的问题，<br>适配器模式则是为了解决类接口不匹配的问题。</p>
-<p>(1)学习这些模式是一个方面，另一方面更要了解模式中的思想。<br>(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。</p>
-<h1 id="二、设计模式的组成"><a href="#二、设计模式的组成" class="headerlink" title="二、设计模式的组成"></a>二、设计模式的组成</h1><p>在描述一个设计模式时，至少需要包含四个方面:<br>模式名称(Pattern name)、<br>问题(Problem)、<br>解决方案(Solution)、<br>效果(Consequence)。</p>
-<h1 id="三、GoF设计模式"><a href="#三、GoF设计模式" class="headerlink" title="三、GoF设计模式"></a>三、GoF设计模式</h1><h2 id="补充-简单工厂"><a href="#补充-简单工厂" class="headerlink" title="(补充)简单工厂"></a>(补充)简单工厂</h2><p>1、写一个工厂类，使用静态方法，根据传参来new不同的产品对象<br>2、客户端调用这个工厂类的静态方法，就可以获取想要的产品</p>
-<h2 id="1-Factory-Method-模式。工厂模式"><a href="#1-Factory-Method-模式。工厂模式" class="headerlink" title="(1)Factory Method 模式。工厂模式"></a>(1)Factory Method 模式。工厂模式</h2><p>Factory Method 模式提供了一种延迟创建类的方法，使用 这个方法可以在运行期由子类决定创建哪一个类的实例。<br>1、写一个抽象工厂类，每个工厂实现类负责将new不同种类的产品。<br>2、客户端new不同的工厂实现类就可以获得不同的产品。</p>
-<h2 id="2-Abstract-Factory-模式。抽象工厂模式"><a href="#2-Abstract-Factory-模式。抽象工厂模式" class="headerlink" title="(2)Abstract Factory 模式。抽象工厂模式"></a>(2)Abstract Factory 模式。抽象工厂模式</h2><p>Abstract Factory 又称为抽象工厂模式，该模式主要为解决 复杂系统中对象创建的问题。抽象工厂模式提供了一个一致的对象创建接口来创建一系列具 有相似基类或相似接口的对象。<br>1、写一个抽象工厂类，然后每个工厂实现类负责new一组不同的种类的产品。<br>2、客户端new需要某一组的产品，只需要new一个工厂即可。</p>
-<h2 id="3-Builder-模式。建造者模式"><a href="#3-Builder-模式。建造者模式" class="headerlink" title="(3)Builder 模式。建造者模式"></a>(3)Builder 模式。建造者模式</h2><p>Builder 模式与 Abstract Factory 模式非常类似，但 Builder 模式是逐步地构造出一个复杂对象，并在最后返回对象的实例。Builder 模式可以把复杂对象的创建与表示分离，使得同样的创建过程可以创建不同的表示。<br>1、Builder：给出一个抽象接口，以规范产品对象的各个组成成分的建造。这个接口规定要实现复杂对象的哪些部分的创建，并不涉及具体的对象部件的创建。<br>2、ConcreteBuilder：实现Builder接口，针对不同的商业逻辑，具体化复杂对象的各部分的创建。在建造过程完成后，提供产品的实例。<br>3、Director：调用具体建造者来创建复杂对象的各个部分，在指导者中不涉及具体产品的信息，只负责保证对象各部分完整创建或按某种顺序创建，是一个具体的类。<br>4、Product：要创建的复杂对象类。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Director &#123;</span><br><span class="line">    </span><br><span class="line">    public Product constructProduct(ConcreteBuilder concreteBuilder)&#123;</span><br><span class="line">        concreteBuilder.buildBasic();</span><br><span class="line">        concreteBuilder.buildWalls();</span><br><span class="line">        concreteBuilder.roofed();</span><br><span class="line">        return concreteBuilder.buildProduct();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-Prototype-模式。原型模式"><a href="#4-Prototype-模式。原型模式" class="headerlink" title="(4)Prototype 模式。原型模式"></a>(4)Prototype 模式。原型模式</h2><p>Prototype 模式可以根据原型实例制定创建的对象的种类，并通过深复制这个原型来创建新的对象。Prototype 模式有着同 Abstract Factory 模式和 Builder 模式相同的效果，不过当需要实例化的类是在运行期才被指定的而且要避免创建一个与产品 曾是平行的工厂类层次时，可以使用 Prototype 模式。使用 Prototype 模式可以在运行时 增加或减少原型，比 Abstract Factory 和 Builder 模式更加灵活。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Prototype pro = new Prototype();</span><br><span class="line">Prototype pro1 = (Prototype)pro.clone();</span><br></pre></td></tr></table></figure>
-<h2 id="5-Singleton-模式。单例模式"><a href="#5-Singleton-模式。单例模式" class="headerlink" title="(5)Singleton 模式。单例模式"></a>(5)Singleton 模式。单例模式</h2><p>Singleton 模式也是一种很有代表性的模式。使用 Singleton 模式 可以保证一个类仅有一个实例，从而可以提供一个单一的全局访问点。</p>
-<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>在定义类的静态私有变量同时进行实例化。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">        return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>好处：线程安全；获取实例速度快<br>缺点：类加载即初始化实例，内存浪费</p>
-<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private volatile static Singleton singleton;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static Singleton getSingleton() &#123;</span><br><span class="line">        if (singleton == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>优点：线程安全，进行双重检查，保证只在实例未初始化前进行同步，效率高<br>缺点：实例非空判断，耗费一定资源</p>
-<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private static class SingletonHolder &#123;</span><br><span class="line">        private static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingletonHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种方式利用了classloder的机制来保证初始化instance时只有一个线程，但singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。如果实例化instance很消耗资源，我们想让他延迟加载，此外，我们不希望在Singleton类加载时就实例化，因为不能确保Singleton类还可能在其他的地方被主动使用从而被加载。这个时候，这种方式相比饿汉式就显得更合理。</p>
-<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>优点：写法简单，天然线程安全，可防止反射生成实例，是Effective Java作者Josh Bloch提倡的方式。</p>
-<h2 id="6-Adapter-模式。适配者模式"><a href="#6-Adapter-模式。适配者模式" class="headerlink" title="(6)Adapter 模式。适配者模式"></a>(6)Adapter 模式。适配者模式</h2><p>Adapter 模式可以解决系统间接口不相容的问题。通过 Adapter 可以把类的接口转化为客户程序所希望的接口，从而提高复用性。<br>实现原来的接口，方法体却是另一个对象的实现。</p>
-<h3 id="接口适配"><a href="#接口适配" class="headerlink" title="接口适配"></a>接口适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Mp4&#123;</span><br><span class="line">    void playMp4();</span><br><span class="line">&#125;</span><br><span class="line">interface Avi&#123;</span><br><span class="line">    void playAvi();</span><br><span class="line">&#125;</span><br><span class="line">class VideoPlayer implements Mp4&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void playMp4() &#123;</span><br><span class="line">        System.out.println(&quot;播放Mp4格式的视频文件.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class FormatFactory extends VideoPlayer  implements Avi&#123;    </span><br><span class="line">    @Override</span><br><span class="line">    public void playAvi() &#123;</span><br><span class="line">        //转换成MP4格式的视频</span><br><span class="line">        playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;        </span><br><span class="line">    Mp4 mp4=new VideoPlayer();</span><br><span class="line">    mp4.playMp4();</span><br><span class="line">    Avi avi=new FormatFactory();</span><br><span class="line">    avi.playAvi();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="类适配"><a href="#类适配" class="headerlink" title="类适配"></a>类适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class FormatFactory2 implements Rvmb&#123;</span><br><span class="line">    private Mp4 mp4;</span><br><span class="line">    public FormatFactory2(Mp4 mp4) &#123;</span><br><span class="line">        this.mp4=mp4;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void playRvmb() &#123;</span><br><span class="line">        mp4.playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Rvmb rvmb=new FormatFactory2(new VideoPlayer());</span><br><span class="line">    rvmb.playRvmb();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="7-Bridge-模式。桥接模式"><a href="#7-Bridge-模式。桥接模式" class="headerlink" title="(7)Bridge 模式。桥接模式"></a>(7)Bridge 模式。桥接模式</h2><p>Bridge 模式把类的抽象部分同实现部分相分离，这样类的抽象和实现都可以独立地变化。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Pen&#123;</span><br><span class="line">    void write();</span><br><span class="line">&#125;</span><br><span class="line">class RedPen implements Pen&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class  Paper&#123;</span><br><span class="line">    protected  Pen pen;</span><br><span class="line">    void setPen(Pen pen)&#123;</span><br><span class="line">        this.pen=pen;</span><br><span class="line">    &#125;   </span><br><span class="line">    abstract void writing();</span><br><span class="line">&#125;</span><br><span class="line">class ExaminationPaper extends Paper&#123;</span><br><span class="line">    @Override</span><br><span class="line">    void writing() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Paper paper=new ExaminationPaper();</span><br><span class="line">    paper.setPen(new RedPen());</span><br><span class="line">    paper.writing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="8-Composite-模式。复合模式"><a href="#8-Composite-模式。复合模式" class="headerlink" title="(8)Composite 模式。复合模式"></a>(8)Composite 模式。复合模式</h2><p>Composite 模式提供了一种以树形结构组合对象的方法，使用Composite 可以使单个对象和组合后的对象具有一致性以提高软件的复用性。</p>
-<h2 id="9-Decorator-模式。装饰模式"><a href="#9-Decorator-模式。装饰模式" class="headerlink" title="(9)Decorator 模式。装饰模式"></a>(9)Decorator 模式。装饰模式</h2><p>Decorator 模式可以动态地为对象的某一个方法增加更多的功能。在很多时候，使用 Decorator 模式可以不必继承出新的子类从而维护简洁的类继承结构。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">	private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="10-Facade-模式。外观模式，门面模式"><a href="#10-Facade-模式。外观模式，门面模式" class="headerlink" title="(10)Facade 模式。外观模式，门面模式"></a>(10)Facade 模式。外观模式，门面模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class FacadePattern &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Facade f = new Facade();</span><br><span class="line">        f.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Facade &#123; //外观角色</span><br><span class="line">    private SubSystem01 obj1 = new SubSystem01();</span><br><span class="line">    private SubSystem02 obj2 = new SubSystem02();</span><br><span class="line">    private SubSystem03 obj3 = new SubSystem03();</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        obj1.method1();</span><br><span class="line">        obj2.method2();</span><br><span class="line">        obj3.method3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="11-Flyweight-模式。享元模式，共享元素"><a href="#11-Flyweight-模式。享元模式，共享元素" class="headerlink" title="(11)Flyweight 模式。享元模式，共享元素"></a>(11)Flyweight 模式。享元模式，共享元素</h2><p>Flyweight 模式可以共享大量的细粒度对象，从而节省创建对象 所需要分配的空间，不过在时间上的开销会变大。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public Flyweight factory(int state)&#123;</span><br><span class="line">    if(map.containsKey(state))&#123;</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        map.put(state, new ConcreteFlyweight(state));</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="12-Proxy-模式。代理模式"><a href="#12-Proxy-模式。代理模式" class="headerlink" title="(12)Proxy 模式。代理模式"></a>(12)Proxy 模式。代理模式</h2><p>Proxy 模式为对象提供了一种访问代理对象，通过对象 Proxy 可以控制客户程序的访问。例如:访问权限的控制、访问地址的控制、访问方式的控制等， 甚至可以通过 Proxy 将开销较大的访问化整为零，提高访问效率。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Customer customer=new Customer();</span><br><span class="line">customer.setCash(120000);</span><br><span class="line">BuyCarProxy buyCarProxy=new BuyCarProxy(customer);</span><br><span class="line">buyCarProxy.buyCar();</span><br></pre></td></tr></table></figure>
-<h2 id="13-Interpreter-模式。解释器模式"><a href="#13-Interpreter-模式。解释器模式" class="headerlink" title="(13)Interpreter 模式。解释器模式"></a>(13)Interpreter 模式。解释器模式</h2><p>定义了一个解释器，来解释遵循给定语言和文法的句子。<br>只需要向计算机输入一个句子或文件，就能按照预定的文法规则来对句子或文件进行解释。<br>例如输入“1+2+3-4+1”时，将输出计算结果为3。</p>
-<h2 id="14-Template-Method-模式。模板方法模式"><a href="#14-Template-Method-模式。模板方法模式" class="headerlink" title="(14)Template Method 模式。模板方法模式"></a>(14)Template Method 模式。模板方法模式</h2><p>定义一个操作的模板，其中的一些步骤会在子类中实现，以适应不同的情况。<br>在父类中定义处理流程的框架，在子类中实现具体的处理方式。</p>
-<h2 id="15-Chain-of-Responsibility-模式。责任链模式"><a href="#15-Chain-of-Responsibility-模式。责任链模式" class="headerlink" title="(15)Chain of Responsibility 模式。责任链模式"></a>(15)Chain of Responsibility 模式。责任链模式</h2><p>Chain of Responsibility 模式把可以响应请求的对象 组织成一条链，并在这条对象链上传递请求，从而保证多个对象都有机会处理请求而且可以 避免请求方和相应方的耦合。</p>
-<p>一个纯的责任链模式要求一个具体的处理者对象只能在两个行为中选择一个：一个是承担责任，二是把责任推给下家。不允许出现某一个具体处理者对象在承担了一部分责任后又把责任向下传的情况。</p>
-<p>在一个纯的责任链模式里面，一个请求必须被某一个处理者对象所接收；在一个不纯的责任链模式里面，一个请求可以最终不被任何接收端对象所接收。纯的责任链模式的例子是不容易找到的，一般看到的例子均是不纯的责任链模式的实现。</p>
-<h2 id="16-Command-模式。命令模式"><a href="#16-Command-模式。命令模式" class="headerlink" title="(16)Command 模式。命令模式"></a>(16)Command 模式。命令模式</h2><p>将请求封装为对象，从而增强请求的能力，如参数化、排队、 记录日志等。</p>
-<p>Command有时也被称为事件（event）。它与“事件驱动编程”中的“事件”是一样的意思。当发生点击鼠标、按下键盘按键等事件时，我们可以先将这些事件作成实例，然后按照发生顺序放入队列中。接着，再依次去处理它们。在GUI（graphical user interface）编程中，经常需要与“事件”打交道。即为在有多个命令，并且这些命令有一定的逻辑顺序，且可能需要保存的这些命令的数据，那么可以使用Command设计模式。</p>
-<h2 id="17-Iterator-模式。迭代器模式"><a href="#17-Iterator-模式。迭代器模式" class="headerlink" title="(17)Iterator 模式。迭代器模式"></a>(17)Iterator 模式。迭代器模式</h2><p>Iterator 模式提供了顺序访问一个对象集合中的各元素的方法， 使用 Iterator 可以避免暴露集合中对象的耦合关系。</p>
-<h2 id="18-Mediator-模式。仲裁者模式、中介者模式"><a href="#18-Mediator-模式。仲裁者模式、中介者模式" class="headerlink" title="(18)Mediator 模式。仲裁者模式、中介者模式"></a>(18)Mediator 模式。仲裁者模式、中介者模式</h2><p>Mediator 模式可以减少系统中对象间的耦合性。Mediator 模式 使用中介对象封装其他的对象，从而使这些被封装的对象间的关系就成了松散耦合。</p>
-<p>例如：QQ聊天</p>
-<h2 id="19-Memento-模式。备忘录模式"><a href="#19-Memento-模式。备忘录模式" class="headerlink" title="(19)Memento 模式。备忘录模式"></a>(19)Memento 模式。备忘录模式</h2><p>Memento 模式提供了一种捕获对象状态的方法，且不会破坏对 象的封装。并且可以在对象外部保存对象的状态，并在需要的时候恢复对象状态。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    List&lt;Memento&gt; savedTimes = new ArrayList&lt;&gt;();</span><br><span class="line">    Life life = new Life();</span><br><span class="line">    life.set(&quot;3000 A.D.&quot;);</span><br><span class="line">    savedTimes.add(life.saveToMemento());</span><br><span class="line">    life.set(&quot;4000 A.D.&quot;);</span><br><span class="line">    life.restoreFromMemento(savedTimes.get(0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="20-Observer-模式。观察者模式"><a href="#20-Observer-模式。观察者模式" class="headerlink" title="(20)Observer 模式。观察者模式"></a>(20)Observer 模式。观察者模式</h2><p>Observer 模式提供了将对象的状态广播到一组观察者的方式， 从而可以让每个观察者随时可以得到对象更新的通知。</p>
-<h2 id="21-State-模式。状态模式"><a href="#21-State-模式。状态模式" class="headerlink" title="(21)State 模式。状态模式"></a>(21)State 模式。状态模式</h2><p>State 模式允许一个对象在其内部状态改变的时候改变它的行为。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void setState(State state) &#123;</span><br><span class="line">    System.out.println(&quot;订单信息已更新！&quot;);</span><br><span class="line">    this.state = state;</span><br><span class="line">    this.state.handle();</span><br><span class="line">&#125;</span><br><span class="line">public static  void  main(String [] args) &#123;</span><br><span class="line">    Context context = new Context();</span><br><span class="line">    context.setState(new Booked());</span><br><span class="line">    context.setState(new Payed());</span><br><span class="line">    context.setState(new Sended());</span><br><span class="line">    context.setState(new InWay());</span><br><span class="line">    context.setState(new Recieved());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="22-Strategy-模式。策略模式"><a href="#22-Strategy-模式。策略模式" class="headerlink" title="(22)Strategy 模式。策略模式"></a>(22)Strategy 模式。策略模式</h2><p>使用 Strategy 模式可以让对象中算法的变化独立于客户。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">状态模式和策略模式的不同点：</span><br><span class="line">策略模式中，类的功能是根据当前条件主动更改；</span><br><span class="line">状态模式中，类的功能是被动由当前状态更改；</span><br><span class="line">策略模式中每个行为或算法之间没有关联；</span><br><span class="line">状态模式中的状态之间有关联，并且状态本身控制着状态转移；</span><br></pre></td></tr></table></figure>
-<h2 id="23-Visitor-模式。访问者模式"><a href="#23-Visitor-模式。访问者模式" class="headerlink" title="(23)Visitor 模式。访问者模式"></a>(23)Visitor 模式。访问者模式</h2><p>表示对某对象结构中各元素的操作，使用 Visitor 模式可以在不改<br>变各元素类的前提下定义作用于这些元素的新操作。</p>
-<p>双重分发</p>
-<h1 id="四、其他设计模式"><a href="#四、其他设计模式" class="headerlink" title="四、其他设计模式"></a>四、其他设计模式</h1><h2 id="1-Intercepting-Filter-模式。拦截过滤器模式"><a href="#1-Intercepting-Filter-模式。拦截过滤器模式" class="headerlink" title="(1)Intercepting Filter 模式。拦截过滤器模式"></a>(1)Intercepting Filter 模式。拦截过滤器模式</h2><p>在 J2EE 的 BPS(Basic Programming System，基本编程系 统)应用框架下，在真正响应客户端请求前经常需要进行一些预处理，如客户身份验证、客 户 Session 的合法性验证、字符集转码、客户请求记录等。</p>
-<h2 id="2-Session-Facade-模式。"><a href="#2-Session-Facade-模式。" class="headerlink" title="(2)Session Facade 模式。"></a>(2)Session Facade 模式。</h2><p>在 J2EE 开发领域，人们把Session Bean 和 Facade 模式结合起来， 封装业务逻辑的接口，形成了 Session Facade 模式。</p>
-<h1 id="五、设计模式与软件架构"><a href="#五、设计模式与软件架构" class="headerlink" title="五、设计模式与软件架构"></a>五、设计模式与软件架构</h1><p>软件架构更倾向于从整体和全局上描述软件的组成。<br>设计模式更侧重于类与类、对象与对象之间的关系。<br>设计模式和软件架构是面向不同层次问题的解决方案。</p>
-<h1 id="六、设计模式分类"><a href="#六、设计模式分类" class="headerlink" title="六、设计模式分类"></a>六、设计模式分类</h1><p>设计模式分为三类，分别为创建型、结构型和行为型。</p>
-<p><img src="/images/ruankao/8-1.png"></p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>设计模式（二）设计模式及实现</title>
-    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E4%BA%8C%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p><img src="/images/ruankao/8-2.png"></p>
-<p><img src="/images/ruankao/8-3.png"></p>
-<p><img src="/images/ruankao/8-4.png"></p>
-<p><img src="/images/ruankao/8-5.png"></p>
-<p><img src="/images/ruankao/8-6.png"></p>
-<p><img src="/images/ruankao/8-7.png"></p>
-<p><img src="/images/ruankao/8-8.png"></p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-设计模式</tag>
+        <tag>软考-信息系统基础知识</tag>
       </tags>
   </entry>
   <entry>
@@ -616,31 +641,6 @@
 <h1 id="二、电子政务的内容"><a href="#二、电子政务的内容" class="headerlink" title="二、电子政务的内容"></a>二、电子政务的内容</h1><h2 id="1-政府与政府-Government-To-Government"><a href="#1-政府与政府-Government-To-Government" class="headerlink" title="(1)政府与政府(Government To Government)"></a>(1)政府与政府(Government To Government)</h2><h2 id="2-政府对企业-Government-To-Business"><a href="#2-政府对企业-Government-To-Business" class="headerlink" title="(2)政府对企业(Government To Business)"></a>(2)政府对企业(Government To Business)</h2><h2 id="3-政府对公民（G2C）"><a href="#3-政府对公民（G2C）" class="headerlink" title="(3)政府对公民（G2C）"></a>(3)政府对公民（G2C）</h2><h2 id="4-企业对政府"><a href="#4-企业对政府" class="headerlink" title="(4)企业对政府"></a>(4)企业对政府</h2><h2 id="5-公民对政府"><a href="#5-公民对政府" class="headerlink" title="(5)公民对政府"></a>(5)公民对政府</h2><h2 id="6-政府对公务员（G2E）"><a href="#6-政府对公务员（G2E）" class="headerlink" title="(6)政府对公务员（G2E）"></a>(6)政府对公务员（G2E）</h2><h1 id="三、电子政务建设的过程模式和技术模式"><a href="#三、电子政务建设的过程模式和技术模式" class="headerlink" title="三、电子政务建设的过程模式和技术模式"></a>三、电子政务建设的过程模式和技术模式</h1><h2 id="1-电子政务建设的过程模式"><a href="#1-电子政务建设的过程模式" class="headerlink" title="1.电子政务建设的过程模式"></a>1.电子政务建设的过程模式</h2><p>(1)以用户为中心<br>(2)引进“客户关系管理”技术<br>(3)政府门户</p>
 <h2 id="2-电子政务的技术模式"><a href="#2-电子政务的技术模式" class="headerlink" title="2.电子政务的技术模式"></a>2.电子政务的技术模式</h2><p>(1)网络管理模式<br>电子政务在网络管理上分为政府专网和通用网络两部分，包括专用网络、内部网络和外部网络。<br>(2)信息资源管理模式<br>电子政务可以选用的信息资 源管理模式有多种，目前主要有两种，即元数据管理模式和 XML 数据管理模式。<br>(3)应用开发模式<br>(4)电子政务的安全体系<br>电子政务的安全体系包括物理安全、网络安全、信息安全及安全管理等方面。<br>(5)电子政务的标准化<br>《国家电子政务标准化指南》共分为以下六个部分。<br>第一部分:总则。概括描述电子政务标准体系及标准化的机制。<br>第二部分:工程管理。概括描述电子政务工程管理须遵循或参考的技术要求、标准和管理规定。<br>第三部分:网络建设。概括描述网络建设须遵循或参考的技术要求、标准和管理规定。<br>第四部分:信息共享。概括描述信息共享须遵循或参考的技术要求、标准和管理规定。<br>第五部分:支撑技术。概括描述支撑技术须遵循或参考的技术要求、标准和管理规定。<br>第六部分:信息安全。概括描述保障信息安全须遵循或参考的技术要求、标准和管理规定。</p>
 <p>六项电子政务标准分别如下:<br>1 基于 XML 电子公文格式规范第一部分:总则，第二部分:公文体;<br>2 XML 在电子政务中的应用指南;<br>3 电子政务业务流程设计方法通用规范;<br>4 信息化工程监理规范;<br>5 电子政务数据元第一部分:设计和管理规范;<br>6 电子政务主题词表编制规则。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-信息系统基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息系统基础知识（一）信息系统概述</title>
-    <url>/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%80%EF%BC%89%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="信息系统的数据环境"><a href="#信息系统的数据环境" class="headerlink" title="信息系统的数据环境"></a>信息系统的数据环境</h1><p>马丁在《信息工程》和《战略数据规划方法学》中将信息系统的数据环境分为 4 种类型：</p>
-<p>第一类数据环境:数据文件。<br>第二类数据环境:应用数据库。<br>第三类数据环境:主题数据库。<br>第四类数据环境:信息检索系统。</p>
-<h1 id="公司的管理活动"><a href="#公司的管理活动" class="headerlink" title="公司的管理活动"></a>公司的管理活动</h1><p>一个公司的管理活动可以分成 4 级:战略级、战术级、操作级和事务级。</p>
-<p>战略级的信息系统的所有者和使用者都是企业的最高管理层，对于现代公司制企业， 就是企业的董事会和经理班子;</p>
-<p>战术级信息系统的使用者一般是企业的中层经理及其管理的 部门;</p>
-<p>操作级信息系统的使用者一般是服务型企业的业务部门，例如，保险企业的保单处理 部门;</p>
-<p>事务级信息系统的使用者一般是企业的管理业务人员，例如，企业的会计、劳资员等。</p>
-<h1 id="信息系统的生命周期"><a href="#信息系统的生命周期" class="headerlink" title="信息系统的生命周期"></a>信息系统的生命周期</h1><p>信息系统的生命周期分为 4 个阶段，即产生阶段、开发阶段、运行阶段和 消亡阶段。</p>
-<p>1.信息系统的产生阶段又分为 概念产生过程和需求分析过程。</p>
-<p>2.信息系统的开发阶段 可分为 5 个阶段，即，总体规划、系统分析、系统设计、系统实施和系统验收阶段。</p>
-<p>3.信息系统的运行阶段<br>四种类型：排错性维护、适应性维护、完善性维护和预防性维护。</p>
-<p>4.信息系统的消亡阶段</p>
-<h1 id="信息系统建设的原则"><a href="#信息系统建设的原则" class="headerlink" title="信息系统建设的原则"></a>信息系统建设的原则</h1><p>1.高层管理人员介入原则<br>2.用户参与开发原则<br>3.自顶向下规划原则<br>4.工程化原则<br>5.其他原则<br>创新性原则，用来体现信息系统的先进性。<br>整体性原则，用来体现信息系统的完整性。<br>发展性原则，用来体现信息系统的超前性。<br>经济性原则，用来体现信息系统的实用性。</p>
-<h1 id="信息系统开发方法"><a href="#信息系统开发方法" class="headerlink" title="信息系统开发方法"></a>信息系统开发方法</h1><p>1.结构化方法<br>2.原型法<br>3.面向对象方法<br>4.面向服务的方法</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
@@ -880,17 +880,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安全性和保密性设计（一）加密和解密</title>
-    <url>/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%80%EF%BC%89%E5%8A%A0%E5%AF%86%E5%92%8C%E8%A7%A3%E5%AF%86/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-安全性和保密性设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于中间件的开发（四）.NET</title>
     <url>/2021/09/30/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91%EF%BC%88%E5%9B%9B%EF%BC%89.NET/</url>
     <content><![CDATA[]]></content>
@@ -899,6 +888,17 @@
       </categories>
       <tags>
         <tag>软考-基于中间件的开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安全性和保密性设计（一）加密和解密</title>
+    <url>/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%80%EF%BC%89%E5%8A%A0%E5%AF%86%E5%92%8C%E8%A7%A3%E5%AF%86/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-安全性和保密性设计</tag>
       </tags>
   </entry>
   <entry>
@@ -1445,6 +1445,29 @@
       </tags>
   </entry>
   <entry>
+    <title>系统分析与设计方法（五）用户界面设计</title>
+    <url>/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</url>
+    <content><![CDATA[<p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
+<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
+<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
+<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
+<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
+<p>除此之外，还应该考虑表所示的设计原则。</p>
+<p><img src="/images/ruankao/6-18.png"></p>
+<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
+<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
+<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
+<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
+<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-系统分析与设计方法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>系统分析与设计方法（八）系统运行环境的集成与设计</title>
     <url>/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E9%9B%86%E6%88%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<p>在设计一个新的系统时，设计者必须考虑目标系统的运行环境问题。软件的运行环境是指系统运行的设备、操作系统和网络配置。</p>
@@ -1506,63 +1529,6 @@
       </categories>
       <tags>
         <tag>软考-系统分析与设计方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>系统分析与设计方法（五）用户界面设计</title>
-    <url>/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%BA%94%EF%BC%89%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/</url>
-    <content><![CDATA[<p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
-<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
-<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
-<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
-<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
-<p>除此之外，还应该考虑表所示的设计原则。</p>
-<p><img src="/images/ruankao/6-18.png"></p>
-<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
-<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
-<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
-<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
-<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-系统分析与设计方法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件架构设计（七）软件架构文档化</title>
-    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/</url>
-    <content><![CDATA[<p>记录软件架构的活动就是架构编档过程，也就是架构的文档化。它包含两个方面:一是 过程，编档过程能促使架构设计师进一步思考，使得架构更加完善;二是结果，描述架构的 文档将作为架构开发的成果，供项目关系人使用。</p>
-<h1 id="1-架构文档的使用者"><a href="#1-架构文档的使用者" class="headerlink" title="1.架构文档的使用者"></a>1.架构文档的使用者</h1><p>架构文档的使用者是架构的项目关系人。编写技术文档(尤其是软件架构文档)最基本 的原则之一是要从读者的角度来编写，易于编写但很难阅读的文档是不受欢迎的。</p>
-<p>架构的主要用途是充当项目关系人之间进行交流的工具，文档则促进了这种交流—— 架 构项目关系人希望从架构文档中获得自己所关心的架构信息。</p>
-<h1 id="2-编档规则"><a href="#2-编档规则" class="headerlink" title="2.编档规则"></a>2.编档规则</h1><p>合理的编档规则编写架构文档和编写其他文档一样，必须遵守一些基本规则，这里 将任何软件编档(包括软件架构编档)的规则归纳为 7 条:</p>
-<p>(1)从读者的角度编写文档。<br>(2)避免出现不必要的重复。<br>(3)避免歧义。<br>(4)使用标准结构。<br>(5)记录基本原理。<br>(6)使文档保持更新，但更新频率不要过高。<br>(7)针对目标的适宜性对文档进行评审。</p>
-<h1 id="3-视图编档"><a href="#3-视图编档" class="headerlink" title="3.视图编档"></a>3.视图编档</h1><p>视图的 概念为架构设计师提供了进行软件架构编档的基本原则。架构文档化就是将相关视图编成文 档，并补充多个视图的关联关系。</p>
-<p><img src="/images/ruankao/6-48.png"></p>
-<p>(1)视图概述:对系统进行概括性的描述，包含视图的主要元素和元素间的关系。<br>主要表示可用多个形式:图形、表 格、文本，通常用图形形式，使用 UML 语言来描述。</p>
-<p>(2)元素目录:对主要表示中所描述的元素及其关系进行详细描述，包括:元素及其 属 性、关系及其属性、元素接口、元素行为。<br>对元素及其协同工作的行为进行编档，如用 UML 的顺序图和状态图描述行为;<br>对接口进行编档如题<br><img src="/images/ruankao/6-49.png"></p>
-<p>(3)上下文图:用图形展示系统如何与其环境相关。</p>
-<p>(4)可变性指南:描述架构的可变化点，如在软件产品线中，产品线架构通过变化， 适用于多个系统，因此，文档中应包含这些变化点，如各系统要做出选择的选项、做出选择 的时间。</p>
-<p>(5)架构背景:为架构的合理性提供足够的、令人信服的论据。包括:基本原理、分 析结果及设计中所反映的假定。</p>
-<p>(6)术语表:对文档中每个术语进行简要说明。</p>
-<p>(7)其他信息:描述不属于架构方面的必要信息，如管理信息(创作者、配置控制数 据及变更历史)。</p>
-<h1 id="4-跨视图文档"><a href="#4-跨视图文档" class="headerlink" title="4.跨视图文档"></a>4.跨视图文档</h1><p>软件架构由多个视图文档来反映，按前面所述的要求完成每个视图的文档后，需要对这 些文档进行一个整体的“打包”工作，这就是跨视图文档。它包括如下内容:<br>(1)文档有哪些内容，它们是如何组织的:视图目录(含哪些视图);视图模板(即前 面描述的视图文档，企业可以通过规范化来定义统一的、公共的视图模板)。<br>(2)架构概述:它描述系统的目的、视图之间的关联、元素表及索引、项目词汇。<br>(3)为什么架构是这样的(基本原理):跨视图基本原理解释了整体架构实际上是其需 求的一个解决方案。即解释了做出决策的原因、方案的限制、改变决策时的影响及意义。</p>
-<h1 id="5-使用-UML"><a href="#5-使用-UML" class="headerlink" title="5.使用 UML"></a>5.使用 UML</h1><p>UML 已经成为对软件架构进行文档化的事实上的标准表示法。在视图文档的组织结构 中，UML 主要用于表示元素或元素组的行为。</p>
-<h1 id="6-软件架构重构"><a href="#6-软件架构重构" class="headerlink" title="6.软件架构重构"></a>6.软件架构重构</h1><p>前面已论述了架构编档，即在架构设计时完成编档工作。但是还有另外一种情况:系统<br>已经存在，但不知其架构，即架构没有通过文档很好地保留下来(文档的缺失/失效)。如何 维护这样的系统并管理其演变?其关键就是要找到软件架构，软件架构重构就是研究解决这 一问题的方法，它是反向工程之一。</p>
-<p>软件架构重构由以下活动组成，这些活动以迭代方式进行。</p>
-<p><img src="/images/ruankao/6-50.png"></p>
-<p>(1)信息提取(View Extraction)。可以使用各种工具进行信息提取，如解析器、语法 分析器等;可以利用 build 和 makefile 文件中关于模块的依赖关系;可以从源代码、编译 时制品和设计制品中提取静态信息;可以使用分析工具提取动态信息。</p>
-<p>(2)数据库构造(Database Construction):将提取的信息转化为标准的形式，并置于 数据库中。</p>
-<p>(3)视图融合(View Fusion):将数据库中的信息组合在一起，生成该架构的一个内聚 的视图。</p>
-<p>(4)重构(Reconstruction):构建数据抽象和各种表示以生成架构表示，主要由两个活动组成:可视化和交互、模式定义和识别。最后生成需要的架构文档(Documentation)。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-软件架构设计</tag>
       </tags>
   </entry>
   <entry>
@@ -1766,6 +1732,120 @@
       </tags>
   </entry>
   <entry>
+    <title>软件架构设计（七）软件架构文档化</title>
+    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/</url>
+    <content><![CDATA[<p>记录软件架构的活动就是架构编档过程，也就是架构的文档化。它包含两个方面:一是 过程，编档过程能促使架构设计师进一步思考，使得架构更加完善;二是结果，描述架构的 文档将作为架构开发的成果，供项目关系人使用。</p>
+<h1 id="1-架构文档的使用者"><a href="#1-架构文档的使用者" class="headerlink" title="1.架构文档的使用者"></a>1.架构文档的使用者</h1><p>架构文档的使用者是架构的项目关系人。编写技术文档(尤其是软件架构文档)最基本 的原则之一是要从读者的角度来编写，易于编写但很难阅读的文档是不受欢迎的。</p>
+<p>架构的主要用途是充当项目关系人之间进行交流的工具，文档则促进了这种交流—— 架 构项目关系人希望从架构文档中获得自己所关心的架构信息。</p>
+<h1 id="2-编档规则"><a href="#2-编档规则" class="headerlink" title="2.编档规则"></a>2.编档规则</h1><p>合理的编档规则编写架构文档和编写其他文档一样，必须遵守一些基本规则，这里 将任何软件编档(包括软件架构编档)的规则归纳为 7 条:</p>
+<p>(1)从读者的角度编写文档。<br>(2)避免出现不必要的重复。<br>(3)避免歧义。<br>(4)使用标准结构。<br>(5)记录基本原理。<br>(6)使文档保持更新，但更新频率不要过高。<br>(7)针对目标的适宜性对文档进行评审。</p>
+<h1 id="3-视图编档"><a href="#3-视图编档" class="headerlink" title="3.视图编档"></a>3.视图编档</h1><p>视图的 概念为架构设计师提供了进行软件架构编档的基本原则。架构文档化就是将相关视图编成文 档，并补充多个视图的关联关系。</p>
+<p><img src="/images/ruankao/6-48.png"></p>
+<p>(1)视图概述:对系统进行概括性的描述，包含视图的主要元素和元素间的关系。<br>主要表示可用多个形式:图形、表 格、文本，通常用图形形式，使用 UML 语言来描述。</p>
+<p>(2)元素目录:对主要表示中所描述的元素及其关系进行详细描述，包括:元素及其 属 性、关系及其属性、元素接口、元素行为。<br>对元素及其协同工作的行为进行编档，如用 UML 的顺序图和状态图描述行为;<br>对接口进行编档如题<br><img src="/images/ruankao/6-49.png"></p>
+<p>(3)上下文图:用图形展示系统如何与其环境相关。</p>
+<p>(4)可变性指南:描述架构的可变化点，如在软件产品线中，产品线架构通过变化， 适用于多个系统，因此，文档中应包含这些变化点，如各系统要做出选择的选项、做出选择 的时间。</p>
+<p>(5)架构背景:为架构的合理性提供足够的、令人信服的论据。包括:基本原理、分 析结果及设计中所反映的假定。</p>
+<p>(6)术语表:对文档中每个术语进行简要说明。</p>
+<p>(7)其他信息:描述不属于架构方面的必要信息，如管理信息(创作者、配置控制数 据及变更历史)。</p>
+<h1 id="4-跨视图文档"><a href="#4-跨视图文档" class="headerlink" title="4.跨视图文档"></a>4.跨视图文档</h1><p>软件架构由多个视图文档来反映，按前面所述的要求完成每个视图的文档后，需要对这 些文档进行一个整体的“打包”工作，这就是跨视图文档。它包括如下内容:<br>(1)文档有哪些内容，它们是如何组织的:视图目录(含哪些视图);视图模板(即前 面描述的视图文档，企业可以通过规范化来定义统一的、公共的视图模板)。<br>(2)架构概述:它描述系统的目的、视图之间的关联、元素表及索引、项目词汇。<br>(3)为什么架构是这样的(基本原理):跨视图基本原理解释了整体架构实际上是其需 求的一个解决方案。即解释了做出决策的原因、方案的限制、改变决策时的影响及意义。</p>
+<h1 id="5-使用-UML"><a href="#5-使用-UML" class="headerlink" title="5.使用 UML"></a>5.使用 UML</h1><p>UML 已经成为对软件架构进行文档化的事实上的标准表示法。在视图文档的组织结构 中，UML 主要用于表示元素或元素组的行为。</p>
+<h1 id="6-软件架构重构"><a href="#6-软件架构重构" class="headerlink" title="6.软件架构重构"></a>6.软件架构重构</h1><p>前面已论述了架构编档，即在架构设计时完成编档工作。但是还有另外一种情况:系统<br>已经存在，但不知其架构，即架构没有通过文档很好地保留下来(文档的缺失/失效)。如何 维护这样的系统并管理其演变?其关键就是要找到软件架构，软件架构重构就是研究解决这 一问题的方法，它是反向工程之一。</p>
+<p>软件架构重构由以下活动组成，这些活动以迭代方式进行。</p>
+<p><img src="/images/ruankao/6-50.png"></p>
+<p>(1)信息提取(View Extraction)。可以使用各种工具进行信息提取，如解析器、语法 分析器等;可以利用 build 和 makefile 文件中关于模块的依赖关系;可以从源代码、编译 时制品和设计制品中提取静态信息;可以使用分析工具提取动态信息。</p>
+<p>(2)数据库构造(Database Construction):将提取的信息转化为标准的形式，并置于 数据库中。</p>
+<p>(3)视图融合(View Fusion):将数据库中的信息组合在一起，生成该架构的一个内聚 的视图。</p>
+<p>(4)重构(Reconstruction):构建数据抽象和各种表示以生成架构表示，主要由两个活动组成:可视化和交互、模式定义和识别。最后生成需要的架构文档(Documentation)。</p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-软件架构设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件架构设计（三）软件架构风格</title>
+    <url>/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%89%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/</url>
+    <content><![CDATA[<p>软件架构设计的一个核心问题是能否使用重复的软件架构模式，即能否达到架构级别的 软件重用。</p>
+<p>架构风格反映了领域中众多系统所共有的结构和语义特性，并指导如何将各个模块和子系统有效地组织成一个完整的系统。</p>
+<p>只要系统是使用常用的、规范的方法来组织，就可使别的设计者很容易地理解系统的架构。</p>
+<h1 id="一、软件架构风格分类"><a href="#一、软件架构风格分类" class="headerlink" title="一、软件架构风格分类"></a>一、软件架构风格分类</h1><p>架构风格的最关键的四要素内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">提供一个词汇表</span><br><span class="line">定义一套配置规则</span><br><span class="line">定义一套语义解释原则</span><br><span class="line">定义对基于这种风格的系统所进行的分析</span><br></pre></td></tr></table></figure>
+<h1 id="二、数据流风格"><a href="#二、数据流风格" class="headerlink" title="二、数据流风格"></a>二、数据流风格</h1><p>批处理序列;管道/过滤器。</p>
+<p>这样的架构下，所有的数据按照流的形式在执行过程中前进，不存在结构的反复和重构。</p>
+<p>在流动过程中，数据经过序列间的数据处理组件进行处理，然后将处理结果向后传送，最后进行输出。</p>
+<h2 id="1-批处理序列"><a href="#1-批处理序列" class="headerlink" title="1. 批处理序列"></a>1. 批处理序列</h2><p>批处理风格的每一步处理都是独立的，并且每一步是顺序执行的。只有当前一步处理完，后一步处理才能开始。数据传送在步与步之间作为一个整体。(组件为一系列固定顺序的计 算单元，组件间只通过数据传递交互。每个处理步骤是一个独立的程序，每一步必 须在前一步结束后才能开始，数据必须是完整的，以整体的方式传递)</p>
+<p>批处理的典型应用:<br>(1)经典数据处理;<br>(2)程序开发;<br>(3)Windows 下的 BAT 程序就是这种应用的典型实例。</p>
+<h2 id="2-管道和过滤器"><a href="#2-管道和过滤器" class="headerlink" title="2. 管道和过滤器"></a>2. 管道和过滤器</h2><p>在管道/过滤器风格的软件架构中，每个构件都有一组输入和输出，构件读输入的数据流，经过内部处理，然后产生输出数据流。这个过程通常通过对输入流的变换及增量计算来 完成，所以在输入被完全消费之前，输出便产生了。</p>
+<p>管道/过滤器架构的例子:<br>(1)以 UNIX shell 编写的程序；<br>(2)传统的编译器。</p>
+<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>(1)使得软构件具有良好的隐蔽性和高内聚、低耦合的特点;<br>(2)允许设计者将整个系统的输入/输出行为看成是多个过滤器的行为的简单合成;<br>(3)支持软件重用<br>(4)系统维护和增强系统性能简单<br>(5)允许对一些如吞吐量、死锁等属性的分析;<br>(6)支持并行执行</p>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>(1)通常导致进程成为批处理的结构<br>(2)不适合处理交互的应用<br>(3)因为在数据传输上没有通用的标准，每个过滤器都增加了解析和合成数据的工作， 这样就导致了系统性能下降，并增加了编写过滤器的复杂性。</p>
+<h2 id="3-批处理序列风格与管道过滤器风格对比"><a href="#3-批处理序列风格与管道过滤器风格对比" class="headerlink" title="3.批处理序列风格与管道过滤器风格对比"></a>3.批处理序列风格与管道过滤器风格对比</h2><p>共同点:把任务分成一系列固定顺序的计算单元(组件)。组件间只通过数据传递交互。</p>
+<p>区别:批处理是全部的、高潜伏性的，输入时可随机存取，无合作性、无交互性。而管道过滤器是递增的，数据结果延迟小，输入时处理局部化，有反馈、可交互。批处理强调数据传送在步与步之间作为一个整体，而管理过滤器无此要求。</p>
+<h1 id="三、调用-返回风格"><a href="#三、调用-返回风格" class="headerlink" title="三、调用/返回风格"></a>三、调用/返回风格</h1><p>主程序/子程序;面向对象风格;层次结构。</p>
+<p>利用调用-返回实际上是一种分而治之的策略，其主要思想是将一个复杂的大系统分解为一些子系统，以便降低复杂度，并且增加可修改性。</p>
+<h2 id="1-主程序-子程序"><a href="#1-主程序-子程序" class="headerlink" title="1. 主程序/子程序"></a>1. 主程序/子程序</h2><p>主程序/子程序风格是结构化开发时期的经典架构风格。这种风格一般采用单线程控制，把问题划分为若干处理步骤，构件即为主程序和子程序。</p>
+<h2 id="2-面向对象风格"><a href="#2-面向对象风格" class="headerlink" title="2. 面向对象风格"></a>2. 面向对象风格</h2><p>这种风格建立在数据抽象和面向对象的基础上，数据的表示方法和它们的相应操作封装在一个抽象数据类型或对象中。这种风格的构件是对象，或者说是抽象数据类型的实例。</p>
+<p>这种风格的两个重要特征为:<br>(1)对象负责维护其表示的完整性;<br>(2)对象的表示对其他对象而言是隐蔽的。</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>(1)因为对象对其他对象隐藏它的表示，所以可以改变一个对象的表示，而不影响其他的对象;<br>(2)设计者可将一些数据存取操作的问题分解成一些交互的代理程序的集合。</p>
+<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>(1)为了使一个对象和另一个对象通过过程调用等进行交互，必须知道对象的标识。只要一个对象的标识改变了，就必须修改所有其他明确调用它的对象;<br>(2)必须修改所有显式调用它的其他对象，并消除由此带来的一些副作用。例如，如果 A 使用了对象 B，C 也使用了对象 B，那么，C 对 B 的使用所造成的对 A 的影响可能是料想不到的。</p>
+<h3 id="3-层次结构风格"><a href="#3-层次结构风格" class="headerlink" title="3. 层次结构风格"></a>3. 层次结构风格</h3><p>层次系统组织成一个层次结构，每一层为上层服务，并作为下层客户。在一些层次系统中，除了一些精心挑选的输出函数外，内部的层只对相邻的层可见。</p>
+<p>这种风格支持基于可增加抽象层的设计。允许将一个复杂问题分解成一个增量步 骤序列的实现。由于每一层最多只影响两层，同时只要给相邻层提供相同的接口，允许每层 用不同的方法实现，同样为软件重用提供了强大的支持。</p>
+<p>层次系统最广泛的应用是分层通信协议。</p>
+<h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><p>(1)支持基于抽象程度递增的系统设计，使设计者可以把一个复杂系统按递增的步骤进行分解;<br>(2)支持功能增强，因为每一层至多和相邻的上下层交互，因此功能的改变最多影响相邻的上下层;<br>(3)支持重用。只要提供的服务接口定义不变，同一层的不同实现可以交换使用。这样，就可以定义一组标准的接口，而允许各种不同的实现方法。</p>
+<h4 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h4><p>(1)并不是每个系统都可以很容易地划分为分层的模式，甚至即使一个系统的逻辑结构是层次化的，出于对系统性能的考虑，系统设计师不得不把一些低级或高级的功能综合起来;<br>(2)很难找到一个合适的、正确的层次抽象方法。</p>
+<h1 id="四、独立构件风格"><a href="#四、独立构件风格" class="headerlink" title="四、独立构件风格"></a>四、独立构件风格</h1><p>进程通信;事件系统。</p>
+<p>独立构件风格主要强调系统中的每个构件都是相对独立的个体，它们之间不直接通信，以降低耦合度，提升灵活性。</p>
+<h2 id="1-进程通信架构风格"><a href="#1-进程通信架构风格" class="headerlink" title="1. 进程通信架构风格"></a>1. 进程通信架构风格</h2><p>构件是独立的过程，连接件是消息传递。这 种风格的特点是构件通常是命名过程，消息传递的方式可以是点到点、异步和同步方式及远 过程调用等。</p>
+<h2 id="2-事件系统风格"><a href="#2-事件系统风格" class="headerlink" title="2. 事件系统风格"></a>2. 事件系统风格</h2><p>基于事件的隐式调用风格的思想是构件不直接调用一个过程，而是触 发或广播一个或多个事件。系统中的其他构件中的过程在一个或多个事件中注册，当一个事 件被触发，系统自动调用在这个事件中注册的所有过程。</p>
+<p>基于事件的隐式调用风格的主要特点是事件的触发者并不知道哪些构件会被这些事件影响。</p>
+<h3 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h3><p>(1)为软件重用提供了强大的支持。当需要将一个构件加入现存系统中时，只需将它注册到系统的事件中。<br>(2)为改进系统带来了方便。当用一个构件代替另一个构件时，不会影响到其他构件的接口。</p>
+<h3 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h3><p>(1)构件放弃了对系统计算的控制。一个构件触发一个事件时，不能确定其他构件是否会响应它。而且即使它知道事件注册了哪些构件的过程，它也不能保证这些过程被调用的顺序。<br>(2)数据交换的问题。有时数据可被一个事件传递，但另一些情况下，基于事件的系统必须依靠一个共享的仓库进行交互。在这些情况下，全局性能和资源管理便成了问题。<br>(3)既然过程的语义必须依赖于被触发事件的上下文约束，关于正确性的推理存在问题。</p>
+<h1 id="五、虚拟机风格"><a href="#五、虚拟机风格" class="headerlink" title="五、虚拟机风格"></a>五、虚拟机风格</h1><p>解释器;基于规则的系统。</p>
+<p>虚拟机风格的基本思想是人为构建一个运行环境，在这个环境之上，可以解析与运行自定义的一些语言，这样来增加架构的灵活性。</p>
+<h2 id="1-解释器"><a href="#1-解释器" class="headerlink" title="1.解释器"></a>1.解释器</h2><p>一个解释器通常包括完成解释工作的解释引擎，一个包含将被解释的代码的存储区，一 个记录解释引擎当前工作状态的数据结构，以及一个记录源代码被解释执行进度的数据结构。</p>
+<p>解释器通常被用来建立一种虚拟机以弥合程序语义与硬件语义之间的差异。其缺点是执行效率较低。</p>
+<h2 id="2-规则为中心"><a href="#2-规则为中心" class="headerlink" title="2. 规则为中心"></a>2. 规则为中心</h2><p>基于规则的系统包括规则集、规则解释器、规则/数据选择器及工作内存。</p>
+<h1 id="六、仓库风格"><a href="#六、仓库风格" class="headerlink" title="六、仓库风格"></a>六、仓库风格</h1><p>数据库系统;超文本系统;黑板系统。</p>
+<h2 id="1-数据库系统"><a href="#1-数据库系统" class="headerlink" title="1.数据库系统"></a>1.数据库系统</h2><p>数据库架构是库风格最常见的形式。构件主要有两大类，一个是中央共享数据源，保存当前系统的数据状态;另一个是多个独立处理元素，处理元素对数据元素进行操作。</p>
+<h2 id="2-超文本系统"><a href="#2-超文本系统" class="headerlink" title="2.超文本系统"></a>2.超文本系统</h2><p>超文本系统的典型代表，就是早期的静态网页。</p>
+<h2 id="3-黑板系统"><a href="#3-黑板系统" class="headerlink" title="3.黑板系统"></a>3.黑板系统</h2><p>黑板系统是一种问题求解模型，是组织推理的步骤、控制状态数据和问题求解之领域知识的概念框架，它将问题的解空间组织成一个或多个应用相关的分级结构。分级结构的每一层信息由一个唯一的词汇来描述，它代表了问题的部分解。<br><img src="/images/ruankao/6-38.png"></p>
+<p>黑板系统主要由三部分组成:<br>(1)知识源。知识源中包含独立的、与应用程序相关的知识，知识源之间不直接进行 通信，它们之间的交互只通过黑板来完成。<br>(2)黑板数据结构。黑板数据是按照与应用程序相关的层次来组织的解决问题的数据， 知识源通过不断地改变黑板数据来解决问题。<br>(3)控制。控制完全由黑板的状态驱动，黑板状态的改变决定使用的特定知识。</p>
+<hr>
+<p><img src="/images/ruankao/6-39.png"></p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-软件架构设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>软件架构设计（九）架构及其复用</title>
+    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B6%E5%A4%8D%E7%94%A8/</url>
+    <content><![CDATA[<p>常见的构件(component，组件)的定义如下：</p>
+<p>定义 1:构件是指软件系统中可以明确辨识的构成成分。而可复用构件(reusable component)是指具有相对独立的功能和可复用价值的构件。<br>定义 2:构件是一个组装单元，它具有约定式规范的接口及明确的依赖环境。<br>定义 3:构件是软件系统中具有相对独立功能、可以明确辨识、接口由契约指定、和语 境有明显依赖关系、可独立部署的可组装软件实体。</p>
+<h1 id="一、商用构件标准规范"><a href="#一、商用构件标准规范" class="headerlink" title="一、商用构件标准规范"></a>一、商用构件标准规范</h1><h2 id="1-CORBA"><a href="#1-CORBA" class="headerlink" title="1.CORBA"></a>1.CORBA</h2><p>CORBA(Common ObjectRequest Broker Architecture，公共对象请求代理架构)主要分为 3 个层次:对象请求代理、公共对象服务和公共设施。</p>
+<p>CORBA CCM(CORBA ComponentModel，CORBA 构件模型)是 OMG 组织制定的一个用 于开发和配置分布式应用的服务器端构件模型规范，它主要包括如下 3 项内容。<br>(1)抽象构件模型:用以描述服务器端构件结构及构件间互操作的结构。<br>(2)构件容器结构:用以提供通用的构件运行和管理环境，并支持对安全、事务、持 久状态等系统服务的集成。<br>(3)构件的配置和打包规范:CCM 使用打包技术来管理构件的二进制、多语言版本的 可执行代码和配置信息，并制定了构件包的具体内容和文档内容标准。</p>
+<h2 id="2-J2EE"><a href="#2-J2EE" class="headerlink" title="2.J2EE"></a>2.J2EE</h2><p>在分布式互操作协议上，J2EE 同时支持 RMI(Remote Method Invocation，远程方法调用) 和 IIOP(Internet Inter-ORB Protocol，互联网内部对象请求代理协议)，而在服务器端分布式 应用的构造形式，则包括了 Java Servlet、JSP、EJB 等多种形式，以支持不同的业务需求， 而且 Java 应用程序具有跨平台的特性，使得 J2EE 技术在发布计算领域得到了快速发展。</p>
+<h2 id="3-DNA-2000"><a href="#3-DNA-2000" class="headerlink" title="3.DNA 2000"></a>3.DNA 2000</h2><p>Microsoft DNA 2000 是 Microsoft 在推出 Windows 2000 系列操作系统平台的基础上， 在扩展了分布计算模型，以及改造 Back Office 系列服务器端分布计算产品后发布的新的分 布计算架构和规范。在服务器端，DNA 2000 提供了 ASP、COM、Cluster 等的应用支持。</p>
+<h1 id="二、应用系统簇与构件系统"><a href="#二、应用系统簇与构件系统" class="headerlink" title="二、应用系统簇与构件系统"></a>二、应用系统簇与构件系统</h1><p>除专门开发构件的企业外，开发应用系统的企业也会发展自己的构件应用体系:通常是 随着企业的不断成熟，逐步从已开发的应用系统中整理出来一些构件，反过来，将这些构件 复用到优化与整合已有应用系统中或复用于开发新的应用系统。</p>
+<p>应用系统和构件系统都是系统产品(而不是工作产品)。它们都可以采用模型和结构的 类型定义出来。一般情况下，构件系统只在开发单位内部使用，而应用系统提供给外部客户， 与应用系统相比，构件系统具有通用性，可复用性，这就要求构件系统的开发过程应当实施 更为严格的工程规范。</p>
+<p>应用系统可以向构件系统输入构件(构件的需求源于应用系统或应用系统中的模块)，反 过来，构件系统向应用系统输出构件。这就是构件系统如何获得构件和如何提供构件的方式。</p>
+<h1 id="三、基于复用开发的组织结构"><a href="#三、基于复用开发的组织结构" class="headerlink" title="三、基于复用开发的组织结构"></a>三、基于复用开发的组织结构</h1><p>基于复用的开发组织与传统的开发组织结构不同，它需要有一部分用于开发可复用资产 的资源，这部分资源应同具体应用系统的开发资源分开，以确保不被占用。</p>
+<p>一种较平衡的组织结构如图所示，它有三类职能部门:一是构件系统开发部门， 它开发可复用资产;二是应用系统项目开发部(多个)，它复用资产;三是支持部门，这个 部门是可选的，它进一步隔离上述两主体部门，虽然牺牲了一些效率，但保证了构件的规范 性。它的主要职责是对构件开发部门所提供的可复用资产进行确认、对构件库进行分类编目、 向开发应用系统的工程师们发通告和分发可复用资产、提供必要的文档、从复用者处收集反 馈信息和缺陷报告。<br><img src="/images/ruankao/6-51.png"><br>一方面，构件开发者应当尽量接近应用开发者，以使其开发出的构件能尽量符合实际需 要;另一方面，构件开发者与应用开发者分属两个并列的部门，使构件开发者能摆脱应用项 目的日常压力，保证可复用资产的开发和持续改进。复用经理应当在构件开发和应用 项目开发利益之间进行权衡，保证长期目标不受近期项目压力的影响。</p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-软件架构设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软件架构设计（二）架构需求与软件质量属性</title>
     <url>/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%9E%B6%E6%9E%84%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7/</url>
     <content><![CDATA[<p>架构的基本需求主要是在满足功能属性的前提下，关注软件质量属性，架构设计则是为满足架构需求(质量属性)寻找适当的“战术”。</p>
@@ -1893,86 +1973,6 @@
 <p><img src="/images/ruankao/6-36.png"></p>
 <hr>
 <p><img src="/images/ruankao/6-37.png"></p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-软件架构设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件架构设计（三）软件架构风格</title>
-    <url>/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%89%EF%BC%89%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/</url>
-    <content><![CDATA[<p>软件架构设计的一个核心问题是能否使用重复的软件架构模式，即能否达到架构级别的 软件重用。</p>
-<p>架构风格反映了领域中众多系统所共有的结构和语义特性，并指导如何将各个模块和子系统有效地组织成一个完整的系统。</p>
-<p>只要系统是使用常用的、规范的方法来组织，就可使别的设计者很容易地理解系统的架构。</p>
-<h1 id="一、软件架构风格分类"><a href="#一、软件架构风格分类" class="headerlink" title="一、软件架构风格分类"></a>一、软件架构风格分类</h1><p>架构风格的最关键的四要素内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">提供一个词汇表</span><br><span class="line">定义一套配置规则</span><br><span class="line">定义一套语义解释原则</span><br><span class="line">定义对基于这种风格的系统所进行的分析</span><br></pre></td></tr></table></figure>
-<h1 id="二、数据流风格"><a href="#二、数据流风格" class="headerlink" title="二、数据流风格"></a>二、数据流风格</h1><p>批处理序列;管道/过滤器。</p>
-<p>这样的架构下，所有的数据按照流的形式在执行过程中前进，不存在结构的反复和重构。</p>
-<p>在流动过程中，数据经过序列间的数据处理组件进行处理，然后将处理结果向后传送，最后进行输出。</p>
-<h2 id="1-批处理序列"><a href="#1-批处理序列" class="headerlink" title="1. 批处理序列"></a>1. 批处理序列</h2><p>批处理风格的每一步处理都是独立的，并且每一步是顺序执行的。只有当前一步处理完，后一步处理才能开始。数据传送在步与步之间作为一个整体。(组件为一系列固定顺序的计 算单元，组件间只通过数据传递交互。每个处理步骤是一个独立的程序，每一步必 须在前一步结束后才能开始，数据必须是完整的，以整体的方式传递)</p>
-<p>批处理的典型应用:<br>(1)经典数据处理;<br>(2)程序开发;<br>(3)Windows 下的 BAT 程序就是这种应用的典型实例。</p>
-<h2 id="2-管道和过滤器"><a href="#2-管道和过滤器" class="headerlink" title="2. 管道和过滤器"></a>2. 管道和过滤器</h2><p>在管道/过滤器风格的软件架构中，每个构件都有一组输入和输出，构件读输入的数据流，经过内部处理，然后产生输出数据流。这个过程通常通过对输入流的变换及增量计算来 完成，所以在输入被完全消费之前，输出便产生了。</p>
-<p>管道/过滤器架构的例子:<br>(1)以 UNIX shell 编写的程序；<br>(2)传统的编译器。</p>
-<h3 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h3><p>(1)使得软构件具有良好的隐蔽性和高内聚、低耦合的特点;<br>(2)允许设计者将整个系统的输入/输出行为看成是多个过滤器的行为的简单合成;<br>(3)支持软件重用<br>(4)系统维护和增强系统性能简单<br>(5)允许对一些如吞吐量、死锁等属性的分析;<br>(6)支持并行执行</p>
-<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>(1)通常导致进程成为批处理的结构<br>(2)不适合处理交互的应用<br>(3)因为在数据传输上没有通用的标准，每个过滤器都增加了解析和合成数据的工作， 这样就导致了系统性能下降，并增加了编写过滤器的复杂性。</p>
-<h2 id="3-批处理序列风格与管道过滤器风格对比"><a href="#3-批处理序列风格与管道过滤器风格对比" class="headerlink" title="3.批处理序列风格与管道过滤器风格对比"></a>3.批处理序列风格与管道过滤器风格对比</h2><p>共同点:把任务分成一系列固定顺序的计算单元(组件)。组件间只通过数据传递交互。</p>
-<p>区别:批处理是全部的、高潜伏性的，输入时可随机存取，无合作性、无交互性。而管道过滤器是递增的，数据结果延迟小，输入时处理局部化，有反馈、可交互。批处理强调数据传送在步与步之间作为一个整体，而管理过滤器无此要求。</p>
-<h1 id="三、调用-返回风格"><a href="#三、调用-返回风格" class="headerlink" title="三、调用/返回风格"></a>三、调用/返回风格</h1><p>主程序/子程序;面向对象风格;层次结构。</p>
-<p>利用调用-返回实际上是一种分而治之的策略，其主要思想是将一个复杂的大系统分解为一些子系统，以便降低复杂度，并且增加可修改性。</p>
-<h2 id="1-主程序-子程序"><a href="#1-主程序-子程序" class="headerlink" title="1. 主程序/子程序"></a>1. 主程序/子程序</h2><p>主程序/子程序风格是结构化开发时期的经典架构风格。这种风格一般采用单线程控制，把问题划分为若干处理步骤，构件即为主程序和子程序。</p>
-<h2 id="2-面向对象风格"><a href="#2-面向对象风格" class="headerlink" title="2. 面向对象风格"></a>2. 面向对象风格</h2><p>这种风格建立在数据抽象和面向对象的基础上，数据的表示方法和它们的相应操作封装在一个抽象数据类型或对象中。这种风格的构件是对象，或者说是抽象数据类型的实例。</p>
-<p>这种风格的两个重要特征为:<br>(1)对象负责维护其表示的完整性;<br>(2)对象的表示对其他对象而言是隐蔽的。</p>
-<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><p>(1)因为对象对其他对象隐藏它的表示，所以可以改变一个对象的表示，而不影响其他的对象;<br>(2)设计者可将一些数据存取操作的问题分解成一些交互的代理程序的集合。</p>
-<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3><p>(1)为了使一个对象和另一个对象通过过程调用等进行交互，必须知道对象的标识。只要一个对象的标识改变了，就必须修改所有其他明确调用它的对象;<br>(2)必须修改所有显式调用它的其他对象，并消除由此带来的一些副作用。例如，如果 A 使用了对象 B，C 也使用了对象 B，那么，C 对 B 的使用所造成的对 A 的影响可能是料想不到的。</p>
-<h3 id="3-层次结构风格"><a href="#3-层次结构风格" class="headerlink" title="3. 层次结构风格"></a>3. 层次结构风格</h3><p>层次系统组织成一个层次结构，每一层为上层服务，并作为下层客户。在一些层次系统中，除了一些精心挑选的输出函数外，内部的层只对相邻的层可见。</p>
-<p>这种风格支持基于可增加抽象层的设计。允许将一个复杂问题分解成一个增量步 骤序列的实现。由于每一层最多只影响两层，同时只要给相邻层提供相同的接口，允许每层 用不同的方法实现，同样为软件重用提供了强大的支持。</p>
-<p>层次系统最广泛的应用是分层通信协议。</p>
-<h4 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h4><p>(1)支持基于抽象程度递增的系统设计，使设计者可以把一个复杂系统按递增的步骤进行分解;<br>(2)支持功能增强，因为每一层至多和相邻的上下层交互，因此功能的改变最多影响相邻的上下层;<br>(3)支持重用。只要提供的服务接口定义不变，同一层的不同实现可以交换使用。这样，就可以定义一组标准的接口，而允许各种不同的实现方法。</p>
-<h4 id="缺点-2"><a href="#缺点-2" class="headerlink" title="缺点"></a>缺点</h4><p>(1)并不是每个系统都可以很容易地划分为分层的模式，甚至即使一个系统的逻辑结构是层次化的，出于对系统性能的考虑，系统设计师不得不把一些低级或高级的功能综合起来;<br>(2)很难找到一个合适的、正确的层次抽象方法。</p>
-<h1 id="四、独立构件风格"><a href="#四、独立构件风格" class="headerlink" title="四、独立构件风格"></a>四、独立构件风格</h1><p>进程通信;事件系统。</p>
-<p>独立构件风格主要强调系统中的每个构件都是相对独立的个体，它们之间不直接通信，以降低耦合度，提升灵活性。</p>
-<h2 id="1-进程通信架构风格"><a href="#1-进程通信架构风格" class="headerlink" title="1. 进程通信架构风格"></a>1. 进程通信架构风格</h2><p>构件是独立的过程，连接件是消息传递。这 种风格的特点是构件通常是命名过程，消息传递的方式可以是点到点、异步和同步方式及远 过程调用等。</p>
-<h2 id="2-事件系统风格"><a href="#2-事件系统风格" class="headerlink" title="2. 事件系统风格"></a>2. 事件系统风格</h2><p>基于事件的隐式调用风格的思想是构件不直接调用一个过程，而是触 发或广播一个或多个事件。系统中的其他构件中的过程在一个或多个事件中注册，当一个事 件被触发，系统自动调用在这个事件中注册的所有过程。</p>
-<p>基于事件的隐式调用风格的主要特点是事件的触发者并不知道哪些构件会被这些事件影响。</p>
-<h3 id="优点-2"><a href="#优点-2" class="headerlink" title="优点"></a>优点</h3><p>(1)为软件重用提供了强大的支持。当需要将一个构件加入现存系统中时，只需将它注册到系统的事件中。<br>(2)为改进系统带来了方便。当用一个构件代替另一个构件时，不会影响到其他构件的接口。</p>
-<h3 id="缺点-3"><a href="#缺点-3" class="headerlink" title="缺点"></a>缺点</h3><p>(1)构件放弃了对系统计算的控制。一个构件触发一个事件时，不能确定其他构件是否会响应它。而且即使它知道事件注册了哪些构件的过程，它也不能保证这些过程被调用的顺序。<br>(2)数据交换的问题。有时数据可被一个事件传递，但另一些情况下，基于事件的系统必须依靠一个共享的仓库进行交互。在这些情况下，全局性能和资源管理便成了问题。<br>(3)既然过程的语义必须依赖于被触发事件的上下文约束，关于正确性的推理存在问题。</p>
-<h1 id="五、虚拟机风格"><a href="#五、虚拟机风格" class="headerlink" title="五、虚拟机风格"></a>五、虚拟机风格</h1><p>解释器;基于规则的系统。</p>
-<p>虚拟机风格的基本思想是人为构建一个运行环境，在这个环境之上，可以解析与运行自定义的一些语言，这样来增加架构的灵活性。</p>
-<h2 id="1-解释器"><a href="#1-解释器" class="headerlink" title="1.解释器"></a>1.解释器</h2><p>一个解释器通常包括完成解释工作的解释引擎，一个包含将被解释的代码的存储区，一 个记录解释引擎当前工作状态的数据结构，以及一个记录源代码被解释执行进度的数据结构。</p>
-<p>解释器通常被用来建立一种虚拟机以弥合程序语义与硬件语义之间的差异。其缺点是执行效率较低。</p>
-<h2 id="2-规则为中心"><a href="#2-规则为中心" class="headerlink" title="2. 规则为中心"></a>2. 规则为中心</h2><p>基于规则的系统包括规则集、规则解释器、规则/数据选择器及工作内存。</p>
-<h1 id="六、仓库风格"><a href="#六、仓库风格" class="headerlink" title="六、仓库风格"></a>六、仓库风格</h1><p>数据库系统;超文本系统;黑板系统。</p>
-<h2 id="1-数据库系统"><a href="#1-数据库系统" class="headerlink" title="1.数据库系统"></a>1.数据库系统</h2><p>数据库架构是库风格最常见的形式。构件主要有两大类，一个是中央共享数据源，保存当前系统的数据状态;另一个是多个独立处理元素，处理元素对数据元素进行操作。</p>
-<h2 id="2-超文本系统"><a href="#2-超文本系统" class="headerlink" title="2.超文本系统"></a>2.超文本系统</h2><p>超文本系统的典型代表，就是早期的静态网页。</p>
-<h2 id="3-黑板系统"><a href="#3-黑板系统" class="headerlink" title="3.黑板系统"></a>3.黑板系统</h2><p>黑板系统是一种问题求解模型，是组织推理的步骤、控制状态数据和问题求解之领域知识的概念框架，它将问题的解空间组织成一个或多个应用相关的分级结构。分级结构的每一层信息由一个唯一的词汇来描述，它代表了问题的部分解。<br><img src="/images/ruankao/6-38.png"></p>
-<p>黑板系统主要由三部分组成:<br>(1)知识源。知识源中包含独立的、与应用程序相关的知识，知识源之间不直接进行 通信，它们之间的交互只通过黑板来完成。<br>(2)黑板数据结构。黑板数据是按照与应用程序相关的层次来组织的解决问题的数据， 知识源通过不断地改变黑板数据来解决问题。<br>(3)控制。控制完全由黑板的状态驱动，黑板状态的改变决定使用的特定知识。</p>
-<hr>
-<p><img src="/images/ruankao/6-39.png"></p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-软件架构设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件架构设计（九）架构及其复用</title>
-    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B6%E5%A4%8D%E7%94%A8/</url>
-    <content><![CDATA[<p>常见的构件(component，组件)的定义如下：</p>
-<p>定义 1:构件是指软件系统中可以明确辨识的构成成分。而可复用构件(reusable component)是指具有相对独立的功能和可复用价值的构件。<br>定义 2:构件是一个组装单元，它具有约定式规范的接口及明确的依赖环境。<br>定义 3:构件是软件系统中具有相对独立功能、可以明确辨识、接口由契约指定、和语 境有明显依赖关系、可独立部署的可组装软件实体。</p>
-<h1 id="一、商用构件标准规范"><a href="#一、商用构件标准规范" class="headerlink" title="一、商用构件标准规范"></a>一、商用构件标准规范</h1><h2 id="1-CORBA"><a href="#1-CORBA" class="headerlink" title="1.CORBA"></a>1.CORBA</h2><p>CORBA(Common ObjectRequest Broker Architecture，公共对象请求代理架构)主要分为 3 个层次:对象请求代理、公共对象服务和公共设施。</p>
-<p>CORBA CCM(CORBA ComponentModel，CORBA 构件模型)是 OMG 组织制定的一个用 于开发和配置分布式应用的服务器端构件模型规范，它主要包括如下 3 项内容。<br>(1)抽象构件模型:用以描述服务器端构件结构及构件间互操作的结构。<br>(2)构件容器结构:用以提供通用的构件运行和管理环境，并支持对安全、事务、持 久状态等系统服务的集成。<br>(3)构件的配置和打包规范:CCM 使用打包技术来管理构件的二进制、多语言版本的 可执行代码和配置信息，并制定了构件包的具体内容和文档内容标准。</p>
-<h2 id="2-J2EE"><a href="#2-J2EE" class="headerlink" title="2.J2EE"></a>2.J2EE</h2><p>在分布式互操作协议上，J2EE 同时支持 RMI(Remote Method Invocation，远程方法调用) 和 IIOP(Internet Inter-ORB Protocol，互联网内部对象请求代理协议)，而在服务器端分布式 应用的构造形式，则包括了 Java Servlet、JSP、EJB 等多种形式，以支持不同的业务需求， 而且 Java 应用程序具有跨平台的特性，使得 J2EE 技术在发布计算领域得到了快速发展。</p>
-<h2 id="3-DNA-2000"><a href="#3-DNA-2000" class="headerlink" title="3.DNA 2000"></a>3.DNA 2000</h2><p>Microsoft DNA 2000 是 Microsoft 在推出 Windows 2000 系列操作系统平台的基础上， 在扩展了分布计算模型，以及改造 Back Office 系列服务器端分布计算产品后发布的新的分 布计算架构和规范。在服务器端，DNA 2000 提供了 ASP、COM、Cluster 等的应用支持。</p>
-<h1 id="二、应用系统簇与构件系统"><a href="#二、应用系统簇与构件系统" class="headerlink" title="二、应用系统簇与构件系统"></a>二、应用系统簇与构件系统</h1><p>除专门开发构件的企业外，开发应用系统的企业也会发展自己的构件应用体系:通常是 随着企业的不断成熟，逐步从已开发的应用系统中整理出来一些构件，反过来，将这些构件 复用到优化与整合已有应用系统中或复用于开发新的应用系统。</p>
-<p>应用系统和构件系统都是系统产品(而不是工作产品)。它们都可以采用模型和结构的 类型定义出来。一般情况下，构件系统只在开发单位内部使用，而应用系统提供给外部客户， 与应用系统相比，构件系统具有通用性，可复用性，这就要求构件系统的开发过程应当实施 更为严格的工程规范。</p>
-<p>应用系统可以向构件系统输入构件(构件的需求源于应用系统或应用系统中的模块)，反 过来，构件系统向应用系统输出构件。这就是构件系统如何获得构件和如何提供构件的方式。</p>
-<h1 id="三、基于复用开发的组织结构"><a href="#三、基于复用开发的组织结构" class="headerlink" title="三、基于复用开发的组织结构"></a>三、基于复用开发的组织结构</h1><p>基于复用的开发组织与传统的开发组织结构不同，它需要有一部分用于开发可复用资产 的资源，这部分资源应同具体应用系统的开发资源分开，以确保不被占用。</p>
-<p>一种较平衡的组织结构如图所示，它有三类职能部门:一是构件系统开发部门， 它开发可复用资产;二是应用系统项目开发部(多个)，它复用资产;三是支持部门，这个 部门是可选的，它进一步隔离上述两主体部门，虽然牺牲了一些效率，但保证了构件的规范 性。它的主要职责是对构件开发部门所提供的可复用资产进行确认、对构件库进行分类编目、 向开发应用系统的工程师们发通告和分发可复用资产、提供必要的文档、从复用者处收集反 馈信息和缺陷报告。<br><img src="/images/ruankao/6-51.png"><br>一方面，构件开发者应当尽量接近应用开发者，以使其开发出的构件能尽量符合实际需 要;另一方面，构件开发者与应用开发者分属两个并列的部门，使构件开发者能摆脱应用项 目的日常压力，保证可复用资产的开发和持续改进。复用经理应当在构件开发和应用 项目开发利益之间进行权衡，保证长期目标不受近期项目压力的影响。</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
@@ -2157,6 +2157,36 @@
       </tags>
   </entry>
   <entry>
+    <title>软件架构设计（十）产品线及系统演化</title>
+    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/</url>
+    <content><![CDATA[<p>软件企业追求长远的发展，通常采用产品线模型及系统演化策略，它实质上是用架构技 术构建产品线，并在此基础上借助复用技术持续演化，不断地推出新产品，满足市场追求产 品升级换代的需求。</p>
+<h1 id="一、复用与产品线"><a href="#一、复用与产品线" class="headerlink" title="一、复用与产品线"></a>一、复用与产品线</h1><p>软件产品线是指一组软件密集型系统，它们共享一个公共的、可管理的特性集，满足某 个特定市场或任务的具体需要，是以规定的方式用公共的核心资产集成开发出来的。即围绕 核心资产库进行管理、复用、集成新的系统。</p>
+<p>核心资产库包括软件架构及其可剪裁的元素， 更广泛地，它还包括设计方案及其文档、用户手册、项目管理的历史记录(如预算和进度)、 软件测试计划和测试用例。</p>
+<p>可复用的资 产非常广，包括以下几点。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">需求</span><br><span class="line">架构设计</span><br><span class="line">元素:元素复用不只是简单的代码复用，它旨在捕获并复用设计中的可取之处，避免(不要 重复)设计失败的地方。</span><br><span class="line">建模与分析</span><br><span class="line">测试：如测试用例、测试数据、测试工具，甚至 测试计划、过程、沟通渠道都可以得到复用。</span><br><span class="line">项目规划：利用经验对项目的成本、预算、进度及开发小组的安排等进行预测，即不必每次 都建立工作分解结构。</span><br><span class="line">过程、方法和工具</span><br><span class="line">人员</span><br><span class="line">样本系统:将已部署(投产)的产品作为高质量的演示原型和工程设计原型。</span><br><span class="line">缺陷消除:产品线开发中积累的缺陷消除活动，可使新系统受益</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、基于产品线的架构"><a href="#二、基于产品线的架构" class="headerlink" title="二、基于产品线的架构"></a>二、基于产品线的架构</h1><p>软件产品线架构是针对一系列产品而设计的通用架构，并在此基础上，进一步将系列产 品共用的模块事先实现，供直接重用;将架构用框架的形式予以实现，供定制使用。这就是 通常所说的“平台”。</p>
+<p>产品线架构较之单个产品架构，有如下三点特别之处:<br>(1)产品线架构必须考虑一系列明确许可的变化;<br>(2)产品线架构一定要文档化;<br>(3)产品线架构必须提供“产品创建者指南”(开发指南)，描述架构的实例化过程。</p>
+<p>产品线的软件架构应将不变的方面提出来，同时， 识别允许的变化，并提供实现它们的机制。通常应考虑三个方面。<br>(1)确定变化点<br>(2)支持变化点<br>(3)对产品线架构的适宜性进行评估。</p>
+<h1 id="三、产品线的开发模型"><a href="#三、产品线的开发模型" class="headerlink" title="三、产品线的开发模型"></a>三、产品线的开发模型</h1><p>开发(确定)产品线的方法有两种模型:<br>(1)“前瞻性”产品线:利用在应用领域的经验、对市场和技术发展趋势的了解及商业 判断力等进行产品线设计，它反映了企业的战略决策。通常是自上而下地采用产品线方法。<br>(2)“反应性”模型:企业根据以前的产品构建产品家族，并随着新产品的开发，扩展<br>架构和设计方案，它的核心资产库是根据“已经证明”为共有、而非“预先计划”为共有的 元素构建的。通常是自下而上地采用产品线方法。</p>
+<h1 id="四、特定领域软件架构"><a href="#四、特定领域软件架构" class="headerlink" title="四、特定领域软件架构"></a>四、特定领域软件架构</h1><p>架构的本质在于其抽象性。它包括两个方面的抽象:业务抽象和技术抽象。其中业务抽 象面向特定的应用领域。</p>
+<p>特定领域软件架构(Domain Specific Software Architecture，DSSA)可以看做开发产品线 的一个方法(或理论)，它的目标就是支持在一个特定领域中有多个应用的生成。</p>
+<p>DSSA 的 必备特征有:<br>(1)一个严格定义的问题域或解决域;<br>(2)具有普遍性，使其可以用于领域中某个特定应用的开发;<br>(3)对整个领域的合适程度的抽象;<br>(4)具备该领域固定的、典型的在开发过程中的可复用元素。</p>
+<p>从功能覆盖的范围角度理解 DSSA 中领域的含义有两种方法:<br>(1)垂直域。定义了一个特定的系统族，导出在该领域中可作为系统的可行解决方案的一个通用软件架构。<br>(2)水平域。定义了在多个系统和多个系统族中功能区域的共有部分，在子系统级上涵盖多个系统(族)的特定部分功能。</p>
+<p>DSSA 的活动阶段如下。<br>(1)领域分析:主要目标是获得领域模型。即通过分析领域中系统的需求(领域需求)，确定哪些需求是被领域中的系统广泛共享的，从而建立领域模型。<br>(2)领域设计:这个阶段的目标是获得 DSSA，它是一个能够适应领域多个系统的需求的一个高层次的设计。由于领域模型中的领域需求具有一定的变化性，DSSA 也要相应地 具有变化性，它可以通过表示多选一的、可选的解决方案等来做到这一点。<br>(3)领域实现:主要目标是依据领域模型和 DSSA 开发与组织可复用信息。这些复用 信息可以是从现有系统中提取得到的，也可能通过新的开发得到。这个阶段可以看作复用基 础设施的实现阶段。</p>
+<p>领域模型的主要作用如下:<br>(1)领域模型为需求定义了领域知识和领域词汇，这较之单一的项目需求更有较好的 大局观;<br>(2)软件界面的设计往往和领域模型关系密切;<br>(3)领域模型的合理性将严重影响软件系统的可扩展性;<br>(4)在分层架构的指导下，领域模型精化后即成为业务层的骨架;<br>(5)领域模型也是其数据模型的基础;<br>(6)领域模型是团队交流的基础，因为它规定了重要的领域词汇表，并且这些词汇的定义是严格的、大家共同认可的。</p>
+<h1 id="五、架构及系统演化"><a href="#五、架构及系统演化" class="headerlink" title="五、架构及系统演化"></a>五、架构及系统演化</h1><p>架构虽然为系统的变化提供了一定的自由度，但是系统的较大变化必然导致架构的改变。 架构(系统)演化是指向既定的方向、可控地改变。架构(系统)演化可以形成产品线，反 过来，架构(系统)可以在规划的产品线中进行演化。</p>
+<p>架构(系统)演化过程包含 7 个步骤：<br>(1)需求变动归类。首先，必须对用户需求的变化进行归类，使变化的需求与已有构 件对应。对找不到对应构件的变动，也要做好标记，在后续工作中，将创建新的构件，以对 应这部分变化的需求。<br>(2)制订架构演化计划。在改变原有结构之前，开发组织必须制订一个周密的架构演 化计划，作为后续演化开发工作的指南。<br>(3)修改、增加或删除构件。在演化计划的基础上，开发人员可根据在第(1)步得到 的需求变动的归类情况，决定是否修改或删除存在的构件、增加新构件。最后，对修改和增 加的构件进行功能性测试。<br>(4)更新构件的相互作用。随着构件的增加、删除和修改，构件之间的控制流必须得 到更新。<br>(5)构件组装与测试。通过组装支持工具把这些构件的实现体组装起来，完成整个软 件系统的连接与合成，形成新的架构。然后，对组装后的系统整体功能和性能进行测试。<br>(6)技术评审。对以上步骤进行确认，进行技术评审。评审组装后的架构是否反映需 求变动，符合用户需求。如果不符合，则需要在第(2)到第(6)步之间进行迭代。<br>(7)产生演化后的架构。在原来系统上所作的所有修改必须集成到原来的架构中，完 成一次演化过程。</p>
+<p><img src="/images/ruankao/6-52.png"></p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-软件架构设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软件架构设计（四）层次系统架构风格</title>
     <url>/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%9B%9B%EF%BC%89%E5%B1%82%E6%AC%A1%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/</url>
     <content><![CDATA[<h1 id="一、二层及三层-C-S-架构风格"><a href="#一、二层及三层-C-S-架构风格" class="headerlink" title="一、二层及三层 C/S 架构风格"></a>一、二层及三层 C/S 架构风格</h1><h2 id="二层架构"><a href="#二层架构" class="headerlink" title="二层架构"></a>二层架构</h2><p>C/S 架构是基于资源不对等，且为实现共享而提出来的，是 20 世纪 90 年代成熟起来 的技术，C/S 结构将应用一分为二，服务器(后台)负责数据管理，客户机(前台)完成与 用户的交互任务。</p>
@@ -2179,36 +2209,6 @@
 <p><img src="/images/ruankao/6-42.png"></p>
 <h2 id="MVP-的优点"><a href="#MVP-的优点" class="headerlink" title="MVP 的优点"></a>MVP 的优点</h2><p>(1)模型与视图完全分离，我们可以修改视图而不影响模型。 (2)可以更高效地使用模型，因为所有的交互都发生在一个地方—Presenter 内部。<br>(3)我们可以将一个 Presenter 用于多个视图，而不需要改变 Presenter 的逻辑。这个特性非常的有用，因为视图的变化总是比模型的变化频繁。<br>(4)如果我们把逻辑放在 Presenter 中，那么我们就可以脱离用户接口来测试这些逻辑(单元测试)。</p>
 <h2 id="MVP-的缺点"><a href="#MVP-的缺点" class="headerlink" title="MVP 的缺点"></a>MVP 的缺点</h2><p>（1）由于对视图的渲染放在了 Presenter 中，所以视图和 Presenter 的交互会过于频繁。<br>（2）如果 Presenter 过多地渲染了视图，往往会使得它与特定的视图的联系过 于紧密。一旦视图需要变更，那么 Presenter 也需要变更了。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-软件架构设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件架构设计（十）产品线及系统演化</title>
-    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%8D%81%EF%BC%89%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/</url>
-    <content><![CDATA[<p>软件企业追求长远的发展，通常采用产品线模型及系统演化策略，它实质上是用架构技 术构建产品线，并在此基础上借助复用技术持续演化，不断地推出新产品，满足市场追求产 品升级换代的需求。</p>
-<h1 id="一、复用与产品线"><a href="#一、复用与产品线" class="headerlink" title="一、复用与产品线"></a>一、复用与产品线</h1><p>软件产品线是指一组软件密集型系统，它们共享一个公共的、可管理的特性集，满足某 个特定市场或任务的具体需要，是以规定的方式用公共的核心资产集成开发出来的。即围绕 核心资产库进行管理、复用、集成新的系统。</p>
-<p>核心资产库包括软件架构及其可剪裁的元素， 更广泛地，它还包括设计方案及其文档、用户手册、项目管理的历史记录(如预算和进度)、 软件测试计划和测试用例。</p>
-<p>可复用的资 产非常广，包括以下几点。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">需求</span><br><span class="line">架构设计</span><br><span class="line">元素:元素复用不只是简单的代码复用，它旨在捕获并复用设计中的可取之处，避免(不要 重复)设计失败的地方。</span><br><span class="line">建模与分析</span><br><span class="line">测试：如测试用例、测试数据、测试工具，甚至 测试计划、过程、沟通渠道都可以得到复用。</span><br><span class="line">项目规划：利用经验对项目的成本、预算、进度及开发小组的安排等进行预测，即不必每次 都建立工作分解结构。</span><br><span class="line">过程、方法和工具</span><br><span class="line">人员</span><br><span class="line">样本系统:将已部署(投产)的产品作为高质量的演示原型和工程设计原型。</span><br><span class="line">缺陷消除:产品线开发中积累的缺陷消除活动，可使新系统受益</span><br></pre></td></tr></table></figure>
-
-<h1 id="二、基于产品线的架构"><a href="#二、基于产品线的架构" class="headerlink" title="二、基于产品线的架构"></a>二、基于产品线的架构</h1><p>软件产品线架构是针对一系列产品而设计的通用架构，并在此基础上，进一步将系列产 品共用的模块事先实现，供直接重用;将架构用框架的形式予以实现，供定制使用。这就是 通常所说的“平台”。</p>
-<p>产品线架构较之单个产品架构，有如下三点特别之处:<br>(1)产品线架构必须考虑一系列明确许可的变化;<br>(2)产品线架构一定要文档化;<br>(3)产品线架构必须提供“产品创建者指南”(开发指南)，描述架构的实例化过程。</p>
-<p>产品线的软件架构应将不变的方面提出来，同时， 识别允许的变化，并提供实现它们的机制。通常应考虑三个方面。<br>(1)确定变化点<br>(2)支持变化点<br>(3)对产品线架构的适宜性进行评估。</p>
-<h1 id="三、产品线的开发模型"><a href="#三、产品线的开发模型" class="headerlink" title="三、产品线的开发模型"></a>三、产品线的开发模型</h1><p>开发(确定)产品线的方法有两种模型:<br>(1)“前瞻性”产品线:利用在应用领域的经验、对市场和技术发展趋势的了解及商业 判断力等进行产品线设计，它反映了企业的战略决策。通常是自上而下地采用产品线方法。<br>(2)“反应性”模型:企业根据以前的产品构建产品家族，并随着新产品的开发，扩展<br>架构和设计方案，它的核心资产库是根据“已经证明”为共有、而非“预先计划”为共有的 元素构建的。通常是自下而上地采用产品线方法。</p>
-<h1 id="四、特定领域软件架构"><a href="#四、特定领域软件架构" class="headerlink" title="四、特定领域软件架构"></a>四、特定领域软件架构</h1><p>架构的本质在于其抽象性。它包括两个方面的抽象:业务抽象和技术抽象。其中业务抽 象面向特定的应用领域。</p>
-<p>特定领域软件架构(Domain Specific Software Architecture，DSSA)可以看做开发产品线 的一个方法(或理论)，它的目标就是支持在一个特定领域中有多个应用的生成。</p>
-<p>DSSA 的 必备特征有:<br>(1)一个严格定义的问题域或解决域;<br>(2)具有普遍性，使其可以用于领域中某个特定应用的开发;<br>(3)对整个领域的合适程度的抽象;<br>(4)具备该领域固定的、典型的在开发过程中的可复用元素。</p>
-<p>从功能覆盖的范围角度理解 DSSA 中领域的含义有两种方法:<br>(1)垂直域。定义了一个特定的系统族，导出在该领域中可作为系统的可行解决方案的一个通用软件架构。<br>(2)水平域。定义了在多个系统和多个系统族中功能区域的共有部分，在子系统级上涵盖多个系统(族)的特定部分功能。</p>
-<p>DSSA 的活动阶段如下。<br>(1)领域分析:主要目标是获得领域模型。即通过分析领域中系统的需求(领域需求)，确定哪些需求是被领域中的系统广泛共享的，从而建立领域模型。<br>(2)领域设计:这个阶段的目标是获得 DSSA，它是一个能够适应领域多个系统的需求的一个高层次的设计。由于领域模型中的领域需求具有一定的变化性，DSSA 也要相应地 具有变化性，它可以通过表示多选一的、可选的解决方案等来做到这一点。<br>(3)领域实现:主要目标是依据领域模型和 DSSA 开发与组织可复用信息。这些复用 信息可以是从现有系统中提取得到的，也可能通过新的开发得到。这个阶段可以看作复用基 础设施的实现阶段。</p>
-<p>领域模型的主要作用如下:<br>(1)领域模型为需求定义了领域知识和领域词汇，这较之单一的项目需求更有较好的 大局观;<br>(2)软件界面的设计往往和领域模型关系密切;<br>(3)领域模型的合理性将严重影响软件系统的可扩展性;<br>(4)在分层架构的指导下，领域模型精化后即成为业务层的骨架;<br>(5)领域模型也是其数据模型的基础;<br>(6)领域模型是团队交流的基础，因为它规定了重要的领域词汇表，并且这些词汇的定义是严格的、大家共同认可的。</p>
-<h1 id="五、架构及系统演化"><a href="#五、架构及系统演化" class="headerlink" title="五、架构及系统演化"></a>五、架构及系统演化</h1><p>架构虽然为系统的变化提供了一定的自由度，但是系统的较大变化必然导致架构的改变。 架构(系统)演化是指向既定的方向、可控地改变。架构(系统)演化可以形成产品线，反 过来，架构(系统)可以在规划的产品线中进行演化。</p>
-<p>架构(系统)演化过程包含 7 个步骤：<br>(1)需求变动归类。首先，必须对用户需求的变化进行归类，使变化的需求与已有构 件对应。对找不到对应构件的变动，也要做好标记，在后续工作中，将创建新的构件，以对 应这部分变化的需求。<br>(2)制订架构演化计划。在改变原有结构之前，开发组织必须制订一个周密的架构演 化计划，作为后续演化开发工作的指南。<br>(3)修改、增加或删除构件。在演化计划的基础上，开发人员可根据在第(1)步得到 的需求变动的归类情况，决定是否修改或删除存在的构件、增加新构件。最后，对修改和增 加的构件进行功能性测试。<br>(4)更新构件的相互作用。随着构件的增加、删除和修改，构件之间的控制流必须得 到更新。<br>(5)构件组装与测试。通过组装支持工具把这些构件的实现体组装起来，完成整个软 件系统的连接与合成，形成新的架构。然后，对组装后的系统整体功能和性能进行测试。<br>(6)技术评审。对以上步骤进行确认，进行技术评审。评审组装后的架构是否反映需 求变动，符合用户需求。如果不符合，则需要在第(2)到第(6)步之间进行迭代。<br>(7)产生演化后的架构。在原来系统上所作的所有修改必须集成到原来的架构中，完 成一次演化过程。</p>
-<p><img src="/images/ruankao/6-52.png"></p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
@@ -2774,6 +2774,59 @@
       </tags>
   </entry>
   <entry>
+    <title>信息化基础知识（三）新一代信息技术</title>
+    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E6%96%B0%E4%B8%80%E4%BB%A3%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/</url>
+    <content><![CDATA[<h1 id="1、物联网"><a href="#1、物联网" class="headerlink" title="1、物联网"></a>1、物联网</h1><h2 id="（1）掌握物联网的概念"><a href="#（1）掌握物联网的概念" class="headerlink" title="（1）掌握物联网的概念"></a>（1）掌握物联网的概念</h2><p>物联网（The Internet of Things，IoT）是实现物物相连的互联网络。其内涵包含两个方面：第一，物联网的核心和基础仍然是互联网，是在互联网基础上延伸和扩展的网络；第二，其用户端延伸和扩展到了任何物体与物体之间，使其进行信息交换和通信。<br>物联网是将无处不在的末端设备和设施，包括具备“内在智能”的传感器、移动终端、工业系统、楼控系统、家庭智能设施、视频监控系统等和“外在使能”的，如贴上RFID的各种资产、携带无线终端的个人与车辆等“智能化物件或动物”或“智能尘埃”，通过各种无线、有线的长距离/短距离通信网络实现互联互通、应用大集成，以及基于云计算的SaaS营运等模式。提供安全可控乃至个性化的实时在线监测、定位追溯、报警联动、调度指挥、预案管理、远程控制、安全防范、远程维保、在线升级、统计报表、决策支持等管理和服务功能。实现对“万物”的“高效、节能、安全、环保”的“管、控、营”一体化。</p>
+<h2 id="（2）熟悉物联网架构"><a href="#（2）熟悉物联网架构" class="headerlink" title="（2）熟悉物联网架构"></a>（2）熟悉物联网架构</h2><p>物联网可以分为三个层次，底层是用来感知数据的感知层，即利用传感器、二维码、RFID等设备随时随地获取物体的信息。第二层是数据传输处理的网络层，即通过各种传感网络与互联网的融合，将物体当前的信息实时准确地传递出去。第三层则是与行业需求结合的应用层，即通过智能计算、云计算等对物体进行智能化控制。<br>1．感知层<br>感知层用于识别物体、采集信息。感知层包括二维码标签和识读器、RFID标签和读写器、摄像头、GPS、传感器、M2M终端、传感器网关等，主要功能是识别物体、采集信息，与人体结构中皮肤和五官的作用类似。<br>感知层解决的是人类世界和物理世界的数据获取问题。它首先通过传感器、数码相机等设备，采集外部物理世界的数据，然后通过RFID、条码、工业现场总线、蓝牙、红外等短距离传输技术传递数据。感知层所需要的关键技术包括检测技术、短距离无线通信技术等。<br>对于目前关注和应用较多的RFID网络来说，附着在设备上的RFID标签和用来识别RFID信息的扫描仪、感应器都属于物联网的感知层。在这一类物联网中被检测的信息就是RFID标签的内容，现在的电子不停车收费系统（Electronic Toll Collection，ETC）、超市仓储管理系统、飞机场的行李自动分类系统等都用到了这个层次的设备。<br>2．网络层<br>网络层用于传递信息和处理信息。网络层包括通信网与互联网的融合网络、网络管理中心、信息中心和智能处理中心等。网络层将感知层获取的信息进行传递和处理，类似于人体结构中的神经中枢和大脑。<br>网络层解决的是传输和预处理感知层所获得数据的问题。这些数据可以通过移动通信网、互联网、企业内部网、各类专网、小型局域网等进行传输。特别是在三网融合后，有线电视网也能承担物联网网络层的功能，有利于物联网的加快推进。网络层所需要的关键技术包括长距离有线和无线通信技术、网络技术等。<br>物联网的网络层将建立在现有的移动通信网和互联网基础上。物联网通过各种接入设备与移动通信网和互联网相连，例如，手机付费系统中由刷卡设备将内置手机的RFID信息采集上传到互联网，网络层完成后台鉴权认证，并从银行网络划账。<br>网络层中的感知数据管理与处理技术是实现以数据为中心的物联网的核心技术，包括传感网数据的存储、查询、分析、挖掘和理解，以及基于感知数据决策的理论与技术。云计算平台作为海量感知数据的存储、分析平台，将是物联网网络层的重要组成部分，也是应用层众多应用的基础。在产业链中，通信网络运营商和云计算平台提供商将在物联网网络层占据重要的地位。<br>3．应用层<br>应用层实现广泛智能化。应用层是物联网与行业专业技术的深度融合，结合行业需求实现行业智能化，这类似于人们的社会分工。<br>物联网应用层利用经过分析处理的感知数据，为用户提供丰富的特定服务。物联网的应用可分为监控型（物流监控、污染监控）、查询型（智能检索、远程抄表）、控制型（智能交通、智能家居、路灯控制）和扫描型（手机钱包、高速公路不停车收费）等。<br>应用层解决的是信息处理和人机交互的问题。网络层传输而来的数据在这一层进入各类信息系统进行处理，并通过各种设备与人进行交互。这一层也可按形态直观地划分为两个子层。一个是应用程序层，进行数据处理，它涵盖了国民经济和社会的每一领域，包括电力、医疗、银行、交通、环保、物流、工业、农业、城市管理、家居生活等，其功能可包括支付、监控、安保、定位、盘点、预测等，可用于政府、企业、社会组织、家庭、个人等。这正是物联网作为深度信息化的重要体现。另一个是终端设备层，提供人机接口。物联网虽然是“物物相连的网”，但最终要以人为本，还是需要人的操作与控制，不过这里的人机界面已远远超出现实中人与计算机交互的概念，而是泛指与应用程序相连的各种设备与人的交互。<br>应用层是物联网发展的体现，软件开发、智能控制技术将会为用户提供丰富多彩的物联网应用。各种行业和家庭应用的开发将会推动物联网的普及，也给整个物联网产业链带来丰厚的利润。</p>
+<h2 id="（3）了解物联网技术的应用"><a href="#（3）了解物联网技术的应用" class="headerlink" title="（3）了解物联网技术的应用"></a>（3）了解物联网技术的应用</h2><h3 id="物联网技术"><a href="#物联网技术" class="headerlink" title="物联网技术"></a>物联网技术</h3><p>1．射频识别技术<br>射频识别技术（Radio Frequency Identification，RFID），又称电子标签，是一种通信技术，可通过无线电信号识别特定目标并读写相关数据，而无须识别系统与特定目标之间建立机械或光学接触。该技术是物联网的一项核心技术，很多物联网应用都离不开它。<br>最初在技术领域，应答器是指能够传输信息、回复信息的电子模块，近些年，由于射频技术发展迅猛，应答器有了新的说法和含义，又称为智能标签或标签。RFID电子阅读器（读写器）通过天线与RFID电子标签进行无线通信，可以实现对标签识别码和内存数据的读出或写入操作。典型的阅读器包含有高频模块（发送器和接收器）、控制单元及阅读器天线。RFID采用的是非接触的自动识别技术，它通过射频信号自动识别目标对象并获取相关数据，识别工作无须人工干预，可工作于各种恶劣环境。RFID技术可识别高速运动物并可同时识别多个标签，操作快捷方便。这种系统一般由一个询问器（或阅读器）和很多应答器（或标签）组成。RFID的基本组成部分通常包括标签、阅读器和天线。（1）标签（Tag）：由耦合元件及芯片组成，每个标签具有唯一的电子编码，附着在物体上标识目标对象。（2）阅读器（Reader）：读取（有时还可以写入）标签信息的设备，可设计为手持式或固定式。</p>
+<p>（3）天线（Antenna）：在标签和读取器间传递射频信号。<br>RFID技术的基本工作原理并不复杂：标签进入磁场后，接收解读器发出的射频信号，凭借感应电流所获得的能量发送出存储在芯片中的产品信息（Passive Tag，无源标签或被动标签），或者由标签主动发送某一频率的信号（Active Tag，有源标签或主动标签），解读器读取信息并解码后，送至中央信息系统进行有关数据处理。<br>一套完整的RFID系统，是由阅读器与电子标签（即应答器）及应用软件系统三个部分组成的，其工作原理是Reader发射一特定频率的无线电波能量给Transponder，用以驱动Transponder电路将内部的数据送出，此时Reader便依序接收解读数据，送给应用程序作相应的处理。<br>以RFID卡片阅读器及电子标签之间的通信及能量感应方式来看大致上可以分成：感应耦合（Inductive Coupling）及后向散射耦合（Backscatter Coupling）两种。一般低频的RFID大都采用第一种方式，而较高频大多采用第二种方式。<br>阅读器根据使用的结构和技术不同可以是读或读/写装置，也是RFID系统信息控制和处理中心。阅读器通常由耦合模块、收发模块、控制模块和接口单元组成。阅读器和应答器之间一般采用半双工通信方式进行信息交换，同时阅读器通过耦合给无源应答器提供能量和时序。在实际应用中，可进一步通过Ethernet或WLAN等实现对物体识别信息的采集、处理及远程传送等管理功能。应答器是RFID系统的信息载体，目前应答器大多由耦合原件（线圈、微带天线等）和微芯片组成无源单元。</p>
+<p>2．二维码技术<br>二维码（2-dimensional bar code），如图21-1所示。它是用某种特定的几何图形按一定规律在平面（二维方向上）分布的记录数据符号信息的黑白相间的图形。在代码编制上巧妙地利用构成计算机内部逻辑基础的“0”、“1”比特流的概念，使用若干个与二进制相对应的几何形体来表示文字数值信息，通过图像输入设备或光电扫描设备自动识读以实现信息自动处理。1.png<br>二维码具有条码技术的一些共性：每种码制有其特定的字符集、每个字符占有一定的宽度、具有一定的校验功能等。同时还具有对不同行的信息自动识别功能及处理图形旋转变化等特点。在许多种类的二维条码中，常用的码制有 Data Matrix、Maxi Code、Aztec、 QR Code、 Vericode、PDF417、Ultracode、Code 49、Code 16K 等，QR 码是1994年由日本Denso-Wave公司发明的。QR来自英文 Quick Response 的缩写，即快速反应的意思，源自发明者希望QR码可让其内容快速被解码。QR码最常见于日本、韩国，是目前日本最流行的二维空间条码。<br>二维条码/二维码能够在横向和纵向两个方位同时表达信息，因此能在很小的面积内表达大量的信息。其信息量远远超过原来的条码技术，原来的条码技术仅能存储十多个字符，而二维码存储容量可达数千字符。以PDF417编码格式为例：若采用扩展的字母数字压缩格式，可容纳1850个字符；若采用二进制/ASCII格式，可容纳1108字节；若采用数字压缩格式，可容纳2710个数字。</p>
+<p>3．传感网<br>传感网是由随机分布的，集成有传感器（传感器有很多种类型，包括温度、湿度、速度、气敏等）、数据处理单元和通信单元的微小节点，通过自组织的方式构成的无线网络。<br>传感网借助于节点中内置的传感器测量周边环境中的热、红外、声呐、雷达和地震波信号，从而探测包括温度、湿度、噪声、光强度、压力、土壤成分、移动物体的大小、速度和方向等物质现象。它给我们的生活带来了深刻的变化。然而在目前，网络功能再强大，网络世界再丰富，也终究是虚拟的，它与我们所生活的现实世界还是相隔的，在网络世界中，很难感知现实世界，很多事情还是不可能的，时代呼唤着新的网络技术。传感网络正是在这样的背景下应运而生的全新网络技术，它综合了传感器、低功耗、通信及微机电等技术，将现实的世界与虚拟的网络世界联系起来，达到很多意想不到的效果。目前传感网技术已广泛应用于石油、化工、电力、医药、生物、航空、航天、国防、能源、冶金、电子等众多行业。可以预见，在不久的将来，传感网络将给我们的生活方式带来革命性的变化。</p>
+<p>4．M2M<br>简单地说，M2M是将数据从一台终端传送到另一台终端，也就是机器与机器（Machine to Machine）的对话。但从广义上讲 M2M 可代表机器对机器（Machine to Machine）、人对机器（Man to Machine）、机器对人（Machine to Man）、移动网络对机器（Mobile to Machine） 之间的连接与通信，它涵盖了所有实现在人、机器、系统之间建立通信连接的技术和手段。<br>M2M强调的是在商业活动中通过移动通信技术和设备的应用变革既有商务模式或创造出新商务模式，是机器设备间的自动通信。现在，M2M应用遍及电力、交通、工业控制、零售、公共事业管理、医疗、水利、石油等多个行业，对于车辆防盗、安全监测、自动售货、机械维修、公共交通管理等，M2M可以说是无所不能。<br>M2M不是简单的数据在机器和机器之间的传输，更重要的是，它是机器和机器之间的一种智能化、交互式的通信。也就是说，即使人们没有实时发出信号，机器也会根据既定程序主动进行通信，并根据所得到的数据智能化地作出选择，对相关设备发出正确的指令。可以说，智能化、交互式成为了M2M有别于其他应用的典型特征，这一特征下的机器也被赋予了更多的“思想”和“智慧”。<br>M2M的发展前景非常好，因为在当今世界上，机器的数量至少是人的数量的4倍以上，机器将替代人做更多的事情，这意味着巨大的市场潜力。<br>在国内，也有一些企业很早就开始应用M2M技术。三一重工对M2M的应用比较成功，三一重工在其销往全球各地的工程机械（关键部位或关键部件）上加装数据采集终端。机械的运行数据通过电信运营商网络汇总到三一集团企业控制中心（ Enterprise Control Center，ECC），实现对工程设备作业状况的实时监控。这样，企业控制中心可以随时发现设备运行中存在的问题（如工程机械设备上智能设备控制器检测到的油温、转速、工作压力等运行数据信息异常），并就问题立即指导客户排除故障或派出维修人员上门服务。</p>
+<h3 id="物联网的应用"><a href="#物联网的应用" class="headerlink" title="物联网的应用"></a>物联网的应用</h3><p>物联网用途广泛，遍及智能交通、环境保护、政府工作、公共安全、平安家居、智能消防、工业监测、老人护理、个人健康等多个领域。在生产生活中的应用举不胜举，下面简述几个比较典型的应用。</p>
+<p>目前食品安全是一个被大众所关注的主题，即便是超市的食品，人们也很难弄清楚这些食品的来源，以及相关情况。当物联网体系建立好以后，超市里销售的禽、肉、蛋、奶，在包装上可以嵌入微型感应器，顾客只需用手机扫描，就能了解食品的产地和转运、加工的时间地点，甚至还能显示加工环境的照片，是否绿色安全，一目了然。在医疗方面，也可以应用物联网。将传感器嵌入到家人的手表里，即使用户在千里之外，也可以随时掌握家人的体征。用这种方法，医生也可以随时随地了解病人的体征，为病人诊断看病。</p>
+<p>如果在汽车和汽车钥匙上都植入微型感应器，酒后驾车现象就可能被杜绝。当喝了酒的司机掏出汽车钥匙时，钥匙能通过气味感应器察觉到酒气，并通过无线信号通知汽车“不要发动”，汽车会自动罢工，并能够“命令”司机的手机给其亲友发短信，通知他们司机所在的位置，请亲友们来处理。</p>
+<h1 id="2、云计算"><a href="#2、云计算" class="headerlink" title="2、云计算"></a>2、云计算</h1><h2 id="（1）掌握云计算的概念"><a href="#（1）掌握云计算的概念" class="headerlink" title="（1）掌握云计算的概念"></a>（1）掌握云计算的概念</h2><p>云计算是一种基于互联网的计算方式，通过这种方式，共享的软硬件资源和信息可以按需提供给计算机和其他设备。云其实是网络、互联网的一种比喻说法。云计算的核心思想，是将大量用网络连接的计算资源统一管理和调度，构成一个计算资源池向用户按需服务。提供资源的网络称为云。狭义云计算指IT基础设施的交付和使用模式，指通过网络以按需、易扩展的方式获得所需资源；广义云计算指服务的交付和使用模式，指通过网络以按需、易扩展的方式获得所需服务。这种服务可以是IT和软件、互联网相关，也可是其他服务。</p>
+<p>通俗一点来说，提供资源的网络称为云。云中的资源在使用者看来是可以无限扩展的，并且可以随时获取，按需使用，随时扩展，按使用付费。这种特性经常被称为像水电一样使用IT基础设施。这就好比是从古老的单台发电机模式转向了电厂集中供电的模式。它意味着计算能力也可以作为一种商品进行流通，就像煤气、水电一样，取用方便，费用低廉。最大的不同在于，它是通过互联网进行传输的。</p>
+<h2 id="（2）熟悉云计算的架构及关键技术"><a href="#（2）熟悉云计算的架构及关键技术" class="headerlink" title="（2）熟悉云计算的架构及关键技术"></a>（2）熟悉云计算的架构及关键技术</h2><p>云计算是一项交叉学科技术，所以它有许多的特点：<br>（1）计算资源集成提高设备计算能力。云计算把大量计算资源集中到一个公共资源池中，通过租用的方式共享计算资源。虽然单个用户在云计算平台获得服务水平受到网络带宽等各因素影响，未必获得优于本地主机所提供的服务，但是从整个社会资源的角度而言，整体的资源调控降低了部分地区峰值荷载，提高了部分荒废的主机的运行率，从而提高了资源利用率。</p>
+<p>（2）分布式数据中心保证系统容灾能力。分布式数据中心可将云端的用户信息备份到地理上相互隔离的数据库主机中，甚至用户自己也无法判断信息的确切备份地点。该特点不仅仅提供了数据恢复的依据，也使得网络病毒和网络黑客的攻击失去目的性而变成徒劳，大大提高系统的安全性和容灾能力。</p>
+<p>（3）软硬件相互隔离减少设备依赖性。虚拟化层将云平台上方的应用软件和下方的基础设备隔离开来。技术设备的维护者无法看到设备中运行的具体应用。同时对软件层的用户而言基础设备层是透明的，用户只能看到虚拟化层中虚拟出来的各类设备。这种架构减少了设备依赖性，也为动态的资源配置提供可能。</p>
+<p>（4）平台模块化设计体现高可扩展性。目前主流的云计算平台均根据SPI架构在各层集成功能各异的软硬件设备和中间件软件。大量中间件软件和设备提供针对该平台的通用接口，允许用户添加本层的扩展设备。部分云与云之间提供对应接口，允许用户在不同云之间进行数据迁移。类似功能更大程度上满足了用户需求，集成了计算资源，是未来云计算的发展方向之一。</p>
+<p>（5）虚拟资源池为用户提供弹性服务。云平台管理软件将整合的计算资源根据应用访问的具体情况进行动态调整，包括增大或减少资源的要求。因此云计算对于在非恒定需求的应用，如对需求波动很大、阶段性需求等，具有非常好的应用效果。在云计算环境中，既可以对规律性需求通过事先预测事先分配，也可根据事先设定的规则进行实时公台调整。弹性的云服务可帮助用户在任意时间得到满足需求的计算资源。</p>
+<p>（6）按需付费降低使用成本。作为云计算的代表按需提供服务、按需付费是目前各类云计算服务中不可或缺的一部分。对用户而言，云计算不但省去了基础设备的购置运维费用，而且能根据企业成长的需要不断扩展订购的服务，不断更换更加适合的服务，提高了资金的利用率。</p>
+<h2 id="（3）了解云计算服务的类型"><a href="#（3）了解云计算服务的类型" class="headerlink" title="（3）了解云计算服务的类型"></a>（3）了解云计算服务的类型</h2><p>1．软件即服务<br>软件即服务（Software-as-a-Service，SaaS）是基于互联网提供软件服务的软件应用模式。作为一种在21世纪开始兴起的创新的软件应用模式，SaaS是软件科技发展的最新趋势。SaaS提供商为企业搭建信息化所需要的所有网络基础设施及软件、硬件运作平台，并负责所有前期的实施、后期的维护等一系列服务，企业无须购买软硬件、建设机房、招聘IT人员，即可通过互联网使用信息系统。就像打开自来水龙头就能用水一样，企业根据实际需要，从SaaS提供商租赁软件服务。</p>
+<p>2．平台即服务<br>平台即服务（Platform-as-a-Service，PaaS）是把服务器平台或者开发环境作为一种服务提供的商业模式，如将软件研发的平台作为一种服务，以SaaS的模式提交给用户。因此，PaaS也是SaaS模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度。早在2007年，国内外SaaS厂商就先后推出了自己的PaaS平台。<br>PaaS之所以能够推进SaaS的发展，主要在于它能够提供企业进行定制化研发的中间件平台，同时涵盖数据库和应用服务器等。PaaS可以提高在Web平台上利用的资源数量。</p>
+<p>3．基础设施即服务<br>基础设施即服务（Infrastructure as a Service，IaaS）是指消费者通过Internet可以从完善的计算机基础设施获得服务，如《纽约时报》就使用成百上千台Amazon EC2实例在36小时内处理TB级的文档数据。如果没有EC2，《纽约时报》处理这些数据将要花费数天或者数月的时间。</p>
+<h2 id="（4）了解发展云计算的主要任务"><a href="#（4）了解发展云计算的主要任务" class="headerlink" title="（4）了解发展云计算的主要任务"></a>（4）了解发展云计算的主要任务</h2><p>1．云安全<br>云安全（Cloud Security）是一个从“云计算”演变而来的新名词。云安全的策略构想是：使用者越多，每个使用者就越安全，因为如此庞大的用户群，足以覆盖互联网的每个角落，只要某个新木马病毒出现，就会立刻被截获。<br>“云安全”通过网状的大量客户端对网络中软件行为的异常监测，获取互联网中木马、恶意程序的最新信息，推送到Server端进行自动分析和处理，再把病毒和木马的解决方案分发到每一个客户端。</p>
+<p>2．云存储<br>应用云存储是在云计算概念上延伸和发展出来的一个新的概念，是指通过集群应用、网格技术或分布式文件系统等功能，将网络中大量各种不同类型的存储设备通过应用软件集合起来协同工作，共同对外提供数据存储和业务访问功能的一个系统。当云计算系统运算和处理的核心是大量数据的存储和管理时，云计算系统中就需要配置大量的存储设备，那么云计算系统就转变成为一个云存储系统，所以云存储是一个以数据存储和管理为核心的云计算系统。</p>
+<p>3．云呼叫<br>应用云呼叫中心是基于云计算技术而搭建的呼叫中心系统，企业无须购买任何软、硬件系统，只需具备人员、场地等基本条件，就可以快速拥有属于自己的呼叫中心，软硬件平台、通信资源、日常维护与服务由服务器商提供。具有建设周期短、投入少、风险低、部署灵活、系统容量伸缩性强、运营维护成本低等众多特点；无论是电话营销中心还是客户服务中心，企业只需按需租用服务，便可建立一套功能全面、稳定、可靠、座席可分布全国各地，全国呼叫接入的呼叫中心系统。</p>
+<p>4．云会议<br>应用云会议是基于云计算技术的一种高效、便捷、低成本的会议形式。它是视频会议与云计算的完美结合，带来了最便捷的远程会议体验。使用者只需通过互联网界面，进行简单易用的操作，便可快速高效地与全球各地团队及客户同步分享语音、数据文件及视频，而会议中数据的传输、处理等复杂技术由云会议服务商帮助使用者进行操作。目前国内云会议大多以SaaS模式为主体，其服务内容包括电话、网络、视频等形式。</p>
+<h1 id="3、移动互联网"><a href="#3、移动互联网" class="headerlink" title="3、移动互联网"></a>3、移动互联网</h1><h2 id="（1）掌握移动互联网的概念"><a href="#（1）掌握移动互联网的概念" class="headerlink" title="（1）掌握移动互联网的概念"></a>（1）掌握移动互联网的概念</h2><p>移动互联网是PC互联网发展的必然产物，将移动通信和互联网二者结合起来，成为一体。它是互联网的技术、平台、商业模式和应用与移动通信技术结合并实践的活动的总称。<br>移动互联网是移动和互联网融合的产物，继承了移动随时、随地、随身和互联网开放、分享、互动的优势，是一个全国性的、以宽带IP为技术核心的，可同时提供话音、传真、数据、图像、多媒体等高品质电信服务的新一代开放的电信基础网络，由运营商提供无线接入，互联网企业提供各种成熟的应用。</p>
+<h2 id="（2）熟悉移动互联网的特点"><a href="#（2）熟悉移动互联网的特点" class="headerlink" title="（2）熟悉移动互联网的特点"></a>（2）熟悉移动互联网的特点</h2><p>移动互联网是在传统互联网基础上发展起来的，因此二者具有很多共性，但由于移动通信技术和移动终端发展不同，它又具备许多传统互联网没有的新特性。</p>
+<p>交互性<br>用户可以随身携带和随时使用移动终端，在移动状态下接人和使用移动互联网应用服务。<br>便携性<br>相对于PC，由于移动终端小巧轻便、可随身携带两个特点，人们可以装入随身携带的书包和手袋中，并使得用户可以在任意场合接人网络。<br>隐私性<br>移动终端设备的隐私性远高于PC的要求。由于移动性和便携性的特点，移动互联网的信息保护程度较高。<br>定位性<br>移动互联网有别于传统互联网的典型应用是位置服务应用。它具有以下几个服务：位置签到、位置分享及基于位置的社交应用；基于位置围栏的用户监控及消息通知服务；生活导航及优惠券集成服务；基于位置的娱乐和电子商务应用；基于位置的用户换机上下文感知及信息服务。<br>娱乐性<br>移动互联网上的丰富应用，如图片分享、视频播放、音乐欣赏、电子邮件等，为用户的工作、生活带来更多的便利和乐趣。<br>局限性<br>移动互联网应用服务在便捷的同时，也受到了来自网络能力和终端硬件能力的限制。在网络能力方面，受到无线网络传输环境、技术能力等因素限制；在终端硬件能力方面，受到终端大小、处理能力、电池容量等的限制。移动互联网各个部分相互联系，相互作用并制约发展，任何一部分的滞后都会延缓移动互联网发展的步伐。<br>强关联性<br>由于移动互联网业务受到了网络及终端能力的限制，因此，其业务内容和形式也需要匹配特定的网络技术规格和终端类型，具有强关联性。移动互联网通信技术与移动应用平台的发展有着紧密联系，没有足够的带宽就会影响在线视频，视频电话，移动网游等应用的扩展。同时，根据移动终端设备的特点，也有其与之对应的移动互联网应用服务，这是区别于传统互联网而存在的。<br>身份统一性<br>这种身份统一是指移动互联用户自然身份、社会身份、交易身份、支付身份通过移动互联网平台得以统一。信息本来是分散到各处的，互联网逐渐发展、基础平台逐渐完善之后，各处的身份信息将得到统一。例如，在网银里绑定手机号和银行卡，支付的时候验证了手机号就直接从银行卡扣钱。</p>
+<h2 id="（3）了解移动互联网技术的应用"><a href="#（3）了解移动互联网技术的应用" class="headerlink" title="（3）了解移动互联网技术的应用"></a>（3）了解移动互联网技术的应用</h2><p>通信业<br>通信行业为移动互联网的繁荣提供了必要的硬件支撑，传统的通信业，”开路收费”模式，如寄信、通话等都是为你“开路”然后收钱。移动互联网的出现却完全无视这些规则，要求人与人更紧密地连接，都可以以最低成本随时随地联系得到。<br>医疗行业<br>受移动互联网的影响，目前的医疗行业已经开始做出改变，比如在线就医、在线预约、远程医疗合作在线支付等方面。<br>移动电子商务<br>移动电子商务可以为用户随时随地提供所需的服务、应用、信息和娱乐，利用手机终端方便便捷地选择及购买商品和服务。多种支付方式，使用方便。移动支付平台不仅支持各种银行卡通过网上进行支付，还支持手机、电话等多种终端操作，符合网上消费者追求个性化、多样化的需求。<br>AR<br>增强现实(AR)，也被称之为混合现实。它通过电脑技术，将虚拟的信息应用到真实世界，真实的环境和虚拟的物体实时地叠加到了同一个画面或空间同时存在。增强现实提供了在一般情况下，不同于人类可以感知的信息。它不但展现了真实世界的信息，而且将虚拟的信息同时显示出来，两种信息相互补充叠加。<br>移动电子政务<br>在信息技术快速变革的情况下，国家的政府单位也紧跟时代发展步伐，开始广泛的使用移动电子政务。</p>
+<h1 id="4、人工智能"><a href="#4、人工智能" class="headerlink" title="4、人工智能"></a>4、人工智能</h1><h2 id="（1）掌握人工智能的概念"><a href="#（1）掌握人工智能的概念" class="headerlink" title="（1）掌握人工智能的概念"></a>（1）掌握人工智能的概念</h2><p>人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。<br>人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。人工智能从诞生以来，理论和技术日益成熟，应用领域也不断扩大，可以设想，未来人工智能带来的科技产品，将会是人类智慧的“容器”。人工智能可以对人的意识、思维的信息过程的模拟。人工智能不是人的智能，但能像人那样思考、也可能超过人的智能。</p>
+<h2 id="（2）熟悉人工智能研究范畴"><a href="#（2）熟悉人工智能研究范畴" class="headerlink" title="（2）熟悉人工智能研究范畴"></a>（2）熟悉人工智能研究范畴</h2><p>人工智能是一门极富挑战性的科学，从事这项工作的人必须懂得计算机知识，心理学和哲学。人工智能是包括十分广泛的科学，它由不同的领域组成，如机器学习，计算机视觉等等，总的说来，人工智能研究的一个主要目标是使机器能够胜任一些通常需要人类智能才能完成的复杂工作。但不同的时代、不同的人对这种“复杂工作”的理解是不同的。</p>
+<p>具体包括：自然语言处理，知识表现，智能搜索，推理，规划，机器学习，知识获取，组合调度问题，感知问题，模式识别，逻辑程序设计软计算，不精确和不确定的管理，人工生命，神经网络，复杂系统，遗传算法</p>
+<h2 id="（3）了解人工智能实际应用"><a href="#（3）了解人工智能实际应用" class="headerlink" title="（3）了解人工智能实际应用"></a>（3）了解人工智能实际应用</h2><p>机器视觉，指纹识别，人脸识别，视网膜识别，虹膜识别，掌纹识别，专家系统，自动规划，智能搜索，定理证明，博弈，自动程序设计，智能控制，机器人学，语言和图像理解，遗传编程等。</p>
+<h1 id="5、区块链"><a href="#5、区块链" class="headerlink" title="5、区块链"></a>5、区块链</h1><h2 id="（1）掌握区块链的概念"><a href="#（1）掌握区块链的概念" class="headerlink" title="（1）掌握区块链的概念"></a>（1）掌握区块链的概念</h2><p>区块链是一个信息技术领域的术语。从本质上讲，它是一个共享数据库，存储于其中的数据或信息，具有“不可伪造”“全程留痕”“可以追溯”“公开透明”“集体维护”等特征。基于这些特征，区块链技术奠定了坚实的“信任”基础，创造了可靠的“合作”机制，具有广阔的运用前景。</p>
+<h2 id="（2）熟悉区块链的系统架构"><a href="#（2）熟悉区块链的系统架构" class="headerlink" title="（2）熟悉区块链的系统架构"></a>（2）熟悉区块链的系统架构</h2><p><img src="/images/bigdata/2-11.jpeg"><br>一般说来，区块链系统由数据层、网络层、共识层、激励层、合约层和应用层组成。<br>其中，数据层封装了底层数据区块以及相关的数据加密和时间戳等基础数据和基本算法；<br>网络层则包括分布式组网机制、数据传播机制和数据验证机制等；<br>共识层主要封装网络节点的各类共识算法；<br>激励层将经济因素集成到区块链技术体系中来，主要包括经济激励的发行机制和分配机制等；<br>合约层主要封装各类脚本、算法和智能合约，是区块链可编程特性的基础；<br>应用层则封装了区块链的各种应用场景和案例。<br>该模型中，基于时间戳的链式区块结构、分布式节点的共识机制、基于共识算力的经济激励和灵活可编程的智能合约是区块链技术最具代表性的创新点。</p>
+<h2 id="（3）了解区块链的分类"><a href="#（3）了解区块链的分类" class="headerlink" title="（3）了解区块链的分类"></a>（3）了解区块链的分类</h2><p>公有区块链<br>公有区块链（Public Block Chains)是指：世界上任何个体或者团体都可以发送交易，且交易能够获得该区块链的有效确认，任何人都可以参与其共识过程。公有区块链是最早的区块链，也是应用最广泛的区块链，各大bitcoins系列的虚拟数字货币均基于公有区块链，世界上有且仅有一条该币种对应的区块链。<br>联合（行业）区块链<br>行业区块链（Consortium Block Chains)：由某个群体内部指定多个预选的节点为记账人，每个块的生成由所有的预选节点共同决定（预选节点参与共识过程），其他接入节点可以参与交易，但不过问记账过程(本质上还是托管记账，只是变成分布式记账，预选节点的多少，如何决定每个块的记账者成为该区块链的主要风险点），其他任何人可以通过该区块链开放的API进行限定查询。<br>私有区块链<br>私有区块链（Private Block Chains)：仅仅使用区块链的总账技术进行记账，可以是一个公司，也可以是个人，独享该区块链的写入权限，本链与其他的分布式存储方案没有太大区别。传统金融都是想实验尝试私有区块链，而公链的应用例如bitcoin已经工业化，私链的应用产品还在摸索当中。</p>
+<h2 id="（补充）核心技术"><a href="#（补充）核心技术" class="headerlink" title="（补充）核心技术"></a>（补充）核心技术</h2><p>分布式账本<br>分布式账本指的是交易记账由分布在不同地方的多个节点共同完成，而且每一个节点记录的是完整的账目，因此它们都可以参与监督交易合法性，同时也可以共同为其作证。<br>非对称加密<br>存储在区块链上的交易信息是公开的，但是账户身份信息是高度加密的，只有在数据拥有者授权的情况下才能访问到，从而保证了数据的安全和个人的隐私。<br>共识机制<br>共识机制就是所有记账节点之间怎么达成共识，去认定一个记录的有效性，这既是认定的手段，也是防止篡改的手段。区块链提出了四种不同的共识机制，适用于不同的应用场景，在效率和安全性之间取得平衡。<br>智能合约<br>智能合约是基于这些可信的不可篡改的数据，可以自动化的执行一些预先定义好的规则和条款。</p>
+<h2 id="（4）了解区块链的应用"><a href="#（4）了解区块链的应用" class="headerlink" title="（4）了解区块链的应用"></a>（4）了解区块链的应用</h2><p>金融领域<br>区块链在国际汇兑、信用证、股权登记和证券交易所等金融领域有着潜在的巨大应用价值。将区块链技术应用在金融行业中，能够省去第三方中介环节，实现点对点的直接对接，从而在大大降低成本的同时，快速完成交易支付。<br>物联网和物流领域<br>区块链在物联网和物流领域也可以天然结合。通过区块链可以降低物流成本，追溯物品的生产和运送过程，并且提高供应链管理的效率。该领域被认为是区块链一个很有前景的应用方向。<br>公共服务领域<br>区块链在公共管理、能源、交通等领域都与民众的生产生活息息相关，但是这些领域的中心化特质也带来了一些问题，可以用区块链来改造。区块链提供的去中心化的完全分布式DNS服务通过网络中各个节点之间的点对点数据传输服务就能实现域名的查询和解析，可用于确保某个重要的基础设施的操作系统和固件没有被篡改，可以监控软件的状态和完整性，发现不良的篡改，并确保使用了物联网技术的系统所传输的数据没用经过篡改。<br>数字版权领域<br>通过区块链技术，可以对作品进行鉴权，证明文字、视频、音频等作品的存在，保证权属的真实、唯一性。作品在区块链上被确权后，后续交易都会进行实时记录，实现数字版权全生命周期管理，也可作为司法取证中的技术性保障。例如，美国纽约一家创业公司Mine Labs开发了一个基于区块链的元数据协议，这个名为Mediachain的系统利用IPFS文件系统，实现数字作品版权保护，主要是面向数字图片的版权保护应用。<br>保险领域<br>在保险理赔方面，保险机构负责资金归集、投资、理赔，往往管理和运营成本较高。通过智能合约的应用，既无需投保人申请，也无需保险公司批准，只要触发理赔条件，实现保单自动理赔。一个典型的应用案例就是LenderBot, 是 2016 年由区块链企业 Stratumn、德勤与支付服务商 Lemonway 合作推出，它允许人们通过 Facebook Messenger 的聊天功能，注册定制化的微保险产品， 为个人之间交换的高价值物品进行投保，而区块链在贷款合同中代替了第三方角色。<br>公益领域<br>区块链上存储的数据，高可靠且不可篡改，天然适合用在社会公益场景。公益流程中的相关信息，如捐赠项目、募集明细、资金流向、受助人反馈等，均可以存放于区块链上，并且有条件地进行透明公开公示，方便社会监督。</p>
+<h1 id="6、量子技术"><a href="#6、量子技术" class="headerlink" title="6、量子技术"></a>6、量子技术</h1><h2 id="（1）掌握量子技术的概念"><a href="#（1）掌握量子技术的概念" class="headerlink" title="（1）掌握量子技术的概念"></a>（1）掌握量子技术的概念</h2><p>量子信息是量子物理与信息技术相结合发展起来的新学科,主要包括量子通信和量子计算2个领域。量子通信主要研究量子密码、量子隐形传态、远距离量子通信的技术等等;量子计算主要研究量子计算机和适合于量子计算机的量子算法。</p>
+<h2 id="（2）熟悉量子技术的特点"><a href="#（2）熟悉量子技术的特点" class="headerlink" title="（2）熟悉量子技术的特点"></a>（2）熟悉量子技术的特点</h2><p>作为一种微观粒子，量子具有许多特别的基本特性，如量子力学三大基本原理：<br>量子测不准<br>也称为不确定性原理，即观察者不可能同时知道一个粒子的位置和它的速度，粒子位置的总是以一定的概率存在某一个不同的地方，而对未知状态系统的每一次测量都必将改变系统原来的状态。也就是说，测量后的微粒相比于测量之前，必然会产生变化。<br>量子不可克隆<br>量子不可克隆原理，即一个未知的量子态不能被完全地克隆。在量子力学中，不存在这样一个物理过程：实现对一个未知量子态的精确复制，使得每个复制态与初始量子态完全相同。<br>量子不可区分<br>量子不可区分原理，即不可能同时精确测量两个非正交量子态。事实上，由于非正交量子态具有不可区分性，无论采用任何测量方法，测量结果的都会有错误。</p>
+<p>除此之外，还包括以下基本特性：<br>量子态叠加性(superposition)<br>量子状态可以叠加，因此量子信息也是可以叠加的。这是量子计算中的可以实现并行性的重要基础，即可以同时输入和操作个量子比特的叠加态。<br>量子态纠缠性(entanglement)<br>两个及以上的量子在特定的(温度、磁场)环境下可以处于较稳定的量子纠缠状态，基于这种纠缠，某个粒子的作用将会瞬时地影响另一个粒子。爱因斯坦称其为: “幽灵般的超距作用”。<br>量子态相干性(interference)<br>量子力学中微观粒子间的相互叠加作用能产生类似经典力学中光的干涉现象。</p>
+<h2 id="（3）了解量子技术的应用"><a href="#（3）了解量子技术的应用" class="headerlink" title="（3）了解量子技术的应用"></a>（3）了解量子技术的应用</h2><p>量子技术应用包括量子传感与计量、量子通信、量子模拟及量子计算等方面，它将在传感与测量、通信、仿真、高性能计算等领域拥有广阔的应用前景。</p>
+]]></content>
+      <categories>
+        <category>大数据分析应用-中级</category>
+      </categories>
+      <tags>
+        <tag>大数据考试-信息化基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>计算机基础知识（四）计算机网络</title>
     <url>/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
     <content><![CDATA[<h1 id="1、了解计算机网络在信息时代的核心作用以及计算机网络的发展历史；理解计算机网络的分类，网络标准化，网络参考模型，网络体系结构。"><a href="#1、了解计算机网络在信息时代的核心作用以及计算机网络的发展历史；理解计算机网络的分类，网络标准化，网络参考模型，网络体系结构。" class="headerlink" title="1、了解计算机网络在信息时代的核心作用以及计算机网络的发展历史；理解计算机网络的分类，网络标准化，网络参考模型，网络体系结构。"></a>1、了解计算机网络在信息时代的核心作用以及计算机网络的发展历史；理解计算机网络的分类，网络标准化，网络参考模型，网络体系结构。</h1><h2 id="计算机网络在信息时代的核心作用"><a href="#计算机网络在信息时代的核心作用" class="headerlink" title="计算机网络在信息时代的核心作用"></a>计算机网络在信息时代的核心作用</h2><ol>
@@ -2959,56 +3012,85 @@
       </tags>
   </entry>
   <entry>
-    <title>信息化基础知识（三）新一代信息技术</title>
-    <url>/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%B8%89%EF%BC%89%E6%96%B0%E4%B8%80%E4%BB%A3%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/</url>
-    <content><![CDATA[<h1 id="1、物联网"><a href="#1、物联网" class="headerlink" title="1、物联网"></a>1、物联网</h1><h2 id="（1）掌握物联网的概念"><a href="#（1）掌握物联网的概念" class="headerlink" title="（1）掌握物联网的概念"></a>（1）掌握物联网的概念</h2><p>物联网（The Internet of Things，IoT）是实现物物相连的互联网络。其内涵包含两个方面：第一，物联网的核心和基础仍然是互联网，是在互联网基础上延伸和扩展的网络；第二，其用户端延伸和扩展到了任何物体与物体之间，使其进行信息交换和通信。<br>物联网是将无处不在的末端设备和设施，包括具备“内在智能”的传感器、移动终端、工业系统、楼控系统、家庭智能设施、视频监控系统等和“外在使能”的，如贴上RFID的各种资产、携带无线终端的个人与车辆等“智能化物件或动物”或“智能尘埃”，通过各种无线、有线的长距离/短距离通信网络实现互联互通、应用大集成，以及基于云计算的SaaS营运等模式。提供安全可控乃至个性化的实时在线监测、定位追溯、报警联动、调度指挥、预案管理、远程控制、安全防范、远程维保、在线升级、统计报表、决策支持等管理和服务功能。实现对“万物”的“高效、节能、安全、环保”的“管、控、营”一体化。</p>
-<h2 id="（2）熟悉物联网架构"><a href="#（2）熟悉物联网架构" class="headerlink" title="（2）熟悉物联网架构"></a>（2）熟悉物联网架构</h2><p>物联网可以分为三个层次，底层是用来感知数据的感知层，即利用传感器、二维码、RFID等设备随时随地获取物体的信息。第二层是数据传输处理的网络层，即通过各种传感网络与互联网的融合，将物体当前的信息实时准确地传递出去。第三层则是与行业需求结合的应用层，即通过智能计算、云计算等对物体进行智能化控制。<br>1．感知层<br>感知层用于识别物体、采集信息。感知层包括二维码标签和识读器、RFID标签和读写器、摄像头、GPS、传感器、M2M终端、传感器网关等，主要功能是识别物体、采集信息，与人体结构中皮肤和五官的作用类似。<br>感知层解决的是人类世界和物理世界的数据获取问题。它首先通过传感器、数码相机等设备，采集外部物理世界的数据，然后通过RFID、条码、工业现场总线、蓝牙、红外等短距离传输技术传递数据。感知层所需要的关键技术包括检测技术、短距离无线通信技术等。<br>对于目前关注和应用较多的RFID网络来说，附着在设备上的RFID标签和用来识别RFID信息的扫描仪、感应器都属于物联网的感知层。在这一类物联网中被检测的信息就是RFID标签的内容，现在的电子不停车收费系统（Electronic Toll Collection，ETC）、超市仓储管理系统、飞机场的行李自动分类系统等都用到了这个层次的设备。<br>2．网络层<br>网络层用于传递信息和处理信息。网络层包括通信网与互联网的融合网络、网络管理中心、信息中心和智能处理中心等。网络层将感知层获取的信息进行传递和处理，类似于人体结构中的神经中枢和大脑。<br>网络层解决的是传输和预处理感知层所获得数据的问题。这些数据可以通过移动通信网、互联网、企业内部网、各类专网、小型局域网等进行传输。特别是在三网融合后，有线电视网也能承担物联网网络层的功能，有利于物联网的加快推进。网络层所需要的关键技术包括长距离有线和无线通信技术、网络技术等。<br>物联网的网络层将建立在现有的移动通信网和互联网基础上。物联网通过各种接入设备与移动通信网和互联网相连，例如，手机付费系统中由刷卡设备将内置手机的RFID信息采集上传到互联网，网络层完成后台鉴权认证，并从银行网络划账。<br>网络层中的感知数据管理与处理技术是实现以数据为中心的物联网的核心技术，包括传感网数据的存储、查询、分析、挖掘和理解，以及基于感知数据决策的理论与技术。云计算平台作为海量感知数据的存储、分析平台，将是物联网网络层的重要组成部分，也是应用层众多应用的基础。在产业链中，通信网络运营商和云计算平台提供商将在物联网网络层占据重要的地位。<br>3．应用层<br>应用层实现广泛智能化。应用层是物联网与行业专业技术的深度融合，结合行业需求实现行业智能化，这类似于人们的社会分工。<br>物联网应用层利用经过分析处理的感知数据，为用户提供丰富的特定服务。物联网的应用可分为监控型（物流监控、污染监控）、查询型（智能检索、远程抄表）、控制型（智能交通、智能家居、路灯控制）和扫描型（手机钱包、高速公路不停车收费）等。<br>应用层解决的是信息处理和人机交互的问题。网络层传输而来的数据在这一层进入各类信息系统进行处理，并通过各种设备与人进行交互。这一层也可按形态直观地划分为两个子层。一个是应用程序层，进行数据处理，它涵盖了国民经济和社会的每一领域，包括电力、医疗、银行、交通、环保、物流、工业、农业、城市管理、家居生活等，其功能可包括支付、监控、安保、定位、盘点、预测等，可用于政府、企业、社会组织、家庭、个人等。这正是物联网作为深度信息化的重要体现。另一个是终端设备层，提供人机接口。物联网虽然是“物物相连的网”，但最终要以人为本，还是需要人的操作与控制，不过这里的人机界面已远远超出现实中人与计算机交互的概念，而是泛指与应用程序相连的各种设备与人的交互。<br>应用层是物联网发展的体现，软件开发、智能控制技术将会为用户提供丰富多彩的物联网应用。各种行业和家庭应用的开发将会推动物联网的普及，也给整个物联网产业链带来丰厚的利润。</p>
-<h2 id="（3）了解物联网技术的应用"><a href="#（3）了解物联网技术的应用" class="headerlink" title="（3）了解物联网技术的应用"></a>（3）了解物联网技术的应用</h2><h3 id="物联网技术"><a href="#物联网技术" class="headerlink" title="物联网技术"></a>物联网技术</h3><p>1．射频识别技术<br>射频识别技术（Radio Frequency Identification，RFID），又称电子标签，是一种通信技术，可通过无线电信号识别特定目标并读写相关数据，而无须识别系统与特定目标之间建立机械或光学接触。该技术是物联网的一项核心技术，很多物联网应用都离不开它。<br>最初在技术领域，应答器是指能够传输信息、回复信息的电子模块，近些年，由于射频技术发展迅猛，应答器有了新的说法和含义，又称为智能标签或标签。RFID电子阅读器（读写器）通过天线与RFID电子标签进行无线通信，可以实现对标签识别码和内存数据的读出或写入操作。典型的阅读器包含有高频模块（发送器和接收器）、控制单元及阅读器天线。RFID采用的是非接触的自动识别技术，它通过射频信号自动识别目标对象并获取相关数据，识别工作无须人工干预，可工作于各种恶劣环境。RFID技术可识别高速运动物并可同时识别多个标签，操作快捷方便。这种系统一般由一个询问器（或阅读器）和很多应答器（或标签）组成。RFID的基本组成部分通常包括标签、阅读器和天线。（1）标签（Tag）：由耦合元件及芯片组成，每个标签具有唯一的电子编码，附着在物体上标识目标对象。（2）阅读器（Reader）：读取（有时还可以写入）标签信息的设备，可设计为手持式或固定式。</p>
-<p>（3）天线（Antenna）：在标签和读取器间传递射频信号。<br>RFID技术的基本工作原理并不复杂：标签进入磁场后，接收解读器发出的射频信号，凭借感应电流所获得的能量发送出存储在芯片中的产品信息（Passive Tag，无源标签或被动标签），或者由标签主动发送某一频率的信号（Active Tag，有源标签或主动标签），解读器读取信息并解码后，送至中央信息系统进行有关数据处理。<br>一套完整的RFID系统，是由阅读器与电子标签（即应答器）及应用软件系统三个部分组成的，其工作原理是Reader发射一特定频率的无线电波能量给Transponder，用以驱动Transponder电路将内部的数据送出，此时Reader便依序接收解读数据，送给应用程序作相应的处理。<br>以RFID卡片阅读器及电子标签之间的通信及能量感应方式来看大致上可以分成：感应耦合（Inductive Coupling）及后向散射耦合（Backscatter Coupling）两种。一般低频的RFID大都采用第一种方式，而较高频大多采用第二种方式。<br>阅读器根据使用的结构和技术不同可以是读或读/写装置，也是RFID系统信息控制和处理中心。阅读器通常由耦合模块、收发模块、控制模块和接口单元组成。阅读器和应答器之间一般采用半双工通信方式进行信息交换，同时阅读器通过耦合给无源应答器提供能量和时序。在实际应用中，可进一步通过Ethernet或WLAN等实现对物体识别信息的采集、处理及远程传送等管理功能。应答器是RFID系统的信息载体，目前应答器大多由耦合原件（线圈、微带天线等）和微芯片组成无源单元。</p>
-<p>2．二维码技术<br>二维码（2-dimensional bar code），如图21-1所示。它是用某种特定的几何图形按一定规律在平面（二维方向上）分布的记录数据符号信息的黑白相间的图形。在代码编制上巧妙地利用构成计算机内部逻辑基础的“0”、“1”比特流的概念，使用若干个与二进制相对应的几何形体来表示文字数值信息，通过图像输入设备或光电扫描设备自动识读以实现信息自动处理。1.png<br>二维码具有条码技术的一些共性：每种码制有其特定的字符集、每个字符占有一定的宽度、具有一定的校验功能等。同时还具有对不同行的信息自动识别功能及处理图形旋转变化等特点。在许多种类的二维条码中，常用的码制有 Data Matrix、Maxi Code、Aztec、 QR Code、 Vericode、PDF417、Ultracode、Code 49、Code 16K 等，QR 码是1994年由日本Denso-Wave公司发明的。QR来自英文 Quick Response 的缩写，即快速反应的意思，源自发明者希望QR码可让其内容快速被解码。QR码最常见于日本、韩国，是目前日本最流行的二维空间条码。<br>二维条码/二维码能够在横向和纵向两个方位同时表达信息，因此能在很小的面积内表达大量的信息。其信息量远远超过原来的条码技术，原来的条码技术仅能存储十多个字符，而二维码存储容量可达数千字符。以PDF417编码格式为例：若采用扩展的字母数字压缩格式，可容纳1850个字符；若采用二进制/ASCII格式，可容纳1108字节；若采用数字压缩格式，可容纳2710个数字。</p>
-<p>3．传感网<br>传感网是由随机分布的，集成有传感器（传感器有很多种类型，包括温度、湿度、速度、气敏等）、数据处理单元和通信单元的微小节点，通过自组织的方式构成的无线网络。<br>传感网借助于节点中内置的传感器测量周边环境中的热、红外、声呐、雷达和地震波信号，从而探测包括温度、湿度、噪声、光强度、压力、土壤成分、移动物体的大小、速度和方向等物质现象。它给我们的生活带来了深刻的变化。然而在目前，网络功能再强大，网络世界再丰富，也终究是虚拟的，它与我们所生活的现实世界还是相隔的，在网络世界中，很难感知现实世界，很多事情还是不可能的，时代呼唤着新的网络技术。传感网络正是在这样的背景下应运而生的全新网络技术，它综合了传感器、低功耗、通信及微机电等技术，将现实的世界与虚拟的网络世界联系起来，达到很多意想不到的效果。目前传感网技术已广泛应用于石油、化工、电力、医药、生物、航空、航天、国防、能源、冶金、电子等众多行业。可以预见，在不久的将来，传感网络将给我们的生活方式带来革命性的变化。</p>
-<p>4．M2M<br>简单地说，M2M是将数据从一台终端传送到另一台终端，也就是机器与机器（Machine to Machine）的对话。但从广义上讲 M2M 可代表机器对机器（Machine to Machine）、人对机器（Man to Machine）、机器对人（Machine to Man）、移动网络对机器（Mobile to Machine） 之间的连接与通信，它涵盖了所有实现在人、机器、系统之间建立通信连接的技术和手段。<br>M2M强调的是在商业活动中通过移动通信技术和设备的应用变革既有商务模式或创造出新商务模式，是机器设备间的自动通信。现在，M2M应用遍及电力、交通、工业控制、零售、公共事业管理、医疗、水利、石油等多个行业，对于车辆防盗、安全监测、自动售货、机械维修、公共交通管理等，M2M可以说是无所不能。<br>M2M不是简单的数据在机器和机器之间的传输，更重要的是，它是机器和机器之间的一种智能化、交互式的通信。也就是说，即使人们没有实时发出信号，机器也会根据既定程序主动进行通信，并根据所得到的数据智能化地作出选择，对相关设备发出正确的指令。可以说，智能化、交互式成为了M2M有别于其他应用的典型特征，这一特征下的机器也被赋予了更多的“思想”和“智慧”。<br>M2M的发展前景非常好，因为在当今世界上，机器的数量至少是人的数量的4倍以上，机器将替代人做更多的事情，这意味着巨大的市场潜力。<br>在国内，也有一些企业很早就开始应用M2M技术。三一重工对M2M的应用比较成功，三一重工在其销往全球各地的工程机械（关键部位或关键部件）上加装数据采集终端。机械的运行数据通过电信运营商网络汇总到三一集团企业控制中心（ Enterprise Control Center，ECC），实现对工程设备作业状况的实时监控。这样，企业控制中心可以随时发现设备运行中存在的问题（如工程机械设备上智能设备控制器检测到的油温、转速、工作压力等运行数据信息异常），并就问题立即指导客户排除故障或派出维修人员上门服务。</p>
-<h3 id="物联网的应用"><a href="#物联网的应用" class="headerlink" title="物联网的应用"></a>物联网的应用</h3><p>物联网用途广泛，遍及智能交通、环境保护、政府工作、公共安全、平安家居、智能消防、工业监测、老人护理、个人健康等多个领域。在生产生活中的应用举不胜举，下面简述几个比较典型的应用。</p>
-<p>目前食品安全是一个被大众所关注的主题，即便是超市的食品，人们也很难弄清楚这些食品的来源，以及相关情况。当物联网体系建立好以后，超市里销售的禽、肉、蛋、奶，在包装上可以嵌入微型感应器，顾客只需用手机扫描，就能了解食品的产地和转运、加工的时间地点，甚至还能显示加工环境的照片，是否绿色安全，一目了然。在医疗方面，也可以应用物联网。将传感器嵌入到家人的手表里，即使用户在千里之外，也可以随时掌握家人的体征。用这种方法，医生也可以随时随地了解病人的体征，为病人诊断看病。</p>
-<p>如果在汽车和汽车钥匙上都植入微型感应器，酒后驾车现象就可能被杜绝。当喝了酒的司机掏出汽车钥匙时，钥匙能通过气味感应器察觉到酒气，并通过无线信号通知汽车“不要发动”，汽车会自动罢工，并能够“命令”司机的手机给其亲友发短信，通知他们司机所在的位置，请亲友们来处理。</p>
-<h1 id="2、云计算"><a href="#2、云计算" class="headerlink" title="2、云计算"></a>2、云计算</h1><h2 id="（1）掌握云计算的概念"><a href="#（1）掌握云计算的概念" class="headerlink" title="（1）掌握云计算的概念"></a>（1）掌握云计算的概念</h2><p>云计算是一种基于互联网的计算方式，通过这种方式，共享的软硬件资源和信息可以按需提供给计算机和其他设备。云其实是网络、互联网的一种比喻说法。云计算的核心思想，是将大量用网络连接的计算资源统一管理和调度，构成一个计算资源池向用户按需服务。提供资源的网络称为云。狭义云计算指IT基础设施的交付和使用模式，指通过网络以按需、易扩展的方式获得所需资源；广义云计算指服务的交付和使用模式，指通过网络以按需、易扩展的方式获得所需服务。这种服务可以是IT和软件、互联网相关，也可是其他服务。</p>
-<p>通俗一点来说，提供资源的网络称为云。云中的资源在使用者看来是可以无限扩展的，并且可以随时获取，按需使用，随时扩展，按使用付费。这种特性经常被称为像水电一样使用IT基础设施。这就好比是从古老的单台发电机模式转向了电厂集中供电的模式。它意味着计算能力也可以作为一种商品进行流通，就像煤气、水电一样，取用方便，费用低廉。最大的不同在于，它是通过互联网进行传输的。</p>
-<h2 id="（2）熟悉云计算的架构及关键技术"><a href="#（2）熟悉云计算的架构及关键技术" class="headerlink" title="（2）熟悉云计算的架构及关键技术"></a>（2）熟悉云计算的架构及关键技术</h2><p>云计算是一项交叉学科技术，所以它有许多的特点：<br>（1）计算资源集成提高设备计算能力。云计算把大量计算资源集中到一个公共资源池中，通过租用的方式共享计算资源。虽然单个用户在云计算平台获得服务水平受到网络带宽等各因素影响，未必获得优于本地主机所提供的服务，但是从整个社会资源的角度而言，整体的资源调控降低了部分地区峰值荷载，提高了部分荒废的主机的运行率，从而提高了资源利用率。</p>
-<p>（2）分布式数据中心保证系统容灾能力。分布式数据中心可将云端的用户信息备份到地理上相互隔离的数据库主机中，甚至用户自己也无法判断信息的确切备份地点。该特点不仅仅提供了数据恢复的依据，也使得网络病毒和网络黑客的攻击失去目的性而变成徒劳，大大提高系统的安全性和容灾能力。</p>
-<p>（3）软硬件相互隔离减少设备依赖性。虚拟化层将云平台上方的应用软件和下方的基础设备隔离开来。技术设备的维护者无法看到设备中运行的具体应用。同时对软件层的用户而言基础设备层是透明的，用户只能看到虚拟化层中虚拟出来的各类设备。这种架构减少了设备依赖性，也为动态的资源配置提供可能。</p>
-<p>（4）平台模块化设计体现高可扩展性。目前主流的云计算平台均根据SPI架构在各层集成功能各异的软硬件设备和中间件软件。大量中间件软件和设备提供针对该平台的通用接口，允许用户添加本层的扩展设备。部分云与云之间提供对应接口，允许用户在不同云之间进行数据迁移。类似功能更大程度上满足了用户需求，集成了计算资源，是未来云计算的发展方向之一。</p>
-<p>（5）虚拟资源池为用户提供弹性服务。云平台管理软件将整合的计算资源根据应用访问的具体情况进行动态调整，包括增大或减少资源的要求。因此云计算对于在非恒定需求的应用，如对需求波动很大、阶段性需求等，具有非常好的应用效果。在云计算环境中，既可以对规律性需求通过事先预测事先分配，也可根据事先设定的规则进行实时公台调整。弹性的云服务可帮助用户在任意时间得到满足需求的计算资源。</p>
-<p>（6）按需付费降低使用成本。作为云计算的代表按需提供服务、按需付费是目前各类云计算服务中不可或缺的一部分。对用户而言，云计算不但省去了基础设备的购置运维费用，而且能根据企业成长的需要不断扩展订购的服务，不断更换更加适合的服务，提高了资金的利用率。</p>
-<h2 id="（3）了解云计算服务的类型"><a href="#（3）了解云计算服务的类型" class="headerlink" title="（3）了解云计算服务的类型"></a>（3）了解云计算服务的类型</h2><p>1．软件即服务<br>软件即服务（Software-as-a-Service，SaaS）是基于互联网提供软件服务的软件应用模式。作为一种在21世纪开始兴起的创新的软件应用模式，SaaS是软件科技发展的最新趋势。SaaS提供商为企业搭建信息化所需要的所有网络基础设施及软件、硬件运作平台，并负责所有前期的实施、后期的维护等一系列服务，企业无须购买软硬件、建设机房、招聘IT人员，即可通过互联网使用信息系统。就像打开自来水龙头就能用水一样，企业根据实际需要，从SaaS提供商租赁软件服务。</p>
-<p>2．平台即服务<br>平台即服务（Platform-as-a-Service，PaaS）是把服务器平台或者开发环境作为一种服务提供的商业模式，如将软件研发的平台作为一种服务，以SaaS的模式提交给用户。因此，PaaS也是SaaS模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度。早在2007年，国内外SaaS厂商就先后推出了自己的PaaS平台。<br>PaaS之所以能够推进SaaS的发展，主要在于它能够提供企业进行定制化研发的中间件平台，同时涵盖数据库和应用服务器等。PaaS可以提高在Web平台上利用的资源数量。</p>
-<p>3．基础设施即服务<br>基础设施即服务（Infrastructure as a Service，IaaS）是指消费者通过Internet可以从完善的计算机基础设施获得服务，如《纽约时报》就使用成百上千台Amazon EC2实例在36小时内处理TB级的文档数据。如果没有EC2，《纽约时报》处理这些数据将要花费数天或者数月的时间。</p>
-<h2 id="（4）了解发展云计算的主要任务"><a href="#（4）了解发展云计算的主要任务" class="headerlink" title="（4）了解发展云计算的主要任务"></a>（4）了解发展云计算的主要任务</h2><p>1．云安全<br>云安全（Cloud Security）是一个从“云计算”演变而来的新名词。云安全的策略构想是：使用者越多，每个使用者就越安全，因为如此庞大的用户群，足以覆盖互联网的每个角落，只要某个新木马病毒出现，就会立刻被截获。<br>“云安全”通过网状的大量客户端对网络中软件行为的异常监测，获取互联网中木马、恶意程序的最新信息，推送到Server端进行自动分析和处理，再把病毒和木马的解决方案分发到每一个客户端。</p>
-<p>2．云存储<br>应用云存储是在云计算概念上延伸和发展出来的一个新的概念，是指通过集群应用、网格技术或分布式文件系统等功能，将网络中大量各种不同类型的存储设备通过应用软件集合起来协同工作，共同对外提供数据存储和业务访问功能的一个系统。当云计算系统运算和处理的核心是大量数据的存储和管理时，云计算系统中就需要配置大量的存储设备，那么云计算系统就转变成为一个云存储系统，所以云存储是一个以数据存储和管理为核心的云计算系统。</p>
-<p>3．云呼叫<br>应用云呼叫中心是基于云计算技术而搭建的呼叫中心系统，企业无须购买任何软、硬件系统，只需具备人员、场地等基本条件，就可以快速拥有属于自己的呼叫中心，软硬件平台、通信资源、日常维护与服务由服务器商提供。具有建设周期短、投入少、风险低、部署灵活、系统容量伸缩性强、运营维护成本低等众多特点；无论是电话营销中心还是客户服务中心，企业只需按需租用服务，便可建立一套功能全面、稳定、可靠、座席可分布全国各地，全国呼叫接入的呼叫中心系统。</p>
-<p>4．云会议<br>应用云会议是基于云计算技术的一种高效、便捷、低成本的会议形式。它是视频会议与云计算的完美结合，带来了最便捷的远程会议体验。使用者只需通过互联网界面，进行简单易用的操作，便可快速高效地与全球各地团队及客户同步分享语音、数据文件及视频，而会议中数据的传输、处理等复杂技术由云会议服务商帮助使用者进行操作。目前国内云会议大多以SaaS模式为主体，其服务内容包括电话、网络、视频等形式。</p>
-<h1 id="3、移动互联网"><a href="#3、移动互联网" class="headerlink" title="3、移动互联网"></a>3、移动互联网</h1><h2 id="（1）掌握移动互联网的概念"><a href="#（1）掌握移动互联网的概念" class="headerlink" title="（1）掌握移动互联网的概念"></a>（1）掌握移动互联网的概念</h2><p>移动互联网是PC互联网发展的必然产物，将移动通信和互联网二者结合起来，成为一体。它是互联网的技术、平台、商业模式和应用与移动通信技术结合并实践的活动的总称。<br>移动互联网是移动和互联网融合的产物，继承了移动随时、随地、随身和互联网开放、分享、互动的优势，是一个全国性的、以宽带IP为技术核心的，可同时提供话音、传真、数据、图像、多媒体等高品质电信服务的新一代开放的电信基础网络，由运营商提供无线接入，互联网企业提供各种成熟的应用。</p>
-<h2 id="（2）熟悉移动互联网的特点"><a href="#（2）熟悉移动互联网的特点" class="headerlink" title="（2）熟悉移动互联网的特点"></a>（2）熟悉移动互联网的特点</h2><p>移动互联网是在传统互联网基础上发展起来的，因此二者具有很多共性，但由于移动通信技术和移动终端发展不同，它又具备许多传统互联网没有的新特性。</p>
-<p>交互性<br>用户可以随身携带和随时使用移动终端，在移动状态下接人和使用移动互联网应用服务。<br>便携性<br>相对于PC，由于移动终端小巧轻便、可随身携带两个特点，人们可以装入随身携带的书包和手袋中，并使得用户可以在任意场合接人网络。<br>隐私性<br>移动终端设备的隐私性远高于PC的要求。由于移动性和便携性的特点，移动互联网的信息保护程度较高。<br>定位性<br>移动互联网有别于传统互联网的典型应用是位置服务应用。它具有以下几个服务：位置签到、位置分享及基于位置的社交应用；基于位置围栏的用户监控及消息通知服务；生活导航及优惠券集成服务；基于位置的娱乐和电子商务应用；基于位置的用户换机上下文感知及信息服务。<br>娱乐性<br>移动互联网上的丰富应用，如图片分享、视频播放、音乐欣赏、电子邮件等，为用户的工作、生活带来更多的便利和乐趣。<br>局限性<br>移动互联网应用服务在便捷的同时，也受到了来自网络能力和终端硬件能力的限制。在网络能力方面，受到无线网络传输环境、技术能力等因素限制；在终端硬件能力方面，受到终端大小、处理能力、电池容量等的限制。移动互联网各个部分相互联系，相互作用并制约发展，任何一部分的滞后都会延缓移动互联网发展的步伐。<br>强关联性<br>由于移动互联网业务受到了网络及终端能力的限制，因此，其业务内容和形式也需要匹配特定的网络技术规格和终端类型，具有强关联性。移动互联网通信技术与移动应用平台的发展有着紧密联系，没有足够的带宽就会影响在线视频，视频电话，移动网游等应用的扩展。同时，根据移动终端设备的特点，也有其与之对应的移动互联网应用服务，这是区别于传统互联网而存在的。<br>身份统一性<br>这种身份统一是指移动互联用户自然身份、社会身份、交易身份、支付身份通过移动互联网平台得以统一。信息本来是分散到各处的，互联网逐渐发展、基础平台逐渐完善之后，各处的身份信息将得到统一。例如，在网银里绑定手机号和银行卡，支付的时候验证了手机号就直接从银行卡扣钱。</p>
-<h2 id="（3）了解移动互联网技术的应用"><a href="#（3）了解移动互联网技术的应用" class="headerlink" title="（3）了解移动互联网技术的应用"></a>（3）了解移动互联网技术的应用</h2><p>通信业<br>通信行业为移动互联网的繁荣提供了必要的硬件支撑，传统的通信业，”开路收费”模式，如寄信、通话等都是为你“开路”然后收钱。移动互联网的出现却完全无视这些规则，要求人与人更紧密地连接，都可以以最低成本随时随地联系得到。<br>医疗行业<br>受移动互联网的影响，目前的医疗行业已经开始做出改变，比如在线就医、在线预约、远程医疗合作在线支付等方面。<br>移动电子商务<br>移动电子商务可以为用户随时随地提供所需的服务、应用、信息和娱乐，利用手机终端方便便捷地选择及购买商品和服务。多种支付方式，使用方便。移动支付平台不仅支持各种银行卡通过网上进行支付，还支持手机、电话等多种终端操作，符合网上消费者追求个性化、多样化的需求。<br>AR<br>增强现实(AR)，也被称之为混合现实。它通过电脑技术，将虚拟的信息应用到真实世界，真实的环境和虚拟的物体实时地叠加到了同一个画面或空间同时存在。增强现实提供了在一般情况下，不同于人类可以感知的信息。它不但展现了真实世界的信息，而且将虚拟的信息同时显示出来，两种信息相互补充叠加。<br>移动电子政务<br>在信息技术快速变革的情况下，国家的政府单位也紧跟时代发展步伐，开始广泛的使用移动电子政务。</p>
-<h1 id="4、人工智能"><a href="#4、人工智能" class="headerlink" title="4、人工智能"></a>4、人工智能</h1><h2 id="（1）掌握人工智能的概念"><a href="#（1）掌握人工智能的概念" class="headerlink" title="（1）掌握人工智能的概念"></a>（1）掌握人工智能的概念</h2><p>人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。<br>人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。人工智能从诞生以来，理论和技术日益成熟，应用领域也不断扩大，可以设想，未来人工智能带来的科技产品，将会是人类智慧的“容器”。人工智能可以对人的意识、思维的信息过程的模拟。人工智能不是人的智能，但能像人那样思考、也可能超过人的智能。</p>
-<h2 id="（2）熟悉人工智能研究范畴"><a href="#（2）熟悉人工智能研究范畴" class="headerlink" title="（2）熟悉人工智能研究范畴"></a>（2）熟悉人工智能研究范畴</h2><p>人工智能是一门极富挑战性的科学，从事这项工作的人必须懂得计算机知识，心理学和哲学。人工智能是包括十分广泛的科学，它由不同的领域组成，如机器学习，计算机视觉等等，总的说来，人工智能研究的一个主要目标是使机器能够胜任一些通常需要人类智能才能完成的复杂工作。但不同的时代、不同的人对这种“复杂工作”的理解是不同的。</p>
-<p>具体包括：自然语言处理，知识表现，智能搜索，推理，规划，机器学习，知识获取，组合调度问题，感知问题，模式识别，逻辑程序设计软计算，不精确和不确定的管理，人工生命，神经网络，复杂系统，遗传算法</p>
-<h2 id="（3）了解人工智能实际应用"><a href="#（3）了解人工智能实际应用" class="headerlink" title="（3）了解人工智能实际应用"></a>（3）了解人工智能实际应用</h2><p>机器视觉，指纹识别，人脸识别，视网膜识别，虹膜识别，掌纹识别，专家系统，自动规划，智能搜索，定理证明，博弈，自动程序设计，智能控制，机器人学，语言和图像理解，遗传编程等。</p>
-<h1 id="5、区块链"><a href="#5、区块链" class="headerlink" title="5、区块链"></a>5、区块链</h1><h2 id="（1）掌握区块链的概念"><a href="#（1）掌握区块链的概念" class="headerlink" title="（1）掌握区块链的概念"></a>（1）掌握区块链的概念</h2><p>区块链是一个信息技术领域的术语。从本质上讲，它是一个共享数据库，存储于其中的数据或信息，具有“不可伪造”“全程留痕”“可以追溯”“公开透明”“集体维护”等特征。基于这些特征，区块链技术奠定了坚实的“信任”基础，创造了可靠的“合作”机制，具有广阔的运用前景。</p>
-<h2 id="（2）熟悉区块链的系统架构"><a href="#（2）熟悉区块链的系统架构" class="headerlink" title="（2）熟悉区块链的系统架构"></a>（2）熟悉区块链的系统架构</h2><p><img src="/images/bigdata/2-11.jpeg"><br>一般说来，区块链系统由数据层、网络层、共识层、激励层、合约层和应用层组成。<br>其中，数据层封装了底层数据区块以及相关的数据加密和时间戳等基础数据和基本算法；<br>网络层则包括分布式组网机制、数据传播机制和数据验证机制等；<br>共识层主要封装网络节点的各类共识算法；<br>激励层将经济因素集成到区块链技术体系中来，主要包括经济激励的发行机制和分配机制等；<br>合约层主要封装各类脚本、算法和智能合约，是区块链可编程特性的基础；<br>应用层则封装了区块链的各种应用场景和案例。<br>该模型中，基于时间戳的链式区块结构、分布式节点的共识机制、基于共识算力的经济激励和灵活可编程的智能合约是区块链技术最具代表性的创新点。</p>
-<h2 id="（3）了解区块链的分类"><a href="#（3）了解区块链的分类" class="headerlink" title="（3）了解区块链的分类"></a>（3）了解区块链的分类</h2><p>公有区块链<br>公有区块链（Public Block Chains)是指：世界上任何个体或者团体都可以发送交易，且交易能够获得该区块链的有效确认，任何人都可以参与其共识过程。公有区块链是最早的区块链，也是应用最广泛的区块链，各大bitcoins系列的虚拟数字货币均基于公有区块链，世界上有且仅有一条该币种对应的区块链。<br>联合（行业）区块链<br>行业区块链（Consortium Block Chains)：由某个群体内部指定多个预选的节点为记账人，每个块的生成由所有的预选节点共同决定（预选节点参与共识过程），其他接入节点可以参与交易，但不过问记账过程(本质上还是托管记账，只是变成分布式记账，预选节点的多少，如何决定每个块的记账者成为该区块链的主要风险点），其他任何人可以通过该区块链开放的API进行限定查询。<br>私有区块链<br>私有区块链（Private Block Chains)：仅仅使用区块链的总账技术进行记账，可以是一个公司，也可以是个人，独享该区块链的写入权限，本链与其他的分布式存储方案没有太大区别。传统金融都是想实验尝试私有区块链，而公链的应用例如bitcoin已经工业化，私链的应用产品还在摸索当中。</p>
-<h2 id="（补充）核心技术"><a href="#（补充）核心技术" class="headerlink" title="（补充）核心技术"></a>（补充）核心技术</h2><p>分布式账本<br>分布式账本指的是交易记账由分布在不同地方的多个节点共同完成，而且每一个节点记录的是完整的账目，因此它们都可以参与监督交易合法性，同时也可以共同为其作证。<br>非对称加密<br>存储在区块链上的交易信息是公开的，但是账户身份信息是高度加密的，只有在数据拥有者授权的情况下才能访问到，从而保证了数据的安全和个人的隐私。<br>共识机制<br>共识机制就是所有记账节点之间怎么达成共识，去认定一个记录的有效性，这既是认定的手段，也是防止篡改的手段。区块链提出了四种不同的共识机制，适用于不同的应用场景，在效率和安全性之间取得平衡。<br>智能合约<br>智能合约是基于这些可信的不可篡改的数据，可以自动化的执行一些预先定义好的规则和条款。</p>
-<h2 id="（4）了解区块链的应用"><a href="#（4）了解区块链的应用" class="headerlink" title="（4）了解区块链的应用"></a>（4）了解区块链的应用</h2><p>金融领域<br>区块链在国际汇兑、信用证、股权登记和证券交易所等金融领域有着潜在的巨大应用价值。将区块链技术应用在金融行业中，能够省去第三方中介环节，实现点对点的直接对接，从而在大大降低成本的同时，快速完成交易支付。<br>物联网和物流领域<br>区块链在物联网和物流领域也可以天然结合。通过区块链可以降低物流成本，追溯物品的生产和运送过程，并且提高供应链管理的效率。该领域被认为是区块链一个很有前景的应用方向。<br>公共服务领域<br>区块链在公共管理、能源、交通等领域都与民众的生产生活息息相关，但是这些领域的中心化特质也带来了一些问题，可以用区块链来改造。区块链提供的去中心化的完全分布式DNS服务通过网络中各个节点之间的点对点数据传输服务就能实现域名的查询和解析，可用于确保某个重要的基础设施的操作系统和固件没有被篡改，可以监控软件的状态和完整性，发现不良的篡改，并确保使用了物联网技术的系统所传输的数据没用经过篡改。<br>数字版权领域<br>通过区块链技术，可以对作品进行鉴权，证明文字、视频、音频等作品的存在，保证权属的真实、唯一性。作品在区块链上被确权后，后续交易都会进行实时记录，实现数字版权全生命周期管理，也可作为司法取证中的技术性保障。例如，美国纽约一家创业公司Mine Labs开发了一个基于区块链的元数据协议，这个名为Mediachain的系统利用IPFS文件系统，实现数字作品版权保护，主要是面向数字图片的版权保护应用。<br>保险领域<br>在保险理赔方面，保险机构负责资金归集、投资、理赔，往往管理和运营成本较高。通过智能合约的应用，既无需投保人申请，也无需保险公司批准，只要触发理赔条件，实现保单自动理赔。一个典型的应用案例就是LenderBot, 是 2016 年由区块链企业 Stratumn、德勤与支付服务商 Lemonway 合作推出，它允许人们通过 Facebook Messenger 的聊天功能，注册定制化的微保险产品， 为个人之间交换的高价值物品进行投保，而区块链在贷款合同中代替了第三方角色。<br>公益领域<br>区块链上存储的数据，高可靠且不可篡改，天然适合用在社会公益场景。公益流程中的相关信息，如捐赠项目、募集明细、资金流向、受助人反馈等，均可以存放于区块链上，并且有条件地进行透明公开公示，方便社会监督。</p>
-<h1 id="6、量子技术"><a href="#6、量子技术" class="headerlink" title="6、量子技术"></a>6、量子技术</h1><h2 id="（1）掌握量子技术的概念"><a href="#（1）掌握量子技术的概念" class="headerlink" title="（1）掌握量子技术的概念"></a>（1）掌握量子技术的概念</h2><p>量子信息是量子物理与信息技术相结合发展起来的新学科,主要包括量子通信和量子计算2个领域。量子通信主要研究量子密码、量子隐形传态、远距离量子通信的技术等等;量子计算主要研究量子计算机和适合于量子计算机的量子算法。</p>
-<h2 id="（2）熟悉量子技术的特点"><a href="#（2）熟悉量子技术的特点" class="headerlink" title="（2）熟悉量子技术的特点"></a>（2）熟悉量子技术的特点</h2><p>作为一种微观粒子，量子具有许多特别的基本特性，如量子力学三大基本原理：<br>量子测不准<br>也称为不确定性原理，即观察者不可能同时知道一个粒子的位置和它的速度，粒子位置的总是以一定的概率存在某一个不同的地方，而对未知状态系统的每一次测量都必将改变系统原来的状态。也就是说，测量后的微粒相比于测量之前，必然会产生变化。<br>量子不可克隆<br>量子不可克隆原理，即一个未知的量子态不能被完全地克隆。在量子力学中，不存在这样一个物理过程：实现对一个未知量子态的精确复制，使得每个复制态与初始量子态完全相同。<br>量子不可区分<br>量子不可区分原理，即不可能同时精确测量两个非正交量子态。事实上，由于非正交量子态具有不可区分性，无论采用任何测量方法，测量结果的都会有错误。</p>
-<p>除此之外，还包括以下基本特性：<br>量子态叠加性(superposition)<br>量子状态可以叠加，因此量子信息也是可以叠加的。这是量子计算中的可以实现并行性的重要基础，即可以同时输入和操作个量子比特的叠加态。<br>量子态纠缠性(entanglement)<br>两个及以上的量子在特定的(温度、磁场)环境下可以处于较稳定的量子纠缠状态，基于这种纠缠，某个粒子的作用将会瞬时地影响另一个粒子。爱因斯坦称其为: “幽灵般的超距作用”。<br>量子态相干性(interference)<br>量子力学中微观粒子间的相互叠加作用能产生类似经典力学中光的干涉现象。</p>
-<h2 id="（3）了解量子技术的应用"><a href="#（3）了解量子技术的应用" class="headerlink" title="（3）了解量子技术的应用"></a>（3）了解量子技术的应用</h2><p>量子技术应用包括量子传感与计量、量子通信、量子模拟及量子计算等方面，它将在传感与测量、通信、仿真、高性能计算等领域拥有广阔的应用前景。</p>
+    <title>数据仓库</title>
+    <url>/2021/10/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%85%AD%E3%80%81%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/</url>
+    <content><![CDATA[<h1 id="1、了解数据挖掘的定义、功能、常用方法。"><a href="#1、了解数据挖掘的定义、功能、常用方法。" class="headerlink" title="1、了解数据挖掘的定义、功能、常用方法。"></a>1、了解数据挖掘的定义、功能、常用方法。</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>数据挖掘（Data Mining）技术是人们长期对数据库技术进行研究和开发的结果。起初各种商业数据是存储在计算机的数据库中的，然后发展到可对数据库进行査询和访问，进而发展到对数据库的即时遍历。数据挖掘使数据库技术进入了一个更高级的阶段，它不仅能对过去的数据进行查询和遍历，并且能够找出过去数据之间的潜在联系，从而促进信息的传递。现在数据挖掘技术在商业应用中已经可以马上投入使用，因为对这种技术进行支持的三种基础技术已经发展成熟，它们是海量数据搜集、强大的多处理器计算机和数据挖掘算法。</p>
+<p>从技术角度来看，数据挖掘就是从大量的、不完全的、有噪声的、模糊的、随机的实际应用数据中，提取隐含在其中的、人们事先不知道的、但又是潜在有用的信息和知识的过程。这个定义包括好几层含义：数据源必须是真实的、大量的、含噪声的；发现的是用户感兴趣的知识；发现的知识要可接受、可理解、可运用；并不要求发现放之四海而皆准的知识，仅支持特定的发现问题。</p>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>数据挖掘通过预测未来趋势及行为，做出前摄的、基于知识的决策。数据挖掘的目标是从数据库中发现隐含的、有意义的知识，主要有以下五类功能。</p>
+<p>1.自动预测趋势和行为<br>数据挖掘自动在大型数据库中寻找预测性信息，以往需要进行大量手工分析的问题如今可以迅速直接由数据本身得出结论。一个典型的例子是市场预测问题，数据挖掘使用过去有关促销的数据来寻找未来投资中回报最大的用户，其他可预测的问题包括预报破产及认定对指定事件最可能做出反应的群体。</p>
+<p>2.关联分析<br>数据关联是数据库中存在的一类重要的可被发现的知识。若两个或多个变量的取值之间存在某种规律性，就称为关联。关联可分为简单关联、时序关联、因果关联。关联分析的目的是找出数据库中隐藏的关联网。有时并不知道数据库中数据的关联函数，即使知道也是不确定的，因此关联分析生成的规则带有可信度。</p>
+<p>3.聚类<br>数据库中的记录可被划分为一系列有意义的子集，即聚类。聚类增强了人们对客观现实的认识，是概念描述和偏差分析的先决条件。聚类技术主要包括传统的模式识别方法和数学分类学。20 世纪 80 年代初，Michalski 提出了概念聚类技术及其要点，即在划分对象时不仅要考虑对象之间的距离，还要求划分出的类具有某种内涵描述，从而避免了传统技术的某些片面性。</p>
+<p>4.概念描述<br>概念描述就是对某类对象的内涵进行描述，并概括这类对象的有关特征。概念描述分为特征性描述和区别性描述，前者描述某类对象的共同特征，后者描述不同类对象之间的区别。生成一个类的特征性描述只涉及该类对象中所有对象的共性。生成区别性描述的方法很多，如决策树方法、遗传算法等。</p>
+<p>5.偏差检测<br>数据库中的数据常有一些异常记录，从数据库中检测这些偏差很有意义。偏差包括很多潜在的知识，如分类中的反常实例、不满足规则的特例、观测结果与模型预测值的偏差、量值随时间的变化等。偏差检测的基本方法是，寻找观测结果与参照值之间有意义的差别。</p>
+<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p>常用的数据挖掘技术包括关联分析、序列分析、分类、预测、聚类分析及时间序列分析等</p>
+<p>1.关联分析</p>
+<p>关联分析主要用于发现不同事件之间的关联性，即一个事件发生的同时，另一个事件也经常发生。关联分析的重点在于快速发现那些有实用价值的关联发生的事件。其主要依据是事件发生的概率和条件概率应该符合一定的统计意义。</p>
+<p>对于结构化的数据，以客户的购买习惯数据为例，利用关联分析，可以发现客户的关联购买需要。例如，一个开设储蓄账户的客户很可能同时进行债券交易和股票交易，购买纸尿裤的男顾客经常同时购买啤酒等。利用这种知识可以采取积极的营销策略，扩展客户购买的产品范围，吸引更多的客户。通过调整商品的布局便于顾客买到经常同时购买的商品，或者通过降低一种商品的价格来促进另一种商品的销售等。</p>
+<p>对于非结构化的数据，以空间数据为例，利用关联分析，可以发现地理位置的关联性。例如，85%的靠近高速公路的大城镇与水相邻，或者发现通常与高尔夫球场相邻的对象等。</p>
+<p>2.序列分析</p>
+<p>序列分析技术主要用于发现一定时间间隔内接连发生的事件。这些事件构成一个序列，发现的序列应该具有普遍意义，其依据除了统计上的概率之外，还要加上时间的约束。</p>
+<p>3.分类分析</p>
+<p>分类分析通过分析具有类别的样本的特点，得到决定样本属于各种类别的规则或方法利用这些规则和方法对未知类别的样本分类时应该具有一定的准确度。其主要方法有基于统计学的贝叶斯方法、神经网络方法、决策树方法及支持向量机（support vector machines）等。</p>
+<p>利用分类技术，可以根据顾客的消费水平和基本特征对顾客进行分类，找出对商家有较大利益贡献的重要客户的特征，通过对其进行个性化服务，提高他们的忠诚度。</p>
+<p>利用分类技术，可以将大量的半结构化的文本数据，如 WEB 页面、电子邮件等进行分类。可以将图片进行分类，例如，根据已有图片的特点和类别，可以判定一幅图片属于何种类型的规则。对于空间数据，也可以进行分类分析，例如，可以根据房屋的地理位置决定房屋的档次。</p>
+<p>4.聚类分析</p>
+<p>聚类分析是根据物以类聚的原理，将本身没有类别的样本聚集成不同的组，并且对每个这样的组进行描述的过程。其主要依据是聚到同一个组中的样本应该彼此相似，而属于不同组的样本应该足够不相似。</p>
+<p>仍以客户关系管理为例，利用聚类技术，根据客户的个人特征及消费数据，可以将客户群体进行细分。例如，可以得到这样的一个消费群体：女性占 91%，全部无子女、年龄在 31 岁到 40 岁占 70%，高消费级别的占 64%，买过针织品的占 91%，买过厨房用品的占 89%，买过园艺用品的占 79%。针对不同的客户群，可以实施不同的营销和服务方式，从而提高客户的满意度。</p>
+<p>对于空间数据，根据地理位置及障碍物的存在情况可以自动进行区域划分。例如，根据分布在不同地理位置的 ATM 机的情况将居民进行区域划分，根据这一信息，可以有效地进行 ATM 机的设置规划，避免浪费，同时也避免失掉每一个商机。</p>
+<p>对于文本数据，利用聚类技术可以根据文档的内容自动划分类别，从而便于文本的检索。</p>
+<p>5.预测</p>
+<p>预测与分类类似，但预测是根据样本的知特征估算某个连续类型的变量的取值的过程，而分类则只是用于判别样本所属的离散类别而已。预测常用的技术是回归分析。</p>
+<p>6.时间序列</p>
+<p>分析时间序列分析的是随时间而变化的事件序列，目的是预测未来发展趋势，或者寻找相似发展模式或者是发现周期性发展规律。</p>
+<h1 id="2、了解数据仓库的产生与发展，掌握数据仓库的定义。"><a href="#2、了解数据仓库的产生与发展，掌握数据仓库的定义。" class="headerlink" title="2、了解数据仓库的产生与发展，掌握数据仓库的定义。"></a>2、了解数据仓库的产生与发展，掌握数据仓库的定义。</h1><p>传统的操作型数据库主要是面向业务的，所执行的操作基本上也是联机事务处理但随着企业规模的增长，历史积累的数据越来越多，如何利用历史数据来为未来决策服务，就显得越来越重要了，而数据仓库就是其中的一种技术。</p>
+<p>著名的数据仓库专家 W. H. Inmon 在《Building the Data Warehouse》一书中将数据仓库定义为：数据仓库（Data Warehouse）是一个面向主题的、集成的、相对稳定的、且随时间变化的数据集合，用于支持管理决策。</p>
+<p>1.面向主题的操作型数据库的数据组织面向事务处理任务（面向应用），各个业务系统之间各自分离，而数据仓库中的数据是按照一定的主题域进行组织的。主题是一个抽象的概念，是指用户使用数据仓库进行决策时所关心的重点方面，一个主题通常与多个操作型信息系统相关。例如，一个保险公司所进行的事务处理（应用问题）可能包括汽车保险、人寿保险、健康保险和意外保险等，而公司的主要主题范围可能是顾客、保险单、保险费和索赔等。</p>
+<p>2.集成的在数据仓库的所有特性中，这是最重要的。面向事务处理的操作型数据库通常与某些特定的应用相关，数据库之间相互独立，并且往往是异构的。而数据仓库中的数据是在对原有分散的数据库数据抽取、清理的基础上经过系统加工、汇总和整理得到的，必须消除源数据中的不一致性，以保证数据仓库内的信息是关于整个企业的一致的全局信息。</p>
+<p>3.相对稳定的操作型数据库中的数据通常实时更新，数据根据需要及时发生变化。数据仓库的数据主要供企业决策分析之用，所涉及的数据操作主要是数据査询，一旦某个数据进入数据仓库以后，一般情况下将被长期保留，也就是数据仓库中一般有大量的询操作但修改和删除操作很少，通常只需要定期地加载、刷新。</p>
+<p>4.随时间变化的操作型数据库主要关心当前某一个时间段内的数据，而数据仓库中的数据通常包含历史信息，系统记录了企业从过去某一时点（如开始应用数据仓库的时点）到目前的各个阶段的信息，通过这些信息，可以对企业的发展历程和未来趋势做出定量分析和预测。数据仓库反映历史变化的属性主要表现在</p>
+<p> (1) 数据仓库中的数据时间期限要远远长于传统操作型数据系统中的数据时间期限，传统操作型数据系统中的数据时间期限可能为数十天或数个月，数据仓库中的数据时间期限往往为数年甚至几十年；</p>
+<p> (2) 传统操作型数据系统中的数据含有“当前值”的数据，这些数据在访问时是有效的，当然数据的当前值也能被更新，但数据仓库中的数据仅仅是一系列某一时刻（可能是传统操作型数据系统）生成的复杂的快照；</p>
+<p> (3) 传统操作型数据系统中可能包含也可能不包含时间元素，如年、月、日、时、分、秒等，而数据仓库中一定会包含时间元素。</p>
+<p>数据仓库虽然是从传统数据库系统发展而来，但是两者还是存在着诸多差异，如：从数据存储的内容看，数据库只存放当前值，而数据仓库则存放历史值；数据库数据的目标是面向业务操作人员的，为业务处理人员提供数据处理的支持，而数据仓库则是面向中高层管理人员的，为其提供决策支持等。</p>
+<p><img src="/images/bigdata/3-1.png"> </p>
+<h1 id="3、了解数据仓库与数据挖掘的联系与区别。"><a href="#3、了解数据仓库与数据挖掘的联系与区别。" class="headerlink" title="3、了解数据仓库与数据挖掘的联系与区别。"></a>3、了解数据仓库与数据挖掘的联系与区别。</h1><p>数据挖掘（Data Mining）技术是人们长期对数据库技术进行研究和开发的结果。起初各种商业数据是存储在计算机的数据库中的，然后发展到可对数据库进行查询和访问，进而发展到对数据库的即时遍历。数据挖掘使数据库技术进入了一个更高级的阶段，它不仅能对过去的数据进行查询和遍历，并且能够找出过去数据之间的潜在联系，从而促进信息的传递。现在数据挖掘技术在商业应用中已经可以马上投入使用，因为对这种技术进行支持的三种基础技术已经发展成熟，它们是海量数据搜集、强大的多处理器计算机和数据挖掘算法。</p>
+<p>从技术角度来看，数据挖掘就是从大量的、不完全的、有噪声的、模糊的、随机的实际应用数据中，提取隐含在其中的、人们事先不知道的、但又是潜在有用的信息和知识的过程。这个定义包括好几层含义：数据源必须是真实的、大量的、含噪声的；发现的是用户感兴趣的知识；发现的知识要可接受、可理解、可运用；并不要求发现放之四海而皆准的知识，仅支持特定的发现问题。</p>
+<h1 id="4、了解常用数据挖掘工具。"><a href="#4、了解常用数据挖掘工具。" class="headerlink" title="4、了解常用数据挖掘工具。"></a>4、了解常用数据挖掘工具。</h1><p>1.R<br>2.Oracle Data Mining<br>3.Tableau<br>4.Scrapy<br>5.Weka<br>6.八爪鱼采集器<br>7.RapidMiner<br>8.KNIME<br>9.Orange<br>10.IBM SPSS Modeler<br>11.Pentaho<br>12.NLTK</p>
+<h1 id="5、了解数据仓库的体系结构，掌握元数据、粒度、分割的概念，了解数据仓库中的数据组织形式。"><a href="#5、了解数据仓库的体系结构，掌握元数据、粒度、分割的概念，了解数据仓库中的数据组织形式。" class="headerlink" title="5、了解数据仓库的体系结构，掌握元数据、粒度、分割的概念，了解数据仓库中的数据组织形式。"></a>5、了解数据仓库的体系结构，掌握元数据、粒度、分割的概念，了解数据仓库中的数据组织形式。</h1><p>从数据仓库的概念结构看，一般来说，数据仓库系统要包含数据源、数据准备区、数据仓库数据库、数据集市/知识挖掘库及各种管理工具和应用工具。数据仓库建立之后，首先要从数据源中抽取相关的数据到数据准备区，在数据准备区中经过净化处理后再加载到数据仓库数据库，最后根据用户的需求将数据导入数据集市和知识挖掘库中当用户使用数据仓库时，可以利用包括 OLAP (On-line Analysis Processing，联机分析处理） 在内的多种数据仓库应用工具向数据集市/知识挖掘库或数据仓库进行决策査询分析或知识挖掘。数据仓库的创建、应用可以利用各种数据仓库管理工具辅助完成。</p>
+<h2 id="元数据"><a href="#元数据" class="headerlink" title="元数据"></a>元数据</h2><p>元数据（Metadata），又称中介数据、中继数据，为描述数据的数据（data about data），主要是描述数据属性（property）的信息，用来支持如指示存储位置、历史数据、资源查找、文件记录等功能。元数据算是一种电子式目录，为了达到编制目录的目的，必须在描述并收藏数据的内容或特色，进而达成协助数据检索的目的。</p>
+<h2 id="粒度"><a href="#粒度" class="headerlink" title="粒度"></a>粒度</h2><p>粒度是数据仓库的重要概念。粒度可以分为两种形式。<br>第一种粒度是对数据仓库中的数据的综合程度高低的一个度量，它既影响数据仓库中的数据量的多少，也影响数据仓库所能回答询问的种类。在数据仓库中，多维粒度是必不可少的。由于数据仓库的主要作用是DSS分析，因而绝大多数查询都基于一定程度的综合数据之上，只有极少数查询涉及细节。所以应该将大粒度数据存储在快速设备如磁盘上，小粒度数据存储在低速设备如磁带上。<br>第二种粒度是样本数据库.它根据给定的采样率从细节数据库中抽取出一个子集，这样样本数据库中的粒度就不是根据综合程度的不同来划分，而是由采样率的高低来划分，采样粒度不同的样本数据库可以具有相同的数据综合程度。</p>
+<h2 id="分割"><a href="#分割" class="headerlink" title="分割"></a>分割</h2><p>分割是数据仓库中的另一个重要概念，它的目的同样在于提高效率。它是将数据分散到各自的物理单元中去，以便能分别独立处理。有许多数据分割的标准可供参考，如日期、地域、业务领域等，也可以是其组合。一般而言，分割标准总应包括日期项，因为它十分自然而且分割均匀。</p>
+<h2 id="数据仓库中的数据组织形式"><a href="#数据仓库中的数据组织形式" class="headerlink" title="数据仓库中的数据组织形式"></a>数据仓库中的数据组织形式</h2><p>1.简单堆积：以逐个记录为基础堆积的数据。<br>2.轮转综合数据存储：比如每天的数据综合放到一个日槽中，七天后将七个日槽加到一起，放入周槽，月底将周槽相加放入月槽等。<br>3.简单直接文件：一般以较长的时间生成，是操作型数据间隔一定时间的快照。<br>4.连续文件：将一个或者多个简单直接文件生成一种连续文件。</p>
+<h1 id="6、了解数据仓库的数据模型，包括概念数据模型、逻辑数据模型、物理数据模型。"><a href="#6、了解数据仓库的数据模型，包括概念数据模型、逻辑数据模型、物理数据模型。" class="headerlink" title="6、了解数据仓库的数据模型，包括概念数据模型、逻辑数据模型、物理数据模型。"></a>6、了解数据仓库的数据模型，包括概念数据模型、逻辑数据模型、物理数据模型。</h1><p><img src="/images/bigdata/3-2.png"></p>
+<p>1．数据仓库的参考框架<br>数据仓库的参考框架由数据仓库基本功能层、数据仓库管理层和数据仓库环境支持层组成。</p>
+<p><img src="/images/bigdata/3-3.png"></p>
+<p>(1) 数据仓库基本功能层。数据仓库的基本功能层部分包含数据源、数据准备区、数据仓库结构、数据集市或知识挖掘库，以及存取和使用部分。本层的功能是从数据源抽取数据，对所抽取的数据进行筛选、清理，将处理过的数据导入或者说加载到数据仓库中，根据用户的需求设立数据集市，完成数据仓库的复杂査询、决策分析和知识的挖掘等。<br>(2) 数据仓库管理层。数据仓库的正常运行除了需要数据仓库功能层提供的基本功能外，还需要对这些基本功能进行管理与支持的结构框架。数据仓库管理层由数据仓库的数据管理和数据仓库的元数据管理组成。<br>数据仓库的数据管理层包含数据抽取、新数据需求与查询管理，数据加载、存储、刷新和更新系统，安全性与用户授权管理系统及数据归档、恢复及净化系统等四部分。<br>(3) 数据仓库的环境支持层。数据仓库的环境支持层由数据仓库数据传输层和数据仓库基础层组成。数据仓库中不同结构之间的数据传输需要数据仓库的传输层来完成。<br>数据仓库的传输层包含数据传输和传送网络、客户/服务器代理和中间件、复制系统及数据传输层的安全保障系统。</p>
+<p>2．数据仓库的架构大众观点的数据仓库的架构如图所示。<br><img src="/images/bigdata/3-4.png"><br>(1) 数据源。是数据仓库系统的基础，是整个系统的数据源泉。通常包括企业内部信息和外部信息。内部信息包括存放于 RDBMS（关系型 DBMS）中的各种业务处理数据和各类文档数据。外部信息包括各类法律法规、市场信息和竞争对手的信息等。<br>(2) 数据的存储与管理。是整个数据仓库系统的核心。数据仓库的真正关键是数据的存储和管理。数据仓库的组织管理方式决定了它有别于传统数据库，同时也决定了其对外部数据的表现形式。要决定采用什么产品和技术来建立数据仓库的核心，则需要从数据仓库的技术特点着手分析。针对现有各业务系统的数据，进行抽取、清理，并有效集成，按照主题进行组织。数据仓库按照数据的覆盖范围可以分为企业级数据仓库和部门级数据仓库（通常称为数据集市）。<br>(3) OLAP 服务器。对分析需要的数据进行有效集成，按多维模型予以组织，以便进行多角度、多层次的分析，并发现趋势。其具体实现可以分为：基于关系数据库的OLAP实现（ROLAP）、基于多维数据组织的OLAP实现（MOLAP） 和 基于混合数据组织的OLAP实现（HOLAP）。 ROLAP 基本数据和聚合数据均存放在 RDBMS 之中；MOLAP 基本数据和聚合数据均存放于多维数据库中；HOLAP 基本数据存放于 RDBMS 之中，聚合数据存放于多维数据库中。<br>(4) 前端工具。主要包括各种报表工具、査询工具、数据分析工具、数据挖掘工具及各种基于数据仓库或数据集市的应用开发工具。其中数据分析工具主要针对 OLAP 服务器，报表工具、数据挖掘工具主要针对数据仓库。</p>
+<h2 id="1-概念数据模型（CDM）（定义实体的概念以及实体之间的联系）"><a href="#1-概念数据模型（CDM）（定义实体的概念以及实体之间的联系）" class="headerlink" title="1.概念数据模型（CDM）（定义实体的概念以及实体之间的联系）"></a>1.概念数据模型（CDM）（定义实体的概念以及实体之间的联系）</h2><p>概念数据模型是现实世界到信息世界的第一层抽象，主要是在高水平和面向业务的角度对信息的一种描述，通常作为业务人员和技术人员之间沟通的桥梁。作为现实世界的概念化结构，这种数据模型使得数据库的设计人员在最初的数据库设计阶段将精力集中在数据之间的联系上，而不用同时关注数据的底层细节（如所用的计算机系统的特性以及数据库管理系统—DBMS的特性）。<br>概念数据模型主要的贡献在于分析数据之间的联系，它是用户对数据存储的一种高度抽象，反应的是用户的一种业务层面的综合信息需求。<br>在这个阶段一般会形成整个数据模型或者是软件系统中的实体的概念以及实体之间的联系，为构建逻辑数据模型奠定基础。下图中描述了现实世界和信息世界以及最终转换成计算机世界信息的转换流程。<br><img src="/images/bigdata/3-5.png"><br>设计概念数据模型的主要工具是E-R图，扩展的E-R图。</p>
+<h2 id="2-逻辑数据模型（LDM）（定义实体的属性）"><a href="#2-逻辑数据模型（LDM）（定义实体的属性）" class="headerlink" title="2.逻辑数据模型（LDM）（定义实体的属性）"></a>2.逻辑数据模型（LDM）（定义实体的属性）</h2><p>逻辑数据模型是对概念数据模型进一步具体化，在概念数据模型定义实体的基础上定义了各个实体的属性，是用户从数据库的角度能够看到的数据的模型，是所使用的数据库管理系统（Database Management System，DBMS）所支持的数据类型（网状数据模型、层次数据模型、关系数据模型）。这种数据模型架起了用户和系统之间的桥梁，既要面向用户，同时也考虑到了所用的DBMS所支持的特性。<br>逻辑数据模型反映了系统分析设计人员针对数据在特定的存储系统（如MySQL）的观点，是对概念数据模型的进一步细化和划分。逻辑数据模型是根据业务之间的规则产生的，是关于业务对象、业务对象数据以及业务对象彼此之间关系的蓝图。<br>逻辑数据模型的内容包括所有的实体、实体的属性、实体之间的关系以及每个实体的主键、实体的外键（用于维护数据完整性）。其主要目标是尽可能详细的描述数据，但是并不涉及这些数据的具体物理实现。逻辑数据模型不仅会最终影响数据库的设计方向，并最终会影响到数据库的性能（如主键设计、外键等都会最终影响数据库的查询性能）。<br>逻辑数据模型是开发物理数据库的完整文档，逻辑数据模型主要采用的是层次模型、网状模型、关系模型，其中最常用的是关系模型，对应的数据库称之为关系型数据库，如MySQL。</p>
+<h2 id="3-物理数据模型（PDM）（数据库设计）"><a href="#3-物理数据模型（PDM）（数据库设计）" class="headerlink" title="3.物理数据模型（PDM）（数据库设计）"></a>3.物理数据模型（PDM）（数据库设计）</h2><p>物理数据模型，又称为物理模型，是概念数据模型和逻辑数据模型在计算机中的具体表示。该模型描述了数据在物理存储介质上的具体组织结构，不但与具体的数据库管理系统相关，同时还与具体的操作系统以及硬件有关，但是很多工作都是由DBMS自动完成的，用户所要做的工作其实就是添加自己的索引等结构即可。<br>物理数据模型是在逻辑数据模型的基础上，综合考虑各种存储条件的限制，进行数据库的设计，从而真正实现数据在数据库中的存放。其主要的工作是根据逻辑数据模型中的实体、属性、联系转换成对应的物理模型中的元素，包括定义所有的表和列，定义外键以维持表之间的联系等，具体例子如下：<br><img src="/images/bigdata/3-6.png"></p>
+<h1 id="7、掌握联机分析处理（OLAP）技术的概念、特征。"><a href="#7、掌握联机分析处理（OLAP）技术的概念、特征。" class="headerlink" title="7、掌握联机分析处理（OLAP）技术的概念、特征。"></a>7、掌握联机分析处理（OLAP）技术的概念、特征。</h1><p>联机分析处理OLAP是一种软件技术，它使分析人员能够迅速、一致、交互地从各个方面观察信息，以达到深入理解数据的目的。</p>
+<p>它具有FASMI(Fast Analysis of Shared Multidimensional Information)，即共享多维信息的快速分析的特征。<br>F是快速性(Fast)，指系统能在数秒内对用户的多数分析要求做出反应；<br>A是可分析性(Analysis)，指用户无需编程就可以定义新的专门计算，将其作为分析的一部分，并以用户所希望的方式给出报告；<br>M是多维性(Multi—dimensional)，指提供对数据分析的多维视图和分析；<br>I是信息性(Information)，指能及时获得信息，并且管理大容量信息。</p>
+<h1 id="8、掌握-OLAP-中的多维分析操作，包括钻取、切片和切块、旋转。"><a href="#8、掌握-OLAP-中的多维分析操作，包括钻取、切片和切块、旋转。" class="headerlink" title="8、掌握 OLAP 中的多维分析操作，包括钻取、切片和切块、旋转。"></a>8、掌握 OLAP 中的多维分析操作，包括钻取、切片和切块、旋转。</h1><p>(1)切片和切块(Slice and Dice)<br>切片和切块是在维上做投影操作。<br>切片就是在多维数据上选定一个二维子集的操作，即在某两个维上取一定区间的维成员或全部维成员，而在其余的维上选定一个维成员的操作。<br>维是观察数据的角度，那么切片的作用或结果就是舍弃一些观察角度，使人们能在两个维上集中观察数据。因为人的空间想象能力毕竟有限，一般很难想象四维以上的空间结构，所以对于维数较多的多维数据空间，数据切片是十分有意义的．<br>(2)钻取(Drill)<br>钻取有向下钻取(Drill Down)和向上钻取(Drill up)操作。向下钻取是使用户在多层数据中展现渐增的细节层次，获得更多的细节性数据。向上钻取以渐增概括方式汇总数据(例如，从周到季度，再到年度)。<br>(3)旋转(Pivoting)<br>通过旋转可以得到不同视角的数据。旋转操作相当于在平面内将坐标轴旋转。例如，旋转可能包含了交换行和列，或是把某一个行维移到列维中去，或是把页面显示中的一个维和页面外的维进行交换(令其成为新的行或列中的一个)。</p>
+<h1 id="9、了解多维联机分析处理、关系联机分析处理、MOLAP-和-ROLAP-的差异、混合型联机分析处理；OLAP-的衡量标准。"><a href="#9、了解多维联机分析处理、关系联机分析处理、MOLAP-和-ROLAP-的差异、混合型联机分析处理；OLAP-的衡量标准。" class="headerlink" title="9、了解多维联机分析处理、关系联机分析处理、MOLAP 和 ROLAP 的差异、混合型联机分析处理；OLAP 的衡量标准。"></a>9、了解多维联机分析处理、关系联机分析处理、MOLAP 和 ROLAP 的差异、混合型联机分析处理；OLAP 的衡量标准。</h1><p>数据仓库与OLAP的关系是互补的，现代OLAP系统一般以数据仓库作为基础，即从数据仓库中抽取详细数据的一个子集并经过必要的聚集存储到OLAP存储器中供前端分析工具读取。<br>OLAP系统按照其存储器的数据存储格式可以分为关系OLAP（RelationalOLAP，简称ROLAP）、多维OLAP（MultidimensionalOLAP，简称MOLAP）和混合型OLAP（HybridOLAP，简称HOLAP）三种类型。</p>
+<h2 id="ROLAP"><a href="#ROLAP" class="headerlink" title="ROLAP"></a>ROLAP</h2><p>ROLAP将分析用的多维数据存储在关系数据库中并根据应用的需要有选择的定义一批实视图作为表也存储在关系数据库中。不必要将每一个SQL查询都作为实视图保存，只定义那些应用频率比较高、计算工作量比较大的查询作为实视图。对每个针对OLAP服务器的查询，优先利用已经计算好的实视图来生成查询结果以提高查询效率。同时用作ROLAP存储器的RDBMS也针对OLAP作相应的优化，比如并行存储、并行查询、并行数据管理、基于成本的查询优化、位图索引、SQL的OLAP扩展(cube,rollup)等等。</p>
+<h2 id="MOLAP"><a href="#MOLAP" class="headerlink" title="MOLAP"></a>MOLAP</h2><p>MOLAP将OLAP分析所用到的多维数据物理上存储为多维数组的形式，形成“立方体”的结构。维的属性值被映射成多维数组的下标值或下标的范围，而总结数据作为多维数组的值存储在数组的单元中。由于MOLAP采用了新的存储结构，从物理层实现起，因此又称为物理OLAP（PhysicalOLAP）；而ROLAP主要通过一些软件工具或中间软件实现，物理层仍采用关系数据库的存储结构，因此称为虚拟OLAP（VirtualOLAP）。</p>
+<h2 id="HOLAP"><a href="#HOLAP" class="headerlink" title="HOLAP"></a>HOLAP</h2><p>由于MOLAP和ROLAP有着各自的优点和缺点,且它们的结构迥然不同，这给分析人员设计OLAP结构提出了难题。为此一个新的OLAP结构——混合型OLAP（HOLAP）被提出，它能把MOLAP和ROLAP两种结构的优点结合起来。迄今为止，对HOLAP还没有一个正式的定义。但很明显，HOLAP结构不应该是MOLAP与ROLAP结构的简单组合，而是这两种结构技术优点的有机结合，能满足用户各种复杂的分析请求。</p>
+<h1 id="10、了解数据预处理的原因、数据预处理的方法。"><a href="#10、了解数据预处理的原因、数据预处理的方法。" class="headerlink" title="10、了解数据预处理的原因、数据预处理的方法。"></a>10、了解数据预处理的原因、数据预处理的方法。</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>（1）现实世界的数据是肮脏的（不完整，含噪声，不一致）<br>（2）没有高质量的数据，就没有高质量的挖掘结果（高质量的决策必须依赖于高质量的数据；数据仓库需要对高质量的数据进行一致地集成）<br>（3）原始数据中存在的问题：<br>不一致 —— 数据内含出现不一致情况<br>重复<br>不完整 —— 感兴趣的属性没有<br>含噪声 —— 数据中存在着错误、或异常（偏离期望值）的数据<br>高维度</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><p>（1）数据清洗 —— 去噪声和无关数据<br>（2）数据集成 —— 将多个数据源中的数据结合起来存放在一个一致的数据存储中<br>（3）数据变换 —— 把原始数据转换成为适合数据挖掘的形式<br>（4）数据归约 —— 主要方法包括：数据立方体聚集，维度归约，数据压缩，数值归约，离散化和概念分层等。</p>
+<h1 id="11、掌握数据清洗、数据集成和变换、数据归约的概念与方法，具有应用上述方法进行数据清洗的能力。"><a href="#11、掌握数据清洗、数据集成和变换、数据归约的概念与方法，具有应用上述方法进行数据清洗的能力。" class="headerlink" title="11、掌握数据清洗、数据集成和变换、数据归约的概念与方法，具有应用上述方法进行数据清洗的能力。"></a>11、掌握数据清洗、数据集成和变换、数据归约的概念与方法，具有应用上述方法进行数据清洗的能力。</h1><h2 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h2><p>1）处理缺失值方法：<br>a.忽略元祖，挖掘任务涉及分类任务中如果缺少类标号时通常这样做<br>b.人工填写缺失值，量大时行不通<br>c.使用一个全局常量填充缺失值，简单但不可靠<br>d.使用属性的均值填充缺失值<br>e.使用与给定元组属同一类的所有样本的属性均值<br>f.使用最有可能的值填充缺失值，可以用回归，使用贝叶斯形式化的基于推理的工具或决策树归纳确定，是流行的做法。<br>2）数据光滑技术：噪声是被测量的变量的随机误差或方差<br>a.分箱，分箱方法通过考察数据的“近邻”（即周围的值）来光滑有序数据的值，有序值分布到一些“桶”或箱中。由于分箱方法考察近邻的值，因此进行局部光滑。几种分箱技术：用箱均值光滑、用箱边界光滑、用箱中位数光滑。<br>b.回归：可以用一个函数（如回归函数）拟合数据来光滑数据。线性回归涉及找出拟合两个属性（或变量）的“最佳”线，是的一个属性可以用来预测另一个。多元线性回归是线性回归的扩展，其中涉及的属性多于两个，并且数据拟合到一个多维曲面。<br>c.聚类：通过聚类检测离群点<br>3）数据清理作为一个过程的方法：过程的第一步是偏差检测，有大量商业工具帮助我们进行偏差检测，数据清洗工具、数据审计工具、数据迁移工具、ETL工具。新的数据清理方法强调加强交互性，如Potter’s Wheel，集成了偏差检测和数据变换。</p>
+<h2 id="数据集成和变换"><a href="#数据集成和变换" class="headerlink" title="数据集成和变换"></a>数据集成和变换</h2><p>1）数据集成：数据分析任务多半涉及数据集成。数据集成合并多个数据源中的数据，存放在一个一致的数据存储（如数据仓库）中。这些数据源可能包括多个数据库、数据立方体或一般文件。<br>数据集成有三个主要问题：<br>a.模式集成和对象匹配，实体识别问题：来自多个信息源的现实世界的等价实体如何才能匹配？元数据可以帮助避免模式集成的错误。<br>b.冗余：有些冗余可以被相关分析检测到。通过计算属性A,B的相关系数（皮尔逊积矩系数）来判断是否冗余；对于离散数据，可通过卡方检验来判断两个属性A和B之间的相关联系。<br>c.数据值冲突的检测与处理<br>2）数据变换：将数据转换或统一成适合于挖掘的形式。涉及如下内容：<br>a.光滑：去掉数据的噪声，包括分箱，回归和聚类<br>b.聚集：对数据进行汇总或聚集。这一步通常用来为多粒度数据分析构造数据立方体<br>c.数据泛化：使用概念分层，用高层概念替换底层或“原始”数据。<br>d.规范化：又称为归一化，feature scaling特征缩放。将属性数据按比例缩放，使之落入一个小的特定区间。规范化方法：<br>    1.最小-最大规范化：v’=[(v-min)/(max-min)]*(new_max-new_min)+new_min<br>    2.z-score规范化（或零均值规范化）：v’=(v-属性A的均值E)/属性A的标准差∽<br>    3.小数定标规范化：v’=v/10的j次方，j是使Max(|v’|)&lt;1的最小整数<br>e.属性构造（或特征构造）：可以构造新的属性并添加到属性集中，以帮助挖掘过程。</p>
+<h2 id="数据归约"><a href="#数据归约" class="headerlink" title="数据归约"></a>数据归约</h2><p>数据集可能非常大！面对海量数据进行复杂的数据分析和挖掘将需要很长的时间。数据归约技术可以用来得到数据集的归约表示，它小很多，但仍接近保持原数据的完整性。数据归约策略如下：<br>1）数据立方体聚集：聚集操作用于数据立方体结构中的数据。数据立方体存储多维聚集信息。<br>2）属性子集选择，参见文本分类概述中特征选择算法<br>3）维度归约：使用数据编码或变换，以便得到原数据的归约或“压缩”表示。归约分为无损的和有损的。有效的有损维归约方法为：小波变换和主成分分析<br>4）数值归约：通过选择替代的、‘较小的’数据表示形式来减少数据量<br>5）离散化和概念分层产生</p>
+<h1 id="12、了解关联规则的概念和分类。"><a href="#12、了解关联规则的概念和分类。" class="headerlink" title="12、了解关联规则的概念和分类。"></a>12、了解关联规则的概念和分类。</h1><p>关联规则是形如X→Y的蕴涵式，其中， X和Y分别称为关联规则的先导(antecedent或left-hand-side, LHS)和后继(consequent或right-hand-side, RHS) 。其中，关联规则XY，存在支持度和信任度。</p>
+<h2 id="基于规则中处理的变量的类别"><a href="#基于规则中处理的变量的类别" class="headerlink" title="基于规则中处理的变量的类别"></a>基于规则中处理的变量的类别</h2><p>关联规则处理的变量可以分为布尔型和数值型。布尔型关联规则处理的值都是离散的、种类化的，它显示了这些变量之间的关系；而数值型关联规则可以和多维关联或多层关联规则结合起来，对数值型字段进行处理，将其进行动态的分割，或者直接对原始的数据进行处理，当然数值型关联规则中也可以包含种类变量。例如：性别=“女”=&gt;职业=“秘书” ，是布尔型关联规则；性别=“女”=&gt;avg（收入）=2300，涉及的收入是数值类型，所以是一个数值型关联规则。</p>
+<h2 id="基于规则中数据的抽象层次"><a href="#基于规则中数据的抽象层次" class="headerlink" title="基于规则中数据的抽象层次"></a>基于规则中数据的抽象层次</h2><p>基于规则中数据的抽象层次，可以分为单层关联规则和多层关联规则。在单层的关联规则中，所有的变量都没有考虑到现实的数据是具有多个不同的层次的；而在多层的关联规则中，对数据的多层性已经进行了充分的考虑。例如：IBM台式机=&gt;Sony打印机，是一个细节数据上的单层关联规则；台式机=&gt;Sony打印机，是一个较高层次和细节层次之间的多层关联规则。</p>
+<h2 id="基于规则中涉及到的数据的维数"><a href="#基于规则中涉及到的数据的维数" class="headerlink" title="基于规则中涉及到的数据的维数"></a>基于规则中涉及到的数据的维数</h2><p>关联规则中的数据，可以分为单维的和多维的。在单维的关联规则中，我们只涉及到数据的一个维，如用户购买的物品；而在多维的关联规则中，要处理的数据将会涉及多个维。换成另一句话，单维关联规则是处理单个属性中的一些关系；多维关联规则是处理各个属性之间的某些关系。例如：啤酒=&gt;尿布，这条规则只涉及到用户的购买的物品；性别=“女”=&gt;职业=“秘书”，这条规则就涉及到两个字段的信息，是两个维上的一条关联规则。</p>
 ]]></content>
       <categories>
         <category>大数据分析应用-中级</category>
       </categories>
       <tags>
-        <tag>大数据考试-信息化基础知识</tag>
+        <tag>大数据考试-数据库系统</tag>
       </tags>
   </entry>
 </search>
