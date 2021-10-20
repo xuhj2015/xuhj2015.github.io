@@ -20,18 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="散列函数是一种公开的数学函数。散列函数运算的输入信息也可叫作报文。散列函数运算后所得到的结果叫作散列码或者叫作消息摘要。散列函数具有如下一些特点：  (1) 不同内容的报文具有不同的散列码，而一旦原始报文有任何改变，哪怕改变一位信息，则通过散列函数计算后得到的散列码也将完全不同。这样，这个散列码就好比是这个报文所特有的“指纹”。  (2) 散列函数是单向的，即求解某一个报文的散列码非常容易，但是根">
+<meta property="og:type" content="article">
 <meta property="og:title" content="安全性和保密性设计（二）数字签名与数字水印">
-<meta property="og:url" content="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/index.html">
+<meta property="og:url" content="http://example.com/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/index.html">
 <meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="散列函数是一种公开的数学函数。散列函数运算的输入信息也可叫作报文。散列函数运算后所得到的结果叫作散列码或者叫作消息摘要。散列函数具有如下一些特点：  (1) 不同内容的报文具有不同的散列码，而一旦原始报文有任何改变，哪怕改变一位信息，则通过散列函数计算后得到的散列码也将完全不同。这样，这个散列码就好比是这个报文所特有的“指纹”。  (2) 散列函数是单向的，即求解某一个报文的散列码非常容易，但是根">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-10-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-20T01:10:29.817Z">
+<meta property="article:published_time" content="2021-10-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-20T07:00:19.966Z">
 <meta property="article:author" content="xuhj">
 <meta property="article:tag" content="软考-安全性和保密性设计">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/">
+<link rel="canonical" href="http://example.com/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/">
 
 
 <script id="page-configurations">
@@ -201,7 +203,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -223,16 +225,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
+              <time title="创建时间：2021-10-20 00:00:00 / 修改时间：15:00:19" itemprop="dateCreated datePublished" datetime="2021-10-20T00:00:00+08:00">2021-10-20</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -254,7 +250,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <p>散列函数是一种公开的数学函数。散列函数运算的输入信息也可叫作报文。散列函数运算后所得到的结果叫作散列码或者叫作消息摘要。散列函数具有如下一些特点：</p>
+<p> (1) 不同内容的报文具有不同的散列码，而一旦原始报文有任何改变，哪怕改变一位信息，则通过散列函数计算后得到的散列码也将完全不同。这样，这个散列码就好比是这个报文所特有的“指纹”。</p>
+<p> (2) 散列函数是单向的，即求解某一个报文的散列码非常容易，但是根据散列码来倒推原始报文是非常困难的</p>
+<p> (3) 对于任何一个报文，无法预知它的散列码。</p>
+<p> (4) 散列码具有固定的长度，不管原始报文的长度如何，通过散列函数运算后的散列码都具有一样的长度。例如，MD5 (Message Digest Algorithm5, 消息摘要算法第 5 个版本）散列算法的散列码长度为 128 位，并且不管是对一部百科全书，还是对某个人的工资进行 MD5 散列运算，得到的散列码长度都是 128 位。</p>
+<p>由于散列函数具有这些特征，因此散列函数可以用来检测报文的可靠性。接收者对收到的报文用与发送者相同的散列函数进行运算，如果得到与发送者相同的散列码，则可以认为报文没有被篡改，否则，报文就是不可信的。</p>
+<p>常见的散列函数有 MD5、SHA、HMAC 等。MD5 是一种非常著名的散列算法，已经成为国际标准，具有很好的安全性能。MD5 算法在对输入的报文进行计算时，是以 512 位为单位进行处理的，结果生成一个 128 位长的消息摘要；SHA、HMAC 等算法都是对任意长度的报文以 512 位为单位进行处理，最后得出一个 160 位的消息摘要。</p>
+<h1 id="一、数字签名"><a href="#一、数字签名" class="headerlink" title="一、数字签名"></a>一、数字签名</h1><p>对于计算机系统中传送、存储的重要文件、数据、信息等，一般需要有某种方式来确认其真实性，即接收者能够确认自己得到的信息确实是由该信息所声称的发送者发出的，而不是由非法入侵者伪造、冒充发出的，并且还要能够保证信息在传送、存储中没有被恶意改，这样这份信息才能真实地反映发送方的意图。另外，对于发送方来说，如果发出一份信息还必须有一定的措施阻止其否认自己发出信息的行为，即不可否认性。</p>
+<p>只有做到以上几点，一个信息传送、存储系统才能够安全、可靠，其上所传送、存储的信息才是真实的、值得相信的。</p>
+<p>数字签名主要由两个算法组成：签名算法和验证算法。通过使用签名算法签名一个消息，所得到的签名能够通过一个验证算法来验证签名的真实性和有效性。</p>
+<p>所以数字签名技术的大致过程就是：信息的发送方对信息利用自己的私钥进行签名，接着发送方把这个签名和信息一起发送给接收方。接收方收到信息后利用发送方的公钥来对其中的数字签名进行验证，确认其合法性。</p>
+<p>目前已经有大量的数字签名算法，例如，RSA 数字签名算法、El Gamal、Fiat-shamir、 Guillon- Oucsquerrter、DS (Digital Signature Standard，数字签名标准）、DSA (Digital Signature Algorithm，数字签名算法）、椭圆曲线等。</p>
+<p>1．RSA 结合 MD5 数字签名<br>RSA 结合 MD5 数字签名的主要过程是：信息的发送方通过对信息进行散列运算生成个消息摘要，接着发送方用自己的私钥对这个消息摘要进行加密，就形成发送方的数字签名。然后，把这个数字签名作为信息的附件和信息一起发送给信息的接收方。接收方收到信息后首先对收到的信息进行与发送者相同的散列运算得到一个消息摘要，接着再用发送方的公钥来对信息中附加的数字签名进行解密得到发送方计算出的散列码。如果两个散列码相同，那么接收方就能确认该信息和数字签名是由发送方发出的。通过数字签名能够实现对原始信息完整性的鉴别和发送方发送信息的不可抵赖性。</p>
+<p>RSA 用于数字签名的一个重要的特点是能够证实信息发送方的身份及电子文件的可靠性和完整性，它对于发送方和被发送的信息都是独一无二的，具有可验证性和不可否认的权威性特点；另一个重要的特点是它通过在计算机之间交换数字证书就可以确定当事者就是他们所宣称的人。</p>
+<p>2．数字签名标准</p>
+<p>DSs 是美国国家标准与技术学会的数字签名标准，自 1991 年提出以来又经过广泛的修改。DSS 为计算和验证数字签名指定了一个数字签名算法-DSA。DSA 是 E Gamal 数字签名算法的一个改进版本，它通过选择较小规格的参数减少数字签名的数据量，从而减少了存储空间和传输带宽。</p>
+<p>DSs 中指定 SHA 作为其散列算法，它对原始信息进行运算后产生 160 位的消息摘要，然后 DS 把这一消息摘要与一个用作这个特殊签名的随机数作为输入送到数字签名算法中，经过运算生成数字签名</p>
+<p>该数字签名函数还依赖于发送方的私钥 SK 和一个对许多通信方都公开的由重要的公钥集合组成的全局公钥。</p>
+<p>接收方在收到消息摘要和签名后将其作为验证函数的输入。验证函数还依赖于全局公钥和与发送方的私钥相匹配的公钥 PK，这样只有发送方用其自己的私钥才能产生有效的签名</p>
+<p>数字签名作为一项重要的鉴别技术，近年来越来越受到人们的重视，在政府、军事、金融、安全等领域得到广泛的运用。通过数字签名可以有效地保证数据的完整性，防止第三方伪造或发送方的抵赖。</p>
+<p>2004 年 8 月 28 日，十届全国人大常委会第十一次会议表决通过了电子签名法。这部法律规定，可靠的电子签名与手写签名或者盖章具有同等的法律效力，并于 2005 年 4 月 1 日起施行。这部法律将对我国电子商务、电子政务等计算机信息系统的发展起到极其重要的促进作用。</p>
+<h1 id="二、数字信封"><a href="#二、数字信封" class="headerlink" title="二、数字信封"></a>二、数字信封</h1><p>数字信封是公钥密码体制在实际中的一个应用，是用加密技术来保证只有规定的特定收信人才能阅读通信的内容。</p>
+<p>在数字信封中，信息发送方采用对称密钥来加密信息内容，然后将此对称密钥用接收方的公开密钥来加密（这部分称数字信封），之后，将它和加密后的信息一起发送给接收方，接收方先用相应的私有密钥打开数字信封，得到对称密钥，然后使用对称密钥解开加密信息。这种技术的安全性相当高。</p>
+
     </div>
 
     
@@ -272,12 +291,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92%E4%B8%8E%E9%98%B2%E6%B2%BB/" rel="prev" title="安全性和保密性设计（五）计算机病毒与防治">
-      <i class="fa fa-chevron-left"></i> 安全性和保密性设计（五）计算机病毒与防治
+    <a href="/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%B8%80%EF%BC%89%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E4%B8%8E%E7%BB%9F%E8%AE%A1%E6%8E%A8%E6%96%AD/" rel="prev" title="数据科学（一）概率统计与统计推断">
+      <i class="fa fa-chevron-left"></i> 数据科学（一）概率统计与统计推断
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E5%AE%89%E5%85%A8%E6%80%A7%E8%A7%84%E7%AB%A0/" rel="next" title="安全性和保密性设计（九）安全性规章">
-      安全性和保密性设计（九）安全性规章 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%80%EF%BC%89%E5%8A%A0%E5%AF%86%E5%92%8C%E8%A7%A3%E5%AF%86/" rel="next" title="安全性和保密性设计（一）加密和解密">
+      安全性和保密性设计（一）加密和解密 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -337,6 +356,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D"><span class="nav-number">1.</span> <span class="nav-text">一、数字签名</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E5%AD%97%E4%BF%A1%E5%B0%81"><span class="nav-number">2.</span> <span class="nav-text">二、数字信封</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
