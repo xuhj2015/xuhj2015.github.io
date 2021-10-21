@@ -222,7 +222,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-10-21 00:00:00 / 修改时间：13:51:29" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
+              <time title="创建时间：2021-10-21 00:00:00 / 修改时间：16:09:50" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -245,7 +245,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          
+          <h1 id="一、IPSec-协议简述"><a href="#一、IPSec-协议简述" class="headerlink" title="一、IPSec 协议简述"></a>一、IPSec 协议简述</h1><p>在TCP/P协议中,对IP数据包没有提供任何安全保护,攻击者可以通过网络嗅探、IP 欺骗、连接截获等方法来攻击正常的TCP/IP通信。因此,通信过程中会存在以下危险:数据并非来自合法的发送者、数据在传输过程中被非法篡改、信息内容已被人窃取等。</p>
+<p>为了确保在 P 网络上进行安全保密的通信，IETF 制定了一套开放标准的网络安全协议  Ipsec (IP Security）。该协议把密码技术应用在网络层，以向信息的发送方和接收方提供源地址验证、数据传输的完整性、存取控制、保密性等安全服务，保护通信免遭窃听、抵御网络攻击，而且更高层的应用层协议也可以直接或间接地使用这些安全服务，为其上层协议如 TCP、UDP 等提供透明的安全保护服务，在 Internet 这样不安全的网络中为通信提供安全保证。</p>
+<p>在 IPv6 中，Ipsec 协议是一个必备的组成部分，被强制实施；在 IPv4 中，它是一个可选的扩展协议。</p>
+<p>由于 Internet 等网络具有公共特性，因此在通信过程中难以确认传输媒介是安全的，所以要进行安全的通信，则通信数据必须经过加密。Ipsec 协议对数据的加密以数据包而不是整个数据流为单位，这不仅非常灵活，也有助于进一步提高 P 数据包的安全性。</p>
+<p>Ipsec 协议的基本工作原理是：发送方在发送数据前对数据实施加密，然后把密文数据发送到网络中去，开始传输。在整个传输过程中，数据都是以密文方式传输的，直到数据到达目的节点，才由接收方对密文进行解密，提取明文信息。</p>
+<p>PSec 协议对网络层的通信使用了加密技术，它不是加密数据包的头部和尾部信息（如源地址、目的地址、端口号、CRC 校验值等），而是对数据包中的数据进行加密。由于加密过程发生在 IP 层，因此可在不改变 HTP 等上层应用协议的情况下进行网络协议的安全加密，为通信提供透明的安全传输服务。</p>
+<p> Ipsec 协议中使用端到端的工作模式，掌握加密、解密方法的只有数据的发送方和接收方，两者各自负责相应的数据加密、解密处理，而网络中其他节点只负责转发数据，无须支持 Ipsec，从而可以实现加密通信与传输媒介无关，保证机密数据在公共网络环境下的适应性和安全性。因此，Ipsec 可以应用到非常广泛的环境中，能为局域网、拨号用户、远程站点、Internet 之上的通信提供强有力的保护，而且还能用来筛选特定数据流，还可以用于不同局域网之间通过互联网的安全互联</p>
+<p> Ipsec 协议不是一个单独的协议，它包括应用于 P 层上网络数据安全的一整套协议，主要包括 AH (Authentication Header, IP 认证头部协议）、ESP (Encapsulating Security Payload，封装安全负载协议）、IKE (Internet Key Exchange, Internet 密钥交换协议）和用于网络认证及加密的一些算法等。</p>
+<p>AH 提供数据的完整性和认证，但不包括保密性；而 ESP 原则上只提供保密性，但也可在 ESP Header 中选择适当的算法及模式来实现数据的完整性和认证。AH 和 ESP 可分开使用也可一起使用。IKE 则提供加密算法、密钥等的协商。</p>
+<h1 id="二、SSL-协议"><a href="#二、SSL-协议" class="headerlink" title="二、SSL 协议"></a>二、SSL 协议</h1><p>SSL 是用于安全传输数据的一种通信协议。它米用公钥加密技术、对称密钥加密技术等保护两个应用之间的信息传输的机密性和完整性。但是，SSL 也有一个不足，就是它本身不能保证传输信息的不可否认性。</p>
+<p>SL 协议包括服务器认证、客户认证、SSL 链路上的数据完整性、SSL 链路上的数据保密性等几个方面，通过在浏览器和 Web 服务器之间建立一条安全的通道来保证 Internet 数据传递的安全性。目前，利用公钥加密的 SL 技术，已经成为 Internet 上进行保密通信的工业标准。SSL 协议常常用于增强 Web 服务的安全性。</p>
+<p>在 TCP/IP协议中,SSL协议建立在传输层即TCP之上、应用层之下。SSL 协议有一个突出的优点，就是它与应用层协议相独立，高层的应用层协议如 HTTP 等可以透明地建立在 SSL 协议之上进行工作。</p>
+<p>通过 SSL 协议建立的传输通道具有如下的基本安全性</p>
+<p> (1) 通道是保密的，经过握手确定密钥之后，所有的消息被加密。SSL 协议在应用层协议工作之前就已经完成了加密算法、密钥的协商、服务器认证等工作，而此后的所有应用层所传送的数据都是经过加密的，因此 SSL 协议具有很好的保密性。</p>
+<p> (2) 通道是被认证的，通信中的服务器端总是被认证，客户端可选认证。在基于 SSL 协议的通信过程中，服务器端认证是必须进行的，所以，即使在一次会话过程中不进行客户端认证，该会话的确认性也能够有很好的保证。</p>
+<p> (3) 通道是可靠的，用 MAC 对传送的消息进行完整性检查，保证通道上数据的完整性。基于 SSL 协议的通信过程，因为传递的消息中包括消息完整性检査数据（即 MAC 数据），因此，可以保证该通信是可靠的。</p>
+<p>SSL 协议由 SL 记录协议、SSL 握手协议、SSL 密码变更说明协议、SSL 警告协议等组成。</p>
+<h1 id="三、PGP-协议"><a href="#三、PGP-协议" class="headerlink" title="三、PGP 协议"></a>三、PGP 协议</h1><p>PGP (Pretty Good Privacy）是美国人 Philzimmermann 于 1995 年提出的一套电子邮件加密方案。它可以用来对邮件加密以防止非授权者阅读，还能对邮件加上数字签名而使收信人可以确认邮件确实是由发送方发出的</p>
+<p>PGP 并不是新的加密算法或协议，它综合采用了多种加密算法，例如，对邮件内容加密采用 IDEA 算法、对于加密信息采用 RSA 公钥加密算法，还采用了用于数字签名的消息摘要算法，加密前进行压缩处理等技术手段进行邮件加密的一套软件。通过组合使用这些加密方法，把 RSA 公钥加密体系的良好加密效果和对称密钥加密体系的高速度结合起来，并且通过在数字签名和密钥认证管理机制中的巧妙设计，使得 PGP 成为一个优秀的强有力的数据加密程序。</p>
+<p>由于 PGP 功能强大、处理迅速、使用简便，而且它的源代码是免费的，因此，PGP 在 T 等多个行业得到了广泛的应用，迅速普及。如今，PGP 除了用于通常的电子邮件加密，还可以用来加密重要文件，用 PGP 代替 Uuencode 生成 RADIX64 格式（就是 MIME 的 BASE64 格式）的编码文件，以保证它们在网络上的安全传输，或为文件做数字签名，以防止篡改和伪造。</p>
+
       
     </div>
 
@@ -644,6 +664,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%B8%89%EF%BC%89%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%B8%89%EF%BC%89%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">数据科学（三）深度学习与强化学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-18T00:00:00+08:00">2021-10-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-19 14:42:30" itemprop="dateModified" datetime="2021-10-19T14:42:30+08:00">2021-10-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"><a href="#1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。" class="headerlink" title="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"></a>1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。</h1><p>全连接网络，是指前一层的每个神经元会都与下一层的全部神经元连接。</p>
+<h1 id="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。"><a href="#2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。" class="headerlink" title="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。"></a>2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。</h1><p>卷积神经网络（Convolutional Neural Networks, CNN）是一类包含卷积计算且具有深度结构的前馈神经网络（Feedforward Neural Networks），是深度学习（deep learning）的代表算法之一。卷积神经网络具有表征学习（representation learning）能力，能够按其阶层结构对输入信息进行平移不变分类（shift-invariant classification），因此也被称为“平移不变人工神经网络（Shift-Invariant Artificial Neural Networks, SIANN）”。</p>
+<p>AlexNet是2012年ILSVRC图像分类和物体识别算法的优胜者，也是LetNet-5之后受到人工智能领域关注的现代卷积神经网络算法。AlexNet的隐含层由5个卷积层、3个池化层和3个全连接层组成。</p>
+<p>VGGNet是牛津大学视觉几何团队（Visual Geometry Group, VGG）开发的一组卷积神经网络算法，包括VGG-11、VGG-11-LRN、VGG-13、VGG-16和VGG-19。其中VGG-16是2014年ILSVRC物体识别算法的优胜者，其规模是AlexNet的2倍以上并拥有规律的结构，这里以VGG-16为例介绍其构筑。VGG-16的隐含层由13个卷积层、3个全连接层和5个池化层组成。</p>
+<p>GoogLeNet是2014年ILSVRC图像分类算法的优胜者，是首个以Inception模块进行堆叠形成的大规模卷积神经网络。GoogLeNet共有四个版本：Inception v1、Inception v2、Inception v3、Inception v4。</p>
+<p>ResNet来自微软的人工智能团队Microsoft Research，是2015年ILSVRC图像分类和物体识别算法的优胜者，其表现超过了GoogLeNet的第三代版本Inception v3。ResNet是使用残差块建立的大规模卷积神经网络，其规模是AlexNet的20倍、VGG-16的8倍，在ResNet的原始版本中，其残差块由2个卷积层、1个跳跃连接、BN和激励函数组成，ResNet的隐含层共包含16个残差块。</p>
+<h1 id="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。"><a href="#3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。" class="headerlink" title="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。"></a>3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。</h1><p>循环神经网络（Recurrent Neural Network, RNN）是一类以序列（sequence）数据为输入，在序列的演进方向进行递归（recursion）且所有节点（循环单元）按链式连接的递归神经网络（recursive neural network）。</p>
+<p>对循环神经网络的研究始于二十世纪80-90年代，并在二十一世纪初发展为深度学习（deep learning）算法之一，其中双向循环神经网络（Bidirectional RNN, Bi-RNN）和长短期记忆网络（Long Short-Term Memory networks，LSTM）是常见的循环神经网络。</p>
+<p>循环神经网络具有记忆性、参数共享并且图灵完备（Turing completeness），因此在对序列的非线性特征进行学习时具有一定优势。循环神经网络在自然语言处理（Natural Language Processing, NLP），例如语音识别、语言建模、机器翻译等领域有应用，也被用于各类时间序列预报。引入了卷积神经网络（Convolutional Neural Network,CNN）构筑的循环神经网络可以处理包含序列输入的计算机视觉问题。</p>
+<p>LSTM是最早被提出的RNN门控算法，其对应的循环单元，LSTM单元包含3个门控：输入门、遗忘门和输出门。相对于RNN对系统状态建立的递归计算，3个门控对LSTM单元的内部状态建立了自循环（self-loop）。具体地，输入门决定当前时间步的输入和前一个时间步的系统状态对内部状态的更新；遗忘门决定前一个时间步内部状态对当前时间步内部状态的更新；输出门决定内部状态对系统状态的更新。</p>
+<p>由于LSTM中3个门控对提升其学习能力的贡献不同，因此略去贡献小的门控和其对应的权重，可以简化神经网络结构并提升其学习效率。GRU即是根据以上观念提出的算法，其对应的循环单元仅包含2个门控：更新门和复位门，其中复位门的功能与LSTM单元的输入门相近，更新门则同时实现了遗忘门和输出门的功能。</p>
+<h1 id="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用"><a href="#4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用" class="headerlink" title="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用"></a>4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用</h1><p>生成式对抗网络（GAN, Generative Adversarial Networks ）是一种深度学习模型，是近年来复杂分布上无监督学习最具前景的方法之一。模型通过框架中（至少）两个模块：生成模型（Generative Model）和判别模型（Discriminative Model）的互相博弈学习产生相当好的输出。原始 GAN 理论中，并不要求 G 和 D 都是神经网络，只需要是能拟合相应生成和判别的函数即可。但实用中一般均使用深度神经网络作为 G 和 D 。一个优秀的GAN应用需要有良好的训练方法，否则可能由于神经网络模型的自由性而导致输出不理想。</p>
+<p>WGAN：<br>1、彻底解决GAN训练不稳定的问题，不再需要小心平衡生成器和判别器的训练程度<br>2、基本解决了collapse mode的问题，确保了生成样本的多样性<br>3、训练过程中终于有一个像交叉熵、准确率这样的数值来指示训练的进程，这个数值越小代表GAN训练得越好，代表生成器产生的图像质量越高<br>4、以上一切好处不需要精心设计的网络架构，最简单的多层全连接网络就可以做到</p>
+<h1 id="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"><a href="#5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用" class="headerlink" title="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"></a>5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用</h1><p>马尔可夫决策过程（Markov Decision Process, MDP）是序贯决策（sequential decision）的数学模型，用于在系统状态具有马尔可夫性质的环境中模拟智能体可实现的随机性策略与回报。MDP的得名来自于俄国数学家安德雷·马尔可夫（Андрей Андреевич Марков），以纪念其为马尔可夫链所做的研究。</p>
+<p>MDP基于一组交互对象，即智能体和环境进行构建，所具有的要素包括状态、动作、策略和奖励。在MDP的模拟中，智能体会感知当前的系统状态，按策略对环境实施动作，从而改变环境的状态并得到奖励，奖励随时间的积累被称为回报。</p>
+<p>MDP的理论基础是马尔可夫链，因此也被视为考虑了动作的马尔可夫模型。在离散时间上建立的MDP被称为“离散时间马尔可夫决策过程（descrete-time MDP）”，反之则被称为“连续时间马尔可夫决策过程（continuous-time MDP）”。此外MDP存在一些变体，包括部分可观察马尔可夫决策过程、约束马尔可夫决策过程和模糊马尔可夫决策过程。</p>
+<p>在应用方面，MDP被用于机器学习中强化学习（reinforcement learning）问题的建模。通过使用动态规划、随机采样等方法，MDP可以求解使回报最大化的智能体策略，并在自动控制、推荐系统等主题中得到应用。</p>
+<h1 id="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"><a href="#6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。" class="headerlink" title="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"></a>6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。</h1><p>强化学习的概念，通俗的讲，强化学习就是通过agent，也就是动作的发起者，对环境造成一个影响，环境接受该动作后状态发生变化，同时产生一个强化信号(奖或惩)反馈给Agent，Agent根据强化信号和环境当前状态再选择下一个动作，选择的原则是使受到正强化(奖)的概率增大。选择的动作不仅影响立即强化值，而且影响环境下一时刻的状态及最终的强化值。在强化学习中，包含两种基本的元素：状态与动作，在某个状态下执行某种动作，这便是一种策略，学习器要做的就是通过不断地探索学习，从而获得一个好的策略。</p>
+<p>Q-Learning属于强化学习的经典算法，用于解决马尔可夫决策问题。为无监督学习。</p>
+<h1 id="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。"><a href="#7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。" class="headerlink" title="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。"></a>7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。</h1><p>DeepMind在2013年提出的DQN算法（2015年提出了DQN的改进版本）可以说是深度学习和强化学习的第一次成功结合。要想将深度学习融合进强化学习，是有一些很关键的问题需要解决的，其中的两个问题如下：<br>1、深度学习需要大量有标签的数据样本；而强化学习是智能体主动获取样本，样本量稀疏且有延迟。<br>2、深度学习要求每个样本相互之间是独立同分布的；而强化学习获取的相邻样本相互关联，并不是相互独立的。</p>
+<p>DQN是一种基于值函数的方法，基于值函数的方法难以应对的是大的动作空间，特别是连续动作情况。因为网络难以有这么多输出，且难以在这么多输出之中搜索最大的Q值。而DDPG是基于上面所讲到的Actor-Critic方法，在动作输出方面采用一个网络来拟合策略函数，直接输出动作，可以应对连续动作的输出及大的动作空间。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%BA%8C%EF%BC%89%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -729,100 +843,6 @@
 <p>在用统计分析方法研究多变量的课题时，变量个数太多就会增加课题的复杂性。人们自然希望变量个数较少而得到的信息较多。在很多情形，变量之间是有一定的相关关系的，当两个变量之间有一定相关关系时，可以解释为这两个变量反映此课题的信息有一定的重叠。主成分分析是对于原先提出的所有变量，将重复的变量（关系紧密的变量）删去多余，建立尽可能少的新变量，使得这些新变量是两两不相关的，而且这些新变量在反映课题的信息方面尽可能保持原有的信息。</p>
 <p>设法将原来变量重新组合成一组新的互相无关的几个综合变量，同时根据实际需要从中可以取出几个较少的综合变量尽可能多地反映原来变量的信息的统计方法叫做主成分分析或称主分量分析，也是数学上用来降维的一种方法。</p>
 <h1 id="10、了解生成式半监督学习方法、半监督-SVM、图半监督学习方法的思想与原理。"><a href="#10、了解生成式半监督学习方法、半监督-SVM、图半监督学习方法的思想与原理。" class="headerlink" title="10、了解生成式半监督学习方法、半监督 SVM、图半监督学习方法的思想与原理。"></a>10、了解生成式半监督学习方法、半监督 SVM、图半监督学习方法的思想与原理。</h1><p>半监督学习(Semi-Supervised Learning，SSL)是模式识别和机器学习领域研究的重点问题，是监督学习与无监督学习相结合的一种学习方法。半监督学习使用大量的未标记数据，以及同时使用标记数据，来进行模式识别工作。当使用半监督学习时，将会要求尽量少的人员来从事工作，同时，又能够带来比较高的准确性，因此，半监督学习正越来越受到人们的重视。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%B8%89%EF%BC%89%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%B8%89%EF%BC%89%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">数据科学（三）深度学习与强化学习</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-18T00:00:00+08:00">2021-10-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-19 14:42:30" itemprop="dateModified" datetime="2021-10-19T14:42:30+08:00">2021-10-19</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"><a href="#1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。" class="headerlink" title="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"></a>1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。</h1><p>全连接网络，是指前一层的每个神经元会都与下一层的全部神经元连接。</p>
-<h1 id="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。"><a href="#2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。" class="headerlink" title="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。"></a>2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。</h1><p>卷积神经网络（Convolutional Neural Networks, CNN）是一类包含卷积计算且具有深度结构的前馈神经网络（Feedforward Neural Networks），是深度学习（deep learning）的代表算法之一。卷积神经网络具有表征学习（representation learning）能力，能够按其阶层结构对输入信息进行平移不变分类（shift-invariant classification），因此也被称为“平移不变人工神经网络（Shift-Invariant Artificial Neural Networks, SIANN）”。</p>
-<p>AlexNet是2012年ILSVRC图像分类和物体识别算法的优胜者，也是LetNet-5之后受到人工智能领域关注的现代卷积神经网络算法。AlexNet的隐含层由5个卷积层、3个池化层和3个全连接层组成。</p>
-<p>VGGNet是牛津大学视觉几何团队（Visual Geometry Group, VGG）开发的一组卷积神经网络算法，包括VGG-11、VGG-11-LRN、VGG-13、VGG-16和VGG-19。其中VGG-16是2014年ILSVRC物体识别算法的优胜者，其规模是AlexNet的2倍以上并拥有规律的结构，这里以VGG-16为例介绍其构筑。VGG-16的隐含层由13个卷积层、3个全连接层和5个池化层组成。</p>
-<p>GoogLeNet是2014年ILSVRC图像分类算法的优胜者，是首个以Inception模块进行堆叠形成的大规模卷积神经网络。GoogLeNet共有四个版本：Inception v1、Inception v2、Inception v3、Inception v4。</p>
-<p>ResNet来自微软的人工智能团队Microsoft Research，是2015年ILSVRC图像分类和物体识别算法的优胜者，其表现超过了GoogLeNet的第三代版本Inception v3。ResNet是使用残差块建立的大规模卷积神经网络，其规模是AlexNet的20倍、VGG-16的8倍，在ResNet的原始版本中，其残差块由2个卷积层、1个跳跃连接、BN和激励函数组成，ResNet的隐含层共包含16个残差块。</p>
-<h1 id="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。"><a href="#3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。" class="headerlink" title="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。"></a>3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。</h1><p>循环神经网络（Recurrent Neural Network, RNN）是一类以序列（sequence）数据为输入，在序列的演进方向进行递归（recursion）且所有节点（循环单元）按链式连接的递归神经网络（recursive neural network）。</p>
-<p>对循环神经网络的研究始于二十世纪80-90年代，并在二十一世纪初发展为深度学习（deep learning）算法之一，其中双向循环神经网络（Bidirectional RNN, Bi-RNN）和长短期记忆网络（Long Short-Term Memory networks，LSTM）是常见的循环神经网络。</p>
-<p>循环神经网络具有记忆性、参数共享并且图灵完备（Turing completeness），因此在对序列的非线性特征进行学习时具有一定优势。循环神经网络在自然语言处理（Natural Language Processing, NLP），例如语音识别、语言建模、机器翻译等领域有应用，也被用于各类时间序列预报。引入了卷积神经网络（Convolutional Neural Network,CNN）构筑的循环神经网络可以处理包含序列输入的计算机视觉问题。</p>
-<p>LSTM是最早被提出的RNN门控算法，其对应的循环单元，LSTM单元包含3个门控：输入门、遗忘门和输出门。相对于RNN对系统状态建立的递归计算，3个门控对LSTM单元的内部状态建立了自循环（self-loop）。具体地，输入门决定当前时间步的输入和前一个时间步的系统状态对内部状态的更新；遗忘门决定前一个时间步内部状态对当前时间步内部状态的更新；输出门决定内部状态对系统状态的更新。</p>
-<p>由于LSTM中3个门控对提升其学习能力的贡献不同，因此略去贡献小的门控和其对应的权重，可以简化神经网络结构并提升其学习效率。GRU即是根据以上观念提出的算法，其对应的循环单元仅包含2个门控：更新门和复位门，其中复位门的功能与LSTM单元的输入门相近，更新门则同时实现了遗忘门和输出门的功能。</p>
-<h1 id="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用"><a href="#4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用" class="headerlink" title="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用"></a>4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用</h1><p>生成式对抗网络（GAN, Generative Adversarial Networks ）是一种深度学习模型，是近年来复杂分布上无监督学习最具前景的方法之一。模型通过框架中（至少）两个模块：生成模型（Generative Model）和判别模型（Discriminative Model）的互相博弈学习产生相当好的输出。原始 GAN 理论中，并不要求 G 和 D 都是神经网络，只需要是能拟合相应生成和判别的函数即可。但实用中一般均使用深度神经网络作为 G 和 D 。一个优秀的GAN应用需要有良好的训练方法，否则可能由于神经网络模型的自由性而导致输出不理想。</p>
-<p>WGAN：<br>1、彻底解决GAN训练不稳定的问题，不再需要小心平衡生成器和判别器的训练程度<br>2、基本解决了collapse mode的问题，确保了生成样本的多样性<br>3、训练过程中终于有一个像交叉熵、准确率这样的数值来指示训练的进程，这个数值越小代表GAN训练得越好，代表生成器产生的图像质量越高<br>4、以上一切好处不需要精心设计的网络架构，最简单的多层全连接网络就可以做到</p>
-<h1 id="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"><a href="#5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用" class="headerlink" title="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"></a>5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用</h1><p>马尔可夫决策过程（Markov Decision Process, MDP）是序贯决策（sequential decision）的数学模型，用于在系统状态具有马尔可夫性质的环境中模拟智能体可实现的随机性策略与回报。MDP的得名来自于俄国数学家安德雷·马尔可夫（Андрей Андреевич Марков），以纪念其为马尔可夫链所做的研究。</p>
-<p>MDP基于一组交互对象，即智能体和环境进行构建，所具有的要素包括状态、动作、策略和奖励。在MDP的模拟中，智能体会感知当前的系统状态，按策略对环境实施动作，从而改变环境的状态并得到奖励，奖励随时间的积累被称为回报。</p>
-<p>MDP的理论基础是马尔可夫链，因此也被视为考虑了动作的马尔可夫模型。在离散时间上建立的MDP被称为“离散时间马尔可夫决策过程（descrete-time MDP）”，反之则被称为“连续时间马尔可夫决策过程（continuous-time MDP）”。此外MDP存在一些变体，包括部分可观察马尔可夫决策过程、约束马尔可夫决策过程和模糊马尔可夫决策过程。</p>
-<p>在应用方面，MDP被用于机器学习中强化学习（reinforcement learning）问题的建模。通过使用动态规划、随机采样等方法，MDP可以求解使回报最大化的智能体策略，并在自动控制、推荐系统等主题中得到应用。</p>
-<h1 id="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"><a href="#6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。" class="headerlink" title="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"></a>6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。</h1><p>强化学习的概念，通俗的讲，强化学习就是通过agent，也就是动作的发起者，对环境造成一个影响，环境接受该动作后状态发生变化，同时产生一个强化信号(奖或惩)反馈给Agent，Agent根据强化信号和环境当前状态再选择下一个动作，选择的原则是使受到正强化(奖)的概率增大。选择的动作不仅影响立即强化值，而且影响环境下一时刻的状态及最终的强化值。在强化学习中，包含两种基本的元素：状态与动作，在某个状态下执行某种动作，这便是一种策略，学习器要做的就是通过不断地探索学习，从而获得一个好的策略。</p>
-<p>Q-Learning属于强化学习的经典算法，用于解决马尔可夫决策问题。为无监督学习。</p>
-<h1 id="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。"><a href="#7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。" class="headerlink" title="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。"></a>7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。</h1><p>DeepMind在2013年提出的DQN算法（2015年提出了DQN的改进版本）可以说是深度学习和强化学习的第一次成功结合。要想将深度学习融合进强化学习，是有一些很关键的问题需要解决的，其中的两个问题如下：<br>1、深度学习需要大量有标签的数据样本；而强化学习是智能体主动获取样本，样本量稀疏且有延迟。<br>2、深度学习要求每个样本相互之间是独立同分布的；而强化学习获取的相邻样本相互关联，并不是相互独立的。</p>
-<p>DQN是一种基于值函数的方法，基于值函数的方法难以应对的是大的动作空间，特别是连续动作情况。因为网络难以有这么多输出，且难以在这么多输出之中搜索最大的Q值。而DDPG是基于上面所讲到的Actor-Critic方法，在动作输出方面采用一个网络来拟合策略函数，直接输出动作，可以应对连续动作的输出及大的动作空间。</p>
 
       
     </div>
