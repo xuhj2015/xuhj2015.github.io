@@ -197,6 +197,126 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F(SQL%20+%20NoSQL)/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F(SQL%20+%20NoSQL)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%94%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F(SQL%20+%20NoSQL)/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F(SQL%20+%20NoSQL)/" class="post-title-link" itemprop="url">数据库系统(SQL + NoSQL)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-15 00:00:00 / 修改时间：11:20:12" itemprop="dateCreated datePublished" datetime="2021-10-15T00:00:00+08:00">2021-10-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、掌握关系模型概念和-SQL-语言。"><a href="#1、掌握关系模型概念和-SQL-语言。" class="headerlink" title="1、掌握关系模型概念和 SQL 语言。"></a>1、掌握关系模型概念和 SQL 语言。</h1><p>数据模型主要有两大类，分别是概念数据模型（实体一联系模型）和基本数据模型（结构数据模型）。<br>概念数据模型是按照用户的观点来对数据和信息建模，主要用于数据库设计。概念模型主要用实体一联系方法（Entity- Relationship Approach）表示，所以也称 E-R 模型。<br>基本数据模型是按照计算机系统的观点来对数据和信息建模，主要用于 DBMS 的实现。基本数据模型是数据库系统的核心和基础。基本数据模型通常由数据结构、数据操作和完整性约束三部分组成。其中数据结构是对系统静态特性的描述，数据操作是对系统动态特性的描述，完整性约是一组完整性规则的集合。<br>常用的基本数据模型有层次模型、网状模型、关系模型和面向对象模型。<br>层次模型用树形结构表示实体类型及实体间的联系。层次模型的优点是记录之间的联系通过指针来实现，査询效率较高。层次模型的缺点是只能表示 1:n 联系，虽然有多种辅助手段实现 m:n 联系，但比较复杂，用户不易掌握。由于层次顺序的严格和复杂，导致数据的査询和更新操作很复杂，应用程序的编写也比较复杂。<br>网状模型用有向图表示实体类型及实体间的联系。网状模型的优点是记录之间的联系通过指针实现，m:n 联系也容易实现，査询效率高。其缺点是编写应用程序的过程比较复杂程序员必须熟悉数据库的逻辑结构。<br>关系模型用表格结构表达实体集，用外键表示实体间的联系。其优点有：<br>(1)建立在严格的数学概念基础上<br>(2)概念（关系）单一，结构简单、清晰，用户易懂易用<br>(3)存取路径对用户透明，从而数据独立性、安全性好，简化数据库开发工作</p>
+<table>
+<thead>
+<tr>
+<th>分类</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>①DDL数据定义语言</td>
+<td>负责数据库定义、数据库对象定义。由create，alter，drop</td>
+</tr>
+<tr>
+<td>②DML数据操作语言</td>
+<td>负责绝对数据库对象的操作，CRUD增删改查</td>
+</tr>
+<tr>
+<td>③DCL数据控制语言</td>
+<td>负责数据库权限访问控制，grant和revoke两个指令组成</td>
+</tr>
+<tr>
+<td>④TCL事务控制语言</td>
+<td>负责处理acid事物，支持commit、rollback指令</td>
+</tr>
+</tbody></table>
+<h1 id="2、掌握关系数据库设计方法。"><a href="#2、掌握关系数据库设计方法。" class="headerlink" title="2、掌握关系数据库设计方法。"></a>2、掌握关系数据库设计方法。</h1><p>目前已有的数据库设计方法可分为四类，即直观设计法、规范设计法、计算机辅助设计法和自动化设计法。直观设计法又称单步逻辑设计法，它依赖于设计者的知识、经验和技巧，缺乏工程规范的支持和科学根据，设计质量也不稳定，因此越来越不适应信息管理系统发展的需要。为了改变这种状况，1978 年 10 月来自 30 多个欧美国家的主要数据库专家在美国新奥尔良市专门讨论了数据库设计问题，提出了数据库设计规范，把数据库设计分为需求分析、概念结构设计、逻辑结构设计和物理结构设计 4 个阶段。目前，常用的规范设计方法大多起源于新奥尔良方法，如基于 3NF 的设计方法、LRA 方法、面向对象的数据库设计方法及基于视图概念的数据库设计方法等。</p>
+<p><img src="/images/bigdata/2-14.png"></p>
+<h1 id="3、掌握关系数据库索引的概念和使用方法。"><a href="#3、掌握关系数据库索引的概念和使用方法。" class="headerlink" title="3、掌握关系数据库索引的概念和使用方法。"></a>3、掌握关系数据库索引的概念和使用方法。</h1><p>索引是对数据库表中一列或多列的值进行排序的一种结构，使用索引可快速访问数据库表中的特定信息。如果想按特定职员的姓来查找他或她，则与在表中搜索所有的行相比，索引有助于更快地获取信息。<br>索引的一个主要目的就是加快检索表中数据，亦即能协助信息搜索者尽快的找到符合限制条件的记录ID的辅助数据结构。</p>
+<p>搜索码。它表示的是记录各种字符段的一个集合，它可以是一个或者是多个字符段的任意序列组合，并不是惟一的一个标识记录。<br>数据目录项。即为索引的相关元素，在建立索引的过程中，数据目录项一般具有各种不同的选择方式。<br>记录ID。每一个/段索引在存储内容中惟一的一个标识符。</p>
+<p>唯一索引<br>唯一索引是不允许其中任何两行具有相同索引值的索引。当现有数据中存在重复的键值时，大多数数据库不允许将新创建的唯一索引与表一起保存。数据库还可能防止添加将在表中创建重复键值的新数据。例如，如果在employee表中职员的姓(lname)上创建了唯一索引，则任何两个员工都不能同姓。</p>
+<p>主键索引<br>数据库表经常有一列或多列组合，其值唯一标识表中的每一行。该列称为表的主键。在数据库关系图中为表定义主键将自动创建主键索引，主键索引是唯一索引的特定类型。该索引要求主键中的每个值都唯一。当在查询中使用主键索引时，它还允许对数据的快速访问。</p>
+<p>聚集索引<br>在聚集索引中，表中行的物理顺序与键值的逻辑（索引）顺序相同。一个表只能包含一个聚集索引。如果某索引不是聚集索引，则表中行的物理顺序与键值的逻辑顺序不匹配。与非聚集索引相比，聚集索引通常提供更快的数据访问速度。聚集索引和非聚集索引的区别，如字典默认按字母顺序排序，读者如知道某个字的读音可根据字母顺序快速定位。因此聚集索引和表的内容是在一起的。如读者需查询某个生僻字，则需按字典前面的索引，举例按偏旁进行定位，找到该字对应的页数，再打开对应页数找到该字。这种通过两个地方而查询到某个字的方式就如非聚集索引。</p>
+<p>索引列<br>可以基于数据库表中的单列或多列创建索引。多列索引可以区分其中一列可能有相同值的行。如果经常同时搜索两列或多列或按两列或多列排序时，索引也很有帮助。例如，如果经常在同一查询中为姓和名两列设置判据，那么在这两列上创建多列索引将很有意义。</p>
+<h1 id="4、掌握关系数据库查询处理与查询优化方法。"><a href="#4、掌握关系数据库查询处理与查询优化方法。" class="headerlink" title="4、掌握关系数据库查询处理与查询优化方法。"></a>4、掌握关系数据库查询处理与查询优化方法。</h1><p>1、创建索引<br>对于查询占主要的应用来说，索引显得尤为重要。很多时候性能问题很简单的就是因为我们忘了添加索引而造成的，或者说没有添加更为有效的索引导致。如果不加索引的话，那么查找任何哪怕只是一条特定的数据都会进行一次全表扫描，如果一张表的数据量很大而符合条件的结果又很少，那么不加索引会引起致命的性能下降。但是也不是什么情况都非得建索引不可，比如性别可能就只有两个值，建索引不仅没什么优势，还会影响到更新速度，这被称为过度索引。<br>2、复合索引<br>比如有一条语句是这样的：select * from users where area=’beijing’ and age=22;<br>如果我们是在area和age上分别创建单个索引的话，由于mysql查询每次只能使用一个索引，所以虽然这样已经相对不做索引时全表扫描提高了很多效率，但是如果在area、age两列上创建复合索引的话将带来更高的效率。如果我们创建了(area, age, salary)的复合索引，那么其实相当于创建了(area,age,salary)、(area,age)、(area)三个索引，这被称为最佳左前缀特性。因此我们在创建复合索引时应该将最常用作限制条件的列放在最左边，依次递减。<br>3、索引不会包含有NULL值的列<br>只要列中包含有NULL值都将不会被包含在索引中，复合索引中只要有一列含有NULL值，那么这一列对于此复合索引就是无效的。所以我们在数据库设计时不要让字段的默认值为NULL。<br>4、使用短索引<br>对串列进行索引，如果可能应该指定一个前缀长度。例如，如果有一个CHAR(255)的 列，如果在前10 个或20 个字符内，多数值是惟一的，那么就不要对整个列进行索引。短索引不仅可以提高查询速度而且可以节省磁盘空间和I/O操作。<br>5、排序的索引问题<br>mysql查询只使用一个索引，因此如果where子句中已经使用了索引的话，那么order by中的列是不会使用索引的。因此数据库默认排序可以符合要求的情况下不要使用排序操作；尽量不要包含多个列的排序，如果需要最好给这些列创建复合索引。<br>6、like语句操作<br>一般情况下不鼓励使用like操作，如果非使用不可，如何使用也是一个问题。like “%aaa%” 不会使用索引而like “aaa%”可以使用索引。<br>7、不要在列上进行运算<br>select * from users where YEAR(adddate)&lt;2007;<br>将在每个行上进行运算，这将导致索引失效而进行全表扫描，因此我们可以改成<br>select * from users where adddate&lt;‘2007-01-01’;<br>8、不使用NOT IN和&lt;&gt;操作<br>NOT IN和&lt;&gt;操作都不会使用索引将进行全表扫描。NOT IN可以NOT EXISTS代替，id&lt;&gt;3则可使用id&gt;3 or id&lt;3来代替。</p>
+<h1 id="5、掌握关系数据库事务概念和事务调度方法。"><a href="#5、掌握关系数据库事务概念和事务调度方法。" class="headerlink" title="5、掌握关系数据库事务概念和事务调度方法。"></a>5、掌握关系数据库事务概念和事务调度方法。</h1><p>事务是将一组读写操作组合在一起形成一个逻辑单元。这些操作要么全部执行成功提交(commit)，要么全部中止失败(abort,rollback），不会留下一个中间状态的烂摊子。所以，失败后程序可以安全的重试，分析原因等。 相反，如果没有对事务的支持，数据库可能持久化很多中间状态，留下无法解释的业务，开发人员处理起来也很麻烦。所以，事务是为了简化编程，提供数据安全/正确性/一致性。当然，任何便利都是有代价的，事务也有一些问题，所以NoSQL数据库，分布式数据库在某种程度上会弱化事务。有些甚至完全放弃事务。</p>
+<h2 id="ACID特性"><a href="#ACID特性" class="headerlink" title="ACID特性"></a>ACID特性</h2><p>谈到事务，都想到ACID。每个字母分别代表原子性(Atomicity)，一致性(Consistency)，隔离性(Isolation)，持久性 (Durability)。搞清楚了ACID,就相当于搞清楚了事务的精髓。</p>
+<h2 id="事物的调度分类"><a href="#事物的调度分类" class="headerlink" title="事物的调度分类"></a>事物的调度分类</h2><p>并行执行：多个事物是可以同时执行的<br>串行执行：一个事物在执行的时候另外的事物必须等到当前事物执行完才能执行<br>串行执行会让运行效率低下，而并行执行会破坏数据库的一致性</p>
+<h2 id="交叉事物的控制（并行执行事物的控制）"><a href="#交叉事物的控制（并行执行事物的控制）" class="headerlink" title="交叉事物的控制（并行执行事物的控制）"></a>交叉事物的控制（并行执行事物的控制）</h2><p>乐观控制（乐观锁）<br>1.每次访问数据的时候，不加锁，都看做是在做读操作，其他事物也能访问当前事物访问的数据。这样就会造成数据不一致性，所以数据库为了使得数据一致性得到保证，在并发的修改了数据之后，数据库会对相关的数据进行回滚。<br>2.特点<br>采用的是事后做回滚操作解决冲突问题<br>事物的数据回滚可能造成级联回滚<br>在读操作占大多数的情况下，采用乐观控制效率会高</p>
+<p>悲观控制（悲观锁）<br>1.事物访问数据之前先对数据进行加锁，防止其他事物也访问当前的数据<br>2.特点<br>采用的是预防冲突发生的思想<br>采用悲观控制，除非死锁，否则事物肯定会成功<br>其他事物，在某些情况下也可以是读操作<br>悲观控制，就是严格的控制了其他事物对当前事物的访问，有效的避免了大量事物的回滚</p>
+<h2 id="锁（锁的实质：数据库对元素进行存取的许可证）"><a href="#锁（锁的实质：数据库对元素进行存取的许可证）" class="headerlink" title="锁（锁的实质：数据库对元素进行存取的许可证）"></a>锁（锁的实质：数据库对元素进行存取的许可证）</h2><h3 id="锁的分类"><a href="#锁的分类" class="headerlink" title="锁的分类"></a>锁的分类</h3><p>1.粒度：库锁，表锁，页锁，行锁  （粒度越大，并发性越差，开销越少；粒度越小，开销越大，并发越好）<br>2.强度<br>1.排他锁（独占锁，写锁）<br>某个事物T占有了元素A的排他锁，其他事物对元素A的任何锁请求都不会被允许，直到事物T释放了锁<br>事物T可以对A元素做写操作，也可以做读操作<br>2.共享锁（读锁）<br>某个事物T占有了元素A的共享锁，那么其他事物对元素A的共享锁请求可以成功，排他锁的请求会失败<br>事物T只能对元素A做读操作，不能做写操作<br>3.更新锁<br>是解决了锁升级带来的死锁问题<br>一个事物在查询数据的时候对这个元素加“更新锁”，当真正到了修改的时候将“更新锁”升级为“排他锁”，如果查询完成之后，觉得对元素不进行修改，会将锁降级了“共享锁”。<br>4.意向锁（能够解决加锁冲突）<br>T1事物对A表某一行加了共享锁，T2事物对A表加了排他锁，T2事物其实也隐含了对每一行的排他锁，这样就会造成加锁冲突<br>解决加锁层级上问题<br>分类：意向排他锁；意向共享锁<br>意向锁，在给表，页加锁的时候并不表明是排他， 还是共享，只有到了真正要执行的行数据的时候才会真正表明是“意向共享锁”或者是“意向排他锁”</p>
+<h3 id="锁的相兼容性"><a href="#锁的相兼容性" class="headerlink" title="锁的相兼容性"></a>锁的相兼容性</h3><p>1.一个元素可以加多个共享锁<br>2.一个元素只能加一个排他锁<br>3.一个元素不能同时加共享锁和排他锁</p>
+<h2 id="锁升级-降级"><a href="#锁升级-降级" class="headerlink" title="锁升级/降级"></a>锁升级/降级</h2><p>共享锁转成排他锁，锁升级<br>排他锁转成共享锁，锁降级</p>
+<h2 id="两段锁协议"><a href="#两段锁协议" class="headerlink" title="两段锁协议"></a>两段锁协议</h2><p>主要解决了：冲突事物的可串行话，简化加锁算法<br>定义：增长阶段，事物只能加锁，不能释放锁；收缩阶段，事物只能解锁，不能获得锁</p>
+<h2 id="加锁导致问题"><a href="#加锁导致问题" class="headerlink" title="加锁导致问题"></a>加锁导致问题</h2><p>问题：1.事物阻塞，等待；2.死锁<br>事物各自持有对方想要的锁，并且都在相互等待对方释放锁</p>
+<p>解决方式：<br>1.一次封锁发，事物一次就占据所有字资源，要么全部封锁，要么全不封锁<br>2.顺序加锁，定义锁的加锁顺序，只能这么来<br>3.时间戳</p>
+<h1 id="6、掌握数据库并发控制技术。"><a href="#6、掌握数据库并发控制技术。" class="headerlink" title="6、掌握数据库并发控制技术。"></a>6、掌握数据库并发控制技术。</h1><p><a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1663478291935672795&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1663478291935672795&amp;wfr=spider&amp;for=pc</a></p>
+<h1 id="7、了解非关系数据库背景、特点和分类。"><a href="#7、了解非关系数据库背景、特点和分类。" class="headerlink" title="7、了解非关系数据库背景、特点和分类。"></a>7、了解非关系数据库背景、特点和分类。</h1><p>NOSQL 即 Not Only SQL，可直译“不仅仅是 SQL”，这项技术正在掀起一场全新的数据库革命性运动。</p>
+<p>数据的模式包括多种类型，如层次模型、网状模型、关系模型等，而在实际应用过程中，几乎都是在用关系模型，主流的数据库系统都是关系型的。但随着互联网 web2.0 网站的兴起，传统的关系数据库在应付 web2.0 网站，特别是超大规模和高并发的 SNS 类型的 web2.0 纯动态网站已经显得力不从心，暴露了很多难以克服的问题，而非关系型的数据库则由于其本身的特点得到了非常迅速的发展。这也就使得 NOSQL 技术进入了人们的视野。</p>
+<p>NOSQL 的出现打破了长久以来关系型数据库与 ACID 理论大一统的局面。NOSQL 数据存储不需要固定的表结构，通常也不存在连接操作。在大数据存取上具备关系型数据库无法比拟的性能优势。</p>
+<p>关系型数据库中的表都是存储一些格式化的数据结构，每个元组字段的组成都一样，即使不是每个元组都需要所有的字段，但数据库会为每个元组分配所有的字段，这样的结构可以便于表与表之间进行连接等操作，但从另一个角度来说它也是关系型数据库性能瓶颈的个因素。而非关系型数据库以键值对存储，它的结构不固定，每一个元组可以有不一样的字段，每个元组可以根据需要增加一些自己的键值对，这样就不会局限于固定的结构，可以减少一些时间和空间的开销。</p>
+<p>与关系型数据库相比，NOSQL 数据库具有以下几个优点：<br>1.易扩展<br>NOSQL 数据库种类繁多，但是一个共同的特点都是去掉关系数据库的关系型特性。数据之间无关系，这样就非常容易扩展。无形之间，在架构的层面上带来了可扩展的能力<br>2.大数据量，高性能<br>NOSQL 数据库都具有非常高的读写性能，尤其在大数据量下，同样表现优秀。这得益于它的无关系性，数据库的结构简单。一般 MYSQL 使用 Query Cache，每次表一更新 Cache 就失效，它是一种大粒度的 Cache，在针对 web2.0 的交互频繁的应用，Cache 性能不高。而 NOSQL 的 Cache 是记录级的，是一种细粒度的 Cache，所以 NOSQL 在这个层面上来说性能就高很多了。<br>3.灵活的数据模型<br>NOSQL 无须事先为要存储的数据建立字段，随时可以存储自定义的数据格式。而在关系数据库里，增字段是一件非常麻烦的事情。如果是非常大数据量的表，增加字段简直就是一个梦。这点在大数据量的 web2.0 时代尤其明显。<br>4.高可用<br>NOSQL 在不太影响性能的情况，就可以方便地实现高可用的架构。比如 Cassandra  Hbase 模型，通过复制模型也能实现高可用。</p>
+<p>当然，NOSQL 也存在很多缺点，例如，并未形成一定标准，各种产品层出不穷，内部混乱，各种项目还需时间来检验，缺乏相关专家技术的支持等。</p>
+<p>对于非关系型数据库主要有四种数据存储类型：键值对存储（key-value），文档存储（document store），基于列的数据库（column-oriented），还有就是图形数据库（graph database）。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/15/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%85%AD%E3%80%81%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -323,371 +443,6 @@
 <h2 id="基于规则中数据的抽象层次"><a href="#基于规则中数据的抽象层次" class="headerlink" title="基于规则中数据的抽象层次"></a>基于规则中数据的抽象层次</h2><p>基于规则中数据的抽象层次，可以分为单层关联规则和多层关联规则。在单层的关联规则中，所有的变量都没有考虑到现实的数据是具有多个不同的层次的；而在多层的关联规则中，对数据的多层性已经进行了充分的考虑。例如：IBM台式机=&gt;Sony打印机，是一个细节数据上的单层关联规则；台式机=&gt;Sony打印机，是一个较高层次和细节层次之间的多层关联规则。</p>
 <h2 id="基于规则中涉及到的数据的维数"><a href="#基于规则中涉及到的数据的维数" class="headerlink" title="基于规则中涉及到的数据的维数"></a>基于规则中涉及到的数据的维数</h2><p>关联规则中的数据，可以分为单维的和多维的。在单维的关联规则中，我们只涉及到数据的一个维，如用户购买的物品；而在多维的关联规则中，要处理的数据将会涉及多个维。换成另一句话，单维关联规则是处理单个属性中的一些关系；多维关联规则是处理各个属性之间的某些关系。例如：啤酒=&gt;尿布，这条规则只涉及到用户的购买的物品；性别=“女”=&gt;职业=“秘书”，这条规则就涉及到两个字段的信息，是两个维上的一条关联规则。</p>
 
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/" class="post-title-link" itemprop="url">安全性和保密性设计（七）网络安全体系</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E5%AE%89%E5%85%A8%E6%80%A7%E8%A7%84%E7%AB%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E5%AE%89%E5%85%A8%E6%80%A7%E8%A7%84%E7%AB%A0/" class="post-title-link" itemprop="url">安全性和保密性设计（九）安全性规章</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92%E4%B8%8E%E9%98%B2%E6%B2%BB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%BA%94%EF%BC%89%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%97%85%E6%AF%92%E4%B8%8E%E9%98%B2%E6%B2%BB/" class="post-title-link" itemprop="url">安全性和保密性设计（五）计算机病毒与防治</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">安全性和保密性设计（八）系统的安全性设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AD%EF%BC%89%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AD%EF%BC%89%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E4%B8%8E%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6/" class="post-title-link" itemprop="url">安全性和保密性设计（六）身份认证与访问控制</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
       
     </div>
 
@@ -1031,6 +786,304 @@
 
       
           <h1 id="1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。"><a href="#1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。" class="headerlink" title="1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。"></a>1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。</h1><h1 id="2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握-TCP-IP-协议安全体系。"><a href="#2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握-TCP-IP-协议安全体系。" class="headerlink" title="2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握 TCP/IP 协议安全体系。"></a>2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握 TCP/IP 协议安全体系。</h1><h1 id="3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。"><a href="#3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。" class="headerlink" title="3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。"></a>3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。</h1><h1 id="4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。"><a href="#4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。" class="headerlink" title="4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。"></a>4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%9B%9B%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%9B%9B%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" class="post-title-link" itemprop="url">大数据安全（二）数据安全</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-15 09:45:00" itemprop="dateModified" datetime="2021-10-15T09:45:00+08:00">2021-10-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。"><a href="#1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。" class="headerlink" title="1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。"></a>1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。</h1><h2 id="大数据安全管理及安全需求的原则"><a href="#大数据安全管理及安全需求的原则" class="headerlink" title="大数据安全管理及安全需求的原则"></a>大数据安全管理及安全需求的原则</h2><p>“谁主管、谁负责”、“管行业必须管安全、管业务必须管安全、管生产经营必须管安全”和“分级负责、属地为主”的原则，履行安全生产工作职责，即“一岗双责”。</p>
+<h2 id="数据分类分级应满足以下原则："><a href="#数据分类分级应满足以下原则：" class="headerlink" title="数据分类分级应满足以下原则："></a>数据分类分级应满足以下原则：</h2><p>a）科学性。按照数据的多维特征及其相互间逻辑关联进行科学和系统地分类，按照大数据安全需求确定数据的安全等级。<br>b）稳定性。应以数据最稳定的特征和属性为依据制定分类和分级方案。<br>c）实用性。数据分类要确保每个类下要有数据，不设没有意义的类目，数据类目划分要符合对数据分类的普遍认识。数据分级要确保分级结果能够为数据保护提供有效信息，应提出分级安全要求。<br>d）扩展性。数据分类和分级方案在总体上应具有概括性和包容性，能够针对组织各种类型数据开展分类和分级，并满足将来可能出现的数据的分类和分级要求。</p>
+<h2 id="数据分类分级流程："><a href="#数据分类分级流程：" class="headerlink" title="数据分类分级流程："></a>数据分类分级流程：</h2><p>组织应结合自身业务特点，针对采集、存储和处理的数据，制定数据分类分级规范，规范应包含但不限于以下内容：<br>a）数据分类方法及指南；<br>b）数据分级详细清单，包含每类数据的初始安全级别；<br>c）数据分级保护的安全要求；</p>
+<p><img src="/images/bigdata/2-13.png"> </p>
+<h1 id="2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。"><a href="#2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。" class="headerlink" title="2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。"></a>2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。</h1><p>参考<a href="/2021/10/11/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%80%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84%E3%80%81%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84%E3%80%81%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86%EF%BC%88%E4%B8%89%EF%BC%89%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86/">[大数据法律法规、政策文件及相关标准（三）相关标准]</a> 《GB/T 37973-2019 信息安全技术 大数据安全管理指南》</p>
+<h1 id="3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。"><a href="#3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。" class="headerlink" title="3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。"></a>3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。</h1><h2 id="云存储安全体系"><a href="#云存储安全体系" class="headerlink" title="云存储安全体系"></a>云存储安全体系</h2><p>云计算平台将以分布式云存储为主，同时支持多种存储形态的融合管理，如配合特定场景下的高性能集中式存储，可满足不同业务场景的需求。存储资源池应实现多种异构存储资源的管理，将多种异构设备形成可按需分配的存储资源池；并以块存储、文件存储、分布式存储、对象存储等多种方式提供服务。<br>分布式存储系统将分散在不同物理服务器上的硬盘空间虚拟化成统一的云存储空间，并能对外提供多种形式的存储服务。分布式存储系统的功能要求如下：<br>1.应支持分布式架构，将普通 x86 服务器本地硬盘空间虚拟化成统一的存储资源池；<br>2.应提供在线增量扩容和自动数据平衡能力，允许建设位配置数据分布策略<br>3.应采用多管理节点设计，避免集群单点失效，自动进行故障监测和数据迁移<br>4.应具备高可扩展性，可支持上亿个文件和 PB 以上量级的文件存储；支持不重启系统，增加物理服务器后自动扩容<br>5.应支持数据副本自动冗余，能够提供按需定义的数据副本冗余份数；<br>6.应支持以块存储或对象存储方式接入。</p>
+<h1 id="4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。"><a href="#4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。" class="headerlink" title="4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。"></a>4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。</h1>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B8%83%EF%BC%89%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB/" class="post-title-link" itemprop="url">安全性和保密性设计（七）网络安全体系</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E5%AE%89%E5%85%A8%E6%80%A7%E8%A7%84%E7%AB%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E4%B9%9D%EF%BC%89%E5%AE%89%E5%85%A8%E6%80%A7%E8%A7%84%E7%AB%A0/" class="post-title-link" itemprop="url">安全性和保密性设计（九）安全性规章</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/14/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1%EF%BC%88%E5%85%AB%EF%BC%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%AE%89%E5%85%A8%E6%80%A7%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">安全性和保密性设计（八）系统的安全性设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-20 09:10:29" itemprop="dateModified" datetime="2021-10-20T09:10:29+08:00">2021-10-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
       
     </div>
 
