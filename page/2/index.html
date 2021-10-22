@@ -291,6 +291,110 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%BA%8C%EF%BC%89%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%EF%BC%88%E4%BA%8C%EF%BC%89%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/" class="post-title-link" itemprop="url">数据科学（二）统计学习与数据挖掘</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-18T00:00:00+08:00">2021-10-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-19 09:26:59" itemprop="dateModified" datetime="2021-10-19T09:26:59+08:00">2021-10-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、掌握感知机的定义和基本原理。"><a href="#1、掌握感知机的定义和基本原理。" class="headerlink" title="1、掌握感知机的定义和基本原理。"></a>1、掌握感知机的定义和基本原理。</h1><p>感知机是二分类的线性模型，其输入是实例的特征向量，输出的是事例的类别，分别是+1和-1，属于判别模型。</p>
+<p>假设训练数据集是线性可分的，感知机学习的目标是求得一个能够将训练数据集正实例点和负实例点完全正确分开的分离超平面。如果是非线性可分的数据，则最后无法获得超平面。感知机由Rosenblatt于1957年提出的，是神经网络和支持向量机的基础。</p>
+<p><img src="/images/bigdata/4-9.png"></p>
+<h1 id="2、掌握-Logistic-回归算法原理与特点，能够使用-Logistic-回归进行数据的分类建模与参数解释。"><a href="#2、掌握-Logistic-回归算法原理与特点，能够使用-Logistic-回归进行数据的分类建模与参数解释。" class="headerlink" title="2、掌握 Logistic 回归算法原理与特点，能够使用 Logistic 回归进行数据的分类建模与参数解释。"></a>2、掌握 Logistic 回归算法原理与特点，能够使用 Logistic 回归进行数据的分类建模与参数解释。</h1><p>Logistic回归虽然说是回归，但确是为了解决分类问题，是二分类任务的首选方法，简单来说，输出结果不是0就是1。</p>
+<p>逻辑回归（Logistic Regression）与线性回归（Linear Regression）都是一种广义线性模型（generalized linear model）。</p>
+<p>逻辑回归假设因变量 y 服从二项分布，而线性回归假设因变量 y 服从高斯分布。</p>
+<p>因此与线性回归有很多相同之处，去除Sigmoid映射函数的话，逻辑回归算法就是一个线性回归。</p>
+<p>可以说，逻辑回归是以线性回归为理论支持的，但是逻辑回归通过Sigmoid函数引入了非线性因素，因此可以轻松处理0/1分类问题。</p>
+<h1 id="3、掌握朴素贝叶斯算法的定义与基本原理。"><a href="#3、掌握朴素贝叶斯算法的定义与基本原理。" class="headerlink" title="3、掌握朴素贝叶斯算法的定义与基本原理。"></a>3、掌握朴素贝叶斯算法的定义与基本原理。</h1><p>贝叶斯方法是以贝叶斯原理为基础，使用概率统计的知识对样本数据集进行分类。由于其有着坚实的数学基础，贝叶斯分类算法的误判率是很低的。贝叶斯方法的特点是结合先验概率和后验概率，即避免了只使用先验概率的主观偏见，也避免了单独使用样本信息的过拟合现象。贝叶斯分类算法在数据集较大的情况下表现出较高的准确率，同时算法本身也比较简单。</p>
+<p>朴素贝叶斯分类（NBC）是以贝叶斯定理为基础并且假设特征条件之间相互独立的方法，先通过已给定的训练集，以特征词之间独立作为前提假设，学习从输入到输出的联合概率分布，再基于学习到的模型，输入 求出使得后验概率最大的输出 。</p>
+<p><img src="/images/bigdata/4-10.png"></p>
+<h1 id="4、掌握-k-近邻算法算法定义与原理。"><a href="#4、掌握-k-近邻算法算法定义与原理。" class="headerlink" title="4、掌握 k 近邻算法算法定义与原理。"></a>4、掌握 k 近邻算法算法定义与原理。</h1><p>给定测试样本，基于某种距离度量找出训练集中与其最靠近的k个训练样本，然后基于这k个”邻居”的信息来进行预测。<br>通俗点说：就是计算一个点与样本空间所有点之间的距离，取出与该点最近的k个点，然后统计这k个点里面所属分类比例最大的（“回归”里面使用平均法），则点A属于该分类。</p>
+<p>1、算距离： 给定测试对象，计算它与训练集中的每个对象的距离；<br>2、找邻居：圈定距离最近的k个训练对象，作为测试对象的近邻；<br>3、做分类：根据这k个近邻归属的主要类别，来对测试对象分类；</p>
+<p>欧氏距离、曼哈顿距离</p>
+<h1 id="5、掌握支持向量机（SVM）算法的思想与原理。"><a href="#5、掌握支持向量机（SVM）算法的思想与原理。" class="headerlink" title="5、掌握支持向量机（SVM）算法的思想与原理。"></a>5、掌握支持向量机（SVM）算法的思想与原理。</h1><p>支持向量机（Support Vector Machine, SVM）是一类按监督学习（supervised learning）方式对数据进行二元分类的广义线性分类器（generalized linear classifier），其决策边界是对学习样本求解的最大边距超平面（maximum-margin hyperplane）。</p>
+<p>SVM使用铰链损失函数（hinge loss）计算经验风险（empirical risk）并在求解系统中加入了正则化项以优化结构风险（structural risk），是一个具有稀疏性和稳健性的分类器。SVM可以通过核方法（kernel method）进行非线性分类，是常见的核学习（kernel learning）方法之一。</p>
+<p>SVM被提出于1964年，在二十世纪90年代后得到快速发展并衍生出一系列改进和扩展算法，在人像识别、文本分类等模式识别（pattern recognition）问题中有得到应用。</p>
+<h1 id="6、掌握决策树的算法的定义与原理，了解决策树的剪枝理论。"><a href="#6、掌握决策树的算法的定义与原理，了解决策树的剪枝理论。" class="headerlink" title="6、掌握决策树的算法的定义与原理，了解决策树的剪枝理论。"></a>6、掌握决策树的算法的定义与原理，了解决策树的剪枝理论。</h1><p>决策树(Decision Tree）是在已知各种情况发生概率的基础上，通过构成决策树来求取净现值的期望值大于等于零的概率，评价项目风险，判断其可行性的决策分析方法，是直观运用概率分析的一种图解法。由于这种决策分支画成图形很像一棵树的枝干，故称决策树。在机器学习中，决策树是一个预测模型，他代表的是对象属性与对象值之间的一种映射关系。</p>
+<p>决策树是一种树形结构，其中每个内部节点表示一个属性上的测试，每个分支代表一个测试输出，每个叶节点代表一种类别。</p>
+<p>分类树（决策树）是一种十分常用的分类方法。它是一种监督学习，所谓监督学习就是给定一堆样本，每个样本都有一组属性和一个类别，这些类别是事先确定的，那么通过学习得到一个分类器，这个分类器能够对新出现的对象给出正确的分类。这样的机器学习就被称之为监督学习。</p>
+<p>剪枝是决策树停止分支的方法之一，剪枝有分预先剪枝和后剪枝两种。预先剪枝是在树的生长过程中设定一个指标，当达到该指标时就停止生长，这样做容易产生“视界局限”，就是一旦停止分支，使得节点N成为叶节点，就断绝了其后继节点进行“好”的分支操作的任何可能性。不严格的说这些已停止的分支会误导学习算法，导致产生的树不纯度降差最大的地方过分靠近根节点。后剪枝中树首先要充分生长，直到叶节点都有最小的不纯度值为止，因而可以克服“视界局限”。然后对所有相邻的成对叶节点考虑是否消去它们，如果消去能引起令人满意的不纯度增长，那么执行消去，并令它们的公共父节点成为新的叶节点。这种“合并”叶节点的做法和节点分支的过程恰好相反，经过剪枝后叶节点常常会分布在很宽的层次上，树也变得非平衡。后剪枝技术的优点是克服了“视界局限”效应，而且无需保留部分样本用于交叉验证，所以可以充分利用全部训练集的信息。但后剪枝的计算量代价比预剪枝方法大得多，特别是在大样本集中，不过对于小样本的情况，后剪枝方法还是优于预剪枝方法的。</p>
+<h1 id="7、了解常见集成方法如-boosting、bagging-等。"><a href="#7、了解常见集成方法如-boosting、bagging-等。" class="headerlink" title="7、了解常见集成方法如 boosting、bagging 等。"></a>7、了解常见集成方法如 boosting、bagging 等。</h1><h2 id="Bagging"><a href="#Bagging" class="headerlink" title="Bagging:"></a>Bagging:</h2><p>Bagging即套袋法，其算法过程如下：<br>1、从原始样本集中抽取训练集。每轮从原始样本集中使用Bootstraping的方法抽取n个训练样本（在训练集中，有些样本可能被多次抽取到，而有些样本可能一次都没有被抽中）。共进行k轮抽取，得到k个训练集。（k个训练集之间是相互独立的）<br>2、每次使用一个训练集得到一个模型，k个训练集共得到k个模型。（注：这里并没有具体的分类算法或回归方法，我们可以根据具体问题采用不同的分类或回归方法，如决策树、感知器等）<br>3、对分类问题：将上步得到的k个模型采用投票的方式得到分类结果；对回归问题，计算上述模型的均值作为最后的结果。（所有模型的重要性相同）</p>
+<p>Boosting：<br>Boosting方式每次使用的是全部的样本，每轮训练改变样本的权重。下一轮训练的目标是找到一个函数f 来拟合上一轮的残差。当残差足够小或者达到设置的最大迭代次数则停止。Boosting会减小在上一轮训练正确的样本的权重，增大错误样本的权重。（对的残差小，错的残差大）<br>梯度提升的Boosting方式是使用代价函数对上一轮训练出的模型函数f的偏导来拟合残差。</p>
+<h1 id="8、掌握聚类分析的相关概念。"><a href="#8、掌握聚类分析的相关概念。" class="headerlink" title="8、掌握聚类分析的相关概念。"></a>8、掌握聚类分析的相关概念。</h1><p>聚类分析指将物理或抽象对象的集合分组为由类似的对象组成的多个类的分析过程。它是一种重要的人类行为。</p>
+<p>聚类分析的目标就是在相似的基础上收集数据来分类。聚类源于很多领域，包括数学，计算机科学，统计学，生物学和经济学。在不同的应用领域，很多聚类技术都得到了发展，这些技术方法被用作描述数据，衡量不同数据源间的相似性，以及把数据源分类到不同的簇中。</p>
+<h1 id="9、掌握主成分分析的原理。"><a href="#9、掌握主成分分析的原理。" class="headerlink" title="9、掌握主成分分析的原理。"></a>9、掌握主成分分析的原理。</h1><p>主成分分析（Principal Component Analysis，PCA）， 是一种统计方法。通过正交变换将一组可能存在相关性的变量转换为一组线性不相关的变量，转换后的这组变量叫主成分。</p>
+<p>在实际课题中，为了全面分析问题，往往提出很多与此有关的变量（或因素），因为每个变量都在不同程度上反映这个课题的某些信息。</p>
+<p>主成分分析首先是由K.皮尔森（Karl Pearson）对非随机变量引入的，尔后H.霍特林将此方法推广到随机向量的情形。信息的大小通常用离差平方和或方差来衡量。</p>
+<p>在用统计分析方法研究多变量的课题时，变量个数太多就会增加课题的复杂性。人们自然希望变量个数较少而得到的信息较多。在很多情形，变量之间是有一定的相关关系的，当两个变量之间有一定相关关系时，可以解释为这两个变量反映此课题的信息有一定的重叠。主成分分析是对于原先提出的所有变量，将重复的变量（关系紧密的变量）删去多余，建立尽可能少的新变量，使得这些新变量是两两不相关的，而且这些新变量在反映课题的信息方面尽可能保持原有的信息。</p>
+<p>设法将原来变量重新组合成一组新的互相无关的几个综合变量，同时根据实际需要从中可以取出几个较少的综合变量尽可能多地反映原来变量的信息的统计方法叫做主成分分析或称主分量分析，也是数学上用来降维的一种方法。</p>
+<h1 id="10、了解生成式半监督学习方法、半监督-SVM、图半监督学习方法的思想与原理。"><a href="#10、了解生成式半监督学习方法、半监督-SVM、图半监督学习方法的思想与原理。" class="headerlink" title="10、了解生成式半监督学习方法、半监督 SVM、图半监督学习方法的思想与原理。"></a>10、了解生成式半监督学习方法、半监督 SVM、图半监督学习方法的思想与原理。</h1><p>半监督学习(Semi-Supervised Learning，SSL)是模式识别和机器学习领域研究的重点问题，是监督学习与无监督学习相结合的一种学习方法。半监督学习使用大量的未标记数据，以及同时使用标记数据，来进行模式识别工作。当使用半监督学习时，将会要求尽量少的人员来从事工作，同时，又能够带来比较高的准确性，因此，半监督学习正越来越受到人们的重视。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%85%AB%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -830,6 +934,79 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/" class="post-title-link" itemprop="url">信息化基础知识（二）电子商务</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-14 00:00:00 / 修改时间：14:30:57" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、电子商务的概念及基本特征"><a href="#1、电子商务的概念及基本特征" class="headerlink" title="1、电子商务的概念及基本特征"></a>1、电子商务的概念及基本特征</h1><h2 id="（1）熟悉电子商务的概念"><a href="#（1）熟悉电子商务的概念" class="headerlink" title="（1）熟悉电子商务的概念"></a>（1）熟悉电子商务的概念</h2><p>电子商务（Electronic Commerce，EC）是指买卖双方利用现代开放的 Internet，按照一 定的标准所进行的各类商业活动。主要包括网上购物、企业之间的网上交易和在线电子支付 等新型的商业运营模式。产品可以是实体化的，如计算机、汽车、电视，也可以是数字化的， 如新闻、影像、软件；也可以直接提供服务，如安排旅游、远程教育等。</p>
+<h2 id="（2）熟悉电子商务的基本特征"><a href="#（2）熟悉电子商务的基本特征" class="headerlink" title="（2）熟悉电子商务的基本特征"></a>（2）熟悉电子商务的基本特征</h2><p>电子商务分三个方面：即电子商情广告、电子选购和交易及电子交易凭证的交换、电子支付与结算以及网上售后服务等。<br>参与电子商务的实体有四类：顾客（个人消费者或集团购买）、商户（包括销售商、制造商、储运商）、银行（包括发卡行、收单行）及认证中心。</p>
+<h1 id="2、电子商务的类型"><a href="#2、电子商务的类型" class="headerlink" title="2、电子商务的类型"></a>2、电子商务的类型</h1><h2 id="（1）熟悉企业与企业之间的电子商务（B2B）模式"><a href="#（1）熟悉企业与企业之间的电子商务（B2B）模式" class="headerlink" title="（1）熟悉企业与企业之间的电子商务（B2B）模式"></a>（1）熟悉企业与企业之间的电子商务（B2B）模式</h2><p>两个或若干个有业务联 系的公司通过 B2B 模式彼此连接起来，形成网上的虚拟企业圈。例如，企业利用计算机网 络向它的供应商进行采购，或利用计算机网络进行付款等。B2B 具有很强的实时商务处理 能力，使企业能以一种安全、可靠、简便、快捷的方式进行企业间的商务联系活动。</p>
+<h2 id="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"><a href="#（2）熟悉商业企业与消费者之间的电子商务（B2C）模式" class="headerlink" title="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"></a>（2）熟悉商业企业与消费者之间的电子商务（B2C）模式</h2><p>企业与消费者之间的电子商务是人们最熟悉的一种电子商务类型。网上商店利用 Internet 提供的双向交互通信，完成网上购物的过程。这类电子商务主要是借助于 Internet 所开展的在线式销售活动。最近几年随着 Internet 的发展，这类电子商务的发展异军突起。例如，在 Internet 上目前 已出现许多大型超级市场，所出售的产品一应俱全，从食品、饮料到电脑、汽车等，几乎包 括了所有的消费品。由于这种模式节省了客户和企业双方的时间和空间，大大提高了交易效率，节省了各类不必要的开支，因而这类模式得到了人们的认同，获得了迅速的发展。</p>
+<h2 id="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"><a href="#（3）熟悉消费者与消费者之间的电子商务（C2C）模式" class="headerlink" title="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"></a>（3）熟悉消费者与消费者之间的电子商务（C2C）模式</h2><p>C2C 电子商务平 台就是通过为买卖双方提供一个在线交易平台，使卖方可以主动提供商品上网拍卖，而买方 可以自行选择商品进行竞价。</p>
+<h2 id="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式"><a href="#（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式" class="headerlink" title="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式"></a>（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式</h2><p>O2O是指将线下的商务机会与互联 网结合，让互联网成为线下交易的平台，这个概念最早来源于美国。O2O 的概念非常广泛， 既可涉及到线上，又可涉及到线下,可以称为 O2O。如团购就属于一种典型的 O2O。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E5%9B%9B%EF%BC%89%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -946,79 +1123,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%EF%BC%88%E4%BA%8C%EF%BC%89%E7%94%B5%E5%AD%90%E5%95%86%E5%8A%A1/" class="post-title-link" itemprop="url">信息化基础知识（二）电子商务</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-10-14 00:00:00 / 修改时间：14:30:57" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1、电子商务的概念及基本特征"><a href="#1、电子商务的概念及基本特征" class="headerlink" title="1、电子商务的概念及基本特征"></a>1、电子商务的概念及基本特征</h1><h2 id="（1）熟悉电子商务的概念"><a href="#（1）熟悉电子商务的概念" class="headerlink" title="（1）熟悉电子商务的概念"></a>（1）熟悉电子商务的概念</h2><p>电子商务（Electronic Commerce，EC）是指买卖双方利用现代开放的 Internet，按照一 定的标准所进行的各类商业活动。主要包括网上购物、企业之间的网上交易和在线电子支付 等新型的商业运营模式。产品可以是实体化的，如计算机、汽车、电视，也可以是数字化的， 如新闻、影像、软件；也可以直接提供服务，如安排旅游、远程教育等。</p>
-<h2 id="（2）熟悉电子商务的基本特征"><a href="#（2）熟悉电子商务的基本特征" class="headerlink" title="（2）熟悉电子商务的基本特征"></a>（2）熟悉电子商务的基本特征</h2><p>电子商务分三个方面：即电子商情广告、电子选购和交易及电子交易凭证的交换、电子支付与结算以及网上售后服务等。<br>参与电子商务的实体有四类：顾客（个人消费者或集团购买）、商户（包括销售商、制造商、储运商）、银行（包括发卡行、收单行）及认证中心。</p>
-<h1 id="2、电子商务的类型"><a href="#2、电子商务的类型" class="headerlink" title="2、电子商务的类型"></a>2、电子商务的类型</h1><h2 id="（1）熟悉企业与企业之间的电子商务（B2B）模式"><a href="#（1）熟悉企业与企业之间的电子商务（B2B）模式" class="headerlink" title="（1）熟悉企业与企业之间的电子商务（B2B）模式"></a>（1）熟悉企业与企业之间的电子商务（B2B）模式</h2><p>两个或若干个有业务联 系的公司通过 B2B 模式彼此连接起来，形成网上的虚拟企业圈。例如，企业利用计算机网 络向它的供应商进行采购，或利用计算机网络进行付款等。B2B 具有很强的实时商务处理 能力，使企业能以一种安全、可靠、简便、快捷的方式进行企业间的商务联系活动。</p>
-<h2 id="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"><a href="#（2）熟悉商业企业与消费者之间的电子商务（B2C）模式" class="headerlink" title="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"></a>（2）熟悉商业企业与消费者之间的电子商务（B2C）模式</h2><p>企业与消费者之间的电子商务是人们最熟悉的一种电子商务类型。网上商店利用 Internet 提供的双向交互通信，完成网上购物的过程。这类电子商务主要是借助于 Internet 所开展的在线式销售活动。最近几年随着 Internet 的发展，这类电子商务的发展异军突起。例如，在 Internet 上目前 已出现许多大型超级市场，所出售的产品一应俱全，从食品、饮料到电脑、汽车等，几乎包 括了所有的消费品。由于这种模式节省了客户和企业双方的时间和空间，大大提高了交易效率，节省了各类不必要的开支，因而这类模式得到了人们的认同，获得了迅速的发展。</p>
-<h2 id="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"><a href="#（3）熟悉消费者与消费者之间的电子商务（C2C）模式" class="headerlink" title="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"></a>（3）熟悉消费者与消费者之间的电子商务（C2C）模式</h2><p>C2C 电子商务平 台就是通过为买卖双方提供一个在线交易平台，使卖方可以主动提供商品上网拍卖，而买方 可以自行选择商品进行竞价。</p>
-<h2 id="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式"><a href="#（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式" class="headerlink" title="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式"></a>（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式</h2><p>O2O是指将线下的商务机会与互联 网结合，让互联网成为线下交易的平台，这个概念最早来源于美国。O2O 的概念非常广泛， 既可涉及到线上，又可涉及到线下,可以称为 O2O。如团购就属于一种典型的 O2O。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%9B%9B%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%EF%BC%88%E4%B8%80%EF%BC%89%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1074,85 +1178,6 @@
 
       
           <h1 id="1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。"><a href="#1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。" class="headerlink" title="1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。"></a>1、熟悉网络安全的一些基本概念、基本属性及网络安全模型等；了解网络安全评估；掌握各种类型的网络安全服务。</h1><h1 id="2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握-TCP-IP-协议安全体系。"><a href="#2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握-TCP-IP-协议安全体系。" class="headerlink" title="2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握 TCP/IP 协议安全体系。"></a>2、了解网络安全体系的安全服务、安全机制、安全服务配置和安全管理等；掌握 TCP/IP 协议安全体系。</h1><h1 id="3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。"><a href="#3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。" class="headerlink" title="3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。"></a>3、熟悉各种网络安全技术的概念，了解物理安全、网络安全设备、系统安全、应用安全的技术知识。</h1><h1 id="4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。"><a href="#4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。" class="headerlink" title="4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。"></a>4、了解网络安全运维与保障的框架、基本原理等知识，掌握安全管理的技术、设施、工具和方法。</h1>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%9B%9B%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%9B%9B%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%EF%BC%88%E4%BA%8C%EF%BC%89%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" class="post-title-link" itemprop="url">大数据安全（二）数据安全</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-15 09:45:00" itemprop="dateModified" datetime="2021-10-15T09:45:00+08:00">2021-10-15</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。"><a href="#1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。" class="headerlink" title="1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。"></a>1、了解大数据安全管理及安全需求的原则，掌握数据安全分类、定级的原则和方法。</h1><h2 id="大数据安全管理及安全需求的原则"><a href="#大数据安全管理及安全需求的原则" class="headerlink" title="大数据安全管理及安全需求的原则"></a>大数据安全管理及安全需求的原则</h2><p>“谁主管、谁负责”、“管行业必须管安全、管业务必须管安全、管生产经营必须管安全”和“分级负责、属地为主”的原则，履行安全生产工作职责，即“一岗双责”。</p>
-<h2 id="数据分类分级应满足以下原则："><a href="#数据分类分级应满足以下原则：" class="headerlink" title="数据分类分级应满足以下原则："></a>数据分类分级应满足以下原则：</h2><p>a）科学性。按照数据的多维特征及其相互间逻辑关联进行科学和系统地分类，按照大数据安全需求确定数据的安全等级。<br>b）稳定性。应以数据最稳定的特征和属性为依据制定分类和分级方案。<br>c）实用性。数据分类要确保每个类下要有数据，不设没有意义的类目，数据类目划分要符合对数据分类的普遍认识。数据分级要确保分级结果能够为数据保护提供有效信息，应提出分级安全要求。<br>d）扩展性。数据分类和分级方案在总体上应具有概括性和包容性，能够针对组织各种类型数据开展分类和分级，并满足将来可能出现的数据的分类和分级要求。</p>
-<h2 id="数据分类分级流程："><a href="#数据分类分级流程：" class="headerlink" title="数据分类分级流程："></a>数据分类分级流程：</h2><p>组织应结合自身业务特点，针对采集、存储和处理的数据，制定数据分类分级规范，规范应包含但不限于以下内容：<br>a）数据分类方法及指南；<br>b）数据分级详细清单，包含每类数据的初始安全级别；<br>c）数据分级保护的安全要求；</p>
-<p><img src="/images/bigdata/2-13.png"> </p>
-<h1 id="2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。"><a href="#2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。" class="headerlink" title="2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。"></a>2、了解数据采集、存储、处理、分发、删除等活动的概念，了解相关安全技术与安全要求。</h1><p>参考<a href="/2021/10/11/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%80%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84%E3%80%81%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84%E3%80%81%E6%94%BF%E7%AD%96%E6%96%87%E4%BB%B6%E5%8F%8A%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86%EF%BC%88%E4%B8%89%EF%BC%89%E7%9B%B8%E5%85%B3%E6%A0%87%E5%87%86/">[大数据法律法规、政策文件及相关标准（三）相关标准]</a> 《GB/T 37973-2019 信息安全技术 大数据安全管理指南》</p>
-<h1 id="3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。"><a href="#3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。" class="headerlink" title="3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。"></a>3、熟悉云存储安全体系、数据生命周期中的安全风险、保障云存储安全的原则及云计算边界安全相关的概念及云计算安全架构。</h1><h2 id="云存储安全体系"><a href="#云存储安全体系" class="headerlink" title="云存储安全体系"></a>云存储安全体系</h2><p>云计算平台将以分布式云存储为主，同时支持多种存储形态的融合管理，如配合特定场景下的高性能集中式存储，可满足不同业务场景的需求。存储资源池应实现多种异构存储资源的管理，将多种异构设备形成可按需分配的存储资源池；并以块存储、文件存储、分布式存储、对象存储等多种方式提供服务。<br>分布式存储系统将分散在不同物理服务器上的硬盘空间虚拟化成统一的云存储空间，并能对外提供多种形式的存储服务。分布式存储系统的功能要求如下：<br>1.应支持分布式架构，将普通 x86 服务器本地硬盘空间虚拟化成统一的存储资源池；<br>2.应提供在线增量扩容和自动数据平衡能力，允许建设位配置数据分布策略<br>3.应采用多管理节点设计，避免集群单点失效，自动进行故障监测和数据迁移<br>4.应具备高可扩展性，可支持上亿个文件和 PB 以上量级的文件存储；支持不重启系统，增加物理服务器后自动扩容<br>5.应支持数据副本自动冗余，能够提供按需定义的数据副本冗余份数；<br>6.应支持以块存储或对象存储方式接入。</p>
-<h1 id="4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。"><a href="#4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。" class="headerlink" title="4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。"></a>4、了解大数据安全与防护保障机制、大数据安全审计、大数据安全评估与安全管理系统。</h1>
       
     </div>
 
