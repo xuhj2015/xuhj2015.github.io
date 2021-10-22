@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1、物联网（1）掌握物联网的概念物联网（The Internet of Things，IoT）是实现物物相连的互联网络。其内涵包含两个方面：第一，物联网的核心和基础仍然是互联网，是在互联网基础上延伸和扩展的网络；第二，其用户端延伸和扩展到了任何物体与物体之间，使其进行信息交换和通信。物联网是将无处不在的末端设备和设施，包括具备“内在智能”的传感器、移动终端、工业系统、楼控系统、家庭智能设施、视频监">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信息化基础知识（三）新一代信息技术">
+<meta property="og:url" content="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%89)%E6%96%B0%E4%B8%80%E4%BB%A3%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="1、物联网（1）掌握物联网的概念物联网（The Internet of Things，IoT）是实现物物相连的互联网络。其内涵包含两个方面：第一，物联网的核心和基础仍然是互联网，是在互联网基础上延伸和扩展的网络；第二，其用户端延伸和扩展到了任何物体与物体之间，使其进行信息交换和通信。物联网是将无处不在的末端设备和设施，包括具备“内在智能”的传感器、移动终端、工业系统、楼控系统、家庭智能设施、视频监">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/bigdata/2-11.jpeg">
+<meta property="article:published_time" content="2021-10-13T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-14T06:30:57.723Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="大数据考试-信息化基础知识">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/bigdata/2-11.jpeg">
+
+<link rel="canonical" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%89)%E6%96%B0%E4%B8%80%E4%BB%A3%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>信息化基础知识（三）新一代信息技术 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%89)%E6%96%B0%E4%B8%80%E4%BB%A3%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          信息化基础知识（三）新一代信息技术
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-10-14 00:00:00 / 修改时间：14:30:57" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1、物联网"><a href="#1、物联网" class="headerlink" title="1、物联网"></a>1、物联网</h1><h2 id="（1）掌握物联网的概念"><a href="#（1）掌握物联网的概念" class="headerlink" title="（1）掌握物联网的概念"></a>（1）掌握物联网的概念</h2><p>物联网（The Internet of Things，IoT）是实现物物相连的互联网络。其内涵包含两个方面：第一，物联网的核心和基础仍然是互联网，是在互联网基础上延伸和扩展的网络；第二，其用户端延伸和扩展到了任何物体与物体之间，使其进行信息交换和通信。<br>物联网是将无处不在的末端设备和设施，包括具备“内在智能”的传感器、移动终端、工业系统、楼控系统、家庭智能设施、视频监控系统等和“外在使能”的，如贴上RFID的各种资产、携带无线终端的个人与车辆等“智能化物件或动物”或“智能尘埃”，通过各种无线、有线的长距离/短距离通信网络实现互联互通、应用大集成，以及基于云计算的SaaS营运等模式。提供安全可控乃至个性化的实时在线监测、定位追溯、报警联动、调度指挥、预案管理、远程控制、安全防范、远程维保、在线升级、统计报表、决策支持等管理和服务功能。实现对“万物”的“高效、节能、安全、环保”的“管、控、营”一体化。</p>
+<h2 id="（2）熟悉物联网架构"><a href="#（2）熟悉物联网架构" class="headerlink" title="（2）熟悉物联网架构"></a>（2）熟悉物联网架构</h2><p>物联网可以分为三个层次，底层是用来感知数据的感知层，即利用传感器、二维码、RFID等设备随时随地获取物体的信息。第二层是数据传输处理的网络层，即通过各种传感网络与互联网的融合，将物体当前的信息实时准确地传递出去。第三层则是与行业需求结合的应用层，即通过智能计算、云计算等对物体进行智能化控制。<br>1．感知层<br>感知层用于识别物体、采集信息。感知层包括二维码标签和识读器、RFID标签和读写器、摄像头、GPS、传感器、M2M终端、传感器网关等，主要功能是识别物体、采集信息，与人体结构中皮肤和五官的作用类似。<br>感知层解决的是人类世界和物理世界的数据获取问题。它首先通过传感器、数码相机等设备，采集外部物理世界的数据，然后通过RFID、条码、工业现场总线、蓝牙、红外等短距离传输技术传递数据。感知层所需要的关键技术包括检测技术、短距离无线通信技术等。<br>对于目前关注和应用较多的RFID网络来说，附着在设备上的RFID标签和用来识别RFID信息的扫描仪、感应器都属于物联网的感知层。在这一类物联网中被检测的信息就是RFID标签的内容，现在的电子不停车收费系统（Electronic Toll Collection，ETC）、超市仓储管理系统、飞机场的行李自动分类系统等都用到了这个层次的设备。<br>2．网络层<br>网络层用于传递信息和处理信息。网络层包括通信网与互联网的融合网络、网络管理中心、信息中心和智能处理中心等。网络层将感知层获取的信息进行传递和处理，类似于人体结构中的神经中枢和大脑。<br>网络层解决的是传输和预处理感知层所获得数据的问题。这些数据可以通过移动通信网、互联网、企业内部网、各类专网、小型局域网等进行传输。特别是在三网融合后，有线电视网也能承担物联网网络层的功能，有利于物联网的加快推进。网络层所需要的关键技术包括长距离有线和无线通信技术、网络技术等。<br>物联网的网络层将建立在现有的移动通信网和互联网基础上。物联网通过各种接入设备与移动通信网和互联网相连，例如，手机付费系统中由刷卡设备将内置手机的RFID信息采集上传到互联网，网络层完成后台鉴权认证，并从银行网络划账。<br>网络层中的感知数据管理与处理技术是实现以数据为中心的物联网的核心技术，包括传感网数据的存储、查询、分析、挖掘和理解，以及基于感知数据决策的理论与技术。云计算平台作为海量感知数据的存储、分析平台，将是物联网网络层的重要组成部分，也是应用层众多应用的基础。在产业链中，通信网络运营商和云计算平台提供商将在物联网网络层占据重要的地位。<br>3．应用层<br>应用层实现广泛智能化。应用层是物联网与行业专业技术的深度融合，结合行业需求实现行业智能化，这类似于人们的社会分工。<br>物联网应用层利用经过分析处理的感知数据，为用户提供丰富的特定服务。物联网的应用可分为监控型（物流监控、污染监控）、查询型（智能检索、远程抄表）、控制型（智能交通、智能家居、路灯控制）和扫描型（手机钱包、高速公路不停车收费）等。<br>应用层解决的是信息处理和人机交互的问题。网络层传输而来的数据在这一层进入各类信息系统进行处理，并通过各种设备与人进行交互。这一层也可按形态直观地划分为两个子层。一个是应用程序层，进行数据处理，它涵盖了国民经济和社会的每一领域，包括电力、医疗、银行、交通、环保、物流、工业、农业、城市管理、家居生活等，其功能可包括支付、监控、安保、定位、盘点、预测等，可用于政府、企业、社会组织、家庭、个人等。这正是物联网作为深度信息化的重要体现。另一个是终端设备层，提供人机接口。物联网虽然是“物物相连的网”，但最终要以人为本，还是需要人的操作与控制，不过这里的人机界面已远远超出现实中人与计算机交互的概念，而是泛指与应用程序相连的各种设备与人的交互。<br>应用层是物联网发展的体现，软件开发、智能控制技术将会为用户提供丰富多彩的物联网应用。各种行业和家庭应用的开发将会推动物联网的普及，也给整个物联网产业链带来丰厚的利润。</p>
+<h2 id="（3）了解物联网技术的应用"><a href="#（3）了解物联网技术的应用" class="headerlink" title="（3）了解物联网技术的应用"></a>（3）了解物联网技术的应用</h2><h3 id="物联网技术"><a href="#物联网技术" class="headerlink" title="物联网技术"></a>物联网技术</h3><p>1．射频识别技术<br>射频识别技术（Radio Frequency Identification，RFID），又称电子标签，是一种通信技术，可通过无线电信号识别特定目标并读写相关数据，而无须识别系统与特定目标之间建立机械或光学接触。该技术是物联网的一项核心技术，很多物联网应用都离不开它。<br>最初在技术领域，应答器是指能够传输信息、回复信息的电子模块，近些年，由于射频技术发展迅猛，应答器有了新的说法和含义，又称为智能标签或标签。RFID电子阅读器（读写器）通过天线与RFID电子标签进行无线通信，可以实现对标签识别码和内存数据的读出或写入操作。典型的阅读器包含有高频模块（发送器和接收器）、控制单元及阅读器天线。RFID采用的是非接触的自动识别技术，它通过射频信号自动识别目标对象并获取相关数据，识别工作无须人工干预，可工作于各种恶劣环境。RFID技术可识别高速运动物并可同时识别多个标签，操作快捷方便。这种系统一般由一个询问器（或阅读器）和很多应答器（或标签）组成。RFID的基本组成部分通常包括标签、阅读器和天线。（1）标签（Tag）：由耦合元件及芯片组成，每个标签具有唯一的电子编码，附着在物体上标识目标对象。（2）阅读器（Reader）：读取（有时还可以写入）标签信息的设备，可设计为手持式或固定式。</p>
+<p>（3）天线（Antenna）：在标签和读取器间传递射频信号。<br>RFID技术的基本工作原理并不复杂：标签进入磁场后，接收解读器发出的射频信号，凭借感应电流所获得的能量发送出存储在芯片中的产品信息（Passive Tag，无源标签或被动标签），或者由标签主动发送某一频率的信号（Active Tag，有源标签或主动标签），解读器读取信息并解码后，送至中央信息系统进行有关数据处理。<br>一套完整的RFID系统，是由阅读器与电子标签（即应答器）及应用软件系统三个部分组成的，其工作原理是Reader发射一特定频率的无线电波能量给Transponder，用以驱动Transponder电路将内部的数据送出，此时Reader便依序接收解读数据，送给应用程序作相应的处理。<br>以RFID卡片阅读器及电子标签之间的通信及能量感应方式来看大致上可以分成：感应耦合（Inductive Coupling）及后向散射耦合（Backscatter Coupling）两种。一般低频的RFID大都采用第一种方式，而较高频大多采用第二种方式。<br>阅读器根据使用的结构和技术不同可以是读或读/写装置，也是RFID系统信息控制和处理中心。阅读器通常由耦合模块、收发模块、控制模块和接口单元组成。阅读器和应答器之间一般采用半双工通信方式进行信息交换，同时阅读器通过耦合给无源应答器提供能量和时序。在实际应用中，可进一步通过Ethernet或WLAN等实现对物体识别信息的采集、处理及远程传送等管理功能。应答器是RFID系统的信息载体，目前应答器大多由耦合原件（线圈、微带天线等）和微芯片组成无源单元。</p>
+<p>2．二维码技术<br>二维码（2-dimensional bar code），如图21-1所示。它是用某种特定的几何图形按一定规律在平面（二维方向上）分布的记录数据符号信息的黑白相间的图形。在代码编制上巧妙地利用构成计算机内部逻辑基础的“0”、“1”比特流的概念，使用若干个与二进制相对应的几何形体来表示文字数值信息，通过图像输入设备或光电扫描设备自动识读以实现信息自动处理。1.png<br>二维码具有条码技术的一些共性：每种码制有其特定的字符集、每个字符占有一定的宽度、具有一定的校验功能等。同时还具有对不同行的信息自动识别功能及处理图形旋转变化等特点。在许多种类的二维条码中，常用的码制有 Data Matrix、Maxi Code、Aztec、 QR Code、 Vericode、PDF417、Ultracode、Code 49、Code 16K 等，QR 码是1994年由日本Denso-Wave公司发明的。QR来自英文 Quick Response 的缩写，即快速反应的意思，源自发明者希望QR码可让其内容快速被解码。QR码最常见于日本、韩国，是目前日本最流行的二维空间条码。<br>二维条码/二维码能够在横向和纵向两个方位同时表达信息，因此能在很小的面积内表达大量的信息。其信息量远远超过原来的条码技术，原来的条码技术仅能存储十多个字符，而二维码存储容量可达数千字符。以PDF417编码格式为例：若采用扩展的字母数字压缩格式，可容纳1850个字符；若采用二进制/ASCII格式，可容纳1108字节；若采用数字压缩格式，可容纳2710个数字。</p>
+<p>3．传感网<br>传感网是由随机分布的，集成有传感器（传感器有很多种类型，包括温度、湿度、速度、气敏等）、数据处理单元和通信单元的微小节点，通过自组织的方式构成的无线网络。<br>传感网借助于节点中内置的传感器测量周边环境中的热、红外、声呐、雷达和地震波信号，从而探测包括温度、湿度、噪声、光强度、压力、土壤成分、移动物体的大小、速度和方向等物质现象。它给我们的生活带来了深刻的变化。然而在目前，网络功能再强大，网络世界再丰富，也终究是虚拟的，它与我们所生活的现实世界还是相隔的，在网络世界中，很难感知现实世界，很多事情还是不可能的，时代呼唤着新的网络技术。传感网络正是在这样的背景下应运而生的全新网络技术，它综合了传感器、低功耗、通信及微机电等技术，将现实的世界与虚拟的网络世界联系起来，达到很多意想不到的效果。目前传感网技术已广泛应用于石油、化工、电力、医药、生物、航空、航天、国防、能源、冶金、电子等众多行业。可以预见，在不久的将来，传感网络将给我们的生活方式带来革命性的变化。</p>
+<p>4．M2M<br>简单地说，M2M是将数据从一台终端传送到另一台终端，也就是机器与机器（Machine to Machine）的对话。但从广义上讲 M2M 可代表机器对机器（Machine to Machine）、人对机器（Man to Machine）、机器对人（Machine to Man）、移动网络对机器（Mobile to Machine） 之间的连接与通信，它涵盖了所有实现在人、机器、系统之间建立通信连接的技术和手段。<br>M2M强调的是在商业活动中通过移动通信技术和设备的应用变革既有商务模式或创造出新商务模式，是机器设备间的自动通信。现在，M2M应用遍及电力、交通、工业控制、零售、公共事业管理、医疗、水利、石油等多个行业，对于车辆防盗、安全监测、自动售货、机械维修、公共交通管理等，M2M可以说是无所不能。<br>M2M不是简单的数据在机器和机器之间的传输，更重要的是，它是机器和机器之间的一种智能化、交互式的通信。也就是说，即使人们没有实时发出信号，机器也会根据既定程序主动进行通信，并根据所得到的数据智能化地作出选择，对相关设备发出正确的指令。可以说，智能化、交互式成为了M2M有别于其他应用的典型特征，这一特征下的机器也被赋予了更多的“思想”和“智慧”。<br>M2M的发展前景非常好，因为在当今世界上，机器的数量至少是人的数量的4倍以上，机器将替代人做更多的事情，这意味着巨大的市场潜力。<br>在国内，也有一些企业很早就开始应用M2M技术。三一重工对M2M的应用比较成功，三一重工在其销往全球各地的工程机械（关键部位或关键部件）上加装数据采集终端。机械的运行数据通过电信运营商网络汇总到三一集团企业控制中心（ Enterprise Control Center，ECC），实现对工程设备作业状况的实时监控。这样，企业控制中心可以随时发现设备运行中存在的问题（如工程机械设备上智能设备控制器检测到的油温、转速、工作压力等运行数据信息异常），并就问题立即指导客户排除故障或派出维修人员上门服务。</p>
+<h3 id="物联网的应用"><a href="#物联网的应用" class="headerlink" title="物联网的应用"></a>物联网的应用</h3><p>物联网用途广泛，遍及智能交通、环境保护、政府工作、公共安全、平安家居、智能消防、工业监测、老人护理、个人健康等多个领域。在生产生活中的应用举不胜举，下面简述几个比较典型的应用。</p>
+<p>目前食品安全是一个被大众所关注的主题，即便是超市的食品，人们也很难弄清楚这些食品的来源，以及相关情况。当物联网体系建立好以后，超市里销售的禽、肉、蛋、奶，在包装上可以嵌入微型感应器，顾客只需用手机扫描，就能了解食品的产地和转运、加工的时间地点，甚至还能显示加工环境的照片，是否绿色安全，一目了然。在医疗方面，也可以应用物联网。将传感器嵌入到家人的手表里，即使用户在千里之外，也可以随时掌握家人的体征。用这种方法，医生也可以随时随地了解病人的体征，为病人诊断看病。</p>
+<p>如果在汽车和汽车钥匙上都植入微型感应器，酒后驾车现象就可能被杜绝。当喝了酒的司机掏出汽车钥匙时，钥匙能通过气味感应器察觉到酒气，并通过无线信号通知汽车“不要发动”，汽车会自动罢工，并能够“命令”司机的手机给其亲友发短信，通知他们司机所在的位置，请亲友们来处理。</p>
+<h1 id="2、云计算"><a href="#2、云计算" class="headerlink" title="2、云计算"></a>2、云计算</h1><h2 id="（1）掌握云计算的概念"><a href="#（1）掌握云计算的概念" class="headerlink" title="（1）掌握云计算的概念"></a>（1）掌握云计算的概念</h2><p>云计算是一种基于互联网的计算方式，通过这种方式，共享的软硬件资源和信息可以按需提供给计算机和其他设备。云其实是网络、互联网的一种比喻说法。云计算的核心思想，是将大量用网络连接的计算资源统一管理和调度，构成一个计算资源池向用户按需服务。提供资源的网络称为云。狭义云计算指IT基础设施的交付和使用模式，指通过网络以按需、易扩展的方式获得所需资源；广义云计算指服务的交付和使用模式，指通过网络以按需、易扩展的方式获得所需服务。这种服务可以是IT和软件、互联网相关，也可是其他服务。</p>
+<p>通俗一点来说，提供资源的网络称为云。云中的资源在使用者看来是可以无限扩展的，并且可以随时获取，按需使用，随时扩展，按使用付费。这种特性经常被称为像水电一样使用IT基础设施。这就好比是从古老的单台发电机模式转向了电厂集中供电的模式。它意味着计算能力也可以作为一种商品进行流通，就像煤气、水电一样，取用方便，费用低廉。最大的不同在于，它是通过互联网进行传输的。</p>
+<h2 id="（2）熟悉云计算的架构及关键技术"><a href="#（2）熟悉云计算的架构及关键技术" class="headerlink" title="（2）熟悉云计算的架构及关键技术"></a>（2）熟悉云计算的架构及关键技术</h2><p>云计算是一项交叉学科技术，所以它有许多的特点：<br>（1）计算资源集成提高设备计算能力。云计算把大量计算资源集中到一个公共资源池中，通过租用的方式共享计算资源。虽然单个用户在云计算平台获得服务水平受到网络带宽等各因素影响，未必获得优于本地主机所提供的服务，但是从整个社会资源的角度而言，整体的资源调控降低了部分地区峰值荷载，提高了部分荒废的主机的运行率，从而提高了资源利用率。</p>
+<p>（2）分布式数据中心保证系统容灾能力。分布式数据中心可将云端的用户信息备份到地理上相互隔离的数据库主机中，甚至用户自己也无法判断信息的确切备份地点。该特点不仅仅提供了数据恢复的依据，也使得网络病毒和网络黑客的攻击失去目的性而变成徒劳，大大提高系统的安全性和容灾能力。</p>
+<p>（3）软硬件相互隔离减少设备依赖性。虚拟化层将云平台上方的应用软件和下方的基础设备隔离开来。技术设备的维护者无法看到设备中运行的具体应用。同时对软件层的用户而言基础设备层是透明的，用户只能看到虚拟化层中虚拟出来的各类设备。这种架构减少了设备依赖性，也为动态的资源配置提供可能。</p>
+<p>（4）平台模块化设计体现高可扩展性。目前主流的云计算平台均根据SPI架构在各层集成功能各异的软硬件设备和中间件软件。大量中间件软件和设备提供针对该平台的通用接口，允许用户添加本层的扩展设备。部分云与云之间提供对应接口，允许用户在不同云之间进行数据迁移。类似功能更大程度上满足了用户需求，集成了计算资源，是未来云计算的发展方向之一。</p>
+<p>（5）虚拟资源池为用户提供弹性服务。云平台管理软件将整合的计算资源根据应用访问的具体情况进行动态调整，包括增大或减少资源的要求。因此云计算对于在非恒定需求的应用，如对需求波动很大、阶段性需求等，具有非常好的应用效果。在云计算环境中，既可以对规律性需求通过事先预测事先分配，也可根据事先设定的规则进行实时公台调整。弹性的云服务可帮助用户在任意时间得到满足需求的计算资源。</p>
+<p>（6）按需付费降低使用成本。作为云计算的代表按需提供服务、按需付费是目前各类云计算服务中不可或缺的一部分。对用户而言，云计算不但省去了基础设备的购置运维费用，而且能根据企业成长的需要不断扩展订购的服务，不断更换更加适合的服务，提高了资金的利用率。</p>
+<h2 id="（3）了解云计算服务的类型"><a href="#（3）了解云计算服务的类型" class="headerlink" title="（3）了解云计算服务的类型"></a>（3）了解云计算服务的类型</h2><p>1．软件即服务<br>软件即服务（Software-as-a-Service，SaaS）是基于互联网提供软件服务的软件应用模式。作为一种在21世纪开始兴起的创新的软件应用模式，SaaS是软件科技发展的最新趋势。SaaS提供商为企业搭建信息化所需要的所有网络基础设施及软件、硬件运作平台，并负责所有前期的实施、后期的维护等一系列服务，企业无须购买软硬件、建设机房、招聘IT人员，即可通过互联网使用信息系统。就像打开自来水龙头就能用水一样，企业根据实际需要，从SaaS提供商租赁软件服务。</p>
+<p>2．平台即服务<br>平台即服务（Platform-as-a-Service，PaaS）是把服务器平台或者开发环境作为一种服务提供的商业模式，如将软件研发的平台作为一种服务，以SaaS的模式提交给用户。因此，PaaS也是SaaS模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度。早在2007年，国内外SaaS厂商就先后推出了自己的PaaS平台。<br>PaaS之所以能够推进SaaS的发展，主要在于它能够提供企业进行定制化研发的中间件平台，同时涵盖数据库和应用服务器等。PaaS可以提高在Web平台上利用的资源数量。</p>
+<p>3．基础设施即服务<br>基础设施即服务（Infrastructure as a Service，IaaS）是指消费者通过Internet可以从完善的计算机基础设施获得服务，如《纽约时报》就使用成百上千台Amazon EC2实例在36小时内处理TB级的文档数据。如果没有EC2，《纽约时报》处理这些数据将要花费数天或者数月的时间。</p>
+<h2 id="（4）了解发展云计算的主要任务"><a href="#（4）了解发展云计算的主要任务" class="headerlink" title="（4）了解发展云计算的主要任务"></a>（4）了解发展云计算的主要任务</h2><p>1．云安全<br>云安全（Cloud Security）是一个从“云计算”演变而来的新名词。云安全的策略构想是：使用者越多，每个使用者就越安全，因为如此庞大的用户群，足以覆盖互联网的每个角落，只要某个新木马病毒出现，就会立刻被截获。<br>“云安全”通过网状的大量客户端对网络中软件行为的异常监测，获取互联网中木马、恶意程序的最新信息，推送到Server端进行自动分析和处理，再把病毒和木马的解决方案分发到每一个客户端。</p>
+<p>2．云存储<br>应用云存储是在云计算概念上延伸和发展出来的一个新的概念，是指通过集群应用、网格技术或分布式文件系统等功能，将网络中大量各种不同类型的存储设备通过应用软件集合起来协同工作，共同对外提供数据存储和业务访问功能的一个系统。当云计算系统运算和处理的核心是大量数据的存储和管理时，云计算系统中就需要配置大量的存储设备，那么云计算系统就转变成为一个云存储系统，所以云存储是一个以数据存储和管理为核心的云计算系统。</p>
+<p>3．云呼叫<br>应用云呼叫中心是基于云计算技术而搭建的呼叫中心系统，企业无须购买任何软、硬件系统，只需具备人员、场地等基本条件，就可以快速拥有属于自己的呼叫中心，软硬件平台、通信资源、日常维护与服务由服务器商提供。具有建设周期短、投入少、风险低、部署灵活、系统容量伸缩性强、运营维护成本低等众多特点；无论是电话营销中心还是客户服务中心，企业只需按需租用服务，便可建立一套功能全面、稳定、可靠、座席可分布全国各地，全国呼叫接入的呼叫中心系统。</p>
+<p>4．云会议<br>应用云会议是基于云计算技术的一种高效、便捷、低成本的会议形式。它是视频会议与云计算的完美结合，带来了最便捷的远程会议体验。使用者只需通过互联网界面，进行简单易用的操作，便可快速高效地与全球各地团队及客户同步分享语音、数据文件及视频，而会议中数据的传输、处理等复杂技术由云会议服务商帮助使用者进行操作。目前国内云会议大多以SaaS模式为主体，其服务内容包括电话、网络、视频等形式。</p>
+<h1 id="3、移动互联网"><a href="#3、移动互联网" class="headerlink" title="3、移动互联网"></a>3、移动互联网</h1><h2 id="（1）掌握移动互联网的概念"><a href="#（1）掌握移动互联网的概念" class="headerlink" title="（1）掌握移动互联网的概念"></a>（1）掌握移动互联网的概念</h2><p>移动互联网是PC互联网发展的必然产物，将移动通信和互联网二者结合起来，成为一体。它是互联网的技术、平台、商业模式和应用与移动通信技术结合并实践的活动的总称。<br>移动互联网是移动和互联网融合的产物，继承了移动随时、随地、随身和互联网开放、分享、互动的优势，是一个全国性的、以宽带IP为技术核心的，可同时提供话音、传真、数据、图像、多媒体等高品质电信服务的新一代开放的电信基础网络，由运营商提供无线接入，互联网企业提供各种成熟的应用。</p>
+<h2 id="（2）熟悉移动互联网的特点"><a href="#（2）熟悉移动互联网的特点" class="headerlink" title="（2）熟悉移动互联网的特点"></a>（2）熟悉移动互联网的特点</h2><p>移动互联网是在传统互联网基础上发展起来的，因此二者具有很多共性，但由于移动通信技术和移动终端发展不同，它又具备许多传统互联网没有的新特性。</p>
+<p>交互性<br>用户可以随身携带和随时使用移动终端，在移动状态下接人和使用移动互联网应用服务。<br>便携性<br>相对于PC，由于移动终端小巧轻便、可随身携带两个特点，人们可以装入随身携带的书包和手袋中，并使得用户可以在任意场合接人网络。<br>隐私性<br>移动终端设备的隐私性远高于PC的要求。由于移动性和便携性的特点，移动互联网的信息保护程度较高。<br>定位性<br>移动互联网有别于传统互联网的典型应用是位置服务应用。它具有以下几个服务：位置签到、位置分享及基于位置的社交应用；基于位置围栏的用户监控及消息通知服务；生活导航及优惠券集成服务；基于位置的娱乐和电子商务应用；基于位置的用户换机上下文感知及信息服务。<br>娱乐性<br>移动互联网上的丰富应用，如图片分享、视频播放、音乐欣赏、电子邮件等，为用户的工作、生活带来更多的便利和乐趣。<br>局限性<br>移动互联网应用服务在便捷的同时，也受到了来自网络能力和终端硬件能力的限制。在网络能力方面，受到无线网络传输环境、技术能力等因素限制；在终端硬件能力方面，受到终端大小、处理能力、电池容量等的限制。移动互联网各个部分相互联系，相互作用并制约发展，任何一部分的滞后都会延缓移动互联网发展的步伐。<br>强关联性<br>由于移动互联网业务受到了网络及终端能力的限制，因此，其业务内容和形式也需要匹配特定的网络技术规格和终端类型，具有强关联性。移动互联网通信技术与移动应用平台的发展有着紧密联系，没有足够的带宽就会影响在线视频，视频电话，移动网游等应用的扩展。同时，根据移动终端设备的特点，也有其与之对应的移动互联网应用服务，这是区别于传统互联网而存在的。<br>身份统一性<br>这种身份统一是指移动互联用户自然身份、社会身份、交易身份、支付身份通过移动互联网平台得以统一。信息本来是分散到各处的，互联网逐渐发展、基础平台逐渐完善之后，各处的身份信息将得到统一。例如，在网银里绑定手机号和银行卡，支付的时候验证了手机号就直接从银行卡扣钱。</p>
+<h2 id="（3）了解移动互联网技术的应用"><a href="#（3）了解移动互联网技术的应用" class="headerlink" title="（3）了解移动互联网技术的应用"></a>（3）了解移动互联网技术的应用</h2><p>通信业<br>通信行业为移动互联网的繁荣提供了必要的硬件支撑，传统的通信业，”开路收费”模式，如寄信、通话等都是为你“开路”然后收钱。移动互联网的出现却完全无视这些规则，要求人与人更紧密地连接，都可以以最低成本随时随地联系得到。<br>医疗行业<br>受移动互联网的影响，目前的医疗行业已经开始做出改变，比如在线就医、在线预约、远程医疗合作在线支付等方面。<br>移动电子商务<br>移动电子商务可以为用户随时随地提供所需的服务、应用、信息和娱乐，利用手机终端方便便捷地选择及购买商品和服务。多种支付方式，使用方便。移动支付平台不仅支持各种银行卡通过网上进行支付，还支持手机、电话等多种终端操作，符合网上消费者追求个性化、多样化的需求。<br>AR<br>增强现实(AR)，也被称之为混合现实。它通过电脑技术，将虚拟的信息应用到真实世界，真实的环境和虚拟的物体实时地叠加到了同一个画面或空间同时存在。增强现实提供了在一般情况下，不同于人类可以感知的信息。它不但展现了真实世界的信息，而且将虚拟的信息同时显示出来，两种信息相互补充叠加。<br>移动电子政务<br>在信息技术快速变革的情况下，国家的政府单位也紧跟时代发展步伐，开始广泛的使用移动电子政务。</p>
+<h1 id="4、人工智能"><a href="#4、人工智能" class="headerlink" title="4、人工智能"></a>4、人工智能</h1><h2 id="（1）掌握人工智能的概念"><a href="#（1）掌握人工智能的概念" class="headerlink" title="（1）掌握人工智能的概念"></a>（1）掌握人工智能的概念</h2><p>人工智能（Artificial Intelligence），英文缩写为AI。它是研究、开发用于模拟、延伸和扩展人的智能的理论、方法、技术及应用系统的一门新的技术科学。<br>人工智能是计算机科学的一个分支，它企图了解智能的实质，并生产出一种新的能以人类智能相似的方式做出反应的智能机器，该领域的研究包括机器人、语言识别、图像识别、自然语言处理和专家系统等。人工智能从诞生以来，理论和技术日益成熟，应用领域也不断扩大，可以设想，未来人工智能带来的科技产品，将会是人类智慧的“容器”。人工智能可以对人的意识、思维的信息过程的模拟。人工智能不是人的智能，但能像人那样思考、也可能超过人的智能。</p>
+<h2 id="（2）熟悉人工智能研究范畴"><a href="#（2）熟悉人工智能研究范畴" class="headerlink" title="（2）熟悉人工智能研究范畴"></a>（2）熟悉人工智能研究范畴</h2><p>人工智能是一门极富挑战性的科学，从事这项工作的人必须懂得计算机知识，心理学和哲学。人工智能是包括十分广泛的科学，它由不同的领域组成，如机器学习，计算机视觉等等，总的说来，人工智能研究的一个主要目标是使机器能够胜任一些通常需要人类智能才能完成的复杂工作。但不同的时代、不同的人对这种“复杂工作”的理解是不同的。</p>
+<p>具体包括：自然语言处理，知识表现，智能搜索，推理，规划，机器学习，知识获取，组合调度问题，感知问题，模式识别，逻辑程序设计软计算，不精确和不确定的管理，人工生命，神经网络，复杂系统，遗传算法</p>
+<h2 id="（3）了解人工智能实际应用"><a href="#（3）了解人工智能实际应用" class="headerlink" title="（3）了解人工智能实际应用"></a>（3）了解人工智能实际应用</h2><p>机器视觉，指纹识别，人脸识别，视网膜识别，虹膜识别，掌纹识别，专家系统，自动规划，智能搜索，定理证明，博弈，自动程序设计，智能控制，机器人学，语言和图像理解，遗传编程等。</p>
+<h1 id="5、区块链"><a href="#5、区块链" class="headerlink" title="5、区块链"></a>5、区块链</h1><h2 id="（1）掌握区块链的概念"><a href="#（1）掌握区块链的概念" class="headerlink" title="（1）掌握区块链的概念"></a>（1）掌握区块链的概念</h2><p>区块链是一个信息技术领域的术语。从本质上讲，它是一个共享数据库，存储于其中的数据或信息，具有“不可伪造”“全程留痕”“可以追溯”“公开透明”“集体维护”等特征。基于这些特征，区块链技术奠定了坚实的“信任”基础，创造了可靠的“合作”机制，具有广阔的运用前景。</p>
+<h2 id="（2）熟悉区块链的系统架构"><a href="#（2）熟悉区块链的系统架构" class="headerlink" title="（2）熟悉区块链的系统架构"></a>（2）熟悉区块链的系统架构</h2><p><img src="/images/bigdata/2-11.jpeg"><br>一般说来，区块链系统由数据层、网络层、共识层、激励层、合约层和应用层组成。<br>其中，数据层封装了底层数据区块以及相关的数据加密和时间戳等基础数据和基本算法；<br>网络层则包括分布式组网机制、数据传播机制和数据验证机制等；<br>共识层主要封装网络节点的各类共识算法；<br>激励层将经济因素集成到区块链技术体系中来，主要包括经济激励的发行机制和分配机制等；<br>合约层主要封装各类脚本、算法和智能合约，是区块链可编程特性的基础；<br>应用层则封装了区块链的各种应用场景和案例。<br>该模型中，基于时间戳的链式区块结构、分布式节点的共识机制、基于共识算力的经济激励和灵活可编程的智能合约是区块链技术最具代表性的创新点。</p>
+<h2 id="（3）了解区块链的分类"><a href="#（3）了解区块链的分类" class="headerlink" title="（3）了解区块链的分类"></a>（3）了解区块链的分类</h2><p>公有区块链<br>公有区块链（Public Block Chains)是指：世界上任何个体或者团体都可以发送交易，且交易能够获得该区块链的有效确认，任何人都可以参与其共识过程。公有区块链是最早的区块链，也是应用最广泛的区块链，各大bitcoins系列的虚拟数字货币均基于公有区块链，世界上有且仅有一条该币种对应的区块链。<br>联合（行业）区块链<br>行业区块链（Consortium Block Chains)：由某个群体内部指定多个预选的节点为记账人，每个块的生成由所有的预选节点共同决定（预选节点参与共识过程），其他接入节点可以参与交易，但不过问记账过程(本质上还是托管记账，只是变成分布式记账，预选节点的多少，如何决定每个块的记账者成为该区块链的主要风险点），其他任何人可以通过该区块链开放的API进行限定查询。<br>私有区块链<br>私有区块链（Private Block Chains)：仅仅使用区块链的总账技术进行记账，可以是一个公司，也可以是个人，独享该区块链的写入权限，本链与其他的分布式存储方案没有太大区别。传统金融都是想实验尝试私有区块链，而公链的应用例如bitcoin已经工业化，私链的应用产品还在摸索当中。</p>
+<h2 id="（补充）核心技术"><a href="#（补充）核心技术" class="headerlink" title="（补充）核心技术"></a>（补充）核心技术</h2><p>分布式账本<br>分布式账本指的是交易记账由分布在不同地方的多个节点共同完成，而且每一个节点记录的是完整的账目，因此它们都可以参与监督交易合法性，同时也可以共同为其作证。<br>非对称加密<br>存储在区块链上的交易信息是公开的，但是账户身份信息是高度加密的，只有在数据拥有者授权的情况下才能访问到，从而保证了数据的安全和个人的隐私。<br>共识机制<br>共识机制就是所有记账节点之间怎么达成共识，去认定一个记录的有效性，这既是认定的手段，也是防止篡改的手段。区块链提出了四种不同的共识机制，适用于不同的应用场景，在效率和安全性之间取得平衡。<br>智能合约<br>智能合约是基于这些可信的不可篡改的数据，可以自动化的执行一些预先定义好的规则和条款。</p>
+<h2 id="（4）了解区块链的应用"><a href="#（4）了解区块链的应用" class="headerlink" title="（4）了解区块链的应用"></a>（4）了解区块链的应用</h2><p>金融领域<br>区块链在国际汇兑、信用证、股权登记和证券交易所等金融领域有着潜在的巨大应用价值。将区块链技术应用在金融行业中，能够省去第三方中介环节，实现点对点的直接对接，从而在大大降低成本的同时，快速完成交易支付。<br>物联网和物流领域<br>区块链在物联网和物流领域也可以天然结合。通过区块链可以降低物流成本，追溯物品的生产和运送过程，并且提高供应链管理的效率。该领域被认为是区块链一个很有前景的应用方向。<br>公共服务领域<br>区块链在公共管理、能源、交通等领域都与民众的生产生活息息相关，但是这些领域的中心化特质也带来了一些问题，可以用区块链来改造。区块链提供的去中心化的完全分布式DNS服务通过网络中各个节点之间的点对点数据传输服务就能实现域名的查询和解析，可用于确保某个重要的基础设施的操作系统和固件没有被篡改，可以监控软件的状态和完整性，发现不良的篡改，并确保使用了物联网技术的系统所传输的数据没用经过篡改。<br>数字版权领域<br>通过区块链技术，可以对作品进行鉴权，证明文字、视频、音频等作品的存在，保证权属的真实、唯一性。作品在区块链上被确权后，后续交易都会进行实时记录，实现数字版权全生命周期管理，也可作为司法取证中的技术性保障。例如，美国纽约一家创业公司Mine Labs开发了一个基于区块链的元数据协议，这个名为Mediachain的系统利用IPFS文件系统，实现数字作品版权保护，主要是面向数字图片的版权保护应用。<br>保险领域<br>在保险理赔方面，保险机构负责资金归集、投资、理赔，往往管理和运营成本较高。通过智能合约的应用，既无需投保人申请，也无需保险公司批准，只要触发理赔条件，实现保单自动理赔。一个典型的应用案例就是LenderBot, 是 2016 年由区块链企业 Stratumn、德勤与支付服务商 Lemonway 合作推出，它允许人们通过 Facebook Messenger 的聊天功能，注册定制化的微保险产品， 为个人之间交换的高价值物品进行投保，而区块链在贷款合同中代替了第三方角色。<br>公益领域<br>区块链上存储的数据，高可靠且不可篡改，天然适合用在社会公益场景。公益流程中的相关信息，如捐赠项目、募集明细、资金流向、受助人反馈等，均可以存放于区块链上，并且有条件地进行透明公开公示，方便社会监督。</p>
+<h1 id="6、量子技术"><a href="#6、量子技术" class="headerlink" title="6、量子技术"></a>6、量子技术</h1><h2 id="（1）掌握量子技术的概念"><a href="#（1）掌握量子技术的概念" class="headerlink" title="（1）掌握量子技术的概念"></a>（1）掌握量子技术的概念</h2><p>量子信息是量子物理与信息技术相结合发展起来的新学科,主要包括量子通信和量子计算2个领域。量子通信主要研究量子密码、量子隐形传态、远距离量子通信的技术等等;量子计算主要研究量子计算机和适合于量子计算机的量子算法。</p>
+<h2 id="（2）熟悉量子技术的特点"><a href="#（2）熟悉量子技术的特点" class="headerlink" title="（2）熟悉量子技术的特点"></a>（2）熟悉量子技术的特点</h2><p>作为一种微观粒子，量子具有许多特别的基本特性，如量子力学三大基本原理：<br>量子测不准<br>也称为不确定性原理，即观察者不可能同时知道一个粒子的位置和它的速度，粒子位置的总是以一定的概率存在某一个不同的地方，而对未知状态系统的每一次测量都必将改变系统原来的状态。也就是说，测量后的微粒相比于测量之前，必然会产生变化。<br>量子不可克隆<br>量子不可克隆原理，即一个未知的量子态不能被完全地克隆。在量子力学中，不存在这样一个物理过程：实现对一个未知量子态的精确复制，使得每个复制态与初始量子态完全相同。<br>量子不可区分<br>量子不可区分原理，即不可能同时精确测量两个非正交量子态。事实上，由于非正交量子态具有不可区分性，无论采用任何测量方法，测量结果的都会有错误。</p>
+<p>除此之外，还包括以下基本特性：<br>量子态叠加性(superposition)<br>量子状态可以叠加，因此量子信息也是可以叠加的。这是量子计算中的可以实现并行性的重要基础，即可以同时输入和操作个量子比特的叠加态。<br>量子态纠缠性(entanglement)<br>两个及以上的量子在特定的(温度、磁场)环境下可以处于较稳定的量子纠缠状态，基于这种纠缠，某个粒子的作用将会瞬时地影响另一个粒子。爱因斯坦称其为: “幽灵般的超距作用”。<br>量子态相干性(interference)<br>量子力学中微观粒子间的相互叠加作用能产生类似经典力学中光的干涉现象。</p>
+<h2 id="（3）了解量子技术的应用"><a href="#（3）了解量子技术的应用" class="headerlink" title="（3）了解量子技术的应用"></a>（3）了解量子技术的应用</h2><p>量子技术应用包括量子传感与计量、量子通信、量子模拟及量子计算等方面，它将在传感与测量、通信、仿真、高性能计算等领域拥有广阔的应用前景。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95-%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="tag"># 大数据考试-信息化基础知识</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%80)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF/" rel="prev" title="计算机基础知识（一）面向对象技术">
+      <i class="fa fa-chevron-left"></i> 计算机基础知识（一）面向对象技术
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%9B%9B%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8(%E4%BA%8C)%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8/" rel="next" title="大数据安全（二）数据安全">
+      大数据安全（二）数据安全 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1%E3%80%81%E7%89%A9%E8%81%94%E7%BD%91"><span class="nav-number">1.</span> <span class="nav-text">1、物联网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%8E%8C%E6%8F%A1%E7%89%A9%E8%81%94%E7%BD%91%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">（1）掌握物联网的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%86%9F%E6%82%89%E7%89%A9%E8%81%94%E7%BD%91%E6%9E%B6%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">（2）熟悉物联网架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BA%86%E8%A7%A3%E7%89%A9%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">（3）了解物联网技术的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF"><span class="nav-number">1.3.1.</span> <span class="nav-text">物联网技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%A9%E8%81%94%E7%BD%91%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">1.3.2.</span> <span class="nav-text">物联网的应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2%E3%80%81%E4%BA%91%E8%AE%A1%E7%AE%97"><span class="nav-number">2.</span> <span class="nav-text">2、云计算</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%8E%8C%E6%8F%A1%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">2.1.</span> <span class="nav-text">（1）掌握云计算的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%86%9F%E6%82%89%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF"><span class="nav-number">2.2.</span> <span class="nav-text">（2）熟悉云计算的架构及关键技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BA%86%E8%A7%A3%E4%BA%91%E8%AE%A1%E7%AE%97%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.3.</span> <span class="nav-text">（3）了解云计算服务的类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E4%BA%86%E8%A7%A3%E5%8F%91%E5%B1%95%E4%BA%91%E8%AE%A1%E7%AE%97%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BB%BB%E5%8A%A1"><span class="nav-number">2.4.</span> <span class="nav-text">（4）了解发展云计算的主要任务</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3%E3%80%81%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91"><span class="nav-number">3.</span> <span class="nav-text">3、移动互联网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%8E%8C%E6%8F%A1%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">3.1.</span> <span class="nav-text">（1）掌握移动互联网的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%86%9F%E6%82%89%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">3.2.</span> <span class="nav-text">（2）熟悉移动互联网的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BA%86%E8%A7%A3%E7%A7%BB%E5%8A%A8%E4%BA%92%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">3.3.</span> <span class="nav-text">（3）了解移动互联网技术的应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4%E3%80%81%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="nav-number">4.</span> <span class="nav-text">4、人工智能</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%8E%8C%E6%8F%A1%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">4.1.</span> <span class="nav-text">（1）掌握人工智能的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%86%9F%E6%82%89%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%A0%94%E7%A9%B6%E8%8C%83%E7%95%B4"><span class="nav-number">4.2.</span> <span class="nav-text">（2）熟悉人工智能研究范畴</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BA%86%E8%A7%A3%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8"><span class="nav-number">4.3.</span> <span class="nav-text">（3）了解人工智能实际应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5%E3%80%81%E5%8C%BA%E5%9D%97%E9%93%BE"><span class="nav-number">5.</span> <span class="nav-text">5、区块链</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%8E%8C%E6%8F%A1%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">5.1.</span> <span class="nav-text">（1）掌握区块链的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%86%9F%E6%82%89%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"><span class="nav-number">5.2.</span> <span class="nav-text">（2）熟悉区块链的系统架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BA%86%E8%A7%A3%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">5.3.</span> <span class="nav-text">（3）了解区块链的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E8%A1%A5%E5%85%85%EF%BC%89%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF"><span class="nav-number">5.4.</span> <span class="nav-text">（补充）核心技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E4%BA%86%E8%A7%A3%E5%8C%BA%E5%9D%97%E9%93%BE%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">5.5.</span> <span class="nav-text">（4）了解区块链的应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6%E3%80%81%E9%87%8F%E5%AD%90%E6%8A%80%E6%9C%AF"><span class="nav-number">6.</span> <span class="nav-text">6、量子技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%8E%8C%E6%8F%A1%E9%87%8F%E5%AD%90%E6%8A%80%E6%9C%AF%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">6.1.</span> <span class="nav-text">（1）掌握量子技术的概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%86%9F%E6%82%89%E9%87%8F%E5%AD%90%E6%8A%80%E6%9C%AF%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">6.2.</span> <span class="nav-text">（2）熟悉量子技术的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BA%86%E8%A7%A3%E9%87%8F%E5%AD%90%E6%8A%80%E6%9C%AF%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">6.3.</span> <span class="nav-text">（3）了解量子技术的应用</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ea710bf0f49d7cb068cf',
+      clientSecret: '367cc3dcdecbb67a057b1dbe3fc16acb175c364f',
+      repo        : 'xuhj2015.github.io',
+      owner       : 'xuhj2015',
+      admin       : ['xuhj2015'],
+      id          : '0f05835a039e6d50e491b3416e6f76b5',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

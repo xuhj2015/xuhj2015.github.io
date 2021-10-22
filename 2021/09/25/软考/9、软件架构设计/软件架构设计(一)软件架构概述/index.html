@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="通俗地讲，软件架构设计就是软件系统的“布局谋篇”。 软件架构的研究内容主要涉及软件架构描述、软件架构设计、软件架构风格、软件架构评价和软件架构的形成方法等。 软件设计人员学习软件架构知识旨在站在较高的层面上整体地解决好软件的设计、复用、质量和维护等方面的实际问题。  软件架构是软件抽象发展到一定阶段的产物，从编程的角度，可以清晰地看到软件抽象 层次和表达工具的发展历史。 20 世纪 60 年代是子">
+<meta property="og:type" content="article">
+<meta property="og:title" content="软件架构设计（一）软件架构概述">
+<meta property="og:url" content="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%80)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="通俗地讲，软件架构设计就是软件系统的“布局谋篇”。 软件架构的研究内容主要涉及软件架构描述、软件架构设计、软件架构风格、软件架构评价和软件架构的形成方法等。 软件设计人员学习软件架构知识旨在站在较高的层面上整体地解决好软件的设计、复用、质量和维护等方面的实际问题。  软件架构是软件抽象发展到一定阶段的产物，从编程的角度，可以清晰地看到软件抽象 层次和表达工具的发展历史。 20 世纪 60 年代是子">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/ruankao/6-20.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-21.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-22.png">
+<meta property="article:published_time" content="2021-09-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-11T02:38:11.925Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="软考-软件架构设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/6-20.png">
+
+<link rel="canonical" href="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%80)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>软件架构设计（一）软件架构概述 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%80)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%A6%82%E8%BF%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          软件架构设计（一）软件架构概述
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-25T00:00:00+08:00">2021-09-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:11" itemprop="dateModified" datetime="2021-10-11T10:38:11+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>通俗地讲，软件架构设计就是软件系统的“布局谋篇”。</p>
+<p>软件架构的研究内容主要涉及软件架构描述、软件架构设计、软件架构风格、软件架构评价和软件架构的形成方法等。</p>
+<p>软件设计人员学习软件架构知识旨在站在较高的层面上整体地解决好软件的设计、复用、质量和维护等方面的实际问题。</p>
+<hr>
+<p>软件架构是软件抽象发展到一定阶段的产物，从编程的角度，可以清晰地看到软件抽象 层次和表达工具的发展历史。</p>
+<p>20 世纪 60 年代是子程序的年代:出现了原始的软件架构，即子程序，并以程序间的调用为连接关系。</p>
+<p>20 世纪 70 年代是模块化的年代:出现了数据流分析、实体—关系图(E-R 图)、信息隐藏等工具和方法，软件的抽象层次发展到了模块级。</p>
+<p>20 世纪 80 年代是面向对象的年代:基于模块化的编程语言进一步发展成面向对象的语言，继承性地增加了一种新元素之间的连接关系。</p>
+<p>20 世纪 90 年代是框架的年代:标准的基于对象的架构以框架的形式出现了。如电子数据表、文档、图形图像、音频剪辑等可互换的黑箱对象，可以相互嵌入。</p>
+<p>当前(最近 10 年来):中间件和 IT 架构作为标准平台出现，用可购买可复用的元素来构建系统，同时，基于架构的开发方法和理论不断成熟。</p>
+<table>
+<thead>
+<tr>
+<th>年代</th>
+<th>60</th>
+<th>70</th>
+<th>80</th>
+<th>90</th>
+<th>当前</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>发展状况</td>
+<td>子程序</td>
+<td>模块化</td>
+<td>面向对象</td>
+<td>框架</td>
+<td>中间件和IT架构</td>
+</tr>
+</tbody></table>
+<h1 id="一、软件架构的定义"><a href="#一、软件架构的定义" class="headerlink" title="一、软件架构的定义"></a>一、软件架构的定义</h1><p>软件架构仍在不断发展中，还没有形成一个统一的、公认的定义，这里仅举出几个较权威的定义。</p>
+<p>定义 1:软件或计算机系统的软件架构是该系统的一个(或多个)结构，而结构由软件元素、元素的外部可见属性及它们之间的关系组成。</p>
+<p>定义 2:软件架构为软件系统提供了一个结构、行为和属性的高级抽象，由构成系统的元素的描述、这些元素的相互作用、指导元素集成的模式及这些模式的约束组成。</p>
+<p>定义 3:软件架构是指一个系统的基础组织，它具体体现在:系统的构件，构件之间、构件与环境之间的关系，以及指导其设计和演化的原则上。(IEEE1471- 2000)</p>
+<p>(1)架构是对系统的抽象，它通过描述元素、元素的外部可见属性及元素之间的关系来反映这种抽象。因此，仅与内部具体实现有关的细节是不属于架构的，即定义强调元素的 “外部可见”属性。</p>
+<p>(2)架构由多个结构组成，结构是从功能角度来描述元素之间的关系的，具体的结构传达了架构某方面的信息，但是个别结构一般不能代表大型软件架构。</p>
+<p>(3)任何软件都存在架构，但不一定有对该架构的具体表述文档。即架构可以独立于架构的描述而存在。如文档已过时，则该文档不能反映架构。</p>
+<p>(4)元素及其行为的集合构成架构的内容。体现系统由哪些元素组成，这些元素各有哪些功能(外部可见)，以及这些元素间如何连接与互动。即在两个方面进行抽象:在静态方面，关注系统的大粒度(宏观)总体结构(如分层);在动态方面，关注系统内关键行为的共同特征。</p>
+<p>(5)架构具有“基础”性:它通常涉及解决各类关键的重复问题的通用方案(复用性)，以及系统设计中影响深远(架构敏感)的各项重要决策(一旦贯彻，更改的代价昂贵)。</p>
+<p>(6)架构隐含有“决策”，即架构是由架构设计师根据关键的功能和非功能性需求(质量属性及项目相关的约束)进行设计与决策的结果。不同的架构设计师设计出来的架构是不一样的，为避免架构设计师考虑不周，重大决策应经过评审。特别是架构设计师自身的水平是一种约束，不断学习和积累经验才是摆脱这种约束走向自由王国的必经之路。</p>
+<p>在设计软件架构时也必须考虑硬件特性和网络特性，因此，软件架构与系统架构二者间的区别其实不大。但是，在大多情况下，架构设计师在软件方面的选择性较之硬件方面，其自由度大得多。因此，使用“软件架构”这一术语，也表明了一个观点:架构设计师通常将架构的重点放在软件部分。</p>
+<p>(1)影响架构的因素。软件系统的项目干系人(客户、用户、项目经理、程序员、测试人员、市场人员等)对软件系统有不同的要求、开发组织(项目组)有不同的人员知识结构、架构设计师的素质与经验、当前的技术环境等方面都是影响架构的因素。这些因素通过功能性需求、非功能性需求、约束条件及相互冲突的要求，影响架构设计师的决策，从而影响架构。</p>
+<p>(2)架构对上述诸因素具有反作用，例如，影响开发组织的结构。架构描述了系统的大粒度(宏观)总体结构，因此可以按架构进行分工，将项目组为几个工作组，从而使开发有序;影响开发组织的目标，即成功的架构为开发组织提供了新的商机，这归功于:系统的示范性、架构的可复用性及团队开发经验的提升，同时，成功的系统将影响客户对下一个系统的要求等。这种反馈机制构成了架构的商业周期。</p>
+<h1 id="二、软件架构的重要性"><a href="#二、软件架构的重要性" class="headerlink" title="二、软件架构的重要性"></a>二、软件架构的重要性</h1><h2 id="1-项目关系人之间交流的平台。"><a href="#1-项目关系人之间交流的平台。" class="headerlink" title="(1)项目关系人之间交流的平台。"></a>(1)项目关系人之间交流的平台。</h2><p>软件系统的项目关系人分别关注系统的不同特性， 而这些特性都由架构所决定，因此，架构提供了一个共同语言(公共的参考点)，项目关系 人以此作为彼此理解、协商、达成共识或相互沟通的基础。架构分析既依赖于又促进了这个 层次上的交流。</p>
+<h2 id="2-早期设计决策。"><a href="#2-早期设计决策。" class="headerlink" title="(2)早期设计决策。"></a>(2)早期设计决策。</h2><p>从软件生命周期来看，软件架构是所开发系统的最早设计决策的体现。</p>
+<p>架构明确了对系统实现的约束条件:架构是架构设计师对系统实现的各方面进行权衡的结果， 是总体设计的体现，因此，在具体实现时必须按架构的设计进行。</p>
+<p>架构影响着系统的质量属性:要保证系统的高质量，具有完美的架构是必要的(虽然不充分)。 架构可以用来预测系统的质量，例如，可以根据经验对该架构的质量(如性能)作定性的判 断。</p>
+<p>架构为维护的决策提供根据。在架构层次上能为日后的更改决策提供推理、判断的依据。一个富有生命力的架构，应该是在最有可能更改的地方有所考虑(架构的柔性)，使其在此点 最容易进行更改。</p>
+<p>架构有助于原型开发。可以按架构构造一个骨架系统(原型)，例如，在早期实现一个可执 行的特例，确定潜在的性能问题。</p>
+<p>借助于架构进行成本与进度的估计。</p>
+<h2 id="3-在较高层面上实现软件复用。"><a href="#3-在较高层面上实现软件复用。" class="headerlink" title="(3)在较高层面上实现软件复用。"></a>(3)在较高层面上实现软件复用。</h2><p>软件架构作为系统的抽象模型，可以在多个系统间传递(复用)，特别是比较容易地应用到具有相似质量属性和功能需求的系统中。产品线通 常共享一个架构。产品线的架构是开发组织的核心资产之一，利用架构及其范例进行多系统 的开发，在开发时间、成本、生产率和产品质量方面具有极大的回报。基于架构的开发强调 对各元素的组合或装配。系统开发还可以使用其他组织开发的元素，例如购买商业构件。</p>
+<h2 id="4-架构对开发的指导与规范意义不容忽略。"><a href="#4-架构对开发的指导与规范意义不容忽略。" class="headerlink" title="(4)架构对开发的指导与规范意义不容忽略。"></a>(4)架构对开发的指导与规范意义不容忽略。</h2><p>架构作为系统的总体设计，它指导后续 的详细设计和编码。架构使基于模板的开发成为可能，有利于开发的规范化和一致性，减少 开发与维护成本。架构可以作为培训的基础，有利于培养开发团队和培训相关人员。</p>
+<p><img src="/images/ruankao/6-20.png"></p>
+<h1 id="三、架构的模型"><a href="#三、架构的模型" class="headerlink" title="三、架构的模型"></a>三、架构的模型</h1><p>软件架构作为一个有机的整体，可以分解成多个侧面来认识，每个侧面强调它的不同方 面的特征，从而使架构设计师能整体地把握它的重点。我们可以将软件架构归纳成 5 种模 型:结构模型、框架模型、动态模型、过程模型和功能模型。最常用的是结构模型和动态模 型。</p>
+<h2 id="1-结构模型。"><a href="#1-结构模型。" class="headerlink" title="(1)结构模型。"></a>(1)结构模型。</h2><p>这是一个最直观、最普遍的建模方法。这种方法以架构的构件、连接 件和其他概念来刻画结构，并力图通过结构来反映系统的重要语义内容，包括系统的配置、 约束、隐含的假设条件、风格、性质。研究结构模型的核心是架构描述语言。</p>
+<h2 id="2-框架模型。"><a href="#2-框架模型。" class="headerlink" title="(2)框架模型。"></a>(2)框架模型。</h2><p>框架模型与结构模型类似，但它不太侧重描述结构的细节而更侧重于 整体的结构。框架模型主要以一些特殊的问题为目标建立只针对和适应该问题的结构。</p>
+<h2 id="3-动态模型。"><a href="#3-动态模型。" class="headerlink" title="(3)动态模型。"></a>(3)动态模型。</h2><p>动态模型是对结构或框架模型的补充，研究系统“大颗粒”的行为性质。例如，描述系统的重新配置或演化。动态可能指系统总体结构的配置、建立或拆除通信 通道或计算的过程。</p>
+<h2 id="4-过程模型。"><a href="#4-过程模型。" class="headerlink" title="(4)过程模型。"></a>(4)过程模型。</h2><p>过程模型研究构造系统的步骤和过程。因而结构是遵循某些过程脚本的结果。</p>
+<h2 id="5-功能模型。"><a href="#5-功能模型。" class="headerlink" title="(5)功能模型。"></a>(5)功能模型。</h2><p>该模型认为架构由一组功能构件按层次组成，且下层向上层提供服务。 它可以看作是一种特殊的框架模型。</p>
+<h2 id="“4-1”的视图模型"><a href="#“4-1”的视图模型" class="headerlink" title="“4+1”的视图模型"></a>“4+1”的视图模型</h2><p>4+1” 视 图模型从 5 个不同的视角包括逻辑视图、进程视图、物理视图、开发视图和场景视图来描 述软件架构。每一个视图只关心系统的一个侧面，5 个视图结合在一起才能反映系统的软件 架构的全部内容。</p>
+<p><img src="/images/ruankao/6-21.png"></p>
+<h3 id="1-逻辑视图"><a href="#1-逻辑视图" class="headerlink" title="(1)逻辑视图"></a>(1)逻辑视图</h3><p>主要支持系统的功能需求，即系统提供给最终用户的服务。</p>
+<p>在面向对象技术中，通过抽象、封装和继承，可以用对象模型来代表逻辑视图，用类图来描述逻辑视图。逻辑视图中使用的风格为面向对象的风格。</p>
+<h3 id="2-开发视图"><a href="#2-开发视图" class="headerlink" title="(2)开发视图"></a>(2)开发视图</h3><p>也称为模块视图，主要侧重于软件模块的组织和管理。</p>
+<p>开发视图要考虑软件内部的需求，如软件开发的容易性、软件的重用和软件的通用性，要充分考虑由于具体开发工具的不同而带来的局限性。开发视图通过系统输入输出关系的模型图和子系统图来描述。</p>
+<h3 id="3-进程视图"><a href="#3-进程视图" class="headerlink" title="(3)进程视图"></a>(3)进程视图</h3><p>侧重于系统的运行特性，主要关注一些非功能性的需求，例如系统的性能和可用性。</p>
+<p>进程视图强调并发性、分布性、系统集成性和容错能力，以及逻辑视图中的 主要抽象的进程结构。它也定义逻辑视图中的各个类的操作具体是在哪一个线程中被执行的。 进程视图可以描述成多层抽象，每个级别分别关注不同的方面。</p>
+<h3 id="4-物理视图"><a href="#4-物理视图" class="headerlink" title="(4)物理视图"></a>(4)物理视图</h3><p>主要考虑如何把软件映射到硬件上，它通常要考虑到解决系统拓扑结 构、系统安装、通信等问题。</p>
+<p>当软件运行于不同的节点上时，各视图中的构件都直接或间接 地对应于系统的不同节点上。因此，从软件到节点的映射要有较高的灵活性，当环境改变时， 对系统其他视图的影响最小。</p>
+<h3 id="5-场景"><a href="#5-场景" class="headerlink" title="(5)场景"></a>(5)场景</h3><p>可以看作是那些重要系统活动的抽象，它使四个视图有机地联系起来，从某种意义上说，场景是最重要的需求抽象。</p>
+<p>在开发架构时，它可以帮助设计者找到架构的构件和它们之间的作用关系。同时，也可以用场景来分析一个特定的视图，或描述不同视图构件间是如何相互作用的。场景可以用文本表示，也可以用图形表示。</p>
+<p><img src="/images/ruankao/6-22.png"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E8%80%83-%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/" rel="tag"># 软考-软件架构设计</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%BA%8C)%E6%9E%B6%E6%9E%84%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7/" rel="prev" title="软件架构设计（二）架构需求与软件质量属性">
+      <i class="fa fa-chevron-left"></i> 软件架构设计（二）架构需求与软件质量属性
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%BA%94)%E9%9D%A2%E5%90%91%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%9E%B6%E6%9E%84/" rel="next" title="软件架构设计（五）面向服务的架构">
+      软件架构设计（五）面向服务的架构 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.</span> <span class="nav-text">一、软件架构的定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-number">2.</span> <span class="nav-text">二、软件架构的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E5%85%B3%E7%B3%BB%E4%BA%BA%E4%B9%8B%E9%97%B4%E4%BA%A4%E6%B5%81%E7%9A%84%E5%B9%B3%E5%8F%B0%E3%80%82"><span class="nav-number">2.1.</span> <span class="nav-text">(1)项目关系人之间交流的平台。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%97%A9%E6%9C%9F%E8%AE%BE%E8%AE%A1%E5%86%B3%E7%AD%96%E3%80%82"><span class="nav-number">2.2.</span> <span class="nav-text">(2)早期设计决策。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%9C%A8%E8%BE%83%E9%AB%98%E5%B1%82%E9%9D%A2%E4%B8%8A%E5%AE%9E%E7%8E%B0%E8%BD%AF%E4%BB%B6%E5%A4%8D%E7%94%A8%E3%80%82"><span class="nav-number">2.3.</span> <span class="nav-text">(3)在较高层面上实现软件复用。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E6%9E%B6%E6%9E%84%E5%AF%B9%E5%BC%80%E5%8F%91%E7%9A%84%E6%8C%87%E5%AF%BC%E4%B8%8E%E8%A7%84%E8%8C%83%E6%84%8F%E4%B9%89%E4%B8%8D%E5%AE%B9%E5%BF%BD%E7%95%A5%E3%80%82"><span class="nav-number">2.4.</span> <span class="nav-text">(4)架构对开发的指导与规范意义不容忽略。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%9E%B6%E6%9E%84%E7%9A%84%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">三、架构的模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BB%93%E6%9E%84%E6%A8%A1%E5%9E%8B%E3%80%82"><span class="nav-number">3.1.</span> <span class="nav-text">(1)结构模型。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%A1%86%E6%9E%B6%E6%A8%A1%E5%9E%8B%E3%80%82"><span class="nav-number">3.2.</span> <span class="nav-text">(2)框架模型。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%8A%A8%E6%80%81%E6%A8%A1%E5%9E%8B%E3%80%82"><span class="nav-number">3.3.</span> <span class="nav-text">(3)动态模型。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E8%BF%87%E7%A8%8B%E6%A8%A1%E5%9E%8B%E3%80%82"><span class="nav-number">3.4.</span> <span class="nav-text">(4)过程模型。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9E%8B%E3%80%82"><span class="nav-number">3.5.</span> <span class="nav-text">(5)功能模型。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%80%9C4-1%E2%80%9D%E7%9A%84%E8%A7%86%E5%9B%BE%E6%A8%A1%E5%9E%8B"><span class="nav-number">3.6.</span> <span class="nav-text">“4+1”的视图模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%80%BB%E8%BE%91%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.1.</span> <span class="nav-text">(1)逻辑视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%BC%80%E5%8F%91%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.2.</span> <span class="nav-text">(2)开发视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%BF%9B%E7%A8%8B%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.3.</span> <span class="nav-text">(3)进程视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E7%89%A9%E7%90%86%E8%A7%86%E5%9B%BE"><span class="nav-number">3.6.4.</span> <span class="nav-text">(4)物理视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%9C%BA%E6%99%AF"><span class="nav-number">3.6.5.</span> <span class="nav-text">(5)场景</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ea710bf0f49d7cb068cf',
+      clientSecret: '367cc3dcdecbb67a057b1dbe3fc16acb175c364f',
+      repo        : 'xuhj2015.github.io',
+      owner       : 'xuhj2015',
+      admin       : ['xuhj2015'],
+      id          : 'f739e516a820b2fd75f00e6a1bbd1d5a',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

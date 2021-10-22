@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="软件系统的目的是为了解决问题。定义问题的过程包括： 121、理解真实世界中的问题和用户的需要。2、提出满足这些需要的解决方案的过程。  一、问题分析1、在问题定义上达成共识用标准化的格式将问题写出来。 2、理解问题的本质通常用因果鱼骨图和帕累托图两种方式。 （1）因果鱼骨图 123将问题简明扼要的写在右侧方框中。确定问题潜在原因的主要类别，将他们连在鱼的脊骨上。用头脑风暴法寻找原因并归类。 （2）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统分析与设计方法（一）定义问题与归结模型">
+<meta property="og:url" content="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%80)%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="软件系统的目的是为了解决问题。定义问题的过程包括： 121、理解真实世界中的问题和用户的需要。2、提出满足这些需要的解决方案的过程。  一、问题分析1、在问题定义上达成共识用标准化的格式将问题写出来。 2、理解问题的本质通常用因果鱼骨图和帕累托图两种方式。 （1）因果鱼骨图 123将问题简明扼要的写在右侧方框中。确定问题潜在原因的主要类别，将他们连在鱼的脊骨上。用头脑风暴法寻找原因并归类。 （2）">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/ruankao/5-1.png">
+<meta property="og:image" content="http://example.com/images/ruankao/5-2.png">
+<meta property="og:image" content="http://example.com/images/ruankao/5-3.png">
+<meta property="og:image" content="http://example.com/images/ruankao/5-4.png">
+<meta property="article:published_time" content="2021-09-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-11T02:38:29.182Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="软考-系统分析与设计方法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/5-1.png">
+
+<link rel="canonical" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%80)%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>系统分析与设计方法（一）定义问题与归结模型 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%80)%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          系统分析与设计方法（一）定义问题与归结模型
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-22T00:00:00+08:00">2021-09-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>软件系统的目的是为了解决问题。<br>定义问题的过程包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1、理解真实世界中的问题和用户的需要。</span><br><span class="line">2、提出满足这些需要的解决方案的过程。</span><br></pre></td></tr></table></figure>
+
+<h1 id="一、问题分析"><a href="#一、问题分析" class="headerlink" title="一、问题分析"></a>一、问题分析</h1><h2 id="1、在问题定义上达成共识"><a href="#1、在问题定义上达成共识" class="headerlink" title="1、在问题定义上达成共识"></a>1、在问题定义上达成共识</h2><p>用标准化的格式将问题写出来。</p>
+<h2 id="2、理解问题的本质"><a href="#2、理解问题的本质" class="headerlink" title="2、理解问题的本质"></a>2、理解问题的本质</h2><p>通常用因果鱼骨图和帕累托图两种方式。</p>
+<h3 id="（1）因果鱼骨图"><a href="#（1）因果鱼骨图" class="headerlink" title="（1）因果鱼骨图"></a>（1）因果鱼骨图</h3><p><img src="/images/ruankao/5-1.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">将问题简明扼要的写在右侧方框中。</span><br><span class="line">确定问题潜在原因的主要类别，将他们连在鱼的脊骨上。</span><br><span class="line">用头脑风暴法寻找原因并归类。</span><br></pre></td></tr></table></figure>
+<h3 id="（2）帕累托图"><a href="#（2）帕累托图" class="headerlink" title="（2）帕累托图"></a>（2）帕累托图</h3><p><img src="/images/ruankao/5-2.png"><br>采用直方图的形式，将问题的相对频率或大小从高到低排列，聚焦重要的问题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">明确问题。</span><br><span class="line">找到问题的各种可能原因。</span><br><span class="line">选择评价标准和考察期限，最常用的标准是频率和费用。</span><br><span class="line">收集各种原因发生的频率和费用数据。</span><br><span class="line">将原因按发生的频率或费用从大到小排列。</span><br><span class="line">将原因排在横轴，频率或费用排在纵轴。</span><br></pre></td></tr></table></figure>
+<h2 id="3、确认项目干系人和用户"><a href="#3、确认项目干系人和用户" class="headerlink" title="3、确认项目干系人和用户"></a>3、确认项目干系人和用户</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">系统的用户是谁？</span><br><span class="line">系统的客户是谁？</span><br><span class="line">那些人收到系统输出的影响？</span><br><span class="line">系统完成收入使用后谁对她进行评估？</span><br><span class="line">其他系统内部或外部的客户？</span><br><span class="line">系统将来谁维护？</span><br></pre></td></tr></table></figure>
+<h2 id="4、定义系统的边界"><a href="#4、定义系统的边界" class="headerlink" title="4、定义系统的边界"></a>4、定义系统的边界</h2><p>解决方案系统和现实世界之间的边界。在系统边界中，信息以输入和输出的形式流入系统，并由系统流向系统外的用户。</p>
+<h3 id="（1）上下文范围图"><a href="#（1）上下文范围图" class="headerlink" title="（1）上下文范围图"></a>（1）上下文范围图</h3><p>数据流图中的顶层图，它反映领域信息，能够清晰的显示出系统和相邻系统的职责，能够从宏观层面了解系统。</p>
+<h3 id="（2）用例模型"><a href="#（2）用例模型" class="headerlink" title="（2）用例模型"></a>（2）用例模型</h3><p>以参与者的角度描述“和系统进行交互的事物”。<br><img src="/images/ruankao/5-3.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">谁会对系统提供信息？</span><br><span class="line">谁会在系统中使用信息？</span><br><span class="line">谁会从系统中删除信息？</span><br><span class="line">谁将操作系统？</span><br><span class="line">系统将会在哪里使用？</span><br><span class="line">系统从那里得到信息？</span><br><span class="line">哪些外部系统要和系统进行交互？</span><br></pre></td></tr></table></figure>
+<h2 id="5、确定系统实现的约束"><a href="#5、确定系统实现的约束" class="headerlink" title="5、确定系统实现的约束"></a>5、确定系统实现的约束</h2><p>从约束源开始考虑。<br>进度、投资收益、人员、设备预算、环境、操作系统、数据库、主机和客户机系统、技术问题、行政问题、已有软件、公司总体战略和程序、工具和语言的选择、人员和其他资源限制等。</p>
+<h1 id="二、问题定义"><a href="#二、问题定义" class="headerlink" title="二、问题定义"></a>二、问题定义</h1><h2 id="1、目标"><a href="#1、目标" class="headerlink" title="1、目标"></a>1、目标</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">优势：目标不仅仅是解决问题，还要提供业务上的优势。</span><br><span class="line">度量：度量优势的标准</span><br><span class="line">合理性：获得的业务优势要大于工作量成本，才是合理的解决方案。</span><br><span class="line">可行性：要探寻能够满足度量标准的解决方案。</span><br><span class="line">可达成性：是否具备需要的技能，建设完成后是否能够操作它。</span><br></pre></td></tr></table></figure>
+<p><img src="/images/ruankao/5-4.png"></p>
+<h2 id="2、功能需求"><a href="#2、功能需求" class="headerlink" title="2、功能需求"></a>2、功能需求</h2><p>系统必须做的事，功能需求源于业务需求。</p>
+<h2 id="3、非功能需求"><a href="#3、非功能需求" class="headerlink" title="3、非功能需求"></a>3、非功能需求</h2><p>系统必须具备的属性。<br>功能需求通常以动词为特征，非功能需求以副词为特征。<br>非功能需求主要包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">观感需求</span><br><span class="line">易用性需求</span><br><span class="line">性能需求</span><br><span class="line">可操作性需求</span><br><span class="line">可维护性和可移植性需求</span><br><span class="line">安全性需求</span><br><span class="line">文化和政策需求</span><br><span class="line">法律需求</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/" rel="tag"># 软考-系统分析与设计方法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%BA%8C)%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/" rel="prev" title="系统分析与设计方法（二）需求分析与软件设计">
+      <i class="fa fa-chevron-left"></i> 系统分析与设计方法（二）需求分析与软件设计
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E5%9B%9B)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" rel="next" title="系统分析与设计方法（四）面向对象的分析与设计">
+      系统分析与设计方法（四）面向对象的分析与设计 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%97%AE%E9%A2%98%E5%88%86%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">一、问题分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%9C%A8%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89%E4%B8%8A%E8%BE%BE%E6%88%90%E5%85%B1%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">1、在问题定义上达成共识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E7%90%86%E8%A7%A3%E9%97%AE%E9%A2%98%E7%9A%84%E6%9C%AC%E8%B4%A8"><span class="nav-number">1.2.</span> <span class="nav-text">2、理解问题的本质</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%9B%A0%E6%9E%9C%E9%B1%BC%E9%AA%A8%E5%9B%BE"><span class="nav-number">1.2.1.</span> <span class="nav-text">（1）因果鱼骨图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%B8%95%E7%B4%AF%E6%89%98%E5%9B%BE"><span class="nav-number">1.2.2.</span> <span class="nav-text">（2）帕累托图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E7%A1%AE%E8%AE%A4%E9%A1%B9%E7%9B%AE%E5%B9%B2%E7%B3%BB%E4%BA%BA%E5%92%8C%E7%94%A8%E6%88%B7"><span class="nav-number">1.3.</span> <span class="nav-text">3、确认项目干系人和用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E5%AE%9A%E4%B9%89%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="nav-number">1.4.</span> <span class="nav-text">4、定义系统的边界</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E4%B8%8A%E4%B8%8B%E6%96%87%E8%8C%83%E5%9B%B4%E5%9B%BE"><span class="nav-number">1.4.1.</span> <span class="nav-text">（1）上下文范围图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%94%A8%E4%BE%8B%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.4.2.</span> <span class="nav-text">（2）用例模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E7%A1%AE%E5%AE%9A%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%BA%A6%E6%9D%9F"><span class="nav-number">1.5.</span> <span class="nav-text">5、确定系统实现的约束</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%97%AE%E9%A2%98%E5%AE%9A%E4%B9%89"><span class="nav-number">2.</span> <span class="nav-text">二、问题定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E7%9B%AE%E6%A0%87"><span class="nav-number">2.1.</span> <span class="nav-text">1、目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="nav-number">2.2.</span> <span class="nav-text">2、功能需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E9%9D%9E%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="nav-number">2.3.</span> <span class="nav-text">3、非功能需求</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ea710bf0f49d7cb068cf',
+      clientSecret: '367cc3dcdecbb67a057b1dbe3fc16acb175c364f',
+      repo        : 'xuhj2015.github.io',
+      owner       : 'xuhj2015',
+      admin       : ['xuhj2015'],
+      id          : '0a292db4fe702c562e55377c4fea170b',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>

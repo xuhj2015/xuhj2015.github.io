@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="面向对象方法以客观世界中的对象为中心，其分析和设计思想符合人们的思维方式，分析和设计的结构与客观世界的实际比较接近。 面向对象方法中，分析和设计的界面并不明显，他们采用的相同的符号表示，能方便的从分析阶段平滑过渡到设计阶段。 在显示生活中，用户的需求经常会发生变化，但是客观世界的对象集对象间的关系比较稳定，因此用面向对象方法分析和设计的结构也相对比较稳定。 一、面向对象的基本概念1、对象和类对象是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="系统分析与设计方法（四）面向对象的分析与设计">
+<meta property="og:url" content="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E5%9B%9B)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="面向对象方法以客观世界中的对象为中心，其分析和设计思想符合人们的思维方式，分析和设计的结构与客观世界的实际比较接近。 面向对象方法中，分析和设计的界面并不明显，他们采用的相同的符号表示，能方便的从分析阶段平滑过渡到设计阶段。 在显示生活中，用户的需求经常会发生变化，但是客观世界的对象集对象间的关系比较稳定，因此用面向对象方法分析和设计的结构也相对比较稳定。 一、面向对象的基本概念1、对象和类对象是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/ruankao/6-7.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-8.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-9.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-9-1.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-10.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-11.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-12.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-13.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-14.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-15.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-16.png">
+<meta property="og:image" content="http://example.com/images/ruankao/6-17.png">
+<meta property="article:published_time" content="2021-09-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-11T02:38:29.282Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="软考-系统分析与设计方法">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/ruankao/6-7.png">
+
+<link rel="canonical" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E5%9B%9B)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>系统分析与设计方法（四）面向对象的分析与设计 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E5%9B%9B)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          系统分析与设计方法（四）面向对象的分析与设计
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>面向对象方法以客观世界中的对象为中心，其分析和设计思想符合人们的思维方式，分析和设计的结构与客观世界的实际比较接近。</p>
+<p>面向对象方法中，分析和设计的界面并不明显，他们采用的相同的符号表示，能方便的从分析阶段平滑过渡到设计阶段。</p>
+<p>在显示生活中，用户的需求经常会发生变化，但是客观世界的对象集对象间的关系比较稳定，因此用面向对象方法分析和设计的结构也相对比较稳定。</p>
+<h1 id="一、面向对象的基本概念"><a href="#一、面向对象的基本概念" class="headerlink" title="一、面向对象的基本概念"></a>一、面向对象的基本概念</h1><h2 id="1、对象和类"><a href="#1、对象和类" class="headerlink" title="1、对象和类"></a>1、对象和类</h2><p>对象是描述客观事物的实体，由对象标识（名称）、属性（状态、数据、成员变量）和服务（操作、行为、方法）是3个要素组成，封装成一个整体，以接口的形式对外提供服务。<br>类是具有相同属性和服务的一个或一组对象的抽象。<br>类与对象是抽象描述和具体实例的关系。一个具体的对象被称为类的一个实例。</p>
+<p>类可以分为实体类、边界类、控制类。</p>
+<h3 id="（1）实体类"><a href="#（1）实体类" class="headerlink" title="（1）实体类"></a>（1）实体类</h3><p>实体类映射需求中的每个实体，实体类保存需要存储在永久存储体重的信息。<br>实体类一定有属性，不一定有操作。</p>
+<h3 id="（2）控制类"><a href="#（2）控制类" class="headerlink" title="（2）控制类"></a>（2）控制类</h3><p>控制类是用于控制用力工作的类，一般由动宾结构的短语转化来的名称，例如身份验证。<br>控制类没有属性，但是有方法。</p>
+<h3 id="（3）边界类"><a href="#（3）边界类" class="headerlink" title="（3）边界类"></a>（3）边界类</h3><p>边界类用于封装在用例内、外流动的信息或数据流。边界类位于系统与外界的交界处，包括所有窗体、报表、打印机和扫描仪等硬件接口，以及与其他系统的接口。<br>边界类通常既有属性也要方法。</p>
+<h2 id="2、继承与泛化"><a href="#2、继承与泛化" class="headerlink" title="2、继承与泛化"></a>2、继承与泛化</h2><p>用来说明特殊类（子类）与一般类（父类）的关系。</p>
+<p><img src="/images/ruankao/6-7.png"></p>
+<h2 id="3、多态与重载"><a href="#3、多态与重载" class="headerlink" title="3、多态与重载"></a>3、多态与重载</h2><p>一般类中定义的属性或服务被特殊类集成后，可以具有不同的数据类型或表现出不同的行为。<br>通常用重载和改写实现。<br>重载是编译时制定的，改写是运行时选择的。</p>
+<h2 id="4、模板类"><a href="#4、模板类" class="headerlink" title="4、模板类"></a>4、模板类</h2><p>也称为类属类，用来实现参数多态机制。<br>一个类属类是一组类的一个特性抽象。</p>
+<h2 id="5、消息和消息通信"><a href="#5、消息和消息通信" class="headerlink" title="5、消息和消息通信"></a>5、消息和消息通信</h2><p>消息是想对象发出的服务请求。 为对象间提供唯一合法的动态联系的途径。</p>
+<h1 id="二、面向对象分析"><a href="#二、面向对象分析" class="headerlink" title="二、面向对象分析"></a>二、面向对象分析</h1><p>对象技术的流行，演化出数十种不同的OOA方法，其中比较流行的包括OMT、OOA、OOSE、Booch等。OMT、OOSE、Booch最后统一成为UML。</p>
+<h2 id="1、OOA-OOD方法"><a href="#1、OOA-OOD方法" class="headerlink" title="1、OOA/OOD方法"></a>1、OOA/OOD方法</h2><p>面向对象分析（OOA），面向对象设计（OOD）。<br>OOA模型包括<em><strong>主题、对象类、结构、属性和服务</strong></em>5个层次。需要经过<em><strong>标识对象类、标识结构与关联、划分主题、定义属性、定义服务</strong></em>5个步骤完成整个分析工作。<br>OOD贯穿OOA的5个层次和5个活动，由<em><strong>人机交互部件、问题域部件、任务管理部件、数据管理部件</strong></em>4个部分组成。</p>
+<h3 id="（1）设计问题域部分"><a href="#（1）设计问题域部分" class="headerlink" title="（1）设计问题域部分"></a>（1）设计问题域部分</h3><p>OOA的结果是OOD的问题域部件，分析的结果在OOD中可以被改动或增补，但基于问题域的总体组织架构是长时间稳定的。</p>
+<h3 id="（2）设计人机交互部件"><a href="#（2）设计人机交互部件" class="headerlink" title="（2）设计人机交互部件"></a>（2）设计人机交互部件</h3><p>在上述结果中加入人机交互的设计和交互细节。</p>
+<h3 id="（3）设计任务管理部分"><a href="#（3）设计任务管理部分" class="headerlink" title="（3）设计任务管理部分"></a>（3）设计任务管理部分</h3><p>识别事件驱动任务、识别时钟驱动任务、识别优先任务和关键任务、识别协调者、审查每个任务并定义每个任务。</p>
+<h3 id="（4）设计数据管理部分"><a href="#（4）设计数据管理部分" class="headerlink" title="（4）设计数据管理部分"></a>（4）设计数据管理部分</h3><p>数据管理部分提供了在数据管理系统中存储和紧缩对象的基本结构，其目的是隔离数据管理方法对其他部分的影响。</p>
+<h2 id="2、Booch方法"><a href="#2、Booch方法" class="headerlink" title="2、Booch方法"></a>2、Booch方法</h2><p>Booch认为软件开发是螺旋上升的过程，每个周期包括 标识类和对象、确定类和对象的含义、标识关系、说明每个类的接口和实现 4个步骤。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>静态模型</th>
+<th>动态模型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>逻辑模型</td>
+<td>类图、对象图</td>
+<td>状态转换图、时序图</td>
+</tr>
+<tr>
+<td>物理模型</td>
+<td>模块图、进程图</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<p>Booch方法的开发过程是一个迭代的渐进式的系统开发过程，分为宏过程和微过程梁两类。<br>宏过程用于控制微过程，5个主要活动包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">建立核心需求的概念化</span><br><span class="line">建立模型的分析</span><br><span class="line">建立架构的设计</span><br><span class="line">形成实现的进化</span><br><span class="line">管理软件交付使用的维护</span><br></pre></td></tr></table></figure>
+<p>微过程基本上代表开发人团的日常活动，4个重要、没有顺序的步骤包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在给定的抽象层次上识别出类和对象</span><br><span class="line">识别出这些类和对象的语义</span><br><span class="line">识别出类间和对象间的关系</span><br><span class="line">实现类和对象</span><br></pre></td></tr></table></figure>
+<h2 id="3、OMT方法"><a href="#3、OMT方法" class="headerlink" title="3、OMT方法"></a>3、OMT方法</h2><p>对象建模技术（OMT）主要用于分析、系统设计和对象设计。<br>包括对象模型、动态模型、功能模型。</p>
+<table>
+<thead>
+<tr>
+<th>模型</th>
+<th>说明</th>
+<th>主要技术</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对象模型</td>
+<td>描述系统中对象的静态结构、对象之间的关系、属性、操作。他表示静态的、结构上的、系统的“数据”特征。</td>
+<td>对象图</td>
+</tr>
+<tr>
+<td>动态模型</td>
+<td>描述与时间和操作顺序有关的系统特征，如激发时间、时间序列、确定时间先后关系的状态。他表示瞬时、行为上的、系统的“控制”特征</td>
+<td>状态图</td>
+</tr>
+<tr>
+<td>功能模型</td>
+<td>描述与值的变换有关的系统特征：功能、映射、约束和函数依赖</td>
+<td>数据流图</td>
+</tr>
+</tbody></table>
+<h2 id="4、OOSE方法"><a href="#4、OOSE方法" class="headerlink" title="4、OOSE方法"></a>4、OOSE方法</h2><p>面向对象软件工程（OOSE）在OMT的基础上对功能模型进行了补充，提出了“用例”的概念，最终取代数据流图进行需求分析和建立功能模型。</p>
+<h1 id="三、统一建模语言"><a href="#三、统一建模语言" class="headerlink" title="三、统一建模语言"></a>三、统一建模语言</h1><p>统一建模语言（UML）</p>
+<h2 id="1、UML是什么"><a href="#1、UML是什么" class="headerlink" title="1、UML是什么"></a>1、UML是什么</h2><p>是一种用于详细描述的可视化语言。<br>是一种构造语言，虽然不是一种可视化的编程语言，但与编程语言直接相连，有较好的映射关系。允许正向工程、逆向工程。<br>是一种文档化语言。</p>
+<h2 id="2、UML的结构"><a href="#2、UML的结构" class="headerlink" title="2、UML的结构"></a>2、UML的结构</h2><p>UML由构造块、公共机制和架构三部分组成。</p>
+<h3 id="（1）构造块"><a href="#（1）构造块" class="headerlink" title="（1）构造块"></a>（1）构造块</h3><p>构造块也就是基本的UML建模元素、关系和图。<br>建模元素：包括构造事物（类、接口、协作、用例、活动类、组件、节点等）、行为事物（交互、状态机）、分组事物（包）、注释事物。<br>关系：包括关联关系、依赖关系、泛化关系、实现关系。<br>图：UML2.0包括14种不同的图，分为表示系统静态结构的静态模型（包括类图、对象图、包图、构件图、部署图、制品图），以及表示系统动态结构的动态模型（包括对象图、用例图、顺序图、通信图、定时图、状态图、活动图、我交互概览图）。</p>
+<h3 id="（2）公共机制"><a href="#（2）公共机制" class="headerlink" title="（2）公共机制"></a>（2）公共机制</h3><p>指达到特定目标的公共UML方法，包括规格说明、修饰、公共分类和扩展机制4种。<br>规格说明：是元素语义的文本描述。<br>修饰：通过修饰给模型元素表达更多的信息。<br>公共分类：包括类元和实体、接口和实现两组公共分类。<br>扩展机制：包括约束、构造型、标记值。</p>
+<h3 id="（3）架构"><a href="#（3）架构" class="headerlink" title="（3）架构"></a>（3）架构</h3><p>架构是系统的组织结构，包括系统分解的组成部分、他们的关联性、交互、机制和指导原则。</p>
+<p>具体来说，就是5个系统视图。</p>
+<p>逻辑视图：以问题域的语汇组成的类和对象集合。<br>进程视图：可执行线程和进程作为活动类的建模，他是逻辑视图的一次执行实例。<br>实现视图：对组成基于系统的物理代码的文件和组件进行建模。<br>部署视图：把组件物理的部署到一组物理的可计算的节点上。<br>用例视图：最基本的需求分析模型。</p>
+<h2 id="3、用例图基础"><a href="#3、用例图基础" class="headerlink" title="3、用例图基础"></a>3、用例图基础</h2><p>外部参与者所理解的系统功能。</p>
+<p><img src="/images/ruankao/6-8.png"></p>
+<p>包括参与者、用例、包含和扩展。</p>
+<h2 id="4、类图和对象图基础"><a href="#4、类图和对象图基础" class="headerlink" title="4、类图和对象图基础"></a>4、类图和对象图基础</h2><p>类图技术是OO方法的核心。</p>
+<p><img src="/images/ruankao/6-9.png"></p>
+<h3 id="（1）类和对象"><a href="#（1）类和对象" class="headerlink" title="（1）类和对象"></a>（1）类和对象</h3><p>类是对一类具有相同特征的对象的描述。<br>对象是类的实例。<br>类的属性的语法为: “可见性 属性名:类型 = 默认值 {约束特性}”。<br>可见性包括 Public、Private 和 Protected，分别用+、-、#号表示。<br>类的操作的语法为: “可见性:操作名(参数表):返回类型 {约束特性}”。</p>
+<h3 id="（2）类之间的关系"><a href="#（2）类之间的关系" class="headerlink" title="（2）类之间的关系"></a>（2）类之间的关系</h3><p>①依赖关系。使用带箭头的虚线表示依赖关系。<br>②泛化关系。继承关系是泛化关系的反关系，也就是说子类是从父类中继承的，而父类则是子类的泛化。使用带空心箭头的实线表示，箭头指向父类。<br>③关联关系。用一条实线来表示关联关系。<br>聚合关系:聚合是一种特殊形式的关联。聚合表示类之间的关系是整体与部分的关系。例如 一辆轿车包含四个车轮、一个方向盘、一个发动机和一个底盘，就是聚合的一个例子。在 UML 中，用一个带空心菱形的实线表示，空心菱形指向的是代表“整体”的类。<br>组合关系:如果聚合关系中的表示“部分”的类的存在，与表示“整体”的类有着紧密的关系，例如“公司”与“部门”之间的关系，那么就应该使用“组合”关系来表示。在 UML 中， 用带有实心菱形的实线表示，菱形指向的是代表“整体”的类。<br>④实现关系。用一个带空心箭头的虚线表示。<br><img src="/images/ruankao/6-9-1.png"></p>
+<h3 id="（3）多重性问题"><a href="#（3）多重性问题" class="headerlink" title="（3）多重性问题"></a>（3）多重性问题</h3><p>多重性是用来说明关联的两个类之间的数量关系的。<br>0…1;0…<em>;1…1;1…</em>;*</p>
+<h3 id="（4）类图"><a href="#（4）类图" class="headerlink" title="（4）类图"></a>（4）类图</h3><p>对于软件系统，其类模型和对象模型类图描述类和类之间的静态关系。与数据模型不同，它不仅显示了信息的结构，同时还描述了系统的行为。类图是定义其他图的基础。</p>
+<h3 id="（5）对象图"><a href="#（5）对象图" class="headerlink" title="（5）对象图"></a>（5）对象图</h3><p>UML 中对象图与类图具有相同的表示形式。对象图可以看作是类图的一个实例。</p>
+<h2 id="5、交互图基础"><a href="#5、交互图基础" class="headerlink" title="5、交互图基础"></a>5、交互图基础</h2><p>交互图是表示各组对象如何按某种行为进行协作的模型。通常可以使用一个交互图来表示和说明一个用例的行为。</p>
+<h3 id="（1）顺序图"><a href="#（1）顺序图" class="headerlink" title="（1）顺序图"></a>（1）顺序图</h3><p>顺序图用来描述对象之间动态的交互关系，着重体现对象间消息传递的时间顺序。顺序图允许直观地表示出对象的生存期，在生存期内，对象可以对输入消息做出响应，并且可以发送信息。<br><img src="/images/ruankao/6-10.png"></p>
+<h3 id="（2）通信图"><a href="#（2）通信图" class="headerlink" title="（2）通信图"></a>（2）通信图</h3><p>通信图用于描述相互合作的对象间的交互关系和链接关系。虽然顺序图和通信图都用来描述对象间的交互关系，但侧重点不一样。顺序图着重体现交互的时间顺序，通信图则着重体现交互对象间的静态链接关系。<br><img src="/images/ruankao/6-11.png"></p>
+<h3 id="（3）定时图"><a href="#（3）定时图" class="headerlink" title="（3）定时图"></a>（3）定时图</h3><p>定时图是一种特殊形式的顺序图。<br><img src="/images/ruankao/6-12.png"></p>
+<h2 id="6、状态图基础"><a href="#6、状态图基础" class="headerlink" title="6、状态图基础"></a>6、状态图基础</h2><p>状态图用来描述一个特定对象的所有可能状态及其引起状态转移的事件。<br><img src="/images/ruankao/6-13.png"></p>
+<h2 id="7、活动图基础"><a href="#7、活动图基础" class="headerlink" title="7、活动图基础"></a>7、活动图基础</h2><p>活动图的应用非常广泛，它既可用来描述操作(类的方法)的行为，也可以描述用例和对象内部的工作过程。<br>活动图是由状态图变化而来的，它们各自用于不同的目的。活动图依据对象状态的变化来捕获动作(将要执行的工作或活动)与动作的结果。活动图中一个活动结束后将立即进入下一个活动(在状态图中状态的变迁可能需要事件的触发)。</p>
+<h3 id="1-基本活动图。"><a href="#1-基本活动图。" class="headerlink" title="(1)基本活动图。"></a>(1)基本活动图。</h3><p><img src="/images/ruankao/6-14.png"><br>判定:用菱形表示。<br>分支与组合:用粗线来表示分支和组合。</p>
+<h3 id="2-带泳道的活动图。"><a href="#2-带泳道的活动图。" class="headerlink" title="(2)带泳道的活动图。"></a>(2)带泳道的活动图。</h3><p><img src="/images/ruankao/6-15.png"></p>
+<h3 id="3-对象流。"><a href="#3-对象流。" class="headerlink" title="(3)对象流。"></a>(3)对象流。</h3><p>在活动图中可以出现对象。对象可以作为活动的输入或输出，对象与活 动间的输入/输出关系由虚线箭头来表示。如果仅表示对象受到某一活动的影响，则可用不带箭头的虚线来连接对象与活动。</p>
+<h3 id="4-信号。"><a href="#4-信号。" class="headerlink" title="(4)信号。"></a>(4)信号。</h3><p>在活动图中可以表示信号的发送与接收，分别用发送和接收标识来表示。 发送和接收标识也可与对象相连，用于表示消息的发送者和接收者。</p>
+<h2 id="8、构件图基础"><a href="#8、构件图基础" class="headerlink" title="8、构件图基础"></a>8、构件图基础</h2><p>构件图是面向对象系统的物理方面进行建模要用的两种图之一。它可以有效地显示一组构件，以及它们之间的关系。构件图中通常包括构件、接口及各种关系。<br><img src="/images/ruankao/6-16.png"><br>通常构件指的是源代码文件、二进制代码文件和可执行文件等。而构件图就是用来显示编译、链接或执行时构件之间的依赖关系的。</p>
+<h3 id="对源代码进行建模"><a href="#对源代码进行建模" class="headerlink" title="对源代码进行建模"></a>对源代码进行建模</h3><p>这样可以清晰地表示出各个不同源程序文件之间的关系。</p>
+<h3 id="对物理数据库建模"><a href="#对物理数据库建模" class="headerlink" title="对物理数据库建模"></a>对物理数据库建模</h3><p>用来表示各种类型的数据库、表之间的关系。</p>
+<h3 id="对可调整的系统建模"><a href="#对可调整的系统建模" class="headerlink" title="对可调整的系统建模"></a>对可调整的系统建模</h3><p>例如对应用了负载均衡、故障恢复等系统的建模。</p>
+<p>在绘制构件图时，应该注意侧重于描述系统的静态实现视图的一个方面，图形不要过于简化，应该为构件图取一个直观的名称，在绘制时避免产生线的交叉。</p>
+<h2 id="9、部署图基础"><a href="#9、部署图基础" class="headerlink" title="9、部署图基础"></a>9、部署图基础</h2><p>部署图，也称为实施图，它和构件图一样，是面向对象系统的物理方面建模的两种图之一。构件图是说明构件之间的逻辑关系，而部署图则是在此基础上更进一步地描述系统硬件的物理拓扑结构及在此结构上执行的软件。部署图可以显示计算结点的拓扑结构和通信路径、结点上运行的软件构件，常用于帮助理解分布式系统。</p>
+<h3 id="1-节点和连接。"><a href="#1-节点和连接。" class="headerlink" title="(1)节点和连接。"></a>(1)节点和连接。</h3><p>节点代表一个物理设备及其上运行的软件系统，如一台 UNIX 主机、一个 PC 终端、一台打印机、一个传感器等。<br>节点之间的连线表示系统之间进行交互的通信路径，在 UML 中被称为连接。<br>通信类型则放在连接旁边的“《》”之间，表示所用的通信协议或网络类型。</p>
+<h3 id="2-构件和接口。"><a href="#2-构件和接口。" class="headerlink" title="(2)构件和接口。"></a>(2)构件和接口。</h3><p>在部署图中，构件代表可执行的物理代码模块，如一个可执行程序。</p>
+<p><img src="/images/ruankao/6-17.png"><br>在面向对象方法中，类和构件等元素并不是所有的属性和操作都对外可见。它们对外提供了可见操作和属性，称之为类和构件的接口。界面可以表示为一头是小圆圈的直线。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/" rel="tag"># 软考-系统分析与设计方法</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/22/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%80)%E5%AE%9A%E4%B9%89%E9%97%AE%E9%A2%98%E4%B8%8E%E5%BD%92%E7%BB%93%E6%A8%A1%E5%9E%8B/" rel="prev" title="系统分析与设计方法（一）定义问题与归结模型">
+      <i class="fa fa-chevron-left"></i> 系统分析与设计方法（一）定义问题与归结模型
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E5%85%AD)%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AE%BE%E8%AE%A1/" rel="next" title="系统分析与设计方法（六）工作流设计">
+      系统分析与设计方法（六）工作流设计 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">一、面向对象的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">1、对象和类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%AE%9E%E4%BD%93%E7%B1%BB"><span class="nav-number">1.1.1.</span> <span class="nav-text">（1）实体类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E6%8E%A7%E5%88%B6%E7%B1%BB"><span class="nav-number">1.1.2.</span> <span class="nav-text">（2）控制类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E8%BE%B9%E7%95%8C%E7%B1%BB"><span class="nav-number">1.1.3.</span> <span class="nav-text">（3）边界类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E7%BB%A7%E6%89%BF%E4%B8%8E%E6%B3%9B%E5%8C%96"><span class="nav-number">1.2.</span> <span class="nav-text">2、继承与泛化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%A4%9A%E6%80%81%E4%B8%8E%E9%87%8D%E8%BD%BD"><span class="nav-number">1.3.</span> <span class="nav-text">3、多态与重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E6%A8%A1%E6%9D%BF%E7%B1%BB"><span class="nav-number">1.4.</span> <span class="nav-text">4、模板类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E6%B6%88%E6%81%AF%E5%92%8C%E6%B6%88%E6%81%AF%E9%80%9A%E4%BF%A1"><span class="nav-number">1.5.</span> <span class="nav-text">5、消息和消息通信</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%88%86%E6%9E%90"><span class="nav-number">2.</span> <span class="nav-text">二、面向对象分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81OOA-OOD%E6%96%B9%E6%B3%95"><span class="nav-number">2.1.</span> <span class="nav-text">1、OOA&#x2F;OOD方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98%E5%9F%9F%E9%83%A8%E5%88%86"><span class="nav-number">2.1.1.</span> <span class="nav-text">（1）设计问题域部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E8%AE%BE%E8%AE%A1%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E9%83%A8%E4%BB%B6"><span class="nav-number">2.1.2.</span> <span class="nav-text">（2）设计人机交互部件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E8%AE%BE%E8%AE%A1%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E9%83%A8%E5%88%86"><span class="nav-number">2.1.3.</span> <span class="nav-text">（3）设计任务管理部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E8%AE%BE%E8%AE%A1%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E9%83%A8%E5%88%86"><span class="nav-number">2.1.4.</span> <span class="nav-text">（4）设计数据管理部分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81Booch%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">2、Booch方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81OMT%E6%96%B9%E6%B3%95"><span class="nav-number">2.3.</span> <span class="nav-text">3、OMT方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81OOSE%E6%96%B9%E6%B3%95"><span class="nav-number">2.4.</span> <span class="nav-text">4、OOSE方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E7%BB%9F%E4%B8%80%E5%BB%BA%E6%A8%A1%E8%AF%AD%E8%A8%80"><span class="nav-number">3.</span> <span class="nav-text">三、统一建模语言</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81UML%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">3.1.</span> <span class="nav-text">1、UML是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81UML%E7%9A%84%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">2、UML的结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E6%9E%84%E9%80%A0%E5%9D%97"><span class="nav-number">3.2.1.</span> <span class="nav-text">（1）构造块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%85%AC%E5%85%B1%E6%9C%BA%E5%88%B6"><span class="nav-number">3.2.2.</span> <span class="nav-text">（2）公共机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E6%9E%B6%E6%9E%84"><span class="nav-number">3.2.3.</span> <span class="nav-text">（3）架构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E7%94%A8%E4%BE%8B%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">3.3.</span> <span class="nav-text">3、用例图基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E7%B1%BB%E5%9B%BE%E5%92%8C%E5%AF%B9%E8%B1%A1%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">3.4.</span> <span class="nav-text">4、类图和对象图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E7%B1%BB%E5%92%8C%E5%AF%B9%E8%B1%A1"><span class="nav-number">3.4.1.</span> <span class="nav-text">（1）类和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%B1%BB%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB"><span class="nav-number">3.4.2.</span> <span class="nav-text">（2）类之间的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E5%A4%9A%E9%87%8D%E6%80%A7%E9%97%AE%E9%A2%98"><span class="nav-number">3.4.3.</span> <span class="nav-text">（3）多重性问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E7%B1%BB%E5%9B%BE"><span class="nav-number">3.4.4.</span> <span class="nav-text">（4）类图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%885%EF%BC%89%E5%AF%B9%E8%B1%A1%E5%9B%BE"><span class="nav-number">3.4.5.</span> <span class="nav-text">（5）对象图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E4%BA%A4%E4%BA%92%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">3.5.</span> <span class="nav-text">5、交互图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E9%A1%BA%E5%BA%8F%E5%9B%BE"><span class="nav-number">3.5.1.</span> <span class="nav-text">（1）顺序图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E9%80%9A%E4%BF%A1%E5%9B%BE"><span class="nav-number">3.5.2.</span> <span class="nav-text">（2）通信图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E5%AE%9A%E6%97%B6%E5%9B%BE"><span class="nav-number">3.5.3.</span> <span class="nav-text">（3）定时图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E7%8A%B6%E6%80%81%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">3.6.</span> <span class="nav-text">6、状态图基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81%E6%B4%BB%E5%8A%A8%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">3.7.</span> <span class="nav-text">7、活动图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%B4%BB%E5%8A%A8%E5%9B%BE%E3%80%82"><span class="nav-number">3.7.1.</span> <span class="nav-text">(1)基本活动图。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%B8%A6%E6%B3%B3%E9%81%93%E7%9A%84%E6%B4%BB%E5%8A%A8%E5%9B%BE%E3%80%82"><span class="nav-number">3.7.2.</span> <span class="nav-text">(2)带泳道的活动图。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%AF%B9%E8%B1%A1%E6%B5%81%E3%80%82"><span class="nav-number">3.7.3.</span> <span class="nav-text">(3)对象流。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BF%A1%E5%8F%B7%E3%80%82"><span class="nav-number">3.7.4.</span> <span class="nav-text">(4)信号。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E6%9E%84%E4%BB%B6%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">3.8.</span> <span class="nav-text">8、构件图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E6%BA%90%E4%BB%A3%E7%A0%81%E8%BF%9B%E8%A1%8C%E5%BB%BA%E6%A8%A1"><span class="nav-number">3.8.1.</span> <span class="nav-text">对源代码进行建模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E7%89%A9%E7%90%86%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BB%BA%E6%A8%A1"><span class="nav-number">3.8.2.</span> <span class="nav-text">对物理数据库建模</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E5%8F%AF%E8%B0%83%E6%95%B4%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%BB%BA%E6%A8%A1"><span class="nav-number">3.8.3.</span> <span class="nav-text">对可调整的系统建模</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E9%83%A8%E7%BD%B2%E5%9B%BE%E5%9F%BA%E7%A1%80"><span class="nav-number">3.9.</span> <span class="nav-text">9、部署图基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%8A%82%E7%82%B9%E5%92%8C%E8%BF%9E%E6%8E%A5%E3%80%82"><span class="nav-number">3.9.1.</span> <span class="nav-text">(1)节点和连接。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9E%84%E4%BB%B6%E5%92%8C%E6%8E%A5%E5%8F%A3%E3%80%82"><span class="nav-number">3.9.2.</span> <span class="nav-text">(2)构件和接口。</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'ea710bf0f49d7cb068cf',
+      clientSecret: '367cc3dcdecbb67a057b1dbe3fc16acb175c364f',
+      repo        : 'xuhj2015.github.io',
+      owner       : 'xuhj2015',
+      admin       : ['xuhj2015'],
+      id          : '7ddd6acb11619720fe40293f75f153ab',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+</body>
+</html>
