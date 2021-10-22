@@ -223,7 +223,7 @@
         <category>大数据分析应用-中级</category>
       </categories>
       <tags>
-        <tag>大数据考试-计算机基础知识</tag>
+        <tag>大数据考试-数据科学</tag>
       </tags>
   </entry>
   <entry>
@@ -255,7 +255,7 @@
         <category>大数据分析应用-中级</category>
       </categories>
       <tags>
-        <tag>大数据考试-计算机基础知识</tag>
+        <tag>大数据考试-数据科学</tag>
       </tags>
   </entry>
   <entry>
@@ -297,7 +297,7 @@
         <category>大数据分析应用-中级</category>
       </categories>
       <tags>
-        <tag>大数据考试-计算机基础知识</tag>
+        <tag>大数据考试-数据科学</tag>
       </tags>
   </entry>
   <entry>
@@ -464,103 +464,150 @@
       </tags>
   </entry>
   <entry>
-    <title>设计模式（一）设计模式概述</title>
-    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(%E4%B8%80)%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="一、设计模式的概念"><a href="#一、设计模式的概念" class="headerlink" title="一、设计模式的概念"></a>一、设计模式的概念</h1><p>设计模式解决的是一类问题。<br>工厂模式就是为了解决类创建的问题，<br>适配器模式则是为了解决类接口不匹配的问题。</p>
-<p>(1)学习这些模式是一个方面，另一方面更要了解模式中的思想。<br>(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。</p>
-<h1 id="二、设计模式的组成"><a href="#二、设计模式的组成" class="headerlink" title="二、设计模式的组成"></a>二、设计模式的组成</h1><p>在描述一个设计模式时，至少需要包含四个方面:<br>模式名称(Pattern name)、<br>问题(Problem)、<br>解决方案(Solution)、<br>效果(Consequence)。</p>
-<h1 id="三、GoF设计模式"><a href="#三、GoF设计模式" class="headerlink" title="三、GoF设计模式"></a>三、GoF设计模式</h1><h2 id="补充-简单工厂"><a href="#补充-简单工厂" class="headerlink" title="(补充)简单工厂"></a>(补充)简单工厂</h2><p>1、写一个工厂类，使用静态方法，根据传参来new不同的产品对象<br>2、客户端调用这个工厂类的静态方法，就可以获取想要的产品</p>
-<h2 id="1-Factory-Method-模式。工厂模式"><a href="#1-Factory-Method-模式。工厂模式" class="headerlink" title="(1)Factory Method 模式。工厂模式"></a>(1)Factory Method 模式。工厂模式</h2><p>Factory Method 模式提供了一种延迟创建类的方法，使用 这个方法可以在运行期由子类决定创建哪一个类的实例。<br>1、写一个抽象工厂类，每个工厂实现类负责将new不同种类的产品。<br>2、客户端new不同的工厂实现类就可以获得不同的产品。</p>
-<h2 id="2-Abstract-Factory-模式。抽象工厂模式"><a href="#2-Abstract-Factory-模式。抽象工厂模式" class="headerlink" title="(2)Abstract Factory 模式。抽象工厂模式"></a>(2)Abstract Factory 模式。抽象工厂模式</h2><p>Abstract Factory 又称为抽象工厂模式，该模式主要为解决 复杂系统中对象创建的问题。抽象工厂模式提供了一个一致的对象创建接口来创建一系列具 有相似基类或相似接口的对象。<br>1、写一个抽象工厂类，然后每个工厂实现类负责new一组不同的种类的产品。<br>2、客户端new需要某一组的产品，只需要new一个工厂即可。</p>
-<h2 id="3-Builder-模式。建造者模式"><a href="#3-Builder-模式。建造者模式" class="headerlink" title="(3)Builder 模式。建造者模式"></a>(3)Builder 模式。建造者模式</h2><p>Builder 模式与 Abstract Factory 模式非常类似，但 Builder 模式是逐步地构造出一个复杂对象，并在最后返回对象的实例。Builder 模式可以把复杂对象的创建与表示分离，使得同样的创建过程可以创建不同的表示。<br>1、Builder：给出一个抽象接口，以规范产品对象的各个组成成分的建造。这个接口规定要实现复杂对象的哪些部分的创建，并不涉及具体的对象部件的创建。<br>2、ConcreteBuilder：实现Builder接口，针对不同的商业逻辑，具体化复杂对象的各部分的创建。在建造过程完成后，提供产品的实例。<br>3、Director：调用具体建造者来创建复杂对象的各个部分，在指导者中不涉及具体产品的信息，只负责保证对象各部分完整创建或按某种顺序创建，是一个具体的类。<br>4、Product：要创建的复杂对象类。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Director &#123;</span><br><span class="line">    </span><br><span class="line">    public Product constructProduct(ConcreteBuilder concreteBuilder)&#123;</span><br><span class="line">        concreteBuilder.buildBasic();</span><br><span class="line">        concreteBuilder.buildWalls();</span><br><span class="line">        concreteBuilder.roofed();</span><br><span class="line">        return concreteBuilder.buildProduct();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-Prototype-模式。原型模式"><a href="#4-Prototype-模式。原型模式" class="headerlink" title="(4)Prototype 模式。原型模式"></a>(4)Prototype 模式。原型模式</h2><p>Prototype 模式可以根据原型实例制定创建的对象的种类，并通过深复制这个原型来创建新的对象。Prototype 模式有着同 Abstract Factory 模式和 Builder 模式相同的效果，不过当需要实例化的类是在运行期才被指定的而且要避免创建一个与产品 曾是平行的工厂类层次时，可以使用 Prototype 模式。使用 Prototype 模式可以在运行时 增加或减少原型，比 Abstract Factory 和 Builder 模式更加灵活。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Prototype pro = new Prototype();</span><br><span class="line">Prototype pro1 = (Prototype)pro.clone();</span><br></pre></td></tr></table></figure>
-<h2 id="5-Singleton-模式。单例模式"><a href="#5-Singleton-模式。单例模式" class="headerlink" title="(5)Singleton 模式。单例模式"></a>(5)Singleton 模式。单例模式</h2><p>Singleton 模式也是一种很有代表性的模式。使用 Singleton 模式 可以保证一个类仅有一个实例，从而可以提供一个单一的全局访问点。</p>
-<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>在定义类的静态私有变量同时进行实例化。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">        return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>好处：线程安全；获取实例速度快<br>缺点：类加载即初始化实例，内存浪费</p>
-<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private volatile static Singleton singleton;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static Singleton getSingleton() &#123;</span><br><span class="line">        if (singleton == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>优点：线程安全，进行双重检查，保证只在实例未初始化前进行同步，效率高<br>缺点：实例非空判断，耗费一定资源</p>
-<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private static class SingletonHolder &#123;</span><br><span class="line">        private static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingletonHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种方式利用了classloder的机制来保证初始化instance时只有一个线程，但singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。如果实例化instance很消耗资源，我们想让他延迟加载，此外，我们不希望在Singleton类加载时就实例化，因为不能确保Singleton类还可能在其他的地方被主动使用从而被加载。这个时候，这种方式相比饿汉式就显得更合理。</p>
-<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>优点：写法简单，天然线程安全，可防止反射生成实例，是Effective Java作者Josh Bloch提倡的方式。</p>
-<h2 id="6-Adapter-模式。适配者模式"><a href="#6-Adapter-模式。适配者模式" class="headerlink" title="(6)Adapter 模式。适配者模式"></a>(6)Adapter 模式。适配者模式</h2><p>Adapter 模式可以解决系统间接口不相容的问题。通过 Adapter 可以把类的接口转化为客户程序所希望的接口，从而提高复用性。<br>实现原来的接口，方法体却是另一个对象的实现。</p>
-<h3 id="接口适配"><a href="#接口适配" class="headerlink" title="接口适配"></a>接口适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Mp4&#123;</span><br><span class="line">    void playMp4();</span><br><span class="line">&#125;</span><br><span class="line">interface Avi&#123;</span><br><span class="line">    void playAvi();</span><br><span class="line">&#125;</span><br><span class="line">class VideoPlayer implements Mp4&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void playMp4() &#123;</span><br><span class="line">        System.out.println(&quot;播放Mp4格式的视频文件.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class FormatFactory extends VideoPlayer  implements Avi&#123;    </span><br><span class="line">    @Override</span><br><span class="line">    public void playAvi() &#123;</span><br><span class="line">        //转换成MP4格式的视频</span><br><span class="line">        playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;        </span><br><span class="line">    Mp4 mp4=new VideoPlayer();</span><br><span class="line">    mp4.playMp4();</span><br><span class="line">    Avi avi=new FormatFactory();</span><br><span class="line">    avi.playAvi();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="类适配"><a href="#类适配" class="headerlink" title="类适配"></a>类适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class FormatFactory2 implements Rvmb&#123;</span><br><span class="line">    private Mp4 mp4;</span><br><span class="line">    public FormatFactory2(Mp4 mp4) &#123;</span><br><span class="line">        this.mp4=mp4;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void playRvmb() &#123;</span><br><span class="line">        mp4.playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Rvmb rvmb=new FormatFactory2(new VideoPlayer());</span><br><span class="line">    rvmb.playRvmb();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="7-Bridge-模式。桥接模式"><a href="#7-Bridge-模式。桥接模式" class="headerlink" title="(7)Bridge 模式。桥接模式"></a>(7)Bridge 模式。桥接模式</h2><p>Bridge 模式把类的抽象部分同实现部分相分离，这样类的抽象和实现都可以独立地变化。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Pen&#123;</span><br><span class="line">    void write();</span><br><span class="line">&#125;</span><br><span class="line">class RedPen implements Pen&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class  Paper&#123;</span><br><span class="line">    protected  Pen pen;</span><br><span class="line">    void setPen(Pen pen)&#123;</span><br><span class="line">        this.pen=pen;</span><br><span class="line">    &#125;   </span><br><span class="line">    abstract void writing();</span><br><span class="line">&#125;</span><br><span class="line">class ExaminationPaper extends Paper&#123;</span><br><span class="line">    @Override</span><br><span class="line">    void writing() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Paper paper=new ExaminationPaper();</span><br><span class="line">    paper.setPen(new RedPen());</span><br><span class="line">    paper.writing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="8-Composite-模式。复合模式"><a href="#8-Composite-模式。复合模式" class="headerlink" title="(8)Composite 模式。复合模式"></a>(8)Composite 模式。复合模式</h2><p>Composite 模式提供了一种以树形结构组合对象的方法，使用Composite 可以使单个对象和组合后的对象具有一致性以提高软件的复用性。</p>
-<h2 id="9-Decorator-模式。装饰模式"><a href="#9-Decorator-模式。装饰模式" class="headerlink" title="(9)Decorator 模式。装饰模式"></a>(9)Decorator 模式。装饰模式</h2><p>Decorator 模式可以动态地为对象的某一个方法增加更多的功能。在很多时候，使用 Decorator 模式可以不必继承出新的子类从而维护简洁的类继承结构。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">	private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="10-Facade-模式。外观模式，门面模式"><a href="#10-Facade-模式。外观模式，门面模式" class="headerlink" title="(10)Facade 模式。外观模式，门面模式"></a>(10)Facade 模式。外观模式，门面模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class FacadePattern &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Facade f = new Facade();</span><br><span class="line">        f.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Facade &#123; //外观角色</span><br><span class="line">    private SubSystem01 obj1 = new SubSystem01();</span><br><span class="line">    private SubSystem02 obj2 = new SubSystem02();</span><br><span class="line">    private SubSystem03 obj3 = new SubSystem03();</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        obj1.method1();</span><br><span class="line">        obj2.method2();</span><br><span class="line">        obj3.method3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="11-Flyweight-模式。享元模式，共享元素"><a href="#11-Flyweight-模式。享元模式，共享元素" class="headerlink" title="(11)Flyweight 模式。享元模式，共享元素"></a>(11)Flyweight 模式。享元模式，共享元素</h2><p>Flyweight 模式可以共享大量的细粒度对象，从而节省创建对象 所需要分配的空间，不过在时间上的开销会变大。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public Flyweight factory(int state)&#123;</span><br><span class="line">    if(map.containsKey(state))&#123;</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        map.put(state, new ConcreteFlyweight(state));</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="12-Proxy-模式。代理模式"><a href="#12-Proxy-模式。代理模式" class="headerlink" title="(12)Proxy 模式。代理模式"></a>(12)Proxy 模式。代理模式</h2><p>Proxy 模式为对象提供了一种访问代理对象，通过对象 Proxy 可以控制客户程序的访问。例如:访问权限的控制、访问地址的控制、访问方式的控制等， 甚至可以通过 Proxy 将开销较大的访问化整为零，提高访问效率。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Customer customer=new Customer();</span><br><span class="line">customer.setCash(120000);</span><br><span class="line">BuyCarProxy buyCarProxy=new BuyCarProxy(customer);</span><br><span class="line">buyCarProxy.buyCar();</span><br></pre></td></tr></table></figure>
-<h2 id="13-Interpreter-模式。解释器模式"><a href="#13-Interpreter-模式。解释器模式" class="headerlink" title="(13)Interpreter 模式。解释器模式"></a>(13)Interpreter 模式。解释器模式</h2><p>定义了一个解释器，来解释遵循给定语言和文法的句子。<br>只需要向计算机输入一个句子或文件，就能按照预定的文法规则来对句子或文件进行解释。<br>例如输入“1+2+3-4+1”时，将输出计算结果为3。</p>
-<h2 id="14-Template-Method-模式。模板方法模式"><a href="#14-Template-Method-模式。模板方法模式" class="headerlink" title="(14)Template Method 模式。模板方法模式"></a>(14)Template Method 模式。模板方法模式</h2><p>定义一个操作的模板，其中的一些步骤会在子类中实现，以适应不同的情况。<br>在父类中定义处理流程的框架，在子类中实现具体的处理方式。</p>
-<h2 id="15-Chain-of-Responsibility-模式。责任链模式"><a href="#15-Chain-of-Responsibility-模式。责任链模式" class="headerlink" title="(15)Chain of Responsibility 模式。责任链模式"></a>(15)Chain of Responsibility 模式。责任链模式</h2><p>Chain of Responsibility 模式把可以响应请求的对象 组织成一条链，并在这条对象链上传递请求，从而保证多个对象都有机会处理请求而且可以 避免请求方和相应方的耦合。</p>
-<p>一个纯的责任链模式要求一个具体的处理者对象只能在两个行为中选择一个：一个是承担责任，二是把责任推给下家。不允许出现某一个具体处理者对象在承担了一部分责任后又把责任向下传的情况。</p>
-<p>在一个纯的责任链模式里面，一个请求必须被某一个处理者对象所接收；在一个不纯的责任链模式里面，一个请求可以最终不被任何接收端对象所接收。纯的责任链模式的例子是不容易找到的，一般看到的例子均是不纯的责任链模式的实现。</p>
-<h2 id="16-Command-模式。命令模式"><a href="#16-Command-模式。命令模式" class="headerlink" title="(16)Command 模式。命令模式"></a>(16)Command 模式。命令模式</h2><p>将请求封装为对象，从而增强请求的能力，如参数化、排队、 记录日志等。</p>
-<p>Command有时也被称为事件（event）。它与“事件驱动编程”中的“事件”是一样的意思。当发生点击鼠标、按下键盘按键等事件时，我们可以先将这些事件作成实例，然后按照发生顺序放入队列中。接着，再依次去处理它们。在GUI（graphical user interface）编程中，经常需要与“事件”打交道。即为在有多个命令，并且这些命令有一定的逻辑顺序，且可能需要保存的这些命令的数据，那么可以使用Command设计模式。</p>
-<h2 id="17-Iterator-模式。迭代器模式"><a href="#17-Iterator-模式。迭代器模式" class="headerlink" title="(17)Iterator 模式。迭代器模式"></a>(17)Iterator 模式。迭代器模式</h2><p>Iterator 模式提供了顺序访问一个对象集合中的各元素的方法， 使用 Iterator 可以避免暴露集合中对象的耦合关系。</p>
-<h2 id="18-Mediator-模式。仲裁者模式、中介者模式"><a href="#18-Mediator-模式。仲裁者模式、中介者模式" class="headerlink" title="(18)Mediator 模式。仲裁者模式、中介者模式"></a>(18)Mediator 模式。仲裁者模式、中介者模式</h2><p>Mediator 模式可以减少系统中对象间的耦合性。Mediator 模式 使用中介对象封装其他的对象，从而使这些被封装的对象间的关系就成了松散耦合。</p>
-<p>例如：QQ聊天</p>
-<h2 id="19-Memento-模式。备忘录模式"><a href="#19-Memento-模式。备忘录模式" class="headerlink" title="(19)Memento 模式。备忘录模式"></a>(19)Memento 模式。备忘录模式</h2><p>Memento 模式提供了一种捕获对象状态的方法，且不会破坏对 象的封装。并且可以在对象外部保存对象的状态，并在需要的时候恢复对象状态。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    List&lt;Memento&gt; savedTimes = new ArrayList&lt;&gt;();</span><br><span class="line">    Life life = new Life();</span><br><span class="line">    life.set(&quot;3000 A.D.&quot;);</span><br><span class="line">    savedTimes.add(life.saveToMemento());</span><br><span class="line">    life.set(&quot;4000 A.D.&quot;);</span><br><span class="line">    life.restoreFromMemento(savedTimes.get(0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="20-Observer-模式。观察者模式"><a href="#20-Observer-模式。观察者模式" class="headerlink" title="(20)Observer 模式。观察者模式"></a>(20)Observer 模式。观察者模式</h2><p>Observer 模式提供了将对象的状态广播到一组观察者的方式， 从而可以让每个观察者随时可以得到对象更新的通知。</p>
-<h2 id="21-State-模式。状态模式"><a href="#21-State-模式。状态模式" class="headerlink" title="(21)State 模式。状态模式"></a>(21)State 模式。状态模式</h2><p>State 模式允许一个对象在其内部状态改变的时候改变它的行为。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void setState(State state) &#123;</span><br><span class="line">    System.out.println(&quot;订单信息已更新！&quot;);</span><br><span class="line">    this.state = state;</span><br><span class="line">    this.state.handle();</span><br><span class="line">&#125;</span><br><span class="line">public static  void  main(String [] args) &#123;</span><br><span class="line">    Context context = new Context();</span><br><span class="line">    context.setState(new Booked());</span><br><span class="line">    context.setState(new Payed());</span><br><span class="line">    context.setState(new Sended());</span><br><span class="line">    context.setState(new InWay());</span><br><span class="line">    context.setState(new Recieved());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="22-Strategy-模式。策略模式"><a href="#22-Strategy-模式。策略模式" class="headerlink" title="(22)Strategy 模式。策略模式"></a>(22)Strategy 模式。策略模式</h2><p>使用 Strategy 模式可以让对象中算法的变化独立于客户。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">状态模式和策略模式的不同点：</span><br><span class="line">策略模式中，类的功能是根据当前条件主动更改；</span><br><span class="line">状态模式中，类的功能是被动由当前状态更改；</span><br><span class="line">策略模式中每个行为或算法之间没有关联；</span><br><span class="line">状态模式中的状态之间有关联，并且状态本身控制着状态转移；</span><br></pre></td></tr></table></figure>
-<h2 id="23-Visitor-模式。访问者模式"><a href="#23-Visitor-模式。访问者模式" class="headerlink" title="(23)Visitor 模式。访问者模式"></a>(23)Visitor 模式。访问者模式</h2><p>表示对某对象结构中各元素的操作，使用 Visitor 模式可以在不改<br>变各元素类的前提下定义作用于这些元素的新操作。</p>
-<p>双重分发</p>
-<h1 id="四、其他设计模式"><a href="#四、其他设计模式" class="headerlink" title="四、其他设计模式"></a>四、其他设计模式</h1><h2 id="1-Intercepting-Filter-模式。拦截过滤器模式"><a href="#1-Intercepting-Filter-模式。拦截过滤器模式" class="headerlink" title="(1)Intercepting Filter 模式。拦截过滤器模式"></a>(1)Intercepting Filter 模式。拦截过滤器模式</h2><p>在 J2EE 的 BPS(Basic Programming System，基本编程系 统)应用框架下，在真正响应客户端请求前经常需要进行一些预处理，如客户身份验证、客 户 Session 的合法性验证、字符集转码、客户请求记录等。</p>
-<h2 id="2-Session-Facade-模式。"><a href="#2-Session-Facade-模式。" class="headerlink" title="(2)Session Facade 模式。"></a>(2)Session Facade 模式。</h2><p>在 J2EE 开发领域，人们把Session Bean 和 Facade 模式结合起来， 封装业务逻辑的接口，形成了 Session Facade 模式。</p>
-<h1 id="五、设计模式与软件架构"><a href="#五、设计模式与软件架构" class="headerlink" title="五、设计模式与软件架构"></a>五、设计模式与软件架构</h1><p>软件架构更倾向于从整体和全局上描述软件的组成。<br>设计模式更侧重于类与类、对象与对象之间的关系。<br>设计模式和软件架构是面向不同层次问题的解决方案。</p>
-<h1 id="六、设计模式分类"><a href="#六、设计模式分类" class="headerlink" title="六、设计模式分类"></a>六、设计模式分类</h1><p>设计模式分为三类，分别为创建型、结构型和行为型。</p>
-<p><img src="/images/ruankao/8-1.png"></p>
+    <title>信息系统基础知识（一）信息系统概述</title>
+    <url>/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%80)%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="信息系统的数据环境"><a href="#信息系统的数据环境" class="headerlink" title="信息系统的数据环境"></a>信息系统的数据环境</h1><p>马丁在《信息工程》和《战略数据规划方法学》中将信息系统的数据环境分为 4 种类型：</p>
+<p>第一类数据环境:数据文件。<br>第二类数据环境:应用数据库。<br>第三类数据环境:主题数据库。<br>第四类数据环境:信息检索系统。</p>
+<h1 id="公司的管理活动"><a href="#公司的管理活动" class="headerlink" title="公司的管理活动"></a>公司的管理活动</h1><p>一个公司的管理活动可以分成 4 级:战略级、战术级、操作级和事务级。</p>
+<p>战略级的信息系统的所有者和使用者都是企业的最高管理层，对于现代公司制企业， 就是企业的董事会和经理班子;</p>
+<p>战术级信息系统的使用者一般是企业的中层经理及其管理的 部门;</p>
+<p>操作级信息系统的使用者一般是服务型企业的业务部门，例如，保险企业的保单处理 部门;</p>
+<p>事务级信息系统的使用者一般是企业的管理业务人员，例如，企业的会计、劳资员等。</p>
+<h1 id="信息系统的生命周期"><a href="#信息系统的生命周期" class="headerlink" title="信息系统的生命周期"></a>信息系统的生命周期</h1><p>信息系统的生命周期分为 4 个阶段，即产生阶段、开发阶段、运行阶段和 消亡阶段。</p>
+<p>1.信息系统的产生阶段又分为 概念产生过程和需求分析过程。</p>
+<p>2.信息系统的开发阶段 可分为 5 个阶段，即，总体规划、系统分析、系统设计、系统实施和系统验收阶段。</p>
+<p>3.信息系统的运行阶段<br>四种类型：排错性维护、适应性维护、完善性维护和预防性维护。</p>
+<p>4.信息系统的消亡阶段</p>
+<h1 id="信息系统建设的原则"><a href="#信息系统建设的原则" class="headerlink" title="信息系统建设的原则"></a>信息系统建设的原则</h1><p>1.高层管理人员介入原则<br>2.用户参与开发原则<br>3.自顶向下规划原则<br>4.工程化原则<br>5.其他原则<br>创新性原则，用来体现信息系统的先进性。<br>整体性原则，用来体现信息系统的完整性。<br>发展性原则，用来体现信息系统的超前性。<br>经济性原则，用来体现信息系统的实用性。</p>
+<h1 id="信息系统开发方法"><a href="#信息系统开发方法" class="headerlink" title="信息系统开发方法"></a>信息系统开发方法</h1><p>1.结构化方法<br>2.原型法<br>3.面向对象方法<br>4.面向服务的方法</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
       </categories>
       <tags>
-        <tag>软考-设计模式</tag>
+        <tag>软考-信息系统基础知识</tag>
       </tags>
   </entry>
   <entry>
-    <title>设计模式（三）设计模式总结</title>
-    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(%E4%B8%89)%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<p>学习设计模式最重要的是理解，而不是生搬硬套。</p>
-<p>不能滥用设计模式</p>
+    <title>信息系统基础知识（三）政府信息化与电子政务</title>
+    <url>/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%89)%E6%94%BF%E5%BA%9C%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1/</url>
+    <content><![CDATA[<p>政府信息化是传统政府向信息化政府的演变过程。具体地说，政府信息化就是应用现代 信息技术、网络技术和通信技术，通过信息资源的开发和利用来集成管理和服务，从而提高 政府的工作效率、决策质量、调控能力，并节约开支，改进政府的组织结构、业务流程和工 作方式，全方位地向社会提供优质、规范、透明的管理和服务。</p>
+<p>第一，政府信息化必须借助于信息技术和网络技术，离不开信息基础设施和软件产品;</p>
+<p>第二，政府信息化是一个系统工程，它不仅是与行政有关部门的信息化，还包括立法、司法部门及其他一些公共组织的信息化;</p>
+<p>第三，政府信息化并不是简单地将传统的政府管理事务原封不动地搬到互联网上，而是要对已有的组织结构和业务流程进行重组或再造。</p>
+<p>政府信息化的主要内容是电子政务。因此，在大多数情况下，电子 政务可以作为政府信息化的同义语来使用。</p>
+<h1 id="一、我国政府信息化的历程和策略"><a href="#一、我国政府信息化的历程和策略" class="headerlink" title="一、我国政府信息化的历程和策略"></a>一、我国政府信息化的历程和策略</h1><h2 id="20-世纪-80-年代末期“中国国家经济信息系统”的建设和运行。"><a href="#20-世纪-80-年代末期“中国国家经济信息系统”的建设和运行。" class="headerlink" title="20 世纪 80 年代末期“中国国家经济信息系统”的建设和运行。"></a>20 世纪 80 年代末期“中国国家经济信息系统”的建设和运行。</h2><p>国家经济信息系统包括着重为国家宏观经济服务的主系统，以及各部门各行业的专业经济信息系统在内的全国系统。</p>
+<h2 id="20-世纪-90-年代"><a href="#20-世纪-90-年代" class="headerlink" title="20 世纪 90 年代"></a>20 世纪 90 年代</h2><p>一是以“金”字头为代表的多项信息工程项目取得了突破性进展。金桥、金关、金卡“三金”工程。<br>二是政府上网工程初具规模，“十二金”工程。第一类是对加强监管、提高效率和推进 公共服务起到核心作用的办公业务资源系统、宏观经济管理系统建设;第二类是增强政府收 入能力、保证公共支出合理性的金税、金关、金财、金融监管(含金卡)、金审 5 个业务系 统;第三类是保障社会秩序、为国民经济和社会发展打下坚实基础的金盾、金保、金农、金 水、金质 5 个业务系统建设。<br>三是各级政府都加强了电子政务的软件和硬件两方面的基础建设，建成了覆盖广泛的“两网、一站、四库”。“两网”是指政务内网和政务外网，两网之间物理隔离，政务外网与互联网之间逻辑隔离;“一站”，是政府门户网站;“四库”，即建立人口、法人单位、空间地理和自然资源、宏观经济 4 个基础数据库。<br>四是各地在推动政府信息化方面健康发展，并在全国普遍实行了 政府上网工程。</p>
+<p>政府信息化的一个中心任务是实现由传统政务到电子政务的转变。</p>
+<p>(1)做好战略数据规划。<br>(2)面向主导业务流程。<br>(3)重视资源条件。<br>(4)以人为本。<br>(5)设立 CIO。<br>(6)加强规范化和标准化。<br>(7)充分利用社会资源。</p>
+<h1 id="二、电子政务的内容"><a href="#二、电子政务的内容" class="headerlink" title="二、电子政务的内容"></a>二、电子政务的内容</h1><h2 id="1-政府与政府-Government-To-Government"><a href="#1-政府与政府-Government-To-Government" class="headerlink" title="(1)政府与政府(Government To Government)"></a>(1)政府与政府(Government To Government)</h2><h2 id="2-政府对企业-Government-To-Business"><a href="#2-政府对企业-Government-To-Business" class="headerlink" title="(2)政府对企业(Government To Business)"></a>(2)政府对企业(Government To Business)</h2><h2 id="3-政府对公民（G2C）"><a href="#3-政府对公民（G2C）" class="headerlink" title="(3)政府对公民（G2C）"></a>(3)政府对公民（G2C）</h2><h2 id="4-企业对政府"><a href="#4-企业对政府" class="headerlink" title="(4)企业对政府"></a>(4)企业对政府</h2><h2 id="5-公民对政府"><a href="#5-公民对政府" class="headerlink" title="(5)公民对政府"></a>(5)公民对政府</h2><h2 id="6-政府对公务员（G2E）"><a href="#6-政府对公务员（G2E）" class="headerlink" title="(6)政府对公务员（G2E）"></a>(6)政府对公务员（G2E）</h2><h1 id="三、电子政务建设的过程模式和技术模式"><a href="#三、电子政务建设的过程模式和技术模式" class="headerlink" title="三、电子政务建设的过程模式和技术模式"></a>三、电子政务建设的过程模式和技术模式</h1><h2 id="1-电子政务建设的过程模式"><a href="#1-电子政务建设的过程模式" class="headerlink" title="1.电子政务建设的过程模式"></a>1.电子政务建设的过程模式</h2><p>(1)以用户为中心<br>(2)引进“客户关系管理”技术<br>(3)政府门户</p>
+<h2 id="2-电子政务的技术模式"><a href="#2-电子政务的技术模式" class="headerlink" title="2.电子政务的技术模式"></a>2.电子政务的技术模式</h2><p>(1)网络管理模式<br>电子政务在网络管理上分为政府专网和通用网络两部分，包括专用网络、内部网络和外部网络。<br>(2)信息资源管理模式<br>电子政务可以选用的信息资 源管理模式有多种，目前主要有两种，即元数据管理模式和 XML 数据管理模式。<br>(3)应用开发模式<br>(4)电子政务的安全体系<br>电子政务的安全体系包括物理安全、网络安全、信息安全及安全管理等方面。<br>(5)电子政务的标准化<br>《国家电子政务标准化指南》共分为以下六个部分。<br>第一部分:总则。概括描述电子政务标准体系及标准化的机制。<br>第二部分:工程管理。概括描述电子政务工程管理须遵循或参考的技术要求、标准和管理规定。<br>第三部分:网络建设。概括描述网络建设须遵循或参考的技术要求、标准和管理规定。<br>第四部分:信息共享。概括描述信息共享须遵循或参考的技术要求、标准和管理规定。<br>第五部分:支撑技术。概括描述支撑技术须遵循或参考的技术要求、标准和管理规定。<br>第六部分:信息安全。概括描述保障信息安全须遵循或参考的技术要求、标准和管理规定。</p>
+<p>六项电子政务标准分别如下:<br>1 基于 XML 电子公文格式规范第一部分:总则，第二部分:公文体;<br>2 XML 在电子政务中的应用指南;<br>3 电子政务业务流程设计方法通用规范;<br>4 信息化工程监理规范;<br>5 电子政务数据元第一部分:设计和管理规范;<br>6 电子政务主题词表编制规则。</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
       </categories>
       <tags>
-        <tag>软考-设计模式</tag>
+        <tag>软考-信息系统基础知识</tag>
       </tags>
   </entry>
   <entry>
-    <title>设计模式（二）设计模式及实现</title>
-    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(%E4%BA%8C)%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
-    <content><![CDATA[<p><img src="/images/ruankao/8-2.png"></p>
-<p><img src="/images/ruankao/8-3.png"></p>
-<p><img src="/images/ruankao/8-4.png"></p>
-<p><img src="/images/ruankao/8-5.png"></p>
-<p><img src="/images/ruankao/8-6.png"></p>
-<p><img src="/images/ruankao/8-7.png"></p>
-<p><img src="/images/ruankao/8-8.png"></p>
+    <title>信息系统基础知识（二）信息系统工程</title>
+    <url>/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%8C)%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/</url>
+    <content><![CDATA[<p>系统有下述特性:<br>(1)集合性。<br>(2)相关性。<br>(3)目的性。<br>(4)层次性。<br>(5)环境适应性。</p>
+<h1 id="一、信息系统工程的概念"><a href="#一、信息系统工程的概念" class="headerlink" title="一、信息系统工程的概念"></a>一、信息系统工程的概念</h1><h2 id="系统的分类"><a href="#系统的分类" class="headerlink" title="系统的分类"></a>系统的分类</h2><p>按照系统功能划分:工业控制系统、信息管理系统、军事系统和经济系统等。<br>按照系统与外界的关系划分:封闭系统和开放系统。<br>按照系统的内部结构划分:开环系统和闭环系统等。<br>按照抽象程度将系统分为:概念系统(描述系统的主要特征和大致轮廓)、逻辑系统(脱离实现细节的合理系统)和物理系统 (实际存在的系统)。</p>
+<p>信息系统信息系统一般泛指收集、存储、处理和传播各种信息的具备完整功能的集 合体。</p>
+<p>系统工程是以研究大规模复杂系统为对象的一门交叉学科。它把自然科学和社会科学的 某些思想、理论、方法、策略和手段等根据总体协调的需要，有机地联系起来，应用定量和定性分析相结合的方法和计算机等技术工具，对系统的构成要素、组织结构、信息交换和反 馈控制等功能进行分析、设计、制造和服务，从而达到最优设计、最优控制和最优管理的目的。</p>
+<p>信息系统一般泛指收集、存储、处理和传播各种信息的具备完整功能的集 合体。人们常说的信息系统大多数支持各部门和机构的管理和决策的信息系统，当前信息系 统重要的特征是计算机和互联网技术的应用。</p>
+<p>随着网络的普及，计算机信息系统已经从管理信 息系统发展成为更强调支持企业高层领导决策的决策支持系统，即 DSS 阶段。</p>
+<h1 id="二、信息系统工程的内容"><a href="#二、信息系统工程的内容" class="headerlink" title="二、信息系统工程的内容"></a>二、信息系统工程的内容</h1><h2 id="1-信息系统工程的体系构成"><a href="#1-信息系统工程的体系构成" class="headerlink" title="1.信息系统工程的体系构成"></a>1.信息系统工程的体系构成</h2><h3 id="（1）信息网络系统"><a href="#（1）信息网络系统" class="headerlink" title="（1）信息网络系统"></a>（1）信息网络系统</h3><p>信息网络系统是指以信息技术为主要手段建立的信息处理、传输、交换和分发的计算机网络系统。</p>
+<h3 id="（2）信息资源系统"><a href="#（2）信息资源系统" class="headerlink" title="（2）信息资源系统"></a>（2）信息资源系统</h3><p>信息资源系统是指以信息技术为主要技术手段建立的信息资源采集、存储、处理的资源系统。</p>
+<h3 id="（3）信息应用系统"><a href="#（3）信息应用系统" class="headerlink" title="（3）信息应用系统"></a>（3）信息应用系统</h3><p>信息应用系统是指以信息技术为主要手段建立的各类业务管理的应用系统。</p>
+<h2 id="2-信息系统工程的技术构成"><a href="#2-信息系统工程的技术构成" class="headerlink" title="2.信息系统工程的技术构成"></a>2.信息系统工程的技术构成</h2><p>信息系统工程首要的任务是实施软件工程和信息工程。信息系统工程还应包括组织中的业务流程等内容。</p>
+<p>软件工程是开发、运行、维护和修复软件的系统方法。</p>
+<p>“软件”的定义为:计算机程序、方法、规则、相关的文档资料以及在计算机上运行时所必需的数据的集合。</p>
+<p><img src="/images/ruankao/7-10.png"></p>
+<p>信息工程的主要焦点是用计算机来存储和维护数据，而信息则是从这些数据提炼出来，来满足人们的某种需要的数据。</p>
+<p>信息工程方法的主要特点：<br>一是以数据为中心，进一步的工作是建立主题数据库;<br>二是将工程的实施划分为对业务系统的实施和对技术系统的实施。</p>
+<h2 id="3-组织流程管理"><a href="#3-组织流程管理" class="headerlink" title="3.组织流程管理"></a>3.组织流程管理</h2><p>有效的组织保障包括:<br>(1)建立流程管理机构，这一机构可归入管理流程之中。<br>(2)配备强有力的领导来负责内部的流程管理工作。<br>(3)制定各流程之间的动态关系规则。通过实施流程管理模式，传统组织中的组织图将不复存在，取代它的是流程管理图。</p>
+<h2 id="4-信息系统工程的管理信息"><a href="#4-信息系统工程的管理信息" class="headerlink" title="4.信息系统工程的管理信息"></a>4.信息系统工程的管理信息</h2><p>在具体实施过程中，项目管理一般包含了以下几个方面的内容:<br>(1)任务划分。任务划分是把整个开发工作定义成一组任务的集合，这组任务又可以进一步划分成若干个子任务，进而形成具有层次结构的任务群。<br>(2)计划安排。依据划分完毕的任务即可制定出整个开发及项目管理计划，并产生完成任务的计划表。<br>(3)经费管理。经费管理在整个开发项目管理中处于重要的地位。项目经理可以运用经济杠杆来控制整个开发工作。<br>(4)审计控制。按照所采用的开发方法，应针对每一类开发人员制定出工作过程中的责任、义务、完成任务的质量标准等，按照计划对每项任务进行审计。<br>(5)风险管理。如何有效地管理和控制风险是保证系统实施成功的重要环节之一。特别是信息系统工程项目，风险管理更是重中之重。<br>(6)质量保证。质量管理应贯穿于整个项目始终。在项目规划阶段，就应该建立系统质量的度量模型和相应的机制，对项目质量提出总体的要求;在系统分析和设计阶段应对质量管理不断细化，按自顶向下的方式将总体要求划分成若干易于考核和度量的质量单元。</p>
+<h1 id="三、信息系统工程的总体规划"><a href="#三、信息系统工程的总体规划" class="headerlink" title="三、信息系统工程的总体规划"></a>三、信息系统工程的总体规划</h1><h2 id="已经建成或正在建设的系统仍然存在一系列问题，主要如下"><a href="#已经建成或正在建设的系统仍然存在一系列问题，主要如下" class="headerlink" title="已经建成或正在建设的系统仍然存在一系列问题，主要如下:"></a>已经建成或正在建设的系统仍然存在一系列问题，主要如下:</h2><p>系统建设与组织发展的目标和战略不匹配。<br>已建成的系统解决问题的有效性低，即系统建成后对管理并无显著改善。<br>不能适应环境变化和组织变革的需要。<br>组织结构陈旧，管理落后。<br>系统使用人员的素质较低。<br>系统开发环境落后，技术方案不合理。<br>系统开发及运行维护的标准、规范混乱。<br>资源短缺，投入太少，而对系统的期望又过高。</p>
+<h2 id="总体规划的主要任务："><a href="#总体规划的主要任务：" class="headerlink" title="总体规划的主要任务："></a>总体规划的主要任务：</h2><p>制定信息系统工程的发展战略。主要是使信息系统工程的战略与整个组织的战略和目标协调一致。<br>确定组织的主要信息需求，形成信息系统工程的总体结构方案，安排项目开发计划。<br>制定系统建设的资源分配计划，即制定为实现开发计划而需要的硬软件资源、数据通信设备、人员、技术、服务和资金等计划，提出整个系统的建设概算。</p>
+<h2 id="总体规划的主要步骤："><a href="#总体规划的主要步骤：" class="headerlink" title="总体规划的主要步骤："></a>总体规划的主要步骤：</h2><h3 id="1-对当前系统进行初步的调查。"><a href="#1-对当前系统进行初步的调查。" class="headerlink" title="1 对当前系统进行初步的调查。"></a>1 对当前系统进行初步的调查。</h3><p>初步调查主要由两部分构成:<br>①一般调查。一般调查包括组织的概括，企业的目标，现行系统运行情况，简单历史，企业的 产品，产量，利税，体制及改革情况，人员基本情况，面临的问题，企业的中长期计划及主 要困难等，使系统分析师对企业有一个初步轮廓。<br>②信息需求初步调查。信息需求初步调查是整个初步调查的主要内容。通过调查组织系统的工作职责及活动来了解各职能机构所要处理的数据，估计各机构发生的数据量及频度。信息需求初步调查还应调查环境信息，包括内部环境和外部环境的信息。</p>
+<h3 id="2-分析和确定系统目标。"><a href="#2-分析和确定系统目标。" class="headerlink" title="2 分析和确定系统目标。"></a>2 分析和确定系统目标。</h3><p>这实际上可以由总经理和信息系统工程开发的领导小组确定， 应包括服务的质量和范围、政策、组织及人员等。它不仅包括信息系统工程的目标，而且应 有整个企业的目标。</p>
+<h3 id="3-分析子系统的组成及基本功能。"><a href="#3-分析子系统的组成及基本功能。" class="headerlink" title="3 分析子系统的组成及基本功能。"></a>3 分析子系统的组成及基本功能。</h3><p>从上到下对系统进行划分，并且详细说明各个子系 统应该实现的功能。</p>
+<h3 id="4-拟定系统的实施方案。"><a href="#4-拟定系统的实施方案。" class="headerlink" title="4 拟定系统的实施方案。"></a>4 拟定系统的实施方案。</h3><p>可以对子系统的优先级进行设定，以便确定子系统的开发顺序。</p>
+<h3 id="5-进行系统的可行性研究。"><a href="#5-进行系统的可行性研究。" class="headerlink" title="5 进行系统的可行性研究。"></a>5 进行系统的可行性研究。</h3><h3 id="6-编写可行性报告。"><a href="#6-编写可行性报告。" class="headerlink" title="6 编写可行性报告。"></a>6 编写可行性报告。</h3><h2 id="信息系统工程总体规划的目标信息"><a href="#信息系统工程总体规划的目标信息" class="headerlink" title="信息系统工程总体规划的目标信息"></a>信息系统工程总体规划的目标信息</h2><p>两个原则:<br>一是从组织的战略出发，而不是从系统的需求出发，这样就可以避免脱离组织宗旨和战略目标，走入为建设而建设的困境;<br>二是从业务的变革出发，而不是从技术的变革出发，这样有利于充分利用组织的现有资源来满足关键需求，从而避免信息系统工程无法有效地支持组织决策。</p>
+<p>信息系统工程规划的主要目的是根据企业总体目标规划好统一的、既有集中式又有分布 式、分期逐步实现的数据平台和应用平台的建设。</p>
+<h2 id="总体规划目标的分析过程"><a href="#总体规划目标的分析过程" class="headerlink" title="总体规划目标的分析过程"></a>总体规划目标的分析过程</h2><p>总体规划目标的分析过程包括，<code>确定组织的总体目标</code>和<code>确定信息系统工程规划的总体目标</code>两个步骤。</p>
+<h3 id="1-确定组织的总体目标。"><a href="#1-确定组织的总体目标。" class="headerlink" title="1 确定组织的总体目标。"></a>1 确定组织的总体目标。</h3><p>它的分析的步骤是:<br>根据系统调查的结果，进行分析，归纳出现行系统中的关键问题，做出问题表。<br>根据问题表，构造目标的层次结构，即目标树。在目标树中，最上层是总目标，以下各层是 分目标或子目标，最下层是为实现目标而采取的具体措施，它是用来衡量目标是否切合实际 的标准。<br>对目标树中的各项分目标进行分析。分析各项分目标之间的关系，确定解决目标冲突的方法， 指出各项措施的考核指标。<br>将目标树按各层分目标在系统中所起的作用重新绘制。</p>
+<h3 id="2-确定信息系统工程规划的总体目标。"><a href="#2-确定信息系统工程规划的总体目标。" class="headerlink" title="2 确定信息系统工程规划的总体目标。"></a>2 确定信息系统工程规划的总体目标。</h3><p>信息系统工程应该在下面几个方面发挥作用。<br>1、信息系统工程的辅助决策功能。<br>2、信息系统工程的辅助管理功能。<br>3、企业资源管理。</p>
+<p>信息系统工程的总体规划包括，总体规划的层次、总体规划的任务、信息系统工程的功能范围、确定功能范围的步骤、系统总体结构分解、投资概算和总体规划的成果等内容。</p>
+<p>总体规划的层次分为:信息战略规划、信息资源规划、信息系统工程建设规划和企业资源计划(ERP)。</p>
+<h2 id="总体规划的任务"><a href="#总体规划的任务" class="headerlink" title="总体规划的任务"></a>总体规划的任务</h2><p>明确组织远景和使命。<br>确立组织发展战略和目标。<br>明晰组织业务及管理变革策略。<br>识别组织关键成功因素、分析关键性能指标、抽取信息需求。<br>建立总体信息工程框架。<br>提出可行性报告和总体规划方案。</p>
+<h2 id="确定系统的功能范围的步骤如下"><a href="#确定系统的功能范围的步骤如下" class="headerlink" title="确定系统的功能范围的步骤如下:"></a>确定系统的功能范围的步骤如下:</h2><p>1 绘制出系统的总数据流程图。<br>2 根据系统方案的规定和用户的要求，结合现行系统的环境，确定系统的边界范围，并在总信息流程图上圈出。<br>3 有关人员协商讨论。<br>4 确定系统范围，并做出分析说明。</p>
+<h2 id="信息系统工程总体规划应当包括投资概算，它包括以下-4-个方面内容。"><a href="#信息系统工程总体规划应当包括投资概算，它包括以下-4-个方面内容。" class="headerlink" title="信息系统工程总体规划应当包括投资概算，它包括以下 4 个方面内容。"></a>信息系统工程总体规划应当包括投资概算，它包括以下 4 个方面内容。</h2><p>1 计算机系统软、硬件设备投资。<br>2 系统开发费。<br>3 系统安装和维护费用。<br>4 人员培训费。</p>
+<h1 id="四、总体规划的方法论"><a href="#四、总体规划的方法论" class="headerlink" title="四、总体规划的方法论"></a>四、总体规划的方法论</h1><p>制定信息系统工程总体规划需要有效的方法论支持，其方法多种多样，在此主要介绍较为著名的三种:业务系统规划法、关键成功因素法、战略目标集合转化法。</p>
+<h2 id="1-业务系统规划法-Business-Systems-Planning，BSP"><a href="#1-业务系统规划法-Business-Systems-Planning，BSP" class="headerlink" title="1.业务系统规划法(Business Systems Planning，BSP)"></a>1.业务系统规划法(Business Systems Planning，BSP)</h2><h3 id="BSP的概念"><a href="#BSP的概念" class="headerlink" title="BSP的概念"></a>BSP的概念</h3><p>1 信息系统的战略应当表达出企业的各个管理层次的需求。<br>战略计划层:是决定组织目标、达到这些目标所需用的资源，以及获取、分配这些资源的策略的过程;<br>管理控制层:通过这一过程，管理者确认资源的获取及组织的目标是否有效地使用了这些资源;<br>操作控制层:保证有效率地完成具体的任务。</p>
+<p>2 信息系统应该向整个企业提供一致的信息。<br>3 信息系统应该适应组织机构和管理体制的改变。<br>4 信息系统的战略规划，应当从总体信息系统结构中的子系统开始实现。</p>
+<h3 id="BSP-的目标"><a href="#BSP-的目标" class="headerlink" title="BSP 的目标"></a>BSP 的目标</h3><p>BSP 的目标主要是提供信息系统规划，用以支持企业短期的和长期的信息需要。</p>
+<p>归纳如下:<br>为管理者提供一种形式化的、客观的方法，明确建立信息系统的优先顺序，而不考虑部门的 狭隘利益，并避免主观性。<br>为具有较长生命周期系统的建设和投资提供保障。由于系统是基于业务过程的，因而不因机 构变化而失效。<br>为了以最高效率支持企业目标，BSP 提供数据处理和资源管理。<br>增加负责人的信心，使其坚信高效的信息系统能够被实施。<br>通过提供信息系统对用户需求的快速响应，从而改善信息系统管理部门和用户之间的关系。</p>
+<p>BSP 方法的真正价值在于提供了下面的机会:<br>一是创造一种环境和提出初步行动计划，使企 业能依此对未来的系统和优先次序的改变做出反应，不致造成设计的重大失误。<br>二是定义信息系统的职能，并不断完善。</p>
+<p>BSP 方法实施步骤：<br>1 确立项目。<br>2 工作准备。<br>3 主要活动。<br>开始。<br>定义业务过程。<br>定义数据类。<br>分析现存系统支持能力。<br>确定管理部门对系统的要求。<br>提出判断和结论。<br>定义信息总体结构。<br>确定总体结构中的优先顺序。<br>评价信息资源管理工作。<br>制定建议书和开发计划。<br>工作成果报告。</p>
+<h2 id="2-关键成功因素法-Critical-Success-Factors，CSF"><a href="#2-关键成功因素法-Critical-Success-Factors，CSF" class="headerlink" title="2.关键成功因素法(Critical Success Factors，CSF)"></a>2.关键成功因素法(Critical Success Factors，CSF)</h2><p>该方法能够帮助组织找到影响系统成功的关键因 素，进行分析以确定组织的信息需求，从而为管理部门控制信息技术及其处理过程提供实施 指南。</p>
+<p>CSF 的确定关键成功因素的特征如下。<br>内部 CSF:针对机构的内部活动，如改善产品质量、提高工效等。<br>外部 CSF:与机构的对外活动有关，如，满足客户企业的进入标准、获得对方的信贷。<br>监控型 CSF:对现有业务流程等进行监控，如监测零件缺陷百分比。<br>建设型 CSF:适应组织未来变化的有关活动，如改善产品组合。</p>
+<p>CSF 共分 4 层:行业的 CSF、组织的 CSF、部门的 CSF、管理者的 CSF，它们依次相互影响。</p>
+<p>CSF 实施步骤：<br>第一步:了解组织的战略目标。<br>第二步:识别所有成功因素。<br>第三步:确定关键成功因素。<br>第四步:识别绩效指标和标准，以及测量绩效的数据。</p>
+<p>CSF 的优缺点：</p>
+<p>缺点是:<br>数据的汇总和数据分析过程比较随意，缺乏一种专门严格的方法将众多个人的关键成功因素汇总成一个明确的整个组织的成功因素;<br>由于个人和组织的成功因素往往并不一致，两者之间的界限容易被混淆，从而容易使组织的成功因素具有个人倾向性;<br>由于环境和管理经常迅速变化，信息系统也必须做出相应调整，而用 CSF 法开发的系统可能无法适应变化了的环境;<br>CSF 在应用于较低层的管理时，由于不容易找到相应目标的关键成功因子及其关键指标，效率可能会比较低。</p>
+<h2 id="3-战略目标集合转化法-Strategy-Set-Transformation，SST"><a href="#3-战略目标集合转化法-Strategy-Set-Transformation，SST" class="headerlink" title="3.战略目标集合转化法(Strategy Set Transformation，SST)"></a>3.战略目标集合转化法(Strategy Set Transformation，SST)</h2><p>战略目标集合转化法(Strategy Set Transformation，SST)将组织的战略看成一个“信息 集合”，包括使命、目标、战略和其他战略变量，如管理水平、发展趋势以及重要的环境约 束等。战略性系统规划就是把组织的战略集合转化为信息系统的战略集合，而后者由信息系 统的系统目标、环境约束和战略规划组成。</p>
+<h3 id="该方法的步骤如下。"><a href="#该方法的步骤如下。" class="headerlink" title="该方法的步骤如下。"></a>该方法的步骤如下。</h3><h4 id="第一步-识别和阐明组织的战略集合。"><a href="#第一步-识别和阐明组织的战略集合。" class="headerlink" title="第一步:识别和阐明组织的战略集合。"></a>第一步:识别和阐明组织的战略集合。</h4><p>(1)描绘出组织各类人员结构，如卖主、经理、雇员、供应商、顾客、贷款人、政府代理人、地区社团及竞争者等。<br>(2)识别每类人员的目标。<br>(3)对于每类人员识别其使命及战略。</p>
+<h4 id="第二步-将组织的战略集合转化为信息系统战略集合。"><a href="#第二步-将组织的战略集合转化为信息系统战略集合。" class="headerlink" title="第二步:将组织的战略集合转化为信息系统战略集合。"></a>第二步:将组织的战略集合转化为信息系统战略集合。</h4>]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-信息系统基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息系统基础知识（六）知识管理与商业智能</title>
+    <url>/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%94)%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%B8%8E%E5%95%86%E4%B8%9A%E6%99%BA%E8%83%BD/</url>
+    <content><![CDATA[<p>知识管理是企业信息化发展的高级阶段，而商业智能则是知识管理的实际应用。</p>
+<h1 id="一、知识管理"><a href="#一、知识管理" class="headerlink" title="一、知识管理"></a>一、知识管理</h1><p>在组织中建构一个人文与技术兼备的知识系统，让组织中的信息 与知识，通过获得、创造、分享、整合、记录、存取、更新等过程，实现不断创新。同时， 这种创新知识又不断回馈到组织之内，从而使得组织的知识不间断地累积和升华，进而转化 为企业的智慧资本。</p>
+<p>知识管理应以人为中心，以信息为基础，以知识 创新为目标，将知识看作一种可开发资源。</p>
+<h2 id="知识管理工具的分类"><a href="#知识管理工具的分类" class="headerlink" title="知识管理工具的分类"></a>知识管理工具的分类</h2><h3 id="1-用于知识生成的工具"><a href="#1-用于知识生成的工具" class="headerlink" title="1 用于知识生成的工具"></a>1 用于知识生成的工具</h3><p>搜索引擎、数据挖掘技术、用于知识合成的工具、辅助创新知识的工具。</p>
+<h3 id="2-用于知识编码的工具"><a href="#2-用于知识编码的工具" class="headerlink" title="2 用于知识编码的工具"></a>2 用于知识编码的工具</h3><p>知识仓库和知识地图。</p>
+<h3 id="3-用于知识转移的工具"><a href="#3-用于知识转移的工具" class="headerlink" title="3 用于知识转移的工具"></a>3 用于知识转移的工具</h3><h1 id="二、商业智能"><a href="#二、商业智能" class="headerlink" title="二、商业智能"></a>二、商业智能</h1><p>商业智能(Business Intelligence，BI)是企业对商业数据的搜集、管理和分析的系统过 程，目的是使企业的各级决策者获得知识或洞察力，帮助他们做出对企业更有利的决策。</p>
+<p>商业智能技术并不是基础技术或者产品技术，它是数据仓库、联机分析处理 OLAP 和数据挖掘等相关技术走向商业应用后形成的一种应用技术。</p>
+<p>商业智能系统主要包括数据预处理、建立数据仓库、数据分析及数据展现 4 个主要阶段。</p>
+<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>数据预处理是整合企业原始数据的第一步，它包括数据的抽取、转换和装载三个过程。</p>
+<h2 id="建立数据仓库"><a href="#建立数据仓库" class="headerlink" title="建立数据仓库"></a>建立数据仓库</h2><p>建立数据仓库则是处理海量数据的基础。</p>
+<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><p>数据分析是体现系统智能的关键，一般采用联机分 析处理和数据挖掘两大技术。<br>联机分析处理不仅进行数据汇总/聚集，同时还提供切片、切块、下钻、上卷和旋转等数据分析功能，用户可以方便地对海量数据进行多维分析。<br>数据挖掘的目标则是挖掘数据背后隐藏的知识，通过关联分析、聚类和分类等方法建立分析模型，预测企业未来发展趋势和将要面临的问题。</p>
+<h2 id="数据展现"><a href="#数据展现" class="headerlink" title="数据展现"></a>数据展现</h2><p>数据展现则主要保障系统分析结果的可视化。</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
       </categories>
       <tags>
-        <tag>软考-设计模式</tag>
+        <tag>软考-信息系统基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>信息系统基础知识（七）业务流程重组</title>
+    <url>/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E5%85%AD)%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E9%87%8D%E7%BB%84/</url>
+    <content><![CDATA[<p>业务流程重组(BusinessProcess Reengineering，BPR)</p>
+<h1 id="一、BPR-的内容"><a href="#一、BPR-的内容" class="headerlink" title="一、BPR 的内容"></a>一、BPR 的内容</h1><p>BPR 强调 4 个核心内容，即根本性、彻底性、戏剧性和流程。</p>
+<h1 id="二、BPR-的作用"><a href="#二、BPR-的作用" class="headerlink" title="二、BPR 的作用"></a>二、BPR 的作用</h1><p>(1)BPR 的实施使企业更贴近市场。<br>(2)BPR 使生产成本成倍压缩。<br>(3)BPR 使产品质量得到全面提升。<br>(4)服务质量更趋完美。</p>
+<h1 id="三、BPR-遵循的原则"><a href="#三、BPR-遵循的原则" class="headerlink" title="三、BPR 遵循的原则"></a>三、BPR 遵循的原则</h1><h2 id="1-流程中心原则"><a href="#1-流程中心原则" class="headerlink" title="(1)流程中心原则"></a>(1)流程中心原则</h2><p>BPR 注重的是业务流程整体最优，通过理顺和优化业务流程，使得业务流程 中每一个环节上的活动尽可能实现最大化增值，尽可能减少无效的或不增值的活动，并从整 体最优的目标出发，设计和优化业务流程中的各项活动，消除本位主义和利益分散主义。</p>
+<h2 id="2-团队管理原则"><a href="#2-团队管理原则" class="headerlink" title="(2)团队管理原则"></a>(2)团队管理原则</h2><p>首先是设计、重组业 务流程，而后依据业务流程建立或改造企业组织，尽量消除或弱化“中间层”。这不仅降低 了管理费用和成本，更重要的是提高了组织的运转效率及对市场的反应速度。</p>
+<h2 id="3-客户导向原则"><a href="#3-客户导向原则" class="headerlink" title="(3)客户导向原则"></a>(3)客户导向原则</h2><p>利用信息技术能够有效地帮助企业 BPR 得以很好地实施，采用计算机网络、数据库和多媒体等技术 建立的信息网络，能够加快信息传递，实现信息共享，其结果是将传统的串行工作方式变为 并行工作方式，将企业组织结构由垂直型变为水平型，使企业成为协同工作的组织，使得企 业的业务流程，特别是关键业务流程与市场接通，与顾客接通。<br>另一方面，科学技术的发展和管理模式的日臻完善，也为 BPR 创造了条件。</p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-信息系统基础知识</tag>
       </tags>
   </entry>
   <entry>
@@ -743,153 +790,6 @@
       </tags>
   </entry>
   <entry>
-    <title>信息系统基础知识（一）信息系统概述</title>
-    <url>/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%80)%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/</url>
-    <content><![CDATA[<h1 id="信息系统的数据环境"><a href="#信息系统的数据环境" class="headerlink" title="信息系统的数据环境"></a>信息系统的数据环境</h1><p>马丁在《信息工程》和《战略数据规划方法学》中将信息系统的数据环境分为 4 种类型：</p>
-<p>第一类数据环境:数据文件。<br>第二类数据环境:应用数据库。<br>第三类数据环境:主题数据库。<br>第四类数据环境:信息检索系统。</p>
-<h1 id="公司的管理活动"><a href="#公司的管理活动" class="headerlink" title="公司的管理活动"></a>公司的管理活动</h1><p>一个公司的管理活动可以分成 4 级:战略级、战术级、操作级和事务级。</p>
-<p>战略级的信息系统的所有者和使用者都是企业的最高管理层，对于现代公司制企业， 就是企业的董事会和经理班子;</p>
-<p>战术级信息系统的使用者一般是企业的中层经理及其管理的 部门;</p>
-<p>操作级信息系统的使用者一般是服务型企业的业务部门，例如，保险企业的保单处理 部门;</p>
-<p>事务级信息系统的使用者一般是企业的管理业务人员，例如，企业的会计、劳资员等。</p>
-<h1 id="信息系统的生命周期"><a href="#信息系统的生命周期" class="headerlink" title="信息系统的生命周期"></a>信息系统的生命周期</h1><p>信息系统的生命周期分为 4 个阶段，即产生阶段、开发阶段、运行阶段和 消亡阶段。</p>
-<p>1.信息系统的产生阶段又分为 概念产生过程和需求分析过程。</p>
-<p>2.信息系统的开发阶段 可分为 5 个阶段，即，总体规划、系统分析、系统设计、系统实施和系统验收阶段。</p>
-<p>3.信息系统的运行阶段<br>四种类型：排错性维护、适应性维护、完善性维护和预防性维护。</p>
-<p>4.信息系统的消亡阶段</p>
-<h1 id="信息系统建设的原则"><a href="#信息系统建设的原则" class="headerlink" title="信息系统建设的原则"></a>信息系统建设的原则</h1><p>1.高层管理人员介入原则<br>2.用户参与开发原则<br>3.自顶向下规划原则<br>4.工程化原则<br>5.其他原则<br>创新性原则，用来体现信息系统的先进性。<br>整体性原则，用来体现信息系统的完整性。<br>发展性原则，用来体现信息系统的超前性。<br>经济性原则，用来体现信息系统的实用性。</p>
-<h1 id="信息系统开发方法"><a href="#信息系统开发方法" class="headerlink" title="信息系统开发方法"></a>信息系统开发方法</h1><p>1.结构化方法<br>2.原型法<br>3.面向对象方法<br>4.面向服务的方法</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-信息系统基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息系统基础知识（三）政府信息化与电子政务</title>
-    <url>/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%89)%E6%94%BF%E5%BA%9C%E4%BF%A1%E6%81%AF%E5%8C%96%E4%B8%8E%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1/</url>
-    <content><![CDATA[<p>政府信息化是传统政府向信息化政府的演变过程。具体地说，政府信息化就是应用现代 信息技术、网络技术和通信技术，通过信息资源的开发和利用来集成管理和服务，从而提高 政府的工作效率、决策质量、调控能力，并节约开支，改进政府的组织结构、业务流程和工 作方式，全方位地向社会提供优质、规范、透明的管理和服务。</p>
-<p>第一，政府信息化必须借助于信息技术和网络技术，离不开信息基础设施和软件产品;</p>
-<p>第二，政府信息化是一个系统工程，它不仅是与行政有关部门的信息化，还包括立法、司法部门及其他一些公共组织的信息化;</p>
-<p>第三，政府信息化并不是简单地将传统的政府管理事务原封不动地搬到互联网上，而是要对已有的组织结构和业务流程进行重组或再造。</p>
-<p>政府信息化的主要内容是电子政务。因此，在大多数情况下，电子 政务可以作为政府信息化的同义语来使用。</p>
-<h1 id="一、我国政府信息化的历程和策略"><a href="#一、我国政府信息化的历程和策略" class="headerlink" title="一、我国政府信息化的历程和策略"></a>一、我国政府信息化的历程和策略</h1><h2 id="20-世纪-80-年代末期“中国国家经济信息系统”的建设和运行。"><a href="#20-世纪-80-年代末期“中国国家经济信息系统”的建设和运行。" class="headerlink" title="20 世纪 80 年代末期“中国国家经济信息系统”的建设和运行。"></a>20 世纪 80 年代末期“中国国家经济信息系统”的建设和运行。</h2><p>国家经济信息系统包括着重为国家宏观经济服务的主系统，以及各部门各行业的专业经济信息系统在内的全国系统。</p>
-<h2 id="20-世纪-90-年代"><a href="#20-世纪-90-年代" class="headerlink" title="20 世纪 90 年代"></a>20 世纪 90 年代</h2><p>一是以“金”字头为代表的多项信息工程项目取得了突破性进展。金桥、金关、金卡“三金”工程。<br>二是政府上网工程初具规模，“十二金”工程。第一类是对加强监管、提高效率和推进 公共服务起到核心作用的办公业务资源系统、宏观经济管理系统建设;第二类是增强政府收 入能力、保证公共支出合理性的金税、金关、金财、金融监管(含金卡)、金审 5 个业务系 统;第三类是保障社会秩序、为国民经济和社会发展打下坚实基础的金盾、金保、金农、金 水、金质 5 个业务系统建设。<br>三是各级政府都加强了电子政务的软件和硬件两方面的基础建设，建成了覆盖广泛的“两网、一站、四库”。“两网”是指政务内网和政务外网，两网之间物理隔离，政务外网与互联网之间逻辑隔离;“一站”，是政府门户网站;“四库”，即建立人口、法人单位、空间地理和自然资源、宏观经济 4 个基础数据库。<br>四是各地在推动政府信息化方面健康发展，并在全国普遍实行了 政府上网工程。</p>
-<p>政府信息化的一个中心任务是实现由传统政务到电子政务的转变。</p>
-<p>(1)做好战略数据规划。<br>(2)面向主导业务流程。<br>(3)重视资源条件。<br>(4)以人为本。<br>(5)设立 CIO。<br>(6)加强规范化和标准化。<br>(7)充分利用社会资源。</p>
-<h1 id="二、电子政务的内容"><a href="#二、电子政务的内容" class="headerlink" title="二、电子政务的内容"></a>二、电子政务的内容</h1><h2 id="1-政府与政府-Government-To-Government"><a href="#1-政府与政府-Government-To-Government" class="headerlink" title="(1)政府与政府(Government To Government)"></a>(1)政府与政府(Government To Government)</h2><h2 id="2-政府对企业-Government-To-Business"><a href="#2-政府对企业-Government-To-Business" class="headerlink" title="(2)政府对企业(Government To Business)"></a>(2)政府对企业(Government To Business)</h2><h2 id="3-政府对公民（G2C）"><a href="#3-政府对公民（G2C）" class="headerlink" title="(3)政府对公民（G2C）"></a>(3)政府对公民（G2C）</h2><h2 id="4-企业对政府"><a href="#4-企业对政府" class="headerlink" title="(4)企业对政府"></a>(4)企业对政府</h2><h2 id="5-公民对政府"><a href="#5-公民对政府" class="headerlink" title="(5)公民对政府"></a>(5)公民对政府</h2><h2 id="6-政府对公务员（G2E）"><a href="#6-政府对公务员（G2E）" class="headerlink" title="(6)政府对公务员（G2E）"></a>(6)政府对公务员（G2E）</h2><h1 id="三、电子政务建设的过程模式和技术模式"><a href="#三、电子政务建设的过程模式和技术模式" class="headerlink" title="三、电子政务建设的过程模式和技术模式"></a>三、电子政务建设的过程模式和技术模式</h1><h2 id="1-电子政务建设的过程模式"><a href="#1-电子政务建设的过程模式" class="headerlink" title="1.电子政务建设的过程模式"></a>1.电子政务建设的过程模式</h2><p>(1)以用户为中心<br>(2)引进“客户关系管理”技术<br>(3)政府门户</p>
-<h2 id="2-电子政务的技术模式"><a href="#2-电子政务的技术模式" class="headerlink" title="2.电子政务的技术模式"></a>2.电子政务的技术模式</h2><p>(1)网络管理模式<br>电子政务在网络管理上分为政府专网和通用网络两部分，包括专用网络、内部网络和外部网络。<br>(2)信息资源管理模式<br>电子政务可以选用的信息资 源管理模式有多种，目前主要有两种，即元数据管理模式和 XML 数据管理模式。<br>(3)应用开发模式<br>(4)电子政务的安全体系<br>电子政务的安全体系包括物理安全、网络安全、信息安全及安全管理等方面。<br>(5)电子政务的标准化<br>《国家电子政务标准化指南》共分为以下六个部分。<br>第一部分:总则。概括描述电子政务标准体系及标准化的机制。<br>第二部分:工程管理。概括描述电子政务工程管理须遵循或参考的技术要求、标准和管理规定。<br>第三部分:网络建设。概括描述网络建设须遵循或参考的技术要求、标准和管理规定。<br>第四部分:信息共享。概括描述信息共享须遵循或参考的技术要求、标准和管理规定。<br>第五部分:支撑技术。概括描述支撑技术须遵循或参考的技术要求、标准和管理规定。<br>第六部分:信息安全。概括描述保障信息安全须遵循或参考的技术要求、标准和管理规定。</p>
-<p>六项电子政务标准分别如下:<br>1 基于 XML 电子公文格式规范第一部分:总则，第二部分:公文体;<br>2 XML 在电子政务中的应用指南;<br>3 电子政务业务流程设计方法通用规范;<br>4 信息化工程监理规范;<br>5 电子政务数据元第一部分:设计和管理规范;<br>6 电子政务主题词表编制规则。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-信息系统基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息系统基础知识（二）信息系统工程</title>
-    <url>/2021/10/06/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%8C)%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B/</url>
-    <content><![CDATA[<p>系统有下述特性:<br>(1)集合性。<br>(2)相关性。<br>(3)目的性。<br>(4)层次性。<br>(5)环境适应性。</p>
-<h1 id="一、信息系统工程的概念"><a href="#一、信息系统工程的概念" class="headerlink" title="一、信息系统工程的概念"></a>一、信息系统工程的概念</h1><h2 id="系统的分类"><a href="#系统的分类" class="headerlink" title="系统的分类"></a>系统的分类</h2><p>按照系统功能划分:工业控制系统、信息管理系统、军事系统和经济系统等。<br>按照系统与外界的关系划分:封闭系统和开放系统。<br>按照系统的内部结构划分:开环系统和闭环系统等。<br>按照抽象程度将系统分为:概念系统(描述系统的主要特征和大致轮廓)、逻辑系统(脱离实现细节的合理系统)和物理系统 (实际存在的系统)。</p>
-<p>信息系统信息系统一般泛指收集、存储、处理和传播各种信息的具备完整功能的集 合体。</p>
-<p>系统工程是以研究大规模复杂系统为对象的一门交叉学科。它把自然科学和社会科学的 某些思想、理论、方法、策略和手段等根据总体协调的需要，有机地联系起来，应用定量和定性分析相结合的方法和计算机等技术工具，对系统的构成要素、组织结构、信息交换和反 馈控制等功能进行分析、设计、制造和服务，从而达到最优设计、最优控制和最优管理的目的。</p>
-<p>信息系统一般泛指收集、存储、处理和传播各种信息的具备完整功能的集 合体。人们常说的信息系统大多数支持各部门和机构的管理和决策的信息系统，当前信息系 统重要的特征是计算机和互联网技术的应用。</p>
-<p>随着网络的普及，计算机信息系统已经从管理信 息系统发展成为更强调支持企业高层领导决策的决策支持系统，即 DSS 阶段。</p>
-<h1 id="二、信息系统工程的内容"><a href="#二、信息系统工程的内容" class="headerlink" title="二、信息系统工程的内容"></a>二、信息系统工程的内容</h1><h2 id="1-信息系统工程的体系构成"><a href="#1-信息系统工程的体系构成" class="headerlink" title="1.信息系统工程的体系构成"></a>1.信息系统工程的体系构成</h2><h3 id="（1）信息网络系统"><a href="#（1）信息网络系统" class="headerlink" title="（1）信息网络系统"></a>（1）信息网络系统</h3><p>信息网络系统是指以信息技术为主要手段建立的信息处理、传输、交换和分发的计算机网络系统。</p>
-<h3 id="（2）信息资源系统"><a href="#（2）信息资源系统" class="headerlink" title="（2）信息资源系统"></a>（2）信息资源系统</h3><p>信息资源系统是指以信息技术为主要技术手段建立的信息资源采集、存储、处理的资源系统。</p>
-<h3 id="（3）信息应用系统"><a href="#（3）信息应用系统" class="headerlink" title="（3）信息应用系统"></a>（3）信息应用系统</h3><p>信息应用系统是指以信息技术为主要手段建立的各类业务管理的应用系统。</p>
-<h2 id="2-信息系统工程的技术构成"><a href="#2-信息系统工程的技术构成" class="headerlink" title="2.信息系统工程的技术构成"></a>2.信息系统工程的技术构成</h2><p>信息系统工程首要的任务是实施软件工程和信息工程。信息系统工程还应包括组织中的业务流程等内容。</p>
-<p>软件工程是开发、运行、维护和修复软件的系统方法。</p>
-<p>“软件”的定义为:计算机程序、方法、规则、相关的文档资料以及在计算机上运行时所必需的数据的集合。</p>
-<p><img src="/images/ruankao/7-10.png"></p>
-<p>信息工程的主要焦点是用计算机来存储和维护数据，而信息则是从这些数据提炼出来，来满足人们的某种需要的数据。</p>
-<p>信息工程方法的主要特点：<br>一是以数据为中心，进一步的工作是建立主题数据库;<br>二是将工程的实施划分为对业务系统的实施和对技术系统的实施。</p>
-<h2 id="3-组织流程管理"><a href="#3-组织流程管理" class="headerlink" title="3.组织流程管理"></a>3.组织流程管理</h2><p>有效的组织保障包括:<br>(1)建立流程管理机构，这一机构可归入管理流程之中。<br>(2)配备强有力的领导来负责内部的流程管理工作。<br>(3)制定各流程之间的动态关系规则。通过实施流程管理模式，传统组织中的组织图将不复存在，取代它的是流程管理图。</p>
-<h2 id="4-信息系统工程的管理信息"><a href="#4-信息系统工程的管理信息" class="headerlink" title="4.信息系统工程的管理信息"></a>4.信息系统工程的管理信息</h2><p>在具体实施过程中，项目管理一般包含了以下几个方面的内容:<br>(1)任务划分。任务划分是把整个开发工作定义成一组任务的集合，这组任务又可以进一步划分成若干个子任务，进而形成具有层次结构的任务群。<br>(2)计划安排。依据划分完毕的任务即可制定出整个开发及项目管理计划，并产生完成任务的计划表。<br>(3)经费管理。经费管理在整个开发项目管理中处于重要的地位。项目经理可以运用经济杠杆来控制整个开发工作。<br>(4)审计控制。按照所采用的开发方法，应针对每一类开发人员制定出工作过程中的责任、义务、完成任务的质量标准等，按照计划对每项任务进行审计。<br>(5)风险管理。如何有效地管理和控制风险是保证系统实施成功的重要环节之一。特别是信息系统工程项目，风险管理更是重中之重。<br>(6)质量保证。质量管理应贯穿于整个项目始终。在项目规划阶段，就应该建立系统质量的度量模型和相应的机制，对项目质量提出总体的要求;在系统分析和设计阶段应对质量管理不断细化，按自顶向下的方式将总体要求划分成若干易于考核和度量的质量单元。</p>
-<h1 id="三、信息系统工程的总体规划"><a href="#三、信息系统工程的总体规划" class="headerlink" title="三、信息系统工程的总体规划"></a>三、信息系统工程的总体规划</h1><h2 id="已经建成或正在建设的系统仍然存在一系列问题，主要如下"><a href="#已经建成或正在建设的系统仍然存在一系列问题，主要如下" class="headerlink" title="已经建成或正在建设的系统仍然存在一系列问题，主要如下:"></a>已经建成或正在建设的系统仍然存在一系列问题，主要如下:</h2><p>系统建设与组织发展的目标和战略不匹配。<br>已建成的系统解决问题的有效性低，即系统建成后对管理并无显著改善。<br>不能适应环境变化和组织变革的需要。<br>组织结构陈旧，管理落后。<br>系统使用人员的素质较低。<br>系统开发环境落后，技术方案不合理。<br>系统开发及运行维护的标准、规范混乱。<br>资源短缺，投入太少，而对系统的期望又过高。</p>
-<h2 id="总体规划的主要任务："><a href="#总体规划的主要任务：" class="headerlink" title="总体规划的主要任务："></a>总体规划的主要任务：</h2><p>制定信息系统工程的发展战略。主要是使信息系统工程的战略与整个组织的战略和目标协调一致。<br>确定组织的主要信息需求，形成信息系统工程的总体结构方案，安排项目开发计划。<br>制定系统建设的资源分配计划，即制定为实现开发计划而需要的硬软件资源、数据通信设备、人员、技术、服务和资金等计划，提出整个系统的建设概算。</p>
-<h2 id="总体规划的主要步骤："><a href="#总体规划的主要步骤：" class="headerlink" title="总体规划的主要步骤："></a>总体规划的主要步骤：</h2><h3 id="1-对当前系统进行初步的调查。"><a href="#1-对当前系统进行初步的调查。" class="headerlink" title="1 对当前系统进行初步的调查。"></a>1 对当前系统进行初步的调查。</h3><p>初步调查主要由两部分构成:<br>①一般调查。一般调查包括组织的概括，企业的目标，现行系统运行情况，简单历史，企业的 产品，产量，利税，体制及改革情况，人员基本情况，面临的问题，企业的中长期计划及主 要困难等，使系统分析师对企业有一个初步轮廓。<br>②信息需求初步调查。信息需求初步调查是整个初步调查的主要内容。通过调查组织系统的工作职责及活动来了解各职能机构所要处理的数据，估计各机构发生的数据量及频度。信息需求初步调查还应调查环境信息，包括内部环境和外部环境的信息。</p>
-<h3 id="2-分析和确定系统目标。"><a href="#2-分析和确定系统目标。" class="headerlink" title="2 分析和确定系统目标。"></a>2 分析和确定系统目标。</h3><p>这实际上可以由总经理和信息系统工程开发的领导小组确定， 应包括服务的质量和范围、政策、组织及人员等。它不仅包括信息系统工程的目标，而且应 有整个企业的目标。</p>
-<h3 id="3-分析子系统的组成及基本功能。"><a href="#3-分析子系统的组成及基本功能。" class="headerlink" title="3 分析子系统的组成及基本功能。"></a>3 分析子系统的组成及基本功能。</h3><p>从上到下对系统进行划分，并且详细说明各个子系 统应该实现的功能。</p>
-<h3 id="4-拟定系统的实施方案。"><a href="#4-拟定系统的实施方案。" class="headerlink" title="4 拟定系统的实施方案。"></a>4 拟定系统的实施方案。</h3><p>可以对子系统的优先级进行设定，以便确定子系统的开发顺序。</p>
-<h3 id="5-进行系统的可行性研究。"><a href="#5-进行系统的可行性研究。" class="headerlink" title="5 进行系统的可行性研究。"></a>5 进行系统的可行性研究。</h3><h3 id="6-编写可行性报告。"><a href="#6-编写可行性报告。" class="headerlink" title="6 编写可行性报告。"></a>6 编写可行性报告。</h3><h2 id="信息系统工程总体规划的目标信息"><a href="#信息系统工程总体规划的目标信息" class="headerlink" title="信息系统工程总体规划的目标信息"></a>信息系统工程总体规划的目标信息</h2><p>两个原则:<br>一是从组织的战略出发，而不是从系统的需求出发，这样就可以避免脱离组织宗旨和战略目标，走入为建设而建设的困境;<br>二是从业务的变革出发，而不是从技术的变革出发，这样有利于充分利用组织的现有资源来满足关键需求，从而避免信息系统工程无法有效地支持组织决策。</p>
-<p>信息系统工程规划的主要目的是根据企业总体目标规划好统一的、既有集中式又有分布 式、分期逐步实现的数据平台和应用平台的建设。</p>
-<h2 id="总体规划目标的分析过程"><a href="#总体规划目标的分析过程" class="headerlink" title="总体规划目标的分析过程"></a>总体规划目标的分析过程</h2><p>总体规划目标的分析过程包括，<code>确定组织的总体目标</code>和<code>确定信息系统工程规划的总体目标</code>两个步骤。</p>
-<h3 id="1-确定组织的总体目标。"><a href="#1-确定组织的总体目标。" class="headerlink" title="1 确定组织的总体目标。"></a>1 确定组织的总体目标。</h3><p>它的分析的步骤是:<br>根据系统调查的结果，进行分析，归纳出现行系统中的关键问题，做出问题表。<br>根据问题表，构造目标的层次结构，即目标树。在目标树中，最上层是总目标，以下各层是 分目标或子目标，最下层是为实现目标而采取的具体措施，它是用来衡量目标是否切合实际 的标准。<br>对目标树中的各项分目标进行分析。分析各项分目标之间的关系，确定解决目标冲突的方法， 指出各项措施的考核指标。<br>将目标树按各层分目标在系统中所起的作用重新绘制。</p>
-<h3 id="2-确定信息系统工程规划的总体目标。"><a href="#2-确定信息系统工程规划的总体目标。" class="headerlink" title="2 确定信息系统工程规划的总体目标。"></a>2 确定信息系统工程规划的总体目标。</h3><p>信息系统工程应该在下面几个方面发挥作用。<br>1、信息系统工程的辅助决策功能。<br>2、信息系统工程的辅助管理功能。<br>3、企业资源管理。</p>
-<p>信息系统工程的总体规划包括，总体规划的层次、总体规划的任务、信息系统工程的功能范围、确定功能范围的步骤、系统总体结构分解、投资概算和总体规划的成果等内容。</p>
-<p>总体规划的层次分为:信息战略规划、信息资源规划、信息系统工程建设规划和企业资源计划(ERP)。</p>
-<h2 id="总体规划的任务"><a href="#总体规划的任务" class="headerlink" title="总体规划的任务"></a>总体规划的任务</h2><p>明确组织远景和使命。<br>确立组织发展战略和目标。<br>明晰组织业务及管理变革策略。<br>识别组织关键成功因素、分析关键性能指标、抽取信息需求。<br>建立总体信息工程框架。<br>提出可行性报告和总体规划方案。</p>
-<h2 id="确定系统的功能范围的步骤如下"><a href="#确定系统的功能范围的步骤如下" class="headerlink" title="确定系统的功能范围的步骤如下:"></a>确定系统的功能范围的步骤如下:</h2><p>1 绘制出系统的总数据流程图。<br>2 根据系统方案的规定和用户的要求，结合现行系统的环境，确定系统的边界范围，并在总信息流程图上圈出。<br>3 有关人员协商讨论。<br>4 确定系统范围，并做出分析说明。</p>
-<h2 id="信息系统工程总体规划应当包括投资概算，它包括以下-4-个方面内容。"><a href="#信息系统工程总体规划应当包括投资概算，它包括以下-4-个方面内容。" class="headerlink" title="信息系统工程总体规划应当包括投资概算，它包括以下 4 个方面内容。"></a>信息系统工程总体规划应当包括投资概算，它包括以下 4 个方面内容。</h2><p>1 计算机系统软、硬件设备投资。<br>2 系统开发费。<br>3 系统安装和维护费用。<br>4 人员培训费。</p>
-<h1 id="四、总体规划的方法论"><a href="#四、总体规划的方法论" class="headerlink" title="四、总体规划的方法论"></a>四、总体规划的方法论</h1><p>制定信息系统工程总体规划需要有效的方法论支持，其方法多种多样，在此主要介绍较为著名的三种:业务系统规划法、关键成功因素法、战略目标集合转化法。</p>
-<h2 id="1-业务系统规划法-Business-Systems-Planning，BSP"><a href="#1-业务系统规划法-Business-Systems-Planning，BSP" class="headerlink" title="1.业务系统规划法(Business Systems Planning，BSP)"></a>1.业务系统规划法(Business Systems Planning，BSP)</h2><h3 id="BSP的概念"><a href="#BSP的概念" class="headerlink" title="BSP的概念"></a>BSP的概念</h3><p>1 信息系统的战略应当表达出企业的各个管理层次的需求。<br>战略计划层:是决定组织目标、达到这些目标所需用的资源，以及获取、分配这些资源的策略的过程;<br>管理控制层:通过这一过程，管理者确认资源的获取及组织的目标是否有效地使用了这些资源;<br>操作控制层:保证有效率地完成具体的任务。</p>
-<p>2 信息系统应该向整个企业提供一致的信息。<br>3 信息系统应该适应组织机构和管理体制的改变。<br>4 信息系统的战略规划，应当从总体信息系统结构中的子系统开始实现。</p>
-<h3 id="BSP-的目标"><a href="#BSP-的目标" class="headerlink" title="BSP 的目标"></a>BSP 的目标</h3><p>BSP 的目标主要是提供信息系统规划，用以支持企业短期的和长期的信息需要。</p>
-<p>归纳如下:<br>为管理者提供一种形式化的、客观的方法，明确建立信息系统的优先顺序，而不考虑部门的 狭隘利益，并避免主观性。<br>为具有较长生命周期系统的建设和投资提供保障。由于系统是基于业务过程的，因而不因机 构变化而失效。<br>为了以最高效率支持企业目标，BSP 提供数据处理和资源管理。<br>增加负责人的信心，使其坚信高效的信息系统能够被实施。<br>通过提供信息系统对用户需求的快速响应，从而改善信息系统管理部门和用户之间的关系。</p>
-<p>BSP 方法的真正价值在于提供了下面的机会:<br>一是创造一种环境和提出初步行动计划，使企 业能依此对未来的系统和优先次序的改变做出反应，不致造成设计的重大失误。<br>二是定义信息系统的职能，并不断完善。</p>
-<p>BSP 方法实施步骤：<br>1 确立项目。<br>2 工作准备。<br>3 主要活动。<br>开始。<br>定义业务过程。<br>定义数据类。<br>分析现存系统支持能力。<br>确定管理部门对系统的要求。<br>提出判断和结论。<br>定义信息总体结构。<br>确定总体结构中的优先顺序。<br>评价信息资源管理工作。<br>制定建议书和开发计划。<br>工作成果报告。</p>
-<h2 id="2-关键成功因素法-Critical-Success-Factors，CSF"><a href="#2-关键成功因素法-Critical-Success-Factors，CSF" class="headerlink" title="2.关键成功因素法(Critical Success Factors，CSF)"></a>2.关键成功因素法(Critical Success Factors，CSF)</h2><p>该方法能够帮助组织找到影响系统成功的关键因 素，进行分析以确定组织的信息需求，从而为管理部门控制信息技术及其处理过程提供实施 指南。</p>
-<p>CSF 的确定关键成功因素的特征如下。<br>内部 CSF:针对机构的内部活动，如改善产品质量、提高工效等。<br>外部 CSF:与机构的对外活动有关，如，满足客户企业的进入标准、获得对方的信贷。<br>监控型 CSF:对现有业务流程等进行监控，如监测零件缺陷百分比。<br>建设型 CSF:适应组织未来变化的有关活动，如改善产品组合。</p>
-<p>CSF 共分 4 层:行业的 CSF、组织的 CSF、部门的 CSF、管理者的 CSF，它们依次相互影响。</p>
-<p>CSF 实施步骤：<br>第一步:了解组织的战略目标。<br>第二步:识别所有成功因素。<br>第三步:确定关键成功因素。<br>第四步:识别绩效指标和标准，以及测量绩效的数据。</p>
-<p>CSF 的优缺点：</p>
-<p>缺点是:<br>数据的汇总和数据分析过程比较随意，缺乏一种专门严格的方法将众多个人的关键成功因素汇总成一个明确的整个组织的成功因素;<br>由于个人和组织的成功因素往往并不一致，两者之间的界限容易被混淆，从而容易使组织的成功因素具有个人倾向性;<br>由于环境和管理经常迅速变化，信息系统也必须做出相应调整，而用 CSF 法开发的系统可能无法适应变化了的环境;<br>CSF 在应用于较低层的管理时，由于不容易找到相应目标的关键成功因子及其关键指标，效率可能会比较低。</p>
-<h2 id="3-战略目标集合转化法-Strategy-Set-Transformation，SST"><a href="#3-战略目标集合转化法-Strategy-Set-Transformation，SST" class="headerlink" title="3.战略目标集合转化法(Strategy Set Transformation，SST)"></a>3.战略目标集合转化法(Strategy Set Transformation，SST)</h2><p>战略目标集合转化法(Strategy Set Transformation，SST)将组织的战略看成一个“信息 集合”，包括使命、目标、战略和其他战略变量，如管理水平、发展趋势以及重要的环境约 束等。战略性系统规划就是把组织的战略集合转化为信息系统的战略集合，而后者由信息系 统的系统目标、环境约束和战略规划组成。</p>
-<h3 id="该方法的步骤如下。"><a href="#该方法的步骤如下。" class="headerlink" title="该方法的步骤如下。"></a>该方法的步骤如下。</h3><h4 id="第一步-识别和阐明组织的战略集合。"><a href="#第一步-识别和阐明组织的战略集合。" class="headerlink" title="第一步:识别和阐明组织的战略集合。"></a>第一步:识别和阐明组织的战略集合。</h4><p>(1)描绘出组织各类人员结构，如卖主、经理、雇员、供应商、顾客、贷款人、政府代理人、地区社团及竞争者等。<br>(2)识别每类人员的目标。<br>(3)对于每类人员识别其使命及战略。</p>
-<h4 id="第二步-将组织的战略集合转化为信息系统战略集合。"><a href="#第二步-将组织的战略集合转化为信息系统战略集合。" class="headerlink" title="第二步:将组织的战略集合转化为信息系统战略集合。"></a>第二步:将组织的战略集合转化为信息系统战略集合。</h4>]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-信息系统基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息系统基础知识（六）知识管理与商业智能</title>
-    <url>/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%94)%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E4%B8%8E%E5%95%86%E4%B8%9A%E6%99%BA%E8%83%BD/</url>
-    <content><![CDATA[<p>知识管理是企业信息化发展的高级阶段，而商业智能则是知识管理的实际应用。</p>
-<h1 id="一、知识管理"><a href="#一、知识管理" class="headerlink" title="一、知识管理"></a>一、知识管理</h1><p>在组织中建构一个人文与技术兼备的知识系统，让组织中的信息 与知识，通过获得、创造、分享、整合、记录、存取、更新等过程，实现不断创新。同时， 这种创新知识又不断回馈到组织之内，从而使得组织的知识不间断地累积和升华，进而转化 为企业的智慧资本。</p>
-<p>知识管理应以人为中心，以信息为基础，以知识 创新为目标，将知识看作一种可开发资源。</p>
-<h2 id="知识管理工具的分类"><a href="#知识管理工具的分类" class="headerlink" title="知识管理工具的分类"></a>知识管理工具的分类</h2><h3 id="1-用于知识生成的工具"><a href="#1-用于知识生成的工具" class="headerlink" title="1 用于知识生成的工具"></a>1 用于知识生成的工具</h3><p>搜索引擎、数据挖掘技术、用于知识合成的工具、辅助创新知识的工具。</p>
-<h3 id="2-用于知识编码的工具"><a href="#2-用于知识编码的工具" class="headerlink" title="2 用于知识编码的工具"></a>2 用于知识编码的工具</h3><p>知识仓库和知识地图。</p>
-<h3 id="3-用于知识转移的工具"><a href="#3-用于知识转移的工具" class="headerlink" title="3 用于知识转移的工具"></a>3 用于知识转移的工具</h3><h1 id="二、商业智能"><a href="#二、商业智能" class="headerlink" title="二、商业智能"></a>二、商业智能</h1><p>商业智能(Business Intelligence，BI)是企业对商业数据的搜集、管理和分析的系统过 程，目的是使企业的各级决策者获得知识或洞察力，帮助他们做出对企业更有利的决策。</p>
-<p>商业智能技术并不是基础技术或者产品技术，它是数据仓库、联机分析处理 OLAP 和数据挖掘等相关技术走向商业应用后形成的一种应用技术。</p>
-<p>商业智能系统主要包括数据预处理、建立数据仓库、数据分析及数据展现 4 个主要阶段。</p>
-<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>数据预处理是整合企业原始数据的第一步，它包括数据的抽取、转换和装载三个过程。</p>
-<h2 id="建立数据仓库"><a href="#建立数据仓库" class="headerlink" title="建立数据仓库"></a>建立数据仓库</h2><p>建立数据仓库则是处理海量数据的基础。</p>
-<h2 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h2><p>数据分析是体现系统智能的关键，一般采用联机分 析处理和数据挖掘两大技术。<br>联机分析处理不仅进行数据汇总/聚集，同时还提供切片、切块、下钻、上卷和旋转等数据分析功能，用户可以方便地对海量数据进行多维分析。<br>数据挖掘的目标则是挖掘数据背后隐藏的知识，通过关联分析、聚类和分类等方法建立分析模型，预测企业未来发展趋势和将要面临的问题。</p>
-<h2 id="数据展现"><a href="#数据展现" class="headerlink" title="数据展现"></a>数据展现</h2><p>数据展现则主要保障系统分析结果的可视化。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-信息系统基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>信息系统基础知识（七）业务流程重组</title>
-    <url>/2021/10/08/%E8%BD%AF%E8%80%83/14%E3%80%81%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E5%85%AD)%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E9%87%8D%E7%BB%84/</url>
-    <content><![CDATA[<p>业务流程重组(BusinessProcess Reengineering，BPR)</p>
-<h1 id="一、BPR-的内容"><a href="#一、BPR-的内容" class="headerlink" title="一、BPR 的内容"></a>一、BPR 的内容</h1><p>BPR 强调 4 个核心内容，即根本性、彻底性、戏剧性和流程。</p>
-<h1 id="二、BPR-的作用"><a href="#二、BPR-的作用" class="headerlink" title="二、BPR 的作用"></a>二、BPR 的作用</h1><p>(1)BPR 的实施使企业更贴近市场。<br>(2)BPR 使生产成本成倍压缩。<br>(3)BPR 使产品质量得到全面提升。<br>(4)服务质量更趋完美。</p>
-<h1 id="三、BPR-遵循的原则"><a href="#三、BPR-遵循的原则" class="headerlink" title="三、BPR 遵循的原则"></a>三、BPR 遵循的原则</h1><h2 id="1-流程中心原则"><a href="#1-流程中心原则" class="headerlink" title="(1)流程中心原则"></a>(1)流程中心原则</h2><p>BPR 注重的是业务流程整体最优，通过理顺和优化业务流程，使得业务流程 中每一个环节上的活动尽可能实现最大化增值，尽可能减少无效的或不增值的活动，并从整 体最优的目标出发，设计和优化业务流程中的各项活动，消除本位主义和利益分散主义。</p>
-<h2 id="2-团队管理原则"><a href="#2-团队管理原则" class="headerlink" title="(2)团队管理原则"></a>(2)团队管理原则</h2><p>首先是设计、重组业 务流程，而后依据业务流程建立或改造企业组织，尽量消除或弱化“中间层”。这不仅降低 了管理费用和成本，更重要的是提高了组织的运转效率及对市场的反应速度。</p>
-<h2 id="3-客户导向原则"><a href="#3-客户导向原则" class="headerlink" title="(3)客户导向原则"></a>(3)客户导向原则</h2><p>利用信息技术能够有效地帮助企业 BPR 得以很好地实施，采用计算机网络、数据库和多媒体等技术 建立的信息网络，能够加快信息传递，实现信息共享，其结果是将传统的串行工作方式变为 并行工作方式，将企业组织结构由垂直型变为水平型，使企业成为协同工作的组织，使得企 业的业务流程，特别是关键业务流程与市场接通，与顾客接通。<br>另一方面，科学技术的发展和管理模式的日臻完善，也为 BPR 创造了条件。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-信息系统基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于中间件的开发（一）中间件技术</title>
     <url>/2021/10/06/%E8%BD%AF%E8%80%83/15%E3%80%81%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91/%E5%9F%BA%E4%BA%8E%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BC%80%E5%8F%91(%E4%B8%80)%E4%B8%AD%E9%97%B4%E4%BB%B6%E6%8A%80%E6%9C%AF/</url>
     <content><![CDATA[<p>中间件(middleware)是基础软件的一大类，属于可复用软件的范畴。</p>
@@ -1029,6 +929,106 @@
       </categories>
       <tags>
         <tag>软考-基于中间件的开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式（一）设计模式概述</title>
+    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(%E4%B8%80)%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%A6%82%E8%BF%B0/</url>
+    <content><![CDATA[<h1 id="一、设计模式的概念"><a href="#一、设计模式的概念" class="headerlink" title="一、设计模式的概念"></a>一、设计模式的概念</h1><p>设计模式解决的是一类问题。<br>工厂模式就是为了解决类创建的问题，<br>适配器模式则是为了解决类接口不匹配的问题。</p>
+<p>(1)学习这些模式是一个方面，另一方面更要了解模式中的思想。<br>(2)设计模式虽然可以使设计变得更精妙，但滥用设计模式会适得其反。</p>
+<h1 id="二、设计模式的组成"><a href="#二、设计模式的组成" class="headerlink" title="二、设计模式的组成"></a>二、设计模式的组成</h1><p>在描述一个设计模式时，至少需要包含四个方面:<br>模式名称(Pattern name)、<br>问题(Problem)、<br>解决方案(Solution)、<br>效果(Consequence)。</p>
+<h1 id="三、GoF设计模式"><a href="#三、GoF设计模式" class="headerlink" title="三、GoF设计模式"></a>三、GoF设计模式</h1><h2 id="补充-简单工厂"><a href="#补充-简单工厂" class="headerlink" title="(补充)简单工厂"></a>(补充)简单工厂</h2><p>1、写一个工厂类，使用静态方法，根据传参来new不同的产品对象<br>2、客户端调用这个工厂类的静态方法，就可以获取想要的产品</p>
+<h2 id="1-Factory-Method-模式。工厂模式"><a href="#1-Factory-Method-模式。工厂模式" class="headerlink" title="(1)Factory Method 模式。工厂模式"></a>(1)Factory Method 模式。工厂模式</h2><p>Factory Method 模式提供了一种延迟创建类的方法，使用 这个方法可以在运行期由子类决定创建哪一个类的实例。<br>1、写一个抽象工厂类，每个工厂实现类负责将new不同种类的产品。<br>2、客户端new不同的工厂实现类就可以获得不同的产品。</p>
+<h2 id="2-Abstract-Factory-模式。抽象工厂模式"><a href="#2-Abstract-Factory-模式。抽象工厂模式" class="headerlink" title="(2)Abstract Factory 模式。抽象工厂模式"></a>(2)Abstract Factory 模式。抽象工厂模式</h2><p>Abstract Factory 又称为抽象工厂模式，该模式主要为解决 复杂系统中对象创建的问题。抽象工厂模式提供了一个一致的对象创建接口来创建一系列具 有相似基类或相似接口的对象。<br>1、写一个抽象工厂类，然后每个工厂实现类负责new一组不同的种类的产品。<br>2、客户端new需要某一组的产品，只需要new一个工厂即可。</p>
+<h2 id="3-Builder-模式。建造者模式"><a href="#3-Builder-模式。建造者模式" class="headerlink" title="(3)Builder 模式。建造者模式"></a>(3)Builder 模式。建造者模式</h2><p>Builder 模式与 Abstract Factory 模式非常类似，但 Builder 模式是逐步地构造出一个复杂对象，并在最后返回对象的实例。Builder 模式可以把复杂对象的创建与表示分离，使得同样的创建过程可以创建不同的表示。<br>1、Builder：给出一个抽象接口，以规范产品对象的各个组成成分的建造。这个接口规定要实现复杂对象的哪些部分的创建，并不涉及具体的对象部件的创建。<br>2、ConcreteBuilder：实现Builder接口，针对不同的商业逻辑，具体化复杂对象的各部分的创建。在建造过程完成后，提供产品的实例。<br>3、Director：调用具体建造者来创建复杂对象的各个部分，在指导者中不涉及具体产品的信息，只负责保证对象各部分完整创建或按某种顺序创建，是一个具体的类。<br>4、Product：要创建的复杂对象类。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Director &#123;</span><br><span class="line">    </span><br><span class="line">    public Product constructProduct(ConcreteBuilder concreteBuilder)&#123;</span><br><span class="line">        concreteBuilder.buildBasic();</span><br><span class="line">        concreteBuilder.buildWalls();</span><br><span class="line">        concreteBuilder.roofed();</span><br><span class="line">        return concreteBuilder.buildProduct();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-Prototype-模式。原型模式"><a href="#4-Prototype-模式。原型模式" class="headerlink" title="(4)Prototype 模式。原型模式"></a>(4)Prototype 模式。原型模式</h2><p>Prototype 模式可以根据原型实例制定创建的对象的种类，并通过深复制这个原型来创建新的对象。Prototype 模式有着同 Abstract Factory 模式和 Builder 模式相同的效果，不过当需要实例化的类是在运行期才被指定的而且要避免创建一个与产品 曾是平行的工厂类层次时，可以使用 Prototype 模式。使用 Prototype 模式可以在运行时 增加或减少原型，比 Abstract Factory 和 Builder 模式更加灵活。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Prototype pro = new Prototype();</span><br><span class="line">Prototype pro1 = (Prototype)pro.clone();</span><br></pre></td></tr></table></figure>
+<h2 id="5-Singleton-模式。单例模式"><a href="#5-Singleton-模式。单例模式" class="headerlink" title="(5)Singleton 模式。单例模式"></a>(5)Singleton 模式。单例模式</h2><p>Singleton 模式也是一种很有代表性的模式。使用 Singleton 模式 可以保证一个类仅有一个实例，从而可以提供一个单一的全局访问点。</p>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><p>在定义类的静态私有变量同时进行实例化。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private static Singleton instance = new Singleton();  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getInstance() &#123;  </span><br><span class="line">        return instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>好处：线程安全；获取实例速度快<br>缺点：类加载即初始化实例，内存浪费</p>
+<h3 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private volatile static Singleton singleton;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static Singleton getSingleton() &#123;</span><br><span class="line">        if (singleton == null) &#123;</span><br><span class="line">            synchronized (Singleton.class) &#123;</span><br><span class="line">                if (singleton == null) &#123;</span><br><span class="line">                    singleton = new Singleton();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return singleton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：线程安全，进行双重检查，保证只在实例未初始化前进行同步，效率高<br>缺点：实例非空判断，耗费一定资源</p>
+<h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;</span><br><span class="line">    private static class SingletonHolder &#123;</span><br><span class="line">        private static final Singleton INSTANCE = new Singleton();</span><br><span class="line">    &#125;</span><br><span class="line">    private Singleton ()&#123;&#125;</span><br><span class="line">    public static final Singleton getInstance() &#123;</span><br><span class="line">        return SingletonHolder.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种方式利用了classloder的机制来保证初始化instance时只有一个线程，但singleton类被装载了，instance不一定被初始化。因为SingletonHolder类没有被主动使用，只有显示通过调用getInstance方法时，才会显示装载SingletonHolder类，从而实例化instance。如果实例化instance很消耗资源，我们想让他延迟加载，此外，我们不希望在Singleton类加载时就实例化，因为不能确保Singleton类还可能在其他的地方被主动使用从而被加载。这个时候，这种方式相比饿汉式就显得更合理。</p>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public enum Singleton &#123;  </span><br><span class="line">    INSTANCE;  </span><br><span class="line">    public void whateverMethod() &#123;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：写法简单，天然线程安全，可防止反射生成实例，是Effective Java作者Josh Bloch提倡的方式。</p>
+<h2 id="6-Adapter-模式。适配者模式"><a href="#6-Adapter-模式。适配者模式" class="headerlink" title="(6)Adapter 模式。适配者模式"></a>(6)Adapter 模式。适配者模式</h2><p>Adapter 模式可以解决系统间接口不相容的问题。通过 Adapter 可以把类的接口转化为客户程序所希望的接口，从而提高复用性。<br>实现原来的接口，方法体却是另一个对象的实现。</p>
+<h3 id="接口适配"><a href="#接口适配" class="headerlink" title="接口适配"></a>接口适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Mp4&#123;</span><br><span class="line">    void playMp4();</span><br><span class="line">&#125;</span><br><span class="line">interface Avi&#123;</span><br><span class="line">    void playAvi();</span><br><span class="line">&#125;</span><br><span class="line">class VideoPlayer implements Mp4&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void playMp4() &#123;</span><br><span class="line">        System.out.println(&quot;播放Mp4格式的视频文件.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class FormatFactory extends VideoPlayer  implements Avi&#123;    </span><br><span class="line">    @Override</span><br><span class="line">    public void playAvi() &#123;</span><br><span class="line">        //转换成MP4格式的视频</span><br><span class="line">        playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;        </span><br><span class="line">    Mp4 mp4=new VideoPlayer();</span><br><span class="line">    mp4.playMp4();</span><br><span class="line">    Avi avi=new FormatFactory();</span><br><span class="line">    avi.playAvi();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类适配"><a href="#类适配" class="headerlink" title="类适配"></a>类适配</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">class FormatFactory2 implements Rvmb&#123;</span><br><span class="line">    private Mp4 mp4;</span><br><span class="line">    public FormatFactory2(Mp4 mp4) &#123;</span><br><span class="line">        this.mp4=mp4;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public void playRvmb() &#123;</span><br><span class="line">        mp4.playMp4();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Rvmb rvmb=new FormatFactory2(new VideoPlayer());</span><br><span class="line">    rvmb.playRvmb();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="7-Bridge-模式。桥接模式"><a href="#7-Bridge-模式。桥接模式" class="headerlink" title="(7)Bridge 模式。桥接模式"></a>(7)Bridge 模式。桥接模式</h2><p>Bridge 模式把类的抽象部分同实现部分相分离，这样类的抽象和实现都可以独立地变化。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">interface Pen&#123;</span><br><span class="line">    void write();</span><br><span class="line">&#125;</span><br><span class="line">class RedPen implements Pen&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void write() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">abstract class  Paper&#123;</span><br><span class="line">    protected  Pen pen;</span><br><span class="line">    void setPen(Pen pen)&#123;</span><br><span class="line">        this.pen=pen;</span><br><span class="line">    &#125;   </span><br><span class="line">    abstract void writing();</span><br><span class="line">&#125;</span><br><span class="line">class ExaminationPaper extends Paper&#123;</span><br><span class="line">    @Override</span><br><span class="line">    void writing() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Paper paper=new ExaminationPaper();</span><br><span class="line">    paper.setPen(new RedPen());</span><br><span class="line">    paper.writing();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-Composite-模式。复合模式"><a href="#8-Composite-模式。复合模式" class="headerlink" title="(8)Composite 模式。复合模式"></a>(8)Composite 模式。复合模式</h2><p>Composite 模式提供了一种以树形结构组合对象的方法，使用Composite 可以使单个对象和组合后的对象具有一致性以提高软件的复用性。</p>
+<h2 id="9-Decorator-模式。装饰模式"><a href="#9-Decorator-模式。装饰模式" class="headerlink" title="(9)Decorator 模式。装饰模式"></a>(9)Decorator 模式。装饰模式</h2><p>Decorator 模式可以动态地为对象的某一个方法增加更多的功能。在很多时候，使用 Decorator 模式可以不必继承出新的子类从而维护简洁的类继承结构。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public interface Beverage&#123;&#125; // 饮料接口</span><br><span class="line">public class CoffeeBean implements Beverage&#123;&#125; // 具体被装饰的对象类</span><br><span class="line">public class Decorator implements Beverage&#123;&#125; // 装饰类</span><br><span class="line">public class Milk extends Decorator&#123; // 具体装饰类，给咖啡加入牛奶</span><br><span class="line">	private String description = &quot;加了牛奶！&quot;;</span><br><span class="line">	private Beverage beverage = null;</span><br><span class="line">	public Milk(Beverage beverage)&#123;</span><br><span class="line">		this.beverage = beverage;</span><br><span class="line">	&#125;</span><br><span class="line">	public String getDescription()&#123;</span><br><span class="line">		return beverage.getDescription()+&quot;\n&quot;+description;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    Beverage beverage = new CoffeeBean();</span><br><span class="line">    beverage = new Milk(beverage); // 给咖啡加了牛奶</span><br><span class="line">    System.out.println(beverage.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="10-Facade-模式。外观模式，门面模式"><a href="#10-Facade-模式。外观模式，门面模式" class="headerlink" title="(10)Facade 模式。外观模式，门面模式"></a>(10)Facade 模式。外观模式，门面模式</h2><p>Facade 模式为一组类提供了一致的访问接口。使用 Facade 可以 封装内部具有不同接口的类，使其对外提供统一的访问方式。Facade 模式在 J2EE 系统开 发中发展为 Session Facade 模式。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class FacadePattern &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Facade f = new Facade();</span><br><span class="line">        f.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Facade &#123; //外观角色</span><br><span class="line">    private SubSystem01 obj1 = new SubSystem01();</span><br><span class="line">    private SubSystem02 obj2 = new SubSystem02();</span><br><span class="line">    private SubSystem03 obj3 = new SubSystem03();</span><br><span class="line">    public void method() &#123;</span><br><span class="line">        obj1.method1();</span><br><span class="line">        obj2.method2();</span><br><span class="line">        obj3.method3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="11-Flyweight-模式。享元模式，共享元素"><a href="#11-Flyweight-模式。享元模式，共享元素" class="headerlink" title="(11)Flyweight 模式。享元模式，共享元素"></a>(11)Flyweight 模式。享元模式，共享元素</h2><p>Flyweight 模式可以共享大量的细粒度对象，从而节省创建对象 所需要分配的空间，不过在时间上的开销会变大。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public Flyweight factory(int state)&#123;</span><br><span class="line">    if(map.containsKey(state))&#123;</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        map.put(state, new ConcreteFlyweight(state));</span><br><span class="line">        return (Flyweight)map.get(state);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="12-Proxy-模式。代理模式"><a href="#12-Proxy-模式。代理模式" class="headerlink" title="(12)Proxy 模式。代理模式"></a>(12)Proxy 模式。代理模式</h2><p>Proxy 模式为对象提供了一种访问代理对象，通过对象 Proxy 可以控制客户程序的访问。例如:访问权限的控制、访问地址的控制、访问方式的控制等， 甚至可以通过 Proxy 将开销较大的访问化整为零，提高访问效率。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Customer customer=new Customer();</span><br><span class="line">customer.setCash(120000);</span><br><span class="line">BuyCarProxy buyCarProxy=new BuyCarProxy(customer);</span><br><span class="line">buyCarProxy.buyCar();</span><br></pre></td></tr></table></figure>
+<h2 id="13-Interpreter-模式。解释器模式"><a href="#13-Interpreter-模式。解释器模式" class="headerlink" title="(13)Interpreter 模式。解释器模式"></a>(13)Interpreter 模式。解释器模式</h2><p>定义了一个解释器，来解释遵循给定语言和文法的句子。<br>只需要向计算机输入一个句子或文件，就能按照预定的文法规则来对句子或文件进行解释。<br>例如输入“1+2+3-4+1”时，将输出计算结果为3。</p>
+<h2 id="14-Template-Method-模式。模板方法模式"><a href="#14-Template-Method-模式。模板方法模式" class="headerlink" title="(14)Template Method 模式。模板方法模式"></a>(14)Template Method 模式。模板方法模式</h2><p>定义一个操作的模板，其中的一些步骤会在子类中实现，以适应不同的情况。<br>在父类中定义处理流程的框架，在子类中实现具体的处理方式。</p>
+<h2 id="15-Chain-of-Responsibility-模式。责任链模式"><a href="#15-Chain-of-Responsibility-模式。责任链模式" class="headerlink" title="(15)Chain of Responsibility 模式。责任链模式"></a>(15)Chain of Responsibility 模式。责任链模式</h2><p>Chain of Responsibility 模式把可以响应请求的对象 组织成一条链，并在这条对象链上传递请求，从而保证多个对象都有机会处理请求而且可以 避免请求方和相应方的耦合。</p>
+<p>一个纯的责任链模式要求一个具体的处理者对象只能在两个行为中选择一个：一个是承担责任，二是把责任推给下家。不允许出现某一个具体处理者对象在承担了一部分责任后又把责任向下传的情况。</p>
+<p>在一个纯的责任链模式里面，一个请求必须被某一个处理者对象所接收；在一个不纯的责任链模式里面，一个请求可以最终不被任何接收端对象所接收。纯的责任链模式的例子是不容易找到的，一般看到的例子均是不纯的责任链模式的实现。</p>
+<h2 id="16-Command-模式。命令模式"><a href="#16-Command-模式。命令模式" class="headerlink" title="(16)Command 模式。命令模式"></a>(16)Command 模式。命令模式</h2><p>将请求封装为对象，从而增强请求的能力，如参数化、排队、 记录日志等。</p>
+<p>Command有时也被称为事件（event）。它与“事件驱动编程”中的“事件”是一样的意思。当发生点击鼠标、按下键盘按键等事件时，我们可以先将这些事件作成实例，然后按照发生顺序放入队列中。接着，再依次去处理它们。在GUI（graphical user interface）编程中，经常需要与“事件”打交道。即为在有多个命令，并且这些命令有一定的逻辑顺序，且可能需要保存的这些命令的数据，那么可以使用Command设计模式。</p>
+<h2 id="17-Iterator-模式。迭代器模式"><a href="#17-Iterator-模式。迭代器模式" class="headerlink" title="(17)Iterator 模式。迭代器模式"></a>(17)Iterator 模式。迭代器模式</h2><p>Iterator 模式提供了顺序访问一个对象集合中的各元素的方法， 使用 Iterator 可以避免暴露集合中对象的耦合关系。</p>
+<h2 id="18-Mediator-模式。仲裁者模式、中介者模式"><a href="#18-Mediator-模式。仲裁者模式、中介者模式" class="headerlink" title="(18)Mediator 模式。仲裁者模式、中介者模式"></a>(18)Mediator 模式。仲裁者模式、中介者模式</h2><p>Mediator 模式可以减少系统中对象间的耦合性。Mediator 模式 使用中介对象封装其他的对象，从而使这些被封装的对象间的关系就成了松散耦合。</p>
+<p>例如：QQ聊天</p>
+<h2 id="19-Memento-模式。备忘录模式"><a href="#19-Memento-模式。备忘录模式" class="headerlink" title="(19)Memento 模式。备忘录模式"></a>(19)Memento 模式。备忘录模式</h2><p>Memento 模式提供了一种捕获对象状态的方法，且不会破坏对 象的封装。并且可以在对象外部保存对象的状态，并在需要的时候恢复对象状态。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    List&lt;Memento&gt; savedTimes = new ArrayList&lt;&gt;();</span><br><span class="line">    Life life = new Life();</span><br><span class="line">    life.set(&quot;3000 A.D.&quot;);</span><br><span class="line">    savedTimes.add(life.saveToMemento());</span><br><span class="line">    life.set(&quot;4000 A.D.&quot;);</span><br><span class="line">    life.restoreFromMemento(savedTimes.get(0));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="20-Observer-模式。观察者模式"><a href="#20-Observer-模式。观察者模式" class="headerlink" title="(20)Observer 模式。观察者模式"></a>(20)Observer 模式。观察者模式</h2><p>Observer 模式提供了将对象的状态广播到一组观察者的方式， 从而可以让每个观察者随时可以得到对象更新的通知。</p>
+<h2 id="21-State-模式。状态模式"><a href="#21-State-模式。状态模式" class="headerlink" title="(21)State 模式。状态模式"></a>(21)State 模式。状态模式</h2><p>State 模式允许一个对象在其内部状态改变的时候改变它的行为。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public void setState(State state) &#123;</span><br><span class="line">    System.out.println(&quot;订单信息已更新！&quot;);</span><br><span class="line">    this.state = state;</span><br><span class="line">    this.state.handle();</span><br><span class="line">&#125;</span><br><span class="line">public static  void  main(String [] args) &#123;</span><br><span class="line">    Context context = new Context();</span><br><span class="line">    context.setState(new Booked());</span><br><span class="line">    context.setState(new Payed());</span><br><span class="line">    context.setState(new Sended());</span><br><span class="line">    context.setState(new InWay());</span><br><span class="line">    context.setState(new Recieved());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="22-Strategy-模式。策略模式"><a href="#22-Strategy-模式。策略模式" class="headerlink" title="(22)Strategy 模式。策略模式"></a>(22)Strategy 模式。策略模式</h2><p>使用 Strategy 模式可以让对象中算法的变化独立于客户。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">状态模式和策略模式的不同点：</span><br><span class="line">策略模式中，类的功能是根据当前条件主动更改；</span><br><span class="line">状态模式中，类的功能是被动由当前状态更改；</span><br><span class="line">策略模式中每个行为或算法之间没有关联；</span><br><span class="line">状态模式中的状态之间有关联，并且状态本身控制着状态转移；</span><br></pre></td></tr></table></figure>
+<h2 id="23-Visitor-模式。访问者模式"><a href="#23-Visitor-模式。访问者模式" class="headerlink" title="(23)Visitor 模式。访问者模式"></a>(23)Visitor 模式。访问者模式</h2><p>表示对某对象结构中各元素的操作，使用 Visitor 模式可以在不改<br>变各元素类的前提下定义作用于这些元素的新操作。</p>
+<p>双重分发</p>
+<h1 id="四、其他设计模式"><a href="#四、其他设计模式" class="headerlink" title="四、其他设计模式"></a>四、其他设计模式</h1><h2 id="1-Intercepting-Filter-模式。拦截过滤器模式"><a href="#1-Intercepting-Filter-模式。拦截过滤器模式" class="headerlink" title="(1)Intercepting Filter 模式。拦截过滤器模式"></a>(1)Intercepting Filter 模式。拦截过滤器模式</h2><p>在 J2EE 的 BPS(Basic Programming System，基本编程系 统)应用框架下，在真正响应客户端请求前经常需要进行一些预处理，如客户身份验证、客 户 Session 的合法性验证、字符集转码、客户请求记录等。</p>
+<h2 id="2-Session-Facade-模式。"><a href="#2-Session-Facade-模式。" class="headerlink" title="(2)Session Facade 模式。"></a>(2)Session Facade 模式。</h2><p>在 J2EE 开发领域，人们把Session Bean 和 Facade 模式结合起来， 封装业务逻辑的接口，形成了 Session Facade 模式。</p>
+<h1 id="五、设计模式与软件架构"><a href="#五、设计模式与软件架构" class="headerlink" title="五、设计模式与软件架构"></a>五、设计模式与软件架构</h1><p>软件架构更倾向于从整体和全局上描述软件的组成。<br>设计模式更侧重于类与类、对象与对象之间的关系。<br>设计模式和软件架构是面向不同层次问题的解决方案。</p>
+<h1 id="六、设计模式分类"><a href="#六、设计模式分类" class="headerlink" title="六、设计模式分类"></a>六、设计模式分类</h1><p>设计模式分为三类，分别为创建型、结构型和行为型。</p>
+<p><img src="/images/ruankao/8-1.png"></p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式（三）设计模式总结</title>
+    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(%E4%B8%89)%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>学习设计模式最重要的是理解，而不是生搬硬套。</p>
+<p>不能滥用设计模式</p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式（二）设计模式及实现</title>
+    <url>/2021/10/09/%E8%BD%AF%E8%80%83/10%E3%80%81%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F(%E4%BA%8C)%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%8F%8A%E5%AE%9E%E7%8E%B0/</url>
+    <content><![CDATA[<p><img src="/images/ruankao/8-2.png"></p>
+<p><img src="/images/ruankao/8-3.png"></p>
+<p><img src="/images/ruankao/8-4.png"></p>
+<p><img src="/images/ruankao/8-5.png"></p>
+<p><img src="/images/ruankao/8-6.png"></p>
+<p><img src="/images/ruankao/8-7.png"></p>
+<p><img src="/images/ruankao/8-8.png"></p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-设计模式</tag>
       </tags>
   </entry>
   <entry>
@@ -1601,21 +1601,6 @@
       </tags>
   </entry>
   <entry>
-    <title>系统规划（三）方案的制定和改进</title>
-    <url>/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92(%E4%B8%89)%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%B6%E5%AE%9A%E5%92%8C%E6%94%B9%E8%BF%9B/</url>
-    <content><![CDATA[<p>主要完成的工作是解析“系统如何实现”的问题。<br>主要包括一下几个方面。</p>
-<h2 id="1、确定软件架构"><a href="#1、确定软件架构" class="headerlink" title="1、确定软件架构"></a>1、确定软件架构</h2><p>1、分析模型的结构。<br>2、对应于系统目标的最基本。最重要的实现要素。<br>3、特性和要点的解释。</p>
-<h2 id="2、确定实现的各种关键性要素"><a href="#2、确定实现的各种关键性要素" class="headerlink" title="2、确定实现的各种关键性要素"></a>2、确定实现的各种关键性要素</h2><p>1、关键的用例、主要的控制类、功能和服务的首要组织方式<br>2、对象的组织模式<br>3、常用和最关键的实现算法模型。<br>4.选定开发工具和开发环境</p>
-<h2 id="3、归结目标到最适合的计算体系"><a href="#3、归结目标到最适合的计算体系" class="headerlink" title="3、归结目标到最适合的计算体系"></a>3、归结目标到最适合的计算体系</h2><p>1、表示层：用户的界面部分<br>2、事务逻辑层：负责处理表示层的应用请求，完成商务逻辑的计算任务并肩结果返回用户。<br>3、数据服务层：为应用提供数据来源。</p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-系统规划</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>系统规划（一）项目提出与选择</title>
     <url>/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92(%E4%B8%80)%E9%A1%B9%E7%9B%AE%E6%8F%90%E5%87%BA%E4%B8%8E%E9%80%89%E6%8B%A9/</url>
     <content><![CDATA[<p>系统规划主要记录从项目提出、选择到确立的过程。包括系统项目的提出与可行性分析，系统方案的制定、评价和改进，新旧系统的分析和比较，以及现有软件、硬件和数据资源的有效利用等问题。</p>
@@ -1650,22 +1635,12 @@
       </tags>
   </entry>
   <entry>
-    <title>系统规划（四）新旧系统的分析和比较</title>
-    <url>/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92(%E5%9B%9B)%E6%96%B0%E6%97%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E6%AF%94%E8%BE%83/</url>
-    <content><![CDATA[<p>遗留系统的特点：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">系统虽然能完成很多重要的业务工作，但是已经不能外圈满足要求。</span><br><span class="line">系统在性能上已经落后，或者采用的技术已经过时。</span><br><span class="line">通常是大型的系统，已经融入业务工作中，维护工作十分困难。</span><br><span class="line">系统没有使用现代系统工程方法进行管理和开发，基本没有文档，很难理解。</span><br></pre></td></tr></table></figure>
-<p>对于遗留系统，可以根据系统的技术条件、商业价值及维护和运行系统的组织特征不同，采取继续维护、重构或替代、或联合使用几种策略。</p>
-<h1 id="一、遗留系统的评价方法"><a href="#一、遗留系统的评价方法" class="headerlink" title="一、遗留系统的评价方法"></a>一、遗留系统的评价方法</h1><p><img src="/images/ruankao/4-2.png"><br>1、启动评价<br>评价是为了对遗留系统足够的理解。评价前需要了解以下问题：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">对企业来说，遗留系统是否至关重要</span><br><span class="line">企业的商业目标是什么</span><br><span class="line">演化需求是什么</span><br><span class="line">所期望的系统寿命多长</span><br><span class="line">系统的使用期限多久</span><br><span class="line">系统的技术状态如何</span><br><span class="line">企业是否愿意改变</span><br><span class="line">企业是否有能力承受演化</span><br></pre></td></tr></table></figure>
-<p>2、商业价值评价<br>判断遗留系统对企业的重要性。可以包括概要和详细两个级别，概要评价包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">咨询</span><br><span class="line">评价问卷</span><br><span class="line">进行评价</span><br></pre></td></tr></table></figure>
-<p>详细评价包括应用系统不符合业务规范的风险分析，该分析十分费时，最好由业务分析师来完成。<br>3、外部环境评价<br>外部环境评价系统的外部技术环境，是硬件、支撑软件和其他基础设施的统一体。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">硬件</span><br><span class="line">    系统一些常见特征有供应商、维护费用、市销率、年龄、功能、性能等。</span><br><span class="line">    具体评价方法是对每一个部件或整个系统的每个特征打分（1-4），求总分。</span><br><span class="line">支撑软件</span><br><span class="line">    支撑软件可包括操作系统、数据库、事务处理程序、编译器、网络软件、应用软件等。</span><br><span class="line">    评价方式同硬件。</span><br><span class="line">企业基础设施</span><br><span class="line">    需要考虑企业和使用者的类型、开发组织的技术成熟度、企业的培训过程、系统支持人员的技术水平、企业是否愿意改变。</span><br></pre></td></tr></table></figure>
-<p>4、应用软件评价</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">系统级，整个系统看作不可分的原子。</span><br><span class="line">部件级，关注系统的每个子系统，考虑子系统的特征，包括复杂性、数据、文档、外部依赖型、合法性、维护记录、大小、安全性等。</span><br><span class="line">评价方式同硬件。</span><br></pre></td></tr></table></figure>
-<p>5、分析评价结果<br>加权平均值。</p>
-<p><img src="/images/ruankao/4-3.png"></p>
-<h1 id="二、遗留系统的演化策略"><a href="#二、遗留系统的演化策略" class="headerlink" title="二、遗留系统的演化策略"></a>二、遗留系统的演化策略</h1><p>1、淘汰策略<br>第3象限低水平、低价值区，淘汰，全面开发新的系统替代遗留系统。<br>一般在业务发生根本变化，或维护人员、维护资料全部丢失了。经过评价，重新开发比改造旧系统更划算。<br>2、继承策略<br>第4象限低水平、高价值区，遗留，在开发系统时需要完全兼容遗留系统的功能模型和数据模型，新老系统同时运行，逐渐切换到新系统。<br>3、改造策略<br>第1象限高水平、高价值区，改造，这种系统通常建成时间段。其他功能不变，增加新功能。<br>4、集成策略<br>第2象限高水平、低价值区，集成，这种系统可能只完成某部门或子公司的业务，从整体看，他们基于不同的平台，不同的数据模型，无法互联互通，数据还不一致，属于较严重的问题。</p>
+    <title>系统规划（三）方案的制定和改进</title>
+    <url>/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92(%E4%B8%89)%E6%96%B9%E6%A1%88%E7%9A%84%E5%88%B6%E5%AE%9A%E5%92%8C%E6%94%B9%E8%BF%9B/</url>
+    <content><![CDATA[<p>主要完成的工作是解析“系统如何实现”的问题。<br>主要包括一下几个方面。</p>
+<h2 id="1、确定软件架构"><a href="#1、确定软件架构" class="headerlink" title="1、确定软件架构"></a>1、确定软件架构</h2><p>1、分析模型的结构。<br>2、对应于系统目标的最基本。最重要的实现要素。<br>3、特性和要点的解释。</p>
+<h2 id="2、确定实现的各种关键性要素"><a href="#2、确定实现的各种关键性要素" class="headerlink" title="2、确定实现的各种关键性要素"></a>2、确定实现的各种关键性要素</h2><p>1、关键的用例、主要的控制类、功能和服务的首要组织方式<br>2、对象的组织模式<br>3、常用和最关键的实现算法模型。<br>4.选定开发工具和开发环境</p>
+<h2 id="3、归结目标到最适合的计算体系"><a href="#3、归结目标到最适合的计算体系" class="headerlink" title="3、归结目标到最适合的计算体系"></a>3、归结目标到最适合的计算体系</h2><p>1、表示层：用户的界面部分<br>2、事务逻辑层：负责处理表示层的应用请求，完成商务逻辑的计算任务并肩结果返回用户。<br>3、数据服务层：为应用提供数据来源。</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
@@ -1690,6 +1665,31 @@
 <h2 id="效益分析的若干指标和进一步的分析"><a href="#效益分析的若干指标和进一步的分析" class="headerlink" title="效益分析的若干指标和进一步的分析"></a>效益分析的若干指标和进一步的分析</h2><p>收益/投资比<br>投资回收周期<br>敏感性分析</p>
 <h1 id="三、可行性分析报告"><a href="#三、可行性分析报告" class="headerlink" title="三、可行性分析报告"></a>三、可行性分析报告</h1><p>国标 GB 8567-1988 中定义了可行性分析报告的格式和内容。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">项目背景：包括问题描述、实现环境和限制条件</span><br><span class="line">管理概要和建议：包括重要的研究成果、说明、建议和影响</span><br><span class="line">候选方案：包括候选系统的配置和最终方案的选择标准</span><br><span class="line">系统描述：包括系统工作范围的简要说明和被分配系统元素的可行性</span><br><span class="line">经济可行性：包括经费概算和与其的经济效益</span><br><span class="line">技术可行性：包括技术实力、已有工作基础和设备条件</span><br><span class="line">法律可行性：包括系统开发可能导致的侵权，违法和责任等</span><br><span class="line">用户使用可行性：包括用户单位的行政管理，工作制度和使用人员的素质</span><br><span class="line">其他与项目有关的问题：例如其他方案接收和未来可能的变化</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-系统规划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>系统规划（四）新旧系统的分析和比较</title>
+    <url>/2021/09/17/%E8%BD%AF%E8%80%83/7%E3%80%81%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92/%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%92(%E5%9B%9B)%E6%96%B0%E6%97%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%92%8C%E6%AF%94%E8%BE%83/</url>
+    <content><![CDATA[<p>遗留系统的特点：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">系统虽然能完成很多重要的业务工作，但是已经不能外圈满足要求。</span><br><span class="line">系统在性能上已经落后，或者采用的技术已经过时。</span><br><span class="line">通常是大型的系统，已经融入业务工作中，维护工作十分困难。</span><br><span class="line">系统没有使用现代系统工程方法进行管理和开发，基本没有文档，很难理解。</span><br></pre></td></tr></table></figure>
+<p>对于遗留系统，可以根据系统的技术条件、商业价值及维护和运行系统的组织特征不同，采取继续维护、重构或替代、或联合使用几种策略。</p>
+<h1 id="一、遗留系统的评价方法"><a href="#一、遗留系统的评价方法" class="headerlink" title="一、遗留系统的评价方法"></a>一、遗留系统的评价方法</h1><p><img src="/images/ruankao/4-2.png"><br>1、启动评价<br>评价是为了对遗留系统足够的理解。评价前需要了解以下问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">对企业来说，遗留系统是否至关重要</span><br><span class="line">企业的商业目标是什么</span><br><span class="line">演化需求是什么</span><br><span class="line">所期望的系统寿命多长</span><br><span class="line">系统的使用期限多久</span><br><span class="line">系统的技术状态如何</span><br><span class="line">企业是否愿意改变</span><br><span class="line">企业是否有能力承受演化</span><br></pre></td></tr></table></figure>
+<p>2、商业价值评价<br>判断遗留系统对企业的重要性。可以包括概要和详细两个级别，概要评价包括：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">咨询</span><br><span class="line">评价问卷</span><br><span class="line">进行评价</span><br></pre></td></tr></table></figure>
+<p>详细评价包括应用系统不符合业务规范的风险分析，该分析十分费时，最好由业务分析师来完成。<br>3、外部环境评价<br>外部环境评价系统的外部技术环境，是硬件、支撑软件和其他基础设施的统一体。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">硬件</span><br><span class="line">    系统一些常见特征有供应商、维护费用、市销率、年龄、功能、性能等。</span><br><span class="line">    具体评价方法是对每一个部件或整个系统的每个特征打分（1-4），求总分。</span><br><span class="line">支撑软件</span><br><span class="line">    支撑软件可包括操作系统、数据库、事务处理程序、编译器、网络软件、应用软件等。</span><br><span class="line">    评价方式同硬件。</span><br><span class="line">企业基础设施</span><br><span class="line">    需要考虑企业和使用者的类型、开发组织的技术成熟度、企业的培训过程、系统支持人员的技术水平、企业是否愿意改变。</span><br></pre></td></tr></table></figure>
+<p>4、应用软件评价</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">系统级，整个系统看作不可分的原子。</span><br><span class="line">部件级，关注系统的每个子系统，考虑子系统的特征，包括复杂性、数据、文档、外部依赖型、合法性、维护记录、大小、安全性等。</span><br><span class="line">评价方式同硬件。</span><br></pre></td></tr></table></figure>
+<p>5、分析评价结果<br>加权平均值。</p>
+<p><img src="/images/ruankao/4-3.png"></p>
+<h1 id="二、遗留系统的演化策略"><a href="#二、遗留系统的演化策略" class="headerlink" title="二、遗留系统的演化策略"></a>二、遗留系统的演化策略</h1><p>1、淘汰策略<br>第3象限低水平、低价值区，淘汰，全面开发新的系统替代遗留系统。<br>一般在业务发生根本变化，或维护人员、维护资料全部丢失了。经过评价，重新开发比改造旧系统更划算。<br>2、继承策略<br>第4象限低水平、高价值区，遗留，在开发系统时需要完全兼容遗留系统的功能模型和数据模型，新老系统同时运行，逐渐切换到新系统。<br>3、改造策略<br>第1象限高水平、高价值区，改造，这种系统通常建成时间段。其他功能不变，增加新功能。<br>4、集成策略<br>第2象限高水平、低价值区，集成，这种系统可能只完成某部门或子公司的业务，从整体看，他们基于不同的平台，不同的数据模型，无法互联互通，数据还不一致，属于较严重的问题。</p>
+]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
       </categories>
@@ -2216,6 +2216,40 @@
       </tags>
   </entry>
   <entry>
+    <title>软件架构设计（七）软件架构文档化</title>
+    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%83)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/</url>
+    <content><![CDATA[<p>记录软件架构的活动就是架构编档过程，也就是架构的文档化。它包含两个方面:一是 过程，编档过程能促使架构设计师进一步思考，使得架构更加完善;二是结果，描述架构的 文档将作为架构开发的成果，供项目关系人使用。</p>
+<h1 id="1-架构文档的使用者"><a href="#1-架构文档的使用者" class="headerlink" title="1.架构文档的使用者"></a>1.架构文档的使用者</h1><p>架构文档的使用者是架构的项目关系人。编写技术文档(尤其是软件架构文档)最基本 的原则之一是要从读者的角度来编写，易于编写但很难阅读的文档是不受欢迎的。</p>
+<p>架构的主要用途是充当项目关系人之间进行交流的工具，文档则促进了这种交流—— 架 构项目关系人希望从架构文档中获得自己所关心的架构信息。</p>
+<h1 id="2-编档规则"><a href="#2-编档规则" class="headerlink" title="2.编档规则"></a>2.编档规则</h1><p>合理的编档规则编写架构文档和编写其他文档一样，必须遵守一些基本规则，这里 将任何软件编档(包括软件架构编档)的规则归纳为 7 条:</p>
+<p>(1)从读者的角度编写文档。<br>(2)避免出现不必要的重复。<br>(3)避免歧义。<br>(4)使用标准结构。<br>(5)记录基本原理。<br>(6)使文档保持更新，但更新频率不要过高。<br>(7)针对目标的适宜性对文档进行评审。</p>
+<h1 id="3-视图编档"><a href="#3-视图编档" class="headerlink" title="3.视图编档"></a>3.视图编档</h1><p>视图的 概念为架构设计师提供了进行软件架构编档的基本原则。架构文档化就是将相关视图编成文 档，并补充多个视图的关联关系。</p>
+<p><img src="/images/ruankao/6-48.png"></p>
+<p>(1)视图概述:对系统进行概括性的描述，包含视图的主要元素和元素间的关系。<br>主要表示可用多个形式:图形、表 格、文本，通常用图形形式，使用 UML 语言来描述。</p>
+<p>(2)元素目录:对主要表示中所描述的元素及其关系进行详细描述，包括:元素及其 属 性、关系及其属性、元素接口、元素行为。<br>对元素及其协同工作的行为进行编档，如用 UML 的顺序图和状态图描述行为;<br>对接口进行编档如题<br><img src="/images/ruankao/6-49.png"></p>
+<p>(3)上下文图:用图形展示系统如何与其环境相关。</p>
+<p>(4)可变性指南:描述架构的可变化点，如在软件产品线中，产品线架构通过变化， 适用于多个系统，因此，文档中应包含这些变化点，如各系统要做出选择的选项、做出选择 的时间。</p>
+<p>(5)架构背景:为架构的合理性提供足够的、令人信服的论据。包括:基本原理、分 析结果及设计中所反映的假定。</p>
+<p>(6)术语表:对文档中每个术语进行简要说明。</p>
+<p>(7)其他信息:描述不属于架构方面的必要信息，如管理信息(创作者、配置控制数 据及变更历史)。</p>
+<h1 id="4-跨视图文档"><a href="#4-跨视图文档" class="headerlink" title="4.跨视图文档"></a>4.跨视图文档</h1><p>软件架构由多个视图文档来反映，按前面所述的要求完成每个视图的文档后，需要对这 些文档进行一个整体的“打包”工作，这就是跨视图文档。它包括如下内容:<br>(1)文档有哪些内容，它们是如何组织的:视图目录(含哪些视图);视图模板(即前 面描述的视图文档，企业可以通过规范化来定义统一的、公共的视图模板)。<br>(2)架构概述:它描述系统的目的、视图之间的关联、元素表及索引、项目词汇。<br>(3)为什么架构是这样的(基本原理):跨视图基本原理解释了整体架构实际上是其需 求的一个解决方案。即解释了做出决策的原因、方案的限制、改变决策时的影响及意义。</p>
+<h1 id="5-使用-UML"><a href="#5-使用-UML" class="headerlink" title="5.使用 UML"></a>5.使用 UML</h1><p>UML 已经成为对软件架构进行文档化的事实上的标准表示法。在视图文档的组织结构 中，UML 主要用于表示元素或元素组的行为。</p>
+<h1 id="6-软件架构重构"><a href="#6-软件架构重构" class="headerlink" title="6.软件架构重构"></a>6.软件架构重构</h1><p>前面已论述了架构编档，即在架构设计时完成编档工作。但是还有另外一种情况:系统<br>已经存在，但不知其架构，即架构没有通过文档很好地保留下来(文档的缺失/失效)。如何 维护这样的系统并管理其演变?其关键就是要找到软件架构，软件架构重构就是研究解决这 一问题的方法，它是反向工程之一。</p>
+<p>软件架构重构由以下活动组成，这些活动以迭代方式进行。</p>
+<p><img src="/images/ruankao/6-50.png"></p>
+<p>(1)信息提取(View Extraction)。可以使用各种工具进行信息提取，如解析器、语法 分析器等;可以利用 build 和 makefile 文件中关于模块的依赖关系;可以从源代码、编译 时制品和设计制品中提取静态信息;可以使用分析工具提取动态信息。</p>
+<p>(2)数据库构造(Database Construction):将提取的信息转化为标准的形式，并置于 数据库中。</p>
+<p>(3)视图融合(View Fusion):将数据库中的信息组合在一起，生成该架构的一个内聚 的视图。</p>
+<p>(4)重构(Reconstruction):构建数据抽象和各种表示以生成架构表示，主要由两个活动组成:可视化和交互、模式定义和识别。最后生成需要的架构文档(Documentation)。</p>
+]]></content>
+      <categories>
+        <category>软考-系统架构设计师</category>
+      </categories>
+      <tags>
+        <tag>软考-软件架构设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软件架构设计（三）软件架构风格</title>
     <url>/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%89)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/</url>
     <content><![CDATA[<p>软件架构设计的一个核心问题是能否使用重复的软件架构模式，即能否达到架构级别的 软件重用。</p>
@@ -2265,40 +2299,6 @@
 <p>黑板系统主要由三部分组成:<br>(1)知识源。知识源中包含独立的、与应用程序相关的知识，知识源之间不直接进行 通信，它们之间的交互只通过黑板来完成。<br>(2)黑板数据结构。黑板数据是按照与应用程序相关的层次来组织的解决问题的数据， 知识源通过不断地改变黑板数据来解决问题。<br>(3)控制。控制完全由黑板的状态驱动，黑板状态的改变决定使用的特定知识。</p>
 <hr>
 <p><img src="/images/ruankao/6-39.png"></p>
-]]></content>
-      <categories>
-        <category>软考-系统架构设计师</category>
-      </categories>
-      <tags>
-        <tag>软考-软件架构设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>软件架构设计（七）软件架构文档化</title>
-    <url>/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%83)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/</url>
-    <content><![CDATA[<p>记录软件架构的活动就是架构编档过程，也就是架构的文档化。它包含两个方面:一是 过程，编档过程能促使架构设计师进一步思考，使得架构更加完善;二是结果，描述架构的 文档将作为架构开发的成果，供项目关系人使用。</p>
-<h1 id="1-架构文档的使用者"><a href="#1-架构文档的使用者" class="headerlink" title="1.架构文档的使用者"></a>1.架构文档的使用者</h1><p>架构文档的使用者是架构的项目关系人。编写技术文档(尤其是软件架构文档)最基本 的原则之一是要从读者的角度来编写，易于编写但很难阅读的文档是不受欢迎的。</p>
-<p>架构的主要用途是充当项目关系人之间进行交流的工具，文档则促进了这种交流—— 架 构项目关系人希望从架构文档中获得自己所关心的架构信息。</p>
-<h1 id="2-编档规则"><a href="#2-编档规则" class="headerlink" title="2.编档规则"></a>2.编档规则</h1><p>合理的编档规则编写架构文档和编写其他文档一样，必须遵守一些基本规则，这里 将任何软件编档(包括软件架构编档)的规则归纳为 7 条:</p>
-<p>(1)从读者的角度编写文档。<br>(2)避免出现不必要的重复。<br>(3)避免歧义。<br>(4)使用标准结构。<br>(5)记录基本原理。<br>(6)使文档保持更新，但更新频率不要过高。<br>(7)针对目标的适宜性对文档进行评审。</p>
-<h1 id="3-视图编档"><a href="#3-视图编档" class="headerlink" title="3.视图编档"></a>3.视图编档</h1><p>视图的 概念为架构设计师提供了进行软件架构编档的基本原则。架构文档化就是将相关视图编成文 档，并补充多个视图的关联关系。</p>
-<p><img src="/images/ruankao/6-48.png"></p>
-<p>(1)视图概述:对系统进行概括性的描述，包含视图的主要元素和元素间的关系。<br>主要表示可用多个形式:图形、表 格、文本，通常用图形形式，使用 UML 语言来描述。</p>
-<p>(2)元素目录:对主要表示中所描述的元素及其关系进行详细描述，包括:元素及其 属 性、关系及其属性、元素接口、元素行为。<br>对元素及其协同工作的行为进行编档，如用 UML 的顺序图和状态图描述行为;<br>对接口进行编档如题<br><img src="/images/ruankao/6-49.png"></p>
-<p>(3)上下文图:用图形展示系统如何与其环境相关。</p>
-<p>(4)可变性指南:描述架构的可变化点，如在软件产品线中，产品线架构通过变化， 适用于多个系统，因此，文档中应包含这些变化点，如各系统要做出选择的选项、做出选择 的时间。</p>
-<p>(5)架构背景:为架构的合理性提供足够的、令人信服的论据。包括:基本原理、分 析结果及设计中所反映的假定。</p>
-<p>(6)术语表:对文档中每个术语进行简要说明。</p>
-<p>(7)其他信息:描述不属于架构方面的必要信息，如管理信息(创作者、配置控制数 据及变更历史)。</p>
-<h1 id="4-跨视图文档"><a href="#4-跨视图文档" class="headerlink" title="4.跨视图文档"></a>4.跨视图文档</h1><p>软件架构由多个视图文档来反映，按前面所述的要求完成每个视图的文档后，需要对这 些文档进行一个整体的“打包”工作，这就是跨视图文档。它包括如下内容:<br>(1)文档有哪些内容，它们是如何组织的:视图目录(含哪些视图);视图模板(即前 面描述的视图文档，企业可以通过规范化来定义统一的、公共的视图模板)。<br>(2)架构概述:它描述系统的目的、视图之间的关联、元素表及索引、项目词汇。<br>(3)为什么架构是这样的(基本原理):跨视图基本原理解释了整体架构实际上是其需 求的一个解决方案。即解释了做出决策的原因、方案的限制、改变决策时的影响及意义。</p>
-<h1 id="5-使用-UML"><a href="#5-使用-UML" class="headerlink" title="5.使用 UML"></a>5.使用 UML</h1><p>UML 已经成为对软件架构进行文档化的事实上的标准表示法。在视图文档的组织结构 中，UML 主要用于表示元素或元素组的行为。</p>
-<h1 id="6-软件架构重构"><a href="#6-软件架构重构" class="headerlink" title="6.软件架构重构"></a>6.软件架构重构</h1><p>前面已论述了架构编档，即在架构设计时完成编档工作。但是还有另外一种情况:系统<br>已经存在，但不知其架构，即架构没有通过文档很好地保留下来(文档的缺失/失效)。如何 维护这样的系统并管理其演变?其关键就是要找到软件架构，软件架构重构就是研究解决这 一问题的方法，它是反向工程之一。</p>
-<p>软件架构重构由以下活动组成，这些活动以迭代方式进行。</p>
-<p><img src="/images/ruankao/6-50.png"></p>
-<p>(1)信息提取(View Extraction)。可以使用各种工具进行信息提取，如解析器、语法 分析器等;可以利用 build 和 makefile 文件中关于模块的依赖关系;可以从源代码、编译 时制品和设计制品中提取静态信息;可以使用分析工具提取动态信息。</p>
-<p>(2)数据库构造(Database Construction):将提取的信息转化为标准的形式，并置于 数据库中。</p>
-<p>(3)视图融合(View Fusion):将数据库中的信息组合在一起，生成该架构的一个内聚 的视图。</p>
-<p>(4)重构(Reconstruction):构建数据抽象和各种表示以生成架构表示，主要由两个活动组成:可视化和交互、模式定义和识别。最后生成需要的架构文档(Documentation)。</p>
 ]]></content>
       <categories>
         <category>软考-系统架构设计师</category>
@@ -2966,7 +2966,7 @@
 <p><img src="/images/bigdata/2-1.png"></p>
 <h1 id="2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。"><a href="#2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。" class="headerlink" title="2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。"></a>2、掌握操作系统的进程管理，包括进程概念、进程调度、同步及死锁处理。</h1><h2 id="进程概念"><a href="#进程概念" class="headerlink" title="进程概念"></a>进程概念</h2><p>处理机是计算机系统的核心资源。操作系统的功能之一就是处理机管理。随着计算机的迅速发展，处理机管理显得更为重要，这主要由于计算机的速度越来越快，处理机的充分利用有利于系统效率的大大提高；处理机管理是整个操作系统的重心所在，其管理的好坏直接影响到整个系统的运行效率；而且操作系统中并发活动的管理和控制是在处理机管理下实现的，处理机管理集中了操作系统中最复杂的部分，它设计的好坏关系到整个系统的成败。</p>
 <p>进程是处理机管理中最基本的、最重要的概念。进程是系统并发执行的体现。由于在多道程序系统中，众多的计算机用户都以各种各样的任务，随时随地争夺使用处理机。为了动态地看待操作系统，则以进程作为独立运行的基本单位，以进程作为分配资源的基本单位，从进程的角度来究操作系统。因此，处理机管理也被称为进程管理。处理机管理的功能就是组织和协调用户对处理机的争夺使用，把处理机分配给进程，对进程进行管理和控制，最大限度也发挥处理机的作用。</p>
-<p>由进程运行的间断性，决定了进程至少具有以下三种状态：<br>(1) 就绪状态。当进程分配了除 CPU 以外的所有必要的资源后，只要能再获得处理机，便能立即执行，把这时的进程状态称为就绪状态。在一个系统中，可以有多个进程同时处于就绪状态，通常把它们排成一个队列，称为就绪队列。<br>(2) 执行状态指进程已获得处理机，其程序正在执行。在单处理机系统中，只能有个进程处于执行状态。<br>(3)阻塞状态指进程因发生某事件(如请求、I/O、申请缓冲空间等）而暂停执行时的状态，亦即进程的执行受到阻塞，故称这种暂停状态为阻塞状态，有时也称为“等待”状态，或“睡眠”状态。通常将处于阻塞状态的进程排成一个队列，称为阻塞队列。</p>
+<p>由进程运行的间断性，决定了进程至少具有以下三种状态：<br>(1) 就绪状态。当进程分配了除 CPU 以外的所有必要的资源后，只要能再获得处理机，便能立即执行，把这时的进程状态称为就绪状态。在一个系统中，可以有多个进程同时处于就绪状态，通常把它们排成一个队列，称为就绪队列。<br>(2) 执行状态指进程已获得处理机，其程序正在执行。在单处理机系统中，只能有个进程处于执行状态。<br>(3) 阻塞状态指进程因发生某事件(如请求、I/O、申请缓冲空间等）而暂停执行时的状态，亦即进程的执行受到阻塞，故称这种暂停状态为阻塞状态，有时也称为“等待”状态，或“睡眠”状态。通常将处于阻塞状态的进程排成一个队列，称为阻塞队列。</p>
 <p><img src="/images/bigdata/2-2.png"></p>
 <p>具有挂起操作的进程状态的演变情况如下。</p>
 <p><img src="/images/bigdata/2-3.png"></p>
