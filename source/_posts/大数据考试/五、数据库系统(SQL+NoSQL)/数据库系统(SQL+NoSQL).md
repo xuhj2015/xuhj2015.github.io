@@ -1,5 +1,5 @@
 ---
-title: 数据库系统(SQL + NoSQL)
+title: 数据库系统(SQL+NoSQL)
 date: 2021-10-15
 categories: [大数据分析应用-中级]
 tags: [大数据考试-数据库系统]
