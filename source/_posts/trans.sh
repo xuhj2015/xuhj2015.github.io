@@ -1,5 +1,6 @@
 
 tmp=xxx
+dir=xxx
 
 function read_dir(){
     for file in `ls $1`
@@ -18,4 +19,4 @@ function read_dir(){
     done
 }
 
-read_dir /Users/xuhj/Documents/Github/xuhj2015.github.io/source/_posts
+read_dir $dir
