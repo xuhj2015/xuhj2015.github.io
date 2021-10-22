@@ -846,6 +846,88 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%83%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%83%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（七）简单分布式计算机应用系统的设计</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>分布式计算背景：<br>单台计算机的功能仍然十分有限。<br>升级到更强的服务器的费用常常远远高于购买多台档次稍低的机器。</p>
+<p>解决方案：<br>利用联网的计算机协同工作，共同完成复杂的工作成为相对成本较低的选择，而且可以完成单台计算机所无法完成的任务。</p>
+<p>存在问题：<br>网络本质上并不可靠，特别是远程通信。<br>分布式系统还带来了并发和同步的问题。</p>
+<h1 id="基于实例的协作"><a href="#基于实例的协作" class="headerlink" title="基于实例的协作"></a>基于实例的协作</h1><p>所有的实例都处理自己范围内的数据，这些对象实例的地位是相同的，当一个对象实例必须要处理不属于它自己范围的数据时，它必须和数据归宿的对象实例通信，请求另外一个对象实例进行处理。<br>请求对象实例可以启动对象、调用远程对象的方法，以及停止运行远程实例。</p>
+<p>基于实例的协作适用于比较小范围内网络情况良好的环境中，这种环境常常被称为近连接。这种情况下对对象的生存周期管理所带来不寻常的网络流量是可以容忍的。</p>
+<p>基于实例的协作常常使用被称为“代理”的方法。</p>
+<h1 id="基于服务的协作"><a href="#基于服务的协作" class="headerlink" title="基于服务的协作"></a>基于服务的协作</h1><p>只提供远程对象的接口，用户可以调用这些方法，却无法远程创建和销毁远程对象实例。</p>
+<p>基于服务的协作适用于跨平台的网络，网络响应较慢的情况，这种环境常称为远连接。这时，简化交互性更为重要，而频繁的网络交换数据会带来难以容忍的延时。</p>
+<p>基于服务的协作往往采用分层次的结构，高层次的应用依赖于低层次的对象，而低层次对象实例的实现细节则没有必要暴露给高层次对象。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1022,88 +1104,6 @@
 </tbody></table>
 <p>系统设计时，除了保持信息隐蔽和模块独立性之外，还需要考虑：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">保持模块大小适中</span><br><span class="line">尽可能减少调用深度</span><br><span class="line">直接调用该模块的个数应该尽量大</span><br><span class="line">调用其他模块的个数不宜过大</span><br><span class="line">保证模块是单入口、单出口</span><br><span class="line">模块的作用于应该在控制域之内</span><br><span class="line">功能应该是可预测的</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%83%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%83%EF%BC%89%E7%AE%80%E5%8D%95%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（七）简单分布式计算机应用系统的设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-11 10:38:29" itemprop="dateModified" datetime="2021-10-11T10:38:29+08:00">2021-10-11</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>分布式计算背景：<br>单台计算机的功能仍然十分有限。<br>升级到更强的服务器的费用常常远远高于购买多台档次稍低的机器。</p>
-<p>解决方案：<br>利用联网的计算机协同工作，共同完成复杂的工作成为相对成本较低的选择，而且可以完成单台计算机所无法完成的任务。</p>
-<p>存在问题：<br>网络本质上并不可靠，特别是远程通信。<br>分布式系统还带来了并发和同步的问题。</p>
-<h1 id="基于实例的协作"><a href="#基于实例的协作" class="headerlink" title="基于实例的协作"></a>基于实例的协作</h1><p>所有的实例都处理自己范围内的数据，这些对象实例的地位是相同的，当一个对象实例必须要处理不属于它自己范围的数据时，它必须和数据归宿的对象实例通信，请求另外一个对象实例进行处理。<br>请求对象实例可以启动对象、调用远程对象的方法，以及停止运行远程实例。</p>
-<p>基于实例的协作适用于比较小范围内网络情况良好的环境中，这种环境常常被称为近连接。这种情况下对对象的生存周期管理所带来不寻常的网络流量是可以容忍的。</p>
-<p>基于实例的协作常常使用被称为“代理”的方法。</p>
-<h1 id="基于服务的协作"><a href="#基于服务的协作" class="headerlink" title="基于服务的协作"></a>基于服务的协作</h1><p>只提供远程对象的接口，用户可以调用这些方法，却无法远程创建和销毁远程对象实例。</p>
-<p>基于服务的协作适用于跨平台的网络，网络响应较慢的情况，这种环境常称为远连接。这时，简化交互性更为重要，而频繁的网络交换数据会带来难以容忍的延时。</p>
-<p>基于服务的协作往往采用分层次的结构，高层次的应用依赖于低层次的对象，而低层次对象实例的实现细节则没有必要暴露给高层次对象。</p>
-
       
     </div>
 
