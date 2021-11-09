@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":20},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="用户打开浏览器输入目标地址，访问一个Web页面的过程如下：(1)浏览器首先会查询本机的系统，获取主机名对应的IP地址； (2)若本机查询不到相应的IP地址，则会发起DNS请求，获取主机名对应的IP地址；(3)使用查询到的IP地址向目标服务器发起TCP连接；(4)浏览器发送HTTP请求，HTTP请求由三部分组成，分别是:请求行、消息报头、请求正文；(5)服务器从请求信息中获得客户机想要访问的主机名、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记">
+<meta property="og:url" content="http://example.com/2021/10/25/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="循序渐进">
+<meta property="og:description" content="用户打开浏览器输入目标地址，访问一个Web页面的过程如下：(1)浏览器首先会查询本机的系统，获取主机名对应的IP地址； (2)若本机查询不到相应的IP地址，则会发起DNS请求，获取主机名对应的IP地址；(3)使用查询到的IP地址向目标服务器发起TCP连接；(4)浏览器发送HTTP请求，HTTP请求由三部分组成，分别是:请求行、消息报头、请求正文；(5)服务器从请求信息中获得客户机想要访问的主机名、">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-09T02:03:57.469Z">
+<meta property="article:author" content="xuhj">
+<meta property="article:tag" content="技术">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/10/25/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>笔记 | 循序渐进</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c67d6bf4daca1c3be5f919ad1f2ce211";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">循序渐进</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>文章</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/25/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-25T00:00:00+08:00">2021-10-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:03:57" itemprop="dateModified" datetime="2021-11-09T10:03:57+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>用户打开浏览器输入目标地址，访问一个Web页面的过程如下：<br>(1)浏览器首先会查询本机的系统，获取主机名对应的IP地址； <br>(2)若本机查询不到相应的IP地址，则会发起DNS请求，获取主机名对应的IP地址；<br>(3)使用查询到的IP地址向目标服务器发起TCP连接；<br>(4)浏览器发送HTTP请求，HTTP请求由三部分组成，分别是:请求行、消息报头、请求正文；<br>(5)服务器从请求信息中获得客户机想要访问的主机名、Web应用、Web资源；<br>(6)服务器用读取到的Web资源数据，创建并回送一个HTTP响应；<br>(7)客户机浏览器解析回送的资源，并显示结果。</p>
+<p>Redis删除策略：<br>1、定期删除：<br>redis会将每个设置了过期时间的key放入到一个独立的字典中，以后会定期遍历这个字典来删除到期的key。redis默认是每隔100ms就随机抽取一些设置了过期时间的key，检查其是否过期，如果过期就删除。注意这里是随机抽取的。为什么要随机呢？你想一想假如redis存了几十万个key，每隔100ms就遍历所有的设置过期时间的key的话，就会给CPU带来很大的负载。<br>2、惰性删除：<br>所谓惰性策略就是在客户端访问这个key的时候，redis对key的过期时间进行检查，如果过期了就立即删除，不会给你返回任何东西。<br>定期删除可能会导致很多过期key到了时间并没有被删除掉。所以就有了惰性删除。假如你的过期key，靠定期删除没有被删除掉，还停留在内存里，除非你的系统去查一下那个key，才会被redis给删除掉。这就是所谓的惰性删除，即当你主动去查过期的key时,如果发现key过期了,就立即进行删除,不返回任何东西.<br>由于redis定期删除是随机抽取检查，不可能扫描清除掉所有过期的key并删除，然后一些key由于未被请求，惰性删除也未触发。这样redis的内存占用会越来越高。此时就需要内存淘汰机制。<br>主要有如下一些策略：<br>1、volatile-lru：从设置过期时间的数据集中挑选出最近最少使用的数据淘汰。没有设置过期时间的key不会被淘汰，这样就可以在增加内存空间的同时保证需要持久化的数据不会丢失。<br>2、volatile-ttl：除了淘汰机制采用LRU，策略基本上与volatile-lru相似，从设置过期时间的数据集中挑选将要过期的数据淘汰，ttl值越大越优先被淘汰。<br>3、volatile-random：从已设置过期时间的数据集中任意选择数据淘汰。当内存达到限制无法写入非过期时间的数据集时，可以通过该淘汰策略在主键空间中随机移除某个key。<br>4、allkeys-lru：从数据集中挑选最近最少使用的数据淘汰，该策略要淘汰的key面向的是全体key集合，而非过期的key集合。<br>5、allkeys-random：从数据集中选择任意数据淘汰。<br>6、no-enviction：禁止驱逐数据，也就是当内存不足以容纳新入数据时，新写入操作就会报错，请求可以继续进行，线上任务也不能持续进行，采用no-enviction策略可以保证数据不被丢失，这也是系统默认的一种淘汰策略。</p>
+<p>企业信息集成是解决“孤岛”问题的需要，技术发展的同时也推动了集成架构等相关的研究。构建企业集成平台的首要目的是实现数据集成，即为平台上运行的各种应用、系统或服务，提供具有完整性、一致性和安全性的数据访问、信息查询及决策支持服务。<br>1、数据集成包括以下3种模式：数据联邦、数据复制和基于接口的数据集成。<br>数据联邦<br>数据联邦是指不同的应用共同访问一个全局虚拟数据库,通过全局虚拟数据库管理系统为不同的应用提供全局信息服务,实现不同的应用和数据源之间的信息共享和数据交换,其具体实现由客户端应用、全局信息服务和若干个局部数据源三部分组成。<br>数据复制模式<br>在数据复制模式中,通过底层应用数据源之间的一致性复制来实现(访问不同数据库的)不同应用之间的信息共享和互操作,其实现的关键是必须能够提供在两个或多个数据库系统之间实现数据转换和传输的基础结构(以屏蔽不同数据库间数据模型的差异)<br>基于接口的数据集成模式<br>在基于接口的数据集成模式中,不同的应用系统之间利用适配器(或接口代理)提供的应用编程接口来实现相互调用。应用适配器或接口代理通过其开放或私有接口将业务信息从其所封装的具体应用系统中提取出来,进而实现不同的应用系统之间业务数的共享与互交换,接口调用的方式可以采用同步调用方法,也可以采用基于消息中间件的异步方法来实现。<br>2、应用集成<br>应用集成是指两个或多个应用系统根据业务逻辑的需要而进行的功能之间的相调用和互操作，应用集成模式包括集成适配器,集成信使、集成面板和集成代理4种。<br>适配器集成模式<br>采用在需要交互的系统之间加入适配器的解决方案来实现企业原有应用系统与新实施系统之间的互操作。在应用系统提供的API的基础上（在应用系统没有提供API的情况下，可以在其数据库表结构一致的条件下，直接完成对数据库的写入和读出），通过适配器完成不同系统间数据格式及访问方式的转换与映射，进而实现不同的系统之间业务功能及业务数据的集成。<br>信使集成模式<br>随着企业中业务应用系统个数的增多,应用系统间的接口问题变得越来越复杂。基于信使的集成结构中,系统之间的通信和数据交换通过信使(消息代理)来实现,每个应用只需要建立与集成信使之间的接口连接,就可实现与所有通过集成信使相联的应用系统间的交互,这种结构大大减少了接口连接数量,同时由于采用了信使(消息代理)作为信息交流的中介,可以将应用之间的交互对通信服务能力的依赖程度降到最低；另外,当某一系统发生改变时、只需要改变信使中相应的部分,从而降低系统维护工作量和系统升级的难度。<br>面板集成模式<br>面板集成模式和面向对象的软件设计方法中的面板模式很相似,它是从应用交互实现的层面来描述客户端应用和服务器端应用集成的一种方法。集成面板可以为一对多、多对一、多对多等多种应用提供集或接口,在种模式中包含有一个成多个客户端应用、一个集成面数,一个成多个眼务器应用,集成面板通过对服务器端应用功能的抽象和简化,为客户端应用访间与调用服务器端应用来种简化的公共接口,集成面板在得到客户应用服务请求后,将客户的眼务转换成服务器端应用能理解的形式,并将该请求提交给服务器端应用。<br>代理集成模式<br>面板集成模式实现了服务器应用交互逻辑的分离，在代理执政模式中，由于不存在很明显的客户端应用和服务器端应用的划分，它仅需要将待集成的应用间的交互逻辑从应用中分离出来，并对应文件的交互逻辑进行封装，进而是由集成代理来引导多个应用之间的交互。<br>3、企业集成<br>企业应用软件系统从功能逻辑上可以分为表示、业务逻辑和数据三个层次，其中表示层负责完成系统与用户交互的接口定义，业务逻辑层主要是根据具体业务规则完成相应业务的数据处理，数据层负责存储由业务逻辑层处理或产生的业务数据，它是系统相对稳定的部分。<br>从企业集成运行的实现策略上看，EAI主要有如下三种实现模式：<br>前端集成模式<br>所谓前端集成模式，是指EAI侧重于业务应用系统表示层的集成，它主要通过单一的用户入口，实现跨多个应用事物的运作，这种方式适用于用户启动的业务过程中，会产生多种多个跨应用的事物，而且这些事物都需要实时响应的情况（主要指B2C的环境）。另外，采用前端集成模式，还可以实现对已经运行的核心业务系统增加功能或特性的目的。<br>后端模式<br>后端集成模式主要侧重于应用系统数据层面的集成，它通过专门的数据维护及转换工具。实现不同业务义勇或数据源之间的信息交换，维护企业整体业务数据完整性和一致性，后端模式就像是一个方便多个应用系统之间数据自动交互的数据管道。<br>混合集成模式<br>混合集成模式是前端集成模式和后端集成模式的组合，客户通过基于Web浏览器的客户端（瘦客户）实现对业务应用或EAI服务器的访问，服务请求可以由前端应用系统执行，也可以通过EAI服务器将服务请求路由到后端，由后端的业务应用来执行。这种模式几乎具有前端集成模式和后端级模式的所有特征，主要应用于需要响应大量服务请求，又需要维护多个数据源的完整性和一致性的情况。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag"># 技术</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/22/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1(%E4%B9%9D)%E5%AE%89%E5%85%A8%E6%80%A7%E8%A7%84%E7%AB%A0/" rel="prev" title="安全性和保密性设计（九）安全性规章">
+      <i class="fa fa-chevron-left"></i> 安全性和保密性设计（九）安全性规章
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="xuhj"
+      src="/images/avatar.jpeg">
+  <p class="site-author-name" itemprop="name">xuhj</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xuhj</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+</body>
+</html>

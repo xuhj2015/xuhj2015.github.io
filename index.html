@@ -197,6 +197,82 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/25/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/25/%E6%8A%80%E6%9C%AF/%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">笔记</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-25T00:00:00+08:00">2021-10-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:03:57" itemprop="dateModified" datetime="2021-11-09T10:03:57+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>用户打开浏览器输入目标地址，访问一个Web页面的过程如下：<br>(1)浏览器首先会查询本机的系统，获取主机名对应的IP地址； <br>(2)若本机查询不到相应的IP地址，则会发起DNS请求，获取主机名对应的IP地址；<br>(3)使用查询到的IP地址向目标服务器发起TCP连接；<br>(4)浏览器发送HTTP请求，HTTP请求由三部分组成，分别是:请求行、消息报头、请求正文；<br>(5)服务器从请求信息中获得客户机想要访问的主机名、Web应用、Web资源；<br>(6)服务器用读取到的Web资源数据，创建并回送一个HTTP响应；<br>(7)客户机浏览器解析回送的资源，并显示结果。</p>
+<p>Redis删除策略：<br>1、定期删除：<br>redis会将每个设置了过期时间的key放入到一个独立的字典中，以后会定期遍历这个字典来删除到期的key。redis默认是每隔100ms就随机抽取一些设置了过期时间的key，检查其是否过期，如果过期就删除。注意这里是随机抽取的。为什么要随机呢？你想一想假如redis存了几十万个key，每隔100ms就遍历所有的设置过期时间的key的话，就会给CPU带来很大的负载。<br>2、惰性删除：<br>所谓惰性策略就是在客户端访问这个key的时候，redis对key的过期时间进行检查，如果过期了就立即删除，不会给你返回任何东西。<br>定期删除可能会导致很多过期key到了时间并没有被删除掉。所以就有了惰性删除。假如你的过期key，靠定期删除没有被删除掉，还停留在内存里，除非你的系统去查一下那个key，才会被redis给删除掉。这就是所谓的惰性删除，即当你主动去查过期的key时,如果发现key过期了,就立即进行删除,不返回任何东西.<br>由于redis定期删除是随机抽取检查，不可能扫描清除掉所有过期的key并删除，然后一些key由于未被请求，惰性删除也未触发。这样redis的内存占用会越来越高。此时就需要内存淘汰机制。<br>主要有如下一些策略：<br>1、volatile-lru：从设置过期时间的数据集中挑选出最近最少使用的数据淘汰。没有设置过期时间的key不会被淘汰，这样就可以在增加内存空间的同时保证需要持久化的数据不会丢失。<br>2、volatile-ttl：除了淘汰机制采用LRU，策略基本上与volatile-lru相似，从设置过期时间的数据集中挑选将要过期的数据淘汰，ttl值越大越优先被淘汰。<br>3、volatile-random：从已设置过期时间的数据集中任意选择数据淘汰。当内存达到限制无法写入非过期时间的数据集时，可以通过该淘汰策略在主键空间中随机移除某个key。<br>4、allkeys-lru：从数据集中挑选最近最少使用的数据淘汰，该策略要淘汰的key面向的是全体key集合，而非过期的key集合。<br>5、allkeys-random：从数据集中选择任意数据淘汰。<br>6、no-enviction：禁止驱逐数据，也就是当内存不足以容纳新入数据时，新写入操作就会报错，请求可以继续进行，线上任务也不能持续进行，采用no-enviction策略可以保证数据不被丢失，这也是系统默认的一种淘汰策略。</p>
+<p>企业信息集成是解决“孤岛”问题的需要，技术发展的同时也推动了集成架构等相关的研究。构建企业集成平台的首要目的是实现数据集成，即为平台上运行的各种应用、系统或服务，提供具有完整性、一致性和安全性的数据访问、信息查询及决策支持服务。<br>1、数据集成包括以下3种模式：数据联邦、数据复制和基于接口的数据集成。<br>数据联邦<br>数据联邦是指不同的应用共同访问一个全局虚拟数据库,通过全局虚拟数据库管理系统为不同的应用提供全局信息服务,实现不同的应用和数据源之间的信息共享和数据交换,其具体实现由客户端应用、全局信息服务和若干个局部数据源三部分组成。<br>数据复制模式<br>在数据复制模式中,通过底层应用数据源之间的一致性复制来实现(访问不同数据库的)不同应用之间的信息共享和互操作,其实现的关键是必须能够提供在两个或多个数据库系统之间实现数据转换和传输的基础结构(以屏蔽不同数据库间数据模型的差异)<br>基于接口的数据集成模式<br>在基于接口的数据集成模式中,不同的应用系统之间利用适配器(或接口代理)提供的应用编程接口来实现相互调用。应用适配器或接口代理通过其开放或私有接口将业务信息从其所封装的具体应用系统中提取出来,进而实现不同的应用系统之间业务数的共享与互交换,接口调用的方式可以采用同步调用方法,也可以采用基于消息中间件的异步方法来实现。<br>2、应用集成<br>应用集成是指两个或多个应用系统根据业务逻辑的需要而进行的功能之间的相调用和互操作，应用集成模式包括集成适配器,集成信使、集成面板和集成代理4种。<br>适配器集成模式<br>采用在需要交互的系统之间加入适配器的解决方案来实现企业原有应用系统与新实施系统之间的互操作。在应用系统提供的API的基础上（在应用系统没有提供API的情况下，可以在其数据库表结构一致的条件下，直接完成对数据库的写入和读出），通过适配器完成不同系统间数据格式及访问方式的转换与映射，进而实现不同的系统之间业务功能及业务数据的集成。<br>信使集成模式<br>随着企业中业务应用系统个数的增多,应用系统间的接口问题变得越来越复杂。基于信使的集成结构中,系统之间的通信和数据交换通过信使(消息代理)来实现,每个应用只需要建立与集成信使之间的接口连接,就可实现与所有通过集成信使相联的应用系统间的交互,这种结构大大减少了接口连接数量,同时由于采用了信使(消息代理)作为信息交流的中介,可以将应用之间的交互对通信服务能力的依赖程度降到最低；另外,当某一系统发生改变时、只需要改变信使中相应的部分,从而降低系统维护工作量和系统升级的难度。<br>面板集成模式<br>面板集成模式和面向对象的软件设计方法中的面板模式很相似,它是从应用交互实现的层面来描述客户端应用和服务器端应用集成的一种方法。集成面板可以为一对多、多对一、多对多等多种应用提供集或接口,在种模式中包含有一个成多个客户端应用、一个集成面数,一个成多个眼务器应用,集成面板通过对服务器端应用功能的抽象和简化,为客户端应用访间与调用服务器端应用来种简化的公共接口,集成面板在得到客户应用服务请求后,将客户的眼务转换成服务器端应用能理解的形式,并将该请求提交给服务器端应用。<br>代理集成模式<br>面板集成模式实现了服务器应用交互逻辑的分离，在代理执政模式中，由于不存在很明显的客户端应用和服务器端应用的划分，它仅需要将待集成的应用间的交互逻辑从应用中分离出来，并对应文件的交互逻辑进行封装，进而是由集成代理来引导多个应用之间的交互。<br>3、企业集成<br>企业应用软件系统从功能逻辑上可以分为表示、业务逻辑和数据三个层次，其中表示层负责完成系统与用户交互的接口定义，业务逻辑层主要是根据具体业务规则完成相应业务的数据处理，数据层负责存储由业务逻辑层处理或产生的业务数据，它是系统相对稳定的部分。<br>从企业集成运行的实现策略上看，EAI主要有如下三种实现模式：<br>前端集成模式<br>所谓前端集成模式，是指EAI侧重于业务应用系统表示层的集成，它主要通过单一的用户入口，实现跨多个应用事物的运作，这种方式适用于用户启动的业务过程中，会产生多种多个跨应用的事物，而且这些事物都需要实时响应的情况（主要指B2C的环境）。另外，采用前端集成模式，还可以实现对已经运行的核心业务系统增加功能或特性的目的。<br>后端模式<br>后端集成模式主要侧重于应用系统数据层面的集成，它通过专门的数据维护及转换工具。实现不同业务义勇或数据源之间的信息交换，维护企业整体业务数据完整性和一致性，后端模式就像是一个方便多个应用系统之间数据自动交互的数据管道。<br>混合集成模式<br>混合集成模式是前端集成模式和后端集成模式的组合，客户通过基于Web浏览器的客户端（瘦客户）实现对业务应用或EAI服务器的访问，服务请求可以由前端应用系统执行，也可以通过EAI服务器将服务请求路由到后端，由后端的业务应用来执行。这种模式几乎具有前端集成模式和后端级模式的所有特征，主要应用于需要响应大量服务请求，又需要维护多个数据源的完整性和一致性的情况。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/22/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1(%E4%B9%9D)%E5%AE%89%E5%85%A8%E6%80%A7%E8%A7%84%E7%AB%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -220,10 +296,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-22 00:00:00 / 修改时间：10:40:17" itemprop="dateCreated datePublished" datetime="2021-10-22T00:00:00+08:00">2021-10-22</time>
+              <time title="创建时间：2021-10-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-22T00:00:00+08:00">2021-10-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -315,10 +397,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-22 00:00:00 / 修改时间：10:04:48" itemprop="dateCreated datePublished" datetime="2021-10-22T00:00:00+08:00">2021-10-22</time>
+              <time title="创建时间：2021-10-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-22T00:00:00+08:00">2021-10-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -425,10 +513,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-22 00:00:00 / 修改时间：14:03:45" itemprop="dateCreated datePublished" datetime="2021-10-22T00:00:00+08:00">2021-10-22</time>
+              <time title="创建时间：2021-10-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-22T00:00:00+08:00">2021-10-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -576,10 +670,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-21 00:00:00 / 修改时间：17:41:33" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
+              <time title="创建时间：2021-10-21 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -681,10 +781,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-21 00:00:00 / 修改时间：16:44:44" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
+              <time title="创建时间：2021-10-21 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -803,10 +909,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-21 00:00:00 / 修改时间：16:09:50" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
+              <time title="创建时间：2021-10-21 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -890,10 +1002,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-21 00:00:00 / 修改时间：17:23:39" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
+              <time title="创建时间：2021-10-21 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-21T00:00:00+08:00">2021-10-21</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1019,10 +1137,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-10-20 00:00:00 / 修改时间：14:04:12" itemprop="dateCreated datePublished" datetime="2021-10-20T00:00:00+08:00">2021-10-20</time>
+              <time title="创建时间：2021-10-20 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-20T00:00:00+08:00">2021-10-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -1109,7 +1233,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-21 13:51:08" itemprop="dateModified" datetime="2021-10-21T13:51:08+08:00">2021-10-21</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1176,96 +1300,6 @@
 <p>⑨主体唯一标识符。这一数据项也是可选的，当主体的名称重新用于其他实体时，则用这一识别符来唯一识别主体。</p>
 <p>⑩扩充域。其中包括一个或多个扩充的数据项。</p>
 <p>⑪签名。CA 用自己的私钥对上述各数据项的散列值进行数字签名的结果。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1(%E4%BA%8C)%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1(%E4%BA%8C)%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/" class="post-title-link" itemprop="url">安全性和保密性设计（二）数字签名与数字水印</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-10-20 00:00:00 / 修改时间：15:00:19" itemprop="dateCreated datePublished" datetime="2021-10-20T00:00:00+08:00">2021-10-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>散列函数是一种公开的数学函数。散列函数运算的输入信息也可叫作报文。散列函数运算后所得到的结果叫作散列码或者叫作消息摘要。散列函数具有如下一些特点：</p>
-<p> (1) 不同内容的报文具有不同的散列码，而一旦原始报文有任何改变，哪怕改变一位信息，则通过散列函数计算后得到的散列码也将完全不同。这样，这个散列码就好比是这个报文所特有的“指纹”。</p>
-<p> (2) 散列函数是单向的，即求解某一个报文的散列码非常容易，但是根据散列码来倒推原始报文是非常困难的</p>
-<p> (3) 对于任何一个报文，无法预知它的散列码。</p>
-<p> (4) 散列码具有固定的长度，不管原始报文的长度如何，通过散列函数运算后的散列码都具有一样的长度。例如，MD5 (Message Digest Algorithm5, 消息摘要算法第 5 个版本）散列算法的散列码长度为 128 位，并且不管是对一部百科全书，还是对某个人的工资进行 MD5 散列运算，得到的散列码长度都是 128 位。</p>
-<p>由于散列函数具有这些特征，因此散列函数可以用来检测报文的可靠性。接收者对收到的报文用与发送者相同的散列函数进行运算，如果得到与发送者相同的散列码，则可以认为报文没有被篡改，否则，报文就是不可信的。</p>
-<p>常见的散列函数有 MD5、SHA、HMAC 等。MD5 是一种非常著名的散列算法，已经成为国际标准，具有很好的安全性能。MD5 算法在对输入的报文进行计算时，是以 512 位为单位进行处理的，结果生成一个 128 位长的消息摘要；SHA、HMAC 等算法都是对任意长度的报文以 512 位为单位进行处理，最后得出一个 160 位的消息摘要。</p>
-<h1 id="一、数字签名"><a href="#一、数字签名" class="headerlink" title="一、数字签名"></a>一、数字签名</h1><p>对于计算机系统中传送、存储的重要文件、数据、信息等，一般需要有某种方式来确认其真实性，即接收者能够确认自己得到的信息确实是由该信息所声称的发送者发出的，而不是由非法入侵者伪造、冒充发出的，并且还要能够保证信息在传送、存储中没有被恶意改，这样这份信息才能真实地反映发送方的意图。另外，对于发送方来说，如果发出一份信息还必须有一定的措施阻止其否认自己发出信息的行为，即不可否认性。</p>
-<p>只有做到以上几点，一个信息传送、存储系统才能够安全、可靠，其上所传送、存储的信息才是真实的、值得相信的。</p>
-<p>数字签名主要由两个算法组成：签名算法和验证算法。通过使用签名算法签名一个消息，所得到的签名能够通过一个验证算法来验证签名的真实性和有效性。</p>
-<p>所以数字签名技术的大致过程就是：信息的发送方对信息利用自己的私钥进行签名，接着发送方把这个签名和信息一起发送给接收方。接收方收到信息后利用发送方的公钥来对其中的数字签名进行验证，确认其合法性。</p>
-<p>目前已经有大量的数字签名算法，例如，RSA 数字签名算法、El Gamal、Fiat-shamir、 Guillon- Oucsquerrter、DS (Digital Signature Standard，数字签名标准）、DSA (Digital Signature Algorithm，数字签名算法）、椭圆曲线等。</p>
-<p>1．RSA 结合 MD5 数字签名<br>RSA 结合 MD5 数字签名的主要过程是：信息的发送方通过对信息进行散列运算生成个消息摘要，接着发送方用自己的私钥对这个消息摘要进行加密，就形成发送方的数字签名。然后，把这个数字签名作为信息的附件和信息一起发送给信息的接收方。接收方收到信息后首先对收到的信息进行与发送者相同的散列运算得到一个消息摘要，接着再用发送方的公钥来对信息中附加的数字签名进行解密得到发送方计算出的散列码。如果两个散列码相同，那么接收方就能确认该信息和数字签名是由发送方发出的。通过数字签名能够实现对原始信息完整性的鉴别和发送方发送信息的不可抵赖性。</p>
-<p>RSA 用于数字签名的一个重要的特点是能够证实信息发送方的身份及电子文件的可靠性和完整性，它对于发送方和被发送的信息都是独一无二的，具有可验证性和不可否认的权威性特点；另一个重要的特点是它通过在计算机之间交换数字证书就可以确定当事者就是他们所宣称的人。</p>
-<p>2．数字签名标准</p>
-<p>DSs 是美国国家标准与技术学会的数字签名标准，自 1991 年提出以来又经过广泛的修改。DSS 为计算和验证数字签名指定了一个数字签名算法-DSA。DSA 是 E Gamal 数字签名算法的一个改进版本，它通过选择较小规格的参数减少数字签名的数据量，从而减少了存储空间和传输带宽。</p>
-<p>DSs 中指定 SHA 作为其散列算法，它对原始信息进行运算后产生 160 位的消息摘要，然后 DS 把这一消息摘要与一个用作这个特殊签名的随机数作为输入送到数字签名算法中，经过运算生成数字签名</p>
-<p>该数字签名函数还依赖于发送方的私钥 SK 和一个对许多通信方都公开的由重要的公钥集合组成的全局公钥。</p>
-<p>接收方在收到消息摘要和签名后将其作为验证函数的输入。验证函数还依赖于全局公钥和与发送方的私钥相匹配的公钥 PK，这样只有发送方用其自己的私钥才能产生有效的签名</p>
-<p>数字签名作为一项重要的鉴别技术，近年来越来越受到人们的重视，在政府、军事、金融、安全等领域得到广泛的运用。通过数字签名可以有效地保证数据的完整性，防止第三方伪造或发送方的抵赖。</p>
-<p>2004 年 8 月 28 日，十届全国人大常委会第十一次会议表决通过了电子签名法。这部法律规定，可靠的电子签名与手写签名或者盖章具有同等的法律效力，并于 2005 年 4 月 1 日起施行。这部法律将对我国电子商务、电子政务等计算机信息系统的发展起到极其重要的促进作用。</p>
-<h1 id="二、数字信封"><a href="#二、数字信封" class="headerlink" title="二、数字信封"></a>二、数字信封</h1><p>数字信封是公钥密码体制在实际中的一个应用，是用加密技术来保证只有规定的特定收信人才能阅读通信的内容。</p>
-<p>在数字信封中，信息发送方采用对称密钥来加密信息内容，然后将此对称密钥用接收方的公开密钥来加密（这部分称数字信封），之后，将它和加密后的信息一起发送给接收方，接收方先用相应的私有密钥打开数字信封，得到对称密钥，然后使用对称密钥解开加密信息。这种技术的安全性相当高。</p>
 
       
     </div>
@@ -1352,20 +1386,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-count">86</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

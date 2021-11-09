@@ -197,6 +197,102 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1(%E4%BA%8C)%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/20/%E8%BD%AF%E8%80%83/16%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1(%E4%BA%8C)%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D%E4%B8%8E%E6%95%B0%E5%AD%97%E6%B0%B4%E5%8D%B0/" class="post-title-link" itemprop="url">安全性和保密性设计（二）数字签名与数字水印</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-20 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-20T00:00:00+08:00">2021-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>散列函数是一种公开的数学函数。散列函数运算的输入信息也可叫作报文。散列函数运算后所得到的结果叫作散列码或者叫作消息摘要。散列函数具有如下一些特点：</p>
+<p> (1) 不同内容的报文具有不同的散列码，而一旦原始报文有任何改变，哪怕改变一位信息，则通过散列函数计算后得到的散列码也将完全不同。这样，这个散列码就好比是这个报文所特有的“指纹”。</p>
+<p> (2) 散列函数是单向的，即求解某一个报文的散列码非常容易，但是根据散列码来倒推原始报文是非常困难的</p>
+<p> (3) 对于任何一个报文，无法预知它的散列码。</p>
+<p> (4) 散列码具有固定的长度，不管原始报文的长度如何，通过散列函数运算后的散列码都具有一样的长度。例如，MD5 (Message Digest Algorithm5, 消息摘要算法第 5 个版本）散列算法的散列码长度为 128 位，并且不管是对一部百科全书，还是对某个人的工资进行 MD5 散列运算，得到的散列码长度都是 128 位。</p>
+<p>由于散列函数具有这些特征，因此散列函数可以用来检测报文的可靠性。接收者对收到的报文用与发送者相同的散列函数进行运算，如果得到与发送者相同的散列码，则可以认为报文没有被篡改，否则，报文就是不可信的。</p>
+<p>常见的散列函数有 MD5、SHA、HMAC 等。MD5 是一种非常著名的散列算法，已经成为国际标准，具有很好的安全性能。MD5 算法在对输入的报文进行计算时，是以 512 位为单位进行处理的，结果生成一个 128 位长的消息摘要；SHA、HMAC 等算法都是对任意长度的报文以 512 位为单位进行处理，最后得出一个 160 位的消息摘要。</p>
+<h1 id="一、数字签名"><a href="#一、数字签名" class="headerlink" title="一、数字签名"></a>一、数字签名</h1><p>对于计算机系统中传送、存储的重要文件、数据、信息等，一般需要有某种方式来确认其真实性，即接收者能够确认自己得到的信息确实是由该信息所声称的发送者发出的，而不是由非法入侵者伪造、冒充发出的，并且还要能够保证信息在传送、存储中没有被恶意改，这样这份信息才能真实地反映发送方的意图。另外，对于发送方来说，如果发出一份信息还必须有一定的措施阻止其否认自己发出信息的行为，即不可否认性。</p>
+<p>只有做到以上几点，一个信息传送、存储系统才能够安全、可靠，其上所传送、存储的信息才是真实的、值得相信的。</p>
+<p>数字签名主要由两个算法组成：签名算法和验证算法。通过使用签名算法签名一个消息，所得到的签名能够通过一个验证算法来验证签名的真实性和有效性。</p>
+<p>所以数字签名技术的大致过程就是：信息的发送方对信息利用自己的私钥进行签名，接着发送方把这个签名和信息一起发送给接收方。接收方收到信息后利用发送方的公钥来对其中的数字签名进行验证，确认其合法性。</p>
+<p>目前已经有大量的数字签名算法，例如，RSA 数字签名算法、El Gamal、Fiat-shamir、 Guillon- Oucsquerrter、DS (Digital Signature Standard，数字签名标准）、DSA (Digital Signature Algorithm，数字签名算法）、椭圆曲线等。</p>
+<p>1．RSA 结合 MD5 数字签名<br>RSA 结合 MD5 数字签名的主要过程是：信息的发送方通过对信息进行散列运算生成个消息摘要，接着发送方用自己的私钥对这个消息摘要进行加密，就形成发送方的数字签名。然后，把这个数字签名作为信息的附件和信息一起发送给信息的接收方。接收方收到信息后首先对收到的信息进行与发送者相同的散列运算得到一个消息摘要，接着再用发送方的公钥来对信息中附加的数字签名进行解密得到发送方计算出的散列码。如果两个散列码相同，那么接收方就能确认该信息和数字签名是由发送方发出的。通过数字签名能够实现对原始信息完整性的鉴别和发送方发送信息的不可抵赖性。</p>
+<p>RSA 用于数字签名的一个重要的特点是能够证实信息发送方的身份及电子文件的可靠性和完整性，它对于发送方和被发送的信息都是独一无二的，具有可验证性和不可否认的权威性特点；另一个重要的特点是它通过在计算机之间交换数字证书就可以确定当事者就是他们所宣称的人。</p>
+<p>2．数字签名标准</p>
+<p>DSs 是美国国家标准与技术学会的数字签名标准，自 1991 年提出以来又经过广泛的修改。DSS 为计算和验证数字签名指定了一个数字签名算法-DSA。DSA 是 E Gamal 数字签名算法的一个改进版本，它通过选择较小规格的参数减少数字签名的数据量，从而减少了存储空间和传输带宽。</p>
+<p>DSs 中指定 SHA 作为其散列算法，它对原始信息进行运算后产生 160 位的消息摘要，然后 DS 把这一消息摘要与一个用作这个特殊签名的随机数作为输入送到数字签名算法中，经过运算生成数字签名</p>
+<p>该数字签名函数还依赖于发送方的私钥 SK 和一个对许多通信方都公开的由重要的公钥集合组成的全局公钥。</p>
+<p>接收方在收到消息摘要和签名后将其作为验证函数的输入。验证函数还依赖于全局公钥和与发送方的私钥相匹配的公钥 PK，这样只有发送方用其自己的私钥才能产生有效的签名</p>
+<p>数字签名作为一项重要的鉴别技术，近年来越来越受到人们的重视，在政府、军事、金融、安全等领域得到广泛的运用。通过数字签名可以有效地保证数据的完整性，防止第三方伪造或发送方的抵赖。</p>
+<p>2004 年 8 月 28 日，十届全国人大常委会第十一次会议表决通过了电子签名法。这部法律规定，可靠的电子签名与手写签名或者盖章具有同等的法律效力，并于 2005 年 4 月 1 日起施行。这部法律将对我国电子商务、电子政务等计算机信息系统的发展起到极其重要的促进作用。</p>
+<h1 id="二、数字信封"><a href="#二、数字信封" class="headerlink" title="二、数字信封"></a>二、数字信封</h1><p>数字信封是公钥密码体制在实际中的一个应用，是用加密技术来保证只有规定的特定收信人才能阅读通信的内容。</p>
+<p>在数字信封中，信息发送方采用对称密钥来加密信息内容，然后将此对称密钥用接收方的公开密钥来加密（这部分称数字信封），之后，将它和加密后的信息一起发送给接收方，接收方先用相应的私有密钥打开数字信封，得到对称密钥，然后使用对称密钥解开加密信息。这种技术的安全性相当高。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E4%B8%80)%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1%E4%B8%8E%E7%BB%9F%E8%AE%A1%E6%8E%A8%E6%96%AD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -228,7 +324,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:09:04" itemprop="dateModified" datetime="2021-10-22T17:09:04+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -294,100 +390,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E4%B8%89)%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E4%B8%89)%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">数据科学（三）深度学习与强化学习</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-18T00:00:00+08:00">2021-10-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:09:05" itemprop="dateModified" datetime="2021-10-22T17:09:05+08:00">2021-10-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"><a href="#1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。" class="headerlink" title="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"></a>1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。</h1><p>全连接网络，是指前一层的每个神经元会都与下一层的全部神经元连接。</p>
-<h1 id="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。"><a href="#2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。" class="headerlink" title="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。"></a>2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。</h1><p>卷积神经网络（Convolutional Neural Networks, CNN）是一类包含卷积计算且具有深度结构的前馈神经网络（Feedforward Neural Networks），是深度学习（deep learning）的代表算法之一。卷积神经网络具有表征学习（representation learning）能力，能够按其阶层结构对输入信息进行平移不变分类（shift-invariant classification），因此也被称为“平移不变人工神经网络（Shift-Invariant Artificial Neural Networks, SIANN）”。</p>
-<p>AlexNet是2012年ILSVRC图像分类和物体识别算法的优胜者，也是LetNet-5之后受到人工智能领域关注的现代卷积神经网络算法。AlexNet的隐含层由5个卷积层、3个池化层和3个全连接层组成。</p>
-<p>VGGNet是牛津大学视觉几何团队（Visual Geometry Group, VGG）开发的一组卷积神经网络算法，包括VGG-11、VGG-11-LRN、VGG-13、VGG-16和VGG-19。其中VGG-16是2014年ILSVRC物体识别算法的优胜者，其规模是AlexNet的2倍以上并拥有规律的结构，这里以VGG-16为例介绍其构筑。VGG-16的隐含层由13个卷积层、3个全连接层和5个池化层组成。</p>
-<p>GoogLeNet是2014年ILSVRC图像分类算法的优胜者，是首个以Inception模块进行堆叠形成的大规模卷积神经网络。GoogLeNet共有四个版本：Inception v1、Inception v2、Inception v3、Inception v4。</p>
-<p>ResNet来自微软的人工智能团队Microsoft Research，是2015年ILSVRC图像分类和物体识别算法的优胜者，其表现超过了GoogLeNet的第三代版本Inception v3。ResNet是使用残差块建立的大规模卷积神经网络，其规模是AlexNet的20倍、VGG-16的8倍，在ResNet的原始版本中，其残差块由2个卷积层、1个跳跃连接、BN和激励函数组成，ResNet的隐含层共包含16个残差块。</p>
-<h1 id="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。"><a href="#3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。" class="headerlink" title="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。"></a>3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。</h1><p>循环神经网络（Recurrent Neural Network, RNN）是一类以序列（sequence）数据为输入，在序列的演进方向进行递归（recursion）且所有节点（循环单元）按链式连接的递归神经网络（recursive neural network）。</p>
-<p>对循环神经网络的研究始于二十世纪80-90年代，并在二十一世纪初发展为深度学习（deep learning）算法之一，其中双向循环神经网络（Bidirectional RNN, Bi-RNN）和长短期记忆网络（Long Short-Term Memory networks，LSTM）是常见的循环神经网络。</p>
-<p>循环神经网络具有记忆性、参数共享并且图灵完备（Turing completeness），因此在对序列的非线性特征进行学习时具有一定优势。循环神经网络在自然语言处理（Natural Language Processing, NLP），例如语音识别、语言建模、机器翻译等领域有应用，也被用于各类时间序列预报。引入了卷积神经网络（Convolutional Neural Network,CNN）构筑的循环神经网络可以处理包含序列输入的计算机视觉问题。</p>
-<p>LSTM是最早被提出的RNN门控算法，其对应的循环单元，LSTM单元包含3个门控：输入门、遗忘门和输出门。相对于RNN对系统状态建立的递归计算，3个门控对LSTM单元的内部状态建立了自循环（self-loop）。具体地，输入门决定当前时间步的输入和前一个时间步的系统状态对内部状态的更新；遗忘门决定前一个时间步内部状态对当前时间步内部状态的更新；输出门决定内部状态对系统状态的更新。</p>
-<p>由于LSTM中3个门控对提升其学习能力的贡献不同，因此略去贡献小的门控和其对应的权重，可以简化神经网络结构并提升其学习效率。GRU即是根据以上观念提出的算法，其对应的循环单元仅包含2个门控：更新门和复位门，其中复位门的功能与LSTM单元的输入门相近，更新门则同时实现了遗忘门和输出门的功能。</p>
-<h1 id="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用"><a href="#4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用" class="headerlink" title="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用"></a>4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用</h1><p>生成式对抗网络（GAN, Generative Adversarial Networks ）是一种深度学习模型，是近年来复杂分布上无监督学习最具前景的方法之一。模型通过框架中（至少）两个模块：生成模型（Generative Model）和判别模型（Discriminative Model）的互相博弈学习产生相当好的输出。原始 GAN 理论中，并不要求 G 和 D 都是神经网络，只需要是能拟合相应生成和判别的函数即可。但实用中一般均使用深度神经网络作为 G 和 D 。一个优秀的GAN应用需要有良好的训练方法，否则可能由于神经网络模型的自由性而导致输出不理想。</p>
-<p>WGAN：<br>1、彻底解决GAN训练不稳定的问题，不再需要小心平衡生成器和判别器的训练程度<br>2、基本解决了collapse mode的问题，确保了生成样本的多样性<br>3、训练过程中终于有一个像交叉熵、准确率这样的数值来指示训练的进程，这个数值越小代表GAN训练得越好，代表生成器产生的图像质量越高<br>4、以上一切好处不需要精心设计的网络架构，最简单的多层全连接网络就可以做到</p>
-<h1 id="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"><a href="#5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用" class="headerlink" title="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"></a>5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用</h1><p>马尔可夫决策过程（Markov Decision Process, MDP）是序贯决策（sequential decision）的数学模型，用于在系统状态具有马尔可夫性质的环境中模拟智能体可实现的随机性策略与回报。MDP的得名来自于俄国数学家安德雷·马尔可夫（Андрей Андреевич Марков），以纪念其为马尔可夫链所做的研究。</p>
-<p>MDP基于一组交互对象，即智能体和环境进行构建，所具有的要素包括状态、动作、策略和奖励。在MDP的模拟中，智能体会感知当前的系统状态，按策略对环境实施动作，从而改变环境的状态并得到奖励，奖励随时间的积累被称为回报。</p>
-<p>MDP的理论基础是马尔可夫链，因此也被视为考虑了动作的马尔可夫模型。在离散时间上建立的MDP被称为“离散时间马尔可夫决策过程（descrete-time MDP）”，反之则被称为“连续时间马尔可夫决策过程（continuous-time MDP）”。此外MDP存在一些变体，包括部分可观察马尔可夫决策过程、约束马尔可夫决策过程和模糊马尔可夫决策过程。</p>
-<p>在应用方面，MDP被用于机器学习中强化学习（reinforcement learning）问题的建模。通过使用动态规划、随机采样等方法，MDP可以求解使回报最大化的智能体策略，并在自动控制、推荐系统等主题中得到应用。</p>
-<h1 id="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"><a href="#6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。" class="headerlink" title="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"></a>6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。</h1><p>强化学习的概念，通俗的讲，强化学习就是通过agent，也就是动作的发起者，对环境造成一个影响，环境接受该动作后状态发生变化，同时产生一个强化信号(奖或惩)反馈给Agent，Agent根据强化信号和环境当前状态再选择下一个动作，选择的原则是使受到正强化(奖)的概率增大。选择的动作不仅影响立即强化值，而且影响环境下一时刻的状态及最终的强化值。在强化学习中，包含两种基本的元素：状态与动作，在某个状态下执行某种动作，这便是一种策略，学习器要做的就是通过不断地探索学习，从而获得一个好的策略。</p>
-<p>Q-Learning属于强化学习的经典算法，用于解决马尔可夫决策问题。为无监督学习。</p>
-<h1 id="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。"><a href="#7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。" class="headerlink" title="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。"></a>7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。</h1><p>DeepMind在2013年提出的DQN算法（2015年提出了DQN的改进版本）可以说是深度学习和强化学习的第一次成功结合。要想将深度学习融合进强化学习，是有一些很关键的问题需要解决的，其中的两个问题如下：<br>1、深度学习需要大量有标签的数据样本；而强化学习是智能体主动获取样本，样本量稀疏且有延迟。<br>2、深度学习要求每个样本相互之间是独立同分布的；而强化学习获取的相邻样本相互关联，并不是相互独立的。</p>
-<p>DQN是一种基于值函数的方法，基于值函数的方法难以应对的是大的动作空间，特别是连续动作情况。因为网络难以有这么多输出，且难以在这么多输出之中搜索最大的Q值。而DDPG是基于上面所讲到的Actor-Critic方法，在动作输出方面采用一个网络来拟合策略函数，直接输出动作，可以应对连续动作的输出及大的动作空间。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E4%BA%8C)%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -419,7 +421,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:09:05" itemprop="dateModified" datetime="2021-10-22T17:09:05+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -492,6 +494,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E4%B8%89)%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B9%9D%E3%80%81%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6(%E4%B8%89)%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">数据科学（三）深度学习与强化学习</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-18T00:00:00+08:00">2021-10-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"><a href="#1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。" class="headerlink" title="1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。"></a>1、掌握全连接网络（MLP）的定义与算法原理、并能够应用。</h1><p>全连接网络，是指前一层的每个神经元会都与下一层的全部神经元连接。</p>
+<h1 id="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。"><a href="#2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络，-如-AlexNet、VGG、GoogLeNet、ResNet。" class="headerlink" title="2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。"></a>2、掌握卷积神经网络（CNN）基本概念，了解几种经典的卷积神经网络， 如 AlexNet、VGG、GoogLeNet、ResNet。</h1><p>卷积神经网络（Convolutional Neural Networks, CNN）是一类包含卷积计算且具有深度结构的前馈神经网络（Feedforward Neural Networks），是深度学习（deep learning）的代表算法之一。卷积神经网络具有表征学习（representation learning）能力，能够按其阶层结构对输入信息进行平移不变分类（shift-invariant classification），因此也被称为“平移不变人工神经网络（Shift-Invariant Artificial Neural Networks, SIANN）”。</p>
+<p>AlexNet是2012年ILSVRC图像分类和物体识别算法的优胜者，也是LetNet-5之后受到人工智能领域关注的现代卷积神经网络算法。AlexNet的隐含层由5个卷积层、3个池化层和3个全连接层组成。</p>
+<p>VGGNet是牛津大学视觉几何团队（Visual Geometry Group, VGG）开发的一组卷积神经网络算法，包括VGG-11、VGG-11-LRN、VGG-13、VGG-16和VGG-19。其中VGG-16是2014年ILSVRC物体识别算法的优胜者，其规模是AlexNet的2倍以上并拥有规律的结构，这里以VGG-16为例介绍其构筑。VGG-16的隐含层由13个卷积层、3个全连接层和5个池化层组成。</p>
+<p>GoogLeNet是2014年ILSVRC图像分类算法的优胜者，是首个以Inception模块进行堆叠形成的大规模卷积神经网络。GoogLeNet共有四个版本：Inception v1、Inception v2、Inception v3、Inception v4。</p>
+<p>ResNet来自微软的人工智能团队Microsoft Research，是2015年ILSVRC图像分类和物体识别算法的优胜者，其表现超过了GoogLeNet的第三代版本Inception v3。ResNet是使用残差块建立的大规模卷积神经网络，其规模是AlexNet的20倍、VGG-16的8倍，在ResNet的原始版本中，其残差块由2个卷积层、1个跳跃连接、BN和激励函数组成，ResNet的隐含层共包含16个残差块。</p>
+<h1 id="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。"><a href="#3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如-长短期记忆网络-LSTM、GRU。" class="headerlink" title="3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。"></a>3、掌握循环神经网络（RNN）原理与基本概念，了解几种常见的模型，如 长短期记忆网络 LSTM、GRU。</h1><p>循环神经网络（Recurrent Neural Network, RNN）是一类以序列（sequence）数据为输入，在序列的演进方向进行递归（recursion）且所有节点（循环单元）按链式连接的递归神经网络（recursive neural network）。</p>
+<p>对循环神经网络的研究始于二十世纪80-90年代，并在二十一世纪初发展为深度学习（deep learning）算法之一，其中双向循环神经网络（Bidirectional RNN, Bi-RNN）和长短期记忆网络（Long Short-Term Memory networks，LSTM）是常见的循环神经网络。</p>
+<p>循环神经网络具有记忆性、参数共享并且图灵完备（Turing completeness），因此在对序列的非线性特征进行学习时具有一定优势。循环神经网络在自然语言处理（Natural Language Processing, NLP），例如语音识别、语言建模、机器翻译等领域有应用，也被用于各类时间序列预报。引入了卷积神经网络（Convolutional Neural Network,CNN）构筑的循环神经网络可以处理包含序列输入的计算机视觉问题。</p>
+<p>LSTM是最早被提出的RNN门控算法，其对应的循环单元，LSTM单元包含3个门控：输入门、遗忘门和输出门。相对于RNN对系统状态建立的递归计算，3个门控对LSTM单元的内部状态建立了自循环（self-loop）。具体地，输入门决定当前时间步的输入和前一个时间步的系统状态对内部状态的更新；遗忘门决定前一个时间步内部状态对当前时间步内部状态的更新；输出门决定内部状态对系统状态的更新。</p>
+<p>由于LSTM中3个门控对提升其学习能力的贡献不同，因此略去贡献小的门控和其对应的权重，可以简化神经网络结构并提升其学习效率。GRU即是根据以上观念提出的算法，其对应的循环单元仅包含2个门控：更新门和复位门，其中复位门的功能与LSTM单元的输入门相近，更新门则同时实现了遗忘门和输出门的功能。</p>
+<h1 id="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用"><a href="#4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本-应用" class="headerlink" title="4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用"></a>4、掌握生成对抗网络（GAN、WGAN）的基本定义与原理，能够完成基本 应用</h1><p>生成式对抗网络（GAN, Generative Adversarial Networks ）是一种深度学习模型，是近年来复杂分布上无监督学习最具前景的方法之一。模型通过框架中（至少）两个模块：生成模型（Generative Model）和判别模型（Discriminative Model）的互相博弈学习产生相当好的输出。原始 GAN 理论中，并不要求 G 和 D 都是神经网络，只需要是能拟合相应生成和判别的函数即可。但实用中一般均使用深度神经网络作为 G 和 D 。一个优秀的GAN应用需要有良好的训练方法，否则可能由于神经网络模型的自由性而导致输出不理想。</p>
+<p>WGAN：<br>1、彻底解决GAN训练不稳定的问题，不再需要小心平衡生成器和判别器的训练程度<br>2、基本解决了collapse mode的问题，确保了生成样本的多样性<br>3、训练过程中终于有一个像交叉熵、准确率这样的数值来指示训练的进程，这个数值越小代表GAN训练得越好，代表生成器产生的图像质量越高<br>4、以上一切好处不需要精心设计的网络架构，最简单的多层全连接网络就可以做到</p>
+<h1 id="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"><a href="#5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用" class="headerlink" title="5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用"></a>5、掌握马尔可夫决策过程的定义，了解其算法应用范围，并能够实际应用</h1><p>马尔可夫决策过程（Markov Decision Process, MDP）是序贯决策（sequential decision）的数学模型，用于在系统状态具有马尔可夫性质的环境中模拟智能体可实现的随机性策略与回报。MDP的得名来自于俄国数学家安德雷·马尔可夫（Андрей Андреевич Марков），以纪念其为马尔可夫链所做的研究。</p>
+<p>MDP基于一组交互对象，即智能体和环境进行构建，所具有的要素包括状态、动作、策略和奖励。在MDP的模拟中，智能体会感知当前的系统状态，按策略对环境实施动作，从而改变环境的状态并得到奖励，奖励随时间的积累被称为回报。</p>
+<p>MDP的理论基础是马尔可夫链，因此也被视为考虑了动作的马尔可夫模型。在离散时间上建立的MDP被称为“离散时间马尔可夫决策过程（descrete-time MDP）”，反之则被称为“连续时间马尔可夫决策过程（continuous-time MDP）”。此外MDP存在一些变体，包括部分可观察马尔可夫决策过程、约束马尔可夫决策过程和模糊马尔可夫决策过程。</p>
+<p>在应用方面，MDP被用于机器学习中强化学习（reinforcement learning）问题的建模。通过使用动态规划、随机采样等方法，MDP可以求解使回报最大化的智能体策略，并在自动控制、推荐系统等主题中得到应用。</p>
+<h1 id="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"><a href="#6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。" class="headerlink" title="6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。"></a>6、掌握经典强化学习算法（Q-learning、SARMA）的定义与原理。</h1><p>强化学习的概念，通俗的讲，强化学习就是通过agent，也就是动作的发起者，对环境造成一个影响，环境接受该动作后状态发生变化，同时产生一个强化信号(奖或惩)反馈给Agent，Agent根据强化信号和环境当前状态再选择下一个动作，选择的原则是使受到正强化(奖)的概率增大。选择的动作不仅影响立即强化值，而且影响环境下一时刻的状态及最终的强化值。在强化学习中，包含两种基本的元素：状态与动作，在某个状态下执行某种动作，这便是一种策略，学习器要做的就是通过不断地探索学习，从而获得一个好的策略。</p>
+<p>Q-Learning属于强化学习的经典算法，用于解决马尔可夫决策问题。为无监督学习。</p>
+<h1 id="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。"><a href="#7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义-与原理，了解其算法特性。" class="headerlink" title="7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。"></a>7、掌握经典深度强化学习算法（DQN、DDPG、A3C、TRPO、PPO）的定义 与原理，了解其算法特性。</h1><p>DeepMind在2013年提出的DQN算法（2015年提出了DQN的改进版本）可以说是深度学习和强化学习的第一次成功结合。要想将深度学习融合进强化学习，是有一些很关键的问题需要解决的，其中的两个问题如下：<br>1、深度学习需要大量有标签的数据样本；而强化学习是智能体主动获取样本，样本量稀疏且有延迟。<br>2、深度学习要求每个样本相互之间是独立同分布的；而强化学习获取的相邻样本相互关联，并不是相互独立的。</p>
+<p>DQN是一种基于值函数的方法，基于值函数的方法难以应对的是大的动作空间，特别是连续动作情况。因为网络难以有这么多输出，且难以在这么多输出之中搜索最大的Q值。而DDPG是基于上面所讲到的Actor-Critic方法，在动作输出方面采用一个网络来拟合策略函数，直接输出动作，可以应对连续动作的输出及大的动作空间。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E5%85%AB%E3%80%81%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -523,7 +619,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:21:39" itemprop="dateModified" datetime="2021-10-22T17:21:39+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -617,7 +713,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:21:33" itemprop="dateModified" datetime="2021-10-22T17:21:33+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -729,7 +825,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:32:16" itemprop="dateModified" datetime="2021-10-22T17:32:16+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -872,7 +968,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:21:25" itemprop="dateModified" datetime="2021-10-22T17:21:25+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1016,7 +1112,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:09:02" itemprop="dateModified" datetime="2021-10-22T17:09:02+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1103,7 +1199,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:09:03" itemprop="dateModified" datetime="2021-10-22T17:09:03+08:00">2021-10-22</time>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1132,127 +1228,6 @@
 <h2 id="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"><a href="#（2）熟悉商业企业与消费者之间的电子商务（B2C）模式" class="headerlink" title="（2）熟悉商业企业与消费者之间的电子商务（B2C）模式"></a>（2）熟悉商业企业与消费者之间的电子商务（B2C）模式</h2><p>企业与消费者之间的电子商务是人们最熟悉的一种电子商务类型。网上商店利用Internet提供的双向交互通信，完成网上购物的过程。这类电子商务主要是借助于Internet所开展的在线式销售活动。最近几年随着Internet的发展，这类电子商务的发展异军突起。例如，在Internet上目前已出现许多大型超级市场，所出售的产品一应俱全，从食品、饮料到电脑、汽车等，几乎包括了所有的消费品。由于这种模式节省了客户和企业双方的时间和空间，大大提高了交易效率，节省了各类不必要的开支，因而这类模式得到了人们的认同，获得了迅速的发展。</p>
 <h2 id="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"><a href="#（3）熟悉消费者与消费者之间的电子商务（C2C）模式" class="headerlink" title="（3）熟悉消费者与消费者之间的电子商务（C2C）模式"></a>（3）熟悉消费者与消费者之间的电子商务（C2C）模式</h2><p>C2C电子商务平台就是通过为买卖双方提供一个在线交易平台，使卖方可以主动提供商品上网拍卖，而买方可以自行选择商品进行竞价。</p>
 <h2 id="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式"><a href="#（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O）-模式" class="headerlink" title="（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式"></a>（4）熟悉电子商务与线下实体店有机结合向消费者提供商品和服务（O2O） 模式</h2><p>O2O是指将线下的商务机会与互联网结合，让互联网成为线下交易的平台，这个概念最早来源于美国。O2O的概念非常广泛，既可涉及到线上，又可涉及到线下,可以称为O2O。如团购就属于一种典型的O2O。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E5%9B%9B)%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/14/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%B8%89%E3%80%81%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E5%9B%9B)%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">信息化基础知识（四）项目管理</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-14 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-14T00:00:00+08:00">2021-10-14</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-22 17:09:03" itemprop="dateModified" datetime="2021-10-22T17:09:03+08:00">2021-10-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1、项目管理的理论与体系"><a href="#1、项目管理的理论与体系" class="headerlink" title="1、项目管理的理论与体系"></a>1、项目管理的理论与体系</h1><h2 id="（1）了解项目管理基础知识"><a href="#（1）了解项目管理基础知识" class="headerlink" title="（1）了解项目管理基础知识"></a>（1）了解项目管理基础知识</h2><p>项目管理是项目的管理者，在有限的资源约束下，运用系统的观点、方法和理论，对项目涉及的全部工作进行有效地管理。即从项目的投资决策开始到项目结束的全过程进行计划、组织、指挥、协调、控制和评价，以实现项目的目标。</p>
-<h2 id="（2）掌握项目管理知识体系的构成"><a href="#（2）掌握项目管理知识体系的构成" class="headerlink" title="（2）掌握项目管理知识体系的构成"></a>（2）掌握项目管理知识体系的构成</h2><p>1、项目范围管理<br>是为了实现项目的目标，对项目的工作内容进行控制的管理过程。它包括范围的界定，范围的规划，范围的调整等。</p>
-<p>2、项目时间管理<br>是为了确保项目最终的按时完成的一系列管理过程。它包括具体活动的界定，如：活动排序、时间估计、进度安排及时间控制等项工作。</p>
-<p>3、项目成本管理<br>是为了保证完成项目的实际成本、费用不超过预算成本、费用的管理过程。它包括资源的配置，成本、费用的预算以及费用的控制等项工作。</p>
-<p>4、项目质量管理<br>是为了确保项目达到客户所规定的质量要求所实施的一系列管理过程。它包括质量规划，质量控制和质量保证等。</p>
-<p>5、项目人力资源管理<br>是为了保证所有项目关系人的能力和积极性都得到最有效地发挥和利用所做的一系列管理措施。它包括组织的规划、团队的建设、人员的选聘和项目的班子建设等一系列工作。</p>
-<p>6、项目沟通管理<br>是为了确保项目的信息的合理收集和传输所需要实施的一系列措施，它包括沟通规划，信息传输和进度报告等。</p>
-<p>7、项目风险管理<br>涉及项目可能遇到各种不确定因素。它包括风险识别，风险量化，制订对策和风险控制等。</p>
-<p>8、项目采购管理<br>是为了从项目实施组织之外获得所需资源或服务所采取的一系列管理措施。它包括采购计划，采购与征购，资源的选择以及合同的管理等项目工作。</p>
-<p>9、项目集成管理<br>是指为确保项目各项工作能够有机地协调和配合所展开的综合性和全局性的项目管理工作和过程。它包括项目集成计划的制定，项目集成计划的实施，项目变动的总体控制等。</p>
-<h2 id="（3）了解-IPMP-PMP、PRINCE2-等项目管理认证体系"><a href="#（3）了解-IPMP-PMP、PRINCE2-等项目管理认证体系" class="headerlink" title="（3）了解 IPMP/PMP、PRINCE2 等项目管理认证体系"></a>（3）了解 IPMP/PMP、PRINCE2 等项目管理认证体系</h2><p><img src="/images/bigdata/2-12.jpg"> </p>
-<h2 id="（4）掌握项目管理成熟度模型"><a href="#（4）掌握项目管理成熟度模型" class="headerlink" title="（4）掌握项目管理成熟度模型"></a>（4）掌握项目管理成熟度模型</h2><p>参考<a href="/2021/10/11/%E8%BD%AF%E8%80%83/13%E3%80%81%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86/%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86(%E4%B8%83)%E8%BD%AF%E4%BB%B6%E8%BF%87%E7%A8%8B%E6%94%B9%E8%BF%9B/">[开发管理（七）软件过程改进]</a></p>
-<h2 id="（5）了解项目管理的量化方法"><a href="#（5）了解项目管理的量化方法" class="headerlink" title="（5）了解项目管理的量化方法"></a>（5）了解项目管理的量化方法</h2><h1 id="2、组织结构对项目的影响"><a href="#2、组织结构对项目的影响" class="headerlink" title="2、组织结构对项目的影响"></a>2、组织结构对项目的影响</h1><h2 id="（1）了解组织结构对项目的影响。"><a href="#（1）了解组织结构对项目的影响。" class="headerlink" title="（1）了解组织结构对项目的影响。"></a>（1）了解组织结构对项目的影响。</h2><h3 id="01、职能式组织结构"><a href="#01、职能式组织结构" class="headerlink" title="01、职能式组织结构"></a>01、职能式组织结构</h3><p>职能式组织结构就是在组织目前的职能型等级结构下加以管理，一旦项目开始运行，项目的各个组成部分就由各职能单位承担，各单位负责完成其分管的项目内容。如果项目的性质既定，某一职能领域对项目的完成发挥着主导性的作用，职能领域的高级经理将负责项目的协调工作。</p>
-<p>职能式组织结构的优点：</p>
-<p>1、人员的使用上有较大的灵活性，只要选择了一个合适的职能部门作为项目的上级，该部门就能为项目提供它所需要的专业技术人员，而且技术专家可以同时被不同的项目所使用，并在工作完成后又可以回去做他原来的工作;</p>
-<p>2、在人员离开项目组甚至离开公司时，职能部门可作为保持项目连续性的基础;</p>
-<p>3、职能部门可以为本部门的专业人员提供一条正常的晋升途径。　</p>
-<p>职能式组织结构的缺点：</p>
-<p>1、项目经常缺少重点，每个职能单位都有自己的核心常规业务，有时为了满足自己的基本需要，对项目的责任就被忽视，尤其是项目给单位带来的利益不同时;</p>
-<p>2、这种组织结构在跨部门之间的合作与交流方面存在一定困难;</p>
-<p>3、项目参与者的动机不够强，他们认为项目是一项额外的负担，与他们的职业发展和提升无直接关系;</p>
-<h3 id="02、项目式组织结构"><a href="#02、项目式组织结构" class="headerlink" title="02、项目式组织结构"></a>02、项目式组织结构</h3><p>项目式组织结构就是指创建独立项目团队，这些团队的经营与母体组织的其他单位分离，有自己的技术人员与管理人员，企业分配给项目团队一定的资源，然后授予项目经理执行项目的最大自由。</p>
-<p>项目式组织结构的优点：</p>
-<p>1、这种项目团队重点集中，项目经理对项目全权负责，项目团队工作者的唯一任务就是完成项目，并只对项目经理负责，避免了多重领导;</p>
-<p>2、项目团队的决策是在项目内制定，反应时间比较短;</p>
-<p>3、在这种项目团队中，成员动力强、凝聚力高，参与者分享项目及小组的共同目标与个人责任比较明确。</p>
-<p>项目式组织结构的缺点：</p>
-<p>1、当一个公司有多个项目时，每个项目有自己一套独立的班子，这将导致不同项目的重复努力和规模经济的丧失;</p>
-<p>2、项目团队自身是一个独立的实体，容易产生一种被称为“项目炎症”的疾病，即项目团队与母体组织之间出现一条明显的分界线，削弱项目团队与母体组织之间的有效融合;</p>
-<p>3、创建自我控制的项目团队限制了用最好的技术来解决问题;</p>
-<p>4、对项目组成员来说，缺乏一种事业的连续性和保障，项目一旦结束，返回原来的职能部门可能会比较困难。</p>
-<h3 id="03、矩阵式组织结构"><a href="#03、矩阵式组织结构" class="headerlink" title="03、矩阵式组织结构"></a>03、矩阵式组织结构</h3><p>矩阵式组织结构是一种混合形式，它在常规的职能层级结构之上“加载”了一种水平的项目管理结构。根据项目与职能经理相对权力的不同，实践中存在不同种类的矩阵体系，分别有权力明显倾向于职能经理的职能矩阵，权力明显倾向于项目经理的项目矩阵和传统矩阵安排的平衡矩阵。</p>
-<p>矩阵式组织结构的优点：</p>
-<p>1、和职能式组织结构一样，资源可以在多个项目中共享，可大大减少项目式组织中人员冗余的问题;</p>
-<p>2、项目是工作的焦点，具有一个正式指定的项目经理会使他对项目给予更强的关注，负责协调和整合不同单位的工作;</p>
-<p>3、当有多个项目同时进行时，公司可以平衡资源以保证各个项目都能完成其各自的进度、费用及质量要求;</p>
-<p>4、项目组成员对项目结束后的忧虑减少，他们一方面与项目有很强的联系，另一方面他们对职能部门也有一种“家”的感觉。</p>
-<p>矩阵式组织结构的缺点：</p>
-<p>1、矩阵结构加剧了职能经理和拥有关键技能与看法的项目经理之间的紧张局面;</p>
-<p>2、任何情况下的跨项目分享设备、资源和人员都会导致冲突和对稀缺资源的竞争;</p>
-<p>3、在项目执行过程中，项目经理必须就各种问题与部门经理进行谈判和协商，从而导致决策的制定被耽误;</p>
-<p>4、矩阵管理与命令统一的管理原则相违背，项目组成员有两个上司，即项目经理和部门经理，当他们的命令有分歧时，会令成员感到左右为难，无所适从。</p>
-<h1 id="3、信息系统项目典型生命周期模型"><a href="#3、信息系统项目典型生命周期模型" class="headerlink" title="3、信息系统项目典型生命周期模型"></a>3、信息系统项目典型生命周期模型</h1><p>（1）掌握瀑布模型及其瀑布模型基础上改进的模型<br>（2）了解原型化模型<br>（3）了解敏捷开发模型<br>（4）了解软件生命周期其它模型</p>
-<p>该章节统一参考<a href="/2021/09/16/%E8%BD%AF%E8%80%83/6%E3%80%81%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95(%E4%BA%8C)%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/">[开发方法（二）软件开发模型]</a></p>
-<h1 id="4、单个项目的管理过程"><a href="#4、单个项目的管理过程" class="headerlink" title="4、单个项目的管理过程"></a>4、单个项目的管理过程</h1><p>（1）掌握项目整体管理的含义、作用<br>（2）了解项目整体管理过程<br>（3）掌握项目进度管理<br>（4）了解项目成本管理<br>（5）了解项目质量管理<br>（6）了解项目人力资源管理<br>（7）了解项目沟通管理和干系人管理<br>（8）了解项目风险管理<br>（9）了解项目单个项目管理的其它方法</p>
-<p>该章节统一参考<a href="/tags/%E8%BD%AF%E8%80%83-%E5%BC%80%E5%8F%91%E7%AE%A1%E7%90%86/">[软考-开发管理]</a></p>
-<h1 id="5、信息系统安全管理"><a href="#5、信息系统安全管理" class="headerlink" title="5、信息系统安全管理"></a>5、信息系统安全管理</h1><p>（1）掌握信息系统安全策略<br>（2）了解信息安全系统工程<br>（3）了解 PKI 公开密钥基础设施<br>（4）了解 PMI 权限（授权）管理基础<br>（5）了解信息安全审计<br>（6）了解信息系统安全管理其它方法</p>
-<p>该章节统一参考<a href="/tags/%E8%BD%AF%E8%80%83-%E5%AE%89%E5%85%A8%E6%80%A7%E5%92%8C%E4%BF%9D%E5%AF%86%E6%80%A7%E8%AE%BE%E8%AE%A1/">[软考-安全性和保密性设计]</a></p>
 
       
     </div>
@@ -1339,20 +1314,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">85</span>
+          <span class="site-state-item-count">86</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
