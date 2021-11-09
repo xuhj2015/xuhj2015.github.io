@@ -197,6 +197,550 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/29/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E5%8D%81%E4%B8%80)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%A7%86%E5%9B%BE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/29/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E5%8D%81%E4%B8%80)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%A7%86%E5%9B%BE/" class="post-title-link" itemprop="url">软件架构设计（十一）软件架构视图</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-29 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-29T00:00:00+08:00">2021-09-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="一、软件视图的分类"><a href="#一、软件视图的分类" class="headerlink" title="一、软件视图的分类"></a>一、软件视图的分类</h1><p>现代软件系统非常复杂，通常在某个具体的时间内只需将注意力集中在某几个结构上，结构是元素本身的集合，而视图则是捕获和表达结构(文档描述)，虽然它 们有区别，但在实际使用时则不严格区分，即从系统体系的角度说是结构，从文档角度说是 视图。</p>
+<p>架构的优势也在于使用视图:每个视图强调系统的某一个方面，同时忽视系统的其他方 面，以便有助于处理或理解当前问题，描述完整的系统架构必须具备完整的视图集，“4+1” 方法就是一类完备视图集。</p>
+<p>软件视图通常分为三种类型:<br>(1)模块视图类型:为系统的主要模块实现单元编档。<br>(2)构件和连接件视图类型:为系统的构件和连接件执行单元编档。<br>(3)分配视图类型:为软件的开发和执行环境之间的关系编档。</p>
+<table>
+<thead>
+<tr>
+<th>组别</th>
+<th>架构风格</th>
+<th>说明</th>
+<th>应用于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模块视图类型</td>
+<td>分解</td>
+<td>大模块分解为小模块，小到容易理解</td>
+<td>资源分配、项目结构化和规划；信息隐蔽、封装；配置控制</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>使用</td>
+<td>一个单元的正确性依赖于另一个单元的正确性（如版本）</td>
+<td>设计子集；设计扩展（增量开发）</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>分层</td>
+<td>上层使用下层的服务；实现隐藏细节的抽象</td>
+<td>增量式开发；基于“虚拟机”上的可移植性</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>类或泛化</td>
+<td>“继承自”或“是一个实例”；共享访问方法</td>
+<td>面向对象的设计（使用公共模板）</td>
+</tr>
+<tr>
+<td>构件-连接器视图类型</td>
+<td>客户机-服务器</td>
+<td>构件是客户机和服务器，连接件是协议及共享信息</td>
+<td>分布式操作：关注点分离（支持可修改性）；负载均衡</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>进程或通信进程</td>
+<td>通过通信、同步或排除操作形成进程或线程之间的关联</td>
+<td>调度分析：性能分析</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>并发</td>
+<td>在相同的“逻辑线程”上运行</td>
+<td>确定资源挣用；分析线程</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>共享数据</td>
+<td>运行时产生数据、使用数据（共享数据储存库）</td>
+<td>性能；数据完整性；可修改性</td>
+</tr>
+<tr>
+<td>分配视图类型</td>
+<td>部署</td>
+<td>软件功能分配给软件（进程）、硬件（处理器）和通信路径</td>
+<td>性能、可能性、安全性说明。尤其在分布式或并行系统中</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>实现</td>
+<td>模块映射到开发活动中</td>
+<td>配置控制、集成、测试活动</td>
+</tr>
+<tr>
+<td>↑</td>
+<td>工作分配</td>
+<td>将责任分配到适当得开发小组，特别是公共部分不是每个人趋势线</td>
+<td>项目管理、管理通用性，最好的专业技术安排</td>
+</tr>
+</tbody></table>
+<h1 id="二、模块视图类型及其风格"><a href="#二、模块视图类型及其风格" class="headerlink" title="二、模块视图类型及其风格"></a>二、模块视图类型及其风格</h1><p>模块将遵循某种方式将软件系统分解成可管理的功能单元。架构模块视图是通过文档来枚举系统的主要实现单元或模块，及这些单元之间的关系。</p>
+<p>完整的架构文档必须包含有模块视图，它为源代码提供蓝图。</p>
+<p><img src="/images/ruankao/6-53.png"></p>
+<h2 id="1-分解风格能展示向模块分配责任的方式。"><a href="#1-分解风格能展示向模块分配责任的方式。" class="headerlink" title="(1)分解风格能展示向模块分配责任的方式。"></a>(1)分解风格能展示向模块分配责任的方式。</h2><p><img src="/images/ruankao/6-54.png"></p>
+<h2 id="2-使用风格能展示模块相互依赖的方式。"><a href="#2-使用风格能展示模块相互依赖的方式。" class="headerlink" title="(2)使用风格能展示模块相互依赖的方式。"></a>(2)使用风格能展示模块相互依赖的方式。</h2><p><img src="/images/ruankao/6-55.png"></p>
+<h2 id="3-分层风格能将系统分割成一组虚拟机，通过“允许使用”关系相互关联，分层风-格能帮助实现可移植性和可修改性。"><a href="#3-分层风格能将系统分割成一组虚拟机，通过“允许使用”关系相互关联，分层风-格能帮助实现可移植性和可修改性。" class="headerlink" title="(3)分层风格能将系统分割成一组虚拟机，通过“允许使用”关系相互关联，分层风 格能帮助实现可移植性和可修改性。"></a>(3)分层风格能将系统分割成一组虚拟机，通过“允许使用”关系相互关联，分层风 格能帮助实现可移植性和可修改性。</h2><p><img src="/images/ruankao/6-56.png"></p>
+<h2 id="4-泛化风格能展示一个模块如何成为另一个模块的泛化或特化，从而使模块之间产-生关联。"><a href="#4-泛化风格能展示一个模块如何成为另一个模块的泛化或特化，从而使模块之间产-生关联。" class="headerlink" title="(4)泛化风格能展示一个模块如何成为另一个模块的泛化或特化，从而使模块之间产 生关联。"></a>(4)泛化风格能展示一个模块如何成为另一个模块的泛化或特化，从而使模块之间产 生关联。</h2><p>它广泛应用于面向对象的系统，能展示继承性，并能用来使用模块之间的共性。<br><img src="/images/ruankao/6-57.png"></p>
+<h1 id="三、C-amp-C视图类型及其风格"><a href="#三、C-amp-C视图类型及其风格" class="headerlink" title="三、C&amp;C视图类型及其风格"></a>三、C&amp;C视图类型及其风格</h1><p>C&amp;C 视图能定义由具有某种运行时存在的元素模型，这些元素包括进程、对象、客户 机、服务器及数据存储器等。此外，它还包含作为元素的交互路径，如通信链路和协议、信 息流及共享存储器访问。通常，可利用复杂的基础结构(如中间件框架、分布式通信信道和 进程调度)来执行这些交互操作。<br><img src="/images/ruankao/6-58-1.png"><br><img src="/images/ruankao/6-58-2.png"></p>
+<h2 id="1-管道和过滤器风格中的交互模式表现出数据流连续变换的特征。"><a href="#1-管道和过滤器风格中的交互模式表现出数据流连续变换的特征。" class="headerlink" title="(1)管道和过滤器风格中的交互模式表现出数据流连续变换的特征。"></a>(1)管道和过滤器风格中的交互模式表现出数据流连续变换的特征。</h2><p>数据抵达过滤器 并经过转换后由管理传送给下一个过滤器。</p>
+<p><img src="/images/ruankao/6-59.png"></p>
+<h2 id="2-共享数据风格通过保留持久数据来支配交互模式，持久数据由多个数据存取器和-至少一个储存库保留。"><a href="#2-共享数据风格通过保留持久数据来支配交互模式，持久数据由多个数据存取器和-至少一个储存库保留。" class="headerlink" title="(2)共享数据风格通过保留持久数据来支配交互模式，持久数据由多个数据存取器和 至少一个储存库保留。"></a>(2)共享数据风格通过保留持久数据来支配交互模式，持久数据由多个数据存取器和 至少一个储存库保留。</h2><p><img src="/images/ruankao/6-60.png"></p>
+<h2 id="3-发布-订阅风格用于向一组未知接受者发送事件和消息。"><a href="#3-发布-订阅风格用于向一组未知接受者发送事件和消息。" class="headerlink" title="(3)发布-订阅风格用于向一组未知接受者发送事件和消息。"></a>(3)发布-订阅风格用于向一组未知接受者发送事件和消息。</h2><p>可在不修改生产者的情况 下添加新的接受者(订阅者)。在发布-订阅风格中，构件通过事件发布进行交互。构件可订 阅一组事件。<br><img src="/images/ruankao/6-61.png"></p>
+<h2 id="4-客户机-服务器风格能展示构件通过请求其他构件的服务进行交互的过程，将功能-划分成客户机和服务器后即可基于运行时准则把它们单独分配给各个级。"><a href="#4-客户机-服务器风格能展示构件通过请求其他构件的服务进行交互的过程，将功能-划分成客户机和服务器后即可基于运行时准则把它们单独分配给各个级。" class="headerlink" title="(4)客户机-服务器风格能展示构件通过请求其他构件的服务进行交互的过程，将功能 划分成客户机和服务器后即可基于运行时准则把它们单独分配给各个级。"></a>(4)客户机-服务器风格能展示构件通过请求其他构件的服务进行交互的过程，将功能 划分成客户机和服务器后即可基于运行时准则把它们单独分配给各个级。</h2><h2 id="5-对等连接系统能通过构件之间的直接交换支持服务交换。它是一种调用-返回风格。"><a href="#5-对等连接系统能通过构件之间的直接交换支持服务交换。它是一种调用-返回风格。" class="headerlink" title="(5)对等连接系统能通过构件之间的直接交换支持服务交换。它是一种调用/返回风格。"></a>(5)对等连接系统能通过构件之间的直接交换支持服务交换。它是一种调用/返回风格。</h2><p><img src="/images/ruankao/6-63.png"></p>
+<h2 id="6-通信-进程风格的特征表现在通过各种连接件机制并发执行构件的交互，如通过同-步、消息传递、数据交换、启动和停止等进行交互。"><a href="#6-通信-进程风格的特征表现在通过各种连接件机制并发执行构件的交互，如通过同-步、消息传递、数据交换、启动和停止等进行交互。" class="headerlink" title="(6)通信-进程风格的特征表现在通过各种连接件机制并发执行构件的交互，如通过同 步、消息传递、数据交换、启动和停止等进行交互。"></a>(6)通信-进程风格的特征表现在通过各种连接件机制并发执行构件的交互，如通过同 步、消息传递、数据交换、启动和停止等进行交互。</h2><p><img src="/images/ruankao/6-64.png"></p>
+<h1 id="四、分配视图类型及其风格"><a href="#四、分配视图类型及其风格" class="headerlink" title="四、分配视图类型及其风格"></a>四、分配视图类型及其风格</h1><p>硬件、文件系统和团队结构都会与软件架构进行交互，将软件架构映射到其环境的一般<br>形式称为“分配视图类型”。</p>
+<p><img src="/images/ruankao/6-65.png"></p>
+<p>分配视图类型的三种常见风格为:<br>部置风格:能描述构件和连接件对硬件的映射，硬件是软件执行的场所。<br>实现风格:能描述模块对包含它们的文件系统的映射。<br>工作任务风格:能描述模块对承担模块开发任务的人员、团队或小组的映射。</p>
+<h2 id="1-部置风格体现为-C-amp-C-风格-如通信-进程风格-的元素被分配到执行平台。"><a href="#1-部置风格体现为-C-amp-C-风格-如通信-进程风格-的元素被分配到执行平台。" class="headerlink" title="(1)部置风格体现为 C&amp;C 风格(如通信-进程风格)的元素被分配到执行平台。"></a>(1)部置风格体现为 C&amp;C 风格(如通信-进程风格)的元素被分配到执行平台。</h2><p><img src="/images/ruankao/6-66.png"></p>
+<h2 id="2-实现风格能将模块视图类型中的模块映射到开发基础结构。"><a href="#2-实现风格能将模块视图类型中的模块映射到开发基础结构。" class="headerlink" title="(2)实现风格能将模块视图类型中的模块映射到开发基础结构。"></a>(2)实现风格能将模块视图类型中的模块映射到开发基础结构。</h2><p>实现一个模块总会产 生许多独立文件，必须对这些文件进行组织，以免失去对系统的控制及系统的完整性。通常 利用配置管理技术进行文件管理。</p>
+<p><img src="/images/ruankao/6-67.png"></p>
+<h2 id="3-软件项目的时间和预算估计取决于工作分解结构-WBS-，而工作分解结构则取决-于软件架构。"><a href="#3-软件项目的时间和预算估计取决于工作分解结构-WBS-，而工作分解结构则取决-于软件架构。" class="headerlink" title="(3)软件项目的时间和预算估计取决于工作分解结构(WBS)，而工作分解结构则取决 于软件架构。"></a>(3)软件项目的时间和预算估计取决于工作分解结构(WBS)，而工作分解结构则取决 于软件架构。</h2><p>工作任务风格将软件架构映射到由人组成的团队之中，实现这一项目管理的目 的。</p>
+<p><img src="/images/ruankao/6-68.png"></p>
+<p>工作任务风格与模块分解风格关系密切，它能将模块分解风格用作其分配映射的基础。 这种风格能通过添加与开发工具、测试工具和配置管理系统等对应的模块分解进行扩展。工 作任务风格还通常与其他风格联合使用，例如，团队工作任务可以是模块分解风格中的模块， 可以是分层图中的层，也可以是多进程系统中的任务或进程。</p>
+<h1 id="五、各视图类型间的映射关系"><a href="#五、各视图类型间的映射关系" class="headerlink" title="五、各视图类型间的映射关系"></a>五、各视图类型间的映射关系</h1><p>为了完整地描述一个架构，必须使用多个视图，这些视图必须遵守一定的映射关系。</p>
+<p>(1)模块视图类型中的视图通常会映射到构件和连接件视图类型中的视图。模块实现 单元将映射到运行时构件。</p>
+<p>(2)系统的构件和连接件视图和模块视图之间的关系可能会非常复杂。同样的代码模 块可由 C&amp;C 视图的许多元素执行。反之，C&amp;C 视图的单一构件可执行由许多模块定义的代 码。同样，C&amp;C 构件可能会拥有许多与环境进行交互的点，每个交互点由同一模块接口定 义。</p>
+<p>(3)分配视图类型是为有效地实现软件架构的辅助性视图，它将其他视图类型中的软 件元素映射到软件环境中，即反映其他视图与软件环境之间的关系。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%83)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%83)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E6%96%87%E6%A1%A3%E5%8C%96/" class="post-title-link" itemprop="url">软件架构设计（七）软件架构文档化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>记录软件架构的活动就是架构编档过程，也就是架构的文档化。它包含两个方面:一是 过程，编档过程能促使架构设计师进一步思考，使得架构更加完善;二是结果，描述架构的 文档将作为架构开发的成果，供项目关系人使用。</p>
+<h1 id="1-架构文档的使用者"><a href="#1-架构文档的使用者" class="headerlink" title="1.架构文档的使用者"></a>1.架构文档的使用者</h1><p>架构文档的使用者是架构的项目关系人。编写技术文档(尤其是软件架构文档)最基本 的原则之一是要从读者的角度来编写，易于编写但很难阅读的文档是不受欢迎的。</p>
+<p>架构的主要用途是充当项目关系人之间进行交流的工具，文档则促进了这种交流—— 架 构项目关系人希望从架构文档中获得自己所关心的架构信息。</p>
+<h1 id="2-编档规则"><a href="#2-编档规则" class="headerlink" title="2.编档规则"></a>2.编档规则</h1><p>合理的编档规则编写架构文档和编写其他文档一样，必须遵守一些基本规则，这里 将任何软件编档(包括软件架构编档)的规则归纳为 7 条:</p>
+<p>(1)从读者的角度编写文档。<br>(2)避免出现不必要的重复。<br>(3)避免歧义。<br>(4)使用标准结构。<br>(5)记录基本原理。<br>(6)使文档保持更新，但更新频率不要过高。<br>(7)针对目标的适宜性对文档进行评审。</p>
+<h1 id="3-视图编档"><a href="#3-视图编档" class="headerlink" title="3.视图编档"></a>3.视图编档</h1><p>视图的 概念为架构设计师提供了进行软件架构编档的基本原则。架构文档化就是将相关视图编成文 档，并补充多个视图的关联关系。</p>
+<p><img src="/images/ruankao/6-48.png"></p>
+<p>(1)视图概述:对系统进行概括性的描述，包含视图的主要元素和元素间的关系。<br>主要表示可用多个形式:图形、表 格、文本，通常用图形形式，使用 UML 语言来描述。</p>
+<p>(2)元素目录:对主要表示中所描述的元素及其关系进行详细描述，包括:元素及其 属 性、关系及其属性、元素接口、元素行为。<br>对元素及其协同工作的行为进行编档，如用 UML 的顺序图和状态图描述行为;<br>对接口进行编档如题<br><img src="/images/ruankao/6-49.png"></p>
+<p>(3)上下文图:用图形展示系统如何与其环境相关。</p>
+<p>(4)可变性指南:描述架构的可变化点，如在软件产品线中，产品线架构通过变化， 适用于多个系统，因此，文档中应包含这些变化点，如各系统要做出选择的选项、做出选择 的时间。</p>
+<p>(5)架构背景:为架构的合理性提供足够的、令人信服的论据。包括:基本原理、分 析结果及设计中所反映的假定。</p>
+<p>(6)术语表:对文档中每个术语进行简要说明。</p>
+<p>(7)其他信息:描述不属于架构方面的必要信息，如管理信息(创作者、配置控制数 据及变更历史)。</p>
+<h1 id="4-跨视图文档"><a href="#4-跨视图文档" class="headerlink" title="4.跨视图文档"></a>4.跨视图文档</h1><p>软件架构由多个视图文档来反映，按前面所述的要求完成每个视图的文档后，需要对这 些文档进行一个整体的“打包”工作，这就是跨视图文档。它包括如下内容:<br>(1)文档有哪些内容，它们是如何组织的:视图目录(含哪些视图);视图模板(即前 面描述的视图文档，企业可以通过规范化来定义统一的、公共的视图模板)。<br>(2)架构概述:它描述系统的目的、视图之间的关联、元素表及索引、项目词汇。<br>(3)为什么架构是这样的(基本原理):跨视图基本原理解释了整体架构实际上是其需 求的一个解决方案。即解释了做出决策的原因、方案的限制、改变决策时的影响及意义。</p>
+<h1 id="5-使用-UML"><a href="#5-使用-UML" class="headerlink" title="5.使用 UML"></a>5.使用 UML</h1><p>UML 已经成为对软件架构进行文档化的事实上的标准表示法。在视图文档的组织结构 中，UML 主要用于表示元素或元素组的行为。</p>
+<h1 id="6-软件架构重构"><a href="#6-软件架构重构" class="headerlink" title="6.软件架构重构"></a>6.软件架构重构</h1><p>前面已论述了架构编档，即在架构设计时完成编档工作。但是还有另外一种情况:系统<br>已经存在，但不知其架构，即架构没有通过文档很好地保留下来(文档的缺失/失效)。如何 维护这样的系统并管理其演变?其关键就是要找到软件架构，软件架构重构就是研究解决这 一问题的方法，它是反向工程之一。</p>
+<p>软件架构重构由以下活动组成，这些活动以迭代方式进行。</p>
+<p><img src="/images/ruankao/6-50.png"></p>
+<p>(1)信息提取(View Extraction)。可以使用各种工具进行信息提取，如解析器、语法 分析器等;可以利用 build 和 makefile 文件中关于模块的依赖关系;可以从源代码、编译 时制品和设计制品中提取静态信息;可以使用分析工具提取动态信息。</p>
+<p>(2)数据库构造(Database Construction):将提取的信息转化为标准的形式，并置于 数据库中。</p>
+<p>(3)视图融合(View Fusion):将数据库中的信息组合在一起，生成该架构的一个内聚 的视图。</p>
+<p>(4)重构(Reconstruction):构建数据抽象和各种表示以生成架构表示，主要由两个活动组成:可视化和交互、模式定义和识别。最后生成需要的架构文档(Documentation)。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B9%9D)%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B6%E5%A4%8D%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B9%9D)%E6%9E%B6%E6%9E%84%E5%8F%8A%E5%85%B6%E5%A4%8D%E7%94%A8/" class="post-title-link" itemprop="url">软件架构设计（九）架构及其复用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>常见的构件(component，组件)的定义如下：</p>
+<p>定义 1:构件是指软件系统中可以明确辨识的构成成分。而可复用构件(reusable component)是指具有相对独立的功能和可复用价值的构件。<br>定义 2:构件是一个组装单元，它具有约定式规范的接口及明确的依赖环境。<br>定义 3:构件是软件系统中具有相对独立功能、可以明确辨识、接口由契约指定、和语 境有明显依赖关系、可独立部署的可组装软件实体。</p>
+<h1 id="一、商用构件标准规范"><a href="#一、商用构件标准规范" class="headerlink" title="一、商用构件标准规范"></a>一、商用构件标准规范</h1><h2 id="1-CORBA"><a href="#1-CORBA" class="headerlink" title="1.CORBA"></a>1.CORBA</h2><p>CORBA(Common ObjectRequest Broker Architecture，公共对象请求代理架构)主要分为 3 个层次:对象请求代理、公共对象服务和公共设施。</p>
+<p>CORBA CCM(CORBA ComponentModel，CORBA 构件模型)是 OMG 组织制定的一个用 于开发和配置分布式应用的服务器端构件模型规范，它主要包括如下 3 项内容。<br>(1)抽象构件模型:用以描述服务器端构件结构及构件间互操作的结构。<br>(2)构件容器结构:用以提供通用的构件运行和管理环境，并支持对安全、事务、持 久状态等系统服务的集成。<br>(3)构件的配置和打包规范:CCM 使用打包技术来管理构件的二进制、多语言版本的 可执行代码和配置信息，并制定了构件包的具体内容和文档内容标准。</p>
+<h2 id="2-J2EE"><a href="#2-J2EE" class="headerlink" title="2.J2EE"></a>2.J2EE</h2><p>在分布式互操作协议上，J2EE 同时支持 RMI(Remote Method Invocation，远程方法调用) 和 IIOP(Internet Inter-ORB Protocol，互联网内部对象请求代理协议)，而在服务器端分布式 应用的构造形式，则包括了 Java Servlet、JSP、EJB 等多种形式，以支持不同的业务需求， 而且 Java 应用程序具有跨平台的特性，使得 J2EE 技术在发布计算领域得到了快速发展。</p>
+<h2 id="3-DNA-2000"><a href="#3-DNA-2000" class="headerlink" title="3.DNA 2000"></a>3.DNA 2000</h2><p>Microsoft DNA 2000 是 Microsoft 在推出 Windows 2000 系列操作系统平台的基础上， 在扩展了分布计算模型，以及改造 Back Office 系列服务器端分布计算产品后发布的新的分 布计算架构和规范。在服务器端，DNA 2000 提供了 ASP、COM、Cluster 等的应用支持。</p>
+<h1 id="二、应用系统簇与构件系统"><a href="#二、应用系统簇与构件系统" class="headerlink" title="二、应用系统簇与构件系统"></a>二、应用系统簇与构件系统</h1><p>除专门开发构件的企业外，开发应用系统的企业也会发展自己的构件应用体系:通常是 随着企业的不断成熟，逐步从已开发的应用系统中整理出来一些构件，反过来，将这些构件 复用到优化与整合已有应用系统中或复用于开发新的应用系统。</p>
+<p>应用系统和构件系统都是系统产品(而不是工作产品)。它们都可以采用模型和结构的 类型定义出来。一般情况下，构件系统只在开发单位内部使用，而应用系统提供给外部客户， 与应用系统相比，构件系统具有通用性，可复用性，这就要求构件系统的开发过程应当实施 更为严格的工程规范。</p>
+<p>应用系统可以向构件系统输入构件(构件的需求源于应用系统或应用系统中的模块)，反 过来，构件系统向应用系统输出构件。这就是构件系统如何获得构件和如何提供构件的方式。</p>
+<h1 id="三、基于复用开发的组织结构"><a href="#三、基于复用开发的组织结构" class="headerlink" title="三、基于复用开发的组织结构"></a>三、基于复用开发的组织结构</h1><p>基于复用的开发组织与传统的开发组织结构不同，它需要有一部分用于开发可复用资产 的资源，这部分资源应同具体应用系统的开发资源分开，以确保不被占用。</p>
+<p>一种较平衡的组织结构如图所示，它有三类职能部门:一是构件系统开发部门， 它开发可复用资产;二是应用系统项目开发部(多个)，它复用资产;三是支持部门，这个 部门是可选的，它进一步隔离上述两主体部门，虽然牺牲了一些效率，但保证了构件的规范 性。它的主要职责是对构件开发部门所提供的可复用资产进行确认、对构件库进行分类编目、 向开发应用系统的工程师们发通告和分发可复用资产、提供必要的文档、从复用者处收集反 馈信息和缺陷报告。<br><img src="/images/ruankao/6-51.png"><br>一方面，构件开发者应当尽量接近应用开发者，以使其开发出的构件能尽量符合实际需 要;另一方面，构件开发者与应用开发者分属两个并列的部门，使构件开发者能摆脱应用项 目的日常压力，保证可复用资产的开发和持续改进。复用经理应当在构件开发和应用 项目开发利益之间进行权衡，保证长期目标不受近期项目压力的影响。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E5%85%AB)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E5%85%AB)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0/" class="post-title-link" itemprop="url">软件架构设计（八）软件架构评估</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>软件架构评估是在对架构分析、评估的基础上，对架构策略的选取进行决策。它也可以灵活地运用于对软件架构进行评审等工作中。</p>
+<h1 id="一、软件架构评估的方法"><a href="#一、软件架构评估的方法" class="headerlink" title="一、软件架构评估的方法"></a>一、软件架构评估的方法</h1><p>业界已开发出多种软件架构评估的方法，按基于的技术手段来看，可以分为三类:基于调查问卷或检查表的方式、基于场景的方式和基于度量的方式。</p>
+<h2 id="1-基于调查问卷或检查表的方式"><a href="#1-基于调查问卷或检查表的方式" class="headerlink" title="(1)基于调查问卷或检查表的方式"></a>(1)基于调查问卷或检查表的方式</h2><p>该方式的关键是要设计好问卷或检查表，它充分 利用系统相关人员的经验和知识，获得对架构的评估。其缺点是在很大程度上依赖于评估人 员的主观推断。</p>
+<h2 id="2-基于场景的方式"><a href="#2-基于场景的方式" class="headerlink" title="(2)基于场景的方式"></a>(2)基于场景的方式</h2><p>基于场景的方式由 SEI 首先提出并应用在架构权衡分析法 (Architecture Tradeoff Analysis Method，ATAM)和软件架构分析方法(Software Architecture Analysis Method，SAAM)中。它是通过分析软件架构对场景(也就是对系统的使用或修改 活动)的支持程度，从而判断该架构对这一场景所代表的质量需求的满足程度。</p>
+<h2 id="3-基于度量的方式"><a href="#3-基于度量的方式" class="headerlink" title="(3)基于度量的方式"></a>(3)基于度量的方式</h2><p>它是建立在软件架构度量的基础上的，涉及三个基本活动，首 先需要建立质量属性和度量之间的映射原则，即确定怎样从度量结果推出系统具有什么样的 质量属性;然后从软件架构文档中获取度量信息;最后根据映射原则分析推导出系统的质量 属性。它能提供更为客观和量化的质量评估，但它对评估人员及其使用的技术有较高 的要求。ATAM 中也使用了度量的思想(度量效用)。</p>
+<h1 id="二、架构的权衡分析法"><a href="#二、架构的权衡分析法" class="headerlink" title="二、架构的权衡分析法"></a>二、架构的权衡分析法</h1><p>从技术角度对软件架构进行评估，旨在通过分析来预见软件的质量;通过分析来创建、 选择、评估与比较不同的架构。</p>
+<p>ATAM 方法不但能够揭示架构如何满足特定的质量需求(例如，性能和可修改性)，而且还 提供了分析这些质量需求之间交互作用的方法。使用 ATAM 方法评价一个软件架构的目的 是理解架构设计满足系统质量需求的结果。</p>
+<p>ATAM 产生如下结果。<br>(1)一个简洁的架构表述:ATAM 的一个要求是在一小时内表述架构，这样就得到了 一个简洁、可理解的、面向普通项目关系人的架构表述。它是从架构文档中提炼形成的。<br>(2)表述清楚的业务目标。<br>(3)用场景集合捕获质量需求。<br>(4)架构决策到质量需求的映射。<br>(5)所确定的敏感点和权衡点集合。<br>(6)有风险决策和无风险决策。<br>(7)风险主题的集合。<br>(8)产生一些附属结果。<br>(9)还产生一些无形结果，如能够使项目关系人产生“团队感”，提供了一个交流平台和沟通渠道，使大家更好地理解架构(优势及弱点)。</p>
+<p>ATAM 的 9 个步骤如下。<br>(1)ATAM 方法的表述:评估负责人向参加会议的项目代表介绍 ATAM(简要描述 ATAM步骤和评估的结果)。<br>(2)商业动机的表述。<br>(3)架构的表述。<br>(4)对架构方法进行分类。<br>(5)生成质量属性效用树。<br>根——质量属性——属性求精(细分)——场景(叶)。修剪这棵树，保留重要场景(不超过 50 个)，再对场景按重要性给定 优先级(用 H/M/L 的形式)，再按场景实现的难易度来确定优先级(用 H/M/L 的形式)， 这样对所选定的每个场景就有一个优先级对(重要度，难易度)，如(H，L)表示该场景重要且易实现。<br>(6)分析架构方法。<br>评估小组按优先级对上述效用树的场景进行分析(小组成员提问，设计师回答、解释)，探查实现场景的架构方法。<br>(7)集体讨论并确定场景的优先级。<br>(8)分析架构方法。<br>(9)结果的表述。</p>
+<p>结果的表述包括：<br>已编写了文档的架构方法;<br>经过讨论得到的场景集合及其优先级;<br>效用树;<br>所发现的有风险决策;<br>已编成文档的无风险决策;<br>所发现的敏感点和权衡点。</p>
+<h1 id="三、成本效益分析法"><a href="#三、成本效益分析法" class="headerlink" title="三、成本效益分析法"></a>三、成本效益分析法</h1><p>成本效益分析法(the Cost Benefit Analysis Method，CBAM)是在 ATAM 上构建，用来对架构设计决策的成本和收益进行建模，是优 化此类决策的一种手段。CBAM 的思想就是架构策略影响系统的质量属性，反过来这些质量 属性又会为系统的项目关系人带来一些收益(称为“效用”)，CBAM 协助项目关系人根据其 投资回报(ROI)选择架构策略。CBAM 在 ATAM 结束时开始，它实际上使用了 ATAM 评 估的结果。</p>
+<p>CBAM 的步骤如下。</p>
+<h2 id="1-整理场景。"><a href="#1-整理场景。" class="headerlink" title="(1)整理场景。"></a>(1)整理场景。</h2><p>整理 ATAM 中获取的场景，根据商业目标确定这些场景的优先级，并 选取优先级最高的 1/3 的场景进行分析。</p>
+<h2 id="2-对场景进行求精。"><a href="#2-对场景进行求精。" class="headerlink" title="(2)对场景进行求精。"></a>(2)对场景进行求精。</h2><p>为每个场景获取最坏情况、当前情况、期望情况和最好情况的 质量属性响应级别。</p>
+<h2 id="3-确定场景的优先级。"><a href="#3-确定场景的优先级。" class="headerlink" title="(3)确定场景的优先级。"></a>(3)确定场景的优先级。</h2><p>项目关系人对场景进行投票，其投票是基于每个场景“所期 望的”响应值，根据投票结果和票的权值，生成一个分值(场景的权值)。</p>
+<h2 id="4-分配效用。"><a href="#4-分配效用。" class="headerlink" title="(4)分配效用。"></a>(4)分配效用。</h2><p>对场景的响应级别(最坏情况、当前情况、期望情况和最好情况)确 定效用表。</p>
+<h2 id="5-策略—场景—响应级别"><a href="#5-策略—场景—响应级别" class="headerlink" title="(5)策略—场景—响应级别"></a>(5)策略—场景—响应级别</h2><p>架构策略涉及哪些质量属性及响应级别，形成相关的策略—场景—响应级别的对 应关系。</p>
+<h2 id="6-确定“期望的”效用表"><a href="#6-确定“期望的”效用表" class="headerlink" title="(6)确定“期望的”效用表"></a>(6)确定“期望的”效用表</h2><p>使用内插法确定“期望的”质量属性响应级别的效用。即根据第 4 步的效用表以 及第 5 步的对应关系，确定架构策略及其对应场景的效用表。</p>
+<h2 id="7-计算各架构策略的总收益。"><a href="#7-计算各架构策略的总收益。" class="headerlink" title="(7)计算各架构策略的总收益。"></a>(7)计算各架构策略的总收益。</h2><p>根据第 3 步的场景的权值及第 6 步的架构策略效用 表，计算出架构策略的总收益得分。</p>
+<h2 id="8-确定选取策略的优先级"><a href="#8-确定选取策略的优先级" class="headerlink" title="(8)确定选取策略的优先级"></a>(8)确定选取策略的优先级</h2><p>根据受成本限制影响的 ROI(Return On Investment，投资报酬率)选择架构策略。 根据开发经验估算架构策略的成本，结合第 7 步的收益，计算出架构策略的 ROI，按 ROI 排 序，从而确定选取策略的优先级。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E5%8D%81)%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/09/27/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E5%8D%81)%E4%BA%A7%E5%93%81%E7%BA%BF%E5%8F%8A%E7%B3%BB%E7%BB%9F%E6%BC%94%E5%8C%96/" class="post-title-link" itemprop="url">软件架构设计（十）产品线及系统演化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-27 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-27T00:00:00+08:00">2021-09-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>软件企业追求长远的发展，通常采用产品线模型及系统演化策略，它实质上是用架构技 术构建产品线，并在此基础上借助复用技术持续演化，不断地推出新产品，满足市场追求产 品升级换代的需求。</p>
+<h1 id="一、复用与产品线"><a href="#一、复用与产品线" class="headerlink" title="一、复用与产品线"></a>一、复用与产品线</h1><p>软件产品线是指一组软件密集型系统，它们共享一个公共的、可管理的特性集，满足某 个特定市场或任务的具体需要，是以规定的方式用公共的核心资产集成开发出来的。即围绕 核心资产库进行管理、复用、集成新的系统。</p>
+<p>核心资产库包括软件架构及其可剪裁的元素， 更广泛地，它还包括设计方案及其文档、用户手册、项目管理的历史记录(如预算和进度)、 软件测试计划和测试用例。</p>
+<p>可复用的资 产非常广，包括以下几点。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">需求</span><br><span class="line">架构设计</span><br><span class="line">元素:元素复用不只是简单的代码复用，它旨在捕获并复用设计中的可取之处，避免(不要 重复)设计失败的地方。</span><br><span class="line">建模与分析</span><br><span class="line">测试：如测试用例、测试数据、测试工具，甚至 测试计划、过程、沟通渠道都可以得到复用。</span><br><span class="line">项目规划：利用经验对项目的成本、预算、进度及开发小组的安排等进行预测，即不必每次 都建立工作分解结构。</span><br><span class="line">过程、方法和工具</span><br><span class="line">人员</span><br><span class="line">样本系统:将已部署(投产)的产品作为高质量的演示原型和工程设计原型。</span><br><span class="line">缺陷消除:产品线开发中积累的缺陷消除活动，可使新系统受益</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、基于产品线的架构"><a href="#二、基于产品线的架构" class="headerlink" title="二、基于产品线的架构"></a>二、基于产品线的架构</h1><p>软件产品线架构是针对一系列产品而设计的通用架构，并在此基础上，进一步将系列产 品共用的模块事先实现，供直接重用;将架构用框架的形式予以实现，供定制使用。这就是 通常所说的“平台”。</p>
+<p>产品线架构较之单个产品架构，有如下三点特别之处:<br>(1)产品线架构必须考虑一系列明确许可的变化;<br>(2)产品线架构一定要文档化;<br>(3)产品线架构必须提供“产品创建者指南”(开发指南)，描述架构的实例化过程。</p>
+<p>产品线的软件架构应将不变的方面提出来，同时， 识别允许的变化，并提供实现它们的机制。通常应考虑三个方面。<br>(1)确定变化点<br>(2)支持变化点<br>(3)对产品线架构的适宜性进行评估。</p>
+<h1 id="三、产品线的开发模型"><a href="#三、产品线的开发模型" class="headerlink" title="三、产品线的开发模型"></a>三、产品线的开发模型</h1><p>开发(确定)产品线的方法有两种模型:<br>(1)“前瞻性”产品线:利用在应用领域的经验、对市场和技术发展趋势的了解及商业 判断力等进行产品线设计，它反映了企业的战略决策。通常是自上而下地采用产品线方法。<br>(2)“反应性”模型:企业根据以前的产品构建产品家族，并随着新产品的开发，扩展<br>架构和设计方案，它的核心资产库是根据“已经证明”为共有、而非“预先计划”为共有的 元素构建的。通常是自下而上地采用产品线方法。</p>
+<h1 id="四、特定领域软件架构"><a href="#四、特定领域软件架构" class="headerlink" title="四、特定领域软件架构"></a>四、特定领域软件架构</h1><p>架构的本质在于其抽象性。它包括两个方面的抽象:业务抽象和技术抽象。其中业务抽 象面向特定的应用领域。</p>
+<p>特定领域软件架构(Domain Specific Software Architecture，DSSA)可以看做开发产品线 的一个方法(或理论)，它的目标就是支持在一个特定领域中有多个应用的生成。</p>
+<p>DSSA 的 必备特征有:<br>(1)一个严格定义的问题域或解决域;<br>(2)具有普遍性，使其可以用于领域中某个特定应用的开发;<br>(3)对整个领域的合适程度的抽象;<br>(4)具备该领域固定的、典型的在开发过程中的可复用元素。</p>
+<p>从功能覆盖的范围角度理解 DSSA 中领域的含义有两种方法:<br>(1)垂直域。定义了一个特定的系统族，导出在该领域中可作为系统的可行解决方案的一个通用软件架构。<br>(2)水平域。定义了在多个系统和多个系统族中功能区域的共有部分，在子系统级上涵盖多个系统(族)的特定部分功能。</p>
+<p>DSSA 的活动阶段如下。<br>(1)领域分析:主要目标是获得领域模型。即通过分析领域中系统的需求(领域需求)，确定哪些需求是被领域中的系统广泛共享的，从而建立领域模型。<br>(2)领域设计:这个阶段的目标是获得 DSSA，它是一个能够适应领域多个系统的需求的一个高层次的设计。由于领域模型中的领域需求具有一定的变化性，DSSA 也要相应地 具有变化性，它可以通过表示多选一的、可选的解决方案等来做到这一点。<br>(3)领域实现:主要目标是依据领域模型和 DSSA 开发与组织可复用信息。这些复用 信息可以是从现有系统中提取得到的，也可能通过新的开发得到。这个阶段可以看作复用基 础设施的实现阶段。</p>
+<p>领域模型的主要作用如下:<br>(1)领域模型为需求定义了领域知识和领域词汇，这较之单一的项目需求更有较好的 大局观;<br>(2)软件界面的设计往往和领域模型关系密切;<br>(3)领域模型的合理性将严重影响软件系统的可扩展性;<br>(4)在分层架构的指导下，领域模型精化后即成为业务层的骨架;<br>(5)领域模型也是其数据模型的基础;<br>(6)领域模型是团队交流的基础，因为它规定了重要的领域词汇表，并且这些词汇的定义是严格的、大家共同认可的。</p>
+<h1 id="五、架构及系统演化"><a href="#五、架构及系统演化" class="headerlink" title="五、架构及系统演化"></a>五、架构及系统演化</h1><p>架构虽然为系统的变化提供了一定的自由度，但是系统的较大变化必然导致架构的改变。 架构(系统)演化是指向既定的方向、可控地改变。架构(系统)演化可以形成产品线，反 过来，架构(系统)可以在规划的产品线中进行演化。</p>
+<p>架构(系统)演化过程包含 7 个步骤：<br>(1)需求变动归类。首先，必须对用户需求的变化进行归类，使变化的需求与已有构 件对应。对找不到对应构件的变动，也要做好标记，在后续工作中，将创建新的构件，以对 应这部分变化的需求。<br>(2)制订架构演化计划。在改变原有结构之前，开发组织必须制订一个周密的架构演 化计划，作为后续演化开发工作的指南。<br>(3)修改、增加或删除构件。在演化计划的基础上，开发人员可根据在第(1)步得到 的需求变动的归类情况，决定是否修改或删除存在的构件、增加新构件。最后，对修改和增 加的构件进行功能性测试。<br>(4)更新构件的相互作用。随着构件的增加、删除和修改，构件之间的控制流必须得 到更新。<br>(5)构件组装与测试。通过组装支持工具把这些构件的实现体组装起来，完成整个软 件系统的连接与合成，形成新的架构。然后，对组装后的系统整体功能和性能进行测试。<br>(6)技术评审。对以上步骤进行确认，进行技术评审。评审组装后的架构是否反映需 求变动，符合用户需求。如果不符合，则需要在第(2)到第(6)步之间进行迭代。<br>(7)产生演化后的架构。在原来系统上所作的所有修改必须集成到原来的架构中，完 成一次演化过程。</p>
+<p><img src="/images/ruankao/6-52.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/26/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%B8%89)%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -853,643 +1397,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%BA%8C)%E6%9E%B6%E6%9E%84%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/25/%E8%BD%AF%E8%80%83/9%E3%80%81%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1(%E4%BA%8C)%E6%9E%B6%E6%9E%84%E9%9C%80%E6%B1%82%E4%B8%8E%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7/" class="post-title-link" itemprop="url">软件架构设计（二）架构需求与软件质量属性</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-25 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-25T00:00:00+08:00">2021-09-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>架构的基本需求主要是在满足功能属性的前提下，关注软件质量属性，架构设计则是为满足架构需求(质量属性)寻找适当的“战术”。</p>
-<p>软件属性包括功能属性和质量属性，但是，软件架构(及软件架构设计师)重点关注的是质量属性。</p>
-<p>在大量的可能结构中，可以使用不同的结构来实现同样的功能性，即功 能性在很大程度上是独立于结构的，架构设计师面临着决策(对结构的选择)，而功能性所 关心的是它如何与其他质量属性进行交互，以及它如何限制其他质量属性。</p>
-<h1 id="一、软件质量属性"><a href="#一、软件质量属性" class="headerlink" title="一、软件质量属性"></a>一、软件质量属性</h1><p>《GB/T16260-1996(idt ISO/IEC9126:1991)信息技术软件产品评价质量特性及其使用指南》中描述的软件质量特性包括功能性、可靠性、易用性、效率、可维护性、可移植性等 6 个方面，每个方面都包含若干个子特性。 </p>
-<table>
-<thead>
-<tr>
-<th>软件质量特性</th>
-<th>子特性</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>功能性</td>
-<td>适合性、准确性、互操作性、依从性、安全性</td>
-</tr>
-<tr>
-<td>可靠性</td>
-<td>成熟性、容错性、易恢复性</td>
-</tr>
-<tr>
-<td>易用性</td>
-<td>易理解性、易学性、易操作性</td>
-</tr>
-<tr>
-<td>效率</td>
-<td>时间特性、资源特性</td>
-</tr>
-<tr>
-<td>可维护性</td>
-<td>易分析性、易改变性、稳定性、易测试性</td>
-</tr>
-<tr>
-<td>可移植性</td>
-<td>适应性、易安装性、遵循性、易替换性</td>
-</tr>
-</tbody></table>
-<h2 id="1-运行期质量属性"><a href="#1-运行期质量属性" class="headerlink" title="1.运行期质量属性"></a>1.运行期质量属性</h2><h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a>性能</h3><p>性能是指软件系统及时提供相应服务的能力。包括速度、吞吐量和持续高速性三方面的要求。</p>
-<h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><p>指软件系统同时兼顾向合法用户提供服务，以及阻止非授权使用的能力。</p>
-<h3 id="易用性"><a href="#易用性" class="headerlink" title="易用性"></a>易用性</h3><p>指软件系统易于被使用的程度。</p>
-<h3 id="可伸缩性"><a href="#可伸缩性" class="headerlink" title="可伸缩性"></a>可伸缩性</h3><p>指当用户数和数据量增加时，软件系统维持高服务质量的能力。例如，通过增加服务器来提高能力。</p>
-<h3 id="互操作性"><a href="#互操作性" class="headerlink" title="互操作性"></a>互操作性</h3><p>指本软件系统与其他系统交换数据和相互调用服务的难易程度。</p>
-<h3 id="持续可用性"><a href="#持续可用性" class="headerlink" title="持续可用性"></a>持续可用性</h3><p>指系统长时间无故障运行的能力。与可靠性相关联，常将其纳入可靠性中。</p>
-<h3 id="鲁棒性"><a href="#鲁棒性" class="headerlink" title="鲁棒性"></a>鲁棒性</h3><p>是指软件系统在一些非正常情况(如用户进行了非法操作、相关的软硬件系统发生了故障等)下仍能够正常运行的能力。也称健壮性或容错性。</p>
-<h2 id="2-开发期质量属性"><a href="#2-开发期质量属性" class="headerlink" title="2.开发期质量属性"></a>2.开发期质量属性</h2><h3 id="易理解性"><a href="#易理解性" class="headerlink" title="易理解性"></a>易理解性</h3><p>指设计被开发人员理解的难易程度。</p>
-<h3 id="可扩展性"><a href="#可扩展性" class="headerlink" title="可扩展性"></a>可扩展性</h3><p>软件因适应新需求或需求变化而增加新功能的能力。也称为灵活性。</p>
-<h3 id="可重用性"><a href="#可重用性" class="headerlink" title="可重用性"></a>可重用性</h3><p>指重用软件系统或某一部分的难易程度。</p>
-<h3 id="可测试性"><a href="#可测试性" class="headerlink" title="可测试性"></a>可测试性</h3><p>对软件测试以证明其满足需求规范的难易程度。</p>
-<h3 id="可维护性"><a href="#可维护性" class="headerlink" title="可维护性"></a>可维护性</h3><p>当需要修改缺陷、增加功能、提高质量属性时，定位修改点并实施修改的难易程度;</p>
-<h3 id="可移植性"><a href="#可移植性" class="headerlink" title="可移植性"></a>可移植性</h3><p>将软件系统从一个运行环境转移到另一个不同的运行环境的难易程度。</p>
-<p><img src="/images/ruankao/6-23.png"></p>
-<h1 id="二、6-个质量属性及实现"><a href="#二、6-个质量属性及实现" class="headerlink" title="二、6 个质量属性及实现"></a>二、6 个质量属性及实现</h1><p>如何描述质量属性需求呢?<br><img src="/images/ruankao/6-24.png"></p>
-<h2 id="1-可用性及其实现战术"><a href="#1-可用性及其实现战术" class="headerlink" title="1.可用性及其实现战术"></a>1.可用性及其实现战术</h2><h3 id="1-可用性的描述。"><a href="#1-可用性的描述。" class="headerlink" title="(1)可用性的描述。"></a>(1)可用性的描述。</h3><p><img src="/images/ruankao/6-25.png"></p>
-<h3 id="2-可用性战术。"><a href="#2-可用性战术。" class="headerlink" title="(2)可用性战术。"></a>(2)可用性战术。</h3><p>可用性战术的目标是阻止错误发展成故障，至少能够把错误的影响 限制在一定范围内，从而使修复成为可能。战术分为:错误检测、错误恢复、错误预防。</p>
-<h4 id="①错误检测"><a href="#①错误检测" class="headerlink" title="①错误检测"></a>①错误检测</h4><p>命令/响应:一个构件发出一个命令，并希望在预定义的时间内收到一个来自审查构件的响 应，例如远程错误的检测。<br>心跳(计时器):一个构件定期发出一个心跳消息，另一个构件收听到消息，如果未收到心 跳消息，则假定构件失败，并通知错误纠正构件。<br>异常:当出现异常时，异常处理程序开发执行。</p>
-<h4 id="②错误恢复"><a href="#②错误恢复" class="headerlink" title="②错误恢复"></a>②错误恢复</h4><p>表决:通过冗余构件(或处理器)与表决器连接，构件按相同的输入及算法计算输出值交给 表决器，由表决器按表决算法(如多数规则)确定是否有构件出错，表决通常用在控制系统中。</p>
-<p>主动冗余(热重启、热备份):所有的冗余构件都以并行的方式对事件做出响应。它们都处 在相同的状态，但仅使用一个构件的响应，丢弃其余构件的响应。错误发生时通过切换的方 式使用另一个构件的响应。</p>
-<p>被动冗余(暧重启/双冗余/三冗余):一个构件(主构件)对事件做出响应，并通知其他构 件(备用的)必须进行的状态更新(同步)。当错误发生时，备用构件从最新同步点接替主 构件的工作。</p>
-<p>备件:备件是计算平台配置用于更换各种不同的故障构件。</p>
-<p>状态再同步:主动和被动冗余战术要求所恢复的构件在重新提供服务前更新其状态。更新方 法取决于可以承受的停机时间、更新的规模及更新的内容多少。</p>
-<p>检查点/回滚:检查点就是使状态一致的同步点，它或者是定期进行，或者是对具体事件做 出响应。当在两检查点之间发生故障时，则以这个一致状态的检查点(有快照)和之后发生 的事务日志来恢复系统(数据库中常使用)。</p>
-<h4 id="③错误预防"><a href="#③错误预防" class="headerlink" title="③错误预防"></a>③错误预防</h4><p>从服务中删除:如删除进程再重新启动，以防止内存泄露导致故障的发生。</p>
-<p>事务:使用事务来保证数据的一致性，即几个相关密切的步骤，要么全成功，要么都不成功。</p>
-<p>进程监视器:通过监视进程来处理进程的错误。</p>
-<p><img src="/images/ruankao/6-26.png"></p>
-<h2 id="2-可修改性及其实现战术"><a href="#2-可修改性及其实现战术" class="headerlink" title="2.可修改性及其实现战术"></a>2.可修改性及其实现战术</h2><h3 id="1-可修改性的描述"><a href="#1-可修改性的描述" class="headerlink" title="(1)可修改性的描述"></a>(1)可修改性的描述</h3><p><img src="/images/ruankao/6-27.png"></p>
-<h3 id="2-可修改性战术。"><a href="#2-可修改性战术。" class="headerlink" title="(2)可修改性战术。"></a>(2)可修改性战术。</h3><p>包括局部化修改、防止连锁反应、推迟绑定时间。</p>
-<h4 id="①局部化修改"><a href="#①局部化修改" class="headerlink" title="①局部化修改"></a>①局部化修改</h4><p>在设计期间为模块分配责任，以便把预期的变更限制在一定的范围内，从而降低修改的成本。</p>
-<p>维持语义的一致性:语义的一致性指的是模块中责任之间的关系，使这些责任能够协同工作， 不需要过多地依赖其他模块。耦合和内聚指标反映一致性，应该根据一组预期的变更来度量 语义一致性。使用“抽象通用服务”(如应用框架的使用和其他中间软件的使用)来支持可 修改性是其子战术。</p>
-<p>预期期望的变更:通过对变更的预估，进行预设、准备，从而使变更的影响最小。</p>
-<p>泛化该模块:使一个模块更通用、更广泛的功能。</p>
-<p>限制可能的选择:如在更换某一模块(如处理器)时，限制为相同家族的成员。</p>
-<h4 id="②防止连锁反应。"><a href="#②防止连锁反应。" class="headerlink" title="②防止连锁反应。"></a>②防止连锁反应。</h4><p>由于模块之间有各种依赖性，因此，修改会产生连锁反应。防止连锁反应的战术如下。</p>
-<p>信息隐藏:就是把某个实体的责任分解为更小的部分，并选择哪些信息成为公有的，哪些成 为私有的，通过接口获得公有责任。</p>
-<p>维持现有的接口:尽可能维持现有接口的稳定性。例如通过添加接口(通过新的接口提供新 的服务)可以达到这一目的。</p>
-<p>限制通信路径:限制与一个给定的模块共享数据的模块。这样可以减少由于数据产生/使用引入的连锁反应。</p>
-<p>仲裁者的使用:在具有依赖关系的两个模块之间插入一个仲裁者，以管理与该依赖相关的活 动。仲裁者有很多种类型，例如:桥、调停者、代理等就是可以提供把服务的语法从一种形 式转换为另一种形式的仲裁者。</p>
-<h4 id="③推迟绑定时间。"><a href="#③推迟绑定时间。" class="headerlink" title="③推迟绑定时间。"></a>③推迟绑定时间。</h4><p>系统具备在运行时进行绑定并允许非开发人员进行修改(配置)。</p>
-<p>运行时注册:支持即插即用。</p>
-<p>配置文件:在启动时设置参数。</p>
-<p>多态:在方法调用的后期绑定。</p>
-<p>构件更换:允许载入时绑定。<br><img src="/images/ruankao/6-29.png"></p>
-<h2 id="3-性能及其实现战术"><a href="#3-性能及其实现战术" class="headerlink" title="3.性能及其实现战术"></a>3.性能及其实现战术</h2><h3 id="1-性能的描述。"><a href="#1-性能的描述。" class="headerlink" title="(1)性能的描述。"></a>(1)性能的描述。</h3><p><img src="/images/ruankao/6-28.png"></p>
-<h3 id="2-性能战术。"><a href="#2-性能战术。" class="headerlink" title="(2)性能战术。"></a>(2)性能战术。</h3><p>性能与时间相关，影响事件的响应时间有两个基本因素。</p>
-<p>资源消耗:事件到达后进入一系列的处理程序，每一步处理都要占用资源，而且在处理过程 中消息在各构件之间转换，这些转换也需要占用资源。</p>
-<p>闭锁时间:指对事件处理时碰到了资源争用、资源不可用或对其他计算的依赖等情况，就产 生了等待时间。</p>
-<h4 id="①资源需求"><a href="#①资源需求" class="headerlink" title="①资源需求"></a>①资源需求</h4><p>减少处理事件流所需的资源:提高计算效率(如改进算法)、减少计算开销(如在可修改性与性能之间权衡，减少不必要的代理构件)。</p>
-<p>减少所处理事件的数量:管理事件率、控制采样频率。</p>
-<p>控制资源的使用:限制执行时间(如减少迭代次数)、限制队列大小。</p>
-<h4 id="②资源管理"><a href="#②资源管理" class="headerlink" title="②资源管理"></a>②资源管理</h4><p>引入并发:引入并发对负载平衡很重要。</p>
-<p>维持数据或计算的多个副本:C/S 结构中客户机 C 就是计算的副本，它能减少服务器计算的压力;高速缓存可以存放数据副本(在不同速度的存储库之间的缓冲)。</p>
-<p>增加可用资源:在成本允许时，尽量使用速度更快的处理器、内存和网络。</p>
-<h4 id="③资源仲裁"><a href="#③资源仲裁" class="headerlink" title="③资源仲裁"></a>③资源仲裁</h4><p>通过如下调度策略来实现：</p>
-<p>先进/先出(FIFO);</p>
-<p>固定优先级调度:先给事件分配特定的优先级，再按优先级高低顺序分配资源;</p>
-<p>动态优先级调度:轮转调度、时限时间最早优先;</p>
-<p>静态调度:可以离线确定调度。</p>
-<p><img src="/images/ruankao/6-30.png"></p>
-<h2 id="4-安全性及其实现战术"><a href="#4-安全性及其实现战术" class="headerlink" title="4.安全性及其实现战术"></a>4.安全性及其实现战术</h2><h3 id="1-安全性的描述。"><a href="#1-安全性的描述。" class="headerlink" title="(1)安全性的描述。"></a>(1)安全性的描述。</h3><p><img src="/images/ruankao/6-31.png"></p>
-<h3 id="2-安全性战术"><a href="#2-安全性战术" class="headerlink" title="(2)安全性战术"></a>(2)安全性战术</h3><p>包括抵抗攻击、检测攻击和从攻击中恢复。</p>
-<h4 id="①抵抗攻击"><a href="#①抵抗攻击" class="headerlink" title="①抵抗攻击"></a>①抵抗攻击</h4><p>对用户进行身份验证:包括动态密码、一次性密码、数字证书及生物识别等;</p>
-<p>对用户进行授权:即对用户的访问进行控制管理;</p>
-<p>维护数据的机密性:一般通过对数据和通信链路进行加密来实现;</p>
-<p>维护完整性:对数据添加校验或哈希值;</p>
-<p>限制暴露的信息;</p>
-<p>限制访问:如用防火墙、DMZ 策略。</p>
-<h4 id="②检测攻击"><a href="#②检测攻击" class="headerlink" title="②检测攻击"></a>②检测攻击</h4><p>一般通过“入侵检测”系统进行过滤、比较通信模式与历史基线等方法。</p>
-<h4 id="③从攻击中恢复"><a href="#③从攻击中恢复" class="headerlink" title="③从攻击中恢复"></a>③从攻击中恢复</h4><p>恢复:与可用性中的战术相同;</p>
-<p>识别攻击者:作为审计追踪，用于预防性或惩罚性目的。</p>
-<p><img src="/images/ruankao/6-32.png"></p>
-<h2 id="5-可测试性及其实现战术"><a href="#5-可测试性及其实现战术" class="headerlink" title="5.可测试性及其实现战术"></a>5.可测试性及其实现战术</h2><h3 id="1-可测试性的描述"><a href="#1-可测试性的描述" class="headerlink" title="(1)可测试性的描述"></a>(1)可测试性的描述</h3><p><img src="/images/ruankao/6-33.png"></p>
-<h3 id="2-可测试性战术"><a href="#2-可测试性战术" class="headerlink" title="(2)可测试性战术"></a>(2)可测试性战术</h3><p>包括输入/输出和内部监控。</p>
-<h4 id="①输入-输出"><a href="#①输入-输出" class="headerlink" title="①输入/输出"></a>①输入/输出</h4><p>记录/回放:指捕获跨接口的信息，并将其作为测试专用软件的输入;</p>
-<p>将接口与实现分离:允许使用实现的替代(模拟器)来支持各种测试目的;</p>
-<p>优化访问线路/接口:用测试工具来捕获或赋予构件的变量值。</p>
-<h4 id="②内部监控"><a href="#②内部监控" class="headerlink" title="②内部监控"></a>②内部监控</h4><p>当监视器处于激活状态时，记录事件(如通过接口的信息)。<br><img src="/images/ruankao/6-34.png"></p>
-<h2 id="6-易用性及其实现战术"><a href="#6-易用性及其实现战术" class="headerlink" title="6.易用性及其实现战术"></a>6.易用性及其实现战术</h2><h3 id="1-易用性的描述"><a href="#1-易用性的描述" class="headerlink" title="(1)易用性的描述"></a>(1)易用性的描述</h3><p><img src="/images/ruankao/6-35.png"></p>
-<h3 id="2-易用性战术"><a href="#2-易用性战术" class="headerlink" title="(2)易用性战术"></a>(2)易用性战术</h3><p>包括运行时战术、设计时战术和支持用户主动操作。</p>
-<h4 id="①运行时战术"><a href="#①运行时战术" class="headerlink" title="①运行时战术"></a>①运行时战术</h4><p>任务的模型:维护任务的信息，使系统了解用户试图做什么，并提供各种协助;</p>
-<p>用户的模型:维护用户的信息，例如使系统以用户可以阅读页面的速度滚动页面;</p>
-<p>系统的模型:维护系统的信息，它确定了期望的系统行为，并向用户提供反馈。</p>
-<h4 id="②设计时战术"><a href="#②设计时战术" class="headerlink" title="②设计时战术"></a>②设计时战术</h4><p>将用户接口与应用的其余部分分离开来，预计用户接口会频繁发生变化，因此，单独维护用户接口代码将实现变更局部化。这与可修改性相关。</p>
-<h4 id="③支持用户主动操作"><a href="#③支持用户主动操作" class="headerlink" title="③支持用户主动操作"></a>③支持用户主动操作</h4><p>支持用户的主动操作，如支持“取消”、“撤销”、“聚合”和 “显<br>示多个视图”。</p>
-<p><img src="/images/ruankao/6-36.png"></p>
-<hr>
-<p><img src="/images/ruankao/6-37.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%83)%E7%AE%80%E5%8D%95%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%83)%E7%AE%80%E5%8D%95%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（七）简单分布式计算机应用系统的设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>分布式计算背景：<br>单台计算机的功能仍然十分有限。<br>升级到更强的服务器的费用常常远远高于购买多台档次稍低的机器。</p>
-<p>解决方案：<br>利用联网的计算机协同工作，共同完成复杂的工作成为相对成本较低的选择，而且可以完成单台计算机所无法完成的任务。</p>
-<p>存在问题：<br>网络本质上并不可靠，特别是远程通信。<br>分布式系统还带来了并发和同步的问题。</p>
-<h1 id="基于实例的协作"><a href="#基于实例的协作" class="headerlink" title="基于实例的协作"></a>基于实例的协作</h1><p>所有的实例都处理自己范围内的数据，这些对象实例的地位是相同的，当一个对象实例必须要处理不属于它自己范围的数据时，它必须和数据归宿的对象实例通信，请求另外一个对象实例进行处理。<br>请求对象实例可以启动对象、调用远程对象的方法，以及停止运行远程实例。</p>
-<p>基于实例的协作适用于比较小范围内网络情况良好的环境中，这种环境常常被称为近连接。这种情况下对对象的生存周期管理所带来不寻常的网络流量是可以容忍的。</p>
-<p>基于实例的协作常常使用被称为“代理”的方法。</p>
-<h1 id="基于服务的协作"><a href="#基于服务的协作" class="headerlink" title="基于服务的协作"></a>基于服务的协作</h1><p>只提供远程对象的接口，用户可以调用这些方法，却无法远程创建和销毁远程对象实例。</p>
-<p>基于服务的协作适用于跨平台的网络，网络响应较慢的情况，这种环境常称为远连接。这时，简化交互性更为重要，而频繁的网络交换数据会带来难以容忍的延时。</p>
-<p>基于服务的协作往往采用分层次的结构，高层次的应用依赖于低层次的对象，而低层次对象实例的实现细节则没有必要暴露给高层次对象。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%89)%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B8%89)%E7%BB%93%E6%9E%84%E5%8C%96%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（三）结构化分析与设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>结构化分析与设计方法是一种面向数据流的需求分析和设计方法。</p>
-<p>它适用于分析和设计大型数据处理系统，是一种简单、实用的方法。</p>
-<h1 id="一、结构化分析"><a href="#一、结构化分析" class="headerlink" title="一、结构化分析"></a>一、结构化分析</h1><p>结构化分析方法的基本思想史自顶向下逐层分解。<br>分解和抽象是控制问题复杂性的两种基本手段。<br>把一个大问题分解成若干个小问题，每个小问题在分解成更小的问题，让每个最底层的问题都足够简单、容易解决，这个过程就是分解过程。</p>
-<p>结构化分析与面向对象分析方法之间最大的差别是：<br>面向对象方法把系统看成一个相互影响的对象集。<br>结构化分析方法把系统看作一个过程的集合体，包括人完成的和电脑完成的。特点是利用数据流图帮助人们理解问题，对问题进行分析。<br>结构化分析一般包括以下工具：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">数据流图（Data Flow Diagram，DFD）</span><br><span class="line">数据字段（Data Dictionary，DD）</span><br><span class="line">结构化语言</span><br><span class="line">判定表</span><br><span class="line">判定树</span><br></pre></td></tr></table></figure>
-<h2 id="1、结构化分析的工作步骤"><a href="#1、结构化分析的工作步骤" class="headerlink" title="1、结构化分析的工作步骤"></a>1、结构化分析的工作步骤</h2><h3 id="（1）研究“物质环境”"><a href="#（1）研究“物质环境”" class="headerlink" title="（1）研究“物质环境”"></a>（1）研究“物质环境”</h3><p>首先应该画出当前系统的数据流图，说明系统的输入、输出数据流，说明系统的数据流情况，经历了那些处理过程。</p>
-<h3 id="（2）简历系统逻辑模型"><a href="#（2）简历系统逻辑模型" class="headerlink" title="（2）简历系统逻辑模型"></a>（2）简历系统逻辑模型</h3><p>在物理模型建立完成之后，接下来就是画出相对于真实系统的等价逻辑数据流图。<br>在前一步简历的数据流图的基础上，将所有自然数据流都转成等价的逻辑流。<br>比如将现实世界中的“送往总经理办公室”改成“报送表格”。</p>
-<h3 id="（3）划清人机界限"><a href="#（3）划清人机界限" class="headerlink" title="（3）划清人机界限"></a>（3）划清人机界限</h3><p>确定在系统逻辑模型中，哪些通过系统自动化完成，哪些手工操作。</p>
-<h2 id="2、数据流图DFD"><a href="#2、数据流图DFD" class="headerlink" title="2、数据流图DFD"></a>2、数据流图DFD</h2><p>DFD是一种图形化的系统模型，主要在图中展示主要需求，包括输入、输出、处理、数据存储等过程。<br>DFD包括以下几个基础元素：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">过程：也称为加工，一步步地执行指令，完成输入到输出的转换。</span><br><span class="line">外部实体：也称为源/宿，系统之外的数据源或目的。</span><br><span class="line">数据存储：也称为文件，存放数据的地方，一般是文件、数据库。</span><br><span class="line">数据流：从一处到另一处的数据流向。</span><br><span class="line">实时链接：当过程执行时，外部实体与过程之间的来回通信。</span><br></pre></td></tr></table></figure>
-<p><img src="/images/ruankao/6-1.png"></p>
-<h3 id="1-数据流图的层次"><a href="#1-数据流图的层次" class="headerlink" title="(1)数据流图的层次"></a>(1)数据流图的层次</h3><p>结构化的思路是依赖于数据流图自顶向下分析。<br>因为系统通常比较复杂，很难在一张图上将所有的数据流和加工描述清楚。<br>因此数据流图分为高层次和低层次的图，由高层次逐步分解。<br><img src="/images/ruankao/6-2.png"></p>
-<h3 id="（2）Context图"><a href="#（2）Context图" class="headerlink" title="（2）Context图"></a>（2）Context图</h3><p>系统上下文范围关系图。是系统最高层结构的DFD图。<br>特点是将待开发的系统表示成一个过程，将所有外部实体和进出系统的数据流都花在一张图中。<br><img src="/images/ruankao/6-3.png"></p>
-<h3 id="（3）逐级分解"><a href="#（3）逐级分解" class="headerlink" title="（3）逐级分解"></a>（3）逐级分解</h3><p><img src="/images/ruankao/6-4.png"><br>保持输入、输出不变，由于是对过程0分解进行分解，所以叫DFD0层图。<br>对DFD1层图进行分解，其编号就是1.1，1.2……</p>
-<h3 id="（4）如何画DFD。"><a href="#（4）如何画DFD。" class="headerlink" title="（4）如何画DFD。"></a>（4）如何画DFD。</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">画系统的输入和输出</span><br><span class="line">画数据流图的内部</span><br><span class="line">为每个数据流命名</span><br><span class="line">为加工命名</span><br></pre></td></tr></table></figure>
-<h2 id="3、细化记录DFD部件"><a href="#3、细化记录DFD部件" class="headerlink" title="3、细化记录DFD部件"></a>3、细化记录DFD部件</h2><p>数据字典是很适用和有效的细化手段。他对所有和系统相关的数据元素进行明确的定义。<br>数据字典的每一个条目中包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">名称</span><br><span class="line">何处使用/如何使用</span><br><span class="line">内容描述</span><br><span class="line">补充信息</span><br></pre></td></tr></table></figure>
-<p>内容描述的符号包括</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">= 由xxx组成</span><br><span class="line">+ 和，表示顺序链接</span><br><span class="line">[|] 或</span><br><span class="line">&#123;&#125;* n次重复</span><br><span class="line">() 可选的数据项</span><br><span class="line">*...* 特定限制</span><br></pre></td></tr></table></figure>
-<p>实例：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">客户信息=客户编号+客户名称+身份证号+手机</span><br><span class="line">客户编号=&#123;0...9&#125;8</span><br><span class="line">客户名称=&#123;字&#125;4</span><br><span class="line">身份证号=[&#123;0...9&#125;15|&#123;0...9&#125;18]</span><br></pre></td></tr></table></figure>
-<h1 id="二、结构化设计"><a href="#二、结构化设计" class="headerlink" title="二、结构化设计"></a>二、结构化设计</h1><p>结构化设计包括架构设计、接口设计、数据设计、过程设计等。<br>是面向数据流的设计，自顶向下、逐步求精、模块化的过程。</p>
-<h2 id="1、概要设计与详细设计的主要任务"><a href="#1、概要设计与详细设计的主要任务" class="headerlink" title="1、概要设计与详细设计的主要任务"></a>1、概要设计与详细设计的主要任务</h2><h3 id="概要设计"><a href="#概要设计" class="headerlink" title="概要设计"></a>概要设计</h3><p>概要设计阶段的主要任务是设计软件的结构、确定系统由哪些模块组成，每个模块之间的关系。<br>整个过程包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">复查基本系统模型</span><br><span class="line">复查并精化数据流图</span><br><span class="line">确定数据流图的信息流类型</span><br><span class="line">根据刘类型分别实施变换分析或事务分析</span><br><span class="line">根据软件设计原则对得到的软件结构图进一步细化</span><br></pre></td></tr></table></figure>
-<h3 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h3><p>详细设计阶段的主要任务是确定应该如何具体地实现所要求的的系统，得出对目标系统的精确描述。<br>采用自顶向下、逐步求精的设计方式，单入口单出口的控制结构。<br>常用工具包括：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">流程图</span><br><span class="line">盒图</span><br><span class="line">问题分析图PAD</span><br><span class="line">程序设计语言PDL</span><br></pre></td></tr></table></figure>
-<h2 id="2、结构图"><a href="#2、结构图" class="headerlink" title="2、结构图"></a>2、结构图</h2><p>结构图包括模块、调用、和数据<br><img src="/images/ruankao/6-5.png"><br>结构图是在数据流图的基础上进一步设计，将DFD中的信息流分成交换流和事务流。</p>
-<h3 id="交换流"><a href="#交换流" class="headerlink" title="交换流"></a>交换流</h3><p>信息沿着输入通路进入系统，将其转换为内部表示，然后通过交换中心（加工）的处理，再验证输出转换为外部形式离开系统。</p>
-<h3 id="事务流"><a href="#事务流" class="headerlink" title="事务流"></a>事务流</h3><p>信息沿着输入通道进入系统，事务中心根据输入信息的类型在若干活动流选择一个执行。</p>
-<h2 id="3、流程图和盒图"><a href="#3、流程图和盒图" class="headerlink" title="3、流程图和盒图"></a>3、流程图和盒图</h2><p>流程图和盒图都是描述程序的细节逻辑。<br>流程图的特点是简单、直观、医学，缺点是由于其随意性使画出来的流程图容易变成费及饿哦固化的流程图。<br>盒图是为了解决这一问题设计的。<br>盒图的主要特点是功能域明确、无法任意转移控制、容易确定全局数据和局部数据的作用域、容易表示嵌套关系、可以表示模块的层次结构。<br>盒图的缺点是修改相对比较困难。<br><img src="/images/ruankao/6-6.png"></p>
-<h2 id="4、PAD和PDL"><a href="#4、PAD和PDL" class="headerlink" title="4、PAD和PDL"></a>4、PAD和PDL</h2><p>问题分析图PAD，能够方便的转换成程序语言的源程序代码。<br>语言描述工具PDL，伪代码，形式化语言，其控制结构和描述是确定的，但内部的描述语言是不确定的。</p>
-<h1 id="三、模块设计"><a href="#三、模块设计" class="headerlink" title="三、模块设计"></a>三、模块设计</h1><p>在模块化方法中，将软件分解成若干小的模块，每个模块可独立开发、测试。<br>模块设计时，最重要的原则是实现信息隐蔽和模块独立。</p>
-<h2 id="1、信息隐蔽原则"><a href="#1、信息隐蔽原则" class="headerlink" title="1、信息隐蔽原则"></a>1、信息隐蔽原则</h2><p>将难的决策、可能修改的决策、数据结构的内部链接以及对他所做的操作细节、内部特征码、与计算机硬件有关的细节隐藏起来。<br>可以提高软件的可修改性、可测试性和可移植性。</p>
-<h2 id="2、模块独立性原则"><a href="#2、模块独立性原则" class="headerlink" title="2、模块独立性原则"></a>2、模块独立性原则</h2><p>每个模块完成一个相对独立的特定子功能，并与其他模块之间的联系最简单。<br>设计的目标是高内聚、低耦合。</p>
-<p>从高到低对7种内聚类型排序：</p>
-<table>
-<thead>
-<tr>
-<th>内聚类型</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>功能内聚</td>
-<td>完成一个单一功能，各个部分协同工作，缺一不可</td>
-</tr>
-<tr>
-<td>顺序内聚</td>
-<td>处理元素相关，而且必须顺序执行</td>
-</tr>
-<tr>
-<td>通信内聚</td>
-<td>所有处理元素居中在一个数据结构的区域上</td>
-</tr>
-<tr>
-<td>过程内聚</td>
-<td>处理元素相关，而且必须按特定的次序执行</td>
-</tr>
-<tr>
-<td>瞬时内聚</td>
-<td>所包含的任务必须在同一时间间隔内执行，如初始化模块</td>
-</tr>
-<tr>
-<td>逻辑内聚</td>
-<td>完成逻辑上相关的一组任务</td>
-</tr>
-<tr>
-<td>偶然内聚</td>
-<td>完成一组没有关系或松散关系的任务</td>
-</tr>
-</tbody></table>
-<p>从低到高7种耦合类型排序：</p>
-<table>
-<thead>
-<tr>
-<th>耦合类型</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>非直接耦合</td>
-<td>没有直接联系，互相不依赖对方</td>
-</tr>
-<tr>
-<td>数据耦合</td>
-<td>借助参数表传递简单数据</td>
-</tr>
-<tr>
-<td>标记耦合</td>
-<td>一个数据结构的一部分借助于模块接口来传递</td>
-</tr>
-<tr>
-<td>控制耦合</td>
-<td>模块间传递的信息中包括用于控制模块内部逻辑的信息</td>
-</tr>
-<tr>
-<td>外部耦合</td>
-<td>与软件意外的环境有关</td>
-</tr>
-<tr>
-<td>公共耦合</td>
-<td>多个模块引用同一个全局数据区</td>
-</tr>
-<tr>
-<td>内容耦合</td>
-<td>一个模块访问另一个模块的内部数据</td>
-</tr>
-<tr>
-<td>-</td>
-<td>一个模块不通过正常入口转到另一个模块的内部</td>
-</tr>
-<tr>
-<td>-</td>
-<td>两个模块有一部分程序代码重叠</td>
-</tr>
-<tr>
-<td>-</td>
-<td>一个模块有多个入口</td>
-</tr>
-</tbody></table>
-<p>系统设计时，除了保持信息隐蔽和模块独立性之外，还需要考虑：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">保持模块大小适中</span><br><span class="line">尽可能减少调用深度</span><br><span class="line">直接调用该模块的个数应该尽量大</span><br><span class="line">调用其他模块的个数不宜过大</span><br><span class="line">保证模块是单入口、单出口</span><br><span class="line">模块的作用于应该在控制域之内</span><br><span class="line">功能应该是可预测的</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B9%9D)%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%B9%9D)%E7%B3%BB%E7%BB%9F%E8%BF%87%E6%B8%A1%E8%AE%A1%E5%88%92/" class="post-title-link" itemprop="url">系统分析与设计方法（九）系统过渡计划</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>如果同时运行两个系统，会给客户造成多大的开销;<br>如果直接运行新系统，客户面对的风险有多大;<br>对新系统试运行时的查错和纠错，以及出现严重错误而导致停止运行时的应急措施;<br>客户运行新系统将面临的不利因素有哪些;<br>人员的培训。</p>
-<h1 id="1-直接过渡"><a href="#1-直接过渡" class="headerlink" title="1.直接过渡"></a>1.直接过渡</h1><p>这是一种快速的系统过渡方式，当新系统运行时，立即关闭原来的系统。这种过渡方式非常简单，没有后勤保障的问题，也不要消耗很多资源。同时，它也意味着大风险，目标系统的特性决定了风险的大小。设计者主要要权衡当新系统失败时，系统停止运行或者勉强运行给客户带来的损失有多大。由于这种过渡方式简单而费用低廉，对于可以容忍停机一段时间的系统的实践者，可以采用这种方式。</p>
-<h1 id="2-并行过渡"><a href="#2-并行过渡" class="headerlink" title="2.并行过渡"></a>2.并行过渡</h1><p>设计者采用并行过渡方式，让新系统和旧系统在一段时间里同时运行，通过这样的旧系统作为新系统的备份，可以大大降低系统过渡的风险。可是并行过渡显然比直接过渡要消耗更多的资源:现有的硬件资源必须保证能同时跑两套系统，这常常意味着增加服务器和额外的存储空间，需要增加人员来同时使用两套系统，或者增加现有员工的工作量，让他们同时操作两套系统。这种方式同时也增加了管理和后勤保障的复杂度。</p>
-<p>有些系统无法使用并行过渡的方式，主要是客户没有足够的资源来维持两个系统同时运行，另外一种情况是新、旧系统差别太大，旧系统的数据无法为新系统采用。当客户无法使用并行过渡，又想尽可能地减少风险，设计者可以使用部分并行过渡的策略，使并行的开销减少到客户能够接受的范围内。</p>
-<h1 id="3-阶段过渡"><a href="#3-阶段过渡" class="headerlink" title="3.阶段过渡"></a>3.阶段过渡</h1><p>通常在系统非常复杂、过于庞大以至于无法一次性进行过渡时采用，也适用于分阶段开发的系统。设计者需要设计一系列步骤和过程来完成整个系统的过渡，这种过渡方式和系统的复杂程度相关，随着系统的不同往往有很大的不同。和并行过渡一样，阶段过渡也能够减少风险，显然局部的失败要比全体的失败更容易接受，带来的损失更小。阶段过渡也带来了复杂性，有时候比并行过渡更加复杂。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%BA%94)%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/09/24/%E8%BD%AF%E8%80%83/8%E3%80%81%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%96%B9%E6%B3%95(%E4%BA%94)%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1/" class="post-title-link" itemprop="url">系统分析与设计方法（五）用户界面设计</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T00:00:00+08:00">2021-09-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-09 10:07:43" itemprop="dateModified" datetime="2021-11-09T10:07:43+08:00">2021-11-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">软考-系统架构设计师</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>接口设计主要包括三个方面的内容:一是设计软件构件间的接口;二是设计模块和其他非人的信息生产者和消费者(如外部实体)的接口;三是人(如用户)和计算机间界面设计。</p>
-<h1 id="一、用户界面设计的原则"><a href="#一、用户界面设计的原则" class="headerlink" title="一、用户界面设计的原则"></a>一、用户界面设计的原则</h1><p>用户界面设计必须考虑软件使用者的体力和脑力，设计时必须遵从三个黄金法则。</p>
-<h2 id="1、置用户于控制之下"><a href="#1、置用户于控制之下" class="headerlink" title="1、置用户于控制之下"></a>1、置用户于控制之下</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">以不强迫用户进入不必要的或不希望的动作的方式来定义交互模式</span><br><span class="line">提供灵活的交互</span><br><span class="line">允许用户交互可以被中断和撤销</span><br><span class="line">当技能级别增长时可以使交互流水化并允许定制交互</span><br><span class="line">使用户隔离内部技术细节</span><br><span class="line">设计应允许用户和出现在屏幕上的对象直接交互</span><br></pre></td></tr></table></figure>
-<h2 id="2、减少用户的记忆负担"><a href="#2、减少用户的记忆负担" class="headerlink" title="2、减少用户的记忆负担"></a>2、减少用户的记忆负担</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减少对短期记忆的要求</span><br><span class="line">建立有意义的默认</span><br><span class="line">定义直觉性的捷径</span><br><span class="line">界面的视觉布局应该基于对真实世界的隐喻</span><br><span class="line">以不断进展的方式提示信息</span><br></pre></td></tr></table></figure>
-<h2 id="3、保持界面的一致"><a href="#3、保持界面的一致" class="headerlink" title="3、保持界面的一致"></a>3、保持界面的一致</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">允许用户将当前任务放入有意义的语境</span><br><span class="line">在应用系列内保持一致性，如果过去的交互模型已经建立了用户期望，除非有不得已的理由，否则不要改变它</span><br></pre></td></tr></table></figure>
-<p>除此之外，还应该考虑表所示的设计原则。</p>
-<p><img src="/images/ruankao/6-18.png"></p>
-<h1 id="二、用户界面设计过程"><a href="#二、用户界面设计过程" class="headerlink" title="二、用户界面设计过程"></a>二、用户界面设计过程</h1><p><img src="/images/ruankao/6-19.png"></p>
-<h2 id="1-用户、任务和环境分析"><a href="#1-用户、任务和环境分析" class="headerlink" title="(1)用户、任务和环境分析"></a>(1)用户、任务和环境分析</h2><p>着重于分析将和系统交互的用户的特点。记录下技术级别、业务理解及对新系统的一般感悟，并定义不同的用户类别。然后对用户将要完成什么样的任务进行详细的标识和描述。最后对用户的物理工作环境进行了解与分析。</p>
-<h2 id="2-界面设计"><a href="#2-界面设计" class="headerlink" title="(2)界面设计"></a>(2)界面设计</h2><p>主要包括建立任务的目标和意图，为每个目标或意图制定特定的动作序列，按在界面上执行的方式对动作序列进行规约，指明系统状态，定义控制机制，指明控制机制如何影响系统状态，指明用户如何通过界面上的信息来解释系统状态。</p>
-<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="(3)实现"></a>(3)实现</h2><p>就是根据界面设计进行实现，前期可以通过原型工具来快速实现，减少返工的工作量。</p>
-<h2 id="4-界面确认"><a href="#4-界面确认" class="headerlink" title="(4)界面确认"></a>(4)界面确认</h2><p>界面实现后就可以进行一些定性和定量的数据收集，以进行界面的评估，以调整界面的设计。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1561,7 +1468,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">86</span>
+          <span class="site-state-item-count">90</span>
           <span class="site-state-item-name">文章</span>
         </a>
       </div>
@@ -1574,7 +1481,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">22</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
