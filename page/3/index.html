@@ -1028,95 +1028,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%8C)%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="xuhj">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="循序渐进">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%8C)%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">计算机基础知识（二）数据结构与算法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-10-12 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-12T00:00:00+08:00">2021-10-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-09 11:24:34" itemprop="dateModified" datetime="2021-11-09T11:24:34+08:00">2021-11-09</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。"><a href="#1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。" class="headerlink" title="1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。"></a>1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。</h1><h2 id="一-定义"><a href="#一-定义" class="headerlink" title="一 定义"></a>一 定义</h2><p>衡量一个算法的性能，除了能实现需求之外。进阶就是考虑在算法运行过程中时间和资源的消耗。<br>时间复杂度：执行当前算法所消耗的时间;　<br>空间复杂度：执行当前算法所需要占用的内存空间；</p>
-<p>时间复杂度与空间复杂度是紧密相连的。对于我们程序开发来说：时间复杂度与空间复杂度是可以相互转化的。<br>1.以空间换时间：对于执行慢的程序，消耗内存来减少时间，提高效率。<br>2.以时间换空间：对于程序来说，增加时间，减少效率，节省内存空间。</p>
-<h2 id="二-计算"><a href="#二-计算" class="headerlink" title="二 计算"></a>二 计算</h2><p>1 时间复杂度（使用O符号表示法，表示代码执行时间的增长变化趋势）<br>　　T(n)=O(f(n)) 　　// f(n)表示每行代码执行次数之和，O表示正比例关系<br>2 空间复杂度 S(n)</p>
-<h2 id="三-常用的复杂度量级"><a href="#三-常用的复杂度量级" class="headerlink" title="三 常用的复杂度量级"></a>三 常用的复杂度量级</h2><p>1 时间复杂度（从上往下复杂性增加）<br>常数阶O(1)：消耗的时间并不随某个变量n变化而变化<br>对数阶O(logN)：当数据增大n倍，耗时增大logn倍（以2为底）。如二分查找<br>线性阶O(n)：如n决定的for循环，消耗的时间随着n的变化而变化<br>线性对数阶O(nlogN)：将时间复杂度为O(logN)的代码循环N遍，如归并排序<br>平方阶O(n²)：把 O(n) 的代码再嵌套循环一遍<br>立方阶O(n³)：3层N循环<br>K次方阶O(n^k)：k层N循环<br>指数阶(2^n)</p>
-<p>2 时间复杂度<br>O(1)：所需要的临时空间并不随某个变量n变化而变化<br>O(n)：如new了一个大小为n的数组，int[] m = new int[n];<br>O(n^2)</p>
-<h1 id="2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。"><a href="#2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。" class="headerlink" title="2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。"></a>2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。</h1><h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><p>线性表是最基本、最简单、也是最常用的一种数据结构。线性表（linear list）是数据结构的一种，一个线性表是n个具有相同特性的数据元素的有限序列。<br>线性表中数据元素之间的关系是一对一的关系，即除了第一个和最后一个数据元素之外，其它数据元素都是首尾相接的（注意，这句话只适用大部分线性表，而不是全部。比如，循环链表逻辑层次上也是一种线性表（存储层次上属于链式存储，但是把最后一个数据元素的尾指针指向了首位结点）。</p>
-<h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><p>堆栈都是一种数据项按序排列的数据结构，只能在一端(称为栈顶(top))对数据项进行插入和删除。在单片机应用中，堆栈是个特殊的存储区，主要功能是暂时存放数据和地址，通常用来保护断点和现场。</p>
-<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>队列是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，和栈一样，队列是一种操作受限制的线性表。进行插入操作的端称为队尾，进行删除操作的端称为队头。</p>
-<h2 id="跳表"><a href="#跳表" class="headerlink" title="跳表"></a>跳表</h2><p>增加了向前指针的链表叫作跳表。跳表全称叫做跳跃表，简称跳表。跳表是一个随机化的数据结构，实质就是一种可以进行二分查找的有序链表。跳表在原有的有序链表上面增加了多级索引，通过索引来实现快速查找。跳表不仅能提高搜索性能，同时也可以提高插入和删除操作的性能。</p>
-<h2 id="散列"><a href="#散列" class="headerlink" title="散列"></a>散列</h2><p>Hash，一般翻译做散列、杂凑，或音译为哈希，是把任意长度的输入（又叫做预映射pre-image）通过散列算法变换成固定长度的输出，该输出就是散列值。这种转换是一种压缩映射，也就是，散列值的空间通常远小于输入的空间，不同的输入可能会散列成相同的输出，所以不可能从散列值来确定唯一的输入值。简单的说就是一种将任意长度的消息压缩到某一固定长度的消息摘要的函数。</p>
-<h1 id="3、了解树的描述方法与应用。"><a href="#3、了解树的描述方法与应用。" class="headerlink" title="3、了解树的描述方法与应用。"></a>3、了解树的描述方法与应用。</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>树是一种数据结构，它是由n(n≥1)个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。</p>
-<p>它具有以下的特点：<br>每个节点有零个或多个子节点；<br>没有父节点的节点称为根节点；<br>每一个非根节点有且只有一个父节点；<br>除了根节点外，每个子节点可以分为多个不相交的子树。</p>
-<h2 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h2><p>无序树：树中任意节点的子结点之间没有顺序关系，这种树称为无序树,也称为自由树；<br>有序树：树中任意节点的子结点之间有顺序关系，这种树称为有序树；<br>二叉树：每个节点最多含有两个子树的树称为二叉树；<br>满二叉树：叶节点除外的所有节点均含有两个子树的树被称为满二叉树；<br>完全二叉树：除最后一层外，所有层都是满节点，且最后一层缺右边连续节点的二叉树称为完全二叉树；<br>哈夫曼树（最优二叉树）：带权路径最短的二叉树称为哈夫曼树或最优二叉树。</p>
-<h1 id="4、了解图的描述方法与应用。"><a href="#4、了解图的描述方法与应用。" class="headerlink" title="4、了解图的描述方法与应用。"></a>4、了解图的描述方法与应用。</h1><p>一个图就是一些顶点的集合，这些顶点通过一系列边结对（连接）。顶点用圆圈表示，边就是这些圆圈之间的连线。顶点之间通过边连接。</p>
-<p>有向图</p>
-<p>加权图</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%B8%80)%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%8A%80%E6%9C%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1236,6 +1147,95 @@
 <h2 id="二、里氏替换"><a href="#二、里氏替换" class="headerlink" title="二、里氏替换"></a>二、里氏替换</h2><p>概念：父类引用可以指向一个子类，看到的也只是父类的引用<br>1.父类引用能引用到子类的父类引用，可以看到，但是无法使用。<br>例：a（父类引用）se(子类对象)=new se();<br>子类可以访问包括父类的引用以及自己的属性<br>se（子类） ss=new se();<br>2.里氏替换的原则：<br>父类不能替换成子类<br>子类能替换成父类<br>Parent p=new Son()<br>Son s=(Son)p; –正确<br>Parent p=new Parent()<br>Son s=(Son)p; –错误<br>注：因为继承的概念就是子孙类会越来越比祖先类详细，所以可以将子孙类强制转换成祖先类，因为祖先有的行为子孙类示例都有了（重新定义的或者是默认的）；但是当将祖先类示例强制转换成子孙类示例的时候，一些子孙类有的行为祖先是没有的（即使的是默认的实现也没有）。<br>3.如果需要父类访问到子类的字段，必须要转换<br>4.转换的方式有两种：<br>（1）（子类类型） 父类引用 //会报错<br>（2）父类引用 as 子类类型 //不会报错、但是会返回一个null值<br>5.判断父类的对象引用类型，父类引用 is 子类类型 并且返回一个布尔值<br>例：if(数组[i] is pe)<br>{<br>    ((pe)数组(I).方法/属性)<br>}</p>
 <h1 id="7、了解静态行为和动态行为。"><a href="#7、了解静态行为和动态行为。" class="headerlink" title="7、了解静态行为和动态行为。"></a>7、了解静态行为和动态行为。</h1><p>动态行为是指代码具有一定的响应能力的行为，比如，一个对于线程进行封装的类，其行为应当就是动态的。另一个例子，就是Socket通讯问题，我们需要对连接进行测试，此时其所表现出来的也是动态行为。对于动态行为的代码，其在不同的操作系统中表现有可能是不同的。</p>
 <p>与动态行为不同的是，静态行为只是被动的计算或是组织数据结构。比如，一个MD5的计算函数，其行为就是静态的，这种行为不论你是在任何操作系统或是处理器上运行，其结果都是一样的。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%8C)%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="xuhj">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="循序渐进">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/10/12/%E5%A4%A7%E6%95%B0%E6%8D%AE%E8%80%83%E8%AF%95/%E4%BA%8C%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86(%E4%BA%8C)%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">计算机基础知识（二）数据结构与算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-12 00:00:00" itemprop="dateCreated datePublished" datetime="2021-10-12T00:00:00+08:00">2021-10-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-11-09 11:24:34" itemprop="dateModified" datetime="2021-11-09T11:24:34+08:00">2021-11-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%BA%94%E7%94%A8-%E4%B8%AD%E7%BA%A7/" itemprop="url" rel="index"><span itemprop="name">大数据分析应用-中级</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。"><a href="#1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。" class="headerlink" title="1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。"></a>1、掌握程序性能分析的概念和方法，包括时间复杂性与空间复杂性分析。</h1><h2 id="一-定义"><a href="#一-定义" class="headerlink" title="一 定义"></a>一 定义</h2><p>衡量一个算法的性能，除了能实现需求之外。进阶就是考虑在算法运行过程中时间和资源的消耗。<br>时间复杂度：执行当前算法所消耗的时间;　<br>空间复杂度：执行当前算法所需要占用的内存空间；</p>
+<p>时间复杂度与空间复杂度是紧密相连的。对于我们程序开发来说：时间复杂度与空间复杂度是可以相互转化的。<br>1.以空间换时间：对于执行慢的程序，消耗内存来减少时间，提高效率。<br>2.以时间换空间：对于程序来说，增加时间，减少效率，节省内存空间。</p>
+<h2 id="二-计算"><a href="#二-计算" class="headerlink" title="二 计算"></a>二 计算</h2><p>1 时间复杂度（使用O符号表示法，表示代码执行时间的增长变化趋势）<br>　　T(n)=O(f(n)) 　　// f(n)表示每行代码执行次数之和，O表示正比例关系<br>2 空间复杂度 S(n)</p>
+<h2 id="三-常用的复杂度量级"><a href="#三-常用的复杂度量级" class="headerlink" title="三 常用的复杂度量级"></a>三 常用的复杂度量级</h2><p>1 时间复杂度（从上往下复杂性增加）<br>常数阶O(1)：消耗的时间并不随某个变量n变化而变化<br>对数阶O(logN)：当数据增大n倍，耗时增大logn倍（以2为底）。如二分查找<br>线性阶O(n)：如n决定的for循环，消耗的时间随着n的变化而变化<br>线性对数阶O(nlogN)：将时间复杂度为O(logN)的代码循环N遍，如归并排序<br>平方阶O(n²)：把 O(n) 的代码再嵌套循环一遍<br>立方阶O(n³)：3层N循环<br>K次方阶O(n^k)：k层N循环<br>指数阶(2^n)</p>
+<p>2 时间复杂度<br>O(1)：所需要的临时空间并不随某个变量n变化而变化<br>O(n)：如new了一个大小为n的数组，int[] m = new int[n];<br>O(n^2)</p>
+<h1 id="2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。"><a href="#2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。" class="headerlink" title="2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。"></a>2、掌握线性表的概念，掌握堆栈、队列、跳表和散列的描述方法与应用。</h1><h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><p>线性表是最基本、最简单、也是最常用的一种数据结构。线性表（linear list）是数据结构的一种，一个线性表是n个具有相同特性的数据元素的有限序列。<br>线性表中数据元素之间的关系是一对一的关系，即除了第一个和最后一个数据元素之外，其它数据元素都是首尾相接的（注意，这句话只适用大部分线性表，而不是全部。比如，循环链表逻辑层次上也是一种线性表（存储层次上属于链式存储，但是把最后一个数据元素的尾指针指向了首位结点）。</p>
+<h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><p>堆栈都是一种数据项按序排列的数据结构，只能在一端(称为栈顶(top))对数据项进行插入和删除。在单片机应用中，堆栈是个特殊的存储区，主要功能是暂时存放数据和地址，通常用来保护断点和现场。</p>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>队列是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，和栈一样，队列是一种操作受限制的线性表。进行插入操作的端称为队尾，进行删除操作的端称为队头。</p>
+<h2 id="跳表"><a href="#跳表" class="headerlink" title="跳表"></a>跳表</h2><p>增加了向前指针的链表叫作跳表。跳表全称叫做跳跃表，简称跳表。跳表是一个随机化的数据结构，实质就是一种可以进行二分查找的有序链表。跳表在原有的有序链表上面增加了多级索引，通过索引来实现快速查找。跳表不仅能提高搜索性能，同时也可以提高插入和删除操作的性能。</p>
+<h2 id="散列"><a href="#散列" class="headerlink" title="散列"></a>散列</h2><p>Hash，一般翻译做散列、杂凑，或音译为哈希，是把任意长度的输入（又叫做预映射pre-image）通过散列算法变换成固定长度的输出，该输出就是散列值。这种转换是一种压缩映射，也就是，散列值的空间通常远小于输入的空间，不同的输入可能会散列成相同的输出，所以不可能从散列值来确定唯一的输入值。简单的说就是一种将任意长度的消息压缩到某一固定长度的消息摘要的函数。</p>
+<h1 id="3、了解树的描述方法与应用。"><a href="#3、了解树的描述方法与应用。" class="headerlink" title="3、了解树的描述方法与应用。"></a>3、了解树的描述方法与应用。</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>树是一种数据结构，它是由n(n≥1)个有限节点组成一个具有层次关系的集合。把它叫做“树”是因为它看起来像一棵倒挂的树，也就是说它是根朝上，而叶朝下的。</p>
+<p>它具有以下的特点：<br>每个节点有零个或多个子节点；<br>没有父节点的节点称为根节点；<br>每一个非根节点有且只有一个父节点；<br>除了根节点外，每个子节点可以分为多个不相交的子树。</p>
+<h2 id="种类"><a href="#种类" class="headerlink" title="种类"></a>种类</h2><p>无序树：树中任意节点的子结点之间没有顺序关系，这种树称为无序树,也称为自由树；<br>有序树：树中任意节点的子结点之间有顺序关系，这种树称为有序树；<br>二叉树：每个节点最多含有两个子树的树称为二叉树；<br>满二叉树：叶节点除外的所有节点均含有两个子树的树被称为满二叉树；<br>完全二叉树：除最后一层外，所有层都是满节点，且最后一层缺右边连续节点的二叉树称为完全二叉树；<br>哈夫曼树（最优二叉树）：带权路径最短的二叉树称为哈夫曼树或最优二叉树。</p>
+<h1 id="4、了解图的描述方法与应用。"><a href="#4、了解图的描述方法与应用。" class="headerlink" title="4、了解图的描述方法与应用。"></a>4、了解图的描述方法与应用。</h1><p>一个图就是一些顶点的集合，这些顶点通过一系列边结对（连接）。顶点用圆圈表示，边就是这些圆圈之间的连线。顶点之间通过边连接。</p>
+<p>有向图</p>
+<p>加权图</p>
 
       
     </div>
